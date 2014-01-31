@@ -1,0 +1,9 @@
+<?php
+   require "brltty.php";
+   $brltty = new brltty_document("Details");
+   $brltty->add_subsection("Requirements", "brltty-requirements.php", "requirements");
+   $brltty->add_subsection("Restrictions", "brltty-restrictions.php", "restrictions");
+   $brltty->add_subsection("Supported Braille Displays", "brltty-displays.php", "displays");
+   $brltty->add_subsection("Supported Speech Synthesizers", "brltty-synthesizers.php", "synthesizers");
+   $brltty->end();
+?>

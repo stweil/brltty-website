@@ -1,0 +1,166 @@
+<?php
+   require "brltty.php";
+   $brltty = new brltty_document("Download");
+   $brltty->add_subsection("Copyright and Disclaimer", "brltty-copyright.php", "copyright");
+   $brltty->add_subsection("Current Release", "brltty-current.php", "current");
+   $brltty->add_subsection("Precompiled Binaries", "brltty-binaries.php", "binaries");
+   $brltty->add_subsection("The Development Repository", "brltty-repository.php", "repository");
+   $brltty->add_subsection("Old Releases", "brltty-old.php", "old");
+   $brltty->add_subsection("Android", "brltty-android.php", "android");
+
+   function get_released_files($package) {
+      global $archive_directory;
+      $pattern = '^' . $package . '(-[a-z]+)*' . '((-[0-9][0-9a-z]*(\.[0-9][0-9a-z]*)*)+)((\.[a-z][a-z0-9_]*)+)$';
+      if ($directory = opendir($archive_directory)) {
+         while ($line = readdir($directory)) {
+            if (ereg($pattern, $line, $matches)) {
+               $release = $matches[2];
+               $components = explode('-', substr($release, 1));
+               $version = $components[0];
+               reset($components);
+               while (list($component_index, $component) = each($components)) {
+                  $numbers = explode('.', $component);
+                  reset($numbers);
+                  while (list($number_index, $number) = each($numbers)) {
+                     $integer = true;
+                     while (strlen($number)) {
+                        $function = $integer? 'strspn': 'strcspn';
+                        $element = ($length = $function($number, '0123456789'))? substr($number, 0, $length): '0';
+                        if ($count = strspn($element, '0')) {
+                           $element = ($count == strlen($element))? '0': substr($element, $count);
+                        }
+                        $elements[] = $element;
+                        $number = substr($number, $length);
+                        $integer = !$integer;
+                     }
+                     $numbers[$number_index] = $elements;
+                     unset($elements);
+                  }
+                  $components[$component_index] = $numbers;
+               }
+               $file = $matches[0];
+               $path = $archive_directory . '/' . $file;
+               $releases[] = array(
+                  'file'       => $file,
+                  'path'       => $path,
+                  'size'       => filesize($path),
+                  'time'       => filemtime($path),
+                  'release'    => $release,
+                  'version'    => $version,
+                  'components' => $components,
+                  'extension'  => $matches[5]
+               );
+            }
+         }
+         closedir($directory);
+      }
+      usort($releases, 'compare_releases');
+      return $releases;
+   }
+   function compare_releases($release1, $release2) {
+      $components1 = $release1['components'];
+      $components2 = $release2['components'];
+      reset($components1);
+      reset($components2);
+      while (true) {
+         $more1 = is_array(list($key, $numbers1) = each($components1));
+         $more2 = is_array(list($key, $numbers2) = each($components2));
+         if ($more1 != $more2) return $more1? 1: -1;
+         if (!$more1) break;
+         reset($numbers1);
+         reset($numbers2);
+         while (true) {
+            $more1 = is_array(list($key, $elements1) = each($numbers1));
+            $more2 = is_array(list($key, $elements2) = each($numbers2));
+            if ($more1 != $more2) return $more1? 1: -1;
+            if (!$more1) break;
+            $integer = true;
+            reset($elements1);
+            reset($elements2);
+            while (true) {
+               $more1 = is_array(list($key, $element1) = each($elements1));
+               $more2 = is_array(list($key, $element2) = each($elements2));
+               if ($more1 != $more2) return ($more1 == $integer)? 1: -1;
+               if (!$more1) break;
+               if ($integer) {
+                  if ($element1 < $element2) return -1;
+                  if ($element1 > $element2) return 1;
+               } else {
+                  if (($relation = strcmp($element1, $element2))) return $relation;
+               }
+               $integer = !$integer;
+            }
+         }
+      }
+      return strcmp($release1['extension'], $release2['extension']);
+   }
+
+   $GLOBALS['archive_directory'] = 'archive';
+   $GLOBALS['brltty_files'] = get_released_files('brltty');
+   $GLOBALS['brlapi_files'] = get_released_files('brlapi');
+
+   function get_files(&$package_files, $version) {
+      reset($package_files);
+      while (list($key, $release) = each($package_files))
+         if (strcmp($version, $release['version']) == 0)
+            $files[] = $release;
+      usort($files, 'compare_files');
+      return $files;
+   }
+   function compare_files($file1, $file2) {
+      if ($file1['time'] < $file2['time']) return -1;
+      if ($file1['time'] > $file2['time']) return 1;
+      return 0;
+   }
+   function put_files(&$files) {
+      echo("<CENTER>\n");
+      echo("<TABLE>\n");
+      echo("<TR>\n");
+      echo("<Th>Name</Th>\n");
+      echo("<Th>Size</Th>\n");
+      echo("<Th>Date</Th>\n");
+      echo("</TR>\n");
+      reset($files);
+      while (list($key, $release) = each($files)) {
+         echo("<TR>\n");
+         echo("<TD ALIGN=left><A HREF=\"" . $release['path'] . "\"><CODE>" . $release['file'] . "</CODE></A></TD>\n");
+         $size = $release['size'];
+         $scale = 0;
+         $factor = 1000;
+         while ($size >= $factor) {
+            $size /= $factor;
+            $scale++;
+         }
+         echo("<TD ALIGN=right>" . round($size) . substr(' KMG', $scale, 1) . "</TD>\n");
+         echo("<TD ALIGN=left>" . date('Y/m/d', $release['time']) . "</TD>\n");
+         echo("</TR>\n");
+      }
+      echo("</TABLE>\n");
+      echo("</CENTER>\n");
+   }
+
+   function put_version ($package_name, &$package_files, $version_name, $version_description) {
+      $files = get_files($package_files, $version_name);
+      $date = date('F j, Y', $files[0]['time']);
+      echo("The $version_description version of <B>$package_name</B> is $version_name ($date).\n"); 
+      echo("It can be downloaded in the following formats:\n"); 
+      put_files($files);
+      echo("<P>\n");
+   }
+   function put_latest_version ($package_name, &$package_files, $current_version) {
+      $latest_release = end($package_files);
+      $latest_version = $latest_release['version'];
+      if ($latest_version != $current_version) {
+         put_version($package_name, $package_files, $latest_version, 'latest beta');
+      }
+   }
+   function put_current_version ($package_name, &$package_files, $current_version) {
+      put_version($package_name, $package_files, $current_version, 'current production');
+   }
+   function put_versions ($package_name, &$package_files, $current_version) {
+      put_latest_version($package_name, $package_files, $current_version);
+      put_current_version($package_name, $package_files, $current_version);
+   }
+
+   $brltty->end();
+?>

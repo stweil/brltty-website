@@ -1,0 +1,56 @@
+Key Table: CombiBraille
+
+Default Bindings
+go left one window: Thumb1
+go up one line: Thumb2
+set cursor tracking on/off: Thumb3
+go down one line: Thumb4
+go right one window: Thumb5
+go to beginning of top line: Thumb1+Thumb2
+go to top line: Thumb2+Thumb3
+go to bottom line: Thumb3+Thumb4
+go to beginning of bottom line: Thumb4+Thumb5
+go to beginning of line: Thumb1+Thumb3
+go to end of line: Thumb3+Thumb5
+go left half a window: Thumb1+Thumb4
+go right half a window: Thumb2+Thumb5
+speak current line: Thumb1+Thumb5
+stop speaking: Thumb2+Thumb4
+go up one line: Dot1
+go down one line: Dot4
+go to top line: Dot1+Dot2+Dot3
+go to bottom line: Dot4+Dot5+Dot6
+go up several lines: Dot1+Dot2
+go down several lines: Dot4+Dot5
+go left one window: Dot3
+go right one window: Dot6
+go left half a window: Dot2+Dot4+Dot6
+go right half a window: Dot1+Dot3+Dot5
+go left one character: Dot1+Dot3
+go right one character: Dot4+Dot6
+go to beginning of line: Dot2+Dot3
+go to end of line: Dot5+Dot6
+go to cursor: Dot3+Dot6
+set cursor tracking on/off: Dot1+Dot4
+set cursor visibility on/off: Dot5
+set skipping of lines with identical content on/off: Dot2+Dot4+Dot5
+set sliding window on/off: Dot2+Dot4+Dot5+Dot6
+set text style 6-dot/8-dot: Dot2+Dot3+Dot5
+set alert tunes on/off: Dot2+Dot3+Dot4
+freeze/unfreeze screen image: Dot1+Dot2+Dot4
+set display mode attributes/text: Dot1+Dot3+Dot4
+enter/leave help display: Dot1+Dot2+Dot5
+enter/leave status display: Dot3+Dot4
+enter/leave preferences menu: Dot1+Dot3+Dot4+Dot6
+restore preferences from disk: Dot1+Dot2+Dot3+Dot5
+save preferences to disk: Dot1+Dot2+Dot3+Dot4+Dot5+Dot6
+insert clipboard text at cursor: Dot1+Dot2+Dot3+Dot4
+stop speaking: Dot1+Dot6
+speak current line: Dot1+Dot5+Dot6
+start new clipboard at character: Status1, RoutingKey
+append to clipboard from character: Status2, RoutingKey
+linear copy to character: Status3, RoutingKey
+rectangular copy to character: Status4, RoutingKey
+enter/leave command learn mode: Status5
+enter/leave help display: Status6
+bring cursor to character: RoutingKey

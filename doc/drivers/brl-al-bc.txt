@@ -1,0 +1,172 @@
+Key Table: Alva Braille Controller [6nn]
+
+The four keys at the ends of the text cell area are named ETouch:
+* Each is subnamed according to the side its on (Left, Right),
+* and according to its position on that side (Rear, Front).
+The nine-key pad in front of the text cell area is named Smartpad:
+* Its center key is subnamed Enter.
+* Its four inner keys are subnamed Left, Right, Up, and Down.
+* The two long keys on its left are subnamed F1 and F2.
+* The two long keys on its right are subnamed F3 and F4.
+The five keys on the front are named Thumb:
+* From left to right, they're subnamed: Left, Up, Home, Down, Right.
+
+Default Bindings
+enter/leave help display: ETouchLeftRear+ETouchRightRear
+enter/leave command learn mode: ETouchLeftRear+ETouchRightFront
+enter/leave status display: ETouchLeftFront+ETouchRightRear
+enter/leave preferences menu: ETouchLeftFront+ETouchRightFront
+set cursor tracking on: ThumbUp+ThumbDown
+set cursor tracking off: ThumbDown+ThumbUp
+go to cursor or go back after cursor tracking: ThumbHome
+bring cursor to line: ThumbLeft+ThumbRight
+go up one line: ThumbUp
+go down one line: ThumbDown
+go left one window: ThumbLeft
+go right one window: ThumbRight
+go up to nearest line with different content: ThumbHome+ThumbUp
+go down to nearest line with different content: ThumbHome+ThumbDown
+go left to nearest non-blank window: ThumbHome+ThumbLeft
+go right to nearest non-blank window: ThumbHome+ThumbRight
+go to beginning of top line: ThumbLeft+ThumbUp
+go to beginning of bottom line: ThumbLeft+ThumbDown
+go up to nearest line with different highlighting: ThumbRight+ThumbUp
+go down to nearest line with different highlighting: ThumbRight+ThumbDown
+go up to previous command prompt: ETouchLeftRear+ThumbUp
+go down to next command prompt: ETouchLeftRear+ThumbDown
+go up to last line of previous paragraph: ETouchLeftFront+ThumbUp
+go down to first line of next paragraph: ETouchLeftFront+ThumbDown
+search backward for clipboard text: ETouchRightRear+ThumbUp
+search forward for clipboard text: ETouchRightRear+ThumbDown
+go to beginning of line: ETouchLeftRear
+go to end of line: ETouchRightRear
+go left one character: ETouchLeftFront
+go right one character: ETouchRightFront
+bring cursor to character: RoutingKey1
+describe character: ETouchLeftRear+ETouchLeftFront+RoutingKey1
+copy characters to clipboard: RoutingKey1+RoutingKey1
+start new clipboard at character: ETouchLeftRear+RoutingKey1
+append to clipboard from character: ETouchLeftFront+RoutingKey1
+linear copy to character: ETouchRightRear+RoutingKey1
+rectangular copy to character: ETouchRightFront+RoutingKey1
+insert clipboard text at cursor: ETouchRightRear+ETouchRightFront
+go up to nearest line with less indent than character: ThumbLeft+RoutingKey1
+go down to nearest line with less indent than character: ThumbRight+RoutingKey1
+go up to nearest line with different character: ThumbUp+RoutingKey1
+go down to nearest line with different character: ThumbDown+RoutingKey1
+place left end of window at character: ThumbHome+RoutingKey1
+freeze/unfreeze screen image: ETouchLeftRear+ETouchLeftFront+ETouchRightRear
+set display mode attributes/text: ETouchLeftRear+ETouchRightRear+ETouchRightFront
+set cursor visibility on/off: ThumbLeft+ETouchLeftRear
+set attribute underlining on/off: ThumbLeft+ETouchLeftFront
+set text style 6-dot/8-dot: ThumbLeft+ETouchRightFront
+cursor-left key: SmartpadLeft
+cursor-right key: SmartpadRight
+cursor-up key: SmartpadUp
+cursor-down key: SmartpadDown
+insert clipboard text at cursor: SmartpadEnter
+show the current date and time: SmartpadF2
+switch to previous virtual terminal: SmartpadF1+SmartpadLeft
+switch to next virtual terminal: SmartpadF1+SmartpadRight
+insert key: SmartpadF1+SmartpadEnter
+switch to virtual terminal: SmartpadF1+RoutingKey1
+page-up key: SmartpadF2+SmartpadUp
+page-down key: SmartpadF2+SmartpadDown
+home key: SmartpadF2+SmartpadLeft
+end key: SmartpadF2+SmartpadRight
+delete key: SmartpadF2+SmartpadEnter
+function key: SmartpadF2+RoutingKey1
+stop speaking: SmartpadF3+SmartpadF4
+speak current line: SmartpadF3+SmartpadRight
+speak from top of screen through current line: SmartpadF3+SmartpadUp
+speak from current line through bottom of screen: SmartpadF3+SmartpadDown
+go to current speech position: SmartpadF3+SmartpadEnter
+decrease speech rate: SmartpadF4+SmartpadLeft
+increase speech rate: SmartpadF4+SmartpadRight
+decrease speech volume: SmartpadF4+SmartpadDown
+increase speech volume: SmartpadF4+SmartpadUp
+set autospeak on/off: SmartpadF4+SmartpadEnter
+restart braille driver: SmartpadF1+SmartpadF2+SmartpadEnter
+restart speech driver: SmartpadF3+SmartpadF4+SmartpadEnter
+enter key: Enter
+set skipping of blank windows on/off: Space+Dot1+Dot2
+set skipping of blank windows off: Space+Dot1+Dot2+Dot7
+set skipping of blank windows on: Space+Dot1+Dot2+Dot8
+set cursor visibility on/off: Space+Dot1+Dot4
+set cursor visibility off: Space+Dot1+Dot4+Dot7
+set cursor visibility on: Space+Dot1+Dot4+Dot8
+set display mode attributes/text: Space+Dot1+Dot4+Dot5
+set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
+freeze/unfreeze screen image: Space+Dot1+Dot2+Dot4
+enter/leave help display: Space+Dot1+Dot2+Dot5
+set skipping of lines with identical content on/off: Space+Dot2+Dot4
+set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
+set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
+enter/leave command learn mode: Space+Dot1+Dot2+Dot3
+enter/leave preferences menu: Space+Dot1+Dot2+Dot3+Dot4
+restore preferences from disk: Space+Dot1+Dot2+Dot3+Dot4+Dot7
+save preferences to disk: Space+Dot1+Dot2+Dot3+Dot4+Dot8
+set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
+set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
+set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
+enter/leave status display: Space+Dot2+Dot3+Dot4
+set cursor tracking on/off: Space+Dot2+Dot3+Dot4+Dot5
+set cursor tracking off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
+set cursor tracking on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
+set attribute underlining on/off: Space+Dot1+Dot3+Dot6
+set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
+set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
+bring cursor to line: Space+Dot1+Dot2+Dot3+Dot6
+switch to previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
+switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
+set sliding window on/off: Space+Dot2+Dot4+Dot5+Dot6
+set sliding window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
+set sliding window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
+set text style 6-dot: Space+Dot2+Dot3+Dot5
+set text style 8-dot: Space+Dot2+Dot3+Dot6
+backspace key: Space+Dot7
+enter key: Space+Dot8
+cursor-left key: Space+Dot3
+cursor-right key: Space+Dot6
+home key: Space+Dot2
+end key: Space+Dot5
+cursor-up key: Space+Dot1
+cursor-down key: Space+Dot4
+page-up key: Space+Dot2+Dot3
+page-down key: Space+Dot5+Dot6
+tab key: Space+Dot2+Dot3+Dot5+Dot6
+insert key: Space+Dot3+Dot5
+delete key: Space+Dot2+Dot5+Dot6
+escape key: Space+Dot2+Dot6
+braille keyboard dot1: Dot1
+braille keyboard dot2: Dot2
+braille keyboard dot3: Dot3
+braille keyboard dot4: Dot4
+braille keyboard dot5: Dot5
+braille keyboard dot6: Dot6
+braille keyboard dot7: Dot7
+braille keyboard dot8: Dot8
+braille keyboard space: Space
+braille keyboard control: Control
+braille keyboard meta: Alt
+
+Menu Bindings
+go left one window: ThumbLeft
+go right one window: ThumbRight
+go to previous item: ThumbUp
+go to next item: ThumbDown
+go to first item: ETouchLeftRear
+go to last item: ETouchLeftFront
+select previous choice: ETouchRightRear
+select next choice: ETouchRightFront
+enter/leave preferences menu: ThumbHome
+restore preferences from disk: ETouchLeftRear+ETouchLeftFront
+save preferences to disk: ETouchRightRear+ETouchRightFront
+enter/leave preferences menu: SmartpadF1
+restore preferences from disk: SmartpadF2
+go to previous item: SmartpadUp
+go to next item: SmartpadDown
+select previous choice: SmartpadLeft
+select next choice: SmartpadRight
+save preferences to disk: SmartpadEnter

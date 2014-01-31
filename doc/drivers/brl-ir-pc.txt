@@ -1,0 +1,38 @@
+Key Table: Iris with PC Keyboard
+
+The eight extra keys at the ends of the keyboard are known as linear keys:
+* The four at the left, from top to bottom, are named L1 through L4.
+* The four at the right, from bottom to top, are named L5 through L8.
+RoutingKey refers to any of the keys behind the text cells.
+
+Default Bindings
+go left to nearest non-blank window: L1
+insert clipboard text at cursor: L2+L3
+set cursor visibility on/off: L4
+go right to nearest non-blank window: L8
+go to beginning of top line: L7
+go to beginning of bottom line: L6
+go to cursor: L7+L6
+set alert tunes on/off: L1+L2
+set text style 6-dot/8-dot: L4+L5
+XT (set 1) keyboard scan code: Xt
+XT (set 1) keyboard scan code: XtE0
+XT (set 1) keyboard scan code: XtE1
+go left one window: L5+XtE0.76
+go right one window: L5+XtE0.78
+go up one line: L5+XtE0.73
+go down one line: L5+XtE0.81
+freeze/unfreeze screen image: L1+L2+L8
+enter/leave help display: L1+L2+L7
+enter/leave status display: L2+L8
+enter/leave command learn mode: L1+L2+L3
+enter/leave preferences menu: L1+L2+L3+L8
+set text style 6-dot: L2+L3+L7
+set text style 8-dot: L2+L3+L6
+bring cursor to character: RoutingKey
+start new clipboard at character: L1+RoutingKey
+append to clipboard from character: L2+RoutingKey
+linear copy to character: L8+RoutingKey
+rectangular copy to character: L7+RoutingKey
+place left end of window at character: L3+RoutingKey
+describe character: L6+RoutingKey

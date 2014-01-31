@@ -1,0 +1,33 @@
+Key Table: HandyTech Bookworm
+
+Default Bindings
+go left one window: Backward
+go right one window: Forward
+set cursor tracking on/off: Escape
+go back after cursor tracking: Escape+Backward
+set display mode attributes/text: Escape+Forward
+bring cursor to character #1: Enter
+go up one line: Enter+Backward
+go down one line: Enter+Forward
+enter/leave preferences menu: Escape+Enter
+go to beginning of line: Escape+Enter+Backward
+go to end of line: Escape+Enter+Forward
+enter/leave help display: Backward+Forward
+set cursor style block/underline: Backward+Forward+Escape
+freeze/unfreeze screen image: Backward+Forward+Enter
+
+Menu Bindings
+go left one window: Backward
+go right one window: Forward
+restore preferences from disk: Escape
+select previous choice: Escape+Backward
+select next choice: Escape+Forward
+enter/leave preferences menu: Enter
+go to previous item: Enter+Backward
+go to next item: Enter+Forward
+save preferences to disk: Escape+Enter
+go to first item: Escape+Enter+Backward
+go to last item: Escape+Enter+Forward
+do nothing: Backward+Forward
+do nothing: Backward+Forward+Escape
+do nothing: Backward+Forward+Enter

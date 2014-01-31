@@ -1,0 +1,90 @@
+Key Table: EuroBraille AzerBraille, Clio, NoteBraille, PupiBraille, Scriba
+
+The eight dot keys of the braille keyboard are behind the cursor routing keys.
+From left to right, they are: Dot7, Dot3, Dot2, Dot1, Dot4, Dot5, Dot6, Dot8.
+The two keys of the braille keyboard in front of the braille cells, from left to right, are: Backspace, Space.
+
+Default Bindings
+backspace key: Backspace
+enter key: Backspace+Space
+set shift modifier of next typed character or emulated key on/off: Space+Dot7
+set meta modifier of next typed character or emulated key on/off: Space+Dot8
+set control modifier of next typed character or emulated key on/off: Space+Dot7+Dot8
+tab key: Space+Dot2+Dot5+Dot6
+tab key + shift: Space+Dot2+Dot3+Dot6
+cursor-up key: Space+Dot4
+cursor-down key: Space+Dot6
+cursor-left key: Space+Dot2
+cursor-right key: Space+Dot5
+page-up key: Space+Dot1+Dot3
+page-down key: Space+Dot4+Dot6
+home key: Space+Dot1+Dot2+Dot3
+end key: Space+Dot4+Dot5+Dot6
+delete key: Space+Dot3+Dot6
+escape key: Space+Dot1+Dot2+Dot4+Dot5
+insert key: Space+Dot1+Dot3+Dot5
+function key #1: Backspace+Dot1
+function key #2: Backspace+Dot1+Dot2
+function key #3: Backspace+Dot1+Dot4
+function key #4: Backspace+Dot1+Dot4+Dot5
+function key #5: Backspace+Dot1+Dot5
+function key #6: Backspace+Dot1+Dot2+Dot4
+function key #7: Backspace+Dot1+Dot2+Dot4+Dot5
+function key #8: Backspace+Dot1+Dot2+Dot5
+function key #9: Backspace+Dot2+Dot4
+function key #10: Backspace+Dot2+Dot4+Dot5
+function key #11: Backspace+Dot1+Dot3
+function key #12: Backspace+Dot1+Dot2+Dot3
+switch to Default Bindings: Star, Star
+set cursor tracking on/off: Star, Down
+set alert tunes on/off: Star, Right
+start new clipboard at character: Star, E, RoutingKey
+append to clipboard from character: Star, F, RoutingKey
+set cursor visibility on/off: Star, G
+rectangular copy to character: Star, K, RoutingKey
+insert clipboard text at cursor: Star, L
+linear copy to character: Star, M, RoutingKey
+switch to Default Bindings: Sharp, Sharp
+go to beginning of line: Sharp, Left
+go to end of line: Sharp, Right
+go to cursor: Sharp, Up
+go back after cursor tracking: Sharp, Down
+enter/leave command learn mode: Sharp, One
+go to beginning of top line: Sharp, Three
+go to beginning of bottom line: Sharp, Nine
+set display mode attributes/text: Sharp, A
+go to beginning of top line: Sharp, E
+search backward for clipboard text: Sharp, G
+enter/leave help display: Sharp, H
+search forward for clipboard text: Sharp, K
+enter/leave command learn mode: Sharp, L
+go to beginning of bottom line: Sharp, M
+bring cursor to character: RoutingKey
+cursor-up key: Up
+cursor-left key: Left
+cursor-right key: Right
+cursor-down key: Down
+go to cursor: Five
+go to beginning of top line: One
+go to beginning of bottom line: Seven
+go up to nearest line with different content: Three
+go down to nearest line with different content: Nine
+set cursor tracking on/off: Zero
+freeze/unfreeze screen image: A
+go left one window: E
+go up one line: F
+go up to previous command prompt: G
+enter/leave preferences menu: H
+enter/leave status display: I
+go down to next command prompt: K
+go down one line: L
+go right one window: M
+braille keyboard dot1: Dot1
+braille keyboard dot2: Dot2
+braille keyboard dot3: Dot3
+braille keyboard dot4: Dot4
+braille keyboard dot5: Dot5
+braille keyboard dot6: Dot6
+braille keyboard dot7: Dot7
+braille keyboard dot8: Dot8
+braille keyboard space: Space

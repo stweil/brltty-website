@@ -1,0 +1,190 @@
+Key Table: Baum (default)
+
+The display keys are at both ends of the text cell area. From top to bottom:
+* The three at the left are named Display1 through Display3.
+* The three at the right are named Display4 through Display6.
+For models which have a braille keyboard:
+* F1 and F2 are the two keys at the very left of the front.
+* F3 and F4 are the two keys at the very right of the front.
+* B10, if present, is between the Dot1 and Dot4 keys.
+The joystick is in the middle of the front,
+and its five positions are named Left, Right, Up, Down, and Press.
+B9 and B11 are the keys immediately to the left and right of the joystick.
+
+Default Bindings
+go left one window: Display2
+go right one window: Display5
+go left one character: Display1+Display3
+go right one character: Display4+Display6
+go to beginning of line: Display1+Display2+Display3
+go to end of line: Display4+Display5+Display6
+go up one line: Display4
+go down one line: Display6
+go to top line: Display1+Display4
+go to bottom line: Display3+Display6
+go to beginning of top line: Display2+Display4
+go to beginning of bottom line: Display2+Display6
+go up to nearest line with different content: Display5+Display4
+go down to nearest line with different content: Display5+Display6
+go up to nearest line with different highlighting: Display2+Display1
+go down to nearest line with different highlighting: Display2+Display3
+go up to previous command prompt: Display2+Display5+Display1+Display4
+go down to next command prompt: Display2+Display5+Display3+Display6
+go up to last line of previous paragraph: Display2+Display5+Display4
+go down to first line of next paragraph: Display2+Display5+Display6
+search backward for clipboard text: Display2+Display4+Display6+Display1
+search forward for clipboard text: Display2+Display4+Display6+Display3
+set cursor tracking on: Display1
+set cursor tracking off: Display3
+go back after cursor tracking: Display1+Display6
+go to cursor: Display2+Display4+Display6
+go to current speech position: Display1+Display3+Display5
+bring cursor to line: Display1+Display3+Display4+Display6
+enter/leave status display: Display2+Display5
+set display mode attributes/text: Display1+Display4+Display5
+show the current date and time: Display1+Display5
+freeze/unfreeze screen image: Display1+Display2+Display4
+enter/leave help display: Display1+Display2+Display5
+enter/leave preferences menu: Display1+Display3+Display4
+insert clipboard text at cursor: Display1+Display2+Display3+Display4
+restore preferences from disk: Display1+Display2+Display3+Display5
+restart speech driver: Display2+Display3+Display4
+set attribute underlining on/off: Display2+Display3+Display4+Display5
+save preferences to disk: Display2+Display4+Display5+Display6
+set text style 6-dot: Display2+Display3+Display5
+set text style 8-dot: Display2+Display3+Display6
+enter/leave command learn mode: Display1+Display4+Display5+Display6
+switch to next virtual terminal: Display1+Display2+Display3+Display6
+switch to previous virtual terminal: Display3+Display4+Display5+Display6
+stop speaking: Display3+Display4
+speak current line: Display3+Display5
+speak from top of screen through current line: Display3+Display5+Display4
+speak from current line through bottom of screen: Display3+Display5+Display6
+set autospeak on/off: Display3+Display4+Display6
+go to cursor or go back after cursor tracking: Press
+go up one line: Up
+go down one line: Down
+go left one window: Left
+go right one window: Right
+enter/leave help display: Dot4+Press
+go to top line: Dot4+Up
+go to bottom line: Dot4+Down
+go to beginning of line: Dot4+Left
+go to end of line: Dot4+Right
+enter/leave status display: Dot5+Press
+go up to nearest line with different content: Dot5+Up
+go down to nearest line with different content: Dot5+Down
+go left to nearest non-blank window: Dot5+Left
+go right to nearest non-blank window: Dot5+Right
+enter/leave command learn mode: Dot6+Press
+go up to nearest line with different highlighting: Dot6+Up
+go down to nearest line with different highlighting: Dot6+Down
+go left one character: Dot6+Left
+go right one character: Dot6+Right
+bring cursor to line: Dot4+Dot6+Press
+go up to last line of previous paragraph: Dot4+Dot6+Up
+go down to first line of next paragraph: Dot4+Dot6+Down
+go up to previous command prompt: Dot4+Dot6+Left
+go down to next command prompt: Dot4+Dot6+Right
+enter/leave preferences menu: Dot4+Dot5+Dot6+Press
+restore preferences from disk: Dot4+Dot5+Dot6+Up
+save preferences to disk: Dot4+Dot5+Dot6+Down
+search backward for clipboard text: Dot4+Dot5+Dot6+Left
+search forward for clipboard text: Dot4+Dot5+Dot6+Right
+set text style 6-dot/8-dot: Dot4+Dot5+Press
+freeze/unfreeze screen image: Dot4+Dot5+Up
+set display mode attributes/text: Dot4+Dot5+Down
+switch to previous virtual terminal: Dot4+Dot5+Left
+switch to next virtual terminal: Dot4+Dot5+Right
+set cursor tracking on/off: Dot5+Dot6+Press
+show the current date and time: Dot5+Dot6+Up
+set sliding window on/off: Dot5+Dot6+Down
+set skipping of lines with identical content on/off: Dot5+Dot6+Left
+set skipping of blank windows on/off: Dot5+Dot6+Right
+describe character: RoutingKey+Press
+start new clipboard at character: RoutingKey+Left
+append to clipboard from character: RoutingKey+Up
+linear copy to character: RoutingKey+Right
+rectangular copy to character: RoutingKey+Down
+tab key: Dot1+Press
+cursor-up key: Dot1+Up
+cursor-down key: Dot1+Down
+cursor-left key: Dot1+Left
+cursor-right key: Dot1+Right
+enter key: Dot2+Press
+insert key: Dot2+Up
+delete key: Dot2+Down
+backspace key: Dot2+Left
+insert clipboard text at cursor: Dot2+Right
+escape key: Dot3+Press
+page-up key: Dot3+Up
+page-down key: Dot3+Down
+home key: Dot3+Left
+end key: Dot3+Right
+set autospeak on/off: B9+Press
+increase speech volume: B9+Up
+decrease speech volume: B9+Down
+decrease speech rate: B9+Left
+increase speech rate: B9+Right
+go to current speech position: B11+Press
+speak from top of screen through current line: B11+Up
+speak from current line through bottom of screen: B11+Down
+stop speaking: B11+Left
+speak current line: B11+Right
+speak current word: B10+Press
+go to and speak previous line: B10+Up
+go to and speak next line: B10+Down
+go to and speak previous word: B10+Left
+go to and speak next word: B10+Right
+speak current character: B10+B9+Press
+spell current word: B10+B9+Up
+describe current character: B10+B9+Down
+go to and speak previous character: B10+B9+Left
+go to and speak next character: B10+B9+Right
+speak current line: B10+B11+Press
+go to and speak first non-blank line on screen: B10+B11+Up
+go to and speak last non-blank line on screen: B10+B11+Down
+go to and speak first non-blank character on line: B10+B11+Left
+go to and speak last non-blank character on line: B10+B11+Right
+bring cursor to character: RoutingKey
+start new clipboard at character: Display1+RoutingKey
+append to clipboard from character: Display2+RoutingKey
+linear copy to character: Display4+RoutingKey
+rectangular copy to character: Display5+RoutingKey
+copy characters to clipboard: RoutingKey+RoutingKey
+append characters to clipboard: Display2+RoutingKey+RoutingKey
+describe character: Display3+RoutingKey
+place left end of window at character: Display6+RoutingKey
+go up to nearest line with less indent than character: Display2+Display1+RoutingKey
+go down to nearest line with less indent than character: Display2+Display3+RoutingKey
+go up to nearest line with different character: Display5+Display4+RoutingKey
+go down to nearest line with different character: Display5+Display6+RoutingKey
+remember current window position: Display1+Display3+RoutingKey
+go to remembered window position: Display4+Display6+RoutingKey
+switch to virtual terminal: Display4+Display5+Display6+RoutingKey
+braille keyboard dot1: Dot1
+braille keyboard dot2: Dot2
+braille keyboard dot3: Dot3
+braille keyboard dot4: Dot4
+braille keyboard dot5: Dot5
+braille keyboard dot6: Dot6
+braille keyboard dot7: Dot7
+braille keyboard dot8: Dot8
+braille keyboard space: B10
+braille keyboard dot7: F2
+braille keyboard dot8: F3
+braille keyboard space: B9
+braille keyboard space: B11
+
+Menu Bindings
+enter/leave preferences menu: Press
+go to previous item: Up
+go to next item: Down
+select previous choice: Left
+select next choice: Right
+go to previous menu level: B10
+save preferences to disk: B10+Press
+go to first item: B10+Up
+go to last item: B10+Down
+go left one window: B10+Left
+go right one window: B10+Right

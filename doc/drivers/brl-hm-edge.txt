@@ -1,0 +1,93 @@
+Key Table: HIMS Braille Edge
+
+Default Bindings
+bring cursor to character: RoutingKey
+go up one line: LeftScrollUp
+go down one line: LeftScrollDown
+go left one window: RightScrollUp
+go right one window: RightScrollDown
+go to beginning of line: LeftScrollUp+LeftScrollDown
+go to beginning of top line: LeftScrollUp+LeftScrollDown+RightScrollUp
+go to beginning of bottom line: LeftScrollUp+LeftScrollDown+RightScrollDown
+go to cursor or go back after cursor tracking: RightScrollUp+RightScrollDown
+go to top line: RightScrollUp+RightScrollDown+LeftScrollUp
+go to bottom line: RightScrollUp+RightScrollDown+LeftScrollDown
+set cursor tracking on/off: LeftScrollUp+RightScrollUp
+set text style 6-dot/8-dot: LeftScrollUp+RightScrollDown
+freeze/unfreeze screen image: LeftScrollDown+RightScrollUp
+set display mode attributes/text: LeftScrollDown+RightScrollDown
+enter/leave help display: F1
+enter/leave command learn mode: F2
+enter/leave status display: F3
+enter/leave preferences menu: F4
+set skipping of blank windows on/off: Space+Dot1+Dot2
+set skipping of blank windows off: Space+Dot1+Dot2+Dot7
+set skipping of blank windows on: Space+Dot1+Dot2+Dot8
+set cursor visibility on/off: Space+Dot1+Dot4
+set cursor visibility off: Space+Dot1+Dot4+Dot7
+set cursor visibility on: Space+Dot1+Dot4+Dot8
+set display mode attributes/text: Space+Dot1+Dot4+Dot5
+set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
+freeze/unfreeze screen image: Space+Dot1+Dot2+Dot4
+enter/leave help display: Space+Dot1+Dot2+Dot5
+set skipping of lines with identical content on/off: Space+Dot2+Dot4
+set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
+set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
+enter/leave command learn mode: Space+Dot1+Dot2+Dot3
+enter/leave preferences menu: Space+Dot1+Dot2+Dot3+Dot4
+restore preferences from disk: Space+Dot1+Dot2+Dot3+Dot4+Dot7
+save preferences to disk: Space+Dot1+Dot2+Dot3+Dot4+Dot8
+set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
+set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
+set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
+enter/leave status display: Space+Dot2+Dot3+Dot4
+set cursor tracking on/off: Space+Dot2+Dot3+Dot4+Dot5
+set cursor tracking off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
+set cursor tracking on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
+set attribute underlining on/off: Space+Dot1+Dot3+Dot6
+set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
+set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
+bring cursor to line: Space+Dot1+Dot2+Dot3+Dot6
+switch to previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
+switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
+set sliding window on/off: Space+Dot2+Dot4+Dot5+Dot6
+set sliding window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
+set sliding window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
+set text style 6-dot: Space+Dot2+Dot3+Dot5
+set text style 8-dot: Space+Dot2+Dot3+Dot6
+backspace key: Space+Dot7
+enter key: Space+Dot8
+cursor-left key: Space+Dot3
+cursor-right key: Space+Dot6
+home key: Space+Dot2
+end key: Space+Dot5
+cursor-up key: Space+Dot1
+cursor-down key: Space+Dot4
+page-up key: Space+Dot2+Dot3
+page-down key: Space+Dot5+Dot6
+tab key: Space+Dot2+Dot3+Dot5+Dot6
+insert key: Space+Dot3+Dot5
+delete key: Space+Dot2+Dot5+Dot6
+escape key: Space+Dot2+Dot6
+braille keyboard dot1: Dot1
+braille keyboard dot2: Dot2
+braille keyboard dot3: Dot3
+braille keyboard dot4: Dot4
+braille keyboard dot5: Dot5
+braille keyboard dot6: Dot6
+braille keyboard dot7: Dot7
+braille keyboard dot8: Dot8
+braille keyboard space: Space
+braille keyboard meta: F4
+braille keyboard control: F5
+
+Menu Bindings
+go to previous item: LeftScrollUp
+go to next item: LeftScrollDown
+select previous choice: RightScrollUp
+select next choice: RightScrollDown
+go left one window: LeftScrollUp+LeftScrollDown
+go right one window: RightScrollUp+RightScrollDown
+go to first item: LeftScrollUp+RightScrollUp
+go to last item: LeftScrollDown+RightScrollDown

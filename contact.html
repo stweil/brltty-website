@@ -1,0 +1,23 @@
+<?php
+   require "brltty.php";
+   $brltty = new brltty_document("Contact");
+   $brltty->add_subsection("The Mailing List", "brltty-list.php", "list");
+   $brltty->add_subsection("The Team", "brltty-team.php", "team");
+   $brltty->add_subsection("Other Contributors", "brltty-contributors.php", "contributors");
+   function contributor($name, $mail=null, $home=null) {
+      echo("<DT>");
+      if ($home != null) {
+         write_element("A", array("HREF" => $home));
+      }
+      echo($name);
+      if ($home != null) {
+         echo("</A>");
+      }
+      if ($mail != null) {
+         echo(" ");
+         write_mailto($mail);
+      }
+      echo("<DD>\n");
+   }
+   $brltty->end();
+?>

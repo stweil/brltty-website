@@ -1,0 +1,50 @@
+Key Table: Baum (variokeys=yes)
+
+The command keys are in the middle, just behind the cursor routing keys,
+and, from left to right, are named Command1 through Command7.
+
+Default Bindings
+go left one window: Display2
+go right one window: Display5
+go up one line: Display1
+go down one line: Display3
+cursor-up key: Display4
+cursor-down key: Display6
+go to cursor: Display1+Display3
+go to beginning of top line: Display2+Display1
+go to beginning of bottom line: Display2+Display3
+enter/leave preferences menu: Display1+Display4
+freeze/unfreeze screen image: Display1+Display2+Display4
+enter/leave help display: Display1+Display2+Display5
+enter/leave status display: Display2+Display4
+set cursor tracking on/off: Display2+Display3+Display4+Display5
+set attribute underlining on/off: Display1+Display3+Display6
+set display mode attributes/text: Display1+Display2+Display3+Display6
+enter key: Command4+Command5
+backspace key: Command4+Command2
+tab key: Command4+Command6
+cursor-left key: Command4+Command1
+cursor-right key: Command4+Command7
+bring cursor to character: RoutingKey
+start new clipboard at character: Display1+RoutingKey
+append to clipboard from character: Display2+RoutingKey
+linear copy to character: Display4+RoutingKey
+rectangular copy to character: Display5+RoutingKey
+copy characters to clipboard: RoutingKey+RoutingKey
+append characters to clipboard: Display2+RoutingKey+RoutingKey
+describe character: Display3+RoutingKey
+place left end of window at character: Display6+RoutingKey
+go up to nearest line with less indent than character: Display2+Display1+RoutingKey
+go down to nearest line with less indent than character: Display2+Display3+RoutingKey
+go up to nearest line with different character: Display5+Display4+RoutingKey
+go down to nearest line with different character: Display5+Display6+RoutingKey
+remember current window position: Display1+Display3+RoutingKey
+go to remembered window position: Display4+Display6+RoutingKey
+switch to virtual terminal: Display4+Display5+Display6+RoutingKey
+braille keyboard space: Command4
+braille keyboard dot1: Command3
+braille keyboard dot2: Command2
+braille keyboard dot3: Command1
+braille keyboard dot4: Command5
+braille keyboard dot5: Command6
+braille keyboard dot6: Command7

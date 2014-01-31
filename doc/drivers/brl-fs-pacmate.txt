@@ -1,0 +1,54 @@
+Key Table: FreedomScientific PAC Mate
+
+Default Bindings
+set skipping of lines with identical content on/off: Hot1
+set skipping of blank windows on/off: RightGdf+Hot1
+set display mode attributes/text: Hot2
+set attribute underlining on/off: RightGdf+Hot2
+set cursor tracking on/off: Hot3
+set cursor visibility on/off: RightGdf+Hot3
+set text style 6-dot/8-dot: Hot4
+set autorepeat on/off: RightGdf+Hot4
+enter/leave help display: Hot5
+freeze/unfreeze screen image: RightGdf+Hot5
+enter/leave command learn mode: Hot6
+restore preferences from disk: RightGdf+Hot6
+enter/leave preferences menu: Hot7
+save preferences to disk: RightGdf+Hot7
+enter/leave status display: Hot8
+bring cursor to line: RightGdf+Hot8
+go to beginning of line: LeftWheelPress
+go to end of line: RightWheelPress
+go back after cursor tracking: LeftGdf
+go to cursor: RightGdf
+insert clipboard text at cursor: LeftGdf+RightGdf
+go left one window: LeftAdvance
+go right one window: RightAdvance
+go to beginning of top line: LeftGdf+LeftAdvance
+go to beginning of bottom line: LeftGdf+RightAdvance
+go to top line: RightGdf+LeftAdvance
+go to bottom line: RightGdf+RightAdvance
+go up one line: LeftWheelUp
+go down one line: LeftWheelDown
+go left one window: RightWheelUp
+go right one window: RightWheelDown
+go up to nearest line with different content: LeftWheelPress+LeftWheelUp
+go down to nearest line with different content: LeftWheelPress+LeftWheelDown
+go left one character: RightWheelPress+RightWheelUp
+go right one character: RightWheelPress+RightWheelDown
+go up to previous command prompt: LeftAdvance+LeftWheelUp
+go down to next command prompt: LeftAdvance+LeftWheelDown
+go up to last line of previous paragraph: RightAdvance+LeftWheelUp
+go down to first line of next paragraph: RightAdvance+LeftWheelDown
+go up to nearest line with different highlighting: LeftGdf+LeftWheelUp
+go down to nearest line with different highlighting: LeftGdf+LeftWheelDown
+search backward for clipboard text: RightGdf+LeftWheelUp
+search forward for clipboard text: RightGdf+LeftWheelDown
+bring cursor to character: RoutingKey
+place left end of window at character: LeftWheelPress+RoutingKey
+describe character: RightWheelPress+RoutingKey
+copy characters to clipboard: RoutingKey+RoutingKey
+start new clipboard at character: LeftAdvance+RoutingKey
+rectangular copy to character: RightAdvance+RoutingKey
+append to clipboard from character: LeftGdf+RoutingKey
+linear copy to character: RightGdf+RoutingKey

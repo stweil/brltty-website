@@ -1,0 +1,62 @@
+Key Table: Alva ABT [3nn] and Delphi [4nn] (large)
+
+The two long keys are named Left and Right.
+The small keys immediately to their left and right are named Up and Down.
+The three small keys at the left are named Prog, Home, and Cursor.
+The three small keys at the right are named Cursor2, Home2, and Prog2.
+
+Default Bindings
+go left one window: Left
+go right one window: Right
+go to beginning of line: Home+Left
+go to end of line: Home+Right
+go left half a window: Cursor+Left
+go right half a window: Cursor+Right
+go left one character: Prog+Left
+go right one character: Prog+Right
+go up one line: Up
+go down one line: Down
+go to beginning of top line: Home
+go to top line: Home+Up
+go to bottom line: Home+Down
+go up to nearest line with different highlighting: Cursor+Up
+go down to nearest line with different highlighting: Cursor+Down
+go up to nearest line with different content: Home+Cursor+Up
+go down to nearest line with different content: Home+Cursor+Down
+go up to previous command prompt: Prog+Home+Up
+set cursor tracking on/off: Home+Cursor
+go to cursor or go back after cursor tracking: Cursor
+bring cursor to character: RoutingKey1
+describe character: Prog+Home+RoutingKey1
+place left end of window at character: Home+Cursor+RoutingKey1
+start new clipboard at character: Prog+RoutingKey1
+rectangular copy to character: Home+RoutingKey1
+insert clipboard text at cursor: Prog+Home+Down
+enter/leave help display: Prog
+set display mode attributes/text: Prog+Home
+enter/leave preferences menu: Prog+Cursor
+enter/leave status display: Prog+Up
+freeze/unfreeze screen image: Prog+Down
+set capital letter blinking on/off: Status1A
+set cursor visibility on/off: Status1B
+set cursor blinking on/off: Status1C
+set text style 6-dot/8-dot: Cursor+Status1A
+set cursor style block/underline: Cursor+Status1B
+set sliding window on/off: Cursor+Status1C
+stop speaking: Home+Cursor+Left
+speak current line: Home+Cursor+Right
+restart speech driver: Prog+Home+Left
+speak from current line through bottom of screen: Prog+Home+Right
+
+Menu Bindings
+go to previous item: Up
+go to next item: Down
+go to first item: Home+Up
+go to last item: Home+Down
+go left one window: Left
+go right one window: Right
+restore preferences from disk: Home+Left
+save preferences to disk: Home+Right
+enter/leave preferences menu: Prog
+select previous choice: Home
+select next choice: Cursor

@@ -1,0 +1,111 @@
+Key Table: FreedomScientific Focus Blue
+
+Default Bindings
+go to beginning of line: LeftWheelPress
+go to end of line: RightWheelPress
+go back after cursor tracking: LeftGdf
+go to cursor: RightGdf
+insert clipboard text at cursor: LeftGdf+RightGdf
+go left one window: LeftAdvance
+go right one window: RightAdvance
+go to beginning of top line: LeftGdf+LeftAdvance
+go to beginning of bottom line: LeftGdf+RightAdvance
+go to top line: RightGdf+LeftAdvance
+go to bottom line: RightGdf+RightAdvance
+go up one line: LeftWheelUp
+go down one line: LeftWheelDown
+go left one window: RightWheelUp
+go right one window: RightWheelDown
+go up to nearest line with different content: LeftWheelPress+LeftWheelUp
+go down to nearest line with different content: LeftWheelPress+LeftWheelDown
+go left one character: RightWheelPress+RightWheelUp
+go right one character: RightWheelPress+RightWheelDown
+go up to previous command prompt: LeftAdvance+LeftWheelUp
+go down to next command prompt: LeftAdvance+LeftWheelDown
+go up to last line of previous paragraph: RightAdvance+LeftWheelUp
+go down to first line of next paragraph: RightAdvance+LeftWheelDown
+go up to nearest line with different highlighting: LeftGdf+LeftWheelUp
+go down to nearest line with different highlighting: LeftGdf+LeftWheelDown
+search backward for clipboard text: RightGdf+LeftWheelUp
+search forward for clipboard text: RightGdf+LeftWheelDown
+bring cursor to character: RoutingKey
+place left end of window at character: LeftWheelPress+RoutingKey
+describe character: RightWheelPress+RoutingKey
+copy characters to clipboard: RoutingKey+RoutingKey
+start new clipboard at character: LeftAdvance+RoutingKey
+rectangular copy to character: RightAdvance+RoutingKey
+append to clipboard from character: LeftGdf+RoutingKey
+linear copy to character: RightGdf+RoutingKey
+set skipping of blank windows on/off: Space+Dot1+Dot2
+set skipping of blank windows off: Space+Dot1+Dot2+Dot7
+set skipping of blank windows on: Space+Dot1+Dot2+Dot8
+set cursor visibility on/off: Space+Dot1+Dot4
+set cursor visibility off: Space+Dot1+Dot4+Dot7
+set cursor visibility on: Space+Dot1+Dot4+Dot8
+set display mode attributes/text: Space+Dot1+Dot4+Dot5
+set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
+freeze/unfreeze screen image: Space+Dot1+Dot2+Dot4
+enter/leave help display: Space+Dot1+Dot2+Dot5
+set skipping of lines with identical content on/off: Space+Dot2+Dot4
+set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
+set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
+enter/leave command learn mode: Space+Dot1+Dot2+Dot3
+enter/leave preferences menu: Space+Dot1+Dot2+Dot3+Dot4
+restore preferences from disk: Space+Dot1+Dot2+Dot3+Dot4+Dot7
+save preferences to disk: Space+Dot1+Dot2+Dot3+Dot4+Dot8
+set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
+set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
+set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
+enter/leave status display: Space+Dot2+Dot3+Dot4
+set cursor tracking on/off: Space+Dot2+Dot3+Dot4+Dot5
+set cursor tracking off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
+set cursor tracking on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
+set attribute underlining on/off: Space+Dot1+Dot3+Dot6
+set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
+set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
+bring cursor to line: Space+Dot1+Dot2+Dot3+Dot6
+switch to previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
+switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
+set sliding window on/off: Space+Dot2+Dot4+Dot5+Dot6
+set sliding window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
+set sliding window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
+set text style 6-dot: Space+Dot2+Dot3+Dot5
+set text style 8-dot: Space+Dot2+Dot3+Dot6
+backspace key: Space+Dot7
+enter key: Space+Dot8
+cursor-left key: Space+Dot3
+cursor-right key: Space+Dot6
+home key: Space+Dot2
+end key: Space+Dot5
+cursor-up key: Space+Dot1
+cursor-down key: Space+Dot4
+page-up key: Space+Dot2+Dot3
+page-down key: Space+Dot5+Dot6
+tab key: Space+Dot2+Dot3+Dot5+Dot6
+insert key: Space+Dot3+Dot5
+delete key: Space+Dot2+Dot5+Dot6
+escape key: Space+Dot2+Dot6
+backspace key: Space+LeftShift
+enter key: Space+RightShift
+function key: Space+RoutingKey
+switch to virtual terminal: RightShift+RoutingKey
+describe character: NavrowKey
+go up to nearest line with less indent than character: LeftAdvance+NavrowKey
+go down to nearest line with less indent than character: RightAdvance+NavrowKey
+place left end of window at character: LeftGdf+NavrowKey
+cursor-up key: LeftRockerUp
+cursor-down key: LeftRockerDown
+go up one line: RightRockerUp
+go down one line: RightRockerDown
+braille keyboard dot1: Dot1
+braille keyboard dot2: Dot2
+braille keyboard dot3: Dot3
+braille keyboard dot4: Dot4
+braille keyboard dot5: Dot5
+braille keyboard dot6: Dot6
+braille keyboard dot7: Dot7
+braille keyboard dot8: Dot8
+braille keyboard space: Space
+braille keyboard uppercase: LeftShift
+braille keyboard control: RightShift

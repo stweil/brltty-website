@@ -1,0 +1,45 @@
+Key Table: Pegasus
+
+Default Bindings
+enter/leave help display: Status1
+enter/leave command learn mode: Status2
+bring cursor to character: RoutingKey
+go left one window: Left
+go right one window: Right
+go up one line: Up
+go down one line: Down
+go to beginning of top line: Home
+go to beginning of bottom line: Enter
+go to cursor or go back after cursor tracking: End
+set cursor tracking on/off: Escape
+go up to nearest line with different highlighting: LeftControl+Left
+go down to nearest line with different highlighting: LeftControl+Right
+go up to nearest line with different content: LeftControl+Up
+go down to nearest line with different content: LeftControl+Down
+freeze/unfreeze screen image: LeftControl+Enter
+enter/leave preferences menu: LeftControl+End
+enter/leave status display: LeftControl+Escape
+set display mode attributes/text: LeftShift+Left
+set text style 6-dot/8-dot: LeftShift+Right
+bring cursor to line: LeftShift+Down
+go up to previous command prompt: LeftShift+Home
+go down to next command prompt: LeftShift+Enter
+go up to last line of previous paragraph: LeftShift+End
+go down to first line of next paragraph: LeftShift+Escape
+place left end of window at character: RightShift+Left, RoutingKey
+insert clipboard text at cursor: RightShift+Right
+describe character: RightShift+Down, RoutingKey
+start new clipboard at character: RightShift+Home, RoutingKey
+append to clipboard from character: RightShift+Enter, RoutingKey
+linear copy to character: RightShift+End, RoutingKey
+rectangular copy to character: RightShift+Escape, RoutingKey
+
+Menu Bindings
+go left one window: Left
+go right one window: Right
+go to previous item: Up
+go to next item: Down
+go to first item: Home
+go to last item: Enter
+select previous choice: End
+select next choice: Escape

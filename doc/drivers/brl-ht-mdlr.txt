@@ -1,0 +1,146 @@
+Key Table: HandyTech Modular
+
+The 16 keys of a Handy Tech Keypad are named like this:
+* B9    One   Two   Three
+* B10   Four  Five  Six
+* B11   Seven Eight Nine
+* B12   B13   Zero  B14
+
+Default Bindings
+bring cursor to character: RoutingKey
+copy characters to clipboard: RoutingKey+RoutingKey
+go up to nearest line with less indent than character: Left+RoutingKey
+go down to nearest line with less indent than character: Right+RoutingKey
+go left one window: Left
+go right one window: Right
+insert clipboard text at cursor: Left+Right
+go to beginning of line: B1+Left
+go to end of line: B1+Right
+go to top line: B2+Left
+go to bottom line: B2+Right
+go left half a window: B3+Left
+go right half a window: B3+Right
+go left one character: B6+Left
+go right one character: B6+Right
+stop speaking: B2+B3+Left
+speak current line: B2+B3+Right
+enter/leave help display: Status1
+enter/leave preferences menu: Status2
+enter/leave status display: Status3
+freeze/unfreeze screen image: Status4
+go to cursor: B1
+go to beginning of top line: B2
+go back after cursor tracking: B3
+go up one line: B4
+go down one line: B5
+go up to last line of previous paragraph: B1+B4
+go down to first line of next paragraph: B1+B5
+go up to previous command prompt: B2+B4
+go down to next command prompt: B2+B5
+search backward for clipboard text: B3+B4
+search forward for clipboard text: B3+B5
+go up to nearest line with different highlighting: B6+B4
+go down to nearest line with different highlighting: B6+B5
+go up several lines: B7+B4
+go down several lines: B7+B5
+go up to nearest line with different content: B8+B4
+go down to nearest line with different content: B8+B5
+enter/leave help display: B8
+set cursor tracking on/off: B8+B1
+set cursor visibility on/off: B8+B2
+set attribute underlining on/off: B8+B3
+freeze/unfreeze screen image: B8+B6
+set alert tunes on/off: B8+B7
+set text style 6-dot/8-dot: B7
+enter/leave preferences menu: B7+B1
+restore preferences from disk: B7+B2
+save preferences to disk: B7+B3
+enter/leave status display: B7+B6
+set display mode attributes/text: B6
+set skipping of lines with identical content on/off: B6+B1
+set skipping of blank windows on/off: B6+B2
+set sliding window on/off: B6+B3
+show the current date and time: B2+B3+B5+B6
+place left end of window at character: B1+RoutingKey
+describe character: B2+RoutingKey
+append to clipboard from character: B3+RoutingKey
+start new clipboard at character: B4+RoutingKey
+rectangular copy to character: B5+RoutingKey
+linear copy to character: B6+RoutingKey
+remember current window position: B7+RoutingKey
+go to remembered window position: B8+RoutingKey
+put random password into clipboard: B1+B2+RoutingKey
+speak from top of screen through current line: B9
+speak current line: B10
+speak from current line through bottom of screen: B11
+stop speaking: B12
+go to current speech position: Zero
+switch to previous virtual terminal: B13
+switch to next virtual terminal: B14
+enter/leave command learn mode: Seven
+go to previous item: Eight
+go to first item: Nine
+select previous choice: Four
+save preferences to disk: Five
+select next choice: Six
+enter/leave preferences menu: One
+go to next item: Two
+go to last item: Three
+home key: Zero+Seven
+cursor-up key: Zero+Eight
+page-up key: Zero+Nine
+cursor-left key: Zero+Four
+cursor-right key: Zero+Six
+end key: Zero+One
+cursor-down key: Zero+Two
+page-down key: Zero+Three
+insert key: Zero+B13
+delete key: Zero+B14
+remember current window position #1: B9+One
+remember current window position #2: B9+Two
+remember current window position #3: B9+Three
+remember current window position #4: B9+Four
+remember current window position #5: B9+Five
+remember current window position #6: B9+Six
+remember current window position #7: B9+Seven
+remember current window position #8: B9+Eight
+remember current window position #9: B9+Nine
+remember current window position #10: B9+Zero
+remember current window position #11: B9+B13
+remember current window position #12: B9+B14
+go to remembered window position #1: B10+One
+go to remembered window position #2: B10+Two
+go to remembered window position #3: B10+Three
+go to remembered window position #4: B10+Four
+go to remembered window position #5: B10+Five
+go to remembered window position #6: B10+Six
+go to remembered window position #7: B10+Seven
+go to remembered window position #8: B10+Eight
+go to remembered window position #9: B10+Nine
+go to remembered window position #10: B10+Zero
+go to remembered window position #11: B10+B13
+go to remembered window position #12: B10+B14
+switch to virtual terminal #1: B11+One
+switch to virtual terminal #2: B11+Two
+switch to virtual terminal #3: B11+Three
+switch to virtual terminal #4: B11+Four
+switch to virtual terminal #5: B11+Five
+switch to virtual terminal #6: B11+Six
+switch to virtual terminal #7: B11+Seven
+switch to virtual terminal #8: B11+Eight
+switch to virtual terminal #9: B11+Nine
+switch to virtual terminal #10: B11+Zero
+switch to virtual terminal #11: B11+B13
+switch to virtual terminal #12: B11+B14
+function key #1: B12+One
+function key #2: B12+Two
+function key #3: B12+Three
+function key #4: B12+Four
+function key #5: B12+Five
+function key #6: B12+Six
+function key #7: B12+Seven
+function key #8: B12+Eight
+function key #9: B12+Nine
+function key #10: B12+Zero
+function key #11: B12+B13
+function key #12: B12+B14

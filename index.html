@@ -1,0 +1,9 @@
+<?php
+   require "brltty.php";
+   $brltty = new brltty_document("Home", "Official Home");
+   $brltty->add_subsection("Introduction", "brltty-introduction.php", "introduction");
+   $brltty->add_subsection("Capabilities", "brltty-capabilities.php", "capabilities");
+   $brltty->add_subsection("Features", "brltty-features.php", "features");
+   $brltty->add_subsection("Related Projects", "brltty-related.php", "related");
+   $brltty->end();
+?>

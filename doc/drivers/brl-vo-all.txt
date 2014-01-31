@@ -1,0 +1,125 @@
+Key Table: Voyager
+
+Default Bindings
+show the current date and time: Thumb1+Thumb4
+bring cursor to character: RoutingKey
+go left one window: Thumb1
+go right one window: Thumb4
+go up one line: Thumb2
+go down one line: Thumb3
+go to beginning of top line: Thumb1+Thumb2
+go to beginning of bottom line: Thumb1+Thumb3
+go to top line: Thumb4+Thumb2
+go to bottom line: Thumb4+Thumb3
+cursor-up key: Up
+cursor-down key: Down
+go back after cursor tracking: Left
+go to cursor: Right
+set cursor tracking on/off: Left+Right
+set display mode attributes/text: Left+Up
+set text style 6-dot/8-dot: Left+Down
+set autorepeat on/off: Right+Up
+set autospeak on/off: Right+Down
+set skipping of blank windows on/off: Thumb2+Dot1+Dot2
+set skipping of blank windows off: Thumb2+Dot1+Dot2+Dot7
+set skipping of blank windows on: Thumb2+Dot1+Dot2+Dot8
+set cursor visibility on/off: Thumb2+Dot1+Dot4
+set cursor visibility off: Thumb2+Dot1+Dot4+Dot7
+set cursor visibility on: Thumb2+Dot1+Dot4+Dot8
+set display mode attributes/text: Thumb2+Dot1+Dot4+Dot5
+set display mode text: Thumb2+Dot1+Dot4+Dot5+Dot7
+set display mode attributes: Thumb2+Dot1+Dot4+Dot5+Dot8
+freeze/unfreeze screen image: Thumb2+Dot1+Dot2+Dot4
+enter/leave help display: Thumb2+Dot1+Dot2+Dot5
+set skipping of lines with identical content on/off: Thumb2+Dot2+Dot4
+set skipping of lines with identical content off: Thumb2+Dot2+Dot4+Dot7
+set skipping of lines with identical content on: Thumb2+Dot2+Dot4+Dot8
+enter/leave command learn mode: Thumb2+Dot1+Dot2+Dot3
+enter/leave preferences menu: Thumb2+Dot1+Dot2+Dot3+Dot4
+restore preferences from disk: Thumb2+Dot1+Dot2+Dot3+Dot4+Dot7
+save preferences to disk: Thumb2+Dot1+Dot2+Dot3+Dot4+Dot8
+set autorepeat on/off: Thumb2+Dot1+Dot2+Dot3+Dot5
+set autorepeat off: Thumb2+Dot1+Dot2+Dot3+Dot5+Dot7
+set autorepeat on: Thumb2+Dot1+Dot2+Dot3+Dot5+Dot8
+enter/leave status display: Thumb2+Dot2+Dot3+Dot4
+set cursor tracking on/off: Thumb2+Dot2+Dot3+Dot4+Dot5
+set cursor tracking off: Thumb2+Dot2+Dot3+Dot4+Dot5+Dot7
+set cursor tracking on: Thumb2+Dot2+Dot3+Dot4+Dot5+Dot8
+set attribute underlining on/off: Thumb2+Dot1+Dot3+Dot6
+set attribute underlining off: Thumb2+Dot1+Dot3+Dot6+Dot7
+set attribute underlining on: Thumb2+Dot1+Dot3+Dot6+Dot8
+bring cursor to line: Thumb2+Dot1+Dot2+Dot3+Dot6
+switch to previous virtual terminal: Thumb2+Dot1+Dot2+Dot3+Dot6+Dot7
+switch to next virtual terminal: Thumb2+Dot1+Dot2+Dot3+Dot6+Dot8
+set sliding window on/off: Thumb2+Dot2+Dot4+Dot5+Dot6
+set sliding window off: Thumb2+Dot2+Dot4+Dot5+Dot6+Dot7
+set sliding window on: Thumb2+Dot2+Dot4+Dot5+Dot6+Dot8
+set text style 6-dot: Thumb2+Dot2+Dot3+Dot5
+set text style 8-dot: Thumb2+Dot2+Dot3+Dot6
+backspace key: Thumb2+Dot7
+enter key: Thumb2+Dot8
+cursor-left key: Thumb2+Dot3
+cursor-right key: Thumb2+Dot6
+home key: Thumb2+Dot2
+end key: Thumb2+Dot5
+cursor-up key: Thumb2+Dot1
+cursor-down key: Thumb2+Dot4
+page-up key: Thumb2+Dot2+Dot3
+page-down key: Thumb2+Dot5+Dot6
+tab key: Thumb2+Dot2+Dot3+Dot5+Dot6
+insert key: Thumb2+Dot3+Dot5
+delete key: Thumb2+Dot2+Dot5+Dot6
+escape key: Thumb2+Dot2+Dot6
+start new clipboard at character: Thumb1+RoutingKey
+append to clipboard from character: Thumb2+RoutingKey
+linear copy to character: Thumb3+RoutingKey
+rectangular copy to character: Thumb4+RoutingKey
+copy characters to clipboard: RoutingKey+RoutingKey
+insert clipboard text at cursor: Thumb2+Thumb3
+go up to nearest line with different highlighting: Thumb1+Up
+go down to nearest line with different highlighting: Thumb1+Down
+go up to nearest line with different content: Thumb2+Up
+go down to nearest line with different content: Thumb2+Down
+go up to previous command prompt: Thumb3+Up
+go down to next command prompt: Thumb3+Down
+go up to last line of previous paragraph: Thumb4+Up
+go down to first line of next paragraph: Thumb4+Down
+search backward for clipboard text: Thumb1+Left
+search forward for clipboard text: Thumb1+Right
+go left to nearest non-blank window: Thumb2+Left
+go right to nearest non-blank window: Thumb2+Right
+go left one character: Thumb3+Left
+go right one character: Thumb3+Right
+go to beginning of line: Thumb4+Left
+go to end of line: Thumb4+Right
+place left end of window at character: Left+RoutingKey
+describe character: Right+RoutingKey
+switch to virtual terminal: Up+RoutingKey
+function key: Down+RoutingKey
+go up to nearest line with less indent than character: Thumb1+Thumb2+RoutingKey
+go down to nearest line with less indent than character: Thumb1+Thumb3+RoutingKey
+go up to nearest line with different character: Thumb4+Thumb2+RoutingKey
+go down to nearest line with different character: Thumb4+Thumb3+RoutingKey
+braille keyboard dot1: Dot1
+braille keyboard dot2: Dot2
+braille keyboard dot3: Dot3
+braille keyboard dot4: Dot4
+braille keyboard dot5: Dot5
+braille keyboard dot6: Dot6
+braille keyboard dot7: Dot7
+braille keyboard dot8: Dot8
+braille keyboard space: Thumb2
+braille keyboard space: Thumb3
+braille keyboard uppercase: Left
+braille keyboard control: Right
+
+Menu Bindings
+go to previous item: Thumb2
+go to next item: Thumb3
+go to first item: Up
+go to last item: Down
+select previous choice: Left
+select next choice: Right
+enter/leave preferences menu: Left+Right
+restore preferences from disk: Left+Up
+save preferences to disk: Left+Down

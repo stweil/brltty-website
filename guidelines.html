@@ -1,0 +1,11 @@
+<?php
+   require "brltty.php";
+   $brltty = new brltty_document("Guidelines", "Guidelines for Linux Distributions");
+   $brltty->add_subsection("Installing with Braille", "brltty-install.php", "install");
+   $brltty->add_subsection("The bp2cf Script", "brltty-bp2cf.php", "bp2cf");
+   $brltty->add_subsection("System Startup", "brltty-start.php", "start");
+   $brltty->add_subsection("Specifying Options", "brltty-options.php", "options");
+   $brltty->add_subsection("Required Devices", "brltty-devices.php", "devices");
+   $brltty->add_subsection("The Boot Prompt", "brltty-boot.php", "boot");
+   $brltty->end();
+?>
