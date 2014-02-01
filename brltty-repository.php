@@ -1,28 +1,55 @@
-BRLTTY is developed within a <B>subversion</B> repository.
+BRLTTY is developed within a <B>git</B> repository.
 You can access the repository yourself
-if you have the <B>subversion</B> client.
-To download and/or learn how to use the <B>subversion</B> client,
-go to [<?php write_link('http://subversion.tigris.org/'); ?>].
+if you have the <B>git</B> client.
+To download and/or learn how to use the <B>git</B> client,
+go to [<?php write_link('http://git-scm.com/'); ?>].
 <P>
-The repository is at [<?php write_link('svn://mielke.cc/'); ?>].
+The repository is at [<?php write_link('https://github.com/brltty/brltty'); ?>].
 Here are a few simple things which you can do:
 <UL>
 <LI>
-To check out your own copy of the latest development source, do:
+To obtain your own local copy of the latest development source, do:
 <KBD><PRE>
-svn checkout svn://mielke.cc/main/brltty
+git clone https://github.com/brltty/brltty.git
 </PRE></KBD>
 This will create the directory <CODE>brltty</CODE> in your current working directory.
-To pick up the latest changes from that point on,
-go to that directory and do:
+<LI>
+If you'd prefer for your local copy to be placed somewhere else
+then specify the path (relative or absolute) to the desired directory
+as an additional command line argument.
 <KBD><PRE>
-svn update
+git clone https://github.com/brltty/brltty.git /path/to/directory
+</PRE></KBD>
+<LI>
+To pick up the latest changes from that point on,
+go to the top-level directory of your local copy and do:
+<KBD><PRE>
+git pull
+</PRE></KBD>
+<LI>
+To display a list of all of the releases of BRLTTY which are in the repository, do:
+<KBD><PRE>
+git tag
+</PRE></KBD>
+<LI>
+To switch to a specific release, do:
+<KBD><PRE>
+git checkout &lt;release-name&gt;
+</PRE></KBD>
+For example:
+<KBD><PRE>
+git checkout BRLTTY-5.0
+</PRE></KBD>
+<LI>
+To switch to the latest development code, do:
+<KBD><PRE>
+git checkout master
 </PRE></KBD>
 </UL>
 <P>
 No derived files, e.g. the <CODE>configure</CODE> script, are stored within the repository.
 If you would like to build BRLTTY, then,
-after checking out the source tree,
+after obtaining the source tree,
 you must first create all of the initial derived files by running
 the <CODE>autogen</CODE> script
 (<CODE>autogen.sh</CODE> in older releases)
