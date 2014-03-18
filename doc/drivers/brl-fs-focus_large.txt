@@ -45,7 +45,9 @@ set cursor visibility on: Space+Dot1+Dot4+Dot8
 set display mode attributes/text: Space+Dot1+Dot4+Dot5
 set display mode text: Space+Dot1+Dot4+Dot5+Dot7
 set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
-freeze/unfreeze screen image: Space+Dot1+Dot2+Dot4
+set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
+set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
 enter/leave help display: Space+Dot1+Dot2+Dot5
 set skipping of lines with identical content on/off: Space+Dot2+Dot4
 set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
@@ -70,6 +72,9 @@ switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
 set sliding window on/off: Space+Dot2+Dot4+Dot5+Dot6
 set sliding window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
 set sliding window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
+insert clipboard text at cursor: Space+Dot1+Dot3+Dot4+Dot6
+restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
+save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
 set text style 6-dot: Space+Dot2+Dot3+Dot5
 set text style 8-dot: Space+Dot2+Dot3+Dot6
 backspace key: Space+Dot7
@@ -94,8 +99,18 @@ describe character: NavrowKey
 go up to nearest line with less indent than character: LeftAdvance+NavrowKey
 go down to nearest line with less indent than character: RightAdvance+NavrowKey
 place left end of window at character: LeftGdf+NavrowKey
-cursor-up key: RightBumperUp
-cursor-down key: RightBumperDown
+cursor-up key: LeftBumperUp
+cursor-down key: LeftBumperDown
+go up one line: RightBumperUp
+go down one line: RightBumperDown
+go to top line: LeftGdf+LeftBumperUp
+go to bottom line: LeftGdf+LeftBumperDown
+go to top line: RightGdf+RightBumperUp
+go to bottom line: RightGdf+RightBumperDown
+cursor-up key: LeftRockerUp
+cursor-down key: LeftRockerDown
+go up one line: RightRockerUp
+go down one line: RightRockerDown
 braille keyboard dot1: Dot1
 braille keyboard dot2: Dot2
 braille keyboard dot3: Dot3
@@ -105,5 +120,5 @@ braille keyboard dot6: Dot6
 braille keyboard dot7: Dot7
 braille keyboard dot8: Dot8
 braille keyboard space: Space
-braille keyboard uppercase: LeftShift
-braille keyboard control: RightShift
+braille keyboard control: LeftShift
+braille keyboard meta: RightShift

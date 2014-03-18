@@ -287,15 +287,15 @@ Chacun des huit points braille représente l'un des huit bits d'attributs
 <CODE>VGA</CODE>.
 Les tables d'attributs suivantes sont fournies:
 <DL>
-<DT><B>attributes</B><DD>
+<DT><B>left_right</B><DD>
 <P>La colonne à gauche représente les couleurs de premier plan:
 <DL>
 <DT><B>Point 1</B><DD>
-<P>Rouge</P>
+<P>Bleu</P>
 <DT><B>Point 2</B><DD>
 <P>Vert</P>
 <DT><B>Point 3</B><DD>
-<P>Bleu</P>
+<P>Rouge</P>
 <DT><B>Point 7</B><DD>
 <P>Brillant</P>
 </DL>
@@ -303,11 +303,11 @@ Les tables d'attributs suivantes sont fournies:
 La colonne à droite représente les couleurs de fond:
 <DL>
 <DT><B>Point 4</B><DD>
-<P>Rouge</P>
+<P>Bleu</P>
 <DT><B>Point 5</B><DD>
 <P>Vert</P>
 <DT><B>Point 6</B><DD>
-<P>Bleu</P>
+<P>Rouge</P>
 <DT><B>Point 8</B><DD>
 <P>Clignotant</P>
 </DL>
@@ -317,15 +317,15 @@ C'est la table d'attributs par défaut car c'est la plus
 intuitive. Cependant, l'un de ses problèmes est qu'il est difficile de
 distinguer la différence entre la vidéo normale (noir sur blanc) et inversée
 (blanc sur noir).</P>
-<DT><B>attrib</B><DD>
+<DT><B>invleft_right</B><DD>
 <P>La colonne à gauche représente les couleurs de premier plan: 
 <DL>
 <DT><B>Point 1</B><DD>
-<P>Rouge</P>
+<P>Bleu</P>
 <DT><B>Point 2</B><DD>
 <P>Vert</P>
 <DT><B>Point 3</B><DD>
-<P>Bleu</P>
+<P>Rouge</P>
 <DT><B>Point 7</B><DD>
 <P>Brillant</P>
 </DL>
@@ -333,11 +333,11 @@ distinguer la différence entre la vidéo normale (noir sur blanc) et inversée
 La colonne à droite représente les couleurs de fond:
 <DL>
 <DT><B>Point 4</B><DD>
-<P>Rouge</P>
+<P>Bleu</P>
 <DT><B>Point 5</B><DD>
 <P>Vert</P>
 <DT><B>Point 6</B><DD>
-<P>Bleu</P>
+<P>Rouge</P>
 <DT><B>Point 8</B><DD>
 <P>Clignotant</P>
 </DL>
@@ -346,6 +346,32 @@ Un bit de fond est actif pour générer ses points correspondant, tandis
 qu'un bit de premier plan est inactif pour générer son point correspondant.
 Cette logique non intuitive facilite en fait la lecture de la plupart des
 combinaisons d'attributs communément utilisées.</P>
+<DT><B>upper_lower</B><DD>
+<P>Le carré supérieur représente les couleurs de premier plan:
+<DL>
+<DT><B>Point 1</B><DD>
+<P>Rouge</P>
+<DT><B>Point 4</B><DD>
+<P>Vert</P>
+<DT><B>Point 2</B><DD>
+<P>Bleu</P>
+<DT><B>Point 5</B><DD>
+<P>Brillant</P>
+</DL>
+
+Le carré inférieur représente les couleurs d'arrière-plan:
+<DL>
+<DT><B>Point 3</B><DD>
+<P>Rouge</P>
+<DT><B>Point 6</B><DD>
+<P>Vert</P>
+<DT><B>Point 7</B><DD>
+<P>Bleu</P>
+<DT><B>Point 8</B><DD>
+<P>Clignotant</P>
+</DL>
+
+Un point s'affiche quand le bit de l'attribut qui y correspond est actif.</P>
 </DL>
 
 Voir l'option 
@@ -862,12 +888,16 @@ Le reste du nom décrit le type de clavier pour lequel a été conçue la table
 de touches.</P>
 <P>Les tables de touches suivantes sont fournies:
 <DL>
-<DT><B>kbd-desktop</B><DD>
+<DT><B>braille</B><DD>
+<P>associations pour les claviers braille</P>
+<DT><B>desktop</B><DD>
 <P>associations pour les claviers complets</P>
-<DT><B>kbd-keypad</B><DD>
+<DT><B>keypad</B><DD>
 <P>associations pour la navigation à partir du pavé numérique</P>
-<DT><B>kbd-laptop</B><DD>
+<DT><B>laptop</B><DD>
 <P>associations pour les claviers sans pavé numérique</P>
+<DT><B>sun_type6</B><DD>
+<P>associations pour les claviers Sun Type 6</P>
 </DL>
 
 Voir l'option 

@@ -46,23 +46,14 @@ go down to nearest line with less indent than character: Dot3+Dot5, RoutingKey
 go up several lines: Dot2+Dot4+Dot5
 go down several lines: Dot3+Dot5+Dot6
 go to cursor: Space
-do nothing: Space+Dot1+Dot4+Dot6
-do nothing: Space+Dot2+Dot3+Dot5
-do nothing: Space+Dot1+Dot2+Dot3+Dot4+Dot5+Dot6
 enter/leave preferences menu: Space+Dot1+Dot4
 restore preferences from disk: Space+Dot1+Dot4+Dot5
-do nothing: Space+Dot1+Dot5
-do nothing: Space+Dot1+Dot2+Dot5
 place left end of window at character: Space+Dot1+Dot2+Dot3, RoutingKey
 stop speaking: Space+Dot1+Dot3+Dot4
 switch to Default Bindings: Space+Dot1+Dot3+Dot4+Dot5
-do nothing: Space+Dot1+Dot3+Dot5
 insert clipboard text at cursor: Space+Dot1+Dot2+Dot3+Dot4
-do nothing: Space+Dot1+Dot2+Dot3+Dot5
 speak current line: Space+Dot2+Dot3+Dot4
-do nothing: Space+Dot1+Dot3+Dot6
 save preferences to disk: Space+Dot2+Dot4+Dot5+Dot6
-do nothing: Space+Dot1+Dot3+Dot5+Dot6
 start new clipboard at character: Space+Dot1+Dot2+Dot3+Dot5+Dot6, RoutingKey
 append to clipboard from character: Space+Dot2+Dot4+Dot6, RoutingKey
 rectangular copy to character: Space+Dot2+Dot3+Dot4+Dot5+Dot6, RoutingKey
@@ -96,20 +87,10 @@ set text style 6-dot: Backspace+Dot2+Dot3+Dot5
 set text style 8-dot: Backspace+Dot2+Dot3+Dot6
 restart speech driver: Backspace+Dot1+Dot2+Dot3+Dot4+Dot5+Dot6
 enter key: Enter
-do nothing: Enter+Dot1
-do nothing: Enter+Dot4
-do nothing: Enter+Dot2
-do nothing: Enter+Dot5
-do nothing: Enter+Dot3
-do nothing: Enter+Dot6
 set skipping of blank windows on: Enter+Dot1+Dot2
-do nothing: Enter+Dot1+Dot4+Dot5
-freeze/unfreeze screen image: Enter+Dot1+Dot2+Dot4
-do nothing: Enter+Dot1+Dot2+Dot5
+set screen image frozen/unfrozen: Enter+Dot1+Dot2+Dot4
 set skipping of lines with identical content on: Enter+Dot2+Dot4
 go to remembered window position: Enter+Dot1+Dot3+Dot4, RoutingKey
-do nothing: Enter+Dot2+Dot3+Dot4
-do nothing: Enter+Dot2+Dot3+Dot4+Dot5
 switch to next virtual terminal: Enter+Dot1+Dot2+Dot3+Dot6
 set sliding window on: Enter+Dot2+Dot4+Dot5+Dot6
 restart braille driver: Enter+Dot1+Dot2+Dot3+Dot4+Dot5+Dot6

@@ -47,7 +47,7 @@ save preferences to disk: K1+K5
 enter/leave preferences menu: K1+K6
 enter/leave status display: K1+K7
 set display mode attributes/text: K8+K2
-freeze/unfreeze screen image: K8+K3
+set screen image frozen/unfrozen: K8+K3
 set text style 6-dot/8-dot: K8+K6
 set skipping of lines with identical content on/off: K8+K7
 

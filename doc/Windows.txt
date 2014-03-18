@@ -30,6 +30,7 @@ does _not_ understand MSYS paths.
 
 ------------------------------------------------------------------------------
 
+
 Windows 98 and Me Limitation
 ============================
 
@@ -67,11 +68,47 @@ to BrlAPI.
 
 ------------------------------------------------------------------------------
 
+
+Cygwin Package Management from the Cygwin Command Line
+======================================================
+
+A convenient way to manage Cygwin packages from the Cygwin command line is to 
+use the "apt-cyg" tool. It is similar to the "apt-get" command which some Linux 
+distributions use. As of the time of this writing, this is how you can install 
+it:
+
+   svn --force export http://apt-cyg.googlecode.com/svn/trunk/ /usr/local/bin/
+   chmod +x /usr/local/bin/apt-cyg
+
+If you're using the 64-bit Cygwin platform, then, after installing apt-cyg, you
+will need to make a couple of simple modifications to it. Using your favourite
+text editor, and remembering that the actual line numbers within your version
+may differ from those quoted below, edit /usr/local/bin/apt-cyg and make the
+following changes:
+
+1) On line 98, change "$mirror/setup.bz2" to "$mirror/x86_64/setup.bz2".
+2) On line 105, change "$mirror/setup.ini" to "$mirror/x86_64/setup.ini".
+
+To search for a package, you can do:
+
+   apt-cyg find pattern
+
+To install a package, you can do:
+
+   apt-cyg install name
+
+For full details, you can do:
+
+   apt-cyg help
+
+------------------------------------------------------------------------------
+
+
 USB Support
 ===========
 
 USB devices are supported thanks to the libusb-win32 or libusb-1.0
-packages.
+packages. If both are installed, preferrence is given to libusb-1.0.
 
 Pre-built versions of brltty have USB support compiled in, and the required
 drivers are shipped, you just need to let the installer set them up.
@@ -86,23 +123,23 @@ like "libusb-win32-bin-<version>.exe", and should be available on
 Unpack it in some place.
 
 As of the time of this writing, the libusb-1.0 binary snapshots can be found on
-http://www.libusb.org/wiki/windows_backend . The file will be called something
+[http://www.libusb.org/wiki/windows_backend]. The file will be called something
 like "libusb_<date>.7z". Unpack it in some place.
 
-The Cygwin or mingw toolchain then needs to get aware of the presence of
+The Cygwin or MinGW toolchain then needs to get aware of the presence of
 libusb-win32 or libusb1.0-devel.
 
 For Cygwin:
 
 * Just install the libusb-win32 or libusb1.0-devel package.
 
-For mingw:
+For MinGW:
 
   For libusb-win32:
 
     Symlink the header and library files into MinGW installation, run:
 
-       +  ln -s "/path/to/LibUSB-Win32/include/lusb0_usb.h" /mingw/include/
+       +  ln -s "/path/to/LibUSB-Win32/include/lusb0_usb.h" /mingw/include/usb.h
        +  ln -s "/path/to/LibUSB-Win32/lib/gcc/libusb.a" /mingw/lib/
        +  ln -s "/path/to/LibUSB-Win32/bin/x86/libusb0_x86.dll" /mingw/bin/libusb0.dll
 
@@ -148,6 +185,7 @@ device plug, point at the brltty/hotplug/brltty-libusb-1.0.inf file.
 
 ------------------------------------------------------------------------------
 
+
 Configuring BRLTTY
 ==================
 
@@ -162,6 +200,28 @@ option builds BRLTTY such that relative paths are used.
 
 ------------------------------------------------------------------------------
 
+
+Missing Java Class Definitions on Cygwin
+========================================
+
+You may get a Java failure which looks like this:
+
+   Exception in thread "main" java.lang.NoClassDefFoundError:
+   org.eclipse.jdt.internal.compiler.batch.GCCMain
+      at gnu.java.lang.MainThread.run(Unknown Source)
+   Caused by: java.lang.ClassNotFoundException:
+   org.eclipse.jdt.internal.compiler.batch.GCCMain
+   not found in gnu.gcj.runtime.SystemClassLoader
+   {urls=[], parent=gnu.gcj.runtime.ExtensionClassLoader{urls=[], parent=null}}
+
+This problem occurs when the java-ecj package isn't installed. It can
+be obtained from Cygwin Ports. You can also resolve the probem by
+downloading the file "ftp://sourceware.org/pub/java/ecj-4.5.jar", and
+installing it into "/usr/share/java/ecj.jar".
+
+------------------------------------------------------------------------------
+
+
 Sticking to a console
 =====================
 
@@ -172,6 +232,7 @@ command line (-XFollowFocus=no) or in brltty.conf (screen-parameter
 FollowFocus=no).
 
 ------------------------------------------------------------------------------
+
 
 Sharing the Braille Display with Other Screen Readers
 =====================================================
@@ -190,6 +251,7 @@ window which it can handle. Note that these actions take a noticeable amount of
 time so you should only use this option if it's actually needed.
 
 ------------------------------------------------------------------------------
+
 
 Sharing BRLTTY with JAWS
 ========================
@@ -230,6 +292,7 @@ which word in the title to use as the name of the file set:
 2) If there is at least one slash (/) or backslash (\) in the title then JAWS 
    uses the last word. Thus, if the title is "$PWD - Cygwin" then JAWS will 
    similarly load the Cygwin configuration files.
+
 Setting Cygwin's Window Title
 -----------------------------
 
@@ -300,4 +363,5 @@ JAWS to regain control. In extreme cases you may need to exit BRLTTY before
 going to Windows.
 
 ------------------------------------------------------------------------------
+
 

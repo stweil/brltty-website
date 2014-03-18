@@ -40,7 +40,7 @@ d'autres possibilités concernant la manière de passer les paramètres
 au pilote de votre afficheur braille. Un message donnant le nom du
 programme (BRLTTY) et son numéro de version apparaîtra brièvement
 (voir l'option 
-<A HREF="#options-message-delay">-M</A> en ligne de commande) sur l'afficheur braille.
+<A HREF="#options-message-timeout">-M</A> en ligne de commande) sur l'afficheur braille.
 L'afficheur montrera alors une petite zone de l'écran contenant le
 curseur. Par défaut, le curseur est représenté par les points 7 et 8
 superposés sur le caractère où il est.</P>
@@ -602,7 +602,7 @@ que la colonne associée à la routine.</P>
 <DT><B>DESCCHAR
 <A NAME="command-DESCCHAR"></A> </B><DD>
 <P>Affiche momentanément (voir l'option 
-<A HREF="#options-message-delay">-M</A>
+<A HREF="#options-message-timeout">-M</A>
 en ligne de commande) un message décrivant le caractère associé à
 la routine. Cela montre les valeurs décimales et
 hexadécimales du caractère, les couleurs de fond et de premier
@@ -930,7 +930,9 @@ Si vous fournissez un chemin relatif, il est déterminé par rapport à <CODE>/etc/
 et 
 <A HREF="BRLTTY-3.html#build-execute-root">--with-execute-root</A>
 pour plus de détails).
-L'extension <CODE>.atb</CODE> est facultative.
+L'extension <CODE>.atb</CODE> est facultative. Si vous ne spécifiez pas cette
+option, on suppose que c'est <CODE>left_right</CODE>. Passez-la à <CODE>invleft_right</CODE>
+si vous souhaitez l'ancien comportement.
 Voir la ligne 
 <A HREF="#configure-attributes-table">attributes-table</A>
 du fichier de configuration pour la sélection des paramètres par défaut
@@ -1296,8 +1298,8 @@ pour une liste des propriétés que vous pouvez spécifier.
 Voir l'instruction 
 <A HREF="#configure-keyboard-properties">keyboard-properties</A>
 du fichier de configuration pour les paramètres d'exécution par défaut.</P>
-<DT><B><CODE>-M</CODE><EM>csecs</EM> <CODE>--message-delay=</CODE><EM>csecs</EM>
-<A NAME="options-message-delay"></A> </B><DD>
+<DT><B><CODE>-M</CODE><EM>csecs</EM> <CODE>--message-timeout=</CODE><EM>csecs</EM>
+<A NAME="options-message-timeout"></A> </B><DD>
 <P>Spécifie le temps (en centièmes de seconde) que prend BRLTTY pour
 afficher ses propres messages internes sur l'afficheur braille. Si
 ce n'est pas spécifié, c'est <CODE>400</CODE> (4 secondes) qui est utlisé.</P>
@@ -1333,11 +1335,6 @@ un pilote en particulier, voyez la documentation de ce pilote.
 Voir la ligne 
 <A HREF="#configure-speech-parameters">speech-parameters</A>
 du fichier de configuration pour les paramètres par défaut à l'exécution.</P>
-<DT><B><CODE>-U</CODE><EM>csecs</EM> <CODE>--update-interval=</CODE><EM>csecs</EM>
-<A NAME="options-update-interval"></A> </B><DD>
-<P>Spécifie l'intervalle (en centièmes de secondes) avec lequel la plage
-braille est synchronisée avec le nouveau contenu de l'écran. Si ce
-n'est pas spécifié, c'est <CODE>4</CODE> (40 millisecondes) qui est utilisé.</P>
 <DT><B><CODE>-V</CODE> <CODE>--version</CODE>
 <A NAME="options-version"></A> </B><DD>
 <P>Affiche les versions courantes de BRLTTY lui-même, de la partie

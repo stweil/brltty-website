@@ -46,7 +46,9 @@ set cursor tracking on: Attribute+Status6
 set display mode attributes/text: Status7
 set display mode text: Function+Status7
 set display mode attributes: Attribute+Status7
-freeze/unfreeze screen image: Status8
+set screen image frozen/unfrozen: Status8
+set screen image unfrozen: Function+Status8
+set screen image frozen: Attribute+Status8
 enter/leave preferences menu: Status9
 restore preferences from disk: Status10
 set cursor visibility on/off: Status11

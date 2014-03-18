@@ -1,0 +1,99 @@
+Key Table: Bindings for Braille Keyboards
+
+Default Bindings
+go left to nearest non-blank window: Backward
+go right to nearest non-blank window: Forward
+go to beginning of line: Backward+ArrowLeft
+go to end of line: Backward+ArrowRight
+go to top line: Backward+ArrowUp
+go to bottom line: Backward+ArrowDown
+go back after cursor tracking: Backward+Select
+go left one window: Forward+ArrowLeft
+go right one window: Forward+ArrowRight
+go up one line: Forward+ArrowUp
+go down one line: Forward+ArrowDown
+go to cursor: Forward+Select
+bring cursor to character: RoutingKey
+place left end of window at character: Backward+RoutingKey
+describe character: Forward+RoutingKey
+insert clipboard text at cursor: Backward+Forward
+copy characters to clipboard: RoutingKey+RoutingKey
+start new clipboard at character: ArrowLeft+RoutingKey
+append to clipboard from character: ArrowUp+RoutingKey
+linear copy to character: ArrowRight+RoutingKey
+rectangular copy to character: ArrowDown+RoutingKey
+set skipping of blank windows on/off: Dot0+Dot1+Dot2
+set skipping of blank windows off: Dot0+Dot1+Dot2+Dot7
+set skipping of blank windows on: Dot0+Dot1+Dot2+Dot8
+set cursor visibility on/off: Dot0+Dot1+Dot4
+set cursor visibility off: Dot0+Dot1+Dot4+Dot7
+set cursor visibility on: Dot0+Dot1+Dot4+Dot8
+set display mode attributes/text: Dot0+Dot1+Dot4+Dot5
+set display mode text: Dot0+Dot1+Dot4+Dot5+Dot7
+set display mode attributes: Dot0+Dot1+Dot4+Dot5+Dot8
+set screen image frozen/unfrozen: Dot0+Dot1+Dot2+Dot4
+set screen image unfrozen: Dot0+Dot1+Dot2+Dot4+Dot7
+set screen image frozen: Dot0+Dot1+Dot2+Dot4+Dot8
+enter/leave help display: Dot0+Dot1+Dot2+Dot5
+set skipping of lines with identical content on/off: Dot0+Dot2+Dot4
+set skipping of lines with identical content off: Dot0+Dot2+Dot4+Dot7
+set skipping of lines with identical content on: Dot0+Dot2+Dot4+Dot8
+enter/leave command learn mode: Dot0+Dot1+Dot2+Dot3
+enter/leave preferences menu: Dot0+Dot1+Dot2+Dot3+Dot4
+restore preferences from disk: Dot0+Dot1+Dot2+Dot3+Dot4+Dot7
+save preferences to disk: Dot0+Dot1+Dot2+Dot3+Dot4+Dot8
+set autorepeat on/off: Dot0+Dot1+Dot2+Dot3+Dot5
+set autorepeat off: Dot0+Dot1+Dot2+Dot3+Dot5+Dot7
+set autorepeat on: Dot0+Dot1+Dot2+Dot3+Dot5+Dot8
+enter/leave status display: Dot0+Dot2+Dot3+Dot4
+set cursor tracking on/off: Dot0+Dot2+Dot3+Dot4+Dot5
+set cursor tracking off: Dot0+Dot2+Dot3+Dot4+Dot5+Dot7
+set cursor tracking on: Dot0+Dot2+Dot3+Dot4+Dot5+Dot8
+set attribute underlining on/off: Dot0+Dot1+Dot3+Dot6
+set attribute underlining off: Dot0+Dot1+Dot3+Dot6+Dot7
+set attribute underlining on: Dot0+Dot1+Dot3+Dot6+Dot8
+bring cursor to line: Dot0+Dot1+Dot2+Dot3+Dot6
+switch to previous virtual terminal: Dot0+Dot1+Dot2+Dot3+Dot6+Dot7
+switch to next virtual terminal: Dot0+Dot1+Dot2+Dot3+Dot6+Dot8
+set sliding window on/off: Dot0+Dot2+Dot4+Dot5+Dot6
+set sliding window off: Dot0+Dot2+Dot4+Dot5+Dot6+Dot7
+set sliding window on: Dot0+Dot2+Dot4+Dot5+Dot6+Dot8
+insert clipboard text at cursor: Dot0+Dot1+Dot3+Dot4+Dot6
+restore clipboard from disk: Dot0+Dot1+Dot3+Dot4+Dot6+Dot7
+save clipboard to disk: Dot0+Dot1+Dot3+Dot4+Dot6+Dot8
+set text style 6-dot: Dot0+Dot2+Dot3+Dot5
+set text style 8-dot: Dot0+Dot2+Dot3+Dot6
+backspace key: Dot0+Dot7
+enter key: Dot0+Dot8
+cursor-left key: Dot0+Dot3
+cursor-right key: Dot0+Dot6
+home key: Dot0+Dot2
+end key: Dot0+Dot5
+cursor-up key: Dot0+Dot1
+cursor-down key: Dot0+Dot4
+page-up key: Dot0+Dot2+Dot3
+page-down key: Dot0+Dot5+Dot6
+tab key: Dot0+Dot2+Dot3+Dot5+Dot6
+insert key: Dot0+Dot3+Dot5
+delete key: Dot0+Dot2+Dot5+Dot6
+escape key: Dot0+Dot2+Dot6
+function key: Dot0+RoutingKey
+braille keyboard dot1: Dot1
+braille keyboard dot2: Dot2
+braille keyboard dot3: Dot3
+braille keyboard dot4: Dot4
+braille keyboard dot5: Dot5
+braille keyboard dot6: Dot6
+braille keyboard dot7: Dot7
+braille keyboard dot8: Dot8
+braille keyboard space: Dot0
+
+Menu Bindings
+select previous choice: Dot1
+select next choice: Dot4
+go to previous item: Dot2
+go to next item: Dot5
+go to first item: Dot3
+go to last item: Dot6
+go to previous menu level: Dot7
+enter/leave preferences menu: Dot8

@@ -38,7 +38,7 @@ set cursor visibility on/off: LeftKeyRear+BarRight2
 set autospeak on/off: LeftKeyFront+BarUp1
 set autorepeat on/off: LeftKeyFront+BarDown1
 restart braille driver: LeftKeyFront+BarUp2
-freeze/unfreeze screen image: LeftKeyFront+BarDown2
+set screen image frozen/unfrozen: LeftKeyFront+BarDown2
 enter/leave status display: LeftKeyFront+BarLeft1
 enter/leave preferences menu: LeftKeyFront+BarRight1
 restore preferences from disk: LeftKeyFront+BarLeft2

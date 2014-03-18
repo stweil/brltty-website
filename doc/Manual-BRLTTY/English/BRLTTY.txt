@@ -9,9 +9,9 @@
 
   Dave Mielke <dave@mielke.cc>
 
-  Version 4.5, Apr 2013
+  Version 5.0, Jan 2014
 
-  Copyright � 1995-2013 by The BRLTTY Developers.  BRLTTY is free soft-
+  Copyright � 1995-2014 by The BRLTTY Developers.  BRLTTY is free soft-
   ware, and comes with ABSOLUTELY NO WARRANTY.  It is placed under the
   terms of version 2 or later of TThhee GGNNUU GGeenneerraall PPuubblliicc LLiicceennssee as pub-
   lished by TThhee FFrreeee SSooffttwwaarree FFoouunnddaattiioonn.
@@ -127,10 +127,10 @@
   C. Driver Identification Codes
   D. Supported Screen Drivers
   E. Operand Syntax
-     E.1 Driver Specificationn
-     E.2 Braille Device Specificationn
-     E.3 PCM Device Specificationn
-     E.4 MIDI Device Specificationn
+     E.1 Driver Specification
+     E.2 Braille Device Specification
+     E.3 PCM Device Specification
+     E.4 MIDI Device Specification
 
   F. Standard Braille Dot Numbering Convention
   G. North American Braille Computer Code
@@ -193,7 +193,7 @@
   �  Nicolas Pitre
 
      WWeebb
-        http://www.cam.org/~nico/
+        http://www.fluxnic.net/
 
      EE--MMaaiill
         <nico@fluxnic.net>
@@ -342,7 +342,7 @@
   �  Makes it much easier for a braille user to perform boot-time system
      administration tasks.
 
-  A patch for the screen program is provide (see the Patches
+  A patch for the screen program is provided (see the Patches
   subdirectory).  It allows BRLTTY to access screen's screen image via
   shared memory, and, therefore, allows BRLTTY to be used quite
   effectively on platforms which don't have their own screen content
@@ -676,11 +676,11 @@
         linked into the BRLTTY binary, and is used if the requested
         table can't be loaded.  The absolute path to a table outside the
         source tree may be specified.  The .atb extension is optional.
-        If this option isn't specified, then attributes is assumed.
-        Change it to attrib if you'd like it done the old way.  See the
-        ``attributes-table'' configuration file directive and the ``-a''
-        command line option for run-time selection.  This setting can be
-        changed with the ``Attributes Table'' preference.
+        If this option isn't specified, then left_right is assumed.
+        Change it to invleft_right if you'd like it done the old way.
+        See the ``attributes-table'' configuration file directive and
+        the ``-a'' command line option for run-time selection.  This
+        setting can be changed with the ``Attributes Table'' preference.
 
      --with-speech-driver=_d_r_i_v_e_r
         Specify the speech synthesizer drivers which are to be linked
@@ -698,8 +698,8 @@
            Link all of the drivers into the binary.  Don't build any of
            them as dynamically loadable shared objects.  This word may
            also be specified as the final element of a driver list.
-           This is how to specify the dfault driver when all the drivers
-           are to be linked in.
+           This is how to specify the default driver when all the
+           drivers are to be linked in.
 
         --aallll
            Only build those drivers which have been explicitly included
@@ -847,8 +847,8 @@
            Link all of the drivers into the binary.  Don't build any of
            them as dynamically loadable shared objects.  This word may
            also be specified as the final element of a driver list.
-           This is how to specify the dfault driver when all the drivers
-           are to be linked in.
+           This is how to specify the default driver when all the
+           drivers are to be linked in.
 
         --aallll
            Only build those drivers which have been explicitly included
@@ -1434,8 +1434,8 @@
   choices if you choose this route.
 
   �  If you want it to be started really early but don't need it to be
-     automatially restarted if it dies, then add a line like this before
-     the first :sysinit: line which is already in there.
+     automatically restarted if it dies, then add a line like this
+     before the first :sysinit: line which is already in there.
 
        brl::sysinit:/bin/brltty
 
@@ -1970,7 +1970,7 @@
         The maximum length of an output line.  Each contracted input
         line is wrapped into as many output lines as necessary.  If this
         option isn't specified then there's no limit, and there's a one-
-        to-one correspondance between input and output lines.
+        to-one correspondence between input and output lines.
 
      -h --help
         Display a summary of the command line options, and then exit.
@@ -2110,7 +2110,7 @@
   find out exactly what its keys do.
 
   BRLTTY commands are referred to by name within this manual.  If you
-  forget which key(s) on your braille display to use for a paticular
+  forget which key(s) on your braille display to use for a particular
   command, then refer to its driver's help page.  The main key you
   should immediately commit to memory, therefore, is the one for the
   ``HELP'' command.  Use the regular motion keys (as described below) to
@@ -2581,7 +2581,7 @@
   recognized:
 
      api-parameters _n_a_m_e=_v_a_l_u_e,...
-        Specify parameters for the Application Programming Interrface.
+        Specify parameters for the Application Programming Interface.
         If the same parameter is specified more than once, then its
         rightmost assignment is used.  For a description of the
         parameters accepted by the interface, please see the BBrrllAAPPII
@@ -3036,7 +3036,7 @@
         specified.  See the ``keyboard-properties'' configuration file
         directive for the default run-time settings.
 
-     -M_c_s_e_c_s --message-delay=_c_s_e_c_s
+     -M_c_s_e_c_s --message-timeout=_c_s_e_c_s
         Specify the amount of time (in hundredths of a second) that
         BRLTTY keeps its own internally generated messages on the
         braille display.  If not specified, then 400 (4 seconds) is
@@ -3071,11 +3071,6 @@
         a specific driver, please see the documentation for that driver.
         See the ``speech-parameters'' configuration file directive for
         the default run-time settings.
-
-     -U_c_s_e_c_s --update-interval=_c_s_e_c_s
-        Specify the interval (in hundredths of a second) at which the
-        braille window is updated with new screen content.  If not
-        specified, then 4 (40 milliseconds) is assumed.
 
      -V --version
         Display the current versions of BRLTTY itself, of the server
@@ -3147,7 +3142,7 @@
   route the cursor to the desired location until a timeout expires
   before the cursor reaches that location, the cursor seems to be moving
   in the wrong direction, or you switch to a different virtual terminal.
-  An attempt is first made to use virtical motion to bring the cursor to
+  An attempt is first made to use vertical motion to bring the cursor to
   the right line, and, only if that succeeds, an attempt is then made to
   use horizontal motion to bring the cursor to the right column.  If
   another request is made while one is still in progress, then the first
@@ -3335,7 +3330,7 @@
   can't be edited by hand.  BRLTTY, however, has a simple menu from
   which you can easily change them.
 
-  The meny is activated by the ``PREFMENU'' command.  The braille
+  The menu is activated by the ``PREFMENU'' command.  The braille
   display briefly (see the ``-M'' command line option) shows the menu
   title, and then presents the current item and its current setting.
 
@@ -4026,8 +4021,7 @@
   Notes:
 
   �   All time settings are in hundredths of a second.  They are
-     multiples of the braille window update interval (see the ``-U''
-     command line option) within the range 1 through 100.
+     multiples of 4 within the range 1 through 100.
 
   55..66..  TThhee SSttaattuuss DDiissppllaayy
 
@@ -4324,6 +4318,7 @@
     sat          Santali
     sd           Sindhi
     sk           Slovak
+    sl           Slovenian
     sv           Swedish
     sv-1989      Swedish (1989 standard)
     sv-1996      Swedish (1996 standard)
@@ -4492,17 +4487,17 @@
 
   The following attributes tables are provided:
 
-     aattttrriibbuutteess
+     lleefftt__rriigghhtt
         The lefthand column represents the foreground colours:
 
         DDoott 11
-           Red
+           Blue
 
         DDoott 22
            Green
 
         DDoott 33
-           Blue
+           Red
 
         DDoott 77
            Bright
@@ -4510,13 +4505,13 @@
         The righthand column represents the background colours:
 
         DDoott 44
-           Red
+           Blue
 
         DDoott 55
            Green
 
         DDoott 66
-           Blue
+           Red
 
         DDoott 88
            Blink
@@ -4527,17 +4522,17 @@
         discern the difference between normal (white on black) and
         reverse (black on white) video.
 
-     aattttrriibb
+     iinnvvlleefftt__rriigghhtt
         The lefthand column represents the foreground colours:
 
         DDoott 11
-           Red
+           Blue
 
         DDoott 22
            Green
 
         DDoott 33
-           Blue
+           Red
 
         DDoott 77
            Bright
@@ -4545,13 +4540,13 @@
         The righthand column represents the background colours:
 
         DDoott 44
-           Red
+           Blue
 
         DDoott 55
            Green
 
         DDoott 66
-           Blue
+           Red
 
         DDoott 88
            Blink
@@ -4560,6 +4555,37 @@
         whereas a foreground bit being off triggers its corresponding
         dot.  This unintuitive logic actually makes it easier to read
         the most commonly used attribute combinations.
+
+     uuppppeerr__lloowweerr
+        The upper square represents the foreground colours:
+
+        DDoott 11
+           Red
+
+        DDoott 44
+           Green
+
+        DDoott 22
+           Blue
+
+        DDoott 55
+           Bright
+
+        The lower square represents the background colours:
+
+        DDoott 33
+           Red
+
+        DDoott 66
+           Green
+
+        DDoott 77
+           Blue
+
+        DDoott 88
+           Blink
+
+        A dot is raised when its corresponding attribute bit is on.
 
   See the ``-a'' command line option, the ``attributes-table'' configu-
   ration file directive, and the ``--with-attributes-table'' build
@@ -5034,14 +5060,20 @@
 
   The following keyboard key tables are provided:
 
-     kkbbdd--ddeesskkttoopp
+     bbrraaiillllee
+        bindings for braille keyboards
+
+     ddeesskkttoopp
         bindings for full keyboards
 
-     kkbbdd--kkeeyyppaadd
+     kkeeyyppaadd
         bindings for keypad-based navigation
 
-     kkbbdd--llaappttoopp
+     llaappttoopp
         bindings for keyboards without a keypad
+
+     ssuunn__ttyyppee66
+        bindings for Sun Type 6 keyboards
 
   See the ``-k'' command line option, and the ``key-table'' configura-
   tion file directive for details regarding how to select a keyboard key
@@ -5650,90 +5682,97 @@
 
   BRLTTY supports the following braille displays:
 
-           Name                Models
-           _____________________________________________________________
-           Albatross           46/80
-           Alva                ABT (3nn)
-                               Delphi (4nn)
-                               Satellite (5nn)
-                               Braille System 40
-                               Braille Controller 640/680
-           Baum                Inka
-                               Vario/RBT
-                               SuperVario/Brailliant
-                               PocketVario
-                               VarioPro
-                               EcoVario
-                               VarioConnect/BrailleConnect
-                               Refreshabraille
-           BrailComm           III
-           BrailleLite         18/40/M20/M40
-           BrailleNote         18/32
-           Braudi
-           BrlAPI
-           Cebra               20/40/60/80/100/120/140
-           CombiBraille        25/45/85
-           EcoBraille          20/40/80
-           EuroBraille         AzerBraille
-                               Clio
-                               Esys
-                               Iris
-                               NoteBraille
-                               Scriba
-           FreedomScientific   Focus 1 44/70/84
-                               Focus 2 40/80
-                               Focus Blue 14/40
-                               PAC Mate 20/40
-           HandyTech           Modular 20/40/80
-                               Modular Evolution 64/88
-                               Active Braille
-                               Braille Wave
-                               Easy Braille
-                               Braille Star 40/80
-                               Bookworm
-                               Braillino
-           HIMS                Braille Sense
-                               SyncBraille
-                               Braille Edge
-           HumanWare           Brailliant 32/40/80 bi
-           Iris
-           Libbraille
-           LogText             32
-           MDV                 MB208/MB408L/MB408S (protocol 5)
-           Metec               BD-40
-           MiniBraille         20
-           MultiBraille        MB125CR/MB145CR/MB185CR
-           NinePoint           8
-           Papenmeier          Compact 486
-                               Compact/Tiny
-                               IB 80 CR Soft
-                               2D Lite (plus)
-                               2D Screen Soft
-                               EL 80
-                               EL 2D 40/66/80
-                               EL 40/66/70/80 S
-                               EL 40/60/80 C
-                               EL 2D 80 S
-                               EL 40 P
-                               EL 80 II
-                               Elba 20/32
-                               Trio 40/Elba20/Elba32
-           Pegasus             20/27/40/80
-           Seika               3/4/5 (40)
-                               80
-                               Mini (16)
-           TechniBraille
-           TSI                 Navigator 20/40/80
-                               PowerBraille 40/65/80
-           TTY                 terminfo
-           VideoBraille        40
-           Virtual             TCP/Unix, client/server
-           VisioBraille        20/40
-           Voyager             44/70
-                               Part232 (serial adapter)
-                               BraillePen/EasyLink
-           XWindow             X11
-                               Windows
+          Name                Models
+          ______________________________________________________________
+          Albatross           46/80
+          Alva                ABT (3nn)
+                              Delphi (4nn)
+                              Satellite (5nn)
+                              Braille System 40
+                              Braille Controller 640/680
+                              Easy Link 12
+          B2G                 20
+          Baum                Inka
+                              Vario/RBT
+                              SuperVario/Brailliant
+                              PocketVario
+                              VarioPro
+                              EcoVario
+                              VarioConnect/BrailleConnect
+                              Refreshabraille
+          BrailComm           III
+          BrailleLite         18/40/M20/M40
+          BrailleMemo         Pocket (16)
+                              32
+                              40
+          BrailleNote         18/32
+          Braudi
+          BrlAPI
+          B2G
+          Cebra               20/40/60/80/100/120/140
+          CombiBraille        25/45/85
+          EcoBraille          20/40/80
+          EuroBraille         AzerBraille
+                              Clio
+                              Esys
+                              Iris
+                              NoteBraille
+                              Scriba
+          FreedomScientific   Focus 1 44/70/84
+                              Focus 2 40/80
+                              Focus Blue 14/40
+                              PAC Mate 20/40
+          HandyTech           Modular 20/40/80
+                              Modular Evolution 64/88
+                              Active Braille
+                              Basic Braille 16/20/32/40/48/64/80
+                              Braillino
+                              Braille Wave
+                              Easy Braille
+                              Braille Star 40/80
+                              Bookworm
+          HIMS                Braille Sense
+                              SyncBraille
+                              Braille Edge
+          HumanWare           Brailliant 32/40/80 bi
+          Iris
+          Libbraille
+          LogText             32
+          MDV                 MB208/MB408L/MB408S (protocol 5)
+          Metec               BD-40
+          MiniBraille         20
+          MultiBraille        MB125CR/MB145CR/MB185CR
+          NinePoint           8
+          Papenmeier          Compact 486
+                              Compact/Tiny
+                              IB 80 CR Soft
+                              2D Lite (plus)
+                              2D Screen Soft
+                              EL 80
+                              EL 2D 40/66/80
+                              EL 40/66/70/80 S
+                              EL 40/60/80 C
+                              EL 2D 80 S
+                              EL 40 P
+                              EL 80 II
+                              Elba 20/32
+                              Trio 40/Elba20/Elba32
+          Pegasus             20/27/40/80
+          Seika               3/4/5 (40)
+                              80
+                              Mini (16)
+          TechniBraille
+          TSI                 Navigator 20/40/80
+                              PowerBraille 40/65/80
+          TTY                 terminfo
+          VideoBraille        40
+          Virtual             TCP/Unix, client/server
+          VisioBraille        20/40
+          Voyager             44/70
+                              Part232 (serial adapter)
+                              BraillePen/EasyLink
+          XWindow             X11
+                              Windows
 
 
   BB..  SSuuppppoorrtteedd SSppeeeecchh SSyynntthheessiizzeerrss
@@ -5743,6 +5782,7 @@
            Name             Models
            _____________________________________________________________
            Alva             Delphi (4nn)
+           Android          text to speech engine
            BrailleLite
            CombiBraille
            eSpeak           text to speech engine
@@ -5762,6 +5802,7 @@
                     Code   Name
                     ____________________________________________________
                     al     Alva
+                    an     Android
                     at     Albatross
                     ba     BrlAPI
                     bc     BrailComm
@@ -5784,6 +5825,7 @@
                     lt     LogText
                     mb     MultiBraille
                     md     MDV
+                    mm     BrailleMemo
                     mn     MiniBraille
                     mp     Mikropuhe
                     mt     Metec
@@ -5832,7 +5874,7 @@
 
   EE..  OOppeerraanndd SSyynnttaaxx
 
-  EE..11..  DDrriivveerr SSppeecciiffiiccaattiioonnnn
+  EE..11..  DDrriivveerr SSppeecciiffiiccaattiioonn
 
   A braille display or speech synthesizer driver must be specified via
   its two-letter ``driver identification code''.
@@ -5846,7 +5888,7 @@
   using only those drivers which are known to be reliable for this
   purpose.
 
-  EE..22..  BBrraaiillllee DDeevviiccee SSppeecciiffiiccaattiioonnnn
+  EE..22..  BBrraaiillllee DDeevviiccee SSppeecciiffiiccaattiioonn
 
   The general form of a braille device specification (see the ``-d''
   command line option, the ``braille-device'' configuration file
@@ -5896,7 +5938,7 @@
   e.g. usb:,serial:/dev/ttyS0, since the former tends to autodetect more
   reliably than the latter.
 
-  EE..33..  PPCCMM DDeevviiccee SSppeecciiffiiccaattiioonnnn
+  EE..33..  PPCCMM DDeevviiccee SSppeecciiffiiccaattiioonn
 
   In most cases the PCM device is the full path to an appropriate system
   device.  Exceptions are:
@@ -5918,7 +5960,7 @@
                  Solaris      /dev/audio
 
 
-  EE..44..  MMIIDDII DDeevviiccee SSppeecciiffiiccaattiioonnnn
+  EE..44..  MMIIDDII DDeevviiccee SSppeecciiffiiccaattiioonn
 
   In most cases the MIDI device is the full path to an appropriate
   system device.  Exceptions are:

@@ -10,9 +10,10 @@ go to beginning of top line: KP0+KP7
 go to beginning of bottom line: KP0+KP1
 go up to nearest line with different content: KP0+KP9
 go down to nearest line with different content: KP0+KP3
-set cursor tracking on/off: KP0+KPSlash
-set display mode attributes/text: KP0+KPAsterisk
-set text style 6-dot/8-dot: KP0+KPMinus
+set cursor tracking on/off: KP0+KPDivide
+set display mode attributes/text: KP0+KPMultiply
+set text style 8-dot: KP0+KPMinus
+set text style 6-dot: KP0+KPPlus
 go back after cursor tracking: KPPeriod+KP5
 go left to nearest non-blank window: KPPeriod+KP4
 go right to nearest non-blank window: KPPeriod+KP6
@@ -22,9 +23,10 @@ go up to previous command prompt: KPPeriod+KP7
 go down to next command prompt: KPPeriod+KP1
 go up to nearest line with different highlighting: KPPeriod+KP9
 go down to nearest line with different highlighting: KPPeriod+KP3
-set cursor visibility on/off: KPPeriod+KPSlash
-set attribute underlining on/off: KPPeriod+KPAsterisk
-freeze/unfreeze screen image: KPPeriod+KPMinus
+set cursor visibility on/off: KPPeriod+KPDivide
+set attribute underlining on/off: KPPeriod+KPMultiply
+set braille input mode text: KPPeriod+KPMinus
+set braille input mode dots: KPPeriod+KPPlus
 go left one character: KP0+KPPeriod+KP1
 describe character at cursor: KP0+KPPeriod+KP2
 go right one character: KP0+KPPeriod+KP3
@@ -39,19 +41,20 @@ enter/leave help display: KPMinus+KP7
 enter/leave command learn mode: KPMinus+KP9
 bring cursor to line: KPMinus+KP2
 show the current date and time: KPMinus+KP1
-restart braille driver: KPMinus+KPSlash
-restart speech driver: KPMinus+KPAsterisk
-insert clipboard text at cursor: KPAsterisk+KP5
-start new clipboard at character at cursor: KPAsterisk+KP7
-append to clipboard from character at cursor: KPAsterisk+KP1
-linear copy to character at cursor: KPAsterisk+KP9
-rectangular copy to character at cursor: KPAsterisk+KP3
-go up to nearest line with less indent than character at cursor: KPAsterisk+KP8
-go down to nearest line with less indent than character at cursor: KPAsterisk+KP2
-go up to nearest line with different character at cursor: KPAsterisk+KP4
-go down to nearest line with different character at cursor: KPAsterisk+KP6
-search backward for clipboard text: KPAsterisk+KPMinus
-search forward for clipboard text: KPAsterisk+KPPlus
+set screen image frozen/unfrozen: KPMinus+KP3
+restart braille driver: KPMinus+KPDivide
+restart speech driver: KPMinus+KPMultiply
+insert clipboard text at cursor: KPMultiply+KP5
+start new clipboard at character at cursor: KPMultiply+KP7
+append to clipboard from character at cursor: KPMultiply+KP1
+linear copy to character at cursor: KPMultiply+KP9
+rectangular copy to character at cursor: KPMultiply+KP3
+go up to nearest line with less indent than character at cursor: KPMultiply+KP8
+go down to nearest line with less indent than character at cursor: KPMultiply+KP2
+go up to nearest line with different character at cursor: KPMultiply+KP4
+go down to nearest line with different character at cursor: KPMultiply+KP6
+search backward for clipboard text: KPMultiply+KPMinus
+search forward for clipboard text: KPMultiply+KPPlus
 speak current line: KPEnter+KP5
 speak from top of screen through current line: KPEnter+KP8
 speak from current line through bottom of screen: KPEnter+KP2
@@ -61,7 +64,7 @@ decrease speech rate: KPEnter+KP7
 increase speech rate: KPEnter+KP9
 decrease speech volume: KPEnter+KP1
 increase speech volume: KPEnter+KP3
-go to current speech position: KPEnter+KPAsterisk
+go to current speech position: KPEnter+KPMultiply
 set autospeak deleted characters on/off: KPEnter+KP0+KP1
 set autospeak replaced characters on/off: KPEnter+KP0+KP2
 set autospeak inserted characters on/off: KPEnter+KP0+KP3
@@ -83,9 +86,9 @@ go to and speak previous line: KPPlus+KP7
 go to and speak first non-blank line on screen: KPPlus+KP0+KP7
 go to and speak next line: KPPlus+KP9
 go to and speak last non-blank line on screen: KPPlus+KP0+KP9
-speak speech location: KPPlus+KPSlash
-set speech location visibility on/off: KPPlus+KP0+KPSlash
-bring cursor to speech location: KPPlus+KPAsterisk
+speak speech location: KPPlus+KPDivide
+set speech location visibility on/off: KPPlus+KP0+KPDivide
+bring cursor to speech location: KPPlus+KPMultiply
 switch to Braille Input Mode: KPEnter+KPPlus
 switch to Default Bindings: KPEnter+KPMinus
 

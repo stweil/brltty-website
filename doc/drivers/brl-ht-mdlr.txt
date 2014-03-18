@@ -27,7 +27,7 @@ speak current line: B2+B3+Right
 enter/leave help display: Status1
 enter/leave preferences menu: Status2
 enter/leave status display: Status3
-freeze/unfreeze screen image: Status4
+set screen image frozen/unfrozen: Status4
 go to cursor: B1
 go to beginning of top line: B2
 go back after cursor tracking: B3
@@ -49,7 +49,7 @@ enter/leave help display: B8
 set cursor tracking on/off: B8+B1
 set cursor visibility on/off: B8+B2
 set attribute underlining on/off: B8+B3
-freeze/unfreeze screen image: B8+B6
+set screen image frozen/unfrozen: B8+B6
 set alert tunes on/off: B8+B7
 set text style 6-dot/8-dot: B7
 enter/leave preferences menu: B7+B1
@@ -69,7 +69,6 @@ rectangular copy to character: B5+RoutingKey
 linear copy to character: B6+RoutingKey
 remember current window position: B7+RoutingKey
 go to remembered window position: B8+RoutingKey
-put random password into clipboard: B1+B2+RoutingKey
 speak from top of screen through current line: B9
 speak current line: B10
 speak from current line through bottom of screen: B11

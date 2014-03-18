@@ -37,7 +37,7 @@ set skipping of lines with identical content on/off: Dot2+Dot4+Dot5
 set sliding window on/off: Dot2+Dot4+Dot5+Dot6
 set text style 6-dot/8-dot: Dot2+Dot3+Dot5
 set alert tunes on/off: Dot2+Dot3+Dot4
-freeze/unfreeze screen image: Dot1+Dot2+Dot4
+set screen image frozen/unfrozen: Dot1+Dot2+Dot4
 set display mode attributes/text: Dot1+Dot3+Dot4
 enter/leave help display: Dot1+Dot2+Dot5
 enter/leave status display: Dot3+Dot4

@@ -14,7 +14,7 @@ go to beginning of line: Escape+Enter+Backward
 go to end of line: Escape+Enter+Forward
 enter/leave help display: Backward+Forward
 set cursor style block/underline: Backward+Forward+Escape
-freeze/unfreeze screen image: Backward+Forward+Enter
+set screen image frozen/unfrozen: Backward+Forward+Enter
 
 Menu Bindings
 go left one window: Backward
@@ -28,6 +28,3 @@ go to next item: Enter+Forward
 save preferences to disk: Escape+Enter
 go to first item: Escape+Enter+Backward
 go to last item: Escape+Enter+Forward
-do nothing: Backward+Forward
-do nothing: Backward+Forward+Escape
-do nothing: Backward+Forward+Enter

@@ -6,6 +6,9 @@ Alva
   |Satellite (5nn)@
   |Braille System 40@
   |Braille Controller 640/680@
+  |Easy Link 12@
+B2G
+  |20@
 Baum
   |Inka@
   |Vario/RBT@
@@ -19,10 +22,15 @@ BrailComm
   |III@
 BrailleLite
   |18/40/M20/M40@
+BrailleMemo
+  |Pocket (16)@
+  |32@
+  |40@
 BrailleNote
   |18/32@
 Braudi@
 BrlAPI@
+B2G@
 Cebra
   |20/40/60/80/100/120/140@
 CombiBraille
@@ -45,11 +53,12 @@ HandyTech
   |Modular 20/40/80@
   |Modular Evolution 64/88@
   |Active Braille@
+  |Basic Braille 16/20/32/40/48/64/80@
+  |Braillino@
   |Braille Wave@
   |Easy Braille@
   |Braille Star 40/80@
   |Bookworm@
-  |Braillino@
 HIMS
   |Braille Sense@
   |SyncBraille@

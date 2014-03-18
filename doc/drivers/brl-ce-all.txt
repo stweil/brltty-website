@@ -27,17 +27,14 @@ go left to nearest non-blank window: LeftLower1+PadLeft1
 go right to nearest non-blank window: LeftLower1+PadRight1
 go up to previous command prompt: LeftLower1+PadUp1
 go down to next command prompt: LeftLower1+PadDown1
-do nothing: RightMiddle1+PadCenter1
 go left one character: RightMiddle1+PadLeft1
 go right one character: RightMiddle1+PadRight1
 go to top line: RightMiddle1+PadUp1
 go to bottom line: RightMiddle1+PadDown1
-do nothing: RightUpper1+PadCenter1
 set attribute underlining on/off: RightUpper1+PadLeft1
 set cursor visibility on/off: RightUpper1+PadRight1
-freeze/unfreeze screen image: RightUpper1+PadUp1
+set screen image frozen/unfrozen: RightUpper1+PadUp1
 set display mode attributes/text: RightUpper1+PadDown1
-do nothing: RightLower1+PadCenter1
 restore preferences from disk: RightLower1+PadLeft1
 save preferences to disk: RightLower1+PadRight1
 set autospeak on/off: RightLower1+PadUp1

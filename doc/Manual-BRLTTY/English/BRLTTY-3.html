@@ -374,8 +374,8 @@ if the requested table can't be loaded.
 The absolute path to a table outside the source tree may be specified.
 The <CODE>.atb</CODE> extension is optional.
 If this option isn't specified,
-then <CODE>attributes</CODE> is assumed.
-Change it to <CODE>attrib</CODE> if you'd like it done the old way.
+then <CODE>left_right</CODE> is assumed.
+Change it to <CODE>invleft_right</CODE> if you'd like it done the old way.
 See the 
 <A HREF="BRLTTY-4.html#configure-attributes-table">attributes-table</A> configuration file directive
 and the 
@@ -404,7 +404,7 @@ Any of the following words can also be used as the operand of this option:
 <P>Link all of the drivers into the binary.
 Don't build any of them as dynamically loadable shared objects.
 This word may also be specified as the final element of a driver list.
-This is how to specify the dfault driver when all the drivers are to be linked in.</P>
+This is how to specify the default driver when all the drivers are to be linked in.</P>
 <DT><B>-all</B><DD>
 <P>Only build those drivers which have been explicitly included via this option.</P>
 <DT><B>no</B><DD>
@@ -600,7 +600,7 @@ Any of the following words can also be used as the operand of this option:
 <P>Link all of the drivers into the binary.
 Don't build any of them as dynamically loadable shared objects.
 This word may also be specified as the final element of a driver list.
-This is how to specify the dfault driver when all the drivers are to be linked in.</P>
+This is how to specify the default driver when all the drivers are to be linked in.</P>
 <DT><B>-all</B><DD>
 <P>Only build those drivers which have been explicitly included via this option.</P>
 <DT><B>no</B><DD>
@@ -1167,7 +1167,7 @@ build options.</P>
 <P>If all is well, BRLTTY's version identification message
 should appear on the braille display for a few seconds
 (see the 
-<A HREF="BRLTTY-4.html#options-message-delay">-M</A> command line option).
+<A HREF="BRLTTY-4.html#options-message-timeout">-M</A> command line option).
 After it goes away (which you can hasten by pressing any key on the display),
 the area of the screen where the cursor is should appear.
 This means that you should expect to see your shell's command prompt.
@@ -1311,7 +1311,7 @@ then make sure you start BRLTTY after the lines which implement it.</P>
 You have two choices if you choose this route.
 <UL>
 <LI>If you want it to be started really early
-but don't need it to be automatially restarted if it dies,
+but don't need it to be automatically restarted if it dies,
 then add a line like this before the first <CODE>:sysinit:</CODE> line which is already in there.
 <BLOCKQUOTE><CODE>
 brl::sysinit:/bin/brltty
@@ -1891,7 +1891,7 @@ This setting can be changed with the
 <P>The maximum length of an output line.
 Each contracted input line is wrapped into as many output lines as necessary.
 If this option isn't specified then there's no limit,
-and there's a one-to-one correspondance between input and output lines.</P>
+and there's a one-to-one correspondence between input and output lines.</P>
 <DT><B><CODE>-h</CODE> <CODE>--help</CODE></B><DD>
 <P>Display a summary of the command line options, and then exit.</P>
 </DL>

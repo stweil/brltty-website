@@ -1,4 +1,4 @@
-Key Table: Braille Pen 12
+Key Table: Optelec Easylink 12 Touch
 
 The six round keys near the back are a braille keyboard.
 From left to right, they're named: Dot3, Dot2, Dot1, Dot4, Dot5, Dot6.

@@ -110,6 +110,7 @@ sa</TD><TD>Sanskrit</TD></TR><TR><TD>
 sat</TD><TD>Santali</TD></TR><TR><TD>
 sd</TD><TD>Sindhi</TD></TR><TR><TD>
 sk</TD><TD>Slovak</TD></TR><TR><TD>
+sl</TD><TD>Slovenian</TD></TR><TR><TD>
 sv</TD><TD>Swedish</TD></TR><TR><TD>
 sv-1989</TD><TD>Swedish (1989 standard)</TD></TR><TR><TD>
 sv-1996</TD><TD>Swedish (1996 standard)</TD></TR><TR><TD>
@@ -300,15 +301,15 @@ Each of the eight braille dots represents
 one of the eight <CODE>VGA</CODE> attribute bits.</P>
 <P>The following attributes tables are provided:
 <DL>
-<DT><B>attributes</B><DD>
+<DT><B>left_right</B><DD>
 <P>The lefthand column represents the foreground colours:
 <DL>
 <DT><B>Dot 1</B><DD>
-<P>Red</P>
+<P>Blue</P>
 <DT><B>Dot 2</B><DD>
 <P>Green</P>
 <DT><B>Dot 3</B><DD>
-<P>Blue</P>
+<P>Red</P>
 <DT><B>Dot 7</B><DD>
 <P>Bright</P>
 </DL>
@@ -316,11 +317,11 @@ one of the eight <CODE>VGA</CODE> attribute bits.</P>
 The righthand column represents the background colours:
 <DL>
 <DT><B>Dot 4</B><DD>
-<P>Red</P>
+<P>Blue</P>
 <DT><B>Dot 5</B><DD>
 <P>Green</P>
 <DT><B>Dot 6</B><DD>
-<P>Blue</P>
+<P>Red</P>
 <DT><B>Dot 8</B><DD>
 <P>Blink</P>
 </DL>
@@ -331,15 +332,15 @@ because it's the most intuitive.
 One of its problems, though, is that it's difficult to discern
 the difference between normal (white on black)
 and reverse (black on white) video.</P>
-<DT><B>attrib</B><DD>
+<DT><B>invleft_right</B><DD>
 <P>The lefthand column represents the foreground colours:
 <DL>
 <DT><B>Dot 1</B><DD>
-<P>Red</P>
+<P>Blue</P>
 <DT><B>Dot 2</B><DD>
 <P>Green</P>
 <DT><B>Dot 3</B><DD>
-<P>Blue</P>
+<P>Red</P>
 <DT><B>Dot 7</B><DD>
 <P>Bright</P>
 </DL>
@@ -347,11 +348,11 @@ and reverse (black on white) video.</P>
 The righthand column represents the background colours:
 <DL>
 <DT><B>Dot 4</B><DD>
-<P>Red</P>
+<P>Blue</P>
 <DT><B>Dot 5</B><DD>
 <P>Green</P>
 <DT><B>Dot 6</B><DD>
-<P>Blue</P>
+<P>Red</P>
 <DT><B>Dot 8</B><DD>
 <P>Blink</P>
 </DL>
@@ -360,6 +361,32 @@ A background bit being on triggers its corresponding dot,
 whereas a foreground bit being off triggers its corresponding dot.
 This unintuitive logic actually makes it easier
 to read the most commonly used attribute combinations.</P>
+<DT><B>upper_lower</B><DD>
+<P>The upper square represents the foreground colours:
+<DL>
+<DT><B>Dot 1</B><DD>
+<P>Red</P>
+<DT><B>Dot 4</B><DD>
+<P>Green</P>
+<DT><B>Dot 2</B><DD>
+<P>Blue</P>
+<DT><B>Dot 5</B><DD>
+<P>Bright</P>
+</DL>
+
+The lower square represents the background colours:
+<DL>
+<DT><B>Dot 3</B><DD>
+<P>Red</P>
+<DT><B>Dot 6</B><DD>
+<P>Green</P>
+<DT><B>Dot 7</B><DD>
+<P>Blue</P>
+<DT><B>Dot 8</B><DD>
+<P>Blink</P>
+</DL>
+
+A dot is raised when its corresponding attribute bit is on.</P>
 </DL>
 
 See the 
@@ -870,12 +897,16 @@ The rest of the name describes the kind of keyboard
 for which the key table has been designed.</P>
 <P>The following keyboard key tables are provided:
 <DL>
-<DT><B>kbd-desktop</B><DD>
+<DT><B>braille</B><DD>
+<P>bindings for braille keyboards</P>
+<DT><B>desktop</B><DD>
 <P>bindings for full keyboards</P>
-<DT><B>kbd-keypad</B><DD>
+<DT><B>keypad</B><DD>
 <P>bindings for keypad-based navigation</P>
-<DT><B>kbd-laptop</B><DD>
+<DT><B>laptop</B><DD>
 <P>bindings for keyboards without a keypad</P>
+<DT><B>sun_type6</B><DD>
+<P>bindings for Sun Type 6 keyboards</P>
 </DL>
 
 See the 

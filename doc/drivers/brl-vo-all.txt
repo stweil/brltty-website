@@ -29,7 +29,9 @@ set cursor visibility on: Thumb2+Dot1+Dot4+Dot8
 set display mode attributes/text: Thumb2+Dot1+Dot4+Dot5
 set display mode text: Thumb2+Dot1+Dot4+Dot5+Dot7
 set display mode attributes: Thumb2+Dot1+Dot4+Dot5+Dot8
-freeze/unfreeze screen image: Thumb2+Dot1+Dot2+Dot4
+set screen image frozen/unfrozen: Thumb2+Dot1+Dot2+Dot4
+set screen image unfrozen: Thumb2+Dot1+Dot2+Dot4+Dot7
+set screen image frozen: Thumb2+Dot1+Dot2+Dot4+Dot8
 enter/leave help display: Thumb2+Dot1+Dot2+Dot5
 set skipping of lines with identical content on/off: Thumb2+Dot2+Dot4
 set skipping of lines with identical content off: Thumb2+Dot2+Dot4+Dot7
@@ -54,6 +56,9 @@ switch to next virtual terminal: Thumb2+Dot1+Dot2+Dot3+Dot6+Dot8
 set sliding window on/off: Thumb2+Dot2+Dot4+Dot5+Dot6
 set sliding window off: Thumb2+Dot2+Dot4+Dot5+Dot6+Dot7
 set sliding window on: Thumb2+Dot2+Dot4+Dot5+Dot6+Dot8
+insert clipboard text at cursor: Thumb2+Dot1+Dot3+Dot4+Dot6
+restore clipboard from disk: Thumb2+Dot1+Dot3+Dot4+Dot6+Dot7
+save clipboard to disk: Thumb2+Dot1+Dot3+Dot4+Dot6+Dot8
 set text style 6-dot: Thumb2+Dot2+Dot3+Dot5
 set text style 8-dot: Thumb2+Dot2+Dot3+Dot6
 backspace key: Thumb2+Dot7

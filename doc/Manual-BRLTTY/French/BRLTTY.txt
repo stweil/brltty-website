@@ -14,9 +14,9 @@
   Jean-Philippe Mengual <texou@accelibreinfo.eu> pour
   Traduc.org
 
-  Version 4.5, avr 2013
+  Version 5.0, jan 2014
 
-  Copyright © 1995-2013 by Les Développeurs de BRLTTY.  BRLTTY est un
+  Copyright © 1995-2014 by Les Développeurs de BRLTTY.  BRLTTY est un
   logiciel libre, et n'est fourni avec AUCUNE GARANTIE. Il est placé
   sous les termes de la version 2 ou ultérieure de la GGNNUU GGeenneerraall PPuubblliicc
   LLiicceennssee publiée par TThhee FFrreeee SSooffttwwaarree FFoouunnddaattiioonn.
@@ -200,7 +200,7 @@
   ·  Nicolas Pitre
 
      WWeebb
-        http://www.cam.org/~nico/
+        http://www.fluxnic.net/
 
      EE--MMaaiill
         <nico@fluxnic.net>
@@ -2972,10 +2972,12 @@
         relatif, il est déterminé par rapport à /etc/brltty (voir les
         options de compilation ``--with-data-directory'' et ``--with-
         execute-root'' pour plus de détails).  L'extension .atb est
-        facultative.  Voir la ligne ``attributes-table'' du fichier de
-        configuration pour la sélection des paramètres par défaut lors
-        de l'exécution.  Vous pouvez changer ce paramètre avec la
-        préférence ``Table d'attributs''.
+        facultative. Si vous ne spécifiez pas cette option, on suppose
+        que c'est left_right. Passez-la à invleft_right si vous
+        souhaitez l'ancien comportement.  Voir la ligne ``attributes-
+        table'' du fichier de configuration pour la sélection des
+        paramètres par défaut lors de l'exécution.  Vous pouvez changer
+        ce paramètre avec la préférence ``Table d'attributs''.
 
      -b_d_r_i_v_e_r,...|auto --braille-driver=_d_r_i_v_e_r,...|auto
         Spécifie le pilote de l'afficheur braille (voir la section
@@ -3284,7 +3286,7 @@
         fichier de configuration pour les paramètres d'exécution par
         défaut.
 
-     -M_c_s_e_c_s --message-delay=_c_s_e_c_s
+     -M_c_s_e_c_s --message-timeout=_c_s_e_c_s
         Spécifie le temps (en centièmes de seconde) que prend BRLTTY
         pour afficher ses propres messages internes sur l'afficheur
         braille. Si ce n'est pas spécifié, c'est 400 (4 secondes) qui
@@ -3321,12 +3323,6 @@
         documentation de ce pilote.  Voir la ligne ``speech-parameters''
         du fichier de configuration pour les paramètres par défaut à
         l'exécution.
-
-     -U_c_s_e_c_s --update-interval=_c_s_e_c_s
-        Spécifie l'intervalle (en centièmes de secondes) avec lequel la
-        plage braille est synchronisée avec le nouveau contenu de
-        l'écran. Si ce n'est pas spécifié, c'est 4 (40 millisecondes)
-        qui est utilisé.
 
      -V --version
         Affiche les versions courantes de BRLTTY lui-même, de la partie
@@ -4370,9 +4366,7 @@
   Remarques:
 
   ·   Tous les paramètres de temps sont en centièmes de seconde. Ce sont
-     des multiples de la fréquence de mise à jour de la plage braille
-     (voir l'option ``-U'' en ligne de commande) dans un intervalle de 1
-     à 100.
+     des multiples de 4 compris entre 1 et 100.
 
   55..66..  LL''aaffffiicchhaaggee ddeess ééttaattss
 
@@ -4860,17 +4854,17 @@
   huit points braille représente l'un des huit bits d'attributs VGA.
   Les tables d'attributs suivantes sont fournies:
 
-     aattttrriibbuutteess
+     lleefftt__rriigghhtt
         La colonne à gauche représente les couleurs de premier plan:
 
         PPooiinntt 11
-           Rouge
+           Bleu
 
         PPooiinntt 22
            Vert
 
         PPooiinntt 33
-           Bleu
+           Rouge
 
         PPooiinntt 77
            Brillant
@@ -4878,13 +4872,13 @@
         La colonne à droite représente les couleurs de fond:
 
         PPooiinntt 44
-           Rouge
+           Bleu
 
         PPooiinntt 55
            Vert
 
         PPooiinntt 66
-           Bleu
+           Rouge
 
         PPooiinntt 88
            Clignotant
@@ -4895,17 +4889,17 @@
         difficile de distinguer la différence entre la vidéo normale
         (noir sur blanc) et inversée (blanc sur noir).
 
-     aattttrriibb
+     iinnvvlleefftt__rriigghhtt
         La colonne à gauche représente les couleurs de premier plan:
 
         PPooiinntt 11
-           Rouge
+           Bleu
 
         PPooiinntt 22
            Vert
 
         PPooiinntt 33
-           Bleu
+           Rouge
 
         PPooiinntt 77
            Brillant
@@ -4913,13 +4907,13 @@
         La colonne à droite représente les couleurs de fond:
 
         PPooiinntt 44
-           Rouge
+           Bleu
 
         PPooiinntt 55
            Vert
 
         PPooiinntt 66
-           Bleu
+           Rouge
 
         PPooiinntt 88
            Clignotant
@@ -4929,6 +4923,38 @@
         point correspondant.  Cette logique non intuitive facilite en
         fait la lecture de la plupart des combinaisons d'attributs
         communément utilisées.
+
+     uuppppeerr__lloowweerr
+        Le carré supérieur représente les couleurs de premier plan:
+
+        PPooiinntt 11
+           Rouge
+
+        PPooiinntt 44
+           Vert
+
+        PPooiinntt 22
+           Bleu
+
+        PPooiinntt 55
+           Brillant
+
+        Le carré inférieur représente les couleurs d'arrière-plan:
+
+        PPooiinntt 33
+           Rouge
+
+        PPooiinntt 66
+           Vert
+
+        PPooiinntt 77
+           Bleu
+
+        PPooiinntt 88
+           Clignotant
+
+        Un point s'affiche quand le bit de l'attribut qui y correspond
+        est actif.
 
   Voir l'option ``-a'' en ligne de commande, la ligne ``attributes-
   table'' du fichier de configuration, et l'option de compilation
@@ -5425,14 +5451,20 @@
 
   Les tables de touches suivantes sont fournies:
 
-     kkbbdd--ddeesskkttoopp
+     bbrraaiillllee
+        associations pour les claviers braille
+
+     ddeesskkttoopp
         associations pour les claviers complets
 
-     kkbbdd--kkeeyyppaadd
+     kkeeyyppaadd
         associations pour la navigation à partir du pavé numérique
 
-     kkbbdd--llaappttoopp
+     llaappttoopp
         associations pour les claviers sans pavé numérique
+
+     ssuunn__ttyyppee66
+        associations pour les claviers Sun Type 6
 
   Voir l'option ``-k'' en ligne de commande et la ligne ``key-table'' du
   fichier de configuration pour plus de détails concernant la manière de

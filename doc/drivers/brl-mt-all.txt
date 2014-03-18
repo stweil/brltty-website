@@ -31,7 +31,7 @@ go to current speech position: LeftRear+LeftFront+RightMiddle
 bring cursor to line: LeftRear+LeftFront+RightRear+RightFront
 enter/leave status display: LeftMiddle+RightMiddle
 set display mode attributes/text: LeftRear+RightRear+RightMiddle
-freeze/unfreeze screen image: LeftRear+LeftMiddle+RightRear
+set screen image frozen/unfrozen: LeftRear+LeftMiddle+RightRear
 enter/leave help display: LeftRear+LeftMiddle+RightMiddle
 enter/leave preferences menu: LeftRear+LeftFront+RightRear
 insert clipboard text at cursor: LeftRear+LeftMiddle+LeftFront+RightRear

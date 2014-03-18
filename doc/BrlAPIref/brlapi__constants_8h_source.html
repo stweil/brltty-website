@@ -54,7 +54,7 @@
 <a href="brlapi__constants_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * libbrlapi - A library providing access to braille terminals for applications.</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (C) 2002-2013 by</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (C) 2002-2014 by</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *   Samuel Thibault &lt;Samuel.Thibault@ens-lyon.org&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *   Sébastien Hinderer &lt;Sebastien.Hinderer@ens-lyon.org&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
@@ -291,19 +291,19 @@
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00246"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga5dbd874c06e33ab56f838eb8bc0aa306">  246</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_SHOW_CURR_LOCN (BRLAPI_KEY_CMD(0) + 106)</span></div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00248"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga4e98de707a29da753ca011ea3b5551bb">  248</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_TOGGLE_ON BRLAPI_KEY_FLG(0X0100)</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gacb70fbbd302dee6e4b701cb0084b1ad7">  248</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_CLIP_SAVE (BRLAPI_KEY_CMD(0) + 107)</span></div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00250"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga23da27d060cca666a4e750785d2c7c3d">  250</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_TOGGLE_OFF BRLAPI_KEY_FLG(0X0200)</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga6bd01f1d3bac8176a16b35b17317d4f3">  250</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_CLIP_RESTORE (BRLAPI_KEY_CMD(0) + 108)</span></div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00252"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga4d4c720d15b953da15e0e51296c81a29">  252</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_TOGGLE_MASK (BRLAPI_KEY_FLG_TOGGLE_ON | BRLAPI_KEY_FLG_TOGGLE_OFF)</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gaf242d4778b3d649a9db47e175f12ad11">  252</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_BRLUCDOTS (BRLAPI_KEY_CMD(0) + 109)</span></div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00254"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gae88adbfa8b894ce409a34278b8a65ba1">  254</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_MOTION_ROUTE BRLAPI_KEY_FLG(0X0400)</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga4e98de707a29da753ca011ea3b5551bb">  254</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_TOGGLE_ON BRLAPI_KEY_FLG(0X0100)</span></div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00256"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga71518ee0fd492d37d99749b64efa9185">  256</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_REPEAT_INITIAL BRLAPI_KEY_FLG(0X8000)</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga23da27d060cca666a4e750785d2c7c3d">  256</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_TOGGLE_OFF BRLAPI_KEY_FLG(0X0200)</span></div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00258"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga1b7399ac291b449c4ce9cad85083f2b4">  258</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_REPEAT_DELAY BRLAPI_KEY_FLG(0X4000)</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga4d4c720d15b953da15e0e51296c81a29">  258</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_TOGGLE_MASK (BRLAPI_KEY_FLG_TOGGLE_ON | BRLAPI_KEY_FLG_TOGGLE_OFF)</span></div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00260"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gacaf9112a62abdb35b6896d969a205229">  260</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_REPEAT_MASK (BRLAPI_KEY_FLG_REPEAT_INITIAL | BRLAPI_KEY_FLG_REPEAT_DELAY)</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gae88adbfa8b894ce409a34278b8a65ba1">  260</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_MOTION_ROUTE BRLAPI_KEY_FLG(0X0400)</span></div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00262"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga99d9a7158d8a66d71423592a9d29853c">  262</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_ROUTE BRLAPI_KEY_CMD(0X01)</span></div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor"></span></div>
@@ -355,49 +355,49 @@
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00310"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga08e8c58982a1dbc47b8931fb763fc785">  310</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_APNDCHARS BRLAPI_KEY_CMD(0X11)</span></div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00312"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gad047a042a6e161f9e2a41924f02e15e5">  312</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_PWGEN BRLAPI_KEY_CMD(0X12)</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga44fda259875a2ea781b8c8f784750e14">  312</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_PASSDOTS BRLAPI_KEY_CMD(0X22)</span></div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00314"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga44fda259875a2ea781b8c8f784750e14">  314</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_PASSDOTS BRLAPI_KEY_CMD(0X22)</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga94a809ff50612806f77c4f8fa63817ed">  314</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_SHIFT BRLAPI_KEY_FLG(0X01)</span></div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00316"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga94a809ff50612806f77c4f8fa63817ed">  316</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_SHIFT BRLAPI_KEY_FLG(0X01)</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga9a7943f6839e4a942e3b9818e9cfc96e">  316</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_UPPER BRLAPI_KEY_FLG(0X02)</span></div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00318"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga9a7943f6839e4a942e3b9818e9cfc96e">  318</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_UPPER BRLAPI_KEY_FLG(0X02)</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gadeb8d78efee96b2520ed6136b7ab3246">  318</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_CONTROL BRLAPI_KEY_FLG(0X04)</span></div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00320"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gadeb8d78efee96b2520ed6136b7ab3246">  320</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_CONTROL BRLAPI_KEY_FLG(0X04)</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gaac6bc5d550957b96f94bf7a5bb8ecac8">  320</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_META BRLAPI_KEY_FLG(0X08)</span></div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00322"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gaac6bc5d550957b96f94bf7a5bb8ecac8">  322</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_META BRLAPI_KEY_FLG(0X08)</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga69b126bad988af229fc24b21990dab4c">  322</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT1 1</span></div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00324"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga69b126bad988af229fc24b21990dab4c">  324</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT1 0001</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga5e14b9902b2378c15dcf68d36895c491">  324</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT2 2</span></div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00326"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga5e14b9902b2378c15dcf68d36895c491">  326</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT2 0002</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga8ce11d773b99f8088aa563a601b55c13">  326</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT3 4</span></div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00328"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga8ce11d773b99f8088aa563a601b55c13">  328</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT3 0004</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga0b65ae1eb6673019a4e20a479af0afd0">  328</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT4 8</span></div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00330"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga0b65ae1eb6673019a4e20a479af0afd0">  330</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT4 0010</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gad1f2cc21a4eb7a5d59c9a483290c0e2f">  330</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT5 16</span></div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00332"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gad1f2cc21a4eb7a5d59c9a483290c0e2f">  332</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT5 0020</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga01ab50802c65eb3a61c39c2abae9a9ca">  332</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT6 32</span></div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00334"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga01ab50802c65eb3a61c39c2abae9a9ca">  334</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT6 0040</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga99af20161601e2f4c3bf9c59bdcc95bc">  334</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT7 64</span></div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00336"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga99af20161601e2f4c3bf9c59bdcc95bc">  336</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT7 0100</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga989bc7109a7f10ff614693f6dc8d53a8">  336</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT8 128</span></div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00338"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga989bc7109a7f10ff614693f6dc8d53a8">  338</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOT8 0200</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga8af4a8d517daab98d328ec82d3b7356f">  338</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOTC 256</span></div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00340"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga8af4a8d517daab98d328ec82d3b7356f">  340</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOTC 0400</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga34ff1118499f840478d316a6ef803d4c">  340</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_PASSAT BRLAPI_KEY_CMD(0X23)</span></div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00342"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga34ff1118499f840478d316a6ef803d4c">  342</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_PASSAT BRLAPI_KEY_CMD(0X23)</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga93fa5cd50454f07900b64ddfac367469">  342</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_PASSXT BRLAPI_KEY_CMD(0X24)</span></div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00344"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga93fa5cd50454f07900b64ddfac367469">  344</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_PASSXT BRLAPI_KEY_CMD(0X24)</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga545c4098255479c718ca9bfc4ef15203">  344</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_PASSPS2 BRLAPI_KEY_CMD(0X25)</span></div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00346"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga545c4098255479c718ca9bfc4ef15203">  346</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_PASSPS2 BRLAPI_KEY_CMD(0X25)</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga224d75852bf9d6cc16a04e8c8b4c89c1">  346</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_KBD_RELEASE BRLAPI_KEY_FLG(0X0100)</span></div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00348"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga224d75852bf9d6cc16a04e8c8b4c89c1">  348</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_KBD_RELEASE BRLAPI_KEY_FLG(0X0100)</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga987f238154c92a108f1d8949d8633f96">  348</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_KBD_EMUL0 BRLAPI_KEY_FLG(0X0200)</span></div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00350"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga987f238154c92a108f1d8949d8633f96">  350</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_KBD_EMUL0 BRLAPI_KEY_FLG(0X0200)</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga883128a858d7a52d14a3888b50cf2bb3">  350</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_KBD_EMUL1 BRLAPI_KEY_FLG(0X0400)</span></div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00352"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga883128a858d7a52d14a3888b50cf2bb3">  352</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_FLG_KBD_EMUL1 BRLAPI_KEY_FLG(0X0400)</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gadc85aeb2df11d1a4db496574f6b201a2">  352</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_CONTEXT BRLAPI_KEY_CMD(0X26)</span></div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00354"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gadc85aeb2df11d1a4db496574f6b201a2">  354</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_CONTEXT BRLAPI_KEY_CMD(0X26)</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#ga9b6a37f50792c6dd06b92ceec8f4b257">  354</a></span>&#160;<span class="preprocessor">#define BRLAPI_KEY_CMD_READ_LOCN BRLAPI_KEY_CMD(0X27)</span></div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00357"></a><span class="lineno"><a class="code" href="group__brlapi__keycodes.html#gae01727afff33b4fcb303a82f1144a471">  357</a></span>&#160;<span class="preprocessor">#define BRLAPI_DOTS(dot1, dot2, dot3, dot4, dot5, dot6, dot7, dot8) (\</span></div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="preprocessor">  ((dot1)? BRLAPI_DOT1: 0) | \</span></div>

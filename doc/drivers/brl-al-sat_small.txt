@@ -46,7 +46,7 @@ set capital letter blinking on/off: Status1C
 set skipping of blank windows on/off: Status2C
 enter/leave preferences menu: RightPadLeft
 enter/leave status display: RightPadRight
-freeze/unfreeze screen image: RightPadF1+RightPadLeft
+set screen image frozen/unfrozen: RightPadF1+RightPadLeft
 set text style 6-dot/8-dot: RightPadF1+RightPadRight
 insert clipboard text at cursor: RightPadF2+RightPadLeft
 bring cursor to line: RightPadF2+RightPadRight

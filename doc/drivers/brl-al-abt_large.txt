@@ -36,7 +36,7 @@ enter/leave help display: Prog
 set display mode attributes/text: Prog+Home
 enter/leave preferences menu: Prog+Cursor
 enter/leave status display: Prog+Up
-freeze/unfreeze screen image: Prog+Down
+set screen image frozen/unfrozen: Prog+Down
 set capital letter blinking on/off: Status1A
 set cursor visibility on/off: Status1B
 set cursor blinking on/off: Status1C

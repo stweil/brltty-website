@@ -26,7 +26,7 @@ set cursor tracking on/off: CapsLock+Enter
 set cursor tracking off: CapsLock+ShiftLeft+Enter
 go back after cursor tracking: CapsLock+DeleteBackward
 describe character at cursor: CapsLock+D
-freeze/unfreeze screen image: CapsLock+F
+set screen image frozen/unfrozen: CapsLock+F
 restart braille driver: CapsLock+R
 show the current date and time: CapsLock+T
 remember current window position #1: CapsLock+M

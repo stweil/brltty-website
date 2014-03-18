@@ -2,9 +2,9 @@ BRLTTY is a background process (daemon) providing access to the Linux/Unix
 console (when in text mode) for a blind person using a refreshable braille
 display.
 
-Version 4.5, Apr 2013
+Version 5.0, Jan 2014
 
-Copyright (C) 1995-2013 by The BRLTTY Developers.
+Copyright (C) 1995-2014 by The BRLTTY Developers.
 
 Web Page: http://mielke.cc/brltty/
 
@@ -52,8 +52,9 @@ This software is maintained by: Dave Mielke <dave@mielke.cc>
 The members of The BRLTTY Team are:
 
    Dave Mielke <dave@mielke.cc>
+   Mario Lang <mlang@delysid.org>
    Nicolas Pitre <nico@fluxnic.net>
-   Stéphane Doyon <s.doyon@videotron.ca>
+   StÃ©phane Doyon <s.doyon@videotron.ca>
 
 -------------------------------------------------------------------------------
 
@@ -173,26 +174,30 @@ BRLTTY has been tested on:
 *  FreeBSD/Intel (release 5.1 and beyond)
 *  NetBSD/Intel (release 1.6 and beyond)
 *  Windows 95/98/XP
+*  Android/ARM (4.0 and beyond)
 
 The following braille displays are supported:
 
 -  Albatross [46/80]
 -  Alva [ABT(3nn), Delphi(4nn), Satellite(5nn), Braille System 40,
-         Braille Controller 640/680]
+         Braille Controller 640/680, Easy Link 12]
 -  Baum [Inka, Vario/RBT, SuperVario/Brailliant, PocketVario, VarioPro,
          EcoVario, VarioConnect/BrailleConnect, Refreshabraille]
 -  BrailComm [III]
 -  BrailleLite [18/40/M20/M40]
+-  BrailleMemo [Pocket (16), 32, 40]
 -  BrailleNote [18/32]
 -  BrlAPI
+-  B2G [20]
+-  Cebra [20/40/60/80/100/120/140]
 -  CombiBraille [25/45/85]
 -  EcoBraille [20/40/80]
 -  EuroBraille [AzerBraille, Clio, Esys, Iris, NoteBraille, Scriba]
 -  FreedomScientific [Focus 1 44/70/84, Focus 2 40/80, Focus Blue 14/40,
                       PAC Mate 20/40]
 -  HandyTech [Modular 20/40/80, Modular Evolution 64/88, Active Braille,
-              Braille Wave, Easy Braille, Braille Star 40/80, Bookworm,
-              Braillino]
+              Basic Braille 16/20/32/40/48/64/80, Braillino,
+              Braille Wave, Easy Braille, Braille Star 40/80, Bookworm]
 -  HIMS [Braille Sense, SyncBraille, Braille Edge]
 -  HumanWare [Brailliant 32/40/80 bi]
 -  Iris
@@ -202,7 +207,7 @@ The following braille displays are supported:
 -  Metec [BD-40]
 -  MiniBraille [20]
 -  MultiBraille [MB125CR/MB145CR/MB185CR]
--  NinePoint [Cebra 20/40/60/80/100/120/140]
+-  NinePoint
 -  Papenmeier [Compact 486, Compact/Tiny, IB 80 CR Soft, 2D Lite (plus),
                2D Screen Soft, EL 80, EL 2D 40/66/80, EL 40/66/70/80 S,
                EL 40/60/80 C, EL 2D 80 S, EL 40 P, EL 80 II, Elba 20/32,
@@ -220,6 +225,7 @@ The following braille displays are supported:
 The following speech synthesizers are supported:
 
 -  Alva [Delphi(4nn)]
+-  Android [text to speech engine]
 -  BrailleLite
 -  CombiBraille
 -  eSpeak [text to speech engine]

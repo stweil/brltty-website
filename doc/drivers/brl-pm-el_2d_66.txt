@@ -32,7 +32,9 @@ set cursor tracking on: BarRight1+Status6
 set display mode attributes/text: Status7
 set display mode text: BarLeft1+Status7
 set display mode attributes: BarRight1+Status7
-freeze/unfreeze screen image: Status8
+set screen image frozen/unfrozen: Status8
+set screen image unfrozen: BarLeft1+Status8
+set screen image frozen: BarRight1+Status8
 enter/leave preferences menu: Status9
 restore preferences from disk: Status10
 set cursor visibility on/off: Status11
@@ -57,7 +59,7 @@ set cursor visibility on/off: LeftKeyRear+BarRight2
 set autospeak on/off: LeftKeyFront+BarUp1
 set autorepeat on/off: LeftKeyFront+BarDown1
 restart braille driver: LeftKeyFront+BarUp2
-freeze/unfreeze screen image: LeftKeyFront+BarDown2
+set screen image frozen/unfrozen: LeftKeyFront+BarDown2
 enter/leave status display: LeftKeyFront+BarLeft1
 enter/leave preferences menu: LeftKeyFront+BarRight1
 restore preferences from disk: LeftKeyFront+BarLeft2

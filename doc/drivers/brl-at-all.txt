@@ -33,7 +33,7 @@ enter/leave preferences menu: F13
 enter/leave status display: F14
 go up to last line of previous paragraph: F15
 go down to first line of next paragraph: F16
-freeze/unfreeze screen image: Attribute1
+set screen image frozen/unfrozen: Attribute1
 set display mode attributes/text: Attribute2
 set cursor visibility on/off: Attribute3
 set attribute underlining on/off: Attribute4

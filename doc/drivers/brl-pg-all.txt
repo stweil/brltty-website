@@ -16,7 +16,7 @@ go up to nearest line with different highlighting: LeftControl+Left
 go down to nearest line with different highlighting: LeftControl+Right
 go up to nearest line with different content: LeftControl+Up
 go down to nearest line with different content: LeftControl+Down
-freeze/unfreeze screen image: LeftControl+Enter
+set screen image frozen/unfrozen: LeftControl+Enter
 enter/leave preferences menu: LeftControl+End
 enter/leave status display: LeftControl+Escape
 set display mode attributes/text: LeftShift+Left

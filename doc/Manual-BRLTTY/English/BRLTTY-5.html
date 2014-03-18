@@ -67,7 +67,7 @@ BRLTTY keeps trying to route the cursor to the desired location until
 a timeout expires before the cursor reaches that location,
 the cursor seems to be moving in the wrong direction,
 or you switch to a different virtual terminal.
-An attempt is first made to use virtical motion
+An attempt is first made to use vertical motion
 to bring the cursor to the right line,
 and, only if that succeeds, an attempt is then made
 to use horizontal motion to bring the cursor to the right column.
@@ -239,7 +239,7 @@ and if the
 <A HREF="#preference-alert-messages">Alert Messages</A> preference is active,
 then it is displayed for a few seconds
 (see the 
-<A HREF="BRLTTY-4.html#options-message-delay">-M</A> command line option).</P>
+<A HREF="BRLTTY-4.html#options-message-timeout">-M</A> command line option).</P>
 </DL>
 </P>
 <P>These events include:
@@ -281,11 +281,11 @@ where <EM>driver</EM> is the two-letter
 <P>The preferences settings are saved as binary data
 which, therefore, can't be edited by hand.
 BRLTTY, however, has a simple menu from which you can easily change them.</P>
-<P>The meny is activated by the 
+<P>The menu is activated by the 
 <A HREF="BRLTTY-4.html#command-PREFMENU">PREFMENU</A> command.
 The braille display briefly
 (see the 
-<A HREF="BRLTTY-4.html#options-message-delay">-M</A> command line option)
+<A HREF="BRLTTY-4.html#options-message-timeout">-M</A> command line option)
 shows the menu title,
 and then presents the current item and its current setting.</P>
 
@@ -1105,10 +1105,7 @@ This preference isn't saved.</P>
 <LI>
 <A NAME="time-settings"></A> 
 All time settings are in hundredths of a second.
-They are multiples of the braille window update interval
-(see the 
-<A HREF="BRLTTY-4.html#options-update-interval">-U</A> command line option)
-within the range 1 through 100.</LI>
+They are multiples of 4 within the range 1 through 100.</LI>
 </UL>
 </P>
 
@@ -1384,7 +1381,7 @@ with the rightmost character on the display being set to a minus sign.
 Each such segment remains on the display
 either for a few seconds
 (see the 
-<A HREF="BRLTTY-4.html#options-message-delay">-M</A> command line option)
+<A HREF="BRLTTY-4.html#options-message-timeout">-M</A> command line option)
 or until any key on the display is pressed.</P>
 
 <HR>

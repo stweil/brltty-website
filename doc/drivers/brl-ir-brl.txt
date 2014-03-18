@@ -21,7 +21,7 @@ set cursor visibility on/off: L2+L3
 set alert tunes on/off: L6+L7
 restart speech driver: L6+L8
 insert clipboard text at cursor: L5+L7
-freeze/unfreeze screen image: L4+L3+L5
+set screen image frozen/unfrozen: L4+L3+L5
 enter/leave help display: L4+L3+L6
 enter/leave status display: L3+L5
 enter/leave command learn mode: L4+L3+L2

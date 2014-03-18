@@ -18,7 +18,7 @@ go up to nearest line with different content: Display5+Display3
 go down to nearest line with different content: Display5+Display4
 go up to nearest line with different highlighting: Display5+Display6
 go down to nearest line with different highlighting: Display5+Display7
-freeze/unfreeze screen image: Display2+Display5
+set screen image frozen/unfrozen: Display2+Display5
 go up to previous command prompt: Display2+Display3
 go down to next command prompt: Display2+Display4
 go up to last line of previous paragraph: Display2+Display6

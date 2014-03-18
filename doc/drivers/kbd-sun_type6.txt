@@ -1,4 +1,4 @@
-Key Table: Bindings for Full Keyboards
+Key Table: Bindings for Sun Microsystems, Inc. Type 6 Keyboards
 
 Default Bindings
 speak current line: KP0+KP5
@@ -45,3 +45,21 @@ remember current window position #4: ControlRight+KP0+Three
 go to remembered window position #4: KP0+Three
 remember current window position #5: ControlRight+KP0+Four
 go to remembered window position #5: KP0+Four
+stop speaking: MEDIA_Mute
+set alert tunes on/off: ControlLeft+MEDIA_Mute
+decrease speech volume: MEDIA_VolumeDown
+increase speech volume: MEDIA_VolumeUp
+restart braille driver: ACTION_Power
+restart speech driver: ControlLeft+ACTION_Power
+set screen image frozen: ACTION_Stop
+set screen image unfrozen: ACTION_Again
+set screen image frozen/unfrozen: ACTION_Stop+ACTION_Again
+go to cursor or go back after cursor tracking: ACTION_Undo
+go back after cursor tracking: ControlLeft+ACTION_Undo
+insert clipboard text at cursor: ACTION_Paste
+restore clipboard from disk: ControlLeft+ACTION_Paste
+save clipboard to disk: ShiftLeft+ACTION_Paste
+search forward for clipboard text: ACTION_Find
+search backward for clipboard text: ControlLeft+ACTION_Find
+enter/leave help display: ACTION_Help
+enter/leave command learn mode: ControlLeft+ACTION_Help

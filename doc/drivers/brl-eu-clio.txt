@@ -70,7 +70,7 @@ go to beginning of bottom line: Seven
 go up to nearest line with different content: Three
 go down to nearest line with different content: Nine
 set cursor tracking on/off: Zero
-freeze/unfreeze screen image: A
+set screen image frozen/unfrozen: A
 go left one window: E
 go up one line: F
 go up to previous command prompt: G

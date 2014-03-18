@@ -12,7 +12,7 @@ go to beginning of top line: LeftUp+LeftDown+RightUp
 go to beginning of bottom line: LeftUp+LeftDown+RightDown
 set cursor tracking on/off: LeftUp+RightUp
 set text style 6-dot/8-dot: LeftUp+RightDown
-freeze/unfreeze screen image: LeftDown+RightUp
+set screen image frozen/unfrozen: LeftDown+RightUp
 set display mode attributes/text: LeftDown+RightDown
 enter/leave status display: LeftUp+RightUp+RightDown
 enter/leave preferences menu: LeftDown+RightUp+RightDown

@@ -2,24 +2,49 @@ Key Table: HIMS Braille Edge
 
 Default Bindings
 bring cursor to character: RoutingKey
+bring cursor to line: LeftPadLeft+LeftPadRight
 go up one line: LeftScrollUp
 go down one line: LeftScrollDown
 go left one window: RightScrollUp
 go right one window: RightScrollDown
+go to top line: LeftScrollUp+RightScrollUp
+go to bottom line: LeftScrollDown+RightScrollDown
 go to beginning of line: LeftScrollUp+LeftScrollDown
-go to beginning of top line: LeftScrollUp+LeftScrollDown+RightScrollUp
-go to beginning of bottom line: LeftScrollUp+LeftScrollDown+RightScrollDown
-go to cursor or go back after cursor tracking: RightScrollUp+RightScrollDown
-go to top line: RightScrollUp+RightScrollDown+LeftScrollUp
-go to bottom line: RightScrollUp+RightScrollDown+LeftScrollDown
-set cursor tracking on/off: LeftScrollUp+RightScrollUp
-set text style 6-dot/8-dot: LeftScrollUp+RightScrollDown
-freeze/unfreeze screen image: LeftScrollDown+RightScrollUp
-set display mode attributes/text: LeftScrollDown+RightScrollDown
+show the current date and time: RightScrollUp+RightScrollDown
+go up to last line of previous paragraph: LeftScrollUp+LeftScrollDown+RightScrollUp
+go down to first line of next paragraph: LeftScrollUp+LeftScrollDown+RightScrollDown
+go up to previous command prompt: RightScrollUp+RightScrollDown+LeftScrollUp
+go down to next command prompt: RightScrollUp+RightScrollDown+LeftScrollDown
+set text style 8-dot: LeftScrollUp+RightScrollDown
+set text style 6-dot: LeftScrollDown+RightScrollUp
+set screen image frozen/unfrozen: LeftScrollUp+LeftScrollDown+RightScrollUp+RightScrollDown
 enter/leave help display: F1
 enter/leave command learn mode: F2
 enter/leave status display: F3
 enter/leave preferences menu: F4
+set display mode attributes/text: F5
+go back after cursor tracking: F6
+go to cursor: F7
+set cursor tracking on/off: F8
+go up to nearest line with different highlighting: LeftPadUp
+go down to nearest line with different highlighting: LeftPadDown
+search backward for clipboard text: LeftPadLeft
+search forward for clipboard text: LeftPadRight
+go up to nearest line with different content: RightPadUp
+go down to nearest line with different content: RightPadDown
+go left to nearest non-blank window: RightPadLeft
+go right to nearest non-blank window: RightPadRight
+go up to nearest line with different character: LeftPadLeft+LeftPadUp, RoutingKey
+go down to nearest line with different character: LeftPadLeft+LeftPadDown, RoutingKey
+go up to nearest line with less indent than character: LeftPadRight+LeftPadUp, RoutingKey
+go down to nearest line with less indent than character: LeftPadRight+LeftPadDown, RoutingKey
+start new clipboard at character: RightPadLeft+RightPadUp, RoutingKey
+append characters to clipboard: RightPadLeft+RightPadDown, RoutingKey
+linear copy to character: RightPadRight+RightPadUp, RoutingKey
+rectangular copy to character: RightPadRight+RightPadDown, RoutingKey
+insert clipboard text at cursor: RightPadLeft+RightPadRight
+place left end of window at character: LeftPadUp+LeftPadDown, RoutingKey
+describe character: RightPadUp+RightPadDown, RoutingKey
 set skipping of blank windows on/off: Space+Dot1+Dot2
 set skipping of blank windows off: Space+Dot1+Dot2+Dot7
 set skipping of blank windows on: Space+Dot1+Dot2+Dot8
@@ -29,7 +54,9 @@ set cursor visibility on: Space+Dot1+Dot4+Dot8
 set display mode attributes/text: Space+Dot1+Dot4+Dot5
 set display mode text: Space+Dot1+Dot4+Dot5+Dot7
 set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
-freeze/unfreeze screen image: Space+Dot1+Dot2+Dot4
+set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
+set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
 enter/leave help display: Space+Dot1+Dot2+Dot5
 set skipping of lines with identical content on/off: Space+Dot2+Dot4
 set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
@@ -54,6 +81,9 @@ switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
 set sliding window on/off: Space+Dot2+Dot4+Dot5+Dot6
 set sliding window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
 set sliding window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
+insert clipboard text at cursor: Space+Dot1+Dot3+Dot4+Dot6
+restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
+save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
 set text style 6-dot: Space+Dot2+Dot3+Dot5
 set text style 8-dot: Space+Dot2+Dot3+Dot6
 backspace key: Space+Dot7
@@ -70,6 +100,13 @@ tab key: Space+Dot2+Dot3+Dot5+Dot6
 insert key: Space+Dot3+Dot5
 delete key: Space+Dot2+Dot5+Dot6
 escape key: Space+Dot2+Dot6
+backspace key: Dot7
+enter key: Dot8
+page-up key: Space+Dot1+Dot2+Dot6
+page-down key: Space+Dot3+Dot4+Dot5
+home key: Space+Dot1+Dot3
+end key: Space+Dot4+Dot6
+tab key: Space+Dot4+Dot5
 braille keyboard dot1: Dot1
 braille keyboard dot2: Dot2
 braille keyboard dot3: Dot3

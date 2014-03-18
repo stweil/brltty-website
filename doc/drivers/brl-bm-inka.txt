@@ -41,7 +41,7 @@ bring cursor to line: Display1+Display3+Display4+Display6
 enter/leave status display: Display2+Display5
 set display mode attributes/text: Display1+Display4+Display5
 show the current date and time: Display1+Display5
-freeze/unfreeze screen image: Display1+Display2+Display4
+set screen image frozen/unfrozen: Display1+Display2+Display4
 enter/leave help display: Display1+Display2+Display5
 enter/leave preferences menu: Display1+Display3+Display4
 insert clipboard text at cursor: Display1+Display2+Display3+Display4

@@ -22,7 +22,7 @@ go left one window: L5+XtE0.76
 go right one window: L5+XtE0.78
 go up one line: L5+XtE0.73
 go down one line: L5+XtE0.81
-freeze/unfreeze screen image: L1+L2+L8
+set screen image frozen/unfrozen: L1+L2+L8
 enter/leave help display: L1+L2+L7
 enter/leave status display: L2+L8
 enter/leave command learn mode: L1+L2+L3

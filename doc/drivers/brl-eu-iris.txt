@@ -74,7 +74,7 @@ cursor-right key: Right
 cursor-up key: Up
 cursor-down key: Down
 go to beginning of top line: L1+L2
-freeze/unfreeze screen image: L3+L4
+set screen image frozen/unfrozen: L3+L4
 go to cursor: L6+L7
 go to beginning of bottom line: L7+L8
 restart braille driver: L1+L2+L3+L4

@@ -44,9 +44,9 @@
         <tt><htmlurl url="mailto:texou@accelibreinfo.eu" name="&lt;texou@accelibreinfo.eu&gt;"></tt>
       pour
         <tt><htmlurl url="http://www.traduc.org/" name="Traduc.org"></tt>
-  <date>Version 4.5, avr 2013
+  <date>Version 5.0, jan 2014
   <abstract>
-    Copyright &copy; 1995-2013 by Les Développeurs de BRLTTY.
+    Copyright &copy; 1995-2014 by Les Développeurs de BRLTTY.
     BRLTTY est un logiciel libre, et n'est fourni avec AUCUNE
     GARANTIE. Il est placé sous les termes de la version 2 ou
     ultérieure de la <bf>GNU General Public License</bf> publiée par
@@ -103,7 +103,7 @@ participé à ce document et au logiciel:
   <item>
     Nicolas Pitre
     <descrip>
-      <tag/Web/<htmlurl url="http://www.cam.org/~nico/" name="http://www.cam.org/~nico/">
+      <tag/Web/<htmlurl url="http://www.fluxnic.net/" name="http://www.fluxnic.net/">
       <tag/E-Mail/<htmlurl url="mailto:nico@fluxnic.net" name="&lt;nico@fluxnic.net&gt;">
     </descrip>
   <item>

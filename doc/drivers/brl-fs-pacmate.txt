@@ -10,7 +10,7 @@ set cursor visibility on/off: RightGdf+Hot3
 set text style 6-dot/8-dot: Hot4
 set autorepeat on/off: RightGdf+Hot4
 enter/leave help display: Hot5
-freeze/unfreeze screen image: RightGdf+Hot5
+set screen image frozen/unfrozen: RightGdf+Hot5
 enter/leave command learn mode: Hot6
 restore preferences from disk: RightGdf+Hot6
 enter/leave preferences menu: Hot7

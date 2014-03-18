@@ -70,48 +70,48 @@ append to clipboard from character: Dot3+RoutingKey1
 linear copy to character: Dot6+RoutingKey1
 rectangular copy to character: Dot8+RoutingKey1
 show the current date and time: Dot1+Dot2+Dot3+Dot7
-put random password into clipboard: Dot1+Dot2+Dot3+Dot7+RoutingKey1
 bring cursor to character: RoutingKey1
 enter/leave help display: Status1
 enter/leave command learn mode: Status2
 bring cursor to line: Status3
-go back after cursor tracking: Status4
-enter/leave status display: Status5
+enter/leave status display: Status4
+go back after cursor tracking: Status5
 set cursor tracking on/off: Status6
 set cursor tracking off: Dot7+Status6
 set cursor tracking on: Dot8+Status6
 set display mode attributes/text: Status7
 set display mode text: Dot7+Status7
 set display mode attributes: Dot8+Status7
-freeze/unfreeze screen image: Status8
-enter/leave preferences menu: Status9
-save preferences to disk: Status10
-restore preferences from disk: Status11
+set screen image frozen/unfrozen: Status8
+set screen image unfrozen: Dot7+Status8
+set screen image frozen: Dot8+Status8
+restore preferences from disk: Status9
+enter/leave preferences menu: Status10
+save preferences to disk: Status11
 set cursor visibility on/off: Status12
 set cursor visibility off: Dot7+Status12
 set cursor visibility on: Dot8+Status12
 set attribute underlining on/off: Status13
 set attribute underlining off: Dot7+Status13
 set attribute underlining on: Dot8+Status13
-set capital letter blinking on/off: Status14
-set capital letter blinking off: Dot7+Status14
-set capital letter blinking on: Dot8+Status14
+set skipping of lines with identical content on/off: Status14
+set skipping of lines with identical content off: Dot7+Status14
+set skipping of lines with identical content on: Dot8+Status14
 set text style 6-dot/8-dot: Status15
 set text style 8-dot: Dot7+Status15
 set text style 6-dot: Dot8+Status15
-set skipping of lines with identical content on/off: Status16
-set skipping of lines with identical content off: Dot7+Status16
-set skipping of lines with identical content on: Dot8+Status16
-set alert tunes on/off: Status17
-set alert tunes off: Dot7+Status17
-set alert tunes on: Dot8+Status17
-restart braille driver: Status18
-set autospeak on/off: Status20
-set autospeak off: Dot7+Status20
-set autospeak on: Dot8+Status20
-set autorepeat on/off: Status21
-set autorepeat off: Dot7+Status21
-set autorepeat on: Dot8+Status21
+restart braille driver: Status16
+restart speech driver: Status17
+set autospeak on/off: Status18
+set autospeak off: Dot7+Status18
+set autospeak on: Dot8+Status18
+set autorepeat on/off: Status19
+set autorepeat off: Dot7+Status19
+set autorepeat on: Dot8+Status19
+set braille input mode dots/text: Status20
+set braille input mode text: Dot7+Status20
+set braille input mode dots: Dot8+Status20
+show the current date and time: Status21
 insert clipboard text at cursor: Status22
 switch to Default Bindings: Dot2+Dot3+Shift
 switch to Chorded Commands Mode: Dot2+Dot3+Home
@@ -141,7 +141,9 @@ set cursor visibility on: Dot1+Dot4+Dot8
 set display mode attributes/text: Dot1+Dot4+Dot5
 set display mode text: Dot1+Dot4+Dot5+Dot7
 set display mode attributes: Dot1+Dot4+Dot5+Dot8
-freeze/unfreeze screen image: Dot1+Dot2+Dot4
+set screen image frozen/unfrozen: Dot1+Dot2+Dot4
+set screen image unfrozen: Dot1+Dot2+Dot4+Dot7
+set screen image frozen: Dot1+Dot2+Dot4+Dot8
 enter/leave help display: Dot1+Dot2+Dot5
 set skipping of lines with identical content on/off: Dot2+Dot4
 set skipping of lines with identical content off: Dot2+Dot4+Dot7
@@ -166,6 +168,9 @@ switch to next virtual terminal: Dot1+Dot2+Dot3+Dot6+Dot8
 set sliding window on/off: Dot2+Dot4+Dot5+Dot6
 set sliding window off: Dot2+Dot4+Dot5+Dot6+Dot7
 set sliding window on: Dot2+Dot4+Dot5+Dot6+Dot8
+insert clipboard text at cursor: Dot1+Dot3+Dot4+Dot6
+restore clipboard from disk: Dot1+Dot3+Dot4+Dot6+Dot7
+save clipboard to disk: Dot1+Dot3+Dot4+Dot6+Dot8
 set text style 6-dot: Dot2+Dot3+Dot5
 set text style 8-dot: Dot2+Dot3+Dot6
 backspace key: Dot7

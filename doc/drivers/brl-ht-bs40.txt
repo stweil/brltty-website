@@ -39,7 +39,7 @@ enter/leave help display: B8
 set cursor tracking on/off: B8+B1
 set cursor visibility on/off: B8+B2
 set attribute underlining on/off: B8+B3
-freeze/unfreeze screen image: B8+B6
+set screen image frozen/unfrozen: B8+B6
 set alert tunes on/off: B8+B7
 set text style 6-dot/8-dot: B7
 enter/leave preferences menu: B7+B1
@@ -59,7 +59,6 @@ rectangular copy to character: B5+RoutingKey
 linear copy to character: B6+RoutingKey
 remember current window position: B7+RoutingKey
 go to remembered window position: B8+RoutingKey
-put random password into clipboard: B1+B2+RoutingKey
 cursor-up key: LeftRockerTop
 cursor-down key: LeftRockerBottom
 go up one line: RightRockerTop
