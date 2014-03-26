@@ -14,7 +14,7 @@
   Jean-Philippe Mengual <texou@accelibreinfo.eu> pour
   Traduc.org
 
-  Version 5.0, jan 2014
+  Version 5.1, mar 2014
 
   Copyright © 1995-2014 by Les Développeurs de BRLTTY.  BRLTTY est un
   logiciel libre, et n'est fourni avec AUCUNE GARANTIE. Il est placé

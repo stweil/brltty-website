@@ -1,6 +1,6 @@
 <?php
-   $brltty_current = '5.0';
-   $brlapi_current = '0.6.1';
+   $brltty_current = '5.1';
+   $brlapi_current = '0.6.2';
 
    global $brltty_files;
    put_versions('BRLTTY', $brltty_files, $brltty_current);
