@@ -4,7 +4,7 @@ you may be better off using our latest development version,
 rather than the latest production release,
 for that platform.
 <DL>
-<DT><A HREF="brltty-latest.apk">brltty-latest.apk</A><DD>
+<DT><A HREF="archive/Android/brltty-latest.apk">brltty-latest.apk</A><DD>
 The latest application package.
 <DT><A HREF="doc/Android.txt">Android.txt</A><DD>
 The latest documentation.
@@ -29,7 +29,7 @@ So far, we have translations for the following languages:
 If you'd like to help us then this is what you need to do:
 <OL>
 <LI>Download this file:
-<A HREF="android-strings.txt">android-strings.txt</A>
+<A HREF="archive/Android/android-strings.txt">android-strings.txt</A>
 <LI>Use an editor to translate the English text into your language.
 The first word on each line is an internal identifier which you should not modify.
 The rest of the line is the English phrase associated with that identifier.
