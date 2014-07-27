@@ -1,13 +1,8 @@
-Since support for the Android platform is new
-and still under-going major development,
-you may be better off using our latest development version,
-rather than the latest production release,
-for that platform.
 <DL>
 <DT><A HREF="archive/Android/brltty-latest.apk">brltty-latest.apk</A><DD>
-The latest application package.
+The latest version of BRLTTY for Android.
 <DT><A HREF="doc/Android.txt">Android.txt</A><DD>
-The latest documentation.
+The latest documentation for BRLTTY on Android.
 </DL>
 <P>
 We're interested in translating the text on BRLTTY's Android screens
