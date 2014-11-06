@@ -97,7 +97,7 @@ nl_BE</TD><TD>Dutch (Belgium)</TD></TR><TR><TD>
 nl_NL</TD><TD>Dutch (Netherlands)</TD></TR><TR><TD>
 no</TD><TD>Norwegian</TD></TR><TR><TD>
 no-generic</TD><TD>Norwegian (with support for other languages)</TD></TR><TR><TD>
-no-oub</TD><TD>Norwegian (Offentlig Utvalg for Blindeskrift)</TD></TR><TR><TD>
+no-oup</TD><TD>Norwegian (Offentlig utvalg for punktskrift)</TD></TR><TR><TD>
 nwc</TD><TD>Newari (old)</TD></TR><TR><TD>
 or</TD><TD>Oriya</TD></TR><TR><TD>
 pa</TD><TD>Panjabi</TD></TR><TR><TD>
@@ -892,10 +892,10 @@ where <EM>xx</EM> is the two-letter
 <A HREF="BRLTTY-10.html#drivers">driver identification code</A>.
 The rest of the name identifies the model(s)
 for which the key table is used.</P>
-<P>The names of keyboard key table files begin with <CODE>kbd-</CODE>.
+<P>The names of keyboard table files begin with <CODE>kbd-</CODE>.
 The rest of the name describes the kind of keyboard
-for which the key table has been designed.</P>
-<P>The following keyboard key tables are provided:
+for which the keyboard table has been designed.</P>
+<P>The following keyboard tables are provided:
 <DL>
 <DT><B>braille</B><DD>
 <P>bindings for braille keyboards</P>
@@ -910,10 +910,10 @@ for which the key table has been designed.</P>
 </DL>
 
 See the 
-<A HREF="BRLTTY-4.html#options-key-table">-k</A> command line option,
+<A HREF="BRLTTY-4.html#options-keyboard-table">-k</A> command line option,
 and the 
-<A HREF="BRLTTY-4.html#configure-key-table">key-table</A> configuration file directive
-for details regarding how to select a keyboard key table.</P>
+<A HREF="BRLTTY-4.html#configure-keyboard-table">keyboard-table</A> configuration file directive
+for details regarding how to select a keyboard table.</P>
 
 <H3>Key Table Directives</H3>
 
@@ -1067,13 +1067,11 @@ A context contains definitions created by the
 and
 <A HREF="#key-table-superimpose">superimpose</A>
 directives.</P>
-<P><CODE>context</CODE> <EM>identifier</EM> [<EM>title</EM>]
+<P><CODE>context</CODE> <EM>name</EM> [<EM>title</EM>]
 <DL>
-<DT><B><EM>identifier</EM></B><DD>
+<DT><B><EM>name</EM></B><DD>
 <P>Which context subsequent definitions are to be created within.
-It may be:
-<UL>
-<LI>One of these special names:
+These special contexts are predefined:
 <DL>
 <DT><B>default</B><DD>
 <P>The default context.
@@ -1085,13 +1083,6 @@ the
 <DT><B>menu</B><DD>
 <P>This context is used when within BRLTTY's preferences menu.</P>
 </DL>
-</LI>
-<LI>An integer within the range <CODE>0</CODE> through <CODE>252</CODE>.
-Context <CODE>0</CODE> is an alternate way to refer to the default context.
-Higher context numbers should be avoided because
-the highest allowable number is subject to change without notice
-if, for example, more named contexts are added.</LI>
-</UL>
 </P>
 <DT><B><EM>title</EM></B><DD>
 <P>A person-readable description of the context.
@@ -1100,8 +1091,7 @@ and standard capitalization conventions should be used.
 This operand is optional.
 If supplied when selecting a context which already has a title
 then the two must match.
-Named contexts already have internally-assigned titles.
-Numeric contexts are initially created without titles.</P>
+Special contexts already have internally-assigned titles.</P>
 </DL>
 </P>
 <P>A context is created the first time it's selected.
@@ -1117,22 +1107,19 @@ is the context which was selected when it was included.
 Context changes within included key subtables
 don't affect the context of the including key table or subtable.</P>
 <P>If a context has a title
-(all named contexts
-and those numeric contexts for which the <EM>title</EM> operand has been supplied)
 then it is persistent.
 When a key event causes a persistent context to be activated,
 that context remains current until a subsequent key event
 causes a different persistent context to be activated.</P>
 <P>If a context doesn't have a title
-(those numeric contexts for which the <EM>title</EM> operand hasn't been supplied)
 then it is temporary.
 When a key event causes a temporary context to be activated,
 that context is only used to interpret the very next key event.</P>
 <P>Examples:
 <UL>
 <LI><CODE>context menu</CODE></LI>
-<LI><CODE>context 1 Braille Input</CODE></LI>
-<LI><CODE>context 2</CODE></LI>
+<LI><CODE>context braille Braille Input</CODE></LI>
+<LI><CODE>context DESCCHAR</CODE></LI>
 </UL>
 </P>
 

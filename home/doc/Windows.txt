@@ -153,18 +153,9 @@ For MinGW:
        + ln -s "/path/to/Libusb-1.0/MinGW32/dll/libusb-1.0.dll.a" /mingw/lib/
        + ln -s "/path/to/Libusb-1.0/MinGW32/dll/libusb-1.0.dll" /mingw/bin/
 
-    2) Create a /mingw/lib/pkgconfig/libusb-1.0.pc file containing
-
-prefix=/mingw
-exec_prefix=${prefix}
-libdir=${prefix}/lib
-includedir=${prefix}/include
-
-Name: libusb-1.0
-Description: C API for USB device access from Windows userspace
-Version: 1.0
-Libs: -L${libdir} -lusb-1.0
-Cflags: -I${includedir}/libusb-1.0
+    2) Copy the file libusb-1.0.pc in the Windows/ subdirectory of BRLTTY's
+       source tree into MinGW's /mingw/lib/pkgconfig/ directory. If the
+       pkgconfig/ subdirectory doesn't already exist then create it.
 
     Then you can configure, compile, install, and run BRLTTY as usual.
 
@@ -365,3 +356,118 @@ going to Windows.
 ------------------------------------------------------------------------------
 
 
+Building the Installer and the Archive
+======================================
+
+The mkwin script, which can be found in the Windows/ subdirectory of BRLTTY's 
+source tree, builds the installer and the archive for BRLTTY. It assumes that
+the following software components have already been installed:
+
+- MinGW [32-bit] (from http://mingw.org/). The following MinGW packages should
+  be installed:
+  * mingw32-pdcurses
+  * mingw32-pthreads-w32
+  * msys-bison
+  * msys-dos2unix
+  * msys-groff
+  * msys-m4
+  * msys-zip
+- AutoHotkey (from http://www.autohotkey.com/). The mkwin script assumes that
+  it has been installed in C:\Program Files\AutoHotkey. The -A (AutoHotkey)
+  option can be used to specify another location.
+- NSIS (from http://nsis.sourceforge.net/). The mkwin script assumes that it
+  has been installed in C:\Program Files\NSIS. The -N (NSIS) option can be used
+  to specify another location.
+- Python (from www.python.org). The 32-bit variants are required. Version 2 or
+  3 may be used. If the python command is not in your command search path, or
+  if you would like to use a different version of Python, then use the -P
+  (Python) option to specify the top-level directory of the desired Python
+  version.
+- Cython (from http://cython.org/). A corresponding version of Cython must be
+  installed for each version of Python. Each Cython version is installed within
+  the corresponding Python version's hierarchy.
+- LibUSB-Win32 (from http://libusb-win32.sourceforge.net/). The mkwin script
+  assumes that it has been installed in C:\LibUSB-Win32. The -U (LibUSB-Win32)
+  option can be used to specify another location.
+- LibUSB-1.0 (from http://www.libusb.org/wiki/windows_backend). The mkwin
+  script assumes that it has been installed in C:\LibUSB-1.0. The -X (libusbx)
+  option can be used to specify another location.
+- WinUSB (from http://www.libusb.org/wiki/windows_backend). The mkwin script
+  assumes that it has been installed in C:\WinUSB. The -W (WinUSB) option can
+  be used to specify another location.
+- ICU (from http://icu-project.org/). The mkwin script assumes that it has been
+  installed in C:\ICU. The -I (ICU) option can be used to specify another
+  location. The archive's only top-level directory is named icu, so unpack it
+  when in MinGW's /c directory. Since Windows file systems are not case
+  sensitive, renaming it from icu to ICU is optional.
+- pkg-config (from http://gtk.org/download/win32.php). Its archive should be
+  unpacked when in MinGW's /mingw directory.
+- Glib (from http://gtk.org/download/win32.php). Its archive should be unpacked
+  when in MinGW's /mingw directory.
+- gettext-runtime (from http://gtk.org/download/win32.php). Its archive should
+  be unpacked when in MinGW's /mingw directory. Only install it if your MinGW
+  installation does not already have it. Check for the presence of a libintl
+  DLL in MinGW's /mingw/bin directory.
+
+The mkwin script uses the lib command, which belongs to MSVC (Microsoft Visual 
+C++). On newer Windows systems, MSVC has become a component of Microsoft Visual 
+Studio. If you do not have it then you will need to get the following files 
+from someone who does:
+- lib.exe
+- link.exe
+- mspdb100.dll
+- msvcr100.dll
+All of these files should be placed in the same directory. Either add this
+directory to your command search path or use the -M (MSVC) option to specify
+its location.
+
+Use the -u (USB) option to specify which USB package is to be used. The
+following packages are supported:
+- libusb (for LibUSB-Win32). This is the default.
+- libusb-1.0 (for LibUSB-1.0 + WinUSB).
+
+The mkwin script requires two parameters:
+1) The path to the top-level directory of BRLTTY's source tree. It may be
+   either relative or absolute.
+2) The build revision. It may be any character sequence which does not include
+   white space. It is appended, with a prepended dash (-), to BRLTTY's version
+   number in order to construct the build version.
+
+The build name is used as:
+- the file name of the installer (which has the extension .exe)
+- the file name of the archive (which has the extension .zip)
+- the name of the top-level directory within the archive
+It has the following form:
+
+   brltty-win-buildVersion-usbPackage
+
+For example: If your current working directory is the Windows/ subdirectory of 
+BRLTTY's source tree, if the current BRLTTY version is 5.2, and remembering
+that the default USB package is libusb, then invoking the following command:
+
+   ./mkwin .. 4
+
+will create these files within the current working directory:
+- brltty-win-5.2-4-libusb.exe (the installer)
+- brltty-win-5.2-4-libusb.zip (the archive)
+
+Use the -s (shell) option if you would like an interactive shell to be invoked
+just before the archive is created so that you can have a look at and/or modify
+what it will contain. If the SHELL environment variable is set then that shell
+is used. If not, /bin/sh is assumed.
+
+Use the -v (verbose) option to increase output verbosity, and/or the -q (quiet)
+option to decrease output verbosity. These two options are complementary, and
+both are cumulative - each may be specified any number of times.
+
+Use the -t (temporary) option to explicitly specify the temporary directory 
+which is to be used for the build. It must not already exist. If you do not 
+specify it then an internally generated path is used.
+
+Use the -k (keep) option to prevent the temporary directory from being removed 
+at the end of a successful build.
+
+Use the -h (help) option to view a brief command line usage summary.
+
+
+------------------------------------------------------------------------------

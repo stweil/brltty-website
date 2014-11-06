@@ -792,9 +792,9 @@ This directive can be overridden with the
 <A HREF="#options-contraction-table">-c</A> command line option.
 It isn't available if the
 <A HREF="BRLTTY-3.html#build-contracted-braille">--disable-contracted-braille</A> build option was specified.</P>
-<DT><B><CODE>key-table</CODE> <EM>file</EM>|<CODE>auto</CODE>
-<A NAME="configure-key-table"></A> </B><DD>
-<P>Specify the key table
+<DT><B><CODE>keyboard-table</CODE> <EM>file</EM>|<CODE>auto</CODE>
+<A NAME="configure-keyboard-table"></A> </B><DD>
+<P>Specify the keyboard table
 (see section 
 <A HREF="BRLTTY-6.html#table-key">Key Tables</A> for details).
 If a relative path is supplied, then it's anchored at <CODE>/etc/brltty</CODE>
@@ -804,9 +804,9 @@ and the
 <A HREF="BRLTTY-3.html#build-execute-root">--with-execute-root</A>
 build options for more details).
 The <CODE>.ktb</CODE> extension is optional.
-The default is not to use a key table.
+The default is not to use a keyboard table.
 This directive can be overridden with the
-<A HREF="#options-key-table">-k</A> command line option.</P>
+<A HREF="#options-keyboard-table">-k</A> command line option.</P>
 <DT><B><CODE>keyboard-properties</CODE> <EM>name</EM><CODE>=</CODE><EM>value</EM><CODE>,</CODE>...
 <A NAME="configure-keyboard-properties"></A> </B><DD>
 <P>Specify the properties of the keyboard(s) to be monitored.
@@ -1032,9 +1032,9 @@ See the
 configuration file directive for the default run-time setting.
 This option isn't available if the
 <A HREF="BRLTTY-3.html#build-speech-support">--disable-speech-support</A> build option was specified.</P>
-<DT><B><CODE>-k</CODE><EM>file</EM> <CODE>--key-table=</CODE><EM>file</EM>
-<A NAME="options-key-table"></A> </B><DD>
-<P>Specify the key table
+<DT><B><CODE>-k</CODE><EM>file</EM> <CODE>--keyboard-table=</CODE><EM>file</EM>
+<A NAME="options-keyboard-table"></A> </B><DD>
+<P>Specify the keyboard table
 (see section 
 <A HREF="BRLTTY-6.html#table-key">Key Tables</A> for details).
 If a relative path is supplied, then it's anchored at <CODE>/etc/brltty</CODE>
@@ -1045,10 +1045,10 @@ and the
 build options for more details).
 The <CODE>.ktb</CODE> extension is optional.
 See the 
-<A HREF="#configure-key-table">key-table</A>
+<A HREF="#configure-keyboard-table">keyboard-table</A>
 configureation file directive for the default run-time setting.
 This setting can be changed with the
-<A HREF="BRLTTY-5.html#preference-key-table">Key Table</A> preference.</P>
+<A HREF="BRLTTY-5.html#preference-keyboard-table">Keyboard Table</A> preference.</P>
 <DT><B><CODE>-l</CODE><EM>level</EM> <CODE>--log-level=</CODE><EM>level</EM>
 <A NAME="options-log-level"></A> </B><DD>
 <P>Specify the severity threshold for diagnostic message generation.
@@ -1252,10 +1252,10 @@ The following environment variables are supported:
 <P>The contraction table
 (see the 
 <A HREF="#options-contraction-table">-c</A> command line option).</P>
-<DT><B><CODE>BRLTTY_KEY_TABLE</CODE></B><DD>
-<P>The key table
+<DT><B><CODE>BRLTTY_KEYBOARD_TABLE</CODE></B><DD>
+<P>The keyboard table
 (see the 
-<A HREF="#options-key-table">-k</A> command line option).</P>
+<A HREF="#options-keyboard-table">-k</A> command line option).</P>
 <DT><B><CODE>BRLTTY_KEYBOARD_PROPERTIES</CODE></B><DD>
 <P>The keyboard properties
 (see the 

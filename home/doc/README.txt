@@ -2,7 +2,7 @@ BRLTTY is a background process (daemon) providing access to the Linux/Unix
 console (when in text mode) for a blind person using a refreshable braille
 display.
 
-Version 5.1, Mar 2014
+Version 5.2, Nov 2014
 
 Copyright (C) 1995-2014 by The BRLTTY Developers.
 
@@ -185,7 +185,7 @@ The following braille displays are supported:
          EcoVario, VarioConnect/BrailleConnect, Refreshabraille]
 -  BrailComm [III]
 -  BrailleLite [18/40/M20/M40]
--  BrailleMemo [Pocket (16), 32, 40]
+-  BrailleMemo [Pocket (16), Smart (16), 32, 40]
 -  BrailleNote [18/32]
 -  BrlAPI
 -  B2G [20]
@@ -195,9 +195,12 @@ The following braille displays are supported:
 -  EuroBraille [AzerBraille, Clio, Esys, Iris, NoteBraille, Scriba]
 -  FreedomScientific [Focus 1 44/70/84, Focus 2 40/80, Focus Blue 14/40,
                       PAC Mate 20/40]
--  HandyTech [Modular 20/40/80, Modular Evolution 64/88, Active Braille,
+-  HandyTech [Modular 20/40/80, Modular Evolution 64/88, Modular Connect 88,
+              Active Braille, Active Star 40,
               Basic Braille 16/20/32/40/48/64/80, Braillino,
-              Braille Wave, Easy Braille, Braille Star 40/80, Bookworm]
+              Braille Wave, Easy Braille, Braille Star 40/80,
+              Connect Braille 40, Bookworm]
+-  Hedo [ProfiLine, MobilLine]
 -  HIMS [Braille Sense, SyncBraille, Braille Edge]
 -  HumanWare [Brailliant 32/40/80 bi]
 -  Iris
@@ -211,7 +214,7 @@ The following braille displays are supported:
 -  Papenmeier [Compact 486, Compact/Tiny, IB 80 CR Soft, 2D Lite (plus),
                2D Screen Soft, EL 80, EL 2D 40/66/80, EL 40/66/70/80 S,
                EL 40/60/80 C, EL 2D 80 S, EL 40 P, EL 80 II, Elba 20/32,
-               Trio 40/Elba20/Elba32]
+               Trio 40/Elba20/Elba32, Live 20/40]
 -  Pegasus [20/27/40/80]
 -  Seika [3/4/5 (40), 80, Mini (16)]
 -  TSI [Navigator 20/40/80, PowerBraille 40/65/80]

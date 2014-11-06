@@ -1,0 +1,118 @@
+Key Table: HandyTech Active Star 40
+
+Default Bindings
+bring cursor to character: RoutingKey
+copy characters to clipboard: RoutingKey+RoutingKey
+go up to nearest line with less indent than character: SpaceLeft+RoutingKey
+go down to nearest line with less indent than character: SpaceRight+RoutingKey
+go left one window: SpaceLeft
+go right one window: SpaceRight
+insert clipboard text at cursor: SpaceLeft+SpaceRight
+go to beginning of line: B1+SpaceLeft
+go to end of line: B1+SpaceRight
+go to top line: B2+SpaceLeft
+go to bottom line: B2+SpaceRight
+go left half a window: B3+SpaceLeft
+go right half a window: B3+SpaceRight
+go left one character: B6+SpaceLeft
+go right one character: B6+SpaceRight
+stop speaking: B2+B3+SpaceLeft
+speak current line: B2+B3+SpaceRight
+go to cursor: B1
+go to beginning of top line: B2
+go back after cursor tracking: B3
+go up one line: B4
+go down one line: B5
+go up to last line of previous paragraph: B1+B4
+go down to first line of next paragraph: B1+B5
+go up to previous command prompt: B2+B4
+go down to next command prompt: B2+B5
+search backward for clipboard text: B3+B4
+search forward for clipboard text: B3+B5
+go up to nearest line with different highlighting: B6+B4
+go down to nearest line with different highlighting: B6+B5
+go up several lines: B7+B4
+go down several lines: B7+B5
+go up to nearest line with different content: B8+B4
+go down to nearest line with different content: B8+B5
+enter/leave help display: B8
+set cursor tracking on/off: B8+B1
+set cursor visibility on/off: B8+B2
+set attribute underlining on/off: B8+B3
+set screen image frozen/unfrozen: B8+B6
+set alert tunes on/off: B8+B7
+set text style 6-dot/8-dot: B7
+enter/leave preferences menu: B7+B1
+restore preferences from disk: B7+B2
+save preferences to disk: B7+B3
+enter/leave status display: B7+B6
+set display mode attributes/text: B6
+set skipping of lines with identical content on/off: B6+B1
+set skipping of blank windows on/off: B6+B2
+set sliding window on/off: B6+B3
+show the current date and time: B2+B3+B5+B6
+place left end of window at character: B1+RoutingKey
+describe character: B2+RoutingKey
+append to clipboard from character: B3+RoutingKey
+start new clipboard at character: B4+RoutingKey
+rectangular copy to character: B5+RoutingKey
+linear copy to character: B6+RoutingKey
+remember current window position: B7+RoutingKey
+go to remembered window position: B8+RoutingKey
+cursor-up key: LeftRockerTop
+cursor-down key: LeftRockerBottom
+go up one line: RightRockerTop
+go down one line: RightRockerBottom
+go left one window: LeftRockerTop+LeftRockerBottom
+go right one window: RightRockerTop+RightRockerBottom
+go to cursor: LeftRockerTop+LeftRockerBottom+RightRockerTop+RightRockerBottom
+go to cursor: LeftRockerTop+LeftRockerBottom+B3
+go to cursor: RightRockerTop+RightRockerBottom+B6
+go to beginning of top line: RightRockerTop+RightRockerBottom+LeftRockerTop
+go to beginning of top line: RightRockerTop+RightRockerBottom+B5
+go to beginning of top line: LeftRockerTop+B3
+go to beginning of bottom line: RightRockerTop+RightRockerBottom+LeftRockerBottom
+go to beginning of bottom line: RightRockerTop+RightRockerBottom+B7
+go to beginning of bottom line: LeftRockerBottom+B3
+go to top line: LeftRockerTop+LeftRockerBottom+RightRockerTop
+go to top line: LeftRockerTop+LeftRockerBottom+B4
+go to top line: RightRockerTop+B6
+go to bottom line: LeftRockerTop+LeftRockerBottom+RightRockerBottom
+go to bottom line: LeftRockerTop+LeftRockerBottom+B2
+go to bottom line: RightRockerBottom+B6
+go up to nearest line with different content: LeftRockerTop+RightRockerTop
+go up to nearest line with different content: LeftRockerTop+B4
+go up to nearest line with different content: RightRockerTop+B5
+go down to nearest line with different content: LeftRockerTop+RightRockerBottom
+go down to nearest line with different content: LeftRockerTop+B2
+go down to nearest line with different content: RightRockerBottom+B5
+go up to nearest line with different highlighting: LeftRockerBottom+RightRockerTop
+go up to nearest line with different highlighting: LeftRockerBottom+B4
+go up to nearest line with different highlighting: RightRockerTop+B7
+go down to nearest line with different highlighting: LeftRockerBottom+RightRockerBottom
+go down to nearest line with different highlighting: LeftRockerBottom+B2
+go down to nearest line with different highlighting: RightRockerBottom+B7
+start new clipboard at character: LeftRockerTop+RoutingKey
+function key: LeftRockerTop+LeftRockerBottom+RoutingKey
+append to clipboard from character: LeftRockerBottom+RoutingKey
+linear copy to character: RightRockerTop+RoutingKey
+switch to virtual terminal: RightRockerTop+RightRockerBottom+RoutingKey
+rectangular copy to character: RightRockerBottom+RoutingKey
+switch to Braille Input Mode: B1+B8+SpaceRight
+switch to Default Bindings: B1+B8+SpaceLeft
+
+Braille Input Mode
+type braille character [space]: SpaceLeft
+enter key: SpaceRight
+backspace key: SpaceLeft+B1
+switch to Default Bindings: B1+B8+SpaceLeft
+braille keyboard dot1: B4
+braille keyboard dot2: B3
+braille keyboard dot3: B2
+braille keyboard dot4: B5
+braille keyboard dot5: B6
+braille keyboard dot6: B7
+braille keyboard dot7: B1
+braille keyboard dot8: B8
+braille keyboard control: SpaceLeft
+braille keyboard meta: SpaceRight

@@ -1,0 +1,28 @@
+Key Table: Metec I with 6 keys and status cells
+
+Default Bindings
+go to top line: LeftUp
+go to bottom line: LeftDown
+go up one line: RightUp
+go down one line: RightDown
+go left one window: LeftSelect
+go right one window: RightSelect
+go back after cursor tracking: LeftSelect+LeftUp+LeftDown
+go to cursor: RightSelect+RightUp+RightDown
+bring cursor to character: RoutingKey
+start new clipboard at character: LeftUp+RoutingKey
+append characters to clipboard: LeftSelect+RoutingKey
+linear copy to character: RightUp+RoutingKey
+rectangular copy to character: RightSelect+RoutingKey
+place left end of window at character: LeftDown+RoutingKey
+describe character: RightDown+RoutingKey
+set text style 6-dot/8-dot: StatusKey.1
+
+Menu Bindings
+go to first item: LeftUp
+go to last item: LeftDown
+go to previous item: RightUp
+go to next item: RightDown
+select previous choice: LeftSelect
+select next choice: RightSelect
+enter/leave preferences menu: LeftSelect+LeftUp+LeftDown

@@ -56,6 +56,7 @@ switch to Default Bindings: B1+B8+Left
 Braille Input Mode
 type braille character [space]: Space
 enter key: Return
+backspace key: Space+B1
 switch to Default Bindings: B1+B8+Left
 braille keyboard dot1: B4
 braille keyboard dot2: B3

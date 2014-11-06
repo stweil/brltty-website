@@ -1,0 +1,69 @@
+Key Table: Hedo MobilLine
+
+The keys behind the text cells are named routing keys.
+The rectangular navigation keys are named K1 through K3.
+The square navigation keys are named B1 through B6.
+From left to right, the navigation keys are: B3 B2 B1 K1 K2 K3 B4 B5 B6
+
+Default Bindings
+enter/leave help display: K2+K1
+enter/leave command learn mode: K2+K3
+enter/leave preferences menu: K1+K3
+restore preferences from disk: K1+K3+B1
+save preferences to disk: K1+K3+B4
+go to cursor: K2
+go left one window: K1
+go right one window: K3
+go to top line: B3
+go to bottom line: B6
+go up one line: B2
+go down one line: B5
+go up to nearest line with different content: B1
+go down to nearest line with different content: B4
+go up to nearest line with different highlighting: B1+B3
+go down to nearest line with different highlighting: B4+B6
+go up to last line of previous paragraph: B1+B2
+go down to first line of next paragraph: B4+B5
+go up to previous command prompt: B2+B3
+go down to next command prompt: B5+B6
+search backward for clipboard text: B1+B2+B3
+search forward for clipboard text: B4+B5+B6
+go left one character: B1+K1
+go right one character: B1+K3
+go left to nearest non-blank window: B2+K1
+go right to nearest non-blank window: B2+K3
+go to beginning of line: B3+K1
+go to end of line: B3+K3
+insert clipboard text at cursor: B4+K1
+bring cursor to line: B4+K3
+show the current date and time: B5+K1
+enter/leave status display: B5+K3
+restore clipboard from disk: B6+K1
+save clipboard to disk: B6+K3
+set text style 6-dot/8-dot: B1+K2
+set text style 6-dot: B1+K2+K3
+set text style 8-dot: B1+K2+K1
+set cursor tracking on/off: B2+K2
+set cursor tracking on: B2+K2+K3
+set cursor tracking off: B2+K2+K1
+set display mode attributes/text: B3+K2
+set display mode attributes: B3+K2+K3
+set display mode text: B3+K2+K1
+set screen image frozen/unfrozen: B4+K2
+set screen image frozen: B4+K2+K3
+set screen image unfrozen: B4+K2+K1
+set cursor visibility on/off: B5+K2
+set cursor visibility on: B5+K2+K3
+set cursor visibility off: B5+K2+K1
+set attribute underlining on/off: B6+K2
+set attribute underlining on: B6+K2+K3
+set attribute underlining off: B6+K2+K1
+bring cursor to character: RoutingKey
+start new clipboard at character: B3+RoutingKey
+append to clipboard from character: B2+RoutingKey
+rectangular copy to character: B5+RoutingKey
+linear copy to character: B6+RoutingKey
+go up to nearest line with less indent than character: B1+RoutingKey
+go down to nearest line with less indent than character: B4+RoutingKey
+place left end of window at character: K1+RoutingKey
+describe character: K2+RoutingKey

@@ -24,6 +24,7 @@ BrailleLite
   |18/40/M20/M40@
 BrailleMemo
   |Pocket (16)@
+  |Smart (16)@
   |32@
   |40@
 BrailleNote
@@ -52,13 +53,19 @@ FreedomScientific
 HandyTech
   |Modular 20/40/80@
   |Modular Evolution 64/88@
+  |Modular Connect 88@
   |Active Braille@
+  |Active Star 40@
   |Basic Braille 16/20/32/40/48/64/80@
   |Braillino@
   |Braille Wave@
   |Easy Braille@
   |Braille Star 40/80@
+  |Connect Braille 40@
   |Bookworm@
+Hedo
+  |ProfiLine@
+  |MobilLine@
 HIMS
   |Braille Sense@
   |SyncBraille@
@@ -94,6 +101,7 @@ Papenmeier
   |EL 80 II@
   |Elba 20/32@
   |Trio 40/Elba20/Elba32@
+  |Live 20/40@
 Pegasus
   |20/27/40/80@
 Seika

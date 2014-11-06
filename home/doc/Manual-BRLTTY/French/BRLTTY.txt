@@ -14,7 +14,7 @@
   Jean-Philippe Mengual <texou@accelibreinfo.eu> pour
   Traduc.org
 
-  Version 5.1, mar 2014
+  Version 5.2, Nov 2014
 
   Copyright © 1995-2014 by Les Développeurs de BRLTTY.  BRLTTY est un
   logiciel libre, et n'est fourni avec AUCUNE GARANTIE. Il est placé
@@ -6162,12 +6162,17 @@
                               PAC Mate 20/40
           HandyTech           Modular 20/40/80
                               Modular Evolution 64/88
+                              Modular Connect 88
                               Active Braille
+                              Active Star 40
                               Braille Wave
                               Easy Braille
                               Braille Star 40/80
+                              Connect Braille 40
                               Bookworm
                               Braillino
+          Hedo                ProfiLine
+                              MobilLine
           HIMS                Braille Sense
                               SyncBraille
                               Braille Edge
@@ -6194,6 +6199,7 @@
                               EL 80 II
                               Elba 20/32
                               Trio 40/Elba20/Elba32
+                              Live 20/40
           Pegasus             20/27/40/80
           Seika               3/4/5 (40)
                               80
@@ -6252,6 +6258,7 @@
                     fs     FreedomScientific
                     fv     Festival
                     gs     GenericSay
+                    hd     Hedo
                     hm     HIMS
                     ht     HandyTech
                     hw     HumanWare

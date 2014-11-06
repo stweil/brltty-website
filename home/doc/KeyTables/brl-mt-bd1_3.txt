@@ -1,0 +1,28 @@
+Key Table: Metec I with 3 keys
+
+Default Bindings
+go up one line: Up
+go down one line: Down
+go right one window: Select
+go right one window: Up+Down
+go to top line: Select+Up
+go to bottom line: Select+Down
+go to cursor or go back after cursor tracking: Select+Up+Down
+bring cursor to character: RoutingKey
+enter/leave help display: Select+RoutingKey.1
+enter/leave command learn mode: Select+RoutingKey.2
+enter/leave preferences menu: Select+RoutingKey.3
+enter/leave status display: Select+RoutingKey.4
+start new clipboard at character: Up+RoutingKey
+append characters to clipboard: Up+Select+RoutingKey
+linear copy to character: Down+RoutingKey
+rectangular copy to character: Down+Select+RoutingKey
+
+Menu Bindings
+go to previous item: Up
+go to next item: Down
+go to first item: Select+Up
+go to last item: Select+Down
+select next choice: Select
+select previous choice: Up+Down
+enter/leave preferences menu: Select+Up+Down

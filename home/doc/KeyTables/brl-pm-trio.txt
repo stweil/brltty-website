@@ -54,6 +54,64 @@ restart speech driver: RightKeyFront+BarUp2
 set skipping of lines with identical content on/off: RightKeyFront+BarLeft1
 set skipping of blank windows on/off: RightKeyFront+BarRight1
 set sliding window on/off: RightKeyFront+BarRight2
+set skipping of blank windows on/off: Space+Dot1+Dot2
+set skipping of blank windows on: Space+Dot1+Dot2+Dot8
+set skipping of blank windows off: Space+Dot1+Dot2+Dot7
+set cursor visibility on/off: Space+Dot1+Dot4
+set cursor visibility on: Space+Dot1+Dot4+Dot8
+set cursor visibility off: Space+Dot1+Dot4+Dot7
+set display mode attributes/text: Space+Dot1+Dot4+Dot5
+set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
+set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
+set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
+set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+enter/leave help display: Space+Dot1+Dot2+Dot5
+set skipping of lines with identical content on/off: Space+Dot2+Dot4
+set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
+set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
+set braille keyboard enabled/disabled: Space+Dot1+Dot3
+set braille keyboard enabled: Space+Dot1+Dot3+Dot8
+set braille keyboard disabled: Space+Dot1+Dot3+Dot7
+enter/leave command learn mode: Space+Dot1+Dot2+Dot3
+enter/leave preferences menu: Space+Dot1+Dot2+Dot3+Dot4
+restore preferences from disk: Space+Dot1+Dot2+Dot3+Dot4+Dot7
+save preferences to disk: Space+Dot1+Dot2+Dot3+Dot4+Dot8
+set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
+set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
+set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
+enter/leave status display: Space+Dot2+Dot3+Dot4
+set cursor tracking on/off: Space+Dot2+Dot3+Dot4+Dot5
+set cursor tracking on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
+set cursor tracking off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
+set attribute underlining on/off: Space+Dot1+Dot3+Dot6
+set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
+set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
+bring cursor to line: Space+Dot1+Dot2+Dot3+Dot6
+switch to previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
+switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
+set sliding window on/off: Space+Dot2+Dot4+Dot5+Dot6
+set sliding window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
+set sliding window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
+insert clipboard text at cursor: Space+Dot1+Dot3+Dot4+Dot6
+restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
+save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
+set text style 6-dot: Space+Dot2+Dot3+Dot5
+set text style 8-dot: Space+Dot2+Dot3+Dot6
+backspace key: Space+Dot7
+enter key: Space+Dot8
+cursor-left key: Space+Dot3
+cursor-right key: Space+Dot6
+home key: Space+Dot2
+end key: Space+Dot5
+cursor-up key: Space+Dot1
+cursor-down key: Space+Dot4
+page-up key: Space+Dot2+Dot3
+page-down key: Space+Dot5+Dot6
+tab key: Space+Dot2+Dot3+Dot5+Dot6
+insert key: Space+Dot3+Dot5
+delete key: Space+Dot2+Dot5+Dot6
+escape key: Space+Dot2+Dot6
 braille keyboard dot1: Dot1
 braille keyboard dot2: Dot2
 braille keyboard dot3: Dot3
@@ -64,5 +122,5 @@ braille keyboard dot7: Dot7
 braille keyboard dot8: Dot8
 braille keyboard space: LeftSpace
 braille keyboard space: RightSpace
-braille keyboard uppercase: LeftThumb
-braille keyboard control: RightThumb
+braille keyboard control: LeftThumb
+braille keyboard meta: RightThumb

@@ -9,7 +9,7 @@
 
   Dave Mielke <dave@mielke.cc>
 
-  Version 5.1, Mar 2014
+  Version 5.2, Nov 2014
 
   Copyright © 1995-2014 by The BRLTTY Developers.  BRLTTY is free soft-
   ware, and comes with ABSOLUTELY NO WARRANTY.  It is placed under the
@@ -2638,14 +2638,14 @@
         available if the ``--disable-contracted-braille'' build option
         was specified.
 
-     key-table _f_i_l_e|auto
-        Specify the key table (see section ``Key Tables'' for details).
-        If a relative path is supplied, then it's anchored at
+     keyboard-table _f_i_l_e|auto
+        Specify the keyboard table (see section ``Key Tables'' for
+        details).  If a relative path is supplied, then it's anchored at
         /etc/brltty (see the ``--with-data-directory'' and the ``--with-
         execute-root'' build options for more details).  The .ktb
-        extension is optional.  The default is not to use a key table.
-        This directive can be overridden with the ``-k'' command line
-        option.
+        extension is optional.  The default is not to use a keyboard
+        table.  This directive can be overridden with the ``-k'' command
+        line option.
 
      keyboard-properties _n_a_m_e=_v_a_l_u_e,...
         Specify the properties of the keyboard(s) to be monitored.  If
@@ -2805,14 +2805,15 @@
         run-time setting.  This option isn't available if the
         ``--disable-speech-support'' build option was specified.
 
-     -k_f_i_l_e --key-table=_f_i_l_e
-        Specify the key table (see section ``Key Tables'' for details).
-        If a relative path is supplied, then it's anchored at
+     -k_f_i_l_e --keyboard-table=_f_i_l_e
+        Specify the keyboard table (see section ``Key Tables'' for
+        details).  If a relative path is supplied, then it's anchored at
         /etc/brltty (see the ``--with-data-directory'' and the ``--with-
         execute-root'' build options for more details).  The .ktb
-        extension is optional.  See the ``key-table'' configureation
-        file directive for the default run-time setting.  This setting
-        can be changed with the ``Key Table'' preference.
+        extension is optional.  See the ``keyboard-table''
+        configureation file directive for the default run-time setting.
+        This setting can be changed with the ``Keyboard Table''
+        preference.
 
      -l_l_e_v_e_l --log-level=_l_e_v_e_l
         Specify the severity threshold for diagnostic message
@@ -2967,8 +2968,8 @@
         BRLTTY_CONTRACTION_TABLE
            The contraction table (see the ``-c'' command line option).
 
-        BRLTTY_KEY_TABLE
-           The key table (see the ``-k'' command line option).
+        BRLTTY_KEYBOARD_TABLE
+           The keyboard table (see the ``-k'' command line option).
 
         BRLTTY_KEYBOARD_PROPERTIES
            The keyboard properties (see the ``-K'' command line option).
@@ -4013,10 +4014,10 @@
         Tables'' for details.  See the ``-c'' command line option for
         the initial setting.  This preference isn't saved.
 
-     KKeeyy TTaabbllee
-        Select the key table.  See section ``Key Tables'' for details.
-        See the ``-k'' command line option for the initial setting.
-        This preference isn't saved.
+     KKeeyybbooaarrdd TTaabbllee
+        Select the keyboard table.  See section ``Key Tables'' for
+        details.  See the ``-k'' command line option for the initial
+        setting.  This preference isn't saved.
 
   Notes:
 
@@ -4305,7 +4306,7 @@
     nl_NL        Dutch (Netherlands)
     no           Norwegian
     no-generic   Norwegian (with support for other languages)
-    no-oub       Norwegian (Offentlig Utvalg for Blindeskrift)
+    no-oup       Norwegian (Offentlig utvalg for punktskrift)
     nwc          Newari (old)
     or           Oriya
     pa           Panjabi
@@ -5054,11 +5055,11 @@
   where _x_x is the two-letter ``driver identification code''.  The rest
   of the name identifies the model(s) for which the key table is used.
 
-  The names of keyboard key table files begin with kbd-.  The rest of
-  the name describes the kind of keyboard for which the key table has
+  The names of keyboard table files begin with kbd-.  The rest of the
+  name describes the kind of keyboard for which the keyboard table has
   been designed.
 
-  The following keyboard key tables are provided:
+  The following keyboard tables are provided:
 
      bbrraaiillllee
         bindings for braille keyboards
@@ -5075,8 +5076,8 @@
      ssuunn__ttyyppee66
         bindings for Sun Type 6 keyboards
 
-  See the ``-k'' command line option, and the ``key-table'' configura-
-  tion file directive for details regarding how to select a keyboard key
+  See the ``-k'' command line option, and the ``keyboard-table'' config-
+  uration file directive for details regarding how to select a keyboard
   table.
 
   66..44..11..  KKeeyy TTaabbllee DDiirreeccttiivveess
@@ -5214,37 +5215,27 @@
   combinations.  A context contains definitions created by the ``bind'',
   ``hotkey'', ``map'', and ``superimpose'' directives.
 
-  context _i_d_e_n_t_i_f_i_e_r [_t_i_t_l_e]
+  context _n_a_m_e [_t_i_t_l_e]
 
-     _i_d_e_n_t_i_f_i_e_r
+     _n_a_m_e
         Which context subsequent definitions are to be created within.
-        It may be:
+        These special contexts are predefined:
 
-        ·  One of these special names:
+        ddeeffaauulltt
+           The default context.  If a key combination hasn't been
+           defined within the current context then its definition within
+           the default context is used.  This only applies to
+           definitions created by the ``bind'' directive.
 
-           ddeeffaauulltt
-              The default context.  If a key combination hasn't been
-              defined within the current context then its definition
-              within the default context is used.  This only applies to
-              definitions created by the ``bind'' directive.
-
-           mmeennuu
-              This context is used when within BRLTTY's preferences
-              menu.
-
-        ·  An integer within the range 0 through 252.  Context 0 is an
-           alternate way to refer to the default context.  Higher
-           context numbers should be avoided because the highest
-           allowable number is subject to change without notice if, for
-           example, more named contexts are added.
+        mmeennuu
+           This context is used when within BRLTTY's preferences menu.
 
      _t_i_t_l_e
         A person-readable description of the context.  It may contain
         spaces, and standard capitalization conventions should be used.
         This operand is optional.  If supplied when selecting a context
-        which already has a title then the two must match.  Named
-        contexts already have internally-assigned titles.  Numeric
-        contexts are initially created without titles.
+        which already has a title then the two must match.  Special
+        contexts already have internally-assigned titles.
 
   A context is created the first time it's selected.  It may be
   reselected any number of times thereafter.
@@ -5257,24 +5248,22 @@
   within included key subtables don't affect the context of the
   including key table or subtable.
 
-  If a context has a title (all named contexts and those numeric
-  contexts for which the _t_i_t_l_e operand has been supplied) then it is
-  persistent.  When a key event causes a persistent context to be
-  activated, that context remains current until a subsequent key event
-  causes a different persistent context to be activated.
+  If a context has a title then it is persistent.  When a key event
+  causes a persistent context to be activated, that context remains
+  current until a subsequent key event causes a different persistent
+  context to be activated.
 
-  If a context doesn't have a title (those numeric contexts for which
-  the _t_i_t_l_e operand hasn't been supplied) then it is temporary.  When a
-  key event causes a temporary context to be activated, that context is
-  only used to interpret the very next key event.
+  If a context doesn't have a title then it is temporary.  When a key
+  event causes a temporary context to be activated, that context is only
+  used to interpret the very next key event.
 
   Examples:
 
   ·  context menu
 
-  ·  context 1 Braille Input
+  ·  context braille Braille Input
 
-  ·  context 2
+  ·  context DESCCHAR
 
   66..44..11..44..  TThhee HHiiddee DDiirreeccttiivvee
 
@@ -5703,6 +5692,7 @@
           BrailComm           III
           BrailleLite         18/40/M20/M40
           BrailleMemo         Pocket (16)
+                              Smart (16)
                               32
                               40
           BrailleNote         18/32
@@ -5724,13 +5714,18 @@
                               PAC Mate 20/40
           HandyTech           Modular 20/40/80
                               Modular Evolution 64/88
+                              Modular Connect 88
                               Active Braille
+                              Active Star 40
                               Basic Braille 16/20/32/40/48/64/80
                               Braillino
                               Braille Wave
                               Easy Braille
                               Braille Star 40/80
+                              Connect Braille 40
                               Bookworm
+          Hedo                ProfiLine
+                              MobilLine
           HIMS                Braille Sense
                               SyncBraille
                               Braille Edge
@@ -5757,6 +5752,7 @@
                               EL 80 II
                               Elba 20/32
                               Trio 40/Elba20/Elba32
+                              Live 20/40
           Pegasus             20/27/40/80
           Seika               3/4/5 (40)
                               80
@@ -5817,6 +5813,7 @@
                     fs     FreedomScientific
                     fv     Festival
                     gs     GenericSay
+                    hd     Hedo
                     hm     HIMS
                     ht     HandyTech
                     hw     HumanWare

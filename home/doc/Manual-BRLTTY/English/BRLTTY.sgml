@@ -20,7 +20,7 @@
     <name>Stéphane Doyon <tt><htmlurl url="mailto:s.doyon@videotron.ca" name="&lt;s.doyon@videotron.ca&gt;"></tt>
   <and>
     <name>Dave Mielke <tt><htmlurl url="mailto:dave@mielke.cc" name="&lt;dave@mielke.cc&gt;"></tt>
-  <date>Version 5.1, Mar 2014
+  <date>Version 5.2, Nov 2014
   <abstract>
     Copyright &copy; 1995-2014 by The BRLTTY Developers.
     BRLTTY is free software,
@@ -2505,17 +2505,17 @@ The following directives are recognized:
     <ref id="options-contraction-table" name="-c"> command line option.
     It isn't available if the
     <ref id="build-contracted-braille" name="--disable-contracted-braille"> build option was specified.
-  <tag><tt/key-table/ <em/file/|<tt/auto/<label id="configure-key-table"></tag>
-    Specify the key table
+  <tag><tt/keyboard-table/ <em/file/|<tt/auto/<label id="configure-keyboard-table"></tag>
+    Specify the keyboard table
     (see section <ref id="table-key" name="Key Tables"> for details).
     If a relative path is supplied, then it's anchored at <tt>/etc/brltty</>
     (see the <ref id="build-data-directory" name="--with-data-directory">
     and the <ref id="build-execute-root" name="--with-execute-root">
     build options for more details).
     The <tt/.ktb/ extension is optional.
-    The default is not to use a key table.
+    The default is not to use a keyboard table.
     This directive can be overridden with the
-    <ref id="options-key-table" name="-k"> command line option.
+    <ref id="options-keyboard-table" name="-k"> command line option.
   <tag><tt/keyboard-properties/ <em/name/<tt/=/<em/value/<tt/,/...<label id="configure-keyboard-properties"></tag>
     Specify the properties of the keyboard(s) to be monitored.
     If the same property is specified more than once,
@@ -2686,18 +2686,18 @@ The <tt/brltty/ command accepts the following options:
     configuration file directive for the default run-time setting.
     This option isn't available if the
     <ref id="build-speech-support" name="--disable-speech-support"> build option was specified.
-  <tag><tt/-k/<em/file/ <tt/--key-table=/<em/file/<label id="options-key-table"></tag>
-    Specify the key table
+  <tag><tt/-k/<em/file/ <tt/--keyboard-table=/<em/file/<label id="options-keyboard-table"></tag>
+    Specify the keyboard table
     (see section <ref id="table-key" name="Key Tables"> for details).
     If a relative path is supplied, then it's anchored at <tt>/etc/brltty</>
     (see the <ref id="build-data-directory" name="--with-data-directory">
     and the <ref id="build-execute-root" name="--with-execute-root">
     build options for more details).
     The <tt/.ktb/ extension is optional.
-    See the <ref id="configure-key-table" name="key-table">
+    See the <ref id="configure-keyboard-table" name="keyboard-table">
     configureation file directive for the default run-time setting.
     This setting can be changed with the
-    <ref id="preference-key-table" name="Key Table"> preference.
+    <ref id="preference-keyboard-table" name="Keyboard Table"> preference.
   <tag><tt/-l/<em/level/ <tt/--log-level=/<em/level/<label id="options-log-level"></tag>
     Specify the severity threshold for diagnostic message generation.
     The following levels are recognized.
@@ -2846,9 +2846,9 @@ The <tt/brltty/ command accepts the following options:
       <tag><tt/BRLTTY_CONTRACTION_TABLE/</tag>
         The contraction table
         (see the <ref id="options-contraction-table" name="-c"> command line option).
-      <tag><tt/BRLTTY_KEY_TABLE/</tag>
-        The key table
-        (see the <ref id="options-key-table" name="-k"> command line option).
+      <tag><tt/BRLTTY_KEYBOARD_TABLE/</tag>
+        The keyboard table
+        (see the <ref id="options-keyboard-table" name="-k"> command line option).
       <tag><tt/BRLTTY_KEYBOARD_PROPERTIES/</tag>
         The keyboard properties
         (see the <ref id="options-keyboard-properties" name="-K"> command line option).
@@ -3891,10 +3891,10 @@ Notes:
     See section <ref id="table-contraction" name="Contraction Tables"> for details.
     See the <ref id="options-contraction-table" name="-c"> command line option for the initial setting.
     This preference isn't saved.
-  <tag>Key Table<label id="preference-key-table"></tag>
-    Select the key table.
+  <tag>Keyboard Table<label id="preference-keyboard-table"></tag>
+    Select the keyboard table.
     See section <ref id="table-key" name="Key Tables"> for details.
-    See the <ref id="options-key-table" name="-k"> command line option for the initial setting.
+    See the <ref id="options-keyboard-table" name="-k"> command line option for the initial setting.
     This preference isn't saved.
 </descrip>
 
@@ -4688,11 +4688,11 @@ where <em/xx/ is the two-letter
 The rest of the name identifies the model(s)
 for which the key table is used.
 
-The names of keyboard key table files begin with <tt/kbd-/.
+The names of keyboard table files begin with <tt/kbd-/.
 The rest of the name describes the kind of keyboard
-for which the key table has been designed.
+for which the keyboard table has been designed.
 
-The following keyboard key tables are provided:
+The following keyboard tables are provided:
 <descrip>
   <tag/braille/bindings for braille keyboards
   <tag/desktop/bindings for full keyboards
@@ -4700,9 +4700,9 @@ The following keyboard key tables are provided:
   <tag/laptop/bindings for keyboards without a keypad
   <tag/sun_type6/bindings for Sun Type 6 keyboards
 </descrip>
-See the <ref id="options-key-table" name="-k"> command line option,
-and the <ref id="configure-key-table" name="key-table"> configuration file directive
-for details regarding how to select a keyboard key table.
+See the <ref id="options-keyboard-table" name="-k"> command line option,
+and the <ref id="configure-keyboard-table" name="keyboard-table"> configuration file directive
+for details regarding how to select a keyboard table.
 
 <sect2>Key Table Directives<p>
 A key table consists of a sequence of directives, one per line,
@@ -4865,31 +4865,21 @@ and
 <ref id="key-table-superimpose" name="superimpose">
 directives.
 
-<tt/context/ <em/identifier/ [<em/title/]
+<tt/context/ <em/name/ [<em/title/]
 <descrip>
-  <tag><em/identifier/</tag>
+  <tag><em/name/</tag>
     Which context subsequent definitions are to be created within.
-    It may be:
-    <itemize>
-      <item>
-        One of these special names:
-        <descrip>
-          <tag/default/
-            The default context.
-            If a key combination hasn't been defined within the current context
-            then its definition within the default context is used.
-            This only applies to definitions created by
-            the <ref id="key-table-bind" name="bind"> directive.
-          <tag/menu/
-            This context is used when within BRLTTY's preferences menu.
-        </descrip>
-      <item>
-        An integer within the range <tt/0/ through <tt/252/.
-        Context <tt/0/ is an alternate way to refer to the default context.
-        Higher context numbers should be avoided because
-        the highest allowable number is subject to change without notice
-        if, for example, more named contexts are added.
-    </itemize>
+    These special contexts are predefined:
+    <descrip>
+      <tag/default/
+        The default context.
+        If a key combination hasn't been defined within the current context
+        then its definition within the default context is used.
+        This only applies to definitions created by
+        the <ref id="key-table-bind" name="bind"> directive.
+      <tag/menu/
+        This context is used when within BRLTTY's preferences menu.
+    </descrip>
   <tag><em/title/</tag>
     A person-readable description of the context.
     It may contain spaces,
@@ -4897,8 +4887,7 @@ directives.
     This operand is optional.
     If supplied when selecting a context which already has a title
     then the two must match.
-    Named contexts already have internally-assigned titles.
-    Numeric contexts are initially created without titles.
+    Special contexts already have internally-assigned titles.
 </descrip>
 
 A context is created the first time it's selected.
@@ -4915,15 +4904,12 @@ Context changes within included key subtables
 don't affect the context of the including key table or subtable.
 
 If a context has a title
-(all named contexts
-and those numeric contexts for which the <em/title/ operand has been supplied)
 then it is persistent.
 When a key event causes a persistent context to be activated,
 that context remains current until a subsequent key event
 causes a different persistent context to be activated.
 
 If a context doesn't have a title
-(those numeric contexts for which the <em/title/ operand hasn't been supplied)
 then it is temporary.
 When a key event causes a temporary context to be activated,
 that context is only used to interpret the very next key event.
@@ -4931,8 +4917,8 @@ that context is only used to interpret the very next key event.
 Examples:
 <itemize>
   <item><tt/context menu/
-  <item><tt/context 1 Braille Input/
-  <item><tt/context 2/
+  <item><tt/context braille Braille Input/
+  <item><tt/context DESCCHAR/
 </itemize>
 
 <sect3>The Hide Directive<label id="key-table-hide"><p>

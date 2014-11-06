@@ -1,0 +1,67 @@
+Key Table: Navigator 40
+
+The keys of the four-key pad on the left are named:
+CursorLeft, CursorRight, CursorUp, CursorDown.
+The keys of the four-key pad on the right are named:
+NavLeft, NavRight, NavUp, NavDown.
+The keys in between the pads are named: ThumbLeft, ThumbRight.
+
+Default Bindings
+go up one line: NavUp
+go down one line: NavDown
+go left one window: NavLeft
+go right one window: NavRight
+go to cursor: ThumbRight
+go back after cursor tracking: ThumbRight+CursorUp
+set cursor tracking on/off: ThumbLeft
+go to beginning of top line: NavLeft+NavUp
+go to beginning of bottom line: NavLeft+NavDown
+go up to nearest line with different content: ThumbRight+NavUp
+go down to nearest line with different content: ThumbRight+NavDown
+go up to nearest line with different highlighting: ThumbLeft+NavUp
+go down to nearest line with different highlighting: ThumbLeft+NavDown
+go left one character: ThumbLeft+CursorLeft
+go right one character: ThumbLeft+CursorRight
+go left half a window: CursorUp+CursorLeft
+go right half a window: CursorUp+CursorRight
+go up several lines: ThumbLeft+CursorUp
+go down several lines: ThumbLeft+CursorDown
+go to beginning of line: CursorUp+NavLeft
+go to end of line: CursorUp+NavRight
+cursor-left key: CursorLeft
+cursor-right key: CursorRight
+cursor-up key: CursorUp
+cursor-down key: CursorDown
+enter/leave help display: CursorLeft+CursorRight
+enter/leave command learn mode: CursorLeft+CursorRight+CursorUp+CursorDown
+set screen image frozen/unfrozen: ThumbLeft+ThumbRight
+enter/leave status display: CursorUp+NavDown
+set attribute underlining on/off: CursorDown+NavUp
+set display mode attributes/text: CursorDown+NavUp+ThumbLeft
+bring cursor to line: CursorDown+NavDown
+speak current line: NavRight+NavDown
+speak from current line through bottom of screen: NavLeft+NavRight+NavDown
+go to current speech position: ThumbRight+NavRight
+stop speaking: NavRight+NavUp
+restart speech driver: CursorUp+NavUp+NavLeft+NavRight
+speak current line: CursorRight+NavLeft
+stop speaking: CursorRight+CursorUp+NavLeft+NavUp
+enter/leave preferences menu: NavLeft+NavRight
+save preferences to disk: NavLeft+NavRight+ThumbRight
+restore preferences from disk: NavLeft+NavRight+ThumbLeft+ThumbRight
+set skipping of lines with identical content on/off: NavLeft+NavRight+NavDown+ThumbLeft
+set skipping of lines with identical content on/off: NavLeft+NavRight+NavDown+ThumbRight
+set cursor visibility on/off: NavLeft+NavRight+CursorUp
+set cursor blinking on/off: NavLeft+NavRight+CursorUp+ThumbLeft
+set text style 6-dot/8-dot: NavLeft+NavRight+CursorDown
+set capital letter blinking on/off: NavLeft+NavRight+CursorDown+ThumbLeft
+set attribute blinking on/off: NavLeft+NavRight+NavUp+ThumbLeft
+set sliding window on/off: NavLeft+NavRight+CursorLeft
+set alert tunes on/off: NavLeft+NavRight+CursorLeft+ThumbLeft
+set attribute blinking on/off: NavLeft+NavRight+CursorRight+ThumbLeft
+
+Menu Bindings
+select previous choice: ThumbLeft
+select next choice: ThumbRight
+select previous choice: CursorUp
+select next choice: CursorDown

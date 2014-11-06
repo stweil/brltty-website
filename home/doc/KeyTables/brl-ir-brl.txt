@@ -7,20 +7,6 @@ from left to right, are named L1 through L8.
 RoutingKey refers to any of the keys behind the text cells.
 
 Default Bindings
-go left one window: L1
-go up one line: L2
-go up to previous command prompt: L3
-enter/leave preferences menu: L4
-enter/leave status display: L5
-go down to next command prompt: L6
-go down one line: L7
-go right one window: L8
-go to top line: L1+L2
-go to bottom line: L7+L8
-set cursor visibility on/off: L2+L3
-set alert tunes on/off: L6+L7
-restart speech driver: L6+L8
-insert clipboard text at cursor: L5+L7
 set screen image frozen/unfrozen: L4+L3+L5
 enter/leave help display: L4+L3+L6
 enter/leave status display: L3+L5
@@ -35,6 +21,21 @@ linear copy to character: L8+RoutingKey
 rectangular copy to character: L7+RoutingKey
 place left end of window at character: L3+RoutingKey
 describe character: L6+RoutingKey
+go left one window: L1
+go up one line: L2
+go up to previous command prompt: L3
+enter/leave preferences menu: L4
+enter/leave status display: L5
+go down to next command prompt: L6
+go down one line: L7
+go right one window: L8
+go to top line: L1+L2
+go to bottom line: L7+L8
+set cursor visibility on/off: L2+L3
+set alert tunes on/off: L6+L7
+restart speech driver: L6+L8
+insert clipboard text at cursor: L5+L7
+insert clipboard history entry at cursor: L5+L6+L7, RoutingKey
 backspace key: Backspace
 enter key: Backspace+Space
 cursor-left key: Space+Dot2
