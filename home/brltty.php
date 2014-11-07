@@ -1,4 +1,6 @@
 <?php
+   include "brltty-parameters.php";
+
    date_default_timezone_set("UTC");
 
    require "document.php";
