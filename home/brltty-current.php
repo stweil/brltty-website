@@ -1,9 +1,9 @@
 <?php
-   global $brltty_files, $brltty_current, $brlapi_current;
-   put_versions('BRLTTY', $brltty_files, $brltty_current);
+   global $brltty_files;
+   put_versions('BRLTTY', $brltty_files, BRLTTY_CURRENT);
 
    global $brlapi_files;
-   put_versions('BrlAPI', $brlapi_files, $brlapi_current);
+   put_versions('BrlAPI', $brlapi_files, BRLAPI_CURRENT);
 ?>
 <B>BRLTTY</B> can also be downloaded from:
 <DL>

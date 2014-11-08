@@ -1,4 +1,4 @@
 <?php
-   $GLOBALS['brltty_current'] = '5.2';
-   $GLOBALS['brlapi_current'] = '0.6.3';
+   define('BRLTTY_CURRENT', '5.2');
+   define('BRLAPI_CURRENT', '0.6.3');
 ?>
