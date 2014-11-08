@@ -82,7 +82,7 @@ executeCommand() {
 
 updateFile() {
    local source="${1}"
-   local target="${targetRoot}/${2:-${source}}"
+   local target="${newTargetRoot}/${2:-${source}}"
 
    executeCommand mkdir -p "${target%/*}"
    executeCommand cp -a -- "${source}" "${target}"
@@ -113,8 +113,11 @@ updateDirectory() {
    cd "${OLDPWD}"
 }
 
+newTargetRoot="${targetRoot}.${programName}.new"
+executeCommand rm -f -r "${newTargetRoot}"
+
 cd "${sourceRoot}"
-executeCommand "./mkdocktb" -o "${targetRoot}/KeyTables" -s . -b "${buildRoot}"
+executeCommand "./mkdocktb" -o "${newTargetRoot}/KeyTables" -s . -b "${buildRoot}"
 
 cd "${buildRoot}/${documentSubdirectory}"
 executeCommand make -s
@@ -141,5 +144,11 @@ for file in "README."*
 do
    updateFile "${file}" "${file##README.}.txt"
 done
+
+oldTargetRoot="${targetRoot}.${programName}.old"
+executeCommand rm -f -r "${oldTargetRoot}"
+executeCommand mv "${targetRoot}" "${oldTargetRoot}"
+executeCommand mv "${newTargetRoot}" "${targetRoot}"
+executeCommand rm -f -r "${oldTargetRoot}"
 
 exit 0
