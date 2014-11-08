@@ -139,9 +139,13 @@
       echo("</CENTER>\n");
    }
 
+   function compare_files_by_name ($file1, $file2) {
+      return strcmp($file1['file'], $file2['file']);
+   }
    function put_version ($package_name, &$package_files, $version_name, $version_description) {
       $files = get_files($package_files, $version_name);
       $date = date('F j, Y', $files[0]['time']);
+      usort($files, compare_files_by_name);
       echo("The $version_description version of <B>$package_name</B> is $version_name ($date).\n"); 
       echo("It can be downloaded in the following formats:\n"); 
       put_files($files);

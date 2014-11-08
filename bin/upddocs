@@ -1,0 +1,145 @@
+#!/bin/bash -p
+###############################################################################
+# BRLTTY - A background process providing access to the console screen (when in
+#          text mode) for a blind person using a refreshable braille display.
+#
+# Copyright (C) 1995-2014 by The BRLTTY Developers.
+#
+# BRLTTY comes with ABSOLUTELY NO WARRANTY.
+#
+# This is free software, placed under the terms of the
+# GNU General Public License, as published by the Free Software
+# Foundation; either version 2 of the License, or (at your option) any
+# later version. Please see the file LICENSE-GPL for details.
+#
+# Web Page: http://mielke.cc/brltty/
+#
+# This software is maintained by Dave Mielke <dave@mielke.cc>.
+###############################################################################
+
+. "`dirname "${0}"`/../source/prologue.sh"
+shopt -s nullglob
+
+defaultWebsiteRoot="${programDirectory}/.."
+defaultSourceRoot="source"
+defaultTargetRoot="home/doc"
+
+addProgramOption w string.directory websiteRoot "top-level of website repository" "${defaultWebsiteRoot}"
+addProgramOption s string.directory sourceRoot "top-level of source repository" "${defaultSourceRoot}"
+addProgramOption t string.directory targetRoot "top-level of target hierarchy" "${defaultTargetRoot}"
+parseProgramArguments "${@}"
+
+[ -n "${websiteRoot}" ] || websiteRoot="${defaultWebsiteRoot}"
+verifyInputDirectory "${websiteRoot}"
+websiteRoot="$(resolveDirectory "${websiteRoot}")"
+
+[ -n "${sourceRoot}" ] || sourceRoot="${websiteRoot}/${defaultSourceRoot}"
+verifyInputDirectory "${sourceRoot}"
+[ "${sourceRoot#/}" != "${sourceRoot}" ] || sourceRoot="${websiteRoot}/${sourceRoot}"
+
+[ -n "${targetRoot}" ] || targetRoot="${websiteRoot}/${defaultTargetRoot}"
+verifyInputDirectory "${targetRoot}"
+[ "${targetRoot#/}" != "${targetRoot}" ] || targetRoot="${websiteRoot}/${targetRoot}"
+
+needTemporaryDirectory
+documentSubdirectory="Documents"
+
+cd "${sourceRoot}"
+[ ! -f Makefile ] || make -s distclean
+git checkout --quiet master
+./autogen
+
+buildRoot="${temporaryDirectory}/build"
+mkdir "${buildRoot}"
+cd "${buildRoot}"
+"${sourceRoot}/configure" \
+   --disable-gpm \
+   --disable-x \
+   \
+   --without-libbraille \
+   --disable-speech-support \
+   --with-screen-driver=-all \
+   \
+   --without-service-package \
+   --without-params-package \
+   --without-mntpt-package \
+   --without-mntfs-package \
+   --without-kbd-package \
+   --without-beep-package \
+   --without-pcm-package \
+   --without-midi-package \
+   --without-fm-package \
+   --without-serial-package \
+   --without-usb-package \
+   --without-bluetooth-package \
+   --without-ports-package \
+   \
+   --quiet
+
+executeCommand() {
+   "${@}"
+}
+
+updateFile() {
+   local source="${1}"
+   local target="${targetRoot}/${2:-${source}}"
+
+   executeCommand mkdir -p "${target%/*}"
+   executeCommand cp -a -- "${source}" "${target}"
+}
+
+updateDirectory() {
+   local from="${1}"
+   local to="${2}"
+   shift 2
+
+   local find=(find . -false)
+   local pattern
+
+   for pattern
+   do
+      find+=(-o -name "${pattern}")
+   done
+
+   cd "${from}"
+   set -- $("${find[@]}")
+   local file
+
+   for file
+   do
+      updateFile "${file}" "${to}/${file}"
+   done
+
+   cd "${OLDPWD}"
+}
+
+cd "${sourceRoot}"
+executeCommand "./mkdocktb" -o "${targetRoot}/KeyTables" -s . -b "${buildRoot}"
+
+cd "${buildRoot}/${documentSubdirectory}"
+executeCommand make -s
+updateDirectory "BrlAPIref/html" "BrlAPIref" "*.html"
+
+for root in "${buildRoot}" "${sourceRoot}"
+do
+   cd "${root}/${documentSubdirectory}"
+   set -- Manual-*
+
+   for manual
+   do
+      updateDirectory "${manual}" "${manual}" "*.sgml" "*.txt" "*.html" "*.htm" "*.pdf" "*.doc"
+   done
+done
+
+cd "${sourceRoot}/${documentSubdirectory}"
+for file in "../README" "ChangeLog" "TODO"
+do
+   updateFile "${file}" "${file##*/}.txt"
+done
+
+for file in "README."*
+do
+   updateFile "${file}" "${file##README.}.txt"
+done
+
+exit 0
