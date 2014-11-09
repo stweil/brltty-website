@@ -12,10 +12,10 @@
       global $archive_directory;
       $pattern = 
          '/^' . $package .
-         '(?P<subpackage>(?:-\w+)*)' .
-         '(?P<release>(?:-\d[\d\w]*(?:\.\d[\d\w]*)*)+)' .
-         '(?:-(?P<usb>\w*usb\w*(?:-\d+(?:\.\d+)*)*))?' .
-         '(?P<extension>(?:\.\w[\w\d]*)+)' .
+         '(?P<subpackage>(?:-[[:alpha:]]\w*)*)' .
+         '(?P<release>(?:-\d\w*(?:\.\d\w*)*)+)' .
+         '(?:-(?P<usb>[[:alpha:]]+(?:-\d+(?:\.\d+)*)*))?' .
+         '(?P<extension>(?:\.[[:alpha:]]\w*)+)' .
          '$/i';
       if ($directory = opendir($archive_directory)) {
          while ($line = readdir($directory)) {
@@ -135,7 +135,7 @@
             $scale++;
          }
          echo("<TD ALIGN=right>" . round($size) . substr(' KMG', $scale, 1) . "</TD>\n");
-         echo("<TD ALIGN=left>" . date('Y/m/d', $release['time']) . "</TD>\n");
+         echo("<TD ALIGN=left>" . date('Y-m-d', $release['time']) . "</TD>\n");
          echo("</TR>\n");
       }
       echo("</TABLE>\n");
