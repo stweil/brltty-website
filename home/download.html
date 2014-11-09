@@ -17,47 +17,61 @@
          '(?:-(?P<usb>[[:alpha:]]+(?:-\d+(?:\.\d+)*)*))?' .
          '(?P<extension>(?:\.[[:alpha:]]\w*)+)' .
          '$/i';
+      $dos_pattern =
+         '/^' .
+         '(?=\w{1,8}\.\w{1,3}$)' .
+         '(?P<package>[[:alpha:]]+)' .
+         '(?P<release>\d\w*)' .
+         '(?P<extension>\.zip)' .
+         '$/i';
       if ($directory = opendir($archive_directory)) {
-         while ($line = readdir($directory)) {
-            if (preg_match($pattern, $line, $matches)) {
+         while (($name = readdir($directory))) {
+            if (preg_match($pattern, $name, $matches)) {
                $release = substr($matches['release'], 1);
-               $components = explode('-', $release);
-               $version = $components[0];
-               reset($components);
-               while (list($component_index, $component) = each($components)) {
-                  $numbers = explode('.', $component);
-                  reset($numbers);
-                  while (list($number_index, $number) = each($numbers)) {
-                     $integer = true;
-                     while (strlen($number)) {
-                        $function = $integer? 'strspn': 'strcspn';
-                        $element = ($length = $function($number, '0123456789'))? substr($number, 0, $length): '0';
-                        if ($count = strspn($element, '0')) {
-                           $element = ($count == strlen($element))? '0': substr($element, $count);
-                        }
-                        $elements[] = $element;
-                        $number = substr($number, $length);
-                        $integer = !$integer;
-                     }
-                     $numbers[$number_index] = $elements;
-                     unset($elements);
-                  }
-                  $components[$component_index] = $numbers;
-               }
-               $name = $matches[0];
-               $path = $archive_directory . '/' . $name;
-               $files[] = array(
-                  'name'       => $name,
-                  'path'       => $path,
-                  'size'       => filesize($path),
-                  'time'       => filemtime($path),
-                  'subpackage' => $matches['subpackage'],
-                  'release'    => $release,
-                  'version'    => $version,
-                  'components' => $components,
-                  'extension'  => $matches['extension']
-               );
+            } else if (preg_match($dos_pattern, $name, $matches)) {
+               if (strncmp($package, $matches['package'], strlen($matches['package'])) != 0) continue;
+               $release = $matches['release'];
+               $offset = 1;
+               if (substr($release, 0, 1) < 3) $offset += 1;
+               $release = substr_replace($release, '.', $offset, 0);
+            } else {
+               continue;
             }
+            $components = explode('-', $release);
+            $version = $components[0];
+            reset($components);
+            while (list($component_index, $component) = each($components)) {
+               $numbers = explode('.', $component);
+               reset($numbers);
+               while (list($number_index, $number) = each($numbers)) {
+                  $integer = true;
+                  while (strlen($number)) {
+                     $function = $integer? 'strspn': 'strcspn';
+                     $element = ($length = $function($number, '0123456789'))? substr($number, 0, $length): '0';
+                     if ($count = strspn($element, '0')) {
+                        $element = ($count == strlen($element))? '0': substr($element, $count);
+                     }
+                     $elements[] = $element;
+                     $number = substr($number, $length);
+                     $integer = !$integer;
+                  }
+                  $numbers[$number_index] = $elements;
+                  unset($elements);
+               }
+               $components[$component_index] = $numbers;
+            }
+            $path = $archive_directory . '/' . $name;
+            $files[] = array(
+               'name'       => $name,
+               'path'       => $path,
+               'size'       => filesize($path),
+               'time'       => filemtime($path),
+               'subpackage' => $matches['subpackage'],
+               'release'    => $release,
+               'version'    => $version,
+               'components' => $components,
+               'extension'  => $matches['extension']
+            );
          }
          closedir($directory);
       }
