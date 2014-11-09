@@ -12,9 +12,10 @@
       global $archive_directory;
       $pattern = 
          '/^' . $package .
-         '(?P<subpackage>(?:-[a-z]+)*)' .
-         '(?P<release>(-[0-9][0-9a-z]*(\.[0-9][0-9a-z]*)*)+)' .
-         '(?P<extension>(\.[a-z][a-z0-9_]*)+)' .
+         '(?P<subpackage>(?:-\w+)*)' .
+         '(?P<release>(?:-\d[\d\w]*(?:\.\d[\d\w]*)*)+)' .
+         '(?:-(?P<usb>\w*usb\w*(?:-\d+(?:\.\d+)*)*))?' .
+         '(?P<extension>(?:\.\w[\w\d]*)+)' .
          '$/i';
       if ($directory = opendir($archive_directory)) {
          while ($line = readdir($directory)) {
@@ -107,15 +108,12 @@
 
    function get_version_files (&$package_files, $version) {
       reset($package_files);
-      while (list($key, $file) = each($package_files))
+      while (list($key, $file) = each($package_files)) {
          if (strcmp($version, $file['version']) == 0) {
             $files[] = $file;
          }
-      usort($files, 'compare_files_by_name');
+      }
       return $files;
-   }
-   function compare_files_by_name ($file1, $file2) {
-      return strcmp($file1['name'], $file2['name']);
    }
    function put_files (&$files) {
       echo("<CENTER>\n");
