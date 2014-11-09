@@ -8,14 +8,19 @@
    $brltty->add_subsection("Old Releases", "brltty-old.php", "old");
    $brltty->add_subsection("Android", "brltty-android.php", "android");
 
-   function get_released_files($package) {
+   function get_released_files ($package) {
       global $archive_directory;
-      $pattern = '^' . $package . '(-[a-z]+)*' . '((-[0-9][0-9a-z]*(\.[0-9][0-9a-z]*)*)+)((\.[a-z][a-z0-9_]*)+)$';
+      $pattern = 
+         '/^' . $package .
+         '(?P<subpackage>(?:-[a-z]+)*)' .
+         '(?P<release>(-[0-9][0-9a-z]*(\.[0-9][0-9a-z]*)*)+)' .
+         '(?P<extension>(\.[a-z][a-z0-9_]*)+)' .
+         '$/i';
       if ($directory = opendir($archive_directory)) {
          while ($line = readdir($directory)) {
-            if (ereg($pattern, $line, $matches)) {
-               $release = $matches[2];
-               $components = explode('-', substr($release, 1));
+            if (preg_match($pattern, $line, $matches)) {
+               $release = substr($matches['release'], 1);
+               $components = explode('-', $release);
                $version = $components[0];
                reset($components);
                while (list($component_index, $component) = each($components)) {
@@ -38,28 +43,29 @@
                   }
                   $components[$component_index] = $numbers;
                }
-               $file = $matches[0];
-               $path = $archive_directory . '/' . $file;
-               $releases[] = array(
-                  'file'       => $file,
+               $name = $matches[0];
+               $path = $archive_directory . '/' . $name;
+               $files[] = array(
+                  'name'       => $name,
                   'path'       => $path,
                   'size'       => filesize($path),
                   'time'       => filemtime($path),
+                  'subpackage' => $matches['subpackage'],
                   'release'    => $release,
                   'version'    => $version,
                   'components' => $components,
-                  'extension'  => $matches[5]
+                  'extension'  => $matches['extension']
                );
             }
          }
          closedir($directory);
       }
-      usort($releases, 'compare_releases');
-      return $releases;
+      usort($files, 'compare_files_by_release');
+      return $files;
    }
-   function compare_releases($release1, $release2) {
-      $components1 = $release1['components'];
-      $components2 = $release2['components'];
+   function compare_files_by_release ($file1, $file2) {
+      $components1 = $file1['components'];
+      $components2 = $file2['components'];
       reset($components1);
       reset($components2);
       while (true) {
@@ -92,27 +98,26 @@
             }
          }
       }
-      return strcmp($release1['extension'], $release2['extension']);
+      return strcmp($file1['name'], $file2['name']);
    }
 
    $GLOBALS['archive_directory'] = 'archive';
    $GLOBALS['brltty_files'] = get_released_files('brltty');
    $GLOBALS['brlapi_files'] = get_released_files('brlapi');
 
-   function get_files(&$package_files, $version) {
+   function get_version_files (&$package_files, $version) {
       reset($package_files);
-      while (list($key, $release) = each($package_files))
-         if (strcmp($version, $release['version']) == 0)
-            $files[] = $release;
-      usort($files, 'compare_files');
+      while (list($key, $file) = each($package_files))
+         if (strcmp($version, $file['version']) == 0) {
+            $files[] = $file;
+         }
+      usort($files, 'compare_files_by_name');
       return $files;
    }
-   function compare_files($file1, $file2) {
-      if ($file1['time'] < $file2['time']) return -1;
-      if ($file1['time'] > $file2['time']) return 1;
-      return 0;
+   function compare_files_by_name ($file1, $file2) {
+      return strcmp($file1['name'], $file2['name']);
    }
-   function put_files(&$files) {
+   function put_files (&$files) {
       echo("<CENTER>\n");
       echo("<TABLE>\n");
       echo("<TR>\n");
@@ -123,7 +128,7 @@
       reset($files);
       while (list($key, $release) = each($files)) {
          echo("<TR>\n");
-         echo("<TD ALIGN=left><A HREF=\"" . $release['path'] . "\"><CODE>" . $release['file'] . "</CODE></A></TD>\n");
+         echo("<TD ALIGN=left><A HREF=\"" . $release['path'] . "\"><CODE>" . $release['name'] . "</CODE></A></TD>\n");
          $size = $release['size'];
          $scale = 0;
          $factor = 1000;
@@ -139,13 +144,9 @@
       echo("</CENTER>\n");
    }
 
-   function compare_files_by_name ($file1, $file2) {
-      return strcmp($file1['file'], $file2['file']);
-   }
    function put_version ($package_name, &$package_files, $version_name, $version_description) {
-      $files = get_files($package_files, $version_name);
+      $files = get_version_files($package_files, $version_name);
       $date = date('F j, Y', $files[0]['time']);
-      usort($files, compare_files_by_name);
       echo("The $version_description version of <B>$package_name</B> is $version_name ($date).\n"); 
       echo("It can be downloaded in the following formats:\n"); 
       put_files($files);
