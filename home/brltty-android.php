@@ -13,6 +13,7 @@ then we'd sure appreciate your help.
 So far, we have translations for the following languages:
 <UL>
 <LI>Chinese
+<LI>Finnish
 <LI>French
 <LI>German
 <LI>Italian
