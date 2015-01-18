@@ -1,29 +1,47 @@
 Key Table: HIMS SyncBraille
+===========================
 
 Default Bindings
-bring cursor to character: RoutingKey
-go up one line: LeftUp
-go down one line: LeftDown
-go left one window: RightUp
-go right one window: RightDown
-go to cursor or go back after cursor tracking: RightUp+RightDown
-go to beginning of line: LeftUp+LeftDown
-go to beginning of top line: LeftUp+LeftDown+RightUp
-go to beginning of bottom line: LeftUp+LeftDown+RightDown
-set cursor tracking on/off: LeftUp+RightUp
-set text style 6-dot/8-dot: LeftUp+RightDown
-set screen image frozen/unfrozen: LeftDown+RightUp
-set display mode attributes/text: LeftDown+RightDown
-enter/leave status display: LeftUp+RightUp+RightDown
-enter/leave preferences menu: LeftDown+RightUp+RightDown
-enter/leave help display: LeftUp+LeftDown+RightUp+RightDown
+----------------
+
+Special Modes
+* enter/leave help display: LeftUp+LeftDown+RightUp+RightDown
+* enter/leave preferences menu: LeftDown+RightUp+RightDown
+* enter/leave status display: LeftUp+RightUp+RightDown
+* set screen image frozen/unfrozen: LeftDown+RightUp
+* set display mode attributes/text: LeftDown+RightDown
+
+Cursor Functions
+* go to screen cursor or go back after cursor tracking: RightUp+RightDown
+* bring screen cursor to character: RoutingKey
+
+Vertical Navigation
+* go up one line: LeftUp
+* go down one line: LeftDown
+* go to beginning of top line: LeftUp+LeftDown+RightUp
+* go to beginning of bottom line: LeftUp+LeftDown+RightDown
+
+Horizontal Navigation
+* go left one braille window: RightUp
+* go right one braille window: RightDown
+* go to beginning of line: LeftUp+LeftDown
+
+Configuration Functions
+* set text style 6-dot/8-dot: LeftUp+RightDown
+* set track screen cursor on/off: LeftUp+RightUp
 
 Menu Bindings
-go to previous item: LeftUp
-go to next item: LeftDown
-select previous choice: RightUp
-select next choice: RightDown
-go left one window: LeftUp+LeftDown
-go right one window: RightUp+RightDown
-go to first item: LeftUp+RightUp
-go to last item: LeftDown+RightDown
+-------------
+
+Horizontal Navigation
+* go left one braille window: LeftUp+LeftDown
+* go right one braille window: RightUp+RightDown
+
+Menu Operations
+* go to previous item: LeftUp
+* go to next item: LeftDown
+* go to first item: LeftUp+RightUp
+* go to last item: LeftDown+RightDown
+* select previous choice: RightUp
+* select next choice: RightDown
+

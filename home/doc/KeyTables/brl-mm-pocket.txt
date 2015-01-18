@@ -1,165 +1,210 @@
 Key Table: Braille Memo Pocket
+==============================
 
-The six round keys along the top are a braille keyboard;
-* from left to right, their names are: Dot3, Dot2, Dot1, Dot4, Dot5, Dot6.
-The two keys to the left of Dot3, from top to bottom, are named: Control, Alt.
-The two keys to the right of Dot6, from top to bottom, are named: Select, Read.
-The three keys below Dot1 and Dot4, from left to right, are named: Dot7, Extension, Dot8.
-At the bottom left is a group of four keys arranged in a cross;
-* starting with the leftmost key and moving clockwise, their names are:
-* ArrowLeft, ArrowUp, ArrowRight, ArrowDown.
-A driver implementation constraint requires that some of the bindings
-* refer to the ArrowLeft and ArrowRight keys as PanLeft and PanRight.
-Some keys are entered by pressing a set of keys simultaneously:
-* Return: Dot7
-* Space: Dot8
-* ArrowUp: Extension + Dot1
-* ArrowDown: Extension + Dot4
-* ArrowLeft: Extension + Dot2
-* ArrowRight: Extension + Dot5
-* Insert: Extension + Dot3
-* Change: Extension + Dot6
-* Backspace: Extension + Dot7
-* Delete: Extension + Dot8
-* Escape: Extension + ArrowUp
-* Info: Extension + ArrowDown
-* Backward: Extension + ArrowRight + Dot1
-* Forward: Extension + ArrowRight + Dot4
-* ScrollLeft: Extension + ArrowRight + Dot2
-* ScrollRight: Extension + ArrowRight + Dot5
-* OK: Extension + ArrowRight + Dot7
-* Set: Extension + ArrowRight + Dot8
+Notes
+* The six round keys along the top are a braille keyboard;
+  from left to right, their names are: Dot3, Dot2, Dot1, Dot4, Dot5, Dot6.
+* The two keys to the left of Dot3, from top to bottom, are named: Control, Alt.
+* The two keys to the right of Dot6, from top to bottom, are named: Select, Read.
+* The three keys below Dot1 and Dot4, from left to right, are named: Dot7, Extension, Dot8.
+* At the bottom left is a group of four keys arranged in a cross;
+  starting with the leftmost key and moving clockwise, their names are:
+  ArrowLeft, ArrowUp, ArrowRight, ArrowDown.
+* A driver implementation constraint requires that some of the bindings
+  refer to the ArrowLeft and ArrowRight keys as PanLeft and PanRight.
+* Some keys are entered by pressing a set of keys simultaneously:
+  Return: Dot7
+  Space: Dot8
+  ArrowUp: Extension + Dot1
+  ArrowDown: Extension + Dot4
+  ArrowLeft: Extension + Dot2
+  ArrowRight: Extension + Dot5
+  Insert: Extension + Dot3
+  Change: Extension + Dot6
+  Backspace: Extension + Dot7
+  Delete: Extension + Dot8
+  Escape: Extension + ArrowUp
+  Info: Extension + ArrowDown
+  Backward: Extension + ArrowRight + Dot1
+  Forward: Extension + ArrowRight + Dot4
+  ScrollLeft: Extension + ArrowRight + Dot2
+  ScrollRight: Extension + ArrowRight + Dot5
+  OK: Extension + ArrowRight + Dot7
+  Set: Extension + ArrowRight + Dot8
 
 Default Bindings
-bring cursor to line: ArrowUp+ArrowDown
-go to cursor or go back after cursor tracking: PanLeft+PanRight
-bring cursor to character: RoutingKey
-go up one line: ArrowUp
-go down one line: ArrowDown
-go left one window: PanLeft
-go right one window: PanRight
-go to beginning of top line: Control+ArrowUp
-go to beginning of bottom line: Control+ArrowDown
-search backward for clipboard text: Control+PanLeft
-search forward for clipboard text: Control+PanRight
-go up to nearest line with different highlighting: Alt+ArrowUp
-go down to nearest line with different highlighting: Alt+ArrowDown
-go left one character: Alt+PanLeft
-go right one character: Alt+PanRight
-go to top line: Select+ArrowUp
-go to bottom line: Select+ArrowDown
-go to beginning of line: Select+PanLeft
-go to end of line: Select+PanRight
-go up to nearest line with different content: Read+ArrowUp
-go down to nearest line with different content: Read+ArrowDown
-go left to nearest non-blank window: Read+PanLeft
-go right to nearest non-blank window: Read+PanRight
-go up to last line of previous paragraph: Control+Alt+ArrowUp
-go down to first line of next paragraph: Control+Alt+ArrowDown
-go up to previous command prompt: Select+Read+ArrowUp
-go down to next command prompt: Select+Read+ArrowDown
-show the current date and time: Control
-enter/leave status display: Alt
-start new clipboard at character: Control+RoutingKey
-append to clipboard from character: Alt+RoutingKey
-linear copy to character: Select+RoutingKey
-rectangular copy to character: Read+RoutingKey
-insert clipboard text at cursor: Control+Alt
-place left end of window at character: Control+Alt+RoutingKey
-describe character: Select+Read+RoutingKey
-enter key: dot7
-type braille character [C]: dot8
-insert key: Insert
-delete key: Delete
-backspace key: Backspace
-home key: Backward
-end key: Forward
-page-up key: ScrollLeft
-page-down key: ScrollRight
-cursor-left key: ArrowLeft
-cursor-right key: ArrowRight
-escape key: Escape
-set skipping of blank windows on/off: Read+dot1+dot2
-set skipping of blank windows on: Read+dot1+dot2+dot8
-set skipping of blank windows off: Read+dot1+dot2+dot7
-set cursor visibility on/off: Read+dot1+dot4
-set cursor visibility on: Read+dot1+dot4+dot8
-set cursor visibility off: Read+dot1+dot4+dot7
-set display mode attributes/text: Read+dot1+dot4+dot5
-set display mode attributes: Read+dot1+dot4+dot5+dot8
-set display mode text: Read+dot1+dot4+dot5+dot7
-set screen image frozen/unfrozen: Read+dot1+dot2+dot4
-set screen image frozen: Read+dot1+dot2+dot4+dot8
-set screen image unfrozen: Read+dot1+dot2+dot4+dot7
-enter/leave help display: Read+dot1+dot2+dot5
-set skipping of lines with identical content on/off: Read+dot2+dot4
-set skipping of lines with identical content on: Read+dot2+dot4+dot8
-set skipping of lines with identical content off: Read+dot2+dot4+dot7
-set braille keyboard enabled/disabled: Read+dot1+dot3
-set braille keyboard enabled: Read+dot1+dot3+dot8
-set braille keyboard disabled: Read+dot1+dot3+dot7
-enter/leave command learn mode: Read+dot1+dot2+dot3
-enter/leave preferences menu: Read+dot1+dot2+dot3+dot4
-restore preferences from disk: Read+dot1+dot2+dot3+dot4+dot7
-save preferences to disk: Read+dot1+dot2+dot3+dot4+dot8
-set autorepeat on/off: Read+dot1+dot2+dot3+dot5
-set autorepeat on: Read+dot1+dot2+dot3+dot5+dot8
-set autorepeat off: Read+dot1+dot2+dot3+dot5+dot7
-enter/leave status display: Read+dot2+dot3+dot4
-set cursor tracking on/off: Read+dot2+dot3+dot4+dot5
-set cursor tracking on: Read+dot2+dot3+dot4+dot5+dot8
-set cursor tracking off: Read+dot2+dot3+dot4+dot5+dot7
-set attribute underlining on/off: Read+dot1+dot3+dot6
-set attribute underlining on: Read+dot1+dot3+dot6+dot8
-set attribute underlining off: Read+dot1+dot3+dot6+dot7
-bring cursor to line: Read+dot1+dot2+dot3+dot6
-switch to previous virtual terminal: Read+dot1+dot2+dot3+dot6+dot7
-switch to next virtual terminal: Read+dot1+dot2+dot3+dot6+dot8
-set sliding window on/off: Read+dot2+dot4+dot5+dot6
-set sliding window on: Read+dot2+dot4+dot5+dot6+dot8
-set sliding window off: Read+dot2+dot4+dot5+dot6+dot7
-insert clipboard text at cursor: Read+dot1+dot3+dot4+dot6
-restore clipboard from disk: Read+dot1+dot3+dot4+dot6+dot7
-save clipboard to disk: Read+dot1+dot3+dot4+dot6+dot8
-set text style 6-dot: Read+dot2+dot3+dot5
-set text style 8-dot: Read+dot2+dot3+dot6
-backspace key: Read+dot7
-enter key: Read+dot8
-cursor-left key: Read+dot3
-cursor-right key: Read+dot6
-home key: Read+dot2
-end key: Read+dot5
-cursor-up key: Read+dot1
-cursor-down key: Read+dot4
-page-up key: Read+dot2+dot3
-page-down key: Read+dot5+dot6
-tab key: Read+dot2+dot3+dot5+dot6
-insert key: Read+dot3+dot5
-delete key: Read+dot2+dot5+dot6
-escape key: Read+dot2+dot6
-set cursor visibility on/off: ArrowUp+ArrowLeft
-set attribute underlining on/off: ArrowUp+ArrowRight
-set cursor tracking on/off: ArrowDown+ArrowLeft
-set text style 6-dot/8-dot: ArrowDown+ArrowRight
-tab key: Extension
-function key: Extension+RoutingKey
-braille keyboard dot1: dot1
-braille keyboard dot2: dot2
-braille keyboard dot3: dot3
-braille keyboard dot4: dot4
-braille keyboard dot5: dot5
-braille keyboard dot6: dot6
-braille keyboard dot7: dot7
-braille keyboard dot8: dot8
-braille keyboard control: Control
-braille keyboard meta: Alt
+----------------
+
+Special Modes
+* enter/leave help display: Read+dot1+dot2+dot5
+* enter/leave command learn mode: Read+dot1+dot2+dot3
+* enter/leave preferences menu: Read+dot1+dot2+dot3+dot4
+* show current date and time: Control
+* enter/leave status display:
+  + Alt
+  + Read+dot2+dot3+dot4
+* set screen image frozen/unfrozen: Read+dot1+dot2+dot4
+* set screen image frozen: Read+dot1+dot2+dot4+dot8
+* set screen image unfrozen: Read+dot1+dot2+dot4+dot7
+* set display mode attributes/text: Read+dot1+dot4+dot5
+* set display mode attributes: Read+dot1+dot4+dot5+dot8
+* set display mode text: Read+dot1+dot4+dot5+dot7
+
+Cursor Functions
+* go to screen cursor or go back after cursor tracking: PanLeft+PanRight
+* bring screen cursor to character: RoutingKey
+* bring screen cursor to current line:
+  + ArrowUp+ArrowDown
+  + Read+dot1+dot2+dot3+dot6
+
+Vertical Navigation
+* go up one line: ArrowUp
+* go down one line: ArrowDown
+* go to top line: Select+ArrowUp
+* go to bottom line: Select+ArrowDown
+* go to beginning of top line: Control+ArrowUp
+* go to beginning of bottom line: Control+ArrowDown
+* go up to nearest line with different content: Read+ArrowUp
+* go down to nearest line with different content: Read+ArrowDown
+* go up to nearest line with different highlighting: Alt+ArrowUp
+* go down to nearest line with different highlighting: Alt+ArrowDown
+* go up to first line of paragraph: Control+Alt+ArrowUp
+* go down to first line of next paragraph: Control+Alt+ArrowDown
+* go up to previous command prompt: Select+Read+ArrowUp
+* go down to next command prompt: Select+Read+ArrowDown
+
+Horizontal Navigation
+* go left one braille window: PanLeft
+* go right one braille window: PanRight
+* go left to nearest non-blank braille window: Read+PanLeft
+* go right to nearest non-blank braille window: Read+PanRight
+* go to beginning of line: Select+PanLeft
+* go to end of line: Select+PanRight
+* go left one character: Alt+PanLeft
+* go right one character: Alt+PanRight
+* place left end of braille window at character: Control+Alt+RoutingKey
+
+Clipboard Functions
+* start new clipboard at character: Control+RoutingKey
+* append to clipboard from character: Alt+RoutingKey
+* linear copy to character: Select+RoutingKey
+* rectangular copy to character: Read+RoutingKey
+* insert clipboard text after screen cursor:
+  + Control+Alt
+  + Read+dot1+dot3+dot4+dot6
+* search backward for clipboard text: Control+PanLeft
+* search forward for clipboard text: Control+PanRight
+* save clipboard to disk: Read+dot1+dot3+dot4+dot6+dot8
+* restore clipboard from disk: Read+dot1+dot3+dot4+dot6+dot7
+
+Configuration Functions
+* set autorepeat on/off: Read+dot1+dot2+dot3+dot5
+* set autorepeat on: Read+dot1+dot2+dot3+dot5+dot8
+* set autorepeat off: Read+dot1+dot2+dot3+dot5+dot7
+* set text style 6-dot/8-dot: ArrowDown+ArrowRight
+* set text style 6-dot: Read+dot2+dot3+dot5
+* set text style 8-dot: Read+dot2+dot3+dot6
+* set skipping of lines with identical content on/off: Read+dot2+dot4
+* set skipping of lines with identical content on: Read+dot2+dot4+dot8
+* set skipping of lines with identical content off: Read+dot2+dot4+dot7
+* set skipping of blank braille windows on/off: Read+dot1+dot2
+* set skipping of blank braille windows on: Read+dot1+dot2+dot8
+* set skipping of blank braille windows off: Read+dot1+dot2+dot7
+* set sliding braille window on/off: Read+dot2+dot4+dot5+dot6
+* set sliding braille window on: Read+dot2+dot4+dot5+dot6+dot8
+* set sliding braille window off: Read+dot2+dot4+dot5+dot6+dot7
+* set track screen cursor on/off:
+  + Read+dot2+dot3+dot4+dot5
+  + ArrowDown+ArrowLeft
+* set track screen cursor on: Read+dot2+dot3+dot4+dot5+dot8
+* set track screen cursor off: Read+dot2+dot3+dot4+dot5+dot7
+* set screen cursor visibility on/off:
+  + Read+dot1+dot4
+  + ArrowUp+ArrowLeft
+* set screen cursor visibility on: Read+dot1+dot4+dot8
+* set screen cursor visibility off: Read+dot1+dot4+dot7
+* set attribute underlining on/off:
+  + Read+dot1+dot3+dot6
+  + ArrowUp+ArrowRight
+* set attribute underlining on: Read+dot1+dot3+dot6+dot8
+* set attribute underlining off: Read+dot1+dot3+dot6+dot7
+
+Menu Operations
+* restore preferences from disk: Read+dot1+dot2+dot3+dot4+dot7
+* save preferences to disk: Read+dot1+dot2+dot3+dot4+dot8
+
+Speech Functions
+* describe character: Select+Read+RoutingKey
+
+Keyboard Input
+* braille keyboard dot1: dot1
+* braille keyboard dot2: dot2
+* braille keyboard dot3: dot3
+* braille keyboard dot4: dot4
+* braille keyboard dot5: dot5
+* braille keyboard dot6: dot6
+* braille keyboard dot7: dot7
+* braille keyboard dot8: dot8
+* braille keyboard control: Control
+* braille keyboard meta: Alt
+* set braille keyboard enabled/disabled: Read+dot1+dot3
+* set braille keyboard enabled: Read+dot1+dot3+dot8
+* set braille keyboard disabled: Read+dot1+dot3+dot7
+* enter key:
+  + dot7
+  + Read+dot8
+* tab key:
+  + Read+dot2+dot3+dot5+dot6
+  + Extension
+* backspace key:
+  + Backspace
+  + Read+dot7
+* escape key:
+  + Escape
+  + Read+dot2+dot6
+* cursor-left key:
+  + ArrowLeft
+  + Read+dot3
+* cursor-right key:
+  + ArrowRight
+  + Read+dot6
+* cursor-up key: Read+dot1
+* cursor-down key: Read+dot4
+* page-up key:
+  + ScrollLeft
+  + Read+dot2+dot3
+* page-down key:
+  + ScrollRight
+  + Read+dot5+dot6
+* home key:
+  + Backward
+  + Read+dot2
+* end key:
+  + Forward
+  + Read+dot5
+* insert key:
+  + Insert
+  + Read+dot3+dot5
+* delete key:
+  + Delete
+  + Read+dot2+dot5+dot6
+* function key: Extension+RoutingKey
+* type braille character [C]: dot8
+* switch to previous virtual terminal: Read+dot1+dot2+dot3+dot6+dot7
+* switch to next virtual terminal: Read+dot1+dot2+dot3+dot6+dot8
 
 Menu Bindings
-go to previous item: dot1
-go to next item: dot4
-go to first item: dot2
-go to last item: dot5
-select previous choice: dot3
-select next choice: dot6
-go to previous menu level: dot7
-enter/leave preferences menu: dot8
+-------------
+
+Special Modes
+* enter/leave preferences menu: dot8
+
+Menu Operations
+* go to previous item: dot1
+* go to next item: dot4
+* go to first item: dot2
+* go to last item: dot5
+* select previous choice: dot3
+* select next choice: dot6
+* go to previous menu level: dot7
+

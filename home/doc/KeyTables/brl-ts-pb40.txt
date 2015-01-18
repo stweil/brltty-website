@@ -1,76 +1,106 @@
 Key Table: Power Braille 40
+===========================
 
-The positions of the left bar are named: LeftRockerUp, LeftRockerDown.
-The positions of the right bar are named: RightRockerUp, RightRockerDown.
-The keys in the middle are named: Convex, Concave.
-The keys on the top are named: Backward (on the left), Forward (on the right).
+Notes
+* The positions of the left bar are named: LeftRockerUp, LeftRockerDown.
+* The positions of the right bar are named: RightRockerUp, RightRockerDown.
+* The keys in the middle are named: Convex, Concave.
+* The keys on the top are named: Backward (on the left), Forward (on the right).
 
 Default Bindings
-go up one line: RightRockerUp
-go down one line: RightRockerDown
-go left one window: Backward
-go right one window: Forward
-go to cursor: Concave
-go back after cursor tracking: Concave+LeftRockerUp
-set cursor tracking on/off: Convex
-go to beginning of top line: Backward+RightRockerUp
-go to beginning of bottom line: Backward+RightRockerDown
-go up to nearest line with different content: Concave+RightRockerUp
-go down to nearest line with different content: Concave+RightRockerDown
-go up to nearest line with different highlighting: Convex+RightRockerUp
-go down to nearest line with different highlighting: Convex+RightRockerDown
-go up several lines: Convex+LeftRockerUp
-go down several lines: Convex+LeftRockerDown
-go to beginning of line: LeftRockerUp+Backward
-go to end of line: LeftRockerUp+Forward
-cursor-up key: LeftRockerUp
-cursor-down key: LeftRockerDown
-set screen image frozen/unfrozen: Convex+Concave
-enter/leave status display: LeftRockerUp+RightRockerDown
-set attribute underlining on/off: LeftRockerDown+RightRockerUp
-set display mode attributes/text: LeftRockerDown+RightRockerUp+Convex
-bring cursor to line: LeftRockerDown+RightRockerDown
-speak current line: Forward+RightRockerDown
-speak from current line through bottom of screen: Backward+Forward+RightRockerDown
-go to current speech position: Concave+Forward
-stop speaking: Forward+RightRockerUp
-restart speech driver: LeftRockerUp+RightRockerUp+Backward+Forward
-enter/leave preferences menu: Backward+Forward
-save preferences to disk: Backward+Forward+Concave
-restore preferences from disk: Backward+Forward+Convex+Concave
-set skipping of lines with identical content on/off: Backward+Forward+RightRockerDown+Convex
-set skipping of lines with identical content on/off: Backward+Forward+RightRockerDown+Concave
-set cursor visibility on/off: Backward+Forward+LeftRockerUp
-set cursor blinking on/off: Backward+Forward+LeftRockerUp+Convex
-set text style 6-dot/8-dot: Backward+Forward+LeftRockerDown
-set capital letter blinking on/off: Backward+Forward+LeftRockerDown+Convex
-set attribute blinking on/off: Backward+Forward+RightRockerUp+Convex
-bring cursor to character: RoutingKey
-copy characters to clipboard: RoutingKey+RoutingKey
-enter/leave help display: RoutingKey.1+RoutingKey.40
-enter/leave command learn mode: RoutingKey.1+RoutingKey.2+RoutingKey.39+RoutingKey.40
-go left one character: RoutingKey.1+RoutingKey.2
-go right one character: RoutingKey.39+RoutingKey.40
-go left half a window: RoutingKey.1+RoutingKey.3
-go right half a window: RoutingKey.38+RoutingKey.40
-insert clipboard text at cursor: RoutingKey.2+RoutingKey.3
-go up to nearest line with less indent than character: RoutingKey+RightRockerUp
-go down to nearest line with less indent than character: RoutingKey+RightRockerDown
-go up to last line of previous paragraph: RoutingKey.1+RoutingKey.2+RightRockerUp
-go down to first line of next paragraph: RoutingKey.1+RoutingKey.2+RightRockerDown
-search backward for clipboard text: RoutingKey.1+RoutingKey.3+RightRockerUp
-search forward for clipboard text: RoutingKey.1+RoutingKey.3+RightRockerDown
-go up to previous command prompt: RoutingKey.2+RoutingKey.3+RightRockerUp
-go down to next command prompt: RoutingKey.2+RoutingKey.3+RightRockerDown
-start new clipboard at character: RoutingKey+Backward
-rectangular copy to character: RoutingKey+Forward
-place left end of window at character: RoutingKey+LeftRockerUp
-describe character: RoutingKey+LeftRockerDown
-remember current window position: RoutingKey+Convex
-go to remembered window position: RoutingKey+Concave
+----------------
+
+Special Modes
+* enter/leave help display: RoutingKey.1+RoutingKey.40
+* enter/leave command learn mode: RoutingKey.1+RoutingKey.2+RoutingKey.39+RoutingKey.40
+* enter/leave preferences menu: Backward+Forward
+* enter/leave status display: LeftRockerUp+RightRockerDown
+* set screen image frozen/unfrozen: Convex+Concave
+* set display mode attributes/text: LeftRockerDown+RightRockerUp+Convex
+
+Cursor Functions
+* go to screen cursor: Concave
+* go back after cursor tracking: Concave+LeftRockerUp
+* bring screen cursor to character: RoutingKey
+* bring screen cursor to current line: LeftRockerDown+RightRockerDown
+
+Vertical Navigation
+* go up one line: RightRockerUp
+* go down one line: RightRockerDown
+* go to beginning of top line: Backward+RightRockerUp
+* go to beginning of bottom line: Backward+RightRockerDown
+* go up to nearest line with different content: Concave+RightRockerUp
+* go down to nearest line with different content: Concave+RightRockerDown
+* go up to nearest line with different highlighting: Convex+RightRockerUp
+* go down to nearest line with different highlighting: Convex+RightRockerDown
+* go up to first line of paragraph: RoutingKey.1+RoutingKey.2+RightRockerUp
+* go down to first line of next paragraph: RoutingKey.1+RoutingKey.2+RightRockerDown
+* go up to previous command prompt: RoutingKey.2+RoutingKey.3+RightRockerUp
+* go down to next command prompt: RoutingKey.2+RoutingKey.3+RightRockerDown
+* go up several lines: Convex+LeftRockerUp
+* go down several lines: Convex+LeftRockerDown
+* go up to nearest line with less indent than character: RoutingKey+RightRockerUp
+* go down to nearest line with less indent than character: RoutingKey+RightRockerDown
+
+Horizontal Navigation
+* go left one braille window: Backward
+* go right one braille window: Forward
+* go to beginning of line: LeftRockerUp+Backward
+* go to end of line: LeftRockerUp+Forward
+* go left one character: RoutingKey.1+RoutingKey.2
+* go right one character: RoutingKey.39+RoutingKey.40
+* go left half a braille window: RoutingKey.1+RoutingKey.3
+* go right half a braille window: RoutingKey.38+RoutingKey.40
+* place left end of braille window at character: RoutingKey+LeftRockerUp
+
+Clipboard Functions
+* start new clipboard at character: RoutingKey+Backward
+* rectangular copy to character: RoutingKey+Forward
+* copy characters to clipboard: RoutingKey+RoutingKey
+* insert clipboard text after screen cursor: RoutingKey.2+RoutingKey.3
+* search backward for clipboard text: RoutingKey.1+RoutingKey.3+RightRockerUp
+* search forward for clipboard text: RoutingKey.1+RoutingKey.3+RightRockerDown
+
+Configuration Functions
+* set text style 6-dot/8-dot: Backward+Forward+LeftRockerDown
+* set skipping of lines with identical content on/off:
+  + Backward+Forward+RightRockerDown+Convex
+  + Backward+Forward+RightRockerDown+Concave
+* set track screen cursor on/off: Convex
+* set screen cursor visibility on/off: Backward+Forward+LeftRockerUp
+* set screen cursor blinking on/off: Backward+Forward+LeftRockerUp+Convex
+* set attribute underlining on/off: LeftRockerDown+RightRockerUp
+* set attribute blinking on/off: Backward+Forward+RightRockerUp+Convex
+* set capital letter blinking on/off: Backward+Forward+LeftRockerDown+Convex
+
+Menu Operations
+* restore preferences from disk: Backward+Forward+Convex+Concave
+* save preferences to disk: Backward+Forward+Concave
+
+Speech Functions
+* stop speaking: Forward+RightRockerUp
+* describe character: RoutingKey+LeftRockerDown
+* speak current line: Forward+RightRockerDown
+* speak from current line through bottom of screen: Backward+Forward+RightRockerDown
+* go to current speaking position: Concave+Forward
+
+Keyboard Input
+* cursor-up key: LeftRockerUp
+* cursor-down key: LeftRockerDown
+
+Special Functions
+* remember current braille window position: RoutingKey+Convex
+* go to remembered braille window position: RoutingKey+Concave
+* restart speech driver: LeftRockerUp+RightRockerUp+Backward+Forward
 
 Menu Bindings
-select previous choice: Convex
-select next choice: Concave
-select previous choice: LeftRockerUp
-select next choice: LeftRockerDown
+-------------
+
+Menu Operations
+* select previous choice:
+  + Convex
+  + LeftRockerUp
+* select next choice:
+  + Concave
+  + LeftRockerDown
+

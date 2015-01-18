@@ -1,45 +1,75 @@
 Key Table: Pegasus
+==================
 
 Default Bindings
-enter/leave help display: Status1
-enter/leave command learn mode: Status2
-bring cursor to character: RoutingKey
-go left one window: Left
-go right one window: Right
-go up one line: Up
-go down one line: Down
-go to beginning of top line: Home
-go to beginning of bottom line: Enter
-go to cursor or go back after cursor tracking: End
-set cursor tracking on/off: Escape
-go up to nearest line with different highlighting: LeftControl+Left
-go down to nearest line with different highlighting: LeftControl+Right
-go up to nearest line with different content: LeftControl+Up
-go down to nearest line with different content: LeftControl+Down
-set screen image frozen/unfrozen: LeftControl+Enter
-enter/leave preferences menu: LeftControl+End
-enter/leave status display: LeftControl+Escape
-set display mode attributes/text: LeftShift+Left
-set text style 6-dot/8-dot: LeftShift+Right
-bring cursor to line: LeftShift+Down
-go up to previous command prompt: LeftShift+Home
-go down to next command prompt: LeftShift+Enter
-go up to last line of previous paragraph: LeftShift+End
-go down to first line of next paragraph: LeftShift+Escape
-place left end of window at character: RightShift+Left, RoutingKey
-insert clipboard text at cursor: RightShift+Right
-describe character: RightShift+Down, RoutingKey
-start new clipboard at character: RightShift+Home, RoutingKey
-append to clipboard from character: RightShift+Enter, RoutingKey
-linear copy to character: RightShift+End, RoutingKey
-rectangular copy to character: RightShift+Escape, RoutingKey
+----------------
+
+Special Modes
+* enter/leave help display: Status1
+* enter/leave command learn mode: Status2
+* enter/leave preferences menu: LeftControl+End
+* enter/leave status display: LeftControl+Escape
+* set screen image frozen/unfrozen: LeftControl+Enter
+* set display mode attributes/text: LeftShift+Left
+
+Cursor Functions
+* go to screen cursor or go back after cursor tracking: End
+* bring screen cursor to character: RoutingKey
+* bring screen cursor to current line: LeftShift+Down
+
+Vertical Navigation
+* go up one line: Up
+* go down one line: Down
+* go to beginning of top line: Home
+* go to beginning of bottom line: Enter
+* go up to nearest line with different content: LeftControl+Up
+* go down to nearest line with different content: LeftControl+Down
+* go up to nearest line with different highlighting: LeftControl+Left
+* go down to nearest line with different highlighting: LeftControl+Right
+* go up to first line of paragraph: LeftShift+End
+* go down to first line of next paragraph: LeftShift+Escape
+* go up to previous command prompt: LeftShift+Home
+* go down to next command prompt: LeftShift+Enter
+
+Horizontal Navigation
+* go left one braille window: Left
+* go right one braille window: Right
+* place left end of braille window at character: RightShift+Left, RoutingKey
+
+Configuration Functions
+* set text style 6-dot/8-dot: LeftShift+Right
+* set track screen cursor on/off: Escape
+
+Clipboard Functions
+* insert clipboard text after screen cursor: RightShift+Right
+
+Speech Functions
+* describe character: RightShift+Down, RoutingKey
+
+Clipboard Functions
+* start new clipboard at character: RightShift+Home, RoutingKey
+
+Clipboard Functions
+* append to clipboard from character: RightShift+Enter, RoutingKey
+
+Clipboard Functions
+* linear copy to character: RightShift+End, RoutingKey
+
+Clipboard Functions
+* rectangular copy to character: RightShift+Escape, RoutingKey
 
 Menu Bindings
-go left one window: Left
-go right one window: Right
-go to previous item: Up
-go to next item: Down
-go to first item: Home
-go to last item: Enter
-select previous choice: End
-select next choice: Escape
+-------------
+
+Horizontal Navigation
+* go left one braille window: Left
+* go right one braille window: Right
+
+Menu Operations
+* go to previous item: Up
+* go to next item: Down
+* go to first item: Home
+* go to last item: Enter
+* select previous choice: End
+* select next choice: Escape
+

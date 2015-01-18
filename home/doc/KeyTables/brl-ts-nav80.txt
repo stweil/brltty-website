@@ -1,92 +1,131 @@
 Key Table: Navigator 80
+=======================
 
-The keys of the four-key pad in the middle are named:
-CursorLeft, CursorRight, CursorUp, CursorDown.
-The keys on each side of the pad are named: LeftThumb, RightThumb.
-The outer end keys are named: LeftOuter, RightOuter.
-The inner end keys are named: LeftInner, RightInner.
+Notes
+* The keys of the four-key pad in the middle are named:
+* CursorLeft, CursorRight, CursorUp, CursorDown.
+* The keys on each side of the pad are named: LeftThumb, RightThumb.
+* The outer end keys are named: LeftOuter, RightOuter.
+* The inner end keys are named: LeftInner, RightInner.
 
 Default Bindings
-go up one line: LeftInner
-go down one line: RightInner
-go left one window: LeftOuter
-go right one window: RightOuter
-go to cursor: RightThumb
-go back after cursor tracking: RightThumb+CursorUp
-set cursor tracking on/off: LeftThumb
-go to beginning of top line: LeftOuter+LeftInner
-go to beginning of bottom line: LeftOuter+RightInner
-go up to nearest line with different content: RightThumb+LeftInner
-go down to nearest line with different content: RightThumb+RightInner
-go up to nearest line with different highlighting: LeftThumb+LeftInner
-go down to nearest line with different highlighting: LeftThumb+RightInner
-go left one character: LeftThumb+CursorLeft
-go right one character: LeftThumb+CursorRight
-go left half a window: CursorUp+CursorLeft
-go right half a window: CursorUp+CursorRight
-go up several lines: LeftThumb+CursorUp
-go down several lines: LeftThumb+CursorDown
-go to beginning of line: CursorUp+LeftOuter
-go to end of line: CursorUp+RightOuter
-cursor-left key: CursorLeft
-cursor-right key: CursorRight
-cursor-up key: CursorUp
-cursor-down key: CursorDown
-enter/leave help display: CursorLeft+CursorRight
-enter/leave command learn mode: CursorLeft+CursorRight+CursorUp+CursorDown
-set screen image frozen/unfrozen: LeftThumb+RightThumb
-enter/leave status display: CursorUp+RightInner
-set attribute underlining on/off: CursorDown+LeftInner
-set display mode attributes/text: CursorDown+LeftInner+LeftThumb
-bring cursor to line: CursorDown+RightInner
-speak current line: RightOuter+RightInner
-speak from current line through bottom of screen: LeftOuter+RightOuter+RightInner
-go to current speech position: RightThumb+RightOuter
-stop speaking: RightOuter+LeftInner
-restart speech driver: CursorUp+LeftInner+LeftOuter+RightOuter
-speak current line: CursorRight+LeftOuter
-stop speaking: CursorRight+CursorUp+LeftOuter+LeftInner
-enter/leave preferences menu: LeftOuter+RightOuter
-save preferences to disk: LeftOuter+RightOuter+RightThumb
-restore preferences from disk: LeftOuter+RightOuter+LeftThumb+RightThumb
-set skipping of lines with identical content on/off: LeftOuter+RightOuter+RightInner+LeftThumb
-set skipping of lines with identical content on/off: LeftOuter+RightOuter+RightInner+RightThumb
-set cursor visibility on/off: LeftOuter+RightOuter+CursorUp
-set cursor blinking on/off: LeftOuter+RightOuter+CursorUp+LeftThumb
-set text style 6-dot/8-dot: LeftOuter+RightOuter+CursorDown
-set capital letter blinking on/off: LeftOuter+RightOuter+CursorDown+LeftThumb
-set attribute blinking on/off: LeftOuter+RightOuter+LeftInner+LeftThumb
-set sliding window on/off: LeftOuter+RightOuter+CursorLeft
-set alert tunes on/off: LeftOuter+RightOuter+CursorLeft+LeftThumb
-set attribute blinking on/off: LeftOuter+RightOuter+CursorRight+LeftThumb
-bring cursor to character: RoutingKey
-copy characters to clipboard: RoutingKey+RoutingKey
-enter/leave help display: RoutingKey.1+RoutingKey.80
-enter/leave command learn mode: RoutingKey.1+RoutingKey.2+RoutingKey.79+RoutingKey.80
-go left one character: RoutingKey.1+RoutingKey.2
-go right one character: RoutingKey.79+RoutingKey.80
-go left half a window: RoutingKey.1+RoutingKey.3
-go right half a window: RoutingKey.78+RoutingKey.80
-insert clipboard text at cursor: RoutingKey.2+RoutingKey.3
-go up to nearest line with less indent than character: RoutingKey+LeftInner
-go down to nearest line with less indent than character: RoutingKey+RightInner
-go up to last line of previous paragraph: RoutingKey.1+RoutingKey.2+LeftInner
-go down to first line of next paragraph: RoutingKey.1+RoutingKey.2+RightInner
-search backward for clipboard text: RoutingKey.1+RoutingKey.3+LeftInner
-search forward for clipboard text: RoutingKey.1+RoutingKey.3+RightInner
-go up to previous command prompt: RoutingKey.2+RoutingKey.3+LeftInner
-go down to next command prompt: RoutingKey.2+RoutingKey.3+RightInner
-start new clipboard at character: RoutingKey+LeftOuter
-append to clipboard from character: RoutingKey+CursorLeft
-rectangular copy to character: RoutingKey+RightOuter
-linear copy to character: RoutingKey+CursorRight
-place left end of window at character: RoutingKey+CursorUp
-describe character: RoutingKey+CursorDown
-remember current window position: RoutingKey+LeftThumb
-go to remembered window position: RoutingKey+RightThumb
+----------------
+
+Special Modes
+* enter/leave help display:
+  + CursorLeft+CursorRight
+  + RoutingKey.1+RoutingKey.80
+* enter/leave command learn mode:
+  + CursorLeft+CursorRight+CursorUp+CursorDown
+  + RoutingKey.1+RoutingKey.2+RoutingKey.79+RoutingKey.80
+* enter/leave preferences menu: LeftOuter+RightOuter
+* enter/leave status display: CursorUp+RightInner
+* set screen image frozen/unfrozen: LeftThumb+RightThumb
+* set display mode attributes/text: CursorDown+LeftInner+LeftThumb
+
+Cursor Functions
+* go to screen cursor: RightThumb
+* go back after cursor tracking: RightThumb+CursorUp
+* bring screen cursor to character: RoutingKey
+* bring screen cursor to current line: CursorDown+RightInner
+
+Vertical Navigation
+* go up one line: LeftInner
+* go down one line: RightInner
+* go to beginning of top line: LeftOuter+LeftInner
+* go to beginning of bottom line: LeftOuter+RightInner
+* go up to nearest line with different content: RightThumb+LeftInner
+* go down to nearest line with different content: RightThumb+RightInner
+* go up to nearest line with different highlighting: LeftThumb+LeftInner
+* go down to nearest line with different highlighting: LeftThumb+RightInner
+* go up to first line of paragraph: RoutingKey.1+RoutingKey.2+LeftInner
+* go down to first line of next paragraph: RoutingKey.1+RoutingKey.2+RightInner
+* go up to previous command prompt: RoutingKey.2+RoutingKey.3+LeftInner
+* go down to next command prompt: RoutingKey.2+RoutingKey.3+RightInner
+* go up several lines: LeftThumb+CursorUp
+* go down several lines: LeftThumb+CursorDown
+* go up to nearest line with less indent than character: RoutingKey+LeftInner
+* go down to nearest line with less indent than character: RoutingKey+RightInner
+
+Horizontal Navigation
+* go left one braille window: LeftOuter
+* go right one braille window: RightOuter
+* go to beginning of line: CursorUp+LeftOuter
+* go to end of line: CursorUp+RightOuter
+* go left one character:
+  + LeftThumb+CursorLeft
+  + RoutingKey.1+RoutingKey.2
+* go right one character:
+  + LeftThumb+CursorRight
+  + RoutingKey.79+RoutingKey.80
+* go left half a braille window:
+  + CursorUp+CursorLeft
+  + RoutingKey.1+RoutingKey.3
+* go right half a braille window:
+  + CursorUp+CursorRight
+  + RoutingKey.78+RoutingKey.80
+* place left end of braille window at character: RoutingKey+CursorUp
+
+Clipboard Functions
+* start new clipboard at character: RoutingKey+LeftOuter
+* append to clipboard from character: RoutingKey+CursorLeft
+* linear copy to character: RoutingKey+CursorRight
+* rectangular copy to character: RoutingKey+RightOuter
+* copy characters to clipboard: RoutingKey+RoutingKey
+* insert clipboard text after screen cursor: RoutingKey.2+RoutingKey.3
+* search backward for clipboard text: RoutingKey.1+RoutingKey.3+LeftInner
+* search forward for clipboard text: RoutingKey.1+RoutingKey.3+RightInner
+
+Configuration Functions
+* set text style 6-dot/8-dot: LeftOuter+RightOuter+CursorDown
+* set skipping of lines with identical content on/off:
+  + LeftOuter+RightOuter+RightInner+LeftThumb
+  + LeftOuter+RightOuter+RightInner+RightThumb
+* set sliding braille window on/off: LeftOuter+RightOuter+CursorLeft
+* set track screen cursor on/off: LeftThumb
+* set screen cursor visibility on/off: LeftOuter+RightOuter+CursorUp
+* set screen cursor blinking on/off: LeftOuter+RightOuter+CursorUp+LeftThumb
+* set attribute underlining on/off: CursorDown+LeftInner
+* set attribute blinking on/off:
+  + LeftOuter+RightOuter+LeftInner+LeftThumb
+  + LeftOuter+RightOuter+CursorRight+LeftThumb
+* set capital letter blinking on/off: LeftOuter+RightOuter+CursorDown+LeftThumb
+* set alert tunes on/off: LeftOuter+RightOuter+CursorLeft+LeftThumb
+
+Menu Operations
+* restore preferences from disk: LeftOuter+RightOuter+LeftThumb+RightThumb
+* save preferences to disk: LeftOuter+RightOuter+RightThumb
+
+Speech Functions
+* stop speaking:
+  + RightOuter+LeftInner
+  + CursorRight+CursorUp+LeftOuter+LeftInner
+* describe character: RoutingKey+CursorDown
+* speak current line:
+  + RightOuter+RightInner
+  + CursorRight+LeftOuter
+* speak from current line through bottom of screen: LeftOuter+RightOuter+RightInner
+* go to current speaking position: RightThumb+RightOuter
+
+Keyboard Input
+* cursor-left key: CursorLeft
+* cursor-right key: CursorRight
+* cursor-up key: CursorUp
+* cursor-down key: CursorDown
+
+Special Functions
+* remember current braille window position: RoutingKey+LeftThumb
+* go to remembered braille window position: RoutingKey+RightThumb
+* restart speech driver: CursorUp+LeftInner+LeftOuter+RightOuter
 
 Menu Bindings
-select previous choice: LeftThumb
-select next choice: RightThumb
-select previous choice: CursorUp
-select next choice: CursorDown
+-------------
+
+Menu Operations
+* select previous choice:
+  + LeftThumb
+  + CursorUp
+* select next choice:
+  + RightThumb
+  + CursorDown
+

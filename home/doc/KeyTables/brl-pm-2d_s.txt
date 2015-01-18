@@ -1,207 +1,256 @@
 Key Table: Papenmeier BrailleX 2D Screen Soft
+=============================================
 
-The front surface layout is as follows:
-* The rectangular key at the center is named Shift.
-* The square keys immediately to its left and right are named Home and End.
-* The left and right bars are named Up and Down.
-* The four square keys at the very left are named: Dot7, Dot3, Dot2, Dot1.
-* The four square keys at the very right are named: Dot4, Dot5, Dot6, Dot8.
-RoutingKey1 refers to any of the keys behind the text cells.
-The keys to the left of the status cells are named Status1 through Status22.
+Notes
+* The front surface layout is as follows:
+  The rectangular key at the center is named Shift.
+  The square keys immediately to its left and right are named Home and End.
+  The left and right bars are named Up and Down.
+  The four square keys at the very left are named: Dot7, Dot3, Dot2, Dot1.
+  The four square keys at the very right are named: Dot4, Dot5, Dot6, Dot8.
+* RoutingKey1 refers to any of the keys behind the text cells.
+* The keys to the left of the status cells are named Status.1 through Status.22.
 
 Default Bindings
-go to cursor: Shift
-go to top line: Home
-go to bottom line: End
-go up one line: Up
-go down one line: Down
-go up to nearest line with different content: Dot1
-go down to nearest line with different content: Dot4
-go up to nearest line with different highlighting: Dot2
-go down to nearest line with different highlighting: Dot5
-go up to last line of previous paragraph: Dot3
-go down to first line of next paragraph: Dot6
-go up to previous command prompt: Dot7
-go down to next command prompt: Dot8
-go up several lines: Dot1+Dot2
-go down several lines: Dot4+Dot5
-search backward for clipboard text: Dot3+Dot7
-search forward for clipboard text: Dot6+Dot8
-go up to nearest line with different character: Dot1+Dot2+RoutingKey1
-go down to nearest line with different character: Dot4+Dot5+RoutingKey1
-go up to nearest line with less indent than character: Dot3+Dot7+RoutingKey1
-go down to nearest line with less indent than character: Dot6+Dot8+RoutingKey1
-go left one window: Dot1+Up
-go right one window: Dot1+Down
-go to beginning of top line: Dot1+Home
-go to beginning of bottom line: Dot1+End
-go left half a window: Dot4+Up
-go right half a window: Dot4+Down
-go left one character: Dot4+Home
-go right one character: Dot4+End
-go to beginning of line: Dot1+Shift
-go to end of line: Dot4+Shift
-place left end of window at character: Dot1+RoutingKey1
-describe character: Dot4+RoutingKey1
-cursor-up key: Dot2+Up
-cursor-down key: Dot2+Down
-cursor-left key: Dot2+Home
-cursor-right key: Dot2+End
-page-up key: Dot5+Up
-page-down key: Dot5+Down
-home key: Dot5+Home
-end key: Dot5+End
-insert key: Dot2+Shift
-delete key: Dot5+Shift
-function key: Dot2+RoutingKey1
-switch to virtual terminal: Dot5+RoutingKey1
-go to current speech position: Dot7+Shift
-speak from top of screen through current line: Dot7+Home
-speak from current line through bottom of screen: Dot7+End
-stop speaking: Dot7+Up
-speak current line: Dot7+Down
-restart speech driver: Dot8+Shift
-decrease speech rate: Dot8+Home
-increase speech rate: Dot8+End
-decrease speech volume: Dot8+Up
-increase speech volume: Dot8+Down
-start new clipboard at character: Dot7+RoutingKey1
-append to clipboard from character: Dot3+RoutingKey1
-linear copy to character: Dot6+RoutingKey1
-rectangular copy to character: Dot8+RoutingKey1
-show the current date and time: Dot1+Dot2+Dot3+Dot7
-bring cursor to character: RoutingKey1
-enter/leave help display: Status1
-enter/leave command learn mode: Status2
-bring cursor to line: Status3
-enter/leave status display: Status4
-go back after cursor tracking: Status5
-set cursor tracking on/off: Status6
-set cursor tracking off: Dot7+Status6
-set cursor tracking on: Dot8+Status6
-set display mode attributes/text: Status7
-set display mode text: Dot7+Status7
-set display mode attributes: Dot8+Status7
-set screen image frozen/unfrozen: Status8
-set screen image unfrozen: Dot7+Status8
-set screen image frozen: Dot8+Status8
-restore preferences from disk: Status9
-enter/leave preferences menu: Status10
-save preferences to disk: Status11
-set cursor visibility on/off: Status12
-set cursor visibility off: Dot7+Status12
-set cursor visibility on: Dot8+Status12
-set attribute underlining on/off: Status13
-set attribute underlining off: Dot7+Status13
-set attribute underlining on: Dot8+Status13
-set skipping of lines with identical content on/off: Status14
-set skipping of lines with identical content off: Dot7+Status14
-set skipping of lines with identical content on: Dot8+Status14
-set text style 6-dot/8-dot: Status15
-set text style 8-dot: Dot7+Status15
-set text style 6-dot: Dot8+Status15
-restart braille driver: Status16
-restart speech driver: Status17
-set autospeak on/off: Status18
-set autospeak off: Dot7+Status18
-set autospeak on: Dot8+Status18
-set autorepeat on/off: Status19
-set autorepeat off: Dot7+Status19
-set autorepeat on: Dot8+Status19
-set braille input mode dots/text: Status20
-set braille input mode text: Dot7+Status20
-set braille input mode dots: Dot8+Status20
-show the current date and time: Status21
-insert clipboard text at cursor: Status22
-switch to Default Bindings: Dot2+Dot3+Shift
-switch to Chorded Commands Mode: Dot2+Dot3+Home
-switch to Braille Input Mode: Dot2+Dot3+End
+----------------
+
+Special Modes
+* enter/leave help display: Status.1
+* enter/leave command learn mode: Status.2
+* enter/leave preferences menu: Status.10
+* show current date and time:
+  + Dot1+Dot2+Dot3+Dot7
+  + Status.21
+* enter/leave status display: Status.4
+* set screen image frozen/unfrozen: Status.8
+* set screen image frozen: Status.8+Dot8
+* set screen image unfrozen: Status.8+Dot7
+* set display mode attributes/text: Status.7
+* set display mode attributes: Status.7+Dot8
+* set display mode text: Status.7+Dot7
+* switch to Default Bindings: Dot2+Dot3+Shift
+* switch to Chorded Commands Mode: Dot2+Dot3+Home
+* switch to Braille Input Mode: Dot2+Dot3+End
+
+Cursor Functions
+* go to screen cursor: Shift
+* go back after cursor tracking: Status.5
+* bring screen cursor to character: RoutingKey1
+* bring screen cursor to current line: Status.3
+
+Vertical Navigation
+* go up one line: Up
+* go down one line: Down
+* go to top line: Home
+* go to bottom line: End
+* go to beginning of top line: Dot1+Home
+* go to beginning of bottom line: Dot1+End
+* go up to nearest line with different content: Dot1
+* go down to nearest line with different content: Dot4
+* go up to nearest line with different highlighting: Dot2
+* go down to nearest line with different highlighting: Dot5
+* go up to first line of paragraph: Dot3
+* go down to first line of next paragraph: Dot6
+* go up to previous command prompt: Dot7
+* go down to next command prompt: Dot8
+* go up several lines: Dot1+Dot2
+* go down several lines: Dot4+Dot5
+* go up to nearest line with less indent than character: Dot3+Dot7+RoutingKey1
+* go down to nearest line with less indent than character: Dot6+Dot8+RoutingKey1
+* go up to nearest line with different character: Dot1+Dot2+RoutingKey1
+* go down to nearest line with different character: Dot4+Dot5+RoutingKey1
+
+Horizontal Navigation
+* go left one braille window: Dot1+Up
+* go right one braille window: Dot1+Down
+* go to beginning of line: Dot1+Shift
+* go to end of line: Dot4+Shift
+* go left one character: Dot4+Home
+* go right one character: Dot4+End
+* go left half a braille window: Dot4+Up
+* go right half a braille window: Dot4+Down
+* place left end of braille window at character: Dot1+RoutingKey1
+
+Clipboard Functions
+* start new clipboard at character: Dot7+RoutingKey1
+* append to clipboard from character: Dot3+RoutingKey1
+* linear copy to character: Dot6+RoutingKey1
+* rectangular copy to character: Dot8+RoutingKey1
+* insert clipboard text after screen cursor: Status.22
+* search backward for clipboard text: Dot3+Dot7
+* search forward for clipboard text: Dot6+Dot8
+
+Configuration Functions
+* set autorepeat on/off: Status.19
+* set autorepeat on: Status.19+Dot8
+* set autorepeat off: Status.19+Dot7
+* set text style 6-dot/8-dot: Status.15
+* set text style 6-dot: Status.15+Dot8
+* set text style 8-dot: Status.15+Dot7
+* set skipping of lines with identical content on/off: Status.14
+* set skipping of lines with identical content on: Status.14+Dot8
+* set skipping of lines with identical content off: Status.14+Dot7
+* set track screen cursor on/off: Status.6
+* set track screen cursor on: Status.6+Dot8
+* set track screen cursor off: Status.6+Dot7
+* set screen cursor visibility on/off: Status.12
+* set screen cursor visibility on: Status.12+Dot8
+* set screen cursor visibility off: Status.12+Dot7
+* set attribute underlining on/off: Status.13
+* set attribute underlining on: Status.13+Dot8
+* set attribute underlining off: Status.13+Dot7
+
+Menu Operations
+* restore preferences from disk: Status.9
+* save preferences to disk: Status.11
+
+Speech Functions
+* stop speaking: Dot7+Up
+* describe character: Dot4+RoutingKey1
+* speak current line: Dot7+Down
+* speak from top of screen through current line: Dot7+Home
+* speak from current line through bottom of screen: Dot7+End
+* go to current speaking position: Dot7+Shift
+* decrease speaking volume: Dot8+Up
+* increase speaking volume: Dot8+Down
+* decrease speaking rate: Dot8+Home
+* increase speaking rate: Dot8+End
+* set autospeak on/off: Status.18
+* set autospeak on: Status.18+Dot8
+* set autospeak off: Status.18+Dot7
+
+Keyboard Input
+* set braille input mode dots/text: Status.20
+* set braille input mode dots: Status.20+Dot8
+* set braille input mode text: Status.20+Dot7
+* cursor-left key: Dot2+Home
+* cursor-right key: Dot2+End
+* cursor-up key: Dot2+Up
+* cursor-down key: Dot2+Down
+* page-up key: Dot5+Up
+* page-down key: Dot5+Down
+* home key: Dot5+Home
+* end key: Dot5+End
+* insert key: Dot2+Shift
+* delete key: Dot5+Shift
+* function key: Dot2+RoutingKey1
+* switch to virtual terminal: Dot5+RoutingKey1
+
+Special Functions
+* restart braille driver: Status.16
+* restart speech driver:
+  + Dot8+Shift
+  + Status.17
 
 Menu Bindings
-enter/leave preferences menu: Shift
-select previous choice: Home
-select next choice: End
-go to previous item: Up
-go to next item: Down
-go to first item: Dot1
-go to last item: Dot4
-restore preferences from disk: Dot2
-save preferences to disk: Dot5
-go to previous menu level: Dot3
-go left one window: Dot7
-go right one window: Dot8
+-------------
+
+Special Modes
+* enter/leave preferences menu: Shift
+
+Horizontal Navigation
+* go left one braille window: Dot7
+* go right one braille window: Dot8
+
+Menu Operations
+* go to previous item: Up
+* go to next item: Down
+* go to first item: Dot1
+* go to last item: Dot4
+* select previous choice: Home
+* select next choice: End
+* go to previous menu level: Dot3
+* restore preferences from disk: Dot2
+* save preferences to disk: Dot5
 
 Chorded Commands Mode
-set skipping of blank windows on/off: Dot1+Dot2
-set skipping of blank windows on: Dot1+Dot2+Dot8
-set skipping of blank windows off: Dot1+Dot2+Dot7
-set cursor visibility on/off: Dot1+Dot4
-set cursor visibility on: Dot1+Dot4+Dot8
-set cursor visibility off: Dot1+Dot4+Dot7
-set display mode attributes/text: Dot1+Dot4+Dot5
-set display mode attributes: Dot1+Dot4+Dot5+Dot8
-set display mode text: Dot1+Dot4+Dot5+Dot7
-set screen image frozen/unfrozen: Dot1+Dot2+Dot4
-set screen image frozen: Dot1+Dot2+Dot4+Dot8
-set screen image unfrozen: Dot1+Dot2+Dot4+Dot7
-enter/leave help display: Dot1+Dot2+Dot5
-set skipping of lines with identical content on/off: Dot2+Dot4
-set skipping of lines with identical content on: Dot2+Dot4+Dot8
-set skipping of lines with identical content off: Dot2+Dot4+Dot7
-set braille keyboard enabled/disabled: Dot1+Dot3
-set braille keyboard enabled: Dot1+Dot3+Dot8
-set braille keyboard disabled: Dot1+Dot3+Dot7
-enter/leave command learn mode: Dot1+Dot2+Dot3
-enter/leave preferences menu: Dot1+Dot2+Dot3+Dot4
-restore preferences from disk: Dot1+Dot2+Dot3+Dot4+Dot7
-save preferences to disk: Dot1+Dot2+Dot3+Dot4+Dot8
-set autorepeat on/off: Dot1+Dot2+Dot3+Dot5
-set autorepeat on: Dot1+Dot2+Dot3+Dot5+Dot8
-set autorepeat off: Dot1+Dot2+Dot3+Dot5+Dot7
-enter/leave status display: Dot2+Dot3+Dot4
-set cursor tracking on/off: Dot2+Dot3+Dot4+Dot5
-set cursor tracking on: Dot2+Dot3+Dot4+Dot5+Dot8
-set cursor tracking off: Dot2+Dot3+Dot4+Dot5+Dot7
-set attribute underlining on/off: Dot1+Dot3+Dot6
-set attribute underlining on: Dot1+Dot3+Dot6+Dot8
-set attribute underlining off: Dot1+Dot3+Dot6+Dot7
-bring cursor to line: Dot1+Dot2+Dot3+Dot6
-switch to previous virtual terminal: Dot1+Dot2+Dot3+Dot6+Dot7
-switch to next virtual terminal: Dot1+Dot2+Dot3+Dot6+Dot8
-set sliding window on/off: Dot2+Dot4+Dot5+Dot6
-set sliding window on: Dot2+Dot4+Dot5+Dot6+Dot8
-set sliding window off: Dot2+Dot4+Dot5+Dot6+Dot7
-insert clipboard text at cursor: Dot1+Dot3+Dot4+Dot6
-restore clipboard from disk: Dot1+Dot3+Dot4+Dot6+Dot7
-save clipboard to disk: Dot1+Dot3+Dot4+Dot6+Dot8
-set text style 6-dot: Dot2+Dot3+Dot5
-set text style 8-dot: Dot2+Dot3+Dot6
-backspace key: Dot7
-enter key: Dot8
-cursor-left key: Dot3
-cursor-right key: Dot6
-home key: Dot2
-end key: Dot5
-cursor-up key: Dot1
-cursor-down key: Dot4
-page-up key: Dot2+Dot3
-page-down key: Dot5+Dot6
-tab key: Dot2+Dot3+Dot5+Dot6
-insert key: Dot3+Dot5
-delete key: Dot2+Dot5+Dot6
-escape key: Dot2+Dot6
+---------------------
+
+Special Modes
+* enter/leave help display: Dot1+Dot2+Dot5
+* enter/leave command learn mode: Dot1+Dot2+Dot3
+* enter/leave preferences menu: Dot1+Dot2+Dot3+Dot4
+* enter/leave status display: Dot2+Dot3+Dot4
+* set screen image frozen/unfrozen: Dot1+Dot2+Dot4
+* set screen image frozen: Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Dot1+Dot2+Dot4+Dot7
+* set display mode attributes/text: Dot1+Dot4+Dot5
+* set display mode attributes: Dot1+Dot4+Dot5+Dot8
+* set display mode text: Dot1+Dot4+Dot5+Dot7
+
+Cursor Functions
+* bring screen cursor to current line: Dot1+Dot2+Dot3+Dot6
+
+Clipboard Functions
+* insert clipboard text after screen cursor: Dot1+Dot3+Dot4+Dot6
+* save clipboard to disk: Dot1+Dot3+Dot4+Dot6+Dot8
+* restore clipboard from disk: Dot1+Dot3+Dot4+Dot6+Dot7
+
+Configuration Functions
+* set autorepeat on/off: Dot1+Dot2+Dot3+Dot5
+* set autorepeat on: Dot1+Dot2+Dot3+Dot5+Dot8
+* set autorepeat off: Dot1+Dot2+Dot3+Dot5+Dot7
+* set text style 6-dot: Dot2+Dot3+Dot5
+* set text style 8-dot: Dot2+Dot3+Dot6
+* set skipping of lines with identical content on/off: Dot2+Dot4
+* set skipping of lines with identical content on: Dot2+Dot4+Dot8
+* set skipping of lines with identical content off: Dot2+Dot4+Dot7
+* set skipping of blank braille windows on/off: Dot1+Dot2
+* set skipping of blank braille windows on: Dot1+Dot2+Dot8
+* set skipping of blank braille windows off: Dot1+Dot2+Dot7
+* set sliding braille window on/off: Dot2+Dot4+Dot5+Dot6
+* set sliding braille window on: Dot2+Dot4+Dot5+Dot6+Dot8
+* set sliding braille window off: Dot2+Dot4+Dot5+Dot6+Dot7
+* set track screen cursor on/off: Dot2+Dot3+Dot4+Dot5
+* set track screen cursor on: Dot2+Dot3+Dot4+Dot5+Dot8
+* set track screen cursor off: Dot2+Dot3+Dot4+Dot5+Dot7
+* set screen cursor visibility on/off: Dot1+Dot4
+* set screen cursor visibility on: Dot1+Dot4+Dot8
+* set screen cursor visibility off: Dot1+Dot4+Dot7
+* set attribute underlining on/off: Dot1+Dot3+Dot6
+* set attribute underlining on: Dot1+Dot3+Dot6+Dot8
+* set attribute underlining off: Dot1+Dot3+Dot6+Dot7
+
+Menu Operations
+* restore preferences from disk: Dot1+Dot2+Dot3+Dot4+Dot7
+* save preferences to disk: Dot1+Dot2+Dot3+Dot4+Dot8
+
+Keyboard Input
+* set braille keyboard enabled/disabled: Dot1+Dot3
+* set braille keyboard enabled: Dot1+Dot3+Dot8
+* set braille keyboard disabled: Dot1+Dot3+Dot7
+* enter key: Dot8
+* tab key: Dot2+Dot3+Dot5+Dot6
+* backspace key: Dot7
+* escape key: Dot2+Dot6
+* cursor-left key: Dot3
+* cursor-right key: Dot6
+* cursor-up key: Dot1
+* cursor-down key: Dot4
+* page-up key: Dot2+Dot3
+* page-down key: Dot5+Dot6
+* home key: Dot2
+* end key: Dot5
+* insert key: Dot3+Dot5
+* delete key: Dot2+Dot5+Dot6
+* switch to previous virtual terminal: Dot1+Dot2+Dot3+Dot6+Dot7
+* switch to next virtual terminal: Dot1+Dot2+Dot3+Dot6+Dot8
 
 Braille Input Mode
-type braille character [space]: Dot3+Shift
-escape key: Dot3+Home
-tab key: Dot3+End
-backspace key: Dot3+Up
-enter key: Dot3+Down
-braille keyboard dot1: Dot1
-braille keyboard dot2: Dot2
-braille keyboard dot3: Dot3
-braille keyboard dot4: Dot4
-braille keyboard dot5: Dot5
-braille keyboard dot6: Dot6
-braille keyboard dot7: Dot7
-braille keyboard dot8: Dot8
+------------------
+
+Keyboard Input
+* braille keyboard dot1: Dot1
+* braille keyboard dot2: Dot2
+* braille keyboard dot3: Dot3
+* braille keyboard dot4: Dot4
+* braille keyboard dot5: Dot5
+* braille keyboard dot6: Dot6
+* braille keyboard dot7: Dot7
+* braille keyboard dot8: Dot8
+* enter key: Dot3+Down
+* tab key: Dot3+End
+* backspace key: Dot3+Up
+* escape key: Dot3+Home
+* type braille character [space]: Dot3+Shift
+

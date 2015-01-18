@@ -1,155 +1,203 @@
 Key Table: Seika Note Takers
+============================
 
 Default Bindings
-enter/leave help display: LeftJoystickPress
-enter/leave command learn mode: RightJoystickPress
-go to cursor: LeftButton+RightButton
-go left one window: LeftButton
-go right one window: RightButton
-go to top line: LeftJoystickUp
-go to bottom line: LeftJoystickDown
-go to beginning of line: LeftJoystickLeft
-go to end of line: LeftJoystickRight
-go up one line: RightJoystickUp
-go down one line: RightJoystickDown
-go left one character: RightJoystickLeft
-go right one character: RightJoystickRight
-go up to nearest line with different highlighting: LeftJoystickLeft+RightJoystickUp
-go down to nearest line with different highlighting: LeftJoystickLeft+RightJoystickDown
-go up to nearest line with different content: LeftJoystickRight+RightJoystickUp
-go down to nearest line with different content: LeftJoystickRight+RightJoystickDown
-go up to previous command prompt: LeftJoystickUp+RightJoystickUp
-go down to next command prompt: LeftJoystickUp+RightJoystickDown
-go up to last line of previous paragraph: LeftJoystickDown+RightJoystickUp
-go down to first line of next paragraph: LeftJoystickDown+RightJoystickDown
-go left half a window: LeftJoystickLeft+RightJoystickLeft
-go right half a window: LeftJoystickLeft+RightJoystickRight
-go left to nearest non-blank window: LeftJoystickRight+RightJoystickLeft
-go right to nearest non-blank window: LeftJoystickRight+RightJoystickRight
-search backward for clipboard text: LeftJoystickUp+RightJoystickLeft
-search forward for clipboard text: LeftJoystickUp+RightJoystickRight
-go back after cursor tracking: LeftJoystickDown+RightJoystickLeft
-bring cursor to line: LeftJoystickDown+RightJoystickRight
-enter/leave status display: LeftJoystickPress+RightJoystickUp
-enter/leave preferences menu: LeftJoystickPress+RightJoystickDown
-restore preferences from disk: LeftJoystickPress+RightJoystickLeft
-save preferences to disk: LeftJoystickPress+RightJoystickRight
-bring cursor to character: RoutingKey
-place left end of window at character: LeftButton+RoutingKey
-describe character: RightButton+RoutingKey
-go up to nearest line with less indent than character: RightJoystickUp+RoutingKey
-go down to nearest line with less indent than character: RightJoystickDown+RoutingKey
-go up to nearest line with different character: RightJoystickLeft+RoutingKey
-go down to nearest line with different character: RightJoystickRight+RoutingKey
-remember current window position: LeftJoystickPress+RoutingKey
-go to remembered window position: RightJoystickPress+RoutingKey
-insert clipboard text at cursor: LeftJoystickPress+RightJoystickPress
-copy characters to clipboard: RoutingKey+RoutingKey
-append characters to clipboard: LeftJoystickUp+RoutingKey+RoutingKey
-start new clipboard at character: LeftJoystickLeft+RoutingKey
-append to clipboard from character: LeftJoystickUp+RoutingKey
-linear copy to character: LeftJoystickRight+RoutingKey
-rectangular copy to character: LeftJoystickDown+RoutingKey
-set skipping of blank windows on/off: Space+Dot1+Dot2
-set skipping of blank windows on: Space+Dot1+Dot2+Dot8
-set skipping of blank windows off: Space+Dot1+Dot2+Dot7
-set cursor visibility on/off: Space+Dot1+Dot4
-set cursor visibility on: Space+Dot1+Dot4+Dot8
-set cursor visibility off: Space+Dot1+Dot4+Dot7
-set display mode attributes/text: Space+Dot1+Dot4+Dot5
-set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
-set display mode text: Space+Dot1+Dot4+Dot5+Dot7
-set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
-set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
-set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
-enter/leave help display: Space+Dot1+Dot2+Dot5
-set skipping of lines with identical content on/off: Space+Dot2+Dot4
-set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
-set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
-set braille keyboard enabled/disabled: Space+Dot1+Dot3
-set braille keyboard enabled: Space+Dot1+Dot3+Dot8
-set braille keyboard disabled: Space+Dot1+Dot3+Dot7
-enter/leave command learn mode: Space+Dot1+Dot2+Dot3
-enter/leave preferences menu: Space+Dot1+Dot2+Dot3+Dot4
-restore preferences from disk: Space+Dot1+Dot2+Dot3+Dot4+Dot7
-save preferences to disk: Space+Dot1+Dot2+Dot3+Dot4+Dot8
-set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
-set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
-set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
-enter/leave status display: Space+Dot2+Dot3+Dot4
-set cursor tracking on/off: Space+Dot2+Dot3+Dot4+Dot5
-set cursor tracking on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
-set cursor tracking off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
-set attribute underlining on/off: Space+Dot1+Dot3+Dot6
-set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
-set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
-bring cursor to line: Space+Dot1+Dot2+Dot3+Dot6
-switch to previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
-switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
-set sliding window on/off: Space+Dot2+Dot4+Dot5+Dot6
-set sliding window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
-set sliding window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
-insert clipboard text at cursor: Space+Dot1+Dot3+Dot4+Dot6
-restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
-save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
-set text style 6-dot: Space+Dot2+Dot3+Dot5
-set text style 8-dot: Space+Dot2+Dot3+Dot6
-backspace key: Space+Dot7
-enter key: Space+Dot8
-cursor-left key: Space+Dot3
-cursor-right key: Space+Dot6
-home key: Space+Dot2
-end key: Space+Dot5
-cursor-up key: Space+Dot1
-cursor-down key: Space+Dot4
-page-up key: Space+Dot2+Dot3
-page-down key: Space+Dot5+Dot6
-tab key: Space+Dot2+Dot3+Dot5+Dot6
-insert key: Space+Dot3+Dot5
-delete key: Space+Dot2+Dot5+Dot6
-escape key: Space+Dot2+Dot6
-backspace key: Backspace
-enter key: Backspace+Space
-page-up key: Space+LeftJoystickUp
-page-down key: Space+LeftJoystickDown
-home key: Space+LeftJoystickLeft
-end key: Space+LeftJoystickRight
-insert key: Space+LeftJoystickPress
-cursor-up key: Space+RightJoystickUp
-cursor-down key: Space+RightJoystickDown
-cursor-left key: Space+RightJoystickLeft
-cursor-right key: Space+RightJoystickRight
-delete key: Space+RightJoystickPress
-function key: Space+RoutingKey
-switch to virtual terminal: Backspace+RoutingKey
-increase speech volume: Backspace+LeftJoystickUp
-decrease speech volume: Backspace+LeftJoystickDown
-decrease speech rate: Backspace+LeftJoystickLeft
-increase speech rate: Backspace+LeftJoystickRight
-set autospeak on/off: Backspace+LeftJoystickPress
-speak from top of screen through current line: Backspace+RightJoystickUp
-speak from current line through bottom of screen: Backspace+RightJoystickDown
-stop speaking: Backspace+RightJoystickLeft
-speak current line: Backspace+RightJoystickRight
-go to current speech position: Backspace+RightJoystickPress
-braille keyboard dot1: Dot1
-braille keyboard dot2: Dot2
-braille keyboard dot3: Dot3
-braille keyboard dot4: Dot4
-braille keyboard dot5: Dot5
-braille keyboard dot6: Dot6
-braille keyboard dot7: Dot7
-braille keyboard dot8: Dot8
-braille keyboard control: Backspace
-braille keyboard space: Space
+----------------
+
+Special Modes
+* enter/leave help display:
+  + LeftJoystickPress
+  + Space+Dot1+Dot2+Dot5
+* enter/leave command learn mode:
+  + RightJoystickPress
+  + Space+Dot1+Dot2+Dot3
+* enter/leave preferences menu:
+  + LeftJoystickPress+RightJoystickDown
+  + Space+Dot1+Dot2+Dot3+Dot4
+* enter/leave status display:
+  + LeftJoystickPress+RightJoystickUp
+  + Space+Dot2+Dot3+Dot4
+* set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
+* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+* set display mode attributes/text: Space+Dot1+Dot4+Dot5
+* set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
+* set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+
+Cursor Functions
+* go to screen cursor: LeftButton+RightButton
+* go back after cursor tracking: LeftJoystickDown+RightJoystickLeft
+* bring screen cursor to character: RoutingKey
+* bring screen cursor to current line:
+  + LeftJoystickDown+RightJoystickRight
+  + Space+Dot1+Dot2+Dot3+Dot6
+
+Vertical Navigation
+* go up one line: RightJoystickUp
+* go down one line: RightJoystickDown
+* go to top line: LeftJoystickUp
+* go to bottom line: LeftJoystickDown
+* go up to nearest line with different content: LeftJoystickRight+RightJoystickUp
+* go down to nearest line with different content: LeftJoystickRight+RightJoystickDown
+* go up to nearest line with different highlighting: LeftJoystickLeft+RightJoystickUp
+* go down to nearest line with different highlighting: LeftJoystickLeft+RightJoystickDown
+* go up to first line of paragraph: LeftJoystickDown+RightJoystickUp
+* go down to first line of next paragraph: LeftJoystickDown+RightJoystickDown
+* go up to previous command prompt: LeftJoystickUp+RightJoystickUp
+* go down to next command prompt: LeftJoystickUp+RightJoystickDown
+* go up to nearest line with less indent than character: RightJoystickUp+RoutingKey
+* go down to nearest line with less indent than character: RightJoystickDown+RoutingKey
+* go up to nearest line with different character: RightJoystickLeft+RoutingKey
+* go down to nearest line with different character: RightJoystickRight+RoutingKey
+
+Horizontal Navigation
+* go left one braille window: LeftButton
+* go right one braille window: RightButton
+* go left to nearest non-blank braille window: LeftJoystickRight+RightJoystickLeft
+* go right to nearest non-blank braille window: LeftJoystickRight+RightJoystickRight
+* go to beginning of line: LeftJoystickLeft
+* go to end of line: LeftJoystickRight
+* go left one character: RightJoystickLeft
+* go right one character: RightJoystickRight
+* go left half a braille window: LeftJoystickLeft+RightJoystickLeft
+* go right half a braille window: LeftJoystickLeft+RightJoystickRight
+* place left end of braille window at character: LeftButton+RoutingKey
+
+Clipboard Functions
+* start new clipboard at character: LeftJoystickLeft+RoutingKey
+* append to clipboard from character: LeftJoystickUp+RoutingKey
+* linear copy to character: LeftJoystickRight+RoutingKey
+* rectangular copy to character: LeftJoystickDown+RoutingKey
+* copy characters to clipboard: RoutingKey+RoutingKey
+* append characters to clipboard: LeftJoystickUp+RoutingKey+RoutingKey
+* insert clipboard text after screen cursor:
+  + LeftJoystickPress+RightJoystickPress
+  + Space+Dot1+Dot3+Dot4+Dot6
+* search backward for clipboard text: LeftJoystickUp+RightJoystickLeft
+* search forward for clipboard text: LeftJoystickUp+RightJoystickRight
+* save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
+* restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
+
+Configuration Functions
+* set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
+* set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
+* set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
+* set text style 6-dot: Space+Dot2+Dot3+Dot5
+* set text style 8-dot: Space+Dot2+Dot3+Dot6
+* set skipping of lines with identical content on/off: Space+Dot2+Dot4
+* set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
+* set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
+* set skipping of blank braille windows on/off: Space+Dot1+Dot2
+* set skipping of blank braille windows on: Space+Dot1+Dot2+Dot8
+* set skipping of blank braille windows off: Space+Dot1+Dot2+Dot7
+* set sliding braille window on/off: Space+Dot2+Dot4+Dot5+Dot6
+* set sliding braille window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
+* set sliding braille window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
+* set track screen cursor on/off: Space+Dot2+Dot3+Dot4+Dot5
+* set track screen cursor on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
+* set track screen cursor off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
+* set screen cursor visibility on/off: Space+Dot1+Dot4
+* set screen cursor visibility on: Space+Dot1+Dot4+Dot8
+* set screen cursor visibility off: Space+Dot1+Dot4+Dot7
+* set attribute underlining on/off: Space+Dot1+Dot3+Dot6
+* set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
+* set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
+
+Menu Operations
+* restore preferences from disk:
+  + LeftJoystickPress+RightJoystickLeft
+  + Space+Dot1+Dot2+Dot3+Dot4+Dot7
+* save preferences to disk:
+  + LeftJoystickPress+RightJoystickRight
+  + Space+Dot1+Dot2+Dot3+Dot4+Dot8
+
+Speech Functions
+* stop speaking: Backspace+RightJoystickLeft
+* describe character: RightButton+RoutingKey
+* speak current line: Backspace+RightJoystickRight
+* speak from top of screen through current line: Backspace+RightJoystickUp
+* speak from current line through bottom of screen: Backspace+RightJoystickDown
+* go to current speaking position: Backspace+RightJoystickPress
+* decrease speaking volume: Backspace+LeftJoystickDown
+* increase speaking volume: Backspace+LeftJoystickUp
+* decrease speaking rate: Backspace+LeftJoystickLeft
+* increase speaking rate: Backspace+LeftJoystickRight
+* set autospeak on/off: Backspace+LeftJoystickPress
+
+Keyboard Input
+* braille keyboard dot1: Dot1
+* braille keyboard dot2: Dot2
+* braille keyboard dot3: Dot3
+* braille keyboard dot4: Dot4
+* braille keyboard dot5: Dot5
+* braille keyboard dot6: Dot6
+* braille keyboard dot7: Dot7
+* braille keyboard dot8: Dot8
+* braille keyboard control: Backspace
+* braille keyboard space: Space
+* set braille keyboard enabled/disabled: Space+Dot1+Dot3
+* set braille keyboard enabled: Space+Dot1+Dot3+Dot8
+* set braille keyboard disabled: Space+Dot1+Dot3+Dot7
+* enter key:
+  + Space+Dot8
+  + Backspace+Space
+* tab key: Space+Dot2+Dot3+Dot5+Dot6
+* backspace key:
+  + Space+Dot7
+  + Backspace
+* escape key: Space+Dot2+Dot6
+* cursor-left key:
+  + Space+Dot3
+  + Space+RightJoystickLeft
+* cursor-right key:
+  + Space+Dot6
+  + Space+RightJoystickRight
+* cursor-up key:
+  + Space+Dot1
+  + Space+RightJoystickUp
+* cursor-down key:
+  + Space+Dot4
+  + Space+RightJoystickDown
+* page-up key:
+  + Space+Dot2+Dot3
+  + Space+LeftJoystickUp
+* page-down key:
+  + Space+Dot5+Dot6
+  + Space+LeftJoystickDown
+* home key:
+  + Space+Dot2
+  + Space+LeftJoystickLeft
+* end key:
+  + Space+Dot5
+  + Space+LeftJoystickRight
+* insert key:
+  + Space+Dot3+Dot5
+  + Space+LeftJoystickPress
+* delete key:
+  + Space+Dot2+Dot5+Dot6
+  + Space+RightJoystickPress
+* function key: Space+RoutingKey
+* switch to virtual terminal: Backspace+RoutingKey
+* switch to previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
+* switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
+
+Special Functions
+* remember current braille window position: LeftJoystickPress+RoutingKey
+* go to remembered braille window position: RightJoystickPress+RoutingKey
 
 Menu Bindings
-enter/leave preferences menu: RightJoystickPress
-go to previous item: RightJoystickUp
-go to next item: RightJoystickDown
-select previous choice: RightJoystickLeft
-select next choice: RightJoystickRight
-go to first item: LeftJoystickUp
-go to last item: LeftJoystickDown
-restore preferences from disk: LeftJoystickLeft
-save preferences to disk: LeftJoystickRight
+-------------
+
+Special Modes
+* enter/leave preferences menu: RightJoystickPress
+
+Menu Operations
+* go to previous item: RightJoystickUp
+* go to next item: RightJoystickDown
+* go to first item: LeftJoystickUp
+* go to last item: LeftJoystickDown
+* select previous choice: RightJoystickLeft
+* select next choice: RightJoystickRight
+* restore preferences from disk: LeftJoystickLeft
+* save preferences to disk: LeftJoystickRight
+

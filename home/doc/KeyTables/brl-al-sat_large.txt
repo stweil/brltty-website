@@ -1,93 +1,124 @@
 Key Table: Alva Satellite [5nn] (large)
+=======================================
 
-The keypads at either side of the top are named LeftPad and RightPad:
-* The four inner keys of each are subnamed Left, Right, Up, and Down.
-* The two outer keys of each are subnamed F1 and F2.
-The two long, flat keys are named Up and Down.
-The two long, bent keys are named Left and Right.
-The two round keys are named Home and Cursor.
-The two three-position, sliding keys are named LeftTumbler and RightTumbler.
+Notes
+* The keypads at either side of the top are named LeftPad and RightPad:
+  The four inner keys of each are subnamed Left, Right, Up, and Down.
+  The two outer keys of each are subnamed F1 and F2.
+* The two long, flat keys are named Up and Down.
+* The two long, bent keys are named Left and Right.
+* The two round keys are named Home and Cursor.
+* The two three-position, sliding keys are named LeftTumbler and RightTumbler.
 
 Default Bindings
-go up one line: Up
-go down one line: Down
-go to beginning of top line: Home+Up
-go to beginning of bottom line: Home+Down
-go to top line: Cursor+Up
-go to bottom line: Cursor+Down
-go up to nearest line with different content: RightPadF1+Up
-go down to nearest line with different content: RightPadF1+Down
-go up to nearest line with different highlighting: RightPadF2+Up
-go down to nearest line with different highlighting: RightPadF2+Down
-go left one window: Left
-go right one window: Right
-go to beginning of line: Home+Left
-go to end of line: Home+Right
-go left to nearest non-blank window: Cursor+Left
-go right to nearest non-blank window: Cursor+Right
-go left one character: RightPadF1+Left
-go right one character: RightPadF1+Right
-go left half a window: RightPadF2+Left
-go right half a window: RightPadF2+Right
-describe character: RoutingKey2
-bring cursor to character: RoutingKey1
-remember current window position: Home+RoutingKey2
-go to remembered window position: Home+RoutingKey1
-go up to nearest line with less indent than character: Cursor+RoutingKey2
-go down to nearest line with less indent than character: Cursor+RoutingKey1
-start new clipboard at character: RightPadF1+RoutingKey1
-append to clipboard from character: RightPadF1+RoutingKey2
-rectangular copy to character: RightPadF2+RoutingKey1
-linear copy to character: RightPadF2+RoutingKey2
-set cursor visibility on/off: Status1A
-set skipping of lines with identical content on/off: Status2A
-set attribute underlining on/off: Status1B
-set display mode attributes/text: Status2B
-set capital letter blinking on/off: Status1C
-set skipping of blank windows on/off: Status2C
-enter/leave preferences menu: RightPadLeft
-enter/leave status display: RightPadRight
-set screen image frozen/unfrozen: RightPadF1+RightPadLeft
-set text style 6-dot/8-dot: RightPadF1+RightPadRight
-insert clipboard text at cursor: RightPadF2+RightPadLeft
-bring cursor to line: RightPadF2+RightPadRight
-go up to previous command prompt: RightPadUp
-go down to next command prompt: RightPadDown
-go up to last line of previous paragraph: RightPadF1+RightPadUp
-go down to first line of next paragraph: RightPadF1+RightPadDown
-search backward for clipboard text: RightPadF2+RightPadUp
-search forward for clipboard text: RightPadF2+RightPadDown
-stop speaking: LeftPadLeft
-speak current line: LeftPadRight
-speak from top of screen through current line: LeftPadUp
-speak from current line through bottom of screen: LeftPadDown
-decrease speech rate: LeftPadF2+LeftPadLeft
-increase speech rate: LeftPadF2+LeftPadRight
-decrease speech volume: LeftPadF2+LeftPadDown
-increase speech volume: LeftPadF2+LeftPadUp
-go back after cursor tracking: Home
-go to cursor: Cursor
-set cursor tracking on/off: Home+Cursor
-enter/leave help display: RightPadF1
-enter/leave command learn mode: RightPadF2
-restart braille driver: RightPadF1+RightPadF2
-go to current speech position: LeftPadF1
-set autospeak on/off: LeftPadF2
-restart speech driver: LeftPadF1+LeftPadF2
-go left one character: LeftTumblerLeft
-go right one character: LeftTumblerRight
-go to beginning of line: RightTumblerLeft
-go to end of line: RightTumblerRight
+----------------
+
+Special Modes
+* enter/leave help display: RightPadF1
+* enter/leave command learn mode: RightPadF2
+* enter/leave preferences menu: RightPadLeft
+* enter/leave status display: RightPadRight
+* set screen image frozen/unfrozen: RightPadF1+RightPadLeft
+* set display mode attributes/text: Status2B
+
+Cursor Functions
+* go to screen cursor: Cursor
+* go back after cursor tracking: Home
+* bring screen cursor to character: RoutingKey1
+* bring screen cursor to current line: RightPadF2+RightPadRight
+
+Vertical Navigation
+* go up one line: Up
+* go down one line: Down
+* go to top line: Cursor+Up
+* go to bottom line: Cursor+Down
+* go to beginning of top line: Home+Up
+* go to beginning of bottom line: Home+Down
+* go up to nearest line with different content: RightPadF1+Up
+* go down to nearest line with different content: RightPadF1+Down
+* go up to nearest line with different highlighting: RightPadF2+Up
+* go down to nearest line with different highlighting: RightPadF2+Down
+* go up to first line of paragraph: RightPadF1+RightPadUp
+* go down to first line of next paragraph: RightPadF1+RightPadDown
+* go up to previous command prompt: RightPadUp
+* go down to next command prompt: RightPadDown
+* go up to nearest line with less indent than character: Cursor+RoutingKey2
+* go down to nearest line with less indent than character: Cursor+RoutingKey1
+
+Horizontal Navigation
+* go left one braille window: Left
+* go right one braille window: Right
+* go left to nearest non-blank braille window: Cursor+Left
+* go right to nearest non-blank braille window: Cursor+Right
+* go to beginning of line:
+  + Home+Left
+  + RightTumblerLeft
+* go to end of line:
+  + Home+Right
+  + RightTumblerRight
+* go left one character:
+  + RightPadF1+Left
+  + LeftTumblerLeft
+* go right one character:
+  + RightPadF1+Right
+  + LeftTumblerRight
+* go left half a braille window: RightPadF2+Left
+* go right half a braille window: RightPadF2+Right
+
+Clipboard Functions
+* start new clipboard at character: RightPadF1+RoutingKey1
+* append to clipboard from character: RightPadF1+RoutingKey2
+* linear copy to character: RightPadF2+RoutingKey2
+* rectangular copy to character: RightPadF2+RoutingKey1
+* insert clipboard text after screen cursor: RightPadF2+RightPadLeft
+* search backward for clipboard text: RightPadF2+RightPadUp
+* search forward for clipboard text: RightPadF2+RightPadDown
+
+Configuration Functions
+* set text style 6-dot/8-dot: RightPadF1+RightPadRight
+* set skipping of lines with identical content on/off: Status2A
+* set skipping of blank braille windows on/off: Status2C
+* set track screen cursor on/off: Home+Cursor
+* set screen cursor visibility on/off: Status1A
+* set attribute underlining on/off: Status1B
+* set capital letter blinking on/off: Status1C
+
+Speech Functions
+* stop speaking: LeftPadLeft
+* describe character: RoutingKey2
+* speak current line: LeftPadRight
+* speak from top of screen through current line: LeftPadUp
+* speak from current line through bottom of screen: LeftPadDown
+* go to current speaking position: LeftPadF1
+* decrease speaking volume: LeftPadF2+LeftPadDown
+* increase speaking volume: LeftPadF2+LeftPadUp
+* decrease speaking rate: LeftPadF2+LeftPadLeft
+* increase speaking rate: LeftPadF2+LeftPadRight
+* set autospeak on/off: LeftPadF2
+
+Special Functions
+* remember current braille window position: Home+RoutingKey2
+* go to remembered braille window position: Home+RoutingKey1
+* restart braille driver: RightPadF1+RightPadF2
+* restart speech driver: LeftPadF1+LeftPadF2
 
 Menu Bindings
-go to previous item: Up
-go to next item: Down
-go to first item: Home+Up
-go to last item: Home+Down
-go left one window: Left
-go right one window: Right
-restore preferences from disk: Home+Left
-save preferences to disk: Home+Right
-select previous choice: Home
-select next choice: Cursor
-enter/leave preferences menu: Home+Cursor
+-------------
+
+Special Modes
+* enter/leave preferences menu: Home+Cursor
+
+Horizontal Navigation
+* go left one braille window: Left
+* go right one braille window: Right
+
+Menu Operations
+* go to previous item: Up
+* go to next item: Down
+* go to first item: Home+Up
+* go to last item: Home+Down
+* select previous choice: Home
+* select next choice: Cursor
+* restore preferences from disk: Home+Left
+* save preferences to disk: Home+Right
+

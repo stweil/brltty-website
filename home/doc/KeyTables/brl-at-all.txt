@@ -1,57 +1,82 @@
 Key Table: Albatross
+====================
 
 Default Bindings
-go to beginning of top line: Home1
-go to beginning of top line: Home2
-go to beginning of bottom line: End1
-go to beginning of bottom line: End2
-go back after cursor tracking: ExtraCursor1
-go back after cursor tracking: ExtraCursor2
-go to cursor: Cursor1
-go to cursor: Cursor2
-go up one line: Up1
-go up one line: Up2
-go up one line: Up3
-go down one line: Down1
-go down one line: Down2
-go down one line: Down3
-go left one window: Left
-go right one window: Right
-go down to nearest line with different highlighting: F1
-go up to nearest line with different highlighting: F2
-insert clipboard text at cursor: F3
-set cursor tracking on/off: F4
-enter/leave help display: F5
-enter/leave command learn mode: F6
-go up to previous command prompt: F7
-go down to next command prompt: F8
-go down to nearest line with different content: F9
-go up to nearest line with different content: F10
-bring cursor to line: F11
-set text style 6-dot/8-dot: F12
-enter/leave preferences menu: F13
-enter/leave status display: F14
-go up to last line of previous paragraph: F15
-go down to first line of next paragraph: F16
-set screen image frozen/unfrozen: Attribute1
-set display mode attributes/text: Attribute2
-set cursor visibility on/off: Attribute3
-set attribute underlining on/off: Attribute4
-go left one character: LeftWheelLeft
-go left one character: RightWheelLeft
-go right one character: LeftWheelRight
-go right one character: RightWheelRight
-go up one line: LeftWheelUp
-go up one line: RightWheelUp
-go down one line: LeftWheelDown
-go down one line: RightWheelDown
-bring cursor to character: RoutingKey1
-start new clipboard at character: Attribute2+RoutingKey1
-append to clipboard from character: Attribute1+RoutingKey1
-linear copy to character: Attribute4+RoutingKey1
-rectangular copy to character: Attribute3+RoutingKey1
-describe character: RoutingKey2
-go up to nearest line with less indent than character: Attribute2+RoutingKey2
-go down to nearest line with less indent than character: Attribute1+RoutingKey2
-go up to nearest line with different character: Attribute4+RoutingKey2
-go down to nearest line with different character: Attribute3+RoutingKey2
+----------------
+
+Special Modes
+* enter/leave help display: F5
+* enter/leave command learn mode: F6
+* enter/leave preferences menu: F13
+* enter/leave status display: F14
+* set screen image frozen/unfrozen: Attribute1
+* set display mode attributes/text: Attribute2
+
+Cursor Functions
+* go to screen cursor:
+  + Cursor1
+  + Cursor2
+* go back after cursor tracking:
+  + ExtraCursor1
+  + ExtraCursor2
+* bring screen cursor to character: RoutingKey1
+* bring screen cursor to current line: F11
+
+Vertical Navigation
+* go up one line:
+  + Up1
+  + Up2
+  + Up3
+  + LeftWheelUp
+  + RightWheelUp
+* go down one line:
+  + Down1
+  + Down2
+  + Down3
+  + LeftWheelDown
+  + RightWheelDown
+* go to beginning of top line:
+  + Home1
+  + Home2
+* go to beginning of bottom line:
+  + End1
+  + End2
+* go up to nearest line with different content: F10
+* go down to nearest line with different content: F9
+* go up to nearest line with different highlighting: F2
+* go down to nearest line with different highlighting: F1
+* go up to first line of paragraph: F15
+* go down to first line of next paragraph: F16
+* go up to previous command prompt: F7
+* go down to next command prompt: F8
+* go up to nearest line with less indent than character: Attribute2+RoutingKey2
+* go down to nearest line with less indent than character: Attribute1+RoutingKey2
+* go up to nearest line with different character: Attribute4+RoutingKey2
+* go down to nearest line with different character: Attribute3+RoutingKey2
+
+Horizontal Navigation
+* go left one braille window: Left
+* go right one braille window: Right
+* go left one character:
+  + LeftWheelLeft
+  + RightWheelLeft
+* go right one character:
+  + LeftWheelRight
+  + RightWheelRight
+
+Clipboard Functions
+* start new clipboard at character: Attribute2+RoutingKey1
+* append to clipboard from character: Attribute1+RoutingKey1
+* linear copy to character: Attribute4+RoutingKey1
+* rectangular copy to character: Attribute3+RoutingKey1
+* insert clipboard text after screen cursor: F3
+
+Configuration Functions
+* set text style 6-dot/8-dot: F12
+* set track screen cursor on/off: F4
+* set screen cursor visibility on/off: Attribute3
+* set attribute underlining on/off: Attribute4
+
+Speech Functions
+* describe character: RoutingKey2
+

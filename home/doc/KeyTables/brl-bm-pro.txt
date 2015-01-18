@@ -1,98 +1,131 @@
 Key Table: Baum Vario Pro
+=========================
 
-The display keys are at both ends of the text cell area. From top to bottom:
-* The three at the left are named Display1 through Display3.
-* The three at the right are named Display4 through Display6.
-The wheels on the display module are identified by their ordinal position
-(first through fourth) from the left.
-The larger controls on the status module, from left to right,
-are named StatusButton1 through StatusButton4.
-The smaller controls on the status module, from left to right,
-are named StatusKey1 through StatusKey4.
+Notes
+* The display keys are at both ends of the text cell area. From top to bottom:
+  The three at the left are named Display1 through Display3.
+  The three at the right are named Display4 through Display6.
+* The wheels on the display module are identified by their ordinal position
+* (first through fourth) from the left.
+* The larger controls on the status module, from left to right,
+* are named StatusButton1 through StatusButton4.
+* The smaller controls on the status module, from left to right,
+* are named StatusKey1 through StatusKey4.
 
 Default Bindings
-go left one window: Display2
-go right one window: Display5
-go left one character: Display1+Display3
-go right one character: Display4+Display6
-go to beginning of line: Display1+Display2+Display3
-go to end of line: Display4+Display5+Display6
-go up one line: Display4
-go down one line: Display6
-go to top line: Display1+Display4
-go to bottom line: Display3+Display6
-go to beginning of top line: Display2+Display4
-go to beginning of bottom line: Display2+Display6
-go up to nearest line with different content: Display5+Display4
-go down to nearest line with different content: Display5+Display6
-go up to nearest line with different highlighting: Display2+Display1
-go down to nearest line with different highlighting: Display2+Display3
-go up to previous command prompt: Display2+Display5+Display1+Display4
-go down to next command prompt: Display2+Display5+Display3+Display6
-go up to last line of previous paragraph: Display2+Display5+Display4
-go down to first line of next paragraph: Display2+Display5+Display6
-search backward for clipboard text: Display2+Display4+Display6+Display1
-search forward for clipboard text: Display2+Display4+Display6+Display3
-set cursor tracking on: Display1
-set cursor tracking off: Display3
-go back after cursor tracking: Display1+Display6
-go to cursor: Display2+Display4+Display6
-go to current speech position: Display1+Display3+Display5
-bring cursor to line: Display1+Display3+Display4+Display6
-enter/leave status display: Display2+Display5
-set display mode attributes/text: Display1+Display4+Display5
-show the current date and time: Display1+Display5
-set screen image frozen/unfrozen: Display1+Display2+Display4
-enter/leave help display: Display1+Display2+Display5
-enter/leave preferences menu: Display1+Display3+Display4
-insert clipboard text at cursor: Display1+Display2+Display3+Display4
-restore preferences from disk: Display1+Display2+Display3+Display5
-restart speech driver: Display2+Display3+Display4
-set attribute underlining on/off: Display2+Display3+Display4+Display5
-save preferences to disk: Display2+Display4+Display5+Display6
-set text style 6-dot: Display2+Display3+Display5
-set text style 8-dot: Display2+Display3+Display6
-enter/leave command learn mode: Display1+Display4+Display5+Display6
-switch to next virtual terminal: Display1+Display2+Display3+Display6
-switch to previous virtual terminal: Display3+Display4+Display5+Display6
-stop speaking: Display3+Display4
-speak current line: Display3+Display5
-speak from top of screen through current line: Display3+Display5+Display4
-speak from current line through bottom of screen: Display3+Display5+Display6
-set autospeak on/off: Display3+Display4+Display6
-go up one line: FirstWheelUp
-go down one line: FirstWheelDown
-go to cursor: FirstWheelPress
-go up one line: SecondWheelUp
-go down one line: SecondWheelDown
-go to cursor: SecondWheelPress
-go up one line: ThirdWheelUp
-go down one line: ThirdWheelDown
-go to cursor: ThirdWheelPress
-go up one line: FourthWheelUp
-go down one line: FourthWheelDown
-go to cursor: FourthWheelPress
-enter/leave help display: StatusButton1
-enter/leave command learn mode: StatusButton2
-enter/leave status display: StatusButton3
-enter/leave preferences menu: StatusButton4
-set cursor visibility on/off: StatusKey1
-set attribute underlining on/off: StatusKey2
-set screen image frozen/unfrozen: StatusKey3
-set text style 6-dot/8-dot: StatusKey4
-bring cursor to character: RoutingKey
-start new clipboard at character: Display1+RoutingKey
-append to clipboard from character: Display2+RoutingKey
-linear copy to character: Display4+RoutingKey
-rectangular copy to character: Display5+RoutingKey
-copy characters to clipboard: RoutingKey+RoutingKey
-append characters to clipboard: Display2+RoutingKey+RoutingKey
-describe character: Display3+RoutingKey
-place left end of window at character: Display6+RoutingKey
-go up to nearest line with less indent than character: Display2+Display1+RoutingKey
-go down to nearest line with less indent than character: Display2+Display3+RoutingKey
-go up to nearest line with different character: Display5+Display4+RoutingKey
-go down to nearest line with different character: Display5+Display6+RoutingKey
-remember current window position: Display1+Display3+RoutingKey
-go to remembered window position: Display4+Display6+RoutingKey
-switch to virtual terminal: Display4+Display5+Display6+RoutingKey
+----------------
+
+Special Modes
+* enter/leave help display:
+  + Display1+Display2+Display5
+  + StatusButton1
+* enter/leave command learn mode:
+  + Display1+Display4+Display5+Display6
+  + StatusButton2
+* enter/leave preferences menu:
+  + Display1+Display3+Display4
+  + StatusButton4
+* show current date and time: Display1+Display5
+* enter/leave status display:
+  + Display2+Display5
+  + StatusButton3
+* set screen image frozen/unfrozen:
+  + Display1+Display2+Display4
+  + StatusKey3
+* set display mode attributes/text: Display1+Display4+Display5
+
+Cursor Functions
+* go to screen cursor:
+  + Display2+Display4+Display6
+  + FirstWheelPress
+  + SecondWheelPress
+  + ThirdWheelPress
+  + FourthWheelPress
+* go back after cursor tracking: Display1+Display6
+* bring screen cursor to character: RoutingKey
+* bring screen cursor to current line: Display1+Display3+Display4+Display6
+
+Vertical Navigation
+* go up one line:
+  + Display4
+  + FirstWheelUp
+  + SecondWheelUp
+  + ThirdWheelUp
+  + FourthWheelUp
+* go down one line:
+  + Display6
+  + FirstWheelDown
+  + SecondWheelDown
+  + ThirdWheelDown
+  + FourthWheelDown
+* go to top line: Display1+Display4
+* go to bottom line: Display3+Display6
+* go to beginning of top line: Display2+Display4
+* go to beginning of bottom line: Display2+Display6
+* go up to nearest line with different content: Display5+Display4
+* go down to nearest line with different content: Display5+Display6
+* go up to nearest line with different highlighting: Display2+Display1
+* go down to nearest line with different highlighting: Display2+Display3
+* go up to first line of paragraph: Display2+Display5+Display4
+* go down to first line of next paragraph: Display2+Display5+Display6
+* go up to previous command prompt: Display2+Display5+Display1+Display4
+* go down to next command prompt: Display2+Display5+Display3+Display6
+* go up to nearest line with less indent than character: Display2+Display1+RoutingKey
+* go down to nearest line with less indent than character: Display2+Display3+RoutingKey
+* go up to nearest line with different character: Display5+Display4+RoutingKey
+* go down to nearest line with different character: Display5+Display6+RoutingKey
+
+Horizontal Navigation
+* go left one braille window: Display2
+* go right one braille window: Display5
+* go to beginning of line: Display1+Display2+Display3
+* go to end of line: Display4+Display5+Display6
+* go left one character: Display1+Display3
+* go right one character: Display4+Display6
+* place left end of braille window at character: Display6+RoutingKey
+
+Clipboard Functions
+* start new clipboard at character: Display1+RoutingKey
+* append to clipboard from character: Display2+RoutingKey
+* linear copy to character: Display4+RoutingKey
+* rectangular copy to character: Display5+RoutingKey
+* copy characters to clipboard: RoutingKey+RoutingKey
+* append characters to clipboard: Display2+RoutingKey+RoutingKey
+* insert clipboard text after screen cursor: Display1+Display2+Display3+Display4
+* search backward for clipboard text: Display2+Display4+Display6+Display1
+* search forward for clipboard text: Display2+Display4+Display6+Display3
+
+Configuration Functions
+* set text style 6-dot/8-dot: StatusKey4
+* set text style 6-dot: Display2+Display3+Display5
+* set text style 8-dot: Display2+Display3+Display6
+* set track screen cursor on: Display1
+* set track screen cursor off: Display3
+* set screen cursor visibility on/off: StatusKey1
+* set attribute underlining on/off:
+  + Display2+Display3+Display4+Display5
+  + StatusKey2
+
+Menu Operations
+* restore preferences from disk: Display1+Display2+Display3+Display5
+* save preferences to disk: Display2+Display4+Display5+Display6
+
+Speech Functions
+* stop speaking: Display3+Display4
+* describe character: Display3+RoutingKey
+* speak current line: Display3+Display5
+* speak from top of screen through current line: Display3+Display5+Display4
+* speak from current line through bottom of screen: Display3+Display5+Display6
+* go to current speaking position: Display1+Display3+Display5
+* set autospeak on/off: Display3+Display4+Display6
+
+Keyboard Input
+* switch to virtual terminal: Display4+Display5+Display6+RoutingKey
+* switch to previous virtual terminal: Display3+Display4+Display5+Display6
+* switch to next virtual terminal: Display1+Display2+Display3+Display6
+
+Special Functions
+* remember current braille window position: Display1+Display3+RoutingKey
+* go to remembered braille window position: Display4+Display6+RoutingKey
+* restart speech driver: Display2+Display3+Display4
+

@@ -1,27 +1,45 @@
 Key Table: Metec I with 6 keys
+==============================
 
 Default Bindings
-go to top line: LeftUp
-go to bottom line: LeftDown
-go up one line: RightUp
-go down one line: RightDown
-go left one window: LeftSelect
-go right one window: RightSelect
-go back after cursor tracking: LeftSelect+LeftUp+LeftDown
-go to cursor: RightSelect+RightUp+RightDown
-bring cursor to character: RoutingKey
-start new clipboard at character: LeftUp+RoutingKey
-append characters to clipboard: LeftSelect+RoutingKey
-linear copy to character: RightUp+RoutingKey
-rectangular copy to character: RightSelect+RoutingKey
-place left end of window at character: LeftDown+RoutingKey
-describe character: RightDown+RoutingKey
+----------------
+
+Cursor Functions
+* go to screen cursor: RightSelect+RightUp+RightDown
+* go back after cursor tracking: LeftSelect+LeftUp+LeftDown
+* bring screen cursor to character: RoutingKey
+
+Vertical Navigation
+* go up one line: RightUp
+* go down one line: RightDown
+* go to top line: LeftUp
+* go to bottom line: LeftDown
+
+Horizontal Navigation
+* go left one braille window: LeftSelect
+* go right one braille window: RightSelect
+* place left end of braille window at character: LeftDown+RoutingKey
+
+Clipboard Functions
+* start new clipboard at character: LeftUp+RoutingKey
+* linear copy to character: RightUp+RoutingKey
+* rectangular copy to character: RightSelect+RoutingKey
+* append characters to clipboard: LeftSelect+RoutingKey
+
+Speech Functions
+* describe character: RightDown+RoutingKey
 
 Menu Bindings
-go to first item: LeftUp
-go to last item: LeftDown
-go to previous item: RightUp
-go to next item: RightDown
-select previous choice: LeftSelect
-select next choice: RightSelect
-enter/leave preferences menu: LeftSelect+LeftUp+LeftDown
+-------------
+
+Special Modes
+* enter/leave preferences menu: LeftSelect+LeftUp+LeftDown
+
+Menu Operations
+* go to previous item: RightUp
+* go to next item: RightDown
+* go to first item: LeftUp
+* go to last item: LeftDown
+* select previous choice: LeftSelect
+* select next choice: RightSelect
+

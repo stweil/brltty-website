@@ -1,43 +1,55 @@
 Key Table: Papenmeier BrailleX IB 80 CR Soft
+============================================
 
-RoutingKey1 refers to any of the keys behind the text cells.
-The keys behind the status cells are named Status1 through Status4.
+Notes
+* RoutingKey1 refers to any of the keys behind the text cells.
+* The keys behind the status cells are named Status.1 through Status.4.
 
 Default Bindings
-go to cursor: Home
-go up several lines: Up
-go down several lines: Down
-go up one line: Backward
-go down one line: Forward
-go left half a window: Cursor
-go right half a window: Braille
-go left one window: Function
-go right one window: Attribute
-go to beginning of line: Function+Home
-go to end of line: Attribute+Home
-go left one character: Cursor+Home
-go right one character: Braille+Home
-go up to nearest line with different content: Function+Up
-go up to nearest line with different highlighting: Attribute+Up
-go up to last line of previous paragraph: Cursor+Up
-search backward for clipboard text: Braille+Up
-go down to nearest line with different content: Function+Down
-go down to nearest line with different highlighting: Attribute+Down
-go down to first line of next paragraph: Cursor+Down
-search forward for clipboard text: Braille+Down
-go to beginning of top line: Function+Backward
-go to top line: Attribute+Backward
-go to beginning of bottom line: Function+Forward
-go to bottom line: Attribute+Forward
-start new clipboard at character: Function+RoutingKey1
-rectangular copy to character: Attribute+RoutingKey1
-go up to nearest line with less indent than character: Cursor+RoutingKey1
-go down to nearest line with less indent than character: Braille+RoutingKey1
-insert clipboard text at cursor: Function+Attribute
-bring cursor to character: RoutingKey1
-enter/leave help display: Status1
-enter/leave command learn mode: Status2
-bring cursor to line: Status3
-set display mode attributes/text: Status4
-set display mode text: Function+Status4
-set display mode attributes: Attribute+Status4
+----------------
+
+Special Modes
+* enter/leave help display: Status.1
+* enter/leave command learn mode: Status.2
+* enter/leave status display: Status.4
+
+Cursor Functions
+* go to screen cursor: Home
+* bring screen cursor to character: RoutingKey1
+* bring screen cursor to current line: Status.3
+
+Vertical Navigation
+* go up one line: Backward
+* go down one line: Forward
+* go to top line: Attribute+Backward
+* go to bottom line: Attribute+Forward
+* go to beginning of top line: Function+Backward
+* go to beginning of bottom line: Function+Forward
+* go up to nearest line with different content: Function+Up
+* go down to nearest line with different content: Function+Down
+* go up to nearest line with different highlighting: Attribute+Up
+* go down to nearest line with different highlighting: Attribute+Down
+* go up to first line of paragraph: Cursor+Up
+* go down to first line of next paragraph: Cursor+Down
+* go up several lines: Up
+* go down several lines: Down
+* go up to nearest line with less indent than character: Cursor+RoutingKey1
+* go down to nearest line with less indent than character: Braille+RoutingKey1
+
+Horizontal Navigation
+* go left one braille window: Function
+* go right one braille window: Attribute
+* go to beginning of line: Function+Home
+* go to end of line: Attribute+Home
+* go left one character: Cursor+Home
+* go right one character: Braille+Home
+* go left half a braille window: Cursor
+* go right half a braille window: Braille
+
+Clipboard Functions
+* start new clipboard at character: Function+RoutingKey1
+* rectangular copy to character: Attribute+RoutingKey1
+* insert clipboard text after screen cursor: Function+Attribute
+* search backward for clipboard text: Braille+Up
+* search forward for clipboard text: Braille+Down
+

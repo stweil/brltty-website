@@ -1,60 +1,77 @@
 Key Table: Papenmeier BrailleX 2D Lite (plus)
+=============================================
 
-RoutingKey1 refers to any of the keys behind the text cells.
-The keys to the left of the status cells are named Status1 through Status13.
+Notes
+* RoutingKey1 refers to any of the keys behind the text cells.
+* The keys to the left of the status cells are named Status.1 through Status.13.
 
 Default Bindings
-go to cursor: Home
-go up several lines: Up
-go down several lines: Down
-go up one line: Backward
-go down one line: Forward
-go left half a window: Cursor
-go right half a window: Braille
-go left one window: Function
-go right one window: Attribute
-go to beginning of line: Function+Home
-go to end of line: Attribute+Home
-go left one character: Cursor+Home
-go right one character: Braille+Home
-go up to nearest line with different content: Function+Up
-go up to nearest line with different highlighting: Attribute+Up
-go up to last line of previous paragraph: Cursor+Up
-search backward for clipboard text: Braille+Up
-go down to nearest line with different content: Function+Down
-go down to nearest line with different highlighting: Attribute+Down
-go down to first line of next paragraph: Cursor+Down
-search forward for clipboard text: Braille+Down
-go to beginning of top line: Function+Backward
-go to top line: Attribute+Backward
-go to beginning of bottom line: Function+Forward
-go to bottom line: Attribute+Forward
-start new clipboard at character: Function+RoutingKey1
-rectangular copy to character: Attribute+RoutingKey1
-go up to nearest line with less indent than character: Cursor+RoutingKey1
-go down to nearest line with less indent than character: Braille+RoutingKey1
-insert clipboard text at cursor: Function+Attribute
-bring cursor to character: RoutingKey1
-enter/leave help display: Status1
-enter/leave command learn mode: Status2
-bring cursor to line: Status3
-go back after cursor tracking: Status4
-enter/leave status display: Status5
-set cursor tracking on/off: Status6
-set cursor tracking off: Function+Status6
-set cursor tracking on: Attribute+Status6
-set display mode attributes/text: Status7
-set display mode text: Function+Status7
-set display mode attributes: Attribute+Status7
-set screen image frozen/unfrozen: Status8
-set screen image unfrozen: Function+Status8
-set screen image frozen: Attribute+Status8
-enter/leave preferences menu: Status9
-restore preferences from disk: Status10
-set cursor visibility on/off: Status11
-set cursor visibility off: Function+Status11
-set cursor visibility on: Attribute+Status11
-set attribute underlining on/off: Status12
-set attribute underlining off: Function+Status12
-set attribute underlining on: Attribute+Status12
-insert clipboard text at cursor: Status13
+----------------
+
+Special Modes
+* enter/leave help display: Status.1
+* enter/leave command learn mode: Status.2
+* enter/leave preferences menu: Status.9
+* show current date and time: Status.12
+* enter/leave status display: Status.4
+* set screen image frozen/unfrozen: Status.8
+* set screen image frozen: Status.8+Attribute
+* set screen image unfrozen: Status.8+Function
+* set display mode attributes/text: Status.7
+* set display mode attributes: Status.7+Attribute
+* set display mode text: Status.7+Function
+
+Cursor Functions
+* go to screen cursor: Home
+* go back after cursor tracking: Status.5
+* bring screen cursor to character: RoutingKey1
+* bring screen cursor to current line: Status.3
+
+Vertical Navigation
+* go up one line: Backward
+* go down one line: Forward
+* go to top line: Attribute+Backward
+* go to bottom line: Attribute+Forward
+* go to beginning of top line: Function+Backward
+* go to beginning of bottom line: Function+Forward
+* go up to nearest line with different content: Function+Up
+* go down to nearest line with different content: Function+Down
+* go up to nearest line with different highlighting: Attribute+Up
+* go down to nearest line with different highlighting: Attribute+Down
+* go up to first line of paragraph: Cursor+Up
+* go down to first line of next paragraph: Cursor+Down
+* go up several lines: Up
+* go down several lines: Down
+* go up to nearest line with less indent than character: Cursor+RoutingKey1
+* go down to nearest line with less indent than character: Braille+RoutingKey1
+
+Horizontal Navigation
+* go left one braille window: Function
+* go right one braille window: Attribute
+* go to beginning of line: Function+Home
+* go to end of line: Attribute+Home
+* go left one character: Cursor+Home
+* go right one character: Braille+Home
+* go left half a braille window: Cursor
+* go right half a braille window: Braille
+
+Clipboard Functions
+* start new clipboard at character: Function+RoutingKey1
+* rectangular copy to character: Attribute+RoutingKey1
+* insert clipboard text after screen cursor:
+  + Function+Attribute
+  + Status.13
+* search backward for clipboard text: Braille+Up
+* search forward for clipboard text: Braille+Down
+
+Configuration Functions
+* set track screen cursor on/off: Status.6
+* set track screen cursor on: Status.6+Attribute
+* set track screen cursor off: Status.6+Function
+* set screen cursor visibility on/off: Status.10
+* set screen cursor visibility on: Status.10+Attribute
+* set screen cursor visibility off: Status.10+Function
+* set attribute underlining on/off: Status.11
+* set attribute underlining on: Status.11+Attribute
+* set attribute underlining off: Status.11+Function
+

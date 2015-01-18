@@ -1,126 +1,167 @@
 Key Table: Papenmeier BrailleX Trio
+===================================
 
-RoutingKey1 refers to any of the keys behind the text cells.
+Notes
+* RoutingKey1 refers to any of the keys behind the text cells.
 
 Default Bindings
-go up one line: BarUp1
-go down one line: BarDown1
-go to top line: BarUp2
-go to bottom line: BarDown2
-go left one window: BarLeft1
-go right one window: BarRight1
-go to beginning of line: BarLeft2
-go to end of line: BarRight2
-bring cursor to character: RoutingKey1
-go up to nearest line with less indent than character: BarUp1+RoutingKey1
-go down to nearest line with less indent than character: BarDown1+RoutingKey1
-place left end of window at character: BarUp2+RoutingKey1
-describe character: BarDown2+RoutingKey1
-append to clipboard from character: BarLeft1+RoutingKey1
-linear copy to character: BarRight1+RoutingKey1
-start new clipboard at character: BarLeft2+RoutingKey1
-rectangular copy to character: BarRight2+RoutingKey1
-go back after cursor tracking: LeftKeyRear
-go to cursor: LeftKeyFront
-enter/leave help display: RightKeyRear
-enter/leave command learn mode: RightKeyFront
-set text style 6-dot/8-dot: LeftKeyRear+BarUp1
-insert clipboard text at cursor: LeftKeyRear+BarDown1
-set capital letter blinking on/off: LeftKeyRear+BarUp2
-bring cursor to line: LeftKeyRear+BarDown2
-set display mode attributes/text: LeftKeyRear+BarLeft1
-set cursor tracking on/off: LeftKeyRear+BarRight1
-set attribute underlining on/off: LeftKeyRear+BarLeft2
-set cursor visibility on/off: LeftKeyRear+BarRight2
-set autospeak on/off: LeftKeyFront+BarUp1
-set autorepeat on/off: LeftKeyFront+BarDown1
-restart braille driver: LeftKeyFront+BarUp2
-set screen image frozen/unfrozen: LeftKeyFront+BarDown2
-enter/leave status display: LeftKeyFront+BarLeft1
-enter/leave preferences menu: LeftKeyFront+BarRight1
-restore preferences from disk: LeftKeyFront+BarLeft2
-save preferences to disk: LeftKeyFront+BarRight2
-speak from top of screen through current line: RightKeyRear+BarUp1
-speak from current line through bottom of screen: RightKeyRear+BarDown1
-increase speech volume: RightKeyRear+BarUp2
-decrease speech volume: RightKeyRear+BarDown2
-stop speaking: RightKeyRear+BarLeft1
-speak current line: RightKeyRear+BarRight1
-decrease speech rate: RightKeyRear+BarLeft2
-increase speech rate: RightKeyRear+BarRight2
-go to current speech position: RightKeyFront+BarUp1
-set alert tunes on/off: RightKeyFront+BarDown1
-restart speech driver: RightKeyFront+BarUp2
-set skipping of lines with identical content on/off: RightKeyFront+BarLeft1
-set skipping of blank windows on/off: RightKeyFront+BarRight1
-set sliding window on/off: RightKeyFront+BarRight2
-set skipping of blank windows on/off: Space+Dot1+Dot2
-set skipping of blank windows on: Space+Dot1+Dot2+Dot8
-set skipping of blank windows off: Space+Dot1+Dot2+Dot7
-set cursor visibility on/off: Space+Dot1+Dot4
-set cursor visibility on: Space+Dot1+Dot4+Dot8
-set cursor visibility off: Space+Dot1+Dot4+Dot7
-set display mode attributes/text: Space+Dot1+Dot4+Dot5
-set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
-set display mode text: Space+Dot1+Dot4+Dot5+Dot7
-set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
-set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
-set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
-enter/leave help display: Space+Dot1+Dot2+Dot5
-set skipping of lines with identical content on/off: Space+Dot2+Dot4
-set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
-set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
-set braille keyboard enabled/disabled: Space+Dot1+Dot3
-set braille keyboard enabled: Space+Dot1+Dot3+Dot8
-set braille keyboard disabled: Space+Dot1+Dot3+Dot7
-enter/leave command learn mode: Space+Dot1+Dot2+Dot3
-enter/leave preferences menu: Space+Dot1+Dot2+Dot3+Dot4
-restore preferences from disk: Space+Dot1+Dot2+Dot3+Dot4+Dot7
-save preferences to disk: Space+Dot1+Dot2+Dot3+Dot4+Dot8
-set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
-set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
-set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
-enter/leave status display: Space+Dot2+Dot3+Dot4
-set cursor tracking on/off: Space+Dot2+Dot3+Dot4+Dot5
-set cursor tracking on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
-set cursor tracking off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
-set attribute underlining on/off: Space+Dot1+Dot3+Dot6
-set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
-set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
-bring cursor to line: Space+Dot1+Dot2+Dot3+Dot6
-switch to previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
-switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
-set sliding window on/off: Space+Dot2+Dot4+Dot5+Dot6
-set sliding window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
-set sliding window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
-insert clipboard text at cursor: Space+Dot1+Dot3+Dot4+Dot6
-restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
-save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
-set text style 6-dot: Space+Dot2+Dot3+Dot5
-set text style 8-dot: Space+Dot2+Dot3+Dot6
-backspace key: Space+Dot7
-enter key: Space+Dot8
-cursor-left key: Space+Dot3
-cursor-right key: Space+Dot6
-home key: Space+Dot2
-end key: Space+Dot5
-cursor-up key: Space+Dot1
-cursor-down key: Space+Dot4
-page-up key: Space+Dot2+Dot3
-page-down key: Space+Dot5+Dot6
-tab key: Space+Dot2+Dot3+Dot5+Dot6
-insert key: Space+Dot3+Dot5
-delete key: Space+Dot2+Dot5+Dot6
-escape key: Space+Dot2+Dot6
-braille keyboard dot1: Dot1
-braille keyboard dot2: Dot2
-braille keyboard dot3: Dot3
-braille keyboard dot4: Dot4
-braille keyboard dot5: Dot5
-braille keyboard dot6: Dot6
-braille keyboard dot7: Dot7
-braille keyboard dot8: Dot8
-braille keyboard space: LeftSpace
-braille keyboard space: RightSpace
-braille keyboard control: LeftThumb
-braille keyboard meta: RightThumb
+----------------
+
+Special Modes
+* enter/leave help display:
+  + RightKeyRear
+  + Space+Dot1+Dot2+Dot5
+* enter/leave command learn mode:
+  + RightKeyFront
+  + Space+Dot1+Dot2+Dot3
+* enter/leave preferences menu:
+  + LeftKeyFront+BarRight1
+  + Space+Dot1+Dot2+Dot3+Dot4
+* enter/leave status display:
+  + LeftKeyFront+BarLeft1
+  + Space+Dot2+Dot3+Dot4
+* set screen image frozen/unfrozen:
+  + LeftKeyFront+BarDown2
+  + Space+Dot1+Dot2+Dot4
+* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+* set display mode attributes/text:
+  + LeftKeyRear+BarLeft1
+  + Space+Dot1+Dot4+Dot5
+* set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
+* set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+
+Cursor Functions
+* go to screen cursor: LeftKeyFront
+* go back after cursor tracking: LeftKeyRear
+* bring screen cursor to character: RoutingKey1
+* bring screen cursor to current line:
+  + LeftKeyRear+BarDown2
+  + Space+Dot1+Dot2+Dot3+Dot6
+
+Vertical Navigation
+* go up one line: BarUp1
+* go down one line: BarDown1
+* go to top line: BarUp2
+* go to bottom line: BarDown2
+* go up to nearest line with less indent than character: BarUp1+RoutingKey1
+* go down to nearest line with less indent than character: BarDown1+RoutingKey1
+
+Horizontal Navigation
+* go left one braille window: BarLeft1
+* go right one braille window: BarRight1
+* go to beginning of line: BarLeft2
+* go to end of line: BarRight2
+* place left end of braille window at character: BarUp2+RoutingKey1
+
+Clipboard Functions
+* start new clipboard at character: BarLeft2+RoutingKey1
+* append to clipboard from character: BarLeft1+RoutingKey1
+* linear copy to character: BarRight1+RoutingKey1
+* rectangular copy to character: BarRight2+RoutingKey1
+* insert clipboard text after screen cursor:
+  + LeftKeyRear+BarDown1
+  + Space+Dot1+Dot3+Dot4+Dot6
+* save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
+* restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
+
+Configuration Functions
+* set autorepeat on/off:
+  + LeftKeyFront+BarDown1
+  + Space+Dot1+Dot2+Dot3+Dot5
+* set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
+* set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
+* set text style 6-dot/8-dot: LeftKeyRear+BarUp1
+* set text style 6-dot: Space+Dot2+Dot3+Dot5
+* set text style 8-dot: Space+Dot2+Dot3+Dot6
+* set skipping of lines with identical content on/off:
+  + RightKeyFront+BarLeft1
+  + Space+Dot2+Dot4
+* set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
+* set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
+* set skipping of blank braille windows on/off:
+  + RightKeyFront+BarRight1
+  + Space+Dot1+Dot2
+* set skipping of blank braille windows on: Space+Dot1+Dot2+Dot8
+* set skipping of blank braille windows off: Space+Dot1+Dot2+Dot7
+* set sliding braille window on/off:
+  + RightKeyFront+BarRight2
+  + Space+Dot2+Dot4+Dot5+Dot6
+* set sliding braille window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
+* set sliding braille window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
+* set track screen cursor on/off:
+  + LeftKeyRear+BarRight1
+  + Space+Dot2+Dot3+Dot4+Dot5
+* set track screen cursor on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
+* set track screen cursor off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
+* set screen cursor visibility on/off:
+  + LeftKeyRear+BarRight2
+  + Space+Dot1+Dot4
+* set screen cursor visibility on: Space+Dot1+Dot4+Dot8
+* set screen cursor visibility off: Space+Dot1+Dot4+Dot7
+* set attribute underlining on/off:
+  + LeftKeyRear+BarLeft2
+  + Space+Dot1+Dot3+Dot6
+* set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
+* set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
+* set capital letter blinking on/off: LeftKeyRear+BarUp2
+* set alert tunes on/off: RightKeyFront+BarDown1
+
+Menu Operations
+* restore preferences from disk:
+  + LeftKeyFront+BarLeft2
+  + Space+Dot1+Dot2+Dot3+Dot4+Dot7
+* save preferences to disk:
+  + LeftKeyFront+BarRight2
+  + Space+Dot1+Dot2+Dot3+Dot4+Dot8
+
+Speech Functions
+* stop speaking: RightKeyRear+BarLeft1
+* describe character: BarDown2+RoutingKey1
+* speak current line: RightKeyRear+BarRight1
+* speak from top of screen through current line: RightKeyRear+BarUp1
+* speak from current line through bottom of screen: RightKeyRear+BarDown1
+* go to current speaking position: RightKeyFront+BarUp1
+* decrease speaking volume: RightKeyRear+BarDown2
+* increase speaking volume: RightKeyRear+BarUp2
+* decrease speaking rate: RightKeyRear+BarLeft2
+* increase speaking rate: RightKeyRear+BarRight2
+* set autospeak on/off: LeftKeyFront+BarUp1
+
+Keyboard Input
+* braille keyboard dot1: Dot1
+* braille keyboard dot2: Dot2
+* braille keyboard dot3: Dot3
+* braille keyboard dot4: Dot4
+* braille keyboard dot5: Dot5
+* braille keyboard dot6: Dot6
+* braille keyboard dot7: Dot7
+* braille keyboard dot8: Dot8
+* braille keyboard space: LeftSpace
+* braille keyboard space: RightSpace
+* braille keyboard control: LeftThumb
+* braille keyboard meta: RightThumb
+* set braille keyboard enabled/disabled: Space+Dot1+Dot3
+* set braille keyboard enabled: Space+Dot1+Dot3+Dot8
+* set braille keyboard disabled: Space+Dot1+Dot3+Dot7
+* enter key: Space+Dot8
+* tab key: Space+Dot2+Dot3+Dot5+Dot6
+* backspace key: Space+Dot7
+* escape key: Space+Dot2+Dot6
+* cursor-left key: Space+Dot3
+* cursor-right key: Space+Dot6
+* cursor-up key: Space+Dot1
+* cursor-down key: Space+Dot4
+* page-up key: Space+Dot2+Dot3
+* page-down key: Space+Dot5+Dot6
+* home key: Space+Dot2
+* end key: Space+Dot5
+* insert key: Space+Dot3+Dot5
+* delete key: Space+Dot2+Dot5+Dot6
+* switch to previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
+* switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
+
+Special Functions
+* restart braille driver: LeftKeyFront+BarUp2
+* restart speech driver: RightKeyFront+BarUp2
+

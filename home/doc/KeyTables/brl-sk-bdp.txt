@@ -1,62 +1,105 @@
 Key Table: Seika Braille Displays
+=================================
 
-The round keys to the left/right of the braille cells are named K1 and K8.
-The left/right ends of the left rocker are named K2 and K3.
-The long keys to the left/right of the center are named K4 and K5.
-The left/right ends of the right rocker are named K6 and K7.
+Notes
+* The round keys to the left/right of the braille cells are named K1 and K8.
+* The left/right ends of the left rocker are named K2 and K3.
+* The long keys to the left/right of the center are named K4 and K5.
+* The left/right ends of the right rocker are named K6 and K7.
 
 Default Bindings
-bring cursor to character: RoutingKey
-go left one window: K1
-go right one window: K8
-go up one line: K2
-go down one line: K3
-go to beginning of line: K2+K3
-go left to nearest non-blank window: K6
-go right to nearest non-blank window: K7
-insert clipboard text at cursor: K6+K7
-set cursor tracking on/off: K4
-go to cursor or go back after cursor tracking: K5
-bring cursor to line: K4+K5
-go to beginning of top line: K6+K2
-go to beginning of bottom line: K6+K3
-go to top line: K7+K2
-go to bottom line: K7+K3
-go up to nearest line with different highlighting: K4+K2
-go down to nearest line with different highlighting: K4+K3
-go up to nearest line with different content: K5+K2
-go down to nearest line with different content: K5+K3
-go up to previous command prompt: K4+K6
-go down to next command prompt: K4+K7
-go up to last line of previous paragraph: K5+K6
-go down to first line of next paragraph: K5+K7
-go up to nearest line with less indent than character: K1+K8+K2, RoutingKey
-go down to nearest line with less indent than character: K1+K8+K3, RoutingKey
-place left end of window at character: K1+K8+K4, RoutingKey
-describe character: K1+K8+K5, RoutingKey
-go up to nearest line with different character: K1+K8+K6, RoutingKey
-go down to nearest line with different character: K1+K8+K7, RoutingKey
-start new clipboard at character: K1+K8+K2+K6, RoutingKey
-append to clipboard from character: K1+K8+K2+K7, RoutingKey
-linear copy to character: K1+K8+K3+K6, RoutingKey
-rectangular copy to character: K1+K8+K3+K7, RoutingKey
-enter/leave help display: K1+K2
-enter/leave command learn mode: K1+K3
-restore preferences from disk: K1+K4
-save preferences to disk: K1+K5
-enter/leave preferences menu: K1+K6
-enter/leave status display: K1+K7
-set display mode attributes/text: K8+K2
-set screen image frozen/unfrozen: K8+K3
-set text style 6-dot/8-dot: K8+K6
-set skipping of lines with identical content on/off: K8+K7
+----------------
+
+Cursor Functions
+* go to screen cursor or go back after cursor tracking: K5
+* bring screen cursor to character: RoutingKey
+* bring screen cursor to current line: K4+K5
+
+Vertical Navigation
+* go up one line: K2
+* go down one line: K3
+* go to top line: K7+K2
+* go to bottom line: K7+K3
+* go to beginning of top line: K6+K2
+* go to beginning of bottom line: K6+K3
+* go up to nearest line with different content: K5+K2
+* go down to nearest line with different content: K5+K3
+* go up to nearest line with different highlighting: K4+K2
+* go down to nearest line with different highlighting: K4+K3
+* go up to first line of paragraph: K5+K6
+* go down to first line of next paragraph: K5+K7
+* go up to previous command prompt: K4+K6
+* go down to next command prompt: K4+K7
+* go up to nearest line with less indent than character: K1+K8+K2, RoutingKey
+
+Horizontal Navigation
+* go left one braille window: K1
+* go right one braille window: K8
+* go left to nearest non-blank braille window: K6
+* go right to nearest non-blank braille window: K7
+* go to beginning of line: K2+K3
+
+Clipboard Functions
+* insert clipboard text after screen cursor: K6+K7
+
+Configuration Functions
+* set track screen cursor on/off: K4
+
+Vertical Navigation
+* go down to nearest line with less indent than character: K1+K8+K3, RoutingKey
+
+Horizontal Navigation
+* place left end of braille window at character: K1+K8+K4, RoutingKey
+
+Speech Functions
+* describe character: K1+K8+K5, RoutingKey
+
+Vertical Navigation
+* go up to nearest line with different character: K1+K8+K6, RoutingKey
+
+Vertical Navigation
+* go down to nearest line with different character: K1+K8+K7, RoutingKey
+
+Clipboard Functions
+* start new clipboard at character: K1+K8+K2+K6, RoutingKey
+
+Clipboard Functions
+* append to clipboard from character: K1+K8+K2+K7, RoutingKey
+
+Clipboard Functions
+* linear copy to character: K1+K8+K3+K6, RoutingKey
+
+Clipboard Functions
+* rectangular copy to character: K1+K8+K3+K7, RoutingKey
+
+Special Modes
+* enter/leave help display: K1+K2
+* enter/leave command learn mode: K1+K3
+* enter/leave preferences menu: K1+K6
+* enter/leave status display: K1+K7
+* set screen image frozen/unfrozen: K8+K3
+* set display mode attributes/text: K8+K2
+
+Configuration Functions
+* set text style 6-dot/8-dot: K8+K6
+* set skipping of lines with identical content on/off: K8+K7
+
+Menu Operations
+* restore preferences from disk: K1+K4
+* save preferences to disk: K1+K5
 
 Menu Bindings
-go left one window: K1
-go right one window: K8
-go to previous item: K2
-go to next item: K3
-select previous choice: K6
-select next choice: K7
-go to first item: K4
-go to last item: K5
+-------------
+
+Horizontal Navigation
+* go left one braille window: K1
+* go right one braille window: K8
+
+Menu Operations
+* go to previous item: K2
+* go to next item: K3
+* go to first item: K4
+* go to last item: K5
+* select previous choice: K6
+* select next choice: K7
+

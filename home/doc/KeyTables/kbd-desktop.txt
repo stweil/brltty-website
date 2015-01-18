@@ -1,47 +1,69 @@
 Key Table: Bindings for Full Keyboards
+======================================
 
 Default Bindings
-speak current line: KP0+KP5
-go up one line: KP0+KP8
-go down one line: KP0+KP2
-go up to previous command prompt: ShiftLeft+KP0+KP8
-go down to next command prompt: ShiftLeft+KP0+KP2
-go to beginning of line: ShiftLeft+KP0+KP7
-go to end of line: ShiftLeft+KP0+KP1
-go up to last line of previous paragraph: ControlLeft+KP0+KP8
-go down to first line of next paragraph: ControlLeft+KP0+KP2
-describe character at cursor: ControlLeft+KP0+KP5
-go to beginning of top line: KP0+KP7
-go to beginning of bottom line: KP0+KP1
-speak from top of screen through current line: KP0+KP9
-speak from current line through bottom of screen: KP0+KP3
-stop speaking: KP0+KP4
-stop speaking: ControlLeft
-stop speaking: ControlRight
-set autospeak on/off: KP0+KP6
-set cursor tracking on/off: KP0+KPPeriod
-go to cursor: KP0+KPEnter
-start new clipboard at character at cursor: KP0+KPDivide
-linear copy to character at cursor: KP0+KPMultiply
-rectangular copy to character at cursor: KP0+KPMinus
-insert clipboard text at cursor: KP0+KPPlus
-append to clipboard from character at cursor: ControlLeft+KP0+KPPlus
-enter/leave preferences menu: ControlLeft+ShiftLeft+KP0+KP2
-restore preferences from disk: ControlLeft+ShiftLeft+KP0+KP4
-save preferences to disk: ControlLeft+ShiftLeft+KP0+KP6
-enter/leave help display: ControlLeft+ShiftLeft+KP0+KP7
-enter/leave status display: ControlLeft+ShiftLeft+KP0+KP8
-enter/leave command learn mode: ControlLeft+ShiftLeft+KP0+KP9
-restart braille driver: ControlLeft+ShiftLeft+KP0+KP1
-restart speech driver: ControlLeft+ShiftLeft+KP0+KP3
-show the current date and time: KP0+T
-remember current window position #1: KP0+S
-go to remembered window position #1: KP0+G
-remember current window position #2: ControlRight+KP0+One
-go to remembered window position #2: KP0+One
-remember current window position #3: ControlRight+KP0+Two
-go to remembered window position #3: KP0+Two
-remember current window position #4: ControlRight+KP0+Three
-go to remembered window position #4: KP0+Three
-remember current window position #5: ControlRight+KP0+Four
-go to remembered window position #5: KP0+Four
+----------------
+
+Special Modes
+* enter/leave help display: ControlLeft+ShiftLeft+KP0+KP7
+* enter/leave command learn mode: ControlLeft+ShiftLeft+KP0+KP9
+* enter/leave preferences menu: ControlLeft+ShiftLeft+KP0+KP2
+* show current date and time: KP0+T
+* enter/leave status display: ControlLeft+ShiftLeft+KP0+KP8
+
+Cursor Functions
+* go to screen cursor: KP0+KPEnter
+
+Vertical Navigation
+* go up one line: KP0+KP8
+* go down one line: KP0+KP2
+* go to beginning of top line: KP0+KP7
+* go to beginning of bottom line: KP0+KP1
+* go up to first line of paragraph: ControlLeft+KP0+KP8
+* go down to first line of next paragraph: ControlLeft+KP0+KP2
+* go up to previous command prompt: ShiftLeft+KP0+KP8
+* go down to next command prompt: ShiftLeft+KP0+KP2
+
+Horizontal Navigation
+* go to beginning of line: ShiftLeft+KP0+KP7
+* go to end of line: ShiftLeft+KP0+KP1
+
+Clipboard Functions
+* start new clipboard at character at cursor: KP0+KPDivide
+* append to clipboard from character at cursor: ControlLeft+KP0+KPPlus
+* linear copy to character at cursor: KP0+KPMultiply
+* rectangular copy to character at cursor: KP0+KPMinus
+* insert clipboard text after screen cursor: KP0+KPPlus
+
+Configuration Functions
+* set track screen cursor on/off: KP0+KPPeriod
+
+Menu Operations
+* restore preferences from disk: ControlLeft+ShiftLeft+KP0+KP4
+* save preferences to disk: ControlLeft+ShiftLeft+KP0+KP6
+
+Speech Functions
+* stop speaking:
+  + KP0+KP4
+  + ControlLeft
+  + ControlRight
+* describe character at cursor: ControlLeft+KP0+KP5
+* speak current line: KP0+KP5
+* speak from top of screen through current line: KP0+KP9
+* speak from current line through bottom of screen: KP0+KP3
+* set autospeak on/off: KP0+KP6
+
+Special Functions
+* remember current braille window position #1: KP0+S
+* remember current braille window position #2: ControlRight+KP0+One
+* remember current braille window position #3: ControlRight+KP0+Two
+* remember current braille window position #4: ControlRight+KP0+Three
+* remember current braille window position #5: ControlRight+KP0+Four
+* go to remembered braille window position #1: KP0+G
+* go to remembered braille window position #2: KP0+One
+* go to remembered braille window position #3: KP0+Two
+* go to remembered braille window position #4: KP0+Three
+* go to remembered braille window position #5: KP0+Four
+* restart braille driver: ControlLeft+ShiftLeft+KP0+KP1
+* restart speech driver: ControlLeft+ShiftLeft+KP0+KP3
+

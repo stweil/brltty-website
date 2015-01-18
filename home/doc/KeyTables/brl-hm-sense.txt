@@ -1,117 +1,162 @@
 Key Table: HIMS Braille Sense
+=============================
 
 Default Bindings
-bring cursor to character: RoutingKey
-go to cursor: F4
-go back after cursor tracking: F1+F4
-bring cursor to line: F2+F3
-go left one window: Backward
-go right one window: Forward
-go to beginning of line: Backward+Forward
-go up one line: F2
-go down one line: F3
-go left to nearest non-blank window: F1+F2
-go right to nearest non-blank window: F3+F4
-go up to previous command prompt: F1+Backward
-go down to next command prompt: F1+Forward
-go up to nearest line with different content: F2+Backward
-go down to nearest line with different content: F2+Forward
-go up to nearest line with different highlighting: F3+Backward
-go down to nearest line with different highlighting: F3+Forward
-go up to last line of previous paragraph: F4+Backward
-go down to first line of next paragraph: F4+Forward
-go to beginning of top line: F1+F2+Backward
-go to beginning of bottom line: F1+F2+Forward
-go left one character: F3+F4+Backward
-go right one character: F3+F4+Forward
-start new clipboard at character: F1+F3+F4, RoutingKey
-append to clipboard from character: F2+F3+F4, RoutingKey
-linear copy to character: F1+F2+F3, RoutingKey
-rectangular copy to character: F1+F2+F4, RoutingKey
-insert clipboard text at cursor: F1+F2+F3+F4
-place left end of window at character: F1+F3, RoutingKey
-describe character: F2+F4, RoutingKey
-set skipping of blank windows on/off: Space+Dot1+Dot2
-set skipping of blank windows on: Space+Dot1+Dot2+Dot8
-set skipping of blank windows off: Space+Dot1+Dot2+Dot7
-set cursor visibility on/off: Space+Dot1+Dot4
-set cursor visibility on: Space+Dot1+Dot4+Dot8
-set cursor visibility off: Space+Dot1+Dot4+Dot7
-set display mode attributes/text: Space+Dot1+Dot4+Dot5
-set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
-set display mode text: Space+Dot1+Dot4+Dot5+Dot7
-set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
-set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
-set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
-enter/leave help display: Space+Dot1+Dot2+Dot5
-set skipping of lines with identical content on/off: Space+Dot2+Dot4
-set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
-set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
-set braille keyboard enabled/disabled: Space+Dot1+Dot3
-set braille keyboard enabled: Space+Dot1+Dot3+Dot8
-set braille keyboard disabled: Space+Dot1+Dot3+Dot7
-enter/leave command learn mode: Space+Dot1+Dot2+Dot3
-enter/leave preferences menu: Space+Dot1+Dot2+Dot3+Dot4
-restore preferences from disk: Space+Dot1+Dot2+Dot3+Dot4+Dot7
-save preferences to disk: Space+Dot1+Dot2+Dot3+Dot4+Dot8
-set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
-set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
-set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
-enter/leave status display: Space+Dot2+Dot3+Dot4
-set cursor tracking on/off: Space+Dot2+Dot3+Dot4+Dot5
-set cursor tracking on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
-set cursor tracking off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
-set attribute underlining on/off: Space+Dot1+Dot3+Dot6
-set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
-set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
-bring cursor to line: Space+Dot1+Dot2+Dot3+Dot6
-switch to previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
-switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
-set sliding window on/off: Space+Dot2+Dot4+Dot5+Dot6
-set sliding window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
-set sliding window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
-insert clipboard text at cursor: Space+Dot1+Dot3+Dot4+Dot6
-restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
-save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
-set text style 6-dot: Space+Dot2+Dot3+Dot5
-set text style 8-dot: Space+Dot2+Dot3+Dot6
-backspace key: Space+Dot7
-enter key: Space+Dot8
-cursor-left key: Space+Dot3
-cursor-right key: Space+Dot6
-home key: Space+Dot2
-end key: Space+Dot5
-cursor-up key: Space+Dot1
-cursor-down key: Space+Dot4
-page-up key: Space+Dot2+Dot3
-page-down key: Space+Dot5+Dot6
-tab key: Space+Dot2+Dot3+Dot5+Dot6
-insert key: Space+Dot3+Dot5
-delete key: Space+Dot2+Dot5+Dot6
-escape key: Space+Dot2+Dot6
-backspace key: Dot7
-enter key: Dot8
-page-up key: Space+Dot1+Dot2+Dot6
-page-down key: Space+Dot3+Dot4+Dot5
-home key: Space+Dot1+Dot3
-end key: Space+Dot4+Dot6
-tab key: Space+Dot4+Dot5
-braille keyboard dot1: Dot1
-braille keyboard dot2: Dot2
-braille keyboard dot3: Dot3
-braille keyboard dot4: Dot4
-braille keyboard dot5: Dot5
-braille keyboard dot6: Dot6
-braille keyboard dot7: Dot7
-braille keyboard dot8: Dot8
-braille keyboard space: Space
-braille keyboard meta: F2
-braille keyboard control: F3
+----------------
+
+Cursor Functions
+* go to screen cursor: F4
+* go back after cursor tracking: F1+F4
+* bring screen cursor to character: RoutingKey
+* bring screen cursor to current line: F2+F3
+
+Vertical Navigation
+* go up one line: F2
+* go down one line: F3
+* go to beginning of top line: F1+F2+Backward
+* go to beginning of bottom line: F1+F2+Forward
+* go up to nearest line with different content: F2+Backward
+* go down to nearest line with different content: F2+Forward
+* go up to nearest line with different highlighting: F3+Backward
+* go down to nearest line with different highlighting: F3+Forward
+* go up to first line of paragraph: F4+Backward
+* go down to first line of next paragraph: F4+Forward
+* go up to previous command prompt: F1+Backward
+* go down to next command prompt: F1+Forward
+
+Horizontal Navigation
+* go left one braille window: Backward
+* go right one braille window: Forward
+* go left to nearest non-blank braille window: F1+F2
+* go right to nearest non-blank braille window: F3+F4
+* go to beginning of line: Backward+Forward
+* go left one character: F3+F4+Backward
+* go right one character: F3+F4+Forward
+
+Clipboard Functions
+* start new clipboard at character: F1+F3+F4, RoutingKey
+
+Clipboard Functions
+* append to clipboard from character: F2+F3+F4, RoutingKey
+
+Clipboard Functions
+* linear copy to character: F1+F2+F3, RoutingKey
+
+Clipboard Functions
+* rectangular copy to character: F1+F2+F4, RoutingKey
+
+Horizontal Navigation
+* place left end of braille window at character: F1+F3, RoutingKey
+
+Clipboard Functions
+* insert clipboard text after screen cursor: F1+F2+F3+F4
+
+Speech Functions
+* describe character: F2+F4, RoutingKey
+
+Special Modes
+* enter/leave help display: Space+Dot1+Dot2+Dot5
+* enter/leave command learn mode: Space+Dot1+Dot2+Dot3
+* enter/leave preferences menu: Space+Dot1+Dot2+Dot3+Dot4
+* enter/leave status display: Space+Dot2+Dot3+Dot4
+* set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
+* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+* set display mode attributes/text: Space+Dot1+Dot4+Dot5
+* set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
+* set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+
+Cursor Functions
+* bring screen cursor to current line: Space+Dot1+Dot2+Dot3+Dot6
+
+Clipboard Functions
+* insert clipboard text after screen cursor: Space+Dot1+Dot3+Dot4+Dot6
+* save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
+* restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
+
+Configuration Functions
+* set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
+* set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
+* set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
+* set text style 6-dot: Space+Dot2+Dot3+Dot5
+* set text style 8-dot: Space+Dot2+Dot3+Dot6
+* set skipping of lines with identical content on/off: Space+Dot2+Dot4
+* set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
+* set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
+* set skipping of blank braille windows on/off: Space+Dot1+Dot2
+* set skipping of blank braille windows on: Space+Dot1+Dot2+Dot8
+* set skipping of blank braille windows off: Space+Dot1+Dot2+Dot7
+* set sliding braille window on/off: Space+Dot2+Dot4+Dot5+Dot6
+* set sliding braille window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
+* set sliding braille window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
+* set track screen cursor on/off: Space+Dot2+Dot3+Dot4+Dot5
+* set track screen cursor on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
+* set track screen cursor off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
+* set screen cursor visibility on/off: Space+Dot1+Dot4
+* set screen cursor visibility on: Space+Dot1+Dot4+Dot8
+* set screen cursor visibility off: Space+Dot1+Dot4+Dot7
+* set attribute underlining on/off: Space+Dot1+Dot3+Dot6
+* set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
+* set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
+
+Menu Operations
+* restore preferences from disk: Space+Dot1+Dot2+Dot3+Dot4+Dot7
+* save preferences to disk: Space+Dot1+Dot2+Dot3+Dot4+Dot8
+
+Keyboard Input
+* braille keyboard dot1: Dot1
+* braille keyboard dot2: Dot2
+* braille keyboard dot3: Dot3
+* braille keyboard dot4: Dot4
+* braille keyboard dot5: Dot5
+* braille keyboard dot6: Dot6
+* braille keyboard dot7: Dot7
+* braille keyboard dot8: Dot8
+* braille keyboard space: Space
+* braille keyboard meta: F2
+* braille keyboard control: F3
+* set braille keyboard enabled/disabled: Space+Dot1+Dot3
+* set braille keyboard enabled: Space+Dot1+Dot3+Dot8
+* set braille keyboard disabled: Space+Dot1+Dot3+Dot7
+* enter key:
+  + Space+Dot8
+  + Dot8
+* tab key:
+  + Space+Dot2+Dot3+Dot5+Dot6
+  + Space+Dot4+Dot5
+* backspace key:
+  + Space+Dot7
+  + Dot7
+* escape key: Space+Dot2+Dot6
+* cursor-left key: Space+Dot3
+* cursor-right key: Space+Dot6
+* cursor-up key: Space+Dot1
+* cursor-down key: Space+Dot4
+* page-up key:
+  + Space+Dot2+Dot3
+  + Space+Dot1+Dot2+Dot6
+* page-down key:
+  + Space+Dot5+Dot6
+  + Space+Dot3+Dot4+Dot5
+* home key:
+  + Space+Dot2
+  + Space+Dot1+Dot3
+* end key:
+  + Space+Dot5
+  + Space+Dot4+Dot6
+* insert key: Space+Dot3+Dot5
+* delete key: Space+Dot2+Dot5+Dot6
+* switch to previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
+* switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
 
 Menu Bindings
-go to previous item: F2
-go to next item: F3
-select previous choice: Backward
-select next choice: Forward
-go to first item: F1+F2
-go to last item: F3+F4
+-------------
+
+Menu Operations
+* go to previous item: F2
+* go to next item: F3
+* go to first item: F1+F2
+* go to last item: F3+F4
+* select previous choice: Backward
+* select next choice: Forward
+
