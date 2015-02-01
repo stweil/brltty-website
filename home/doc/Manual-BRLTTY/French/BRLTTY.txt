@@ -16,7 +16,7 @@
 
   Version 5.2, Nov 2014
 
-  Copyright © 1995-2014 by Les Développeurs de BRLTTY.  BRLTTY est un
+  Copyright © 1995-2015 by Les Développeurs de BRLTTY.  BRLTTY est un
   logiciel libre, et n'est fourni avec AUCUNE GARANTIE. Il est placé
   sous les termes de la version 2 ou ultérieure de la GGNNUU GGeenneerraall PPuubblliicc
   LLiicceennssee publiée par TThhee FFrreeee SSooffttwwaarree FFoouunnddaattiioonn.

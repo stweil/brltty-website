@@ -11,7 +11,7 @@
 
   Version 5.2, Nov 2014
 
-  Copyright © 1995-2014 by The BRLTTY Developers.  BRLTTY is free soft-
+  Copyright © 1995-2015 by The BRLTTY Developers.  BRLTTY is free soft-
   ware, and comes with ABSOLUTELY NO WARRANTY.  It is placed under the
   terms of version 2 or later of TThhee GGNNUU GGeenneerraall PPuubblliicc LLiicceennssee as pub-
   lished by TThhee FFrreeee SSooffttwwaarree FFoouunnddaattiioonn.
