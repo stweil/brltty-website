@@ -113,6 +113,23 @@ updateDirectory() {
    cd "${OLDPWD}"
 }
 
+updateTextFile() {
+   local sourceName="${1}"
+   local targetName="${2}"
+
+   local line
+   read <"${sourceName}" line
+
+   if [[ "${line}" =~ ^~+$ ]]
+   then
+      executeCommand rst2html --initial-header-level=2 "${sourceName}" "${sourceName}.html"
+      updateFile "${sourceName}.html" "${targetName}.html"
+      executeCommand rm -- "${sourceName}.html"
+   else
+      updateFile "${sourceName}" "${targetName}.txt"
+   fi
+}
+
 newTargetRoot="${targetRoot}.${programName}.new"
 executeCommand rm -f -r "${newTargetRoot}"
 
@@ -137,12 +154,12 @@ done
 cd "${sourceRoot}/${documentSubdirectory}"
 for file in "../README" "ChangeLog" "TODO"
 do
-   updateFile "${file}" "${file##*/}.txt"
+   updateTextFile "${file}" "${file##*/}"
 done
 
 for file in "README."*
 do
-   updateFile "${file}" "${file##README.}.txt"
+   updateTextFile "${file}" "${file##README.}"
 done
 
 oldTargetRoot="${targetRoot}.${programName}.old"
