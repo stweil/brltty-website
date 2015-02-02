@@ -113,23 +113,6 @@ updateDirectory() {
    cd "${OLDPWD}"
 }
 
-updateTextFile() {
-   local sourceName="${1}"
-   local targetName="${2}"
-
-   local line
-   read <"${sourceName}" line
-
-   if [[ "${line}" =~ ^~+$ ]]
-   then
-      executeCommand rst2html --initial-header-level=2 "${sourceName}" "${sourceName}.html"
-      updateFile "${sourceName}.html" "${targetName}.html"
-      executeCommand rm -- "${sourceName}.html"
-   else
-      updateFile "${sourceName}" "${targetName}.txt"
-   fi
-}
-
 newTargetRoot="${targetRoot}.${programName}.new"
 executeCommand rm -f -r "${newTargetRoot}"
 
@@ -154,14 +137,37 @@ done
 cd "${sourceRoot}/${documentSubdirectory}"
 for file in "../README" "ChangeLog" "TODO"
 do
-   updateTextFile "${file}" "${file##*/}"
+   updateFile "${file}" "${file##*/}.txt"
 done
 
 for file in "README."*
 do
-   updateTextFile "${file}" "${file##README.}"
+   updateFile "${file}" "${file##README.}.txt"
 done
 
+cd "${newTargetRoot}"
+find . -type f -print |
+   while read file
+   do
+      name="${file%.*}"
+      extension="${file##*.}"
+
+      case "${extension}"
+      in
+         txt)
+            read <"${file}" line
+
+            if [[ "${line}" =~ ^~+$ ]]
+            then
+               executeCommand rst2html --initial-header-level=2 "${file}" "${name}.html"
+            fi
+            ;;
+
+         *);;
+      esac
+   done
+
+cd "${temporaryDirectory}"
 oldTargetRoot="${targetRoot}.${programName}.old"
 executeCommand rm -f -r "${oldTargetRoot}"
 executeCommand mv "${targetRoot}" "${oldTargetRoot}"
