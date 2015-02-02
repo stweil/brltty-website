@@ -159,7 +159,7 @@ find . -type f -print |
 
             if [[ "${line}" =~ ^~+$ ]]
             then
-               executeCommand rst2html --initial-header-level=2 "${file}" "${name}.html"
+               executeCommand rst2html --input-encoding=UTF-8 --output-encoding=UTF-8 --no-datestamp --toc-entry-backlinks --initial-header-level=2 "${file}" "${name}.html"
             fi
             ;;
 
