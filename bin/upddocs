@@ -113,7 +113,7 @@ newTargetRoot="${targetRoot}.${programName}.new"
 rm -f -r "${newTargetRoot}"
 
 cd "${sourceRoot}"
-"./mkdocktb" -o "${newTargetRoot}/KeyTables" -s . -b "${buildRoot}"
+"./mkdocktb" -o "${newTargetRoot}/KeyBindings" -s . -b "${buildRoot}"
 
 cd "${buildRoot}/${documentSubdirectory}"
 make -s
