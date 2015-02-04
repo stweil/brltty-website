@@ -2,10 +2,10 @@ Key Table: Iris with Braille Keyboard
 =====================================
 
 Notes
-* The braille keyboard has two thumb keys rather than a single space bar;
-  the left one is named Backspace, and the right one is named Space.
-* The eight keys behind the braille keyboard are known as linear keys, and,
-  from left to right, are named L1 through L8.
+* The braille keyboard has two thumb keys rather than a single space bar.
+  The left one is named Backspace, and the right one is named Space.
+* The eight keys behind the braille keyboard are known as linear keys.
+  From left to right, they're named L1 through L8.
 * RoutingKey refers to any of the keys behind the text cells.
 
 Default Bindings

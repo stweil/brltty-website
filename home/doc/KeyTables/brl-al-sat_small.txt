@@ -2,7 +2,7 @@ Key Table: Alva Satellite [5nn] (small)
 =======================================
 
 Notes
-* The keypads at either side of the top are named LeftPad and RightPad:
+* The keypads at either side of the top are named LeftPad and RightPad.
   The four inner keys of each are subnamed Left, Right, Up, and Down.
   The two outer keys of each are subnamed F1 and F2.
 * The two long, flat keys are named Up and Down.

@@ -3,16 +3,18 @@ Key Table: Baum Vario 80
 
 Notes
 * The display keys are at both ends of the text cell area. From top to bottom:
-  The three at the left are named Display1 through Display3.
-  The three at the right are named Display4 through Display6.
+  the three at the left are named Display1 through Display3,
+  and the three at the right are named Display4 through Display6.
 * The command keys are in the middle, just behind the cursor routing keys,
 * and, from left to right, are named Command1 through Command7.
-* The keys on the front are arranged as follows:
-  Front1  Front3  Front5  Front7  Front9
-  Front2  Front4  Front6  Front8  Front10
-* The keys on the back are arranged as follows:
-  Back1   Back3   Back5   Back7   Back9
-  Back2   Back4   Back6   Back8   Back10
+* The keys in the upper row on the front are named:
+  Front1, Front3, Front5, Front7, Front9.
+* The keys in the lower row on the front are named:
+  Front2, Front4, Front6, Front8, Front10.
+* The keys in the upper row on the back are named:
+  Back1, Back3, Back5, Back7, Back9.
+* The keys in the lower row on the back are named:
+  Back2, Back4, Back6, Back8, Back10.
 
 Default Bindings
 ----------------

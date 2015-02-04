@@ -3,12 +3,12 @@ Key Table: Baum (default)
 
 Notes
 * The display keys are at both ends of the text cell area. From top to bottom:
-  The three at the left are named Display1 through Display3.
-  The three at the right are named Display4 through Display6.
+  the three at the left are named Display1 through Display3,
+  and the three at the right are named Display4 through Display6.
 * For models which have a braille keyboard:
-  F1 and F2 are the two keys at the very left of the front.
-  F3 and F4 are the two keys at the very right of the front.
-  B10, if present, is between the Dot1 and Dot4 keys.
+  F1 and F2 are the two keys at the very left of the front,
+  F3 and F4 are the two keys at the very right of the front,
+  and B10 (if present) is between the Dot1 and Dot4 keys.
 * The joystick is in the middle of the front,
 * and its five positions are named Left, Right, Up, Down, and Press.
 * B9 and B11 are the keys immediately to the left and right of the joystick.

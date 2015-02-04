@@ -2,7 +2,7 @@ Key Table: Iris with PC Keyboard
 ================================
 
 Notes
-* The eight extra keys at the ends of the keyboard are known as linear keys:
+* The eight extra keys at the ends of the keyboard are known as linear keys.
   The four at the left, from top to bottom, are named L1 through L4.
   The four at the right, from bottom to top, are named L5 through L8.
 * RoutingKey refers to any of the keys behind the text cells.

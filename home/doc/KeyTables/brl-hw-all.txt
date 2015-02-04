@@ -3,8 +3,8 @@ Key Table: HumanWare
 
 Notes
 * The display keys are at both ends of the text cell area. From top to bottom:
-  The three at the left are named Display1 through Display3.
-  The three at the right are named Display4 through Display6.
+  the three at the left are named Display1 through Display3,
+  and the three at the right are named Display4 through Display6.
 
 Default Bindings
 ----------------

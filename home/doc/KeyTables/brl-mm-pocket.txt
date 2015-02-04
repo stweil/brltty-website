@@ -2,35 +2,35 @@ Key Table: Braille Memo Pocket
 ==============================
 
 Notes
-* The six round keys along the top are a braille keyboard;
-  from left to right, their names are: Dot3, Dot2, Dot1, Dot4, Dot5, Dot6.
+* The six round keys along the top are a braille keyboard.
+  From left to right, their names are: Dot3, Dot2, Dot1, Dot4, Dot5, Dot6.
 * The two keys to the left of Dot3, from top to bottom, are named: Control, Alt.
 * The two keys to the right of Dot6, from top to bottom, are named: Select, Read.
 * The three keys below Dot1 and Dot4, from left to right, are named: Dot7, Extension, Dot8.
-* At the bottom left is a group of four keys arranged in a cross;
-  starting with the leftmost key and moving clockwise, their names are:
+* At the bottom left is a group of four keys arranged in a cross.
+  Starting with the leftmost key and moving clockwise, their names are:
   ArrowLeft, ArrowUp, ArrowRight, ArrowDown.
 * A driver implementation constraint requires that some of the bindings
   refer to the ArrowLeft and ArrowRight keys as PanLeft and PanRight.
 * Some keys are entered by pressing a set of keys simultaneously:
-  Return: Dot7
-  Space: Dot8
-  ArrowUp: Extension + Dot1
-  ArrowDown: Extension + Dot4
-  ArrowLeft: Extension + Dot2
-  ArrowRight: Extension + Dot5
-  Insert: Extension + Dot3
-  Change: Extension + Dot6
-  Backspace: Extension + Dot7
-  Delete: Extension + Dot8
-  Escape: Extension + ArrowUp
-  Info: Extension + ArrowDown
-  Backward: Extension + ArrowRight + Dot1
-  Forward: Extension + ArrowRight + Dot4
-  ScrollLeft: Extension + ArrowRight + Dot2
-  ScrollRight: Extension + ArrowRight + Dot5
-  OK: Extension + ArrowRight + Dot7
-  Set: Extension + ArrowRight + Dot8
+  + Return: Dot7
+  + Space: Dot8
+  + ArrowUp: Extension + Dot1
+  + ArrowDown: Extension + Dot4
+  + ArrowLeft: Extension + Dot2
+  + ArrowRight: Extension + Dot5
+  + Insert: Extension + Dot3
+  + Change: Extension + Dot6
+  + Backspace: Extension + Dot7
+  + Delete: Extension + Dot8
+  + Escape: Extension + ArrowUp
+  + Info: Extension + ArrowDown
+  + Backward: Extension + ArrowRight + Dot1
+  + Forward: Extension + ArrowRight + Dot4
+  + ScrollLeft: Extension + ArrowRight + Dot2
+  + ScrollRight: Extension + ArrowRight + Dot5
+  + OK: Extension + ArrowRight + Dot7
+  + Set: Extension + ArrowRight + Dot8
 
 Default Bindings
 ----------------

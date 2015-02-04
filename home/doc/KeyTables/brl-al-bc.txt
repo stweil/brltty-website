@@ -2,15 +2,15 @@ Key Table: Alva Braille Controller [6nn]
 ========================================
 
 Notes
-* The four keys at the ends of the text cell area are named ETouch:
+* The four keys at the ends of the text cell area are named ETouch.
   Each is subnamed according to the side its on (Left, Right),
   and according to its position on that side (Rear, Front).
-* The nine-key pad in front of the text cell area is named Smartpad:
+* The nine-key pad in front of the text cell area is named Smartpad.
   Its center key is subnamed Enter.
   Its four inner keys are subnamed Left, Right, Up, and Down.
   The two long keys on its left are subnamed F1 and F2.
   The two long keys on its right are subnamed F3 and F4.
-* The five keys on the front are named Thumb:
+* The five keys on the front are named Thumb.
   From left to right, they're subnamed: Left, Up, Home, Down, Right.
 
 Default Bindings

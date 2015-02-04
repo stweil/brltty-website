@@ -2,7 +2,7 @@ Key Table: Papenmeier BrailleX 2D Screen Soft
 =============================================
 
 Notes
-* The front surface layout is as follows:
+* There are 13 keys on the front.
   The rectangular key at the center is named Shift.
   The square keys immediately to its left and right are named Home and End.
   The left and right bars are named Up and Down.

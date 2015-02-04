@@ -76,16 +76,12 @@ cd "${buildRoot}"
    \
    --quiet
 
-executeCommand() {
-   "${@}"
-}
-
 updateFile() {
    local source="${1}"
    local target="${newTargetRoot}/${2:-${source}}"
 
-   executeCommand mkdir -p "${target%/*}"
-   executeCommand cp -a -- "${source}" "${target}"
+   mkdir -p "${target%/*}"
+   cp -a -- "${source}" "${target}"
 }
 
 updateDirectory() {
@@ -114,13 +110,13 @@ updateDirectory() {
 }
 
 newTargetRoot="${targetRoot}.${programName}.new"
-executeCommand rm -f -r "${newTargetRoot}"
+rm -f -r "${newTargetRoot}"
 
 cd "${sourceRoot}"
-executeCommand "./mkdocktb" -o "${newTargetRoot}/KeyTables" -s . -b "${buildRoot}"
+"./mkdocktb" -o "${newTargetRoot}/KeyTables" -s . -b "${buildRoot}"
 
 cd "${buildRoot}/${documentSubdirectory}"
-executeCommand make -s
+make -s
 updateDirectory "BrlAPIref/html" "BrlAPIref" "*.html"
 
 for root in "${buildRoot}" "${sourceRoot}"
@@ -159,7 +155,7 @@ find . -type f -print |
 
             if [[ "${line}" =~ ^~+$ ]]
             then
-               executeCommand rst2html --input-encoding=UTF-8 --output-encoding=UTF-8 --no-datestamp --toc-entry-backlinks --initial-header-level=2 "${file}" "${name}.html"
+               rst2html --config "${sourceRoot}/docutils.conf" "${file}" "${name}.html"
             fi
             ;;
 
@@ -169,9 +165,9 @@ find . -type f -print |
 
 cd "${temporaryDirectory}"
 oldTargetRoot="${targetRoot}.${programName}.old"
-executeCommand rm -f -r "${oldTargetRoot}"
-executeCommand mv "${targetRoot}" "${oldTargetRoot}"
-executeCommand mv "${newTargetRoot}" "${targetRoot}"
-executeCommand rm -f -r "${oldTargetRoot}"
+rm -f -r "${oldTargetRoot}"
+mv "${targetRoot}" "${oldTargetRoot}"
+mv "${newTargetRoot}" "${targetRoot}"
+rm -f -r "${oldTargetRoot}"
 
 exit 0
