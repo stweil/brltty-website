@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="Docutils 0.10: http://docutils.sourceforge.net/" />
+<title>Text Tables</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7434 2012-05-11 21:06:27Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { /* line numbers */
+  color: grey;
+}
+
+.code {
+  background-color: #eeeeee
+}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="text-tables">
+<h1 class="title">Text Tables</h1>
+
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#directives" id="id2">Directives</a><ul>
+<li><a class="reference internal" href="#the-char-directive" id="id3">The Char Directive</a></li>
+<li><a class="reference internal" href="#the-glyph-directive" id="id4">The Glyph Directive</a></li>
+<li><a class="reference internal" href="#the-alias-directive" id="id5">The Alias Directive</a></li>
+<li><a class="reference internal" href="#the-byte-directive" id="id6">The Byte Directive</a></li>
+<li><a class="reference internal" href="#the-include-directive" id="id7">The Include Directive</a></li>
+<li><a class="reference internal" href="#the-assign-directive" id="id8">The Assign Directive</a></li>
+<li><a class="reference internal" href="#the-assigndefault-directive" id="id9">The AssignDefault Directive</a></li>
+<li><a class="reference internal" href="#the-ifvar-directive" id="id10">The IfVar Directive</a></li>
+<li><a class="reference internal" href="#the-ifnotvar-directive" id="id11">The IfNotVar Directive</a></li>
+<li><a class="reference internal" href="#the-endif-directive" id="id12">The EndIf Directive</a></li>
+<li><a class="reference internal" href="#the-else-directive" id="id13">The Else Directive</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operands" id="id14">Operands</a><ul>
+<li><a class="reference internal" href="#the-string-operand" id="id15">The String Operand</a></li>
+<li><a class="reference internal" href="#the-dots-operand" id="id16">The Dots Operand</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Files with names of the form <tt class="docutils literal">*.ttb</tt> are text tables, and with names of the
+form <tt class="docutils literal">*.tti</tt> are text subtables. They are used by BRLTTY to translate the
+characters on the screen into their corresponding 8-dot computer braille
+representations (see <a class="reference external" href="BrailleDots.html">Braille Dots</a> for details). They can usually be
+found in the <tt class="docutils literal">/etc/brltty/Text/</tt> directory (see <a class="reference external" href="Customize.html">Local Customizations</a> for more
+details).</p>
+<p>A text table consists of a sequence of directives, one per line, which define
+how each character is to be represented in braille. UTF-8 character encoding
+must be used. White-space (blanks, tabs) at the beginning of a line, as well as
+before and/or after any operand of any directive, is ignored. Lines containing
+only white-space are ignored. If the first non-white-space character of a line
+is <tt class="docutils literal">#</tt> then that line is a comment and is ignored.</p>
+<div class="section" id="directives">
+<h2><a class="toc-backref" href="#id2">Directives</a></h2>
+<div class="section" id="the-char-directive">
+<h3><a class="toc-backref" href="#id3">The Char Directive</a></h3>
+<pre class="literal-block">
+char <em>character</em> <em>dots</em> # <em>comment</em>
+</pre>
+<p>Use this directive to specify how a Unicode character is to be represented in
+braille. Characters defined via this directive can also be entered from a
+braille keyboard. If several characters have the same braille representation
+then only one of them should be defined via this directive - the others should
+be defined via <a class="reference internal" href="#the-glyph-directive">The Glyph Directive</a> (which has the same syntax). If more than
+one character with the same braille representation is defined via this
+directive (which is allowed for backward compatibility) then the first one is
+used when entered from a braille keyboard.</p>
+<dl class="docutils">
+<dt><em>character</em></dt>
+<dd>The character being defined (see <a class="reference internal" href="#the-string-operand">The String Operand</a> for details).</dd>
+<dt><em>dots</em></dt>
+<dd>The braille representation for the character being defined (see
+<a class="reference internal" href="#the-dots-operand">The Dots Operand</a> for details).</dd>
+</dl>
+<p>Examples:</p>
+<pre class="literal-block">
+char a 1
+char b (12)
+char c ( 4  1   )
+char \\ 12567
+char \s 0
+char \x20 ()
+char \&lt;LATIN_SMALL_LETTER_D&gt; 145
+</pre>
+</div>
+<div class="section" id="the-glyph-directive">
+<h3><a class="toc-backref" href="#id4">The Glyph Directive</a></h3>
+<pre class="literal-block">
+glyph <em>character</em> <em>dots</em> # <em>comment</em>
+</pre>
+<p>Use this directive to specify how a Unicode character is to be represented in
+braille.  Characters defined via this directive are output-only - they cannot
+be entered from a braille keyboard.</p>
+<p>See <a class="reference internal" href="#the-char-directive">The Char Directive</a> for syntax, examples, etc.</p>
+</div>
+<div class="section" id="the-alias-directive">
+<h3><a class="toc-backref" href="#id5">The Alias Directive</a></h3>
+<pre class="literal-block">
+alias <em>from</em> <em>to</em> # <em>comment</em>
+</pre>
+<p>Use this directive to define the <em>from</em> Unicode character such that it has the
+same braille representation as the <em>to</em> Unicode character. See
+<a class="reference internal" href="#the-string-operand">The String Operand</a> for details on how to specify both operands.</p>
+</div>
+<div class="section" id="the-byte-directive">
+<h3><a class="toc-backref" href="#id6">The Byte Directive</a></h3>
+<pre class="literal-block">
+byte <em>byte</em> <em>dots</em> # <em>comment</em>
+</pre>
+<p>Use this directive to specify how a character in the local character set is to
+be represented in braille. It has been retained for backward compatibility but
+should not be used. Unicode characters should be defined (via either
+<a class="reference internal" href="#the-char-directive">The Char Directive</a> or <a class="reference internal" href="#the-glyph-directive">The Glyph Directive</a>) so that the text table remains
+valid regardless of what the local character set is.</p>
+<dl class="docutils">
+<dt><em>byte</em></dt>
+<dd>The character being defined. It may be specified in any of the ways
+supported by <a class="reference internal" href="#the-string-operand">The String Operand</a> except that the Unicode-specific forms
+(<tt class="docutils literal">\u</tt>, <tt class="docutils literal">\U</tt>, <tt class="docutils literal">\&lt;</tt>) may not be used.</dd>
+<dt><em>dots</em></dt>
+<dd>The braille representation for the character being defined (see
+<a class="reference internal" href="#the-dots-operand">The Dots Operand</a> for details).</dd>
+</dl>
+</div>
+<div class="section" id="the-include-directive">
+<h3><a class="toc-backref" href="#id7">The Include Directive</a></h3>
+<pre class="literal-block">
+include <em>file</em> # <em>comment</em>
+</pre>
+<p>Use this directive to include the content of another file. It is recursive,
+which means that an included file can itself include yet another file.
+Care must be taken to ensure that an &quot;include loop&quot; is not created.</p>
+<dl class="docutils">
+<dt><em>file</em></dt>
+<dd>The file to be included. It may be either a relative or an absolute path. If
+relative, it is anchored at the directory containing the including file.</dd>
+</dl>
+</div>
+<div class="section" id="the-assign-directive">
+<h3><a class="toc-backref" href="#id8">The Assign Directive</a></h3>
+<pre class="literal-block">
+assign <em>variable</em> <em>value</em>
+</pre>
+<p>Use this directive to create or update a variable associated with the current
+include level. The variable is visible to the current and to lower include
+levels, but not to higher include levels.</p>
+<dl class="docutils">
+<dt><em>variable</em></dt>
+<dd>The name of the variable. If the variable doesn't already exist at the
+current include level then it is created.</dd>
+<dt><em>value</em></dt>
+<dd>The value that is to be assigned to the variable. If it's not supplied then
+a zero-length (null) value is assigned.</dd>
+</dl>
+<p>Examples:</p>
+<pre class="literal-block">
+assign nullValue
+assign shortValue word
+assign longValue a\svalue\swith\sspaces
+assign IndirectValue \{variableName}
+</pre>
+</div>
+<div class="section" id="the-assigndefault-directive">
+<h3><a class="toc-backref" href="#id9">The AssignDefault Directive</a></h3>
+<pre class="literal-block">
+assignDefault <em>variable</em> <em>value</em>
+</pre>
+<p>Use this directive to assign a default value to a variable associated with the
+current include level. It's functionally equivalent to:</p>
+<pre class="literal-block">
+ifNotVar <em>variable</em> assign <em>variable</em> <em>value</em>
+</pre>
+<p>See <a class="reference internal" href="#the-assign-directive">The Assign Directive</a> and <a class="reference internal" href="#the-ifnotvar-directive">The IfNotVar Directive</a> for more details.</p>
+<dl class="docutils">
+<dt><em>variable</em></dt>
+<dd>The name of the variable. If the variable doesn't already exist at the
+current include level then it is created. If it does already exist then it
+is <strong>not</strong> modified.</dd>
+<dt><em>value</em></dt>
+<dd>The value that is to be assigned to the variable if it doesn't already
+exist. If it's not supplied then a zero-length (null) value is assigned.</dd>
+</dl>
+<p>Examples:</p>
+<pre class="literal-block">
+assignDefault format plain\stext
+</pre>
+</div>
+<div class="section" id="the-ifvar-directive">
+<h3><a class="toc-backref" href="#id10">The IfVar Directive</a></h3>
+<pre class="literal-block">
+ifVar <em>variable</em> <em>directive</em>
+</pre>
+<p>Use this directive to only process one or more directives if a variable exists.</p>
+<dl class="docutils">
+<dt><em>variable</em></dt>
+<dd>The name of the variable whose existence is to be tested.</dd>
+<dt><em>directive</em></dt>
+<dd>The directive that is to be conditionally processed. It may contain spaces.
+This operand is optional. If it isn't supplied then this directive applies
+to all subsequent lines until <a class="reference internal" href="#the-endif-directive">The EndIf Directive</a> or
+<a class="reference internal" href="#the-else-directive">The Else Directive</a> that is at the same conditional nesting level.</dd>
+</dl>
+<p>Examples:</p>
+<pre class="literal-block">
+ifVar var1 ifVar var2 assign concatenation \{var1}\{var2}
+</pre>
+</div>
+<div class="section" id="the-ifnotvar-directive">
+<h3><a class="toc-backref" href="#id11">The IfNotVar Directive</a></h3>
+<pre class="literal-block">
+ifNotVar <em>variable</em> <em>directive</em>
+</pre>
+<p>Use this directive to only process one or more directives if a variable doesn't
+exist.</p>
+<dl class="docutils">
+<dt><em>variable</em></dt>
+<dd>The name of the variable whose existence is to be tested.</dd>
+<dt><em>directive</em></dt>
+<dd>The directive that is to be conditionally processed. It may contain spaces.
+This operand is optional. If it isn't supplied then this directive applies
+to all subsequent lines until <a class="reference internal" href="#the-endif-directive">The EndIf Directive</a> or
+<a class="reference internal" href="#the-else-directive">The Else Directive</a> that is at the same conditional nesting level.</dd>
+</dl>
+<p>Examples:</p>
+<pre class="literal-block">
+ifNotVar var1 assign var1 default\svalue
+</pre>
+</div>
+<div class="section" id="the-endif-directive">
+<h3><a class="toc-backref" href="#id12">The EndIf Directive</a></h3>
+<pre class="literal-block">
+endIf
+</pre>
+<p>Use this directive to terminate the current conditional nesting level.</p>
+<p>Examples:</p>
+<pre class="literal-block">
+ifVar x
+   These lines will be processed if a variable named x exists.
+endIf
+</pre>
+</div>
+<div class="section" id="the-else-directive">
+<h3><a class="toc-backref" href="#id13">The Else Directive</a></h3>
+<pre class="literal-block">
+else
+</pre>
+<p>Use this directive to negate the test associated with the current conditional
+nesting level.</p>
+<p>Examples:</p>
+<pre class="literal-block">
+assign x some\svalue
+ifVar x
+   These lines will be processed.
+else
+   These lines won't be processed.
+endIf
+</pre>
+</div>
+</div>
+<div class="section" id="operands">
+<h2><a class="toc-backref" href="#id14">Operands</a></h2>
+<div class="section" id="the-string-operand">
+<h3><a class="toc-backref" href="#id15">The String Operand</a></h3>
+<p>A <em>string</em> operand may be specified as a non-whitespace sequence of:</p>
+<ul>
+<li><p class="first">Any single character other than a backslash (\\) or a white-space
+character.</p>
+</li>
+<li><p class="first">A backslash-prefixed special character. These are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><p class="first last">Sequence</p>
+</td>
+<td><p class="first last">Meaning</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal">\b</tt></p>
+</td>
+<td><p class="first last">The backspace character.</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal">\f</tt></p>
+</td>
+<td><p class="first last">The formfeed character.</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal">\n</tt></p>
+</td>
+<td><p class="first last">The newline character.</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal"><span class="pre">\o###</span></tt></p>
+</td>
+<td><p class="first last">The three-digit octal representation of a character.</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal">\r</tt></p>
+</td>
+<td><p class="first last">The carriage return character.</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal">\s</tt></p>
+</td>
+<td><p class="first last">The space character.</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal">\t</tt></p>
+</td>
+<td><p class="first last">The horizontal tab character.</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal"><span class="pre">\u####</span></tt></p>
+</td>
+<td><p class="first last">The four-digit hexadecimal representation of a character.</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal"><span class="pre">\U########</span></tt></p>
+</td>
+<td><p class="first last">The eight-digit hexadecimal representation of a character.</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal">\v</tt></p>
+</td>
+<td><p class="first last">The vertical tab character.</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal">\x##</tt></p>
+</td>
+<td><p class="first last">The two-digit hexadecimal representation of a character.</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal">\X##</tt></p>
+</td>
+<td><p class="first last">(the case of the X and of the digits isn't significant)</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal">\&lt;name&gt;</tt></p>
+</td>
+<td><p class="first last">The Unicode name of a character (use _ for space).</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal">\{variable}</tt></p>
+</td>
+<td><p class="first last">The value of a variable.</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal">\\</tt></p>
+</td>
+<td><p class="first last">A literal backslash.</p>
+</td>
+</tr>
+<tr><td><p class="first last"><tt class="docutils literal">\#</tt></p>
+</td>
+<td><p class="first last">A literal number sign.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="section" id="the-dots-operand">
+<h3><a class="toc-backref" href="#id16">The Dots Operand</a></h3>
+<p>A <em>dots</em> operand is a sequence of one to eight dot numbers. If the dot numbers
+are enclosed within (parentheses) then they may be separated from one another
+by white-space. A dot number is a digit within the range <tt class="docutils literal">1</tt>-<tt class="docutils literal">8</tt>
+as defined by the standard braille dot numbering convention (see
+<a class="reference external" href="BrailleDots.html">Braille Dots</a> for details). The special dot number <tt class="docutils literal">0</tt> is recognized
+when not enclosed within (parentheses), and means no dots - it may not be used
+in conjunction with any other dot number.</p>
+</div>
+</div>
+</div>
+</body>
+</html>

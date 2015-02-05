@@ -76,12 +76,20 @@ cd "${buildRoot}"
    \
    --quiet
 
+relativePath() {
+   local file="${1}"
+
+   realpath --relative-to "${newTargetRoot}" "${file}"
+}
+
+declare -A fileMap
 updateFile() {
    local source="${1}"
    local target="${newTargetRoot}/${2:-${source}}"
 
    mkdir -p "${target%/*}"
    cp -a -- "${source}" "${target}"
+   fileMap["$(relativePath "${target}")"]="$(relativePath "${source}")"
 }
 
 updateDirectory() {
@@ -155,7 +163,8 @@ find . -type f -print |
 
             if [[ "${line}" =~ ^~+$ ]]
             then
-               rst2html --config "${sourceRoot}/docutils.conf" "${file}" "${name}.html"
+               source="${newTargetRoot}/${fileMap["$(relativePath "${file}")"]}"
+               rst2html --config "${sourceRoot}/docutils.conf" "${source}" "${name}.html"
             fi
             ;;
 
