@@ -353,13 +353,16 @@ ul.auto-toc {
 <p>Files with names of the form <tt class="docutils literal">*.ktb</tt> are key tables, and with names of the
 form <tt class="docutils literal">*.kti</tt> are key subtables. They are used to bind braille device and
 computer keyboard key combinations to BRLTTY commands.</p>
-<p>Braille device key tables can usually be found in the <tt class="docutils literal">/etc/brltty/Input/xx/</tt>
-directory, where <tt class="docutils literal">xx</tt> is the two-letter braille driver identification code.
-The name of a braille device key table identifies the model(s) for which it is
-used.</p>
-<p>Computer keyboard key tables can usually be found in the
-<tt class="docutils literal">/etc/brltty/Keyboard/</tt> directory. The name of a keyboard key table describes
-the kind of keyboard for which it has been designed.</p>
+<ul class="simple">
+<li>Braille device key tables can usually be found in the
+<tt class="docutils literal">/etc/brltty/Input/xx/</tt> directory, where <tt class="docutils literal">xx</tt> is the two-letter braille
+driver identification code. The name of a braille device key table
+identifies the model(s) for which it is used.</li>
+<li>Computer keyboard key tables can usually be found in the
+<tt class="docutils literal">/etc/brltty/Keyboard/</tt> directory. The name of a keyboard key table
+describes the kind of keyboard for which it has been designed.</li>
+<li>See <a class="reference external" href="Customize.html">Local Customizations</a> for more details.</li>
+</ul>
 <p>A key table consists of a sequence of directives, one per line, which define
 how keys and key combinations are to be interpreted. UTF-8 character encoding
 must be used. White-space (blanks, tabs) at the beginning of a line, as well as
@@ -425,7 +428,7 @@ secondary command is autorepeated if it has been defined, else the primary
 command is autorepeated.</p>
 </dd>
 </dl>
-<p>One or more modifiers may be optionally appended to a command name by using a
+<p id="bind-command-modifiers">One or more modifiers may be optionally appended to a command name by using a
 plus (+) sign as the separator. For example:</p>
 <ul class="simple">
 <li>bind key command</li>
@@ -602,8 +605,8 @@ pressed.</dd>
 <dd>The name of the BRLTTY command which is to be executed whenever the key is
 released.</dd>
 </dl>
-<p>Modifiers may be appended to the command names. See the <em>commands</em> operand of
-<a class="reference internal" href="#the-bind-directive">The Bind Directive</a> for details.</p>
+<p>Modifiers may be appended to the command names. See
+<a class="reference internal" href="#bind-command-modifiers">Bind Command Modifiers</a> for details.</p>
 <p>Specify the <tt class="docutils literal">NOOP</tt> command if no command is to be executed. Specifying the
 <tt class="docutils literal">NOOP</tt> command for both events effectively disables the key.</p>
 <p>Examples:</p>
@@ -665,6 +668,8 @@ defined within the current context.</p>
 <dt><em>key</em></dt>
 <dd>The name of the key that is to be mapped. More than one key may be mapped to
 the same braille keyboard function.</dd>
+</dl>
+<dl class="docutils" id="the-map-function-operand">
 <dt><em>function</em></dt>
 <dd><p class="first">The name of the braille keyboard function. It may be one of the following
 keywords:</p>
@@ -730,10 +735,36 @@ ignored so indentation cannot be specified.</p>
 <p>There's no limit to the number of notes that may be added. All of them are
 gathered together and presented in a single block at the start of the key
 table's help text.</p>
+<ul class="simple">
+<li>A note that doesn't have a special prefix begins a new outer bulleted list
+element.</li>
+<li>A note that is prefixed with an asterisk (*) continues the current outer
+bulleted list element.</li>
+<li>A note that is prefixed with a plus (+) sign is an inner bulletged list
+element.</li>
+</ul>
 <p>Examples:</p>
 <pre class="literal-block">
-note Key1 is the round key at the far left on the front surface.
+note This is the first outer list element.
+note This is the second outer list element.
+note * Continue the second outer list element.
+note + The first element of an inner list.
+note + The second element of an inner list.
+note * The third line of the second outer list element.
 </pre>
+<p>The above example would be rendered as:</p>
+<ul>
+<li><p class="first">This is the first outer list element.</p>
+</li>
+<li><p class="first">This is the second outer list element.
+Continue the second outer list element.</p>
+<ul class="simple">
+<li>The first element of an inner list.</li>
+<li>The second element of an inner list.</li>
+</ul>
+<p>The third line of the second outer list element.</p>
+</li>
+</ul>
 </div>
 <div class="section" id="the-superimpose-directive">
 <h3><a class="toc-backref" href="#id11">The Superimpose Directive</a></h3>
@@ -747,7 +778,7 @@ number of these directives may be specified.</p>
 <dl class="docutils">
 <dt><em>function</em></dt>
 <dd>The name of the braille keyboard function that is to be implicitly included.
-See the <em>function&gt;</em> operand of <a class="reference internal" href="#the-map-directive">The Map Directive</a> for details.</dd>
+See <a class="reference internal" href="#the-map-function-operand">The Map Function Operand</a> for details.</dd>
 </dl>
 <p>Examples:</p>
 <pre class="literal-block">

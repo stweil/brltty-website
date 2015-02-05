@@ -8,14 +8,16 @@ Files with names of the form ``*.ktb`` are key tables, and with names of the
 form ``*.kti`` are key subtables. They are used to bind braille device and
 computer keyboard key combinations to BRLTTY commands.
 
-Braille device key tables can usually be found in the ``/etc/brltty/Input/xx/``
-directory, where ``xx`` is the two-letter braille driver identification code.
-The name of a braille device key table identifies the model(s) for which it is
-used.
+*  Braille device key tables can usually be found in the
+   ``/etc/brltty/Input/xx/`` directory, where ``xx`` is the two-letter braille
+   driver identification code. The name of a braille device key table
+   identifies the model(s) for which it is used.
 
-Computer keyboard key tables can usually be found in the
-``/etc/brltty/Keyboard/`` directory. The name of a keyboard key table describes
-the kind of keyboard for which it has been designed.
+*  Computer keyboard key tables can usually be found in the
+   ``/etc/brltty/Keyboard/`` directory. The name of a keyboard key table
+   describes the kind of keyboard for which it has been designed.
+
+*  See |README.Customize| for more details.
 
 A key table consists of a sequence of directives, one per line, which define 
 how keys and key combinations are to be interpreted. UTF-8 character encoding 
@@ -83,6 +85,8 @@ context.
    press is detected). If the **autorepeat** feature is enabled then the
    secondary command is autorepeated if it has been defined, else the primary
    command is autorepeated.
+
+.. _Bind Command Modifiers:
 
 One or more modifiers may be optionally appended to a command name by using a 
 plus (+) sign as the separator. For example:
@@ -263,8 +267,8 @@ context.
    The name of the BRLTTY command which is to be executed whenever the key is
    released.
 
-Modifiers may be appended to the command names. See the *commands* operand of 
-`The Bind Directive`_ for details.
+Modifiers may be appended to the command names. See
+`Bind Command Modifiers`_ for details.
 
 Specify the ``NOOP`` command if no command is to be executed. Specifying the
 ``NOOP`` command for both events effectively disables the key.
@@ -327,6 +331,8 @@ defined within the current context.
 *key*
    The name of the key that is to be mapped. More than one key may be mapped to
    the same braille keyboard function.
+
+.. _The Map Function Operand:
 
 *function*
    The name of the braille keyboard function. It may be one of the following
@@ -393,9 +399,36 @@ There's no limit to the number of notes that may be added. All of them are
 gathered together and presented in a single block at the start of the key 
 table's help text.
 
+*  A note that doesn't have a special prefix begins a new outer bulleted list
+   element.
+
+*  A note that is prefixed with an asterisk (*) continues the current outer
+   bulleted list element.
+
+*  A note that is prefixed with a plus (+) sign is an inner bulletged list
+   element.
+
 Examples::
 
-   note Key1 is the round key at the far left on the front surface.
+   note This is the first outer list element.
+   note This is the second outer list element.
+   note * Continue the second outer list element.
+   note + The first element of an inner list.
+   note + The second element of an inner list.
+   note * The third line of the second outer list element.
+
+The above example would be rendered as:
+
+*  This is the first outer list element.
+
+*  This is the second outer list element.
+   Continue the second outer list element.
+
+   +  The first element of an inner list.
+
+   +  The second element of an inner list.
+
+   The third line of the second outer list element.
 
 The Superimpose Directive
 -------------------------
@@ -409,7 +442,7 @@ number of these directives may be specified.
 
 *function*
    The name of the braille keyboard function that is to be implicitly included.
-   See the *function>* operand of `The Map Directive`_ for details.
+   See `The Map Function Operand`_ for details.
 
 Examples::
 
