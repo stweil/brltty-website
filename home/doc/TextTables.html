@@ -328,43 +328,49 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#directives" id="id2">Directives</a><ul>
-<li><a class="reference internal" href="#the-char-directive" id="id3">The Char Directive</a></li>
-<li><a class="reference internal" href="#the-glyph-directive" id="id4">The Glyph Directive</a></li>
-<li><a class="reference internal" href="#the-alias-directive" id="id5">The Alias Directive</a></li>
-<li><a class="reference internal" href="#the-byte-directive" id="id6">The Byte Directive</a></li>
-<li><a class="reference internal" href="#the-include-directive" id="id7">The Include Directive</a></li>
-<li><a class="reference internal" href="#the-assign-directive" id="id8">The Assign Directive</a></li>
-<li><a class="reference internal" href="#the-assigndefault-directive" id="id9">The AssignDefault Directive</a></li>
-<li><a class="reference internal" href="#the-ifvar-directive" id="id10">The IfVar Directive</a></li>
-<li><a class="reference internal" href="#the-ifnotvar-directive" id="id11">The IfNotVar Directive</a></li>
-<li><a class="reference internal" href="#the-endif-directive" id="id12">The EndIf Directive</a></li>
-<li><a class="reference internal" href="#the-else-directive" id="id13">The Else Directive</a></li>
+<li><a class="reference internal" href="#description" id="id2">Description</a></li>
+<li><a class="reference internal" href="#directives" id="id3">Directives</a><ul>
+<li><a class="reference internal" href="#the-char-directive" id="id4">The Char Directive</a></li>
+<li><a class="reference internal" href="#the-glyph-directive" id="id5">The Glyph Directive</a></li>
+<li><a class="reference internal" href="#the-alias-directive" id="id6">The Alias Directive</a></li>
+<li><a class="reference internal" href="#the-byte-directive" id="id7">The Byte Directive</a></li>
+<li><a class="reference internal" href="#the-include-directive" id="id8">The Include Directive</a></li>
+<li><a class="reference internal" href="#the-assign-directive" id="id9">The Assign Directive</a></li>
+<li><a class="reference internal" href="#the-assigndefault-directive" id="id10">The AssignDefault Directive</a></li>
+<li><a class="reference internal" href="#the-ifvar-directive" id="id11">The IfVar Directive</a></li>
+<li><a class="reference internal" href="#the-ifnotvar-directive" id="id12">The IfNotVar Directive</a></li>
+<li><a class="reference internal" href="#the-endif-directive" id="id13">The EndIf Directive</a></li>
+<li><a class="reference internal" href="#the-else-directive" id="id14">The Else Directive</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#operands" id="id14">Operands</a><ul>
-<li><a class="reference internal" href="#the-string-operand" id="id15">The String Operand</a></li>
-<li><a class="reference internal" href="#the-dots-operand" id="id16">The Dots Operand</a></li>
+<li><a class="reference internal" href="#operands" id="id15">Operands</a><ul>
+<li><a class="reference internal" href="#the-string-operand" id="id16">The String Operand</a></li>
+<li><a class="reference internal" href="#the-dots-operand" id="id17">The Dots Operand</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#text-table-list" id="id18">Text Table List</a></li>
 </ul>
 </div>
+<div class="section" id="description">
+<h2><a class="toc-backref" href="#id2">Description</a></h2>
 <p>Files with names of the form <tt class="docutils literal">*.ttb</tt> are text tables, and with names of the
 form <tt class="docutils literal">*.tti</tt> are text subtables. They are used by BRLTTY to translate the
 characters on the screen into their corresponding 8-dot computer braille
-representations (see <a class="reference external" href="BrailleDots.html">Braille Dots</a> for details). They can usually be
-found in the <tt class="docutils literal">/etc/brltty/Text/</tt> directory (see <a class="reference external" href="Customize.html">Local Customizations</a> for more
-details).</p>
+representations (see <a class="reference external" href="BrailleDots.html">Braille Dots</a> for details).</p>
+<p>Text tables can usually be found in the <tt class="docutils literal">/etc/brltty/Text/</tt> directory (see
+<a class="reference external" href="Customize.html">Local Customizations</a> for more details). See <a class="reference internal" href="#text-table-list">Text Table List</a> for a list of
+BRLTTY's text tables.</p>
 <p>A text table consists of a sequence of directives, one per line, which define
 how each character is to be represented in braille. UTF-8 character encoding
-must be used. White-space (blanks, tabs) at the beginning of a line, as well as
+must be used. Whitespace (blanks, tabs) at the beginning of a line, as well as
 before and/or after any operand of any directive, is ignored. Lines containing
-only white-space are ignored. If the first non-white-space character of a line
+only whitespace are ignored. If the first non-whitespace character of a line
 is <tt class="docutils literal">#</tt> then that line is a comment and is ignored.</p>
+</div>
 <div class="section" id="directives">
-<h2><a class="toc-backref" href="#id2">Directives</a></h2>
+<h2><a class="toc-backref" href="#id3">Directives</a></h2>
 <div class="section" id="the-char-directive">
-<h3><a class="toc-backref" href="#id3">The Char Directive</a></h3>
+<h3><a class="toc-backref" href="#id4">The Char Directive</a></h3>
 <pre class="literal-block">
 char <em>character</em> <em>dots</em> # <em>comment</em>
 </pre>
@@ -395,7 +401,7 @@ char \&lt;LATIN_SMALL_LETTER_D&gt; 145
 </pre>
 </div>
 <div class="section" id="the-glyph-directive">
-<h3><a class="toc-backref" href="#id4">The Glyph Directive</a></h3>
+<h3><a class="toc-backref" href="#id5">The Glyph Directive</a></h3>
 <pre class="literal-block">
 glyph <em>character</em> <em>dots</em> # <em>comment</em>
 </pre>
@@ -405,7 +411,7 @@ be entered from a braille keyboard.</p>
 <p>See <a class="reference internal" href="#the-char-directive">The Char Directive</a> for syntax, examples, etc.</p>
 </div>
 <div class="section" id="the-alias-directive">
-<h3><a class="toc-backref" href="#id5">The Alias Directive</a></h3>
+<h3><a class="toc-backref" href="#id6">The Alias Directive</a></h3>
 <pre class="literal-block">
 alias <em>from</em> <em>to</em> # <em>comment</em>
 </pre>
@@ -414,7 +420,7 @@ same braille representation as the <em>to</em> Unicode character. See
 <a class="reference internal" href="#the-string-operand">The String Operand</a> for details on how to specify both operands.</p>
 </div>
 <div class="section" id="the-byte-directive">
-<h3><a class="toc-backref" href="#id6">The Byte Directive</a></h3>
+<h3><a class="toc-backref" href="#id7">The Byte Directive</a></h3>
 <pre class="literal-block">
 byte <em>byte</em> <em>dots</em> # <em>comment</em>
 </pre>
@@ -434,7 +440,7 @@ supported by <a class="reference internal" href="#the-string-operand">The String
 </dl>
 </div>
 <div class="section" id="the-include-directive">
-<h3><a class="toc-backref" href="#id7">The Include Directive</a></h3>
+<h3><a class="toc-backref" href="#id8">The Include Directive</a></h3>
 <pre class="literal-block">
 include <em>file</em> # <em>comment</em>
 </pre>
@@ -448,7 +454,7 @@ relative, it is anchored at the directory containing the including file.</dd>
 </dl>
 </div>
 <div class="section" id="the-assign-directive">
-<h3><a class="toc-backref" href="#id8">The Assign Directive</a></h3>
+<h3><a class="toc-backref" href="#id9">The Assign Directive</a></h3>
 <pre class="literal-block">
 assign <em>variable</em> <em>value</em>
 </pre>
@@ -472,7 +478,7 @@ assign IndirectValue \{variableName}
 </pre>
 </div>
 <div class="section" id="the-assigndefault-directive">
-<h3><a class="toc-backref" href="#id9">The AssignDefault Directive</a></h3>
+<h3><a class="toc-backref" href="#id10">The AssignDefault Directive</a></h3>
 <pre class="literal-block">
 assignDefault <em>variable</em> <em>value</em>
 </pre>
@@ -497,7 +503,7 @@ assignDefault format plain\stext
 </pre>
 </div>
 <div class="section" id="the-ifvar-directive">
-<h3><a class="toc-backref" href="#id10">The IfVar Directive</a></h3>
+<h3><a class="toc-backref" href="#id11">The IfVar Directive</a></h3>
 <pre class="literal-block">
 ifVar <em>variable</em> <em>directive</em>
 </pre>
@@ -517,7 +523,7 @@ ifVar var1 ifVar var2 assign concatenation \{var1}\{var2}
 </pre>
 </div>
 <div class="section" id="the-ifnotvar-directive">
-<h3><a class="toc-backref" href="#id11">The IfNotVar Directive</a></h3>
+<h3><a class="toc-backref" href="#id12">The IfNotVar Directive</a></h3>
 <pre class="literal-block">
 ifNotVar <em>variable</em> <em>directive</em>
 </pre>
@@ -538,7 +544,7 @@ ifNotVar var1 assign var1 default\svalue
 </pre>
 </div>
 <div class="section" id="the-endif-directive">
-<h3><a class="toc-backref" href="#id12">The EndIf Directive</a></h3>
+<h3><a class="toc-backref" href="#id13">The EndIf Directive</a></h3>
 <pre class="literal-block">
 endIf
 </pre>
@@ -551,7 +557,7 @@ endIf
 </pre>
 </div>
 <div class="section" id="the-else-directive">
-<h3><a class="toc-backref" href="#id13">The Else Directive</a></h3>
+<h3><a class="toc-backref" href="#id14">The Else Directive</a></h3>
 <pre class="literal-block">
 else
 </pre>
@@ -569,9 +575,9 @@ endIf
 </div>
 </div>
 <div class="section" id="operands">
-<h2><a class="toc-backref" href="#id14">Operands</a></h2>
+<h2><a class="toc-backref" href="#id15">Operands</a></h2>
 <div class="section" id="the-string-operand">
-<h3><a class="toc-backref" href="#id15">The String Operand</a></h3>
+<h3><a class="toc-backref" href="#id16">The String Operand</a></h3>
 <p>A <em>string</em> operand may be specified as a non-whitespace sequence of:</p>
 <ul>
 <li><p class="first">Any single character other than a backslash (\\) or a white-space
@@ -675,15 +681,262 @@ character.</p>
 </ul>
 </div>
 <div class="section" id="the-dots-operand">
-<h3><a class="toc-backref" href="#id16">The Dots Operand</a></h3>
+<h3><a class="toc-backref" href="#id17">The Dots Operand</a></h3>
 <p>A <em>dots</em> operand is a sequence of one to eight dot numbers. If the dot numbers
 are enclosed within (parentheses) then they may be separated from one another
-by white-space. A dot number is a digit within the range <tt class="docutils literal">1</tt>-<tt class="docutils literal">8</tt>
+by whitespace. A dot number is a digit within the range <tt class="docutils literal">1</tt>-<tt class="docutils literal">8</tt>
 as defined by the standard braille dot numbering convention (see
 <a class="reference external" href="BrailleDots.html">Braille Dots</a> for details). The special dot number <tt class="docutils literal">0</tt> is recognized
 when not enclosed within (parentheses), and means no dots - it may not be used
 in conjunction with any other dot number.</p>
 </div>
+</div>
+<div class="section" id="text-table-list">
+<h2><a class="toc-backref" href="#id18">Text Table List</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>auto</td>
+<td>locale-based autoselection</td>
+</tr>
+<tr><td>ar</td>
+<td>Arabic (generic)</td>
+</tr>
+<tr><td>as</td>
+<td>Assamese</td>
+</tr>
+<tr><td>awa</td>
+<td>Awadhi</td>
+</tr>
+<tr><td>bg</td>
+<td>Bulgarian</td>
+</tr>
+<tr><td>bh</td>
+<td>Bihari</td>
+</tr>
+<tr><td>bn</td>
+<td>Bengali</td>
+</tr>
+<tr><td>bo</td>
+<td>Tibetan</td>
+</tr>
+<tr><td>bra</td>
+<td>Braj</td>
+</tr>
+<tr><td>brf</td>
+<td>Braille Ready Format (for viewing .brf files within an editor or pager)</td>
+</tr>
+<tr><td>cs</td>
+<td>Czech</td>
+</tr>
+<tr><td>cy</td>
+<td>Welsh</td>
+</tr>
+<tr><td>da</td>
+<td>Danish</td>
+</tr>
+<tr><td>de</td>
+<td>German</td>
+</tr>
+<tr><td>dra</td>
+<td>Dravidian</td>
+</tr>
+<tr><td>el</td>
+<td>Greek</td>
+</tr>
+<tr><td>en</td>
+<td>English</td>
+</tr>
+<tr><td>en_CA</td>
+<td>English (Canada)</td>
+</tr>
+<tr><td>en_GB</td>
+<td>English (United Kingdom)</td>
+</tr>
+<tr><td>en_US</td>
+<td>English (United States)</td>
+</tr>
+<tr><td>eo</td>
+<td>Esperanto</td>
+</tr>
+<tr><td>es</td>
+<td>Spanish</td>
+</tr>
+<tr><td>et</td>
+<td>Estonian</td>
+</tr>
+<tr><td>fi</td>
+<td>Finnish</td>
+</tr>
+<tr><td>fr</td>
+<td>French</td>
+</tr>
+<tr><td>fr_CA</td>
+<td>French (Canada)</td>
+</tr>
+<tr><td>fr_FR</td>
+<td>French (France)</td>
+</tr>
+<tr><td>ga</td>
+<td>Irish</td>
+</tr>
+<tr><td>gd</td>
+<td>Gaelic</td>
+</tr>
+<tr><td>gon</td>
+<td>Gondi</td>
+</tr>
+<tr><td>gu</td>
+<td>Gujarati</td>
+</tr>
+<tr><td>he</td>
+<td>Hebrew</td>
+</tr>
+<tr><td>hi</td>
+<td>Hindi</td>
+</tr>
+<tr><td>hr</td>
+<td>Croatian</td>
+</tr>
+<tr><td>hu</td>
+<td>Hungarian</td>
+</tr>
+<tr><td>hy</td>
+<td>Armenian</td>
+</tr>
+<tr><td>is</td>
+<td>Icelandic</td>
+</tr>
+<tr><td>it</td>
+<td>Italian</td>
+</tr>
+<tr><td>kha</td>
+<td>Khasi</td>
+</tr>
+<tr><td>kn</td>
+<td>Kannada</td>
+</tr>
+<tr><td>kok</td>
+<td>Konkani</td>
+</tr>
+<tr><td>kru</td>
+<td>Kurukh</td>
+</tr>
+<tr><td>lt</td>
+<td>Lituanian</td>
+</tr>
+<tr><td>lv</td>
+<td>Latvian</td>
+</tr>
+<tr><td>mg</td>
+<td>Malagasy</td>
+</tr>
+<tr><td>mi</td>
+<td>Maori</td>
+</tr>
+<tr><td>ml</td>
+<td>Malayalam</td>
+</tr>
+<tr><td>mni</td>
+<td>Manipuri</td>
+</tr>
+<tr><td>mr</td>
+<td>Marathi</td>
+</tr>
+<tr><td>mt</td>
+<td>Maltese</td>
+</tr>
+<tr><td>mun</td>
+<td>Munda</td>
+</tr>
+<tr><td>mwr</td>
+<td>Marwari</td>
+</tr>
+<tr><td>ne</td>
+<td>Nepali</td>
+</tr>
+<tr><td>new</td>
+<td>Newari</td>
+</tr>
+<tr><td>nl</td>
+<td>Dutch</td>
+</tr>
+<tr><td>nl_BE</td>
+<td>Dutch (Belgium)</td>
+</tr>
+<tr><td>nl_NL</td>
+<td>Dutch (Netherlands)</td>
+</tr>
+<tr><td>no</td>
+<td>Norwegian</td>
+</tr>
+<tr><td>nwc</td>
+<td>Newari (old)</td>
+</tr>
+<tr><td>or</td>
+<td>Oriya</td>
+</tr>
+<tr><td>pa</td>
+<td>Panjabi</td>
+</tr>
+<tr><td>pi</td>
+<td>Pali</td>
+</tr>
+<tr><td>pl</td>
+<td>Polish</td>
+</tr>
+<tr><td>pt</td>
+<td>Portuguese</td>
+</tr>
+<tr><td>ro</td>
+<td>Romanian</td>
+</tr>
+<tr><td>ru</td>
+<td>Russian</td>
+</tr>
+<tr><td>sa</td>
+<td>Sanskrit</td>
+</tr>
+<tr><td>sat</td>
+<td>Santali</td>
+</tr>
+<tr><td>sd</td>
+<td>Sindhi</td>
+</tr>
+<tr><td>sk</td>
+<td>Slovak</td>
+</tr>
+<tr><td>sl</td>
+<td>Slovenian</td>
+</tr>
+<tr><td>sv</td>
+<td>Swedish</td>
+</tr>
+<tr><td>sw</td>
+<td>Swahili</td>
+</tr>
+<tr><td>ta</td>
+<td>Tamil</td>
+</tr>
+<tr><td>te</td>
+<td>Telugu</td>
+</tr>
+<tr><td>tr</td>
+<td>Turkish</td>
+</tr>
+<tr><td>vi</td>
+<td>Vietnamese</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </body>

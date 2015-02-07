@@ -328,46 +328,53 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#directives" id="id2">Directives</a><ul>
-<li><a class="reference internal" href="#the-bind-directive" id="id3">The Bind Directive</a></li>
-<li><a class="reference internal" href="#the-context-directive" id="id4">The Context Directive</a></li>
-<li><a class="reference internal" href="#the-hide-directive" id="id5">The Hide Directive</a></li>
-<li><a class="reference internal" href="#the-hotkey-directive" id="id6">The Hotkey Directive</a></li>
-<li><a class="reference internal" href="#the-ifkey-directive" id="id7">The IfKey Directive</a></li>
-<li><a class="reference internal" href="#the-ifnotkey-directive" id="id8">The IfNotKey Directive</a></li>
-<li><a class="reference internal" href="#the-map-directive" id="id9">The Map Directive</a></li>
-<li><a class="reference internal" href="#the-note-directive" id="id10">The Note Directive</a></li>
-<li><a class="reference internal" href="#the-superimpose-directive" id="id11">The Superimpose Directive</a></li>
-<li><a class="reference internal" href="#the-title-directive" id="id12">The Title Directive</a></li>
-<li><a class="reference internal" href="#the-include-directive" id="id13">The Include Directive</a></li>
-<li><a class="reference internal" href="#the-assign-directive" id="id14">The Assign Directive</a></li>
-<li><a class="reference internal" href="#the-assigndefault-directive" id="id15">The AssignDefault Directive</a></li>
-<li><a class="reference internal" href="#the-ifvar-directive" id="id16">The IfVar Directive</a></li>
-<li><a class="reference internal" href="#the-ifnotvar-directive" id="id17">The IfNotVar Directive</a></li>
-<li><a class="reference internal" href="#the-endif-directive" id="id18">The EndIf Directive</a></li>
-<li><a class="reference internal" href="#the-else-directive" id="id19">The Else Directive</a></li>
+<li><a class="reference internal" href="#description" id="id2">Description</a></li>
+<li><a class="reference internal" href="#directives" id="id3">Directives</a><ul>
+<li><a class="reference internal" href="#the-bind-directive" id="id4">The Bind Directive</a></li>
+<li><a class="reference internal" href="#the-context-directive" id="id5">The Context Directive</a></li>
+<li><a class="reference internal" href="#the-hide-directive" id="id6">The Hide Directive</a></li>
+<li><a class="reference internal" href="#the-hotkey-directive" id="id7">The Hotkey Directive</a></li>
+<li><a class="reference internal" href="#the-ifkey-directive" id="id8">The IfKey Directive</a></li>
+<li><a class="reference internal" href="#the-ifnotkey-directive" id="id9">The IfNotKey Directive</a></li>
+<li><a class="reference internal" href="#the-map-directive" id="id10">The Map Directive</a></li>
+<li><a class="reference internal" href="#the-note-directive" id="id11">The Note Directive</a></li>
+<li><a class="reference internal" href="#the-superimpose-directive" id="id12">The Superimpose Directive</a></li>
+<li><a class="reference internal" href="#the-title-directive" id="id13">The Title Directive</a></li>
+<li><a class="reference internal" href="#the-include-directive" id="id14">The Include Directive</a></li>
+<li><a class="reference internal" href="#the-assign-directive" id="id15">The Assign Directive</a></li>
+<li><a class="reference internal" href="#the-assigndefault-directive" id="id16">The AssignDefault Directive</a></li>
+<li><a class="reference internal" href="#the-ifvar-directive" id="id17">The IfVar Directive</a></li>
+<li><a class="reference internal" href="#the-ifnotvar-directive" id="id18">The IfNotVar Directive</a></li>
+<li><a class="reference internal" href="#the-endif-directive" id="id19">The EndIf Directive</a></li>
+<li><a class="reference internal" href="#the-else-directive" id="id20">The Else Directive</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#keyboard-table-list" id="id21">Keyboard Table List</a></li>
+<li><a class="reference internal" href="#braille-driver-list" id="id22">Braille Driver List</a></li>
 </ul>
 </div>
+<div class="section" id="description">
+<h2><a class="toc-backref" href="#id2">Description</a></h2>
 <p>Files with names of the form <tt class="docutils literal">*.ktb</tt> are key tables, and with names of the
 form <tt class="docutils literal">*.kti</tt> are key subtables. They are used to bind braille device and
 computer keyboard key combinations to BRLTTY commands.</p>
 <ul class="simple">
 <li>Braille device key tables can usually be found in the
 <tt class="docutils literal">/etc/brltty/Input/xx/</tt> directory, where <tt class="docutils literal">xx</tt> is the two-letter braille
-driver identification code. The name of a braille device key table
-identifies the model(s) for which it is used.</li>
+driver identification code (see <a class="reference internal" href="#braille-driver-list">Braille Driver List</a>). The name of a
+braille device key table identifies the model(s) for which it is used. The
+driver selects which key table is to be used.</li>
 <li>Computer keyboard key tables can usually be found in the
 <tt class="docutils literal">/etc/brltty/Keyboard/</tt> directory. The name of a keyboard key table
-describes the kind of keyboard for which it has been designed.</li>
-<li>See <a class="reference external" href="Customize.html">Local Customizations</a> for more details.</li>
+describes the kind of keyboard for which it has been designed. See
+<a class="reference internal" href="#keyboard-table-list">Keyboard Table List</a> for a list of BRLTTY's keyboard tables.</li>
+<li>See <a class="reference external" href="Customize.html">Local Customizations</a> for more details regarding key table locations.</li>
 </ul>
 <p>A key table consists of a sequence of directives, one per line, which define
 how keys and key combinations are to be interpreted. UTF-8 character encoding
-must be used. White-space (blanks, tabs) at the beginning of a line, as well as
-before and/or after any operand, is ignored. Lines containing only white-space
-are ignored. If the first non-white-space character of a line is <tt class="docutils literal">#</tt> then
+must be used. Whitespace (blanks, tabs) at the beginning of a line, as well as
+before and/or after any operand, is ignored. Lines containing only whitespace
+are ignored. If the first non-whitespace character of a line is <tt class="docutils literal">#</tt> then
 that line is a comment and is ignored.</p>
 <p>The precedence for resolving each key press/release event is as follows:</p>
 <ol class="arabic simple">
@@ -376,10 +383,11 @@ that line is a comment and is ignored.</p>
 <li>A braille keyboard command defined within the current context.</li>
 <li>A key combination defined within the default context.</li>
 </ol>
+</div>
 <div class="section" id="directives">
-<h2><a class="toc-backref" href="#id2">Directives</a></h2>
+<h2><a class="toc-backref" href="#id3">Directives</a></h2>
 <div class="section" id="the-bind-directive">
-<h3><a class="toc-backref" href="#id3">The Bind Directive</a></h3>
+<h3><a class="toc-backref" href="#id4">The Bind Directive</a></h3>
 <pre class="literal-block">
 bind <em>keys</em> <em>commands</em>
 </pre>
@@ -497,7 +505,7 @@ bind Key6 CONTEXT+context1
 </pre>
 </div>
 <div class="section" id="the-context-directive">
-<h3><a class="toc-backref" href="#id4">The Context Directive</a></h3>
+<h3><a class="toc-backref" href="#id5">The Context Directive</a></h3>
 <pre class="literal-block">
 context <em>name</em> <em>title</em>
 </pre>
@@ -549,7 +557,7 @@ context DESCCHAR
 </pre>
 </div>
 <div class="section" id="the-hide-directive">
-<h3><a class="toc-backref" href="#id5">The Hide Directive</a></h3>
+<h3><a class="toc-backref" href="#id6">The Hide Directive</a></h3>
 <pre class="literal-block">
 hide <em>state</em>
 </pre>
@@ -588,7 +596,7 @@ hide on
 </pre>
 </div>
 <div class="section" id="the-hotkey-directive">
-<h3><a class="toc-backref" href="#id6">The Hotkey Directive</a></h3>
+<h3><a class="toc-backref" href="#id7">The Hotkey Directive</a></h3>
 <pre class="literal-block">
 hotkey <em>key</em> <em>press</em> <em>release</em>
 </pre>
@@ -616,7 +624,7 @@ hotkey Key2 NOOP NOOP
 </pre>
 </div>
 <div class="section" id="the-ifkey-directive">
-<h3><a class="toc-backref" href="#id7">The IfKey Directive</a></h3>
+<h3><a class="toc-backref" href="#id8">The IfKey Directive</a></h3>
 <pre class="literal-block">
 ifKey <em>key</em> <em>directive</em>
 </pre>
@@ -637,7 +645,7 @@ ifKey Key1 ifkey Key2 bind Key1+Key2 HOME
 </pre>
 </div>
 <div class="section" id="the-ifnotkey-directive">
-<h3><a class="toc-backref" href="#id8">The IfNotKey Directive</a></h3>
+<h3><a class="toc-backref" href="#id9">The IfNotKey Directive</a></h3>
 <pre class="literal-block">
 ifNotKey <em>key</em> <em>directive</em>
 </pre>
@@ -658,7 +666,7 @@ ifNotKey Key2 bind Key1 HOME
 </pre>
 </div>
 <div class="section" id="the-map-directive">
-<h3><a class="toc-backref" href="#id9">The Map Directive</a></h3>
+<h3><a class="toc-backref" href="#id10">The Map Directive</a></h3>
 <pre class="literal-block">
 map <em>key</em> <em>function</em>
 </pre>
@@ -718,7 +726,7 @@ map Key1 DOT1
 </pre>
 </div>
 <div class="section" id="the-note-directive">
-<h3><a class="toc-backref" href="#id10">The Note Directive</a></h3>
+<h3><a class="toc-backref" href="#id11">The Note Directive</a></h3>
 <pre class="literal-block">
 note <em>text</em>
 </pre>
@@ -767,7 +775,7 @@ Continue the second outer list element.</p>
 </ul>
 </div>
 <div class="section" id="the-superimpose-directive">
-<h3><a class="toc-backref" href="#id11">The Superimpose Directive</a></h3>
+<h3><a class="toc-backref" href="#id12">The Superimpose Directive</a></h3>
 <pre class="literal-block">
 superimpose <em>function</em>
 </pre>
@@ -786,7 +794,7 @@ superimpose DOT7
 </pre>
 </div>
 <div class="section" id="the-title-directive">
-<h3><a class="toc-backref" href="#id12">The Title Directive</a></h3>
+<h3><a class="toc-backref" href="#id13">The Title Directive</a></h3>
 <pre class="literal-block">
 title &lt;text&gt;
 </pre>
@@ -804,7 +812,7 @@ title Bindings for Keypad-based Navigation
 </pre>
 </div>
 <div class="section" id="the-include-directive">
-<h3><a class="toc-backref" href="#id13">The Include Directive</a></h3>
+<h3><a class="toc-backref" href="#id14">The Include Directive</a></h3>
 <pre class="literal-block">
 include <em>file</em> # <em>comment</em>
 </pre>
@@ -818,7 +826,7 @@ relative, it is anchored at the directory containing the including file.</dd>
 </dl>
 </div>
 <div class="section" id="the-assign-directive">
-<h3><a class="toc-backref" href="#id14">The Assign Directive</a></h3>
+<h3><a class="toc-backref" href="#id15">The Assign Directive</a></h3>
 <pre class="literal-block">
 assign <em>variable</em> <em>value</em>
 </pre>
@@ -842,7 +850,7 @@ assign IndirectValue \{variableName}
 </pre>
 </div>
 <div class="section" id="the-assigndefault-directive">
-<h3><a class="toc-backref" href="#id15">The AssignDefault Directive</a></h3>
+<h3><a class="toc-backref" href="#id16">The AssignDefault Directive</a></h3>
 <pre class="literal-block">
 assignDefault <em>variable</em> <em>value</em>
 </pre>
@@ -867,7 +875,7 @@ assignDefault format plain\stext
 </pre>
 </div>
 <div class="section" id="the-ifvar-directive">
-<h3><a class="toc-backref" href="#id16">The IfVar Directive</a></h3>
+<h3><a class="toc-backref" href="#id17">The IfVar Directive</a></h3>
 <pre class="literal-block">
 ifVar <em>variable</em> <em>directive</em>
 </pre>
@@ -887,7 +895,7 @@ ifVar var1 ifVar var2 assign concatenation \{var1}\{var2}
 </pre>
 </div>
 <div class="section" id="the-ifnotvar-directive">
-<h3><a class="toc-backref" href="#id17">The IfNotVar Directive</a></h3>
+<h3><a class="toc-backref" href="#id18">The IfNotVar Directive</a></h3>
 <pre class="literal-block">
 ifNotVar <em>variable</em> <em>directive</em>
 </pre>
@@ -908,7 +916,7 @@ ifNotVar var1 assign var1 default\svalue
 </pre>
 </div>
 <div class="section" id="the-endif-directive">
-<h3><a class="toc-backref" href="#id18">The EndIf Directive</a></h3>
+<h3><a class="toc-backref" href="#id19">The EndIf Directive</a></h3>
 <pre class="literal-block">
 endIf
 </pre>
@@ -921,7 +929,7 @@ endIf
 </pre>
 </div>
 <div class="section" id="the-else-directive">
-<h3><a class="toc-backref" href="#id19">The Else Directive</a></h3>
+<h3><a class="toc-backref" href="#id20">The Else Directive</a></h3>
 <pre class="literal-block">
 else
 </pre>
@@ -937,6 +945,170 @@ else
 endIf
 </pre>
 </div>
+</div>
+<div class="section" id="keyboard-table-list">
+<h2><a class="toc-backref" href="#id21">Keyboard Table List</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>braille</td>
+<td>bindings for braille keyboards</td>
+</tr>
+<tr><td>desktop</td>
+<td>bindings for full keyboards</td>
+</tr>
+<tr><td>keypad</td>
+<td>bindings for keypad-based navigation</td>
+</tr>
+<tr><td>laptop</td>
+<td>bindings for keyboards without a keypad</td>
+</tr>
+<tr><td>sun_type6</td>
+<td>bindings for Sun Type 6 keyboards</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="braille-driver-list">
+<h2><a class="toc-backref" href="#id22">Braille Driver List</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Code</th>
+<th class="head">Name</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>auto</td>
+<td>autodetect</td>
+</tr>
+<tr><td>al</td>
+<td>Alva</td>
+</tr>
+<tr><td>at</td>
+<td>Albatross</td>
+</tr>
+<tr><td>ba</td>
+<td>BrlAPI</td>
+</tr>
+<tr><td>bc</td>
+<td>BrailComm</td>
+</tr>
+<tr><td>bd</td>
+<td>Braudi</td>
+</tr>
+<tr><td>bg</td>
+<td>B2G</td>
+</tr>
+<tr><td>bl</td>
+<td>BrailleLite</td>
+</tr>
+<tr><td>bm</td>
+<td>Baum</td>
+</tr>
+<tr><td>bn</td>
+<td>BrailleNote</td>
+</tr>
+<tr><td>cb</td>
+<td>CombiBraille</td>
+</tr>
+<tr><td>ce</td>
+<td>Cebra</td>
+</tr>
+<tr><td>ec</td>
+<td>EcoBraille</td>
+</tr>
+<tr><td>eu</td>
+<td>EuroBraille</td>
+</tr>
+<tr><td>fs</td>
+<td>FreedomScientific</td>
+</tr>
+<tr><td>hd</td>
+<td>Hedo</td>
+</tr>
+<tr><td>hm</td>
+<td>HIMS</td>
+</tr>
+<tr><td>ht</td>
+<td>HandyTech</td>
+</tr>
+<tr><td>hw</td>
+<td>HumanWare</td>
+</tr>
+<tr><td>ir</td>
+<td>Iris</td>
+</tr>
+<tr><td>lb</td>
+<td>Libbraille</td>
+</tr>
+<tr><td>lt</td>
+<td>LogText</td>
+</tr>
+<tr><td>mb</td>
+<td>MultiBraille</td>
+</tr>
+<tr><td>md</td>
+<td>MDV</td>
+</tr>
+<tr><td>mm</td>
+<td>BrailleMemo</td>
+</tr>
+<tr><td>mn</td>
+<td>MiniBraille</td>
+</tr>
+<tr><td>mt</td>
+<td>Metec</td>
+</tr>
+<tr><td>np</td>
+<td>NinePoint</td>
+</tr>
+<tr><td>pg</td>
+<td>Pegasus</td>
+</tr>
+<tr><td>pm</td>
+<td>Papenmeier</td>
+</tr>
+<tr><td>sk</td>
+<td>Seika</td>
+</tr>
+<tr><td>tn</td>
+<td>TechniBraille</td>
+</tr>
+<tr><td>ts</td>
+<td>TSI</td>
+</tr>
+<tr><td>tt</td>
+<td>TTY</td>
+</tr>
+<tr><td>vd</td>
+<td>VideoBraille</td>
+</tr>
+<tr><td>vo</td>
+<td>Voyager, BraillePen/EasyLink</td>
+</tr>
+<tr><td>vr</td>
+<td>Virtual</td>
+</tr>
+<tr><td>vs</td>
+<td>VisioBraille</td>
+</tr>
+<tr><td>xw</td>
+<td>XWindow</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </body>

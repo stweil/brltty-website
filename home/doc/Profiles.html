@@ -355,10 +355,10 @@ ones that were established via command line options, the configuration file
 (<tt class="docutils literal">brltty.conf</tt>), the preferences file (<tt class="docutils literal">brltty.prefs</tt>), etc when BRLTTY
 was invoked. Profiles must be placed in the <tt class="docutils literal">/etc/brltty/Profiles/</tt>
 directory (see <a class="reference external" href="Customize.html">Local Customizations</a> for more details).</p>
-<p>A profile must be encoded in UTF-8. Blank lines are ignored. A line whose first
-non-whitespace character is a number sign (<tt class="docutils literal">#</tt>) is a comment and is ignored.
-The <a class="reference internal" href="#standard-directives">Standard Directives</a> are supported. All other lines specify the settings
-which are to be overridden, and must be in the form:</p>
+<p>A profile must be encoded in UTF-8. Blank lines are ignored. If the first
+non-whitespace character of a line is <tt class="docutils literal">#</tt> then that line is a comment and is
+ignored. The <a class="reference internal" href="#standard-directives">Standard Directives</a> are supported. All other lines specify the
+settings that are to be overridden, and must be in the form:</p>
 <pre class="literal-block">
 <em>name</em> <em>value</em>
 </pre>
