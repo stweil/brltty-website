@@ -1,7 +1,7 @@
 <DL>
 <DT><A HREF="archive/Android/brltty-latest.apk">brltty-latest.apk</A><DD>
 The latest version of BRLTTY for Android.
-<DT><A HREF="archive/Android/android-howto.txt">android-howto.txt</A><DD>
+<DT><A HREF="archive/Android/brltty-on-android.html">Using BRLTTY on Android</A><DD>
 The latest documentation for BRLTTY on Android.
 </DL>
 <P>
