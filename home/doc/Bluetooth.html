@@ -364,7 +364,7 @@ hciconfig hci0
 </pre>
 <p>Look for the (indented) line which begins with <tt class="docutils literal">BD Address:</tt>. The very next
 &quot;word&quot; on that line is your host's Bluetooth Device Address. It'll be six
-two-digit hexadecimal numbers separated by colons (:). Examples in this
+two-digit hexadecimal numbers separated by colons (<tt class="docutils literal">:</tt>). Examples in this
 document use the value <tt class="docutils literal">01:23:45:67:89:AB</tt>.</p>
 <p>You need to find out your device's Bluetooth Device Address (referred to later
 in this document as <em>device-address</em>). To do this, run the command:</p>
@@ -481,8 +481,8 @@ BRLTTY.</p>
 <p>You can tell BRLTTY to use your Bluetooth device either via the <tt class="docutils literal"><span class="pre">-d</span></tt>
 (or <tt class="docutils literal"><span class="pre">--braille-device=</span></tt>) command line option, or via the <tt class="docutils literal"><span class="pre">braille-device</span></tt>
 line in the file <tt class="docutils literal">/etc/brltty.conf</tt>. The device should be specified as the
-word <tt class="docutils literal">bluetooth</tt>, a colon (:), and the device's Bluetooth Device Address. For
-example:</p>
+word <tt class="docutils literal">bluetooth</tt>, a colon (<tt class="docutils literal">:</tt>), and the device's Bluetooth Device Address.
+For example:</p>
 <pre class="literal-block">
 brltty -d bluetooth:12:34:56:78:9A:BC
 </pre>

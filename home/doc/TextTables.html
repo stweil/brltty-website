@@ -366,6 +366,108 @@ must be used. Whitespace (blanks, tabs) at the beginning of a line, as well as
 before and/or after any operand of any directive, is ignored. Lines containing
 only whitespace are ignored. If the first non-whitespace character of a line
 is <tt class="docutils literal">#</tt> then that line is a comment and is ignored.</p>
+<p>The precedence for determining the braille representation for a character is as
+follows:</p>
+<ol class="arabic">
+<li><p class="first">If the character is within the Unicode braille Row (U+2800 through U+28FF)
+then its low-order eight bits are used as follows:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="57%" />
+<col width="21%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><p class="first last">Hex</p>
+</td>
+<td><p class="first last">Binary</p>
+</td>
+<td><p class="first last">Dot</p>
+</td>
+</tr>
+<tr><td><p class="first last">01</p>
+</td>
+<td><p class="first last">00000001</p>
+</td>
+<td><p class="first last">1</p>
+</td>
+</tr>
+<tr><td><p class="first last">02</p>
+</td>
+<td><p class="first last">00000010</p>
+</td>
+<td><p class="first last">2</p>
+</td>
+</tr>
+<tr><td><p class="first last">04</p>
+</td>
+<td><p class="first last">00000100</p>
+</td>
+<td><p class="first last">3</p>
+</td>
+</tr>
+<tr><td><p class="first last">08</p>
+</td>
+<td><p class="first last">00001000</p>
+</td>
+<td><p class="first last">4</p>
+</td>
+</tr>
+<tr><td><p class="first last">10</p>
+</td>
+<td><p class="first last">00010000</p>
+</td>
+<td><p class="first last">5</p>
+</td>
+</tr>
+<tr><td><p class="first last">20</p>
+</td>
+<td><p class="first last">00100000</p>
+</td>
+<td><p class="first last">6</p>
+</td>
+</tr>
+<tr><td><p class="first last">40</p>
+</td>
+<td><p class="first last">01000000</p>
+</td>
+<td><p class="first last">7</p>
+</td>
+</tr>
+<tr><td><p class="first last">80</p>
+</td>
+<td><p class="first last">10000000</p>
+</td>
+<td><p class="first last">8</p>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first">If the character is within the Unicode private use row U+F000 through U+F0FF
+then its low-order byte is:</p>
+<ol class="arabic simple">
+<li>interpreted as a single-byte character within the locAL character set</li>
+<li>translated to Unicode</li>
+<li>reprocessed</li>
+</ol>
+</li>
+<li><p class="first">An explicit representation (defined via <a class="reference internal" href="#the-char-directive">The Char Directive</a>,
+<a class="reference internal" href="#the-glyph-directive">The Glyph Directive</a>, or <a class="reference internal" href="#the-byte-directive">The Byte Directive</a>.</p>
+</li>
+<li><p class="first">An equivalent representation (defined via <a class="reference internal" href="#the-alias-directive">The Alias Directive</a>).</p>
+</li>
+<li><p class="first">The explicit representation of the Unicode base character.</p>
+</li>
+<li><p class="first">The explicit representation of the transliterated ASCII character.</p>
+</li>
+<li><p class="first">The explicit representation of the Unicode Replacement Character (U+FFFD).</p>
+</li>
+<li><p class="first">The explicit representation of a question mark (<tt class="docutils literal">?</tt>).</p>
+</li>
+<li><p class="first">All eight braille dots.</p>
+</li>
+</ol>
 </div>
 <div class="section" id="directives">
 <h2><a class="toc-backref" href="#id3">Directives</a></h2>
