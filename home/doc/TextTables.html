@@ -358,7 +358,7 @@ form <tt class="docutils literal">*.tti</tt> are text subtables. They are used b
 characters on the screen into their corresponding 8-dot computer braille
 representations (see <a class="reference external" href="BrailleDots.html">Braille Dots</a> for details).</p>
 <p>Text tables can usually be found in the <tt class="docutils literal">/etc/brltty/Text/</tt> directory (see
-<a class="reference external" href="Customize.html">Local Customizations</a> for more details). See <a class="reference internal" href="#text-table-list">Text Table List</a> for a list of
+<a class="reference external" href="Customize.html">Local Customization</a> for more details). See <a class="reference internal" href="#text-table-list">Text Table List</a> for a list of
 BRLTTY's text tables.</p>
 <p>A text table consists of a sequence of directives, one per line, which define
 how each character is to be represented in braille. UTF-8 character encoding
@@ -446,7 +446,7 @@ then its low-order eight bits are used as follows:</p>
 </li>
 <li><p class="first">If the character is within the Unicode private use row U+F000 through U+F0FF
 then its low-order byte is:</p>
-<ol class="arabic simple">
+<ol class="upperalpha simple">
 <li>interpreted as a single-byte character within the locAL character set</li>
 <li>translated to Unicode</li>
 <li>reprocessed</li>
