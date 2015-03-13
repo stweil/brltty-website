@@ -2,9 +2,10 @@ Key Table: Baum Vario Pro
 =========================
 
 Notes
-* The display keys are at both ends of the text cell area. From top to bottom:
-  the three at the left are named Display1 through Display3,
-  and the three at the right are named Display4 through Display6.
+* There are three display keys at each end of the braille cells.
+  From top to bottom:
+  + The three at the left are named Display1, Display2, and Display3.
+  + The three at the right are named Display4, Display5, and Display6.
 * The wheels on the display module are identified by their ordinal position
 * (first through fourth) from the left.
 * The larger controls on the status module, from left to right,
@@ -25,14 +26,15 @@ Special Modes
 * enter/leave preferences menu:
   + Display1+Display3+Display4
   + StatusButton4
-* show current date and time: Display1+Display5
 * enter/leave status display:
   + Display2+Display5
   + StatusButton3
+* set display mode attributes/text: Display1+Display4+Display5
 * set screen image frozen/unfrozen:
   + Display1+Display2+Display4
   + StatusKey3
-* set display mode attributes/text: Display1+Display4+Display5
+* describe character: Display3+RoutingKey
+* show current date and time: Display1+Display5
 
 Cursor Functions
 * go to screen cursor:
@@ -112,7 +114,6 @@ Menu Operations
 
 Speech Functions
 * stop speaking: Display3+Display4
-* describe character: Display3+RoutingKey
 * speak current line: Display3+Display5
 * speak from top of screen through current line: Display3+Display5+Display4
 * speak from current line through bottom of screen: Display3+Display5+Display6

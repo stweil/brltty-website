@@ -17,8 +17,9 @@ Special Modes
 * enter/leave command learn mode: RightPadF2
 * enter/leave preferences menu: RightPadLeft
 * enter/leave status display: RightPadRight
-* set screen image frozen/unfrozen: RightPadF1+RightPadLeft
 * set display mode attributes/text: Status2B
+* set screen image frozen/unfrozen: RightPadF1+RightPadLeft
+* describe character: RoutingKey2
 
 Cursor Functions
 * go to screen cursor: Cursor
@@ -76,7 +77,6 @@ Configuration Functions
 
 Speech Functions
 * stop speaking: LeftPadLeft
-* describe character: RoutingKey2
 * speak current line: LeftPadRight
 * speak from top of screen through current line: LeftPadUp
 * speak from current line through bottom of screen: LeftPadDown

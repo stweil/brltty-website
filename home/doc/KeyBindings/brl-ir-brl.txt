@@ -21,6 +21,7 @@ Special Modes
   + L3+L5
   + L5
 * set screen image frozen/unfrozen: L4+L3+L5
+* describe character: L6+RoutingKey
 
 Cursor Functions
 * bring screen cursor to character: RoutingKey
@@ -51,9 +52,6 @@ Configuration Functions
 * set text style 8-dot: L3+L2+L7
 * set screen cursor visibility on/off: L2+L3
 * set alert tunes on/off: L6+L7
-
-Speech Functions
-* describe character: L6+RoutingKey
 
 Special Functions
 * restart speech driver: L6+L8

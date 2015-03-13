@@ -51,7 +51,7 @@ Vertical Navigation
 Horizontal Navigation
 * place left end of braille window at character: K1+K8+K4, RoutingKey
 
-Speech Functions
+Special Modes
 * describe character: K1+K8+K5, RoutingKey
 
 Vertical Navigation
@@ -77,8 +77,8 @@ Special Modes
 * enter/leave command learn mode: K1+K3
 * enter/leave preferences menu: K1+K6
 * enter/leave status display: K1+K7
-* set screen image frozen/unfrozen: K8+K3
 * set display mode attributes/text: K8+K2
+* set screen image frozen/unfrozen: K8+K3
 
 Configuration Functions
 * set text style 6-dot/8-dot: K8+K6

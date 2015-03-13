@@ -15,8 +15,9 @@ Special Modes
 * enter/leave help display: Display1+Display2
 * enter/leave command learn mode: Display3+Display4
 * enter/leave preferences menu: Display6+Display7
-* set screen image frozen/unfrozen: Display2+Display5
 * set display mode attributes/text: Display1+Display3
+* set screen image frozen/unfrozen: Display2+Display5
+* describe character: Display5+RoutingKey
 
 Cursor Functions
 * go to screen cursor or go back after cursor tracking: Display5
@@ -65,7 +66,6 @@ Menu Operations
 
 Speech Functions
 * stop speaking: Display1+Display2+Display3
-* describe character: Display5+RoutingKey
 * speak current line: Display1+Display2+Display4
 * speak from top of screen through current line: Display1+Display2+Display6
 * speak from current line through bottom of screen: Display1+Display2+Display7

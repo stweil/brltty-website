@@ -12,14 +12,14 @@ Special Modes
 * enter/leave help display: Status.1
 * enter/leave command learn mode: Status.2
 * enter/leave preferences menu: Status.9
-* show current date and time: Status.12
 * enter/leave status display: Status.4
-* set screen image frozen/unfrozen: Status.8
-* set screen image frozen: Status.8+Attribute
-* set screen image unfrozen: Status.8+Function
 * set display mode attributes/text: Status.7
 * set display mode attributes: Status.7+Attribute
 * set display mode text: Status.7+Function
+* set screen image frozen/unfrozen: Status.8
+* set screen image frozen: Status.8+Attribute
+* set screen image unfrozen: Status.8+Function
+* show current date and time: Status.12
 
 Cursor Functions
 * go to screen cursor: Home

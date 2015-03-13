@@ -19,10 +19,10 @@ Special Modes
   + RoutingKey.1+RoutingKey.2+RoutingKey.64+RoutingKey.65
 * enter/leave preferences menu: Bar1+Bar2
 * enter/leave status display: Button3+Button4
-* set screen image frozen: Switch2Up
-* set screen image unfrozen: Switch2Down
 * set display mode attributes: Switch4Up
 * set display mode text: Switch4Down
+* set screen image frozen: Switch2Up
+* set screen image unfrozen: Switch2Down
 
 Cursor Functions
 * go to screen cursor: Concave

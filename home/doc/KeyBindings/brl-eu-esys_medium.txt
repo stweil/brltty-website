@@ -18,6 +18,9 @@ Notes
 Default Bindings
 ----------------
 
+Special Modes
+* describe character: RoutingKey2
+
 Cursor Functions
 * go to screen cursor: RightJoystickPress
 * bring screen cursor to character: RoutingKey1
@@ -36,9 +39,6 @@ Horizontal Navigation
 
 Clipboard Functions
 * start new clipboard at character: LeftJoystickDown+RightJoystickLeft, RoutingKey1
-
-Speech Functions
-* describe character: RoutingKey2
 
 Keyboard Input
 * enter key: Backspace+Space
@@ -68,9 +68,9 @@ Keyboard Input
 * function key #10: Backspace+Dot2+Dot4+Dot5
 * function key #11: Backspace+Dot1+Dot3
 * function key #12: Backspace+Dot1+Dot2+Dot3
-* set shift modifier of next typed character or emulated key on/off: Space+Dot7
-* set control modifier of next typed character or emulated key on/off: Space+Dot7+Dot8
-* set meta modifier of next typed character or emulated key on/off: Space+Dot8
+* cycle the Shift sticky input modifier (next, on, off): Space+Dot7
+* cycle the Control sticky input modifier (next, on, off): Space+Dot7+Dot8
+* cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dot8
 
 Clipboard Functions
 * append to clipboard from character: LeftJoystickDown+RightJoystickUp, RoutingKey1

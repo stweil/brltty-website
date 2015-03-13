@@ -8,17 +8,18 @@ Special Modes
 * enter/leave help display: KPMinus+KP7
 * enter/leave command learn mode: KPMinus+KP9
 * enter/leave preferences menu: KPMinus+KP5
-* show current date and time: KPMinus+KP1
 * enter/leave status display: KPMinus+KP8
-* set screen image frozen/unfrozen: KPMinus+KP3
 * set display mode attributes/text: KP0+KPMultiply
+* set screen image frozen/unfrozen: KPMinus+KP2
+* describe character at cursor: KPMinus+KP3
+* show current date and time: KPMinus+KP1
 * switch to Default Bindings: KPEnter+KPMinus
 * switch to Braille Input Mode: KPEnter+KPPlus
 
 Cursor Functions
 * go to screen cursor: KP0+KP5
 * go back after cursor tracking: KPPeriod+KP5
-* bring screen cursor to current line: KPMinus+KP2
+* bring screen cursor to current line: KP0+KPPeriod+KP2
 * bring screen cursor to speech cursor: KPPlus+KPMultiply
 
 Vertical Navigation
@@ -72,7 +73,6 @@ Menu Operations
 
 Speech Functions
 * stop speaking: KPEnter+KP4
-* describe character at cursor: KP0+KPPeriod+KP2
 * speak current line: KPEnter+KP5
 * speak from top of screen through current line: KPEnter+KP8
 * speak from current line through bottom of screen: KPEnter+KP2

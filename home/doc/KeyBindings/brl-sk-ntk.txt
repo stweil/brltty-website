@@ -17,12 +17,13 @@ Special Modes
 * enter/leave status display:
   + LeftJoystickPress+RightJoystickUp
   + Space+Dot2+Dot3+Dot4
-* set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
-* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
-* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
 * set display mode attributes/text: Space+Dot1+Dot4+Dot5
 * set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
 * set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+* set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
+* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+* describe character: RightButton+RoutingKey
 
 Cursor Functions
 * go to screen cursor: LeftButton+RightButton
@@ -113,7 +114,6 @@ Menu Operations
 
 Speech Functions
 * stop speaking: Backspace+RightJoystickLeft
-* describe character: RightButton+RoutingKey
 * speak current line: Backspace+RightJoystickRight
 * speak from top of screen through current line: Backspace+RightJoystickUp
 * speak from current line through bottom of screen: Backspace+RightJoystickDown

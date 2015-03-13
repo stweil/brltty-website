@@ -17,10 +17,11 @@ Special Modes
 * enter/leave preferences menu:
   + B7+B1
   + One
-* show current date and time: B2+B3+B5+B6
 * enter/leave status display: B7+B6
-* set screen image frozen/unfrozen: B8+B6
 * set display mode attributes/text: B6
+* set screen image frozen/unfrozen: B8+B6
+* describe character: B2+RoutingKey
+* show current date and time: B2+B3+B5+B6
 
 Cursor Functions
 * go to screen cursor:
@@ -145,7 +146,6 @@ Speech Functions
 * stop speaking:
   + B2+B3+Left
   + B12
-* describe character: B2+RoutingKey
 * speak current line:
   + B2+B3+Right
   + B10

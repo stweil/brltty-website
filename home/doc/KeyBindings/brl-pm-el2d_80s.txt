@@ -18,20 +18,23 @@ Special Modes
 * enter/leave preferences menu:
   + Status.10
   + LeftKeyFront+BarRight1
-* show current date and time: Status.19
 * enter/leave status display:
   + Status.4
   + LeftKeyFront+BarLeft1
-* set screen image frozen/unfrozen:
-  + Status.8
-  + LeftKeyFront+BarDown2
-* set screen image frozen: Status.8+BarRight1
-* set screen image unfrozen: Status.8+BarLeft1
 * set display mode attributes/text:
   + Status.7
   + LeftKeyRear+BarLeft1
 * set display mode attributes: Status.7+BarRight1
 * set display mode text: Status.7+BarLeft1
+* set screen image frozen/unfrozen:
+  + Status.8
+  + LeftKeyFront+BarDown2
+* set screen image frozen: Status.8+BarRight1
+* set screen image unfrozen: Status.8+BarLeft1
+* describe character:
+  + BarDown2+RoutingKey1
+  + RoutingKey2
+* show current date and time: Status.19
 
 Cursor Functions
 * go to screen cursor: LeftKeyFront
@@ -114,9 +117,6 @@ Menu Operations
 
 Speech Functions
 * stop speaking: RightKeyRear+BarLeft1
-* describe character:
-  + BarDown2+RoutingKey1
-  + RoutingKey2
 * speak current line: RightKeyRear+BarRight1
 * speak from top of screen through current line: RightKeyRear+BarUp1
 * speak from current line through bottom of screen: RightKeyRear+BarDown1

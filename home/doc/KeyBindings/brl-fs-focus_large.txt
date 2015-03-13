@@ -18,12 +18,15 @@ Special Modes
 * enter/leave command learn mode: Space+Dot1+Dot2+Dot3
 * enter/leave preferences menu: Space+Dot1+Dot2+Dot3+Dot4
 * enter/leave status display: Space+Dot2+Dot3+Dot4
-* set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
-* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
-* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
 * set display mode attributes/text: Space+Dot1+Dot4+Dot5
 * set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
 * set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+* set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
+* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+* describe character:
+  + RightNavPress+RoutingKey
+  + NavrowKey
 
 Cursor Functions
 * go to screen cursor: RightSelector
@@ -118,11 +121,6 @@ Configuration Functions
 Menu Operations
 * restore preferences from disk: Space+Dot1+Dot2+Dot3+Dot4+Dot7
 * save preferences to disk: Space+Dot1+Dot2+Dot3+Dot4+Dot8
-
-Speech Functions
-* describe character:
-  + RightNavPress+RoutingKey
-  + NavrowKey
 
 Keyboard Input
 * braille keyboard dot1: Dot1

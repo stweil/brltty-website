@@ -12,8 +12,11 @@ Special Modes
 * enter/leave command learn mode: RightKeyFront
 * enter/leave preferences menu: LeftKeyFront+BarRight1
 * enter/leave status display: LeftKeyFront+BarLeft1
-* set screen image frozen/unfrozen: LeftKeyFront+BarDown2
 * set display mode attributes/text: LeftKeyRear+BarLeft1
+* set screen image frozen/unfrozen: LeftKeyFront+BarDown2
+* describe character:
+  + BarDown2+RoutingKey1
+  + RoutingKey2
 
 Cursor Functions
 * go to screen cursor: LeftKeyFront
@@ -61,9 +64,6 @@ Menu Operations
 
 Speech Functions
 * stop speaking: RightKeyRear+BarLeft1
-* describe character:
-  + BarDown2+RoutingKey1
-  + RoutingKey2
 * speak current line: RightKeyRear+BarRight1
 * speak from top of screen through current line: RightKeyRear+BarUp1
 * speak from current line through bottom of screen: RightKeyRear+BarDown1

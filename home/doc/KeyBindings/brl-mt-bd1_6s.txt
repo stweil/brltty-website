@@ -4,6 +4,9 @@ Key Table: Metec I with 6 keys and status cells
 Default Bindings
 ----------------
 
+Special Modes
+* describe character: RightDown+RoutingKey
+
 Cursor Functions
 * go to screen cursor: RightSelect+RightUp+RightDown
 * go back after cursor tracking: LeftSelect+LeftUp+LeftDown
@@ -28,9 +31,6 @@ Clipboard Functions
 
 Configuration Functions
 * set text style 6-dot/8-dot: StatusKey.1
-
-Speech Functions
-* describe character: RightDown+RoutingKey
 
 Menu Bindings
 -------------

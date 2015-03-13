@@ -110,15 +110,13 @@ Clipboard Functions
 Special Modes
 * enter/leave command learn mode: Space+Dot1+Dot4+Dot5+Dot6
 * set display mode attributes: Backspace+Dot1
+* describe character: Backspace+Dot1+Dot4+Dot5, RoutingKey
 
 Cursor Functions
 * bring screen cursor to current line: Space+Dot1+Dot2+Dot5+Dot6
 
 Configuration Functions
 * set skipping of blank braille windows off: Backspace+Dot1+Dot2
-
-Speech Functions
-* describe character: Backspace+Dot1+Dot4+Dot5, RoutingKey
 
 Keyboard Input
 * tab key: Space+Dot2+Dot3+Dot5+Dot6
@@ -146,8 +144,8 @@ Special Functions
 
 Special Modes
 * enter/leave status display: Backspace+Dot2+Dot3+Dot4
-* set screen image frozen/unfrozen: Enter+Dot1+Dot2+Dot4
 * set display mode text: Backspace+Dot2+Dot3+Dot4+Dot5
+* set screen image frozen/unfrozen: Enter+Dot1+Dot2+Dot4
 
 Configuration Functions
 * set text style 6-dot: Backspace+Dot2+Dot3+Dot5

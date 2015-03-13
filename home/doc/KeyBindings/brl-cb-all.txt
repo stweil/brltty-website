@@ -8,8 +8,8 @@ Special Modes
 * enter/leave help display: Dot1+Dot2+Dot5
 * enter/leave preferences menu: Dot1+Dot3+Dot4+Dot6
 * enter/leave status display: Dot3+Dot4
-* set screen image frozen/unfrozen: Dot1+Dot2+Dot4
 * set display mode attributes/text: Dot1+Dot3+Dot4
+* set screen image frozen/unfrozen: Dot1+Dot2+Dot4
 
 Cursor Functions
 * go to screen cursor: Dot3+Dot6

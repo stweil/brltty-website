@@ -20,8 +20,9 @@ Special Modes
   + RoutingKey.1+RoutingKey.2+RoutingKey.79+RoutingKey.80
 * enter/leave preferences menu: LeftOuter+RightOuter
 * enter/leave status display: CursorUp+RightInner
-* set screen image frozen/unfrozen: LeftThumb+RightThumb
 * set display mode attributes/text: CursorDown+LeftInner+LeftThumb
+* set screen image frozen/unfrozen: LeftThumb+RightThumb
+* describe character: RoutingKey+CursorDown
 
 Cursor Functions
 * go to screen cursor: RightThumb
@@ -100,7 +101,6 @@ Speech Functions
 * stop speaking:
   + RightOuter+LeftInner
   + CursorRight+CursorUp+LeftOuter+LeftInner
-* describe character: RoutingKey+CursorDown
 * speak current line:
   + RightOuter+RightInner
   + CursorRight+LeftOuter

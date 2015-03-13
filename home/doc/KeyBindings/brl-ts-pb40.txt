@@ -15,8 +15,9 @@ Special Modes
 * enter/leave command learn mode: RoutingKey.1+RoutingKey.2+RoutingKey.39+RoutingKey.40
 * enter/leave preferences menu: Backward+Forward
 * enter/leave status display: LeftRockerUp+RightRockerDown
-* set screen image frozen/unfrozen: Convex+Concave
 * set display mode attributes/text: LeftRockerDown+RightRockerUp+Convex
+* set screen image frozen/unfrozen: Convex+Concave
+* describe character: RoutingKey+LeftRockerDown
 
 Cursor Functions
 * go to screen cursor: Concave
@@ -79,7 +80,6 @@ Menu Operations
 
 Speech Functions
 * stop speaking: Forward+RightRockerUp
-* describe character: RoutingKey+LeftRockerDown
 * speak current line: Forward+RightRockerDown
 * speak from current line through bottom of screen: Backward+Forward+RightRockerDown
 * go to current speaking position: Concave+Forward

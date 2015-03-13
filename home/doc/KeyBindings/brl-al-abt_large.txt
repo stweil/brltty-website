@@ -14,8 +14,9 @@ Special Modes
 * enter/leave help display: Prog
 * enter/leave preferences menu: Prog+Cursor
 * enter/leave status display: Prog+Up
-* set screen image frozen/unfrozen: Prog+Down
 * set display mode attributes/text: Prog+Home
+* set screen image frozen/unfrozen: Prog+Down
+* describe character: Prog+Home+RoutingKey1
 
 Cursor Functions
 * go to screen cursor or go back after cursor tracking: Cursor
@@ -60,7 +61,6 @@ Configuration Functions
 
 Speech Functions
 * stop speaking: Home+Cursor+Left
-* describe character: Prog+Home+RoutingKey1
 * speak current line: Home+Cursor+Right
 * speak from current line through bottom of screen: Prog+Home+Right
 

@@ -7,12 +7,13 @@ Default Bindings
 Special Modes
 * enter/leave help display: B8
 * enter/leave preferences menu: B7+B1
-* show current date and time: B2+B3+B5+B6
 * enter/leave status display:
   + B7+B6
   + Escape+Space+Return
-* set screen image frozen/unfrozen: B8+B6
 * set display mode attributes/text: B6
+* set screen image frozen/unfrozen: B8+B6
+* describe character: B2+RoutingKey
+* show current date and time: B2+B3+B5+B6
 * switch to Default Bindings: B1+B8+Left
 * switch to Braille Input Mode: B1+B8+Right
 
@@ -66,9 +67,6 @@ Configuration Functions
 Menu Operations
 * restore preferences from disk: B7+B2
 * save preferences to disk: B7+B3
-
-Speech Functions
-* describe character: B2+RoutingKey
 
 Special Functions
 * remember current braille window position: B7+RoutingKey

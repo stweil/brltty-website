@@ -39,16 +39,17 @@ Special Modes
 * enter/leave help display: Read+dot1+dot2+dot5
 * enter/leave command learn mode: Read+dot1+dot2+dot3
 * enter/leave preferences menu: Read+dot1+dot2+dot3+dot4
-* show current date and time: Control
 * enter/leave status display:
   + Alt
   + Read+dot2+dot3+dot4
-* set screen image frozen/unfrozen: Read+dot1+dot2+dot4
-* set screen image frozen: Read+dot1+dot2+dot4+dot8
-* set screen image unfrozen: Read+dot1+dot2+dot4+dot7
 * set display mode attributes/text: Read+dot1+dot4+dot5
 * set display mode attributes: Read+dot1+dot4+dot5+dot8
 * set display mode text: Read+dot1+dot4+dot5+dot7
+* set screen image frozen/unfrozen: Read+dot1+dot2+dot4
+* set screen image frozen: Read+dot1+dot2+dot4+dot8
+* set screen image unfrozen: Read+dot1+dot2+dot4+dot7
+* describe character: Select+Read+RoutingKey
+* show current date and time: Control
 
 Cursor Functions
 * go to screen cursor or go back after cursor tracking: PanLeft+PanRight
@@ -132,9 +133,6 @@ Configuration Functions
 Menu Operations
 * restore preferences from disk: Read+dot1+dot2+dot3+dot4+dot7
 * save preferences to disk: Read+dot1+dot2+dot3+dot4+dot8
-
-Speech Functions
-* describe character: Select+Read+RoutingKey
 
 Keyboard Input
 * braille keyboard dot1: dot1

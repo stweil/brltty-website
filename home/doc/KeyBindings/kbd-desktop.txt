@@ -8,8 +8,9 @@ Special Modes
 * enter/leave help display: ControlLeft+ShiftLeft+KP0+KP7
 * enter/leave command learn mode: ControlLeft+ShiftLeft+KP0+KP9
 * enter/leave preferences menu: ControlLeft+ShiftLeft+KP0+KP2
-* show current date and time: KP0+T
 * enter/leave status display: ControlLeft+ShiftLeft+KP0+KP8
+* describe character at cursor: ControlLeft+KP0+KP5
+* show current date and time: KP0+T
 
 Cursor Functions
 * go to screen cursor: KP0+KPEnter
@@ -47,7 +48,6 @@ Speech Functions
   + KP0+KP4
   + ControlLeft
   + ControlRight
-* describe character at cursor: ControlLeft+KP0+KP5
 * speak current line: KP0+KP5
 * speak from top of screen through current line: KP0+KP9
 * speak from current line through bottom of screen: KP0+KP3

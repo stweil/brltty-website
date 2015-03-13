@@ -9,8 +9,9 @@ Special Modes
 * enter/leave command learn mode: PadCenter1+PadRight1
 * enter/leave preferences menu: PadCenter1+PadDown1
 * enter/leave status display: PadCenter1+PadUp1
-* set screen image frozen/unfrozen: RightUpper1+PadUp1
 * set display mode attributes/text: RightUpper1+PadDown1
+* set screen image frozen/unfrozen: RightUpper1+PadUp1
+* describe character: PadCenter1+RoutingKey
 
 Cursor Functions
 * go to screen cursor: PadCenter1
@@ -70,7 +71,6 @@ Menu Operations
 * save preferences to disk: RightLower1+PadRight1
 
 Speech Functions
-* describe character: PadCenter1+RoutingKey
 * set autospeak on/off: RightLower1+PadUp1
 
 Menu Bindings

@@ -9,12 +9,13 @@ Special Modes
 * enter/leave command learn mode: Dot0+Dot1+Dot2+Dot3
 * enter/leave preferences menu: Dot0+Dot1+Dot2+Dot3+Dot4
 * enter/leave status display: Dot0+Dot2+Dot3+Dot4
-* set screen image frozen/unfrozen: Dot0+Dot1+Dot2+Dot4
-* set screen image frozen: Dot0+Dot1+Dot2+Dot4+Dot8
-* set screen image unfrozen: Dot0+Dot1+Dot2+Dot4+Dot7
 * set display mode attributes/text: Dot0+Dot1+Dot4+Dot5
 * set display mode attributes: Dot0+Dot1+Dot4+Dot5+Dot8
 * set display mode text: Dot0+Dot1+Dot4+Dot5+Dot7
+* set screen image frozen/unfrozen: Dot0+Dot1+Dot2+Dot4
+* set screen image frozen: Dot0+Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Dot0+Dot1+Dot2+Dot4+Dot7
+* describe character: Forward+RoutingKey
 
 Cursor Functions
 * go to screen cursor: Forward+Select
@@ -77,9 +78,6 @@ Configuration Functions
 Menu Operations
 * restore preferences from disk: Dot0+Dot1+Dot2+Dot3+Dot4+Dot7
 * save preferences to disk: Dot0+Dot1+Dot2+Dot3+Dot4+Dot8
-
-Speech Functions
-* describe character: Forward+RoutingKey
 
 Keyboard Input
 * braille keyboard dot1: Dot1

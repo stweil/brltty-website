@@ -51,7 +51,7 @@ Horizontal Navigation
 Clipboard Functions
 * insert clipboard text after screen cursor: F1+F2+F3+F4
 
-Speech Functions
+Special Modes
 * describe character: F2+F4, RoutingKey
 
 Special Modes
@@ -59,12 +59,12 @@ Special Modes
 * enter/leave command learn mode: Space+Dot1+Dot2+Dot3
 * enter/leave preferences menu: Space+Dot1+Dot2+Dot3+Dot4
 * enter/leave status display: Space+Dot2+Dot3+Dot4
-* set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
-* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
-* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
 * set display mode attributes/text: Space+Dot1+Dot4+Dot5
 * set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
 * set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+* set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
+* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
 
 Cursor Functions
 * bring screen cursor to current line: Space+Dot1+Dot2+Dot3+Dot6

@@ -4,6 +4,9 @@ Key Table: Metec I with 6 keys
 Default Bindings
 ----------------
 
+Special Modes
+* describe character: RightDown+RoutingKey
+
 Cursor Functions
 * go to screen cursor: RightSelect+RightUp+RightDown
 * go back after cursor tracking: LeftSelect+LeftUp+LeftDown
@@ -25,9 +28,6 @@ Clipboard Functions
 * linear copy to character: RightUp+RoutingKey
 * rectangular copy to character: RightSelect+RoutingKey
 * append characters to clipboard: LeftSelect+RoutingKey
-
-Speech Functions
-* describe character: RightDown+RoutingKey
 
 Menu Bindings
 -------------

@@ -2,16 +2,12 @@ Key Table: Baum (default)
 =========================
 
 Notes
-* The display keys are at both ends of the text cell area. From top to bottom:
-  the three at the left are named Display1 through Display3,
-  and the three at the right are named Display4 through Display6.
-* For models which have a braille keyboard:
-  F1 and F2 are the two keys at the very left of the front,
-  F3 and F4 are the two keys at the very right of the front,
-  and B10 (if present) is between the Dot1 and Dot4 keys.
-* The joystick is in the middle of the front,
-* and its five positions are named Left, Right, Up, Down, and Press.
-* B9 and B11 are the keys immediately to the left and right of the joystick.
+* There are three display keys at each end of the braille cells.
+  From top to bottom:
+  + The three at the left are named Display1, Display2, and Display3.
+  + The three at the right are named Display4, Display5, and Display6.
+* B9 and B10 are the keys immediately to the left and right of the joystick.
+* The five joystick motions are named Left, Right, Up, Down, and Press.
 
 Default Bindings
 ----------------
@@ -19,25 +15,38 @@ Default Bindings
 Special Modes
 * enter/leave help display:
   + Display1+Display2+Display5
+  + B10+Dot1+Dot2+Dot5
   + Dot4+Press
 * enter/leave command learn mode:
   + Display1+Display4+Display5+Display6
+  + B10+Dot1+Dot2+Dot3
   + Dot6+Press
 * enter/leave preferences menu:
   + Display1+Display3+Display4
+  + B10+Dot1+Dot2+Dot3+Dot4
   + Dot4+Dot5+Dot6+Press
+* enter/leave status display:
+  + Display2+Display5
+  + B10+Dot2+Dot3+Dot4
+  + Dot5+Press
+* set display mode attributes/text:
+  + Display1+Display4+Display5
+  + B10+Dot1+Dot4+Dot5
+  + Dot4+Dot5+Down
+* set display mode attributes: B10+Dot1+Dot4+Dot5+Dot8
+* set display mode text: B10+Dot1+Dot4+Dot5+Dot7
+* set screen image frozen/unfrozen:
+  + Display1+Display2+Display4
+  + B10+Dot1+Dot2+Dot4
+  + Dot4+Dot5+Up
+* set screen image frozen: B10+Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: B10+Dot1+Dot2+Dot4+Dot7
+* describe character:
+  + Display3+RoutingKey
+  + RoutingKey+Press
 * show current date and time:
   + Display1+Display5
   + Dot5+Dot6+Up
-* enter/leave status display:
-  + Display2+Display5
-  + Dot5+Press
-* set screen image frozen/unfrozen:
-  + Display1+Display2+Display4
-  + Dot4+Dot5+Up
-* set display mode attributes/text:
-  + Display1+Display4+Display5
-  + Dot4+Dot5+Down
 
 Cursor Functions
 * go to screen cursor: Display2+Display4+Display6
@@ -46,6 +55,7 @@ Cursor Functions
 * bring screen cursor to character: RoutingKey
 * bring screen cursor to current line:
   + Display1+Display3+Display4+Display6
+  + B10+Dot1+Dot2+Dot3+Dot6
   + Dot4+Dot6+Press
 
 Vertical Navigation
@@ -117,68 +127,102 @@ Horizontal Navigation
 
 Clipboard Functions
 * start new clipboard at character:
-  + RoutingKey+Left
   + Display1+RoutingKey
+  + RoutingKey+Left
 * append to clipboard from character:
-  + RoutingKey+Up
   + Display2+RoutingKey
+  + RoutingKey+Up
 * linear copy to character:
-  + RoutingKey+Right
   + Display4+RoutingKey
+  + RoutingKey+Right
 * rectangular copy to character:
-  + RoutingKey+Down
   + Display5+RoutingKey
+  + RoutingKey+Down
 * copy characters to clipboard: RoutingKey+RoutingKey
 * append characters to clipboard: Display2+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
   + Display1+Display2+Display3+Display4
-  + Dot2+Right
+  + B10+Dot1+Dot3+Dot4+Dot6
+  + Dot2+Down
 * search backward for clipboard text:
   + Display2+Display4+Display6+Display1
   + Dot4+Dot5+Dot6+Left
 * search forward for clipboard text:
   + Display2+Display4+Display6+Display3
   + Dot4+Dot5+Dot6+Right
+* save clipboard to disk: B10+Dot1+Dot3+Dot4+Dot6+Dot8
+* restore clipboard from disk: B10+Dot1+Dot3+Dot4+Dot6+Dot7
 
 Configuration Functions
+* set autorepeat on/off: B10+Dot1+Dot2+Dot3+Dot5
+* set autorepeat on: B10+Dot1+Dot2+Dot3+Dot5+Dot8
+* set autorepeat off: B10+Dot1+Dot2+Dot3+Dot5+Dot7
 * set text style 6-dot/8-dot: Dot4+Dot5+Press
-* set text style 6-dot: Display2+Display3+Display5
-* set text style 8-dot: Display2+Display3+Display6
-* set skipping of lines with identical content on/off: Dot5+Dot6+Left
-* set skipping of blank braille windows on/off: Dot5+Dot6+Right
-* set sliding braille window on/off: Dot5+Dot6+Down
-* set track screen cursor on/off: Dot5+Dot6+Press
-* set track screen cursor on: Display1
-* set track screen cursor off: Display3
-* set attribute underlining on/off: Display2+Display3+Display4+Display5
+* set text style 6-dot:
+  + Display2+Display3+Display5
+  + B10+Dot2+Dot3+Dot5
+* set text style 8-dot:
+  + Display2+Display3+Display6
+  + B10+Dot2+Dot3+Dot6
+* set skipping of lines with identical content on/off:
+  + B10+Dot2+Dot4
+  + Dot5+Dot6+Left
+* set skipping of lines with identical content on: B10+Dot2+Dot4+Dot8
+* set skipping of lines with identical content off: B10+Dot2+Dot4+Dot7
+* set skipping of blank braille windows on/off:
+  + B10+Dot1+Dot2
+  + Dot5+Dot6+Right
+* set skipping of blank braille windows on: B10+Dot1+Dot2+Dot8
+* set skipping of blank braille windows off: B10+Dot1+Dot2+Dot7
+* set sliding braille window on/off:
+  + B10+Dot2+Dot4+Dot5+Dot6
+  + Dot5+Dot6+Down
+* set sliding braille window on: B10+Dot2+Dot4+Dot5+Dot6+Dot8
+* set sliding braille window off: B10+Dot2+Dot4+Dot5+Dot6+Dot7
+* set track screen cursor on/off:
+  + B10+Dot2+Dot3+Dot4+Dot5
+  + Dot5+Dot6+Press
+* set track screen cursor on:
+  + Display1
+  + B10+Dot2+Dot3+Dot4+Dot5+Dot8
+* set track screen cursor off:
+  + Display3
+  + B10+Dot2+Dot3+Dot4+Dot5+Dot7
+* set screen cursor visibility on/off: B10+Dot1+Dot4
+* set screen cursor visibility on: B10+Dot1+Dot4+Dot8
+* set screen cursor visibility off: B10+Dot1+Dot4+Dot7
+* set attribute underlining on/off:
+  + Display2+Display3+Display4+Display5
+  + B10+Dot1+Dot3+Dot6
+* set attribute underlining on: B10+Dot1+Dot3+Dot6+Dot8
+* set attribute underlining off: B10+Dot1+Dot3+Dot6+Dot7
 
 Menu Operations
 * restore preferences from disk:
   + Display1+Display2+Display3+Display5
+  + B10+Dot1+Dot2+Dot3+Dot4+Dot7
   + Dot4+Dot5+Dot6+Up
 * save preferences to disk:
   + Display2+Display4+Display5+Display6
+  + B10+Dot1+Dot2+Dot3+Dot4+Dot8
   + Dot4+Dot5+Dot6+Down
 
 Speech Functions
 * stop speaking:
   + Display3+Display4
-  + B11+Left
-* describe character:
-  + RoutingKey+Press
-  + Display3+RoutingKey
+  + B10+Left
 * speak current line:
   + Display3+Display5
-  + B11+Right
+  + B10+Right
 * speak from top of screen through current line:
   + Display3+Display5+Display4
-  + B11+Up
+  + B10+Up
 * speak from current line through bottom of screen:
   + Display3+Display5+Display6
-  + B11+Down
+  + B10+Down
 * go to current speaking position:
   + Display1+Display3+Display5
-  + B11+Press
+  + B10+Press
 * decrease speaking volume: B9+Down
 * increase speaking volume: B9+Up
 * decrease speaking rate: B9+Left
@@ -186,23 +230,6 @@ Speech Functions
 * set autospeak on/off:
   + Display3+Display4+Display6
   + B9+Press
-
-Speech Navigation
-* speak current character: B10+B9+Press
-* describe current character: B10+B9+Down
-* go to and speak previous character: B10+B9+Left
-* go to and speak next character: B10+B9+Right
-* go to and speak first non-blank character on line: B10+B11+Left
-* go to and speak last non-blank character on line: B10+B11+Right
-* speak current word: B10+Press
-* spell current word: B10+B9+Up
-* go to and speak previous word: B10+Left
-* go to and speak next word: B10+Right
-* speak current line: B10+B11+Press
-* go to and speak previous line: B10+Up
-* go to and speak next line: B10+Down
-* go to and speak first non-blank line on screen: B10+B11+Up
-* go to and speak last non-blank line on screen: B10+B11+Down
 
 Keyboard Input
 * braille keyboard dot1: Dot1
@@ -214,30 +241,60 @@ Keyboard Input
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
 * braille keyboard space: B10
-* braille keyboard dot7: F2
-* braille keyboard dot8: F3
-* braille keyboard space: B9
-* braille keyboard space: B11
-* enter key: Dot2+Press
-* tab key: Dot1+Press
-* backspace key: Dot2+Left
-* escape key: Dot3+Press
-* cursor-left key: Dot1+Left
-* cursor-right key: Dot1+Right
-* cursor-up key: Dot1+Up
-* cursor-down key: Dot1+Down
-* page-up key: Dot3+Up
-* page-down key: Dot3+Down
-* home key: Dot3+Left
-* end key: Dot3+Right
-* insert key: Dot2+Up
-* delete key: Dot2+Down
+* set braille keyboard enabled/disabled: B10+Dot1+Dot3
+* set braille keyboard enabled: B10+Dot1+Dot3+Dot8
+* set braille keyboard disabled: B10+Dot1+Dot3+Dot7
+* enter key:
+  + B10+Dot8
+  + Dot2+Press
+* tab key:
+  + B10+Dot2+Dot3+Dot5+Dot6
+  + Dot1+Press
+* backspace key:
+  + B9
+  + B10+Dot7
+  + Dot2+Left
+* escape key:
+  + B10+Dot2+Dot6
+  + Dot3+Press
+* cursor-left key:
+  + B10+Dot3
+  + Dot1+Left
+* cursor-right key:
+  + B10+Dot6
+  + Dot1+Right
+* cursor-up key:
+  + B10+Dot1
+  + Dot1+Up
+* cursor-down key:
+  + B10+Dot4
+  + Dot1+Down
+* page-up key:
+  + B10+Dot2+Dot3
+  + Dot3+Up
+* page-down key:
+  + B10+Dot5+Dot6
+  + Dot3+Down
+* home key:
+  + B10+Dot2
+  + Dot3+Left
+* end key:
+  + B10+Dot5
+  + Dot3+Right
+* insert key:
+  + B10+Dot3+Dot5
+  + Dot2+Up
+* delete key:
+  + B10+Dot2+Dot5+Dot6
+  + Dot2+Right
 * switch to virtual terminal: Display4+Display5+Display6+RoutingKey
 * switch to previous virtual terminal:
   + Display3+Display4+Display5+Display6
+  + B10+Dot1+Dot2+Dot3+Dot6+Dot7
   + Dot4+Dot5+Left
 * switch to next virtual terminal:
   + Display1+Display2+Display3+Display6
+  + B10+Dot1+Dot2+Dot3+Dot6+Dot8
   + Dot4+Dot5+Right
 
 Special Functions
@@ -252,16 +309,16 @@ Special Modes
 * enter/leave preferences menu: Press
 
 Horizontal Navigation
-* go left one braille window: B10+Left
-* go right one braille window: B10+Right
+* go left one braille window: B9+Left
+* go right one braille window: B9+Right
 
 Menu Operations
 * go to previous item: Up
 * go to next item: Down
-* go to first item: B10+Up
-* go to last item: B10+Down
+* go to first item: B9+Up
+* go to last item: B9+Down
 * select previous choice: Left
 * select next choice: Right
-* go to previous menu level: B10
-* save preferences to disk: B10+Press
+* go to previous menu level: B9
+* save preferences to disk: B9+Press
 

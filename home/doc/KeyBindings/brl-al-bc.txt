@@ -26,20 +26,21 @@ Special Modes
 * enter/leave preferences menu:
   + ETouchLeftFront+ETouchRightFront
   + Space+Dot1+Dot2+Dot3+Dot4
-* show current date and time: SmartpadF2
 * enter/leave status display:
   + ETouchLeftFront+ETouchRightRear
   + Space+Dot2+Dot3+Dot4
-* set screen image frozen/unfrozen:
-  + ETouchLeftRear+ETouchLeftFront+ETouchRightRear
-  + Space+Dot1+Dot2+Dot4
-* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
-* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
 * set display mode attributes/text:
   + ETouchLeftRear+ETouchRightRear+ETouchRightFront
   + Space+Dot1+Dot4+Dot5
 * set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
 * set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+* set screen image frozen/unfrozen:
+  + ETouchLeftRear+ETouchLeftFront+ETouchRightRear
+  + Space+Dot1+Dot2+Dot4
+* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+* describe character: ETouchLeftRear+ETouchLeftFront+RoutingKey1
+* show current date and time: SmartpadF2
 
 Cursor Functions
 * go to screen cursor or go back after cursor tracking: ThumbHome
@@ -132,7 +133,6 @@ Menu Operations
 
 Speech Functions
 * stop speaking: SmartpadF3+SmartpadF4
-* describe character: ETouchLeftRear+ETouchLeftFront+RoutingKey1
 * speak current line: SmartpadF3+SmartpadRight
 * speak from top of screen through current line: SmartpadF3+SmartpadUp
 * speak from current line through bottom of screen: SmartpadF3+SmartpadDown

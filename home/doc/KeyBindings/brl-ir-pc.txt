@@ -16,6 +16,7 @@ Special Modes
 * enter/leave preferences menu: L1+L2+L3+L8
 * enter/leave status display: L2+L8
 * set screen image frozen/unfrozen: L1+L2+L8
+* describe character: L6+RoutingKey
 
 Cursor Functions
 * bring screen cursor to character: RoutingKey
@@ -35,9 +36,6 @@ Clipboard Functions
 Configuration Functions
 * set text style 6-dot: L2+L3+L7
 * set text style 8-dot: L2+L3+L6
-
-Speech Functions
-* describe character: L6+RoutingKey
 
 Cursor Functions
 * go to screen cursor: L7+L6

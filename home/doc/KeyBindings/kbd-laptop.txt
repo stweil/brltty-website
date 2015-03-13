@@ -8,8 +8,9 @@ Special Modes
 * enter/leave help display: CapsLock+F1
 * enter/leave command learn mode: CapsLock+ShiftLeft+F1
 * enter/leave preferences menu: CapsLock+F2
-* show current date and time: CapsLock+T
 * set screen image frozen/unfrozen: CapsLock+F
+* describe character at cursor: CapsLock+D
+* show current date and time: CapsLock+T
 
 Cursor Functions
 * go back after cursor tracking: CapsLock+DeleteBackward
@@ -52,7 +53,6 @@ Speech Functions
   + ControlLeft
   + ControlRight
   + CapsLock+ShiftLeft+J
-* describe character at cursor: CapsLock+D
 * speak current line:
   + CapsLock+Space
   + CapsLock+ShiftLeft+K

@@ -18,16 +18,17 @@ Special Modes
 * enter/leave help display: Status.1
 * enter/leave command learn mode: Status.2
 * enter/leave preferences menu: Status.10
-* show current date and time:
-  + Dot1+Dot2+Dot3+Dot7
-  + Status.21
 * enter/leave status display: Status.4
-* set screen image frozen/unfrozen: Status.8
-* set screen image frozen: Status.8+Dot8
-* set screen image unfrozen: Status.8+Dot7
 * set display mode attributes/text: Status.7
 * set display mode attributes: Status.7+Dot8
 * set display mode text: Status.7+Dot7
+* set screen image frozen/unfrozen: Status.8
+* set screen image frozen: Status.8+Dot8
+* set screen image unfrozen: Status.8+Dot7
+* describe character: Dot4+RoutingKey1
+* show current date and time:
+  + Dot1+Dot2+Dot3+Dot7
+  + Status.21
 * switch to Default Bindings: Dot2+Dot3+Shift
 * switch to Chorded Commands Mode: Dot2+Dot3+Home
 * switch to Braille Input Mode: Dot2+Dot3+End
@@ -106,7 +107,6 @@ Menu Operations
 
 Speech Functions
 * stop speaking: Dot7+Up
-* describe character: Dot4+RoutingKey1
 * speak current line: Dot7+Down
 * speak from top of screen through current line: Dot7+Home
 * speak from current line through bottom of screen: Dot7+End
@@ -123,6 +123,7 @@ Keyboard Input
 * set braille input mode dots/text: Status.20
 * set braille input mode dots: Status.20+Dot8
 * set braille input mode text: Status.20+Dot7
+* tab key: Dot2+Shift
 * cursor-left key: Dot2+Home
 * cursor-right key: Dot2+End
 * cursor-up key: Dot2+Up
@@ -131,9 +132,13 @@ Keyboard Input
 * page-down key: Dot5+Down
 * home key: Dot5+Home
 * end key: Dot5+End
-* insert key: Dot2+Shift
-* delete key: Dot5+Shift
+* insert key: Dot5+Shift
 * function key: Dot2+RoutingKey1
+* clear all sticky input modifiers: Dot6+Shift
+* cycle the Shift sticky input modifier (next, on, off): Dot6+Up
+* cycle the Control sticky input modifier (next, on, off): Dot6+Down
+* cycle the Meta (Left Alt) sticky input modifier (next, on, off): Dot6+Home
+* cycle the GUI (Windows) sticky input modifier (next, on, off): Dot6+End
 * switch to virtual terminal: Dot5+RoutingKey1
 
 Special Functions
@@ -171,12 +176,12 @@ Special Modes
 * enter/leave command learn mode: Dot1+Dot2+Dot3
 * enter/leave preferences menu: Dot1+Dot2+Dot3+Dot4
 * enter/leave status display: Dot2+Dot3+Dot4
-* set screen image frozen/unfrozen: Dot1+Dot2+Dot4
-* set screen image frozen: Dot1+Dot2+Dot4+Dot8
-* set screen image unfrozen: Dot1+Dot2+Dot4+Dot7
 * set display mode attributes/text: Dot1+Dot4+Dot5
 * set display mode attributes: Dot1+Dot4+Dot5+Dot8
 * set display mode text: Dot1+Dot4+Dot5+Dot7
+* set screen image frozen/unfrozen: Dot1+Dot2+Dot4
+* set screen image frozen: Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Dot1+Dot2+Dot4+Dot7
 
 Cursor Functions
 * bring screen cursor to current line: Dot1+Dot2+Dot3+Dot6
@@ -248,9 +253,9 @@ Keyboard Input
 * braille keyboard dot6: Dot6
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
-* enter key: Dot3+Down
-* tab key: Dot3+End
-* backspace key: Dot3+Up
-* escape key: Dot3+Home
-* type braille character [space]: Dot3+Shift
+* enter key: Dot3+Up
+* backspace key: Dot3+Home
+* escape key: Dot3+Shift
+* delete key: Dot3+End
+* type braille character [space]: Dot3+Down
 

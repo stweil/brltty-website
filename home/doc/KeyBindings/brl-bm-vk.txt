@@ -1,10 +1,6 @@
 Key Table: Baum (variokeys=yes)
 ===============================
 
-Notes
-* The command keys are in the middle, just behind the cursor routing keys,
-* and, from left to right, are named Command1 through Command7.
-
 Default Bindings
 ----------------
 
@@ -12,8 +8,9 @@ Special Modes
 * enter/leave help display: Display1+Display2+Display5
 * enter/leave preferences menu: Display1+Display4
 * enter/leave status display: Display2+Display4
-* set screen image frozen/unfrozen: Display1+Display2+Display4
 * set display mode attributes/text: Display1+Display2+Display3+Display6
+* set screen image frozen/unfrozen: Display1+Display2+Display4
+* describe character: Display3+RoutingKey
 
 Cursor Functions
 * go to screen cursor: Display1+Display3
@@ -46,22 +43,7 @@ Configuration Functions
 * set track screen cursor on/off: Display2+Display3+Display4+Display5
 * set attribute underlining on/off: Display1+Display3+Display6
 
-Speech Functions
-* describe character: Display3+RoutingKey
-
 Keyboard Input
-* braille keyboard space: Command4
-* braille keyboard dot1: Command3
-* braille keyboard dot2: Command2
-* braille keyboard dot3: Command1
-* braille keyboard dot4: Command5
-* braille keyboard dot5: Command6
-* braille keyboard dot6: Command7
-* enter key: Command4+Command5
-* tab key: Command4+Command6
-* backspace key: Command4+Command2
-* cursor-left key: Command4+Command1
-* cursor-right key: Command4+Command7
 * cursor-up key: Display4
 * cursor-down key: Display6
 * switch to virtual terminal: Display4+Display5+Display6+RoutingKey

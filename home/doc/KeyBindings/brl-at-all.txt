@@ -9,8 +9,9 @@ Special Modes
 * enter/leave command learn mode: F6
 * enter/leave preferences menu: F13
 * enter/leave status display: F14
-* set screen image frozen/unfrozen: Attribute1
 * set display mode attributes/text: Attribute2
+* set screen image frozen/unfrozen: Attribute1
+* describe character: RoutingKey2
 
 Cursor Functions
 * go to screen cursor:
@@ -76,7 +77,4 @@ Configuration Functions
 * set track screen cursor on/off: F4
 * set screen cursor visibility on/off: Attribute3
 * set attribute underlining on/off: Attribute4
-
-Speech Functions
-* describe character: RoutingKey2
 

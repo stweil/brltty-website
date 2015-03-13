@@ -17,14 +17,15 @@ Special Modes
 * enter/leave help display: K2+K1
 * enter/leave command learn mode: K2+K3
 * enter/leave preferences menu: K1+K3
-* show current date and time: B6+K1
 * enter/leave status display: B6+K3
-* set screen image frozen/unfrozen: B5+K2
-* set screen image frozen: B5+K2+K3
-* set screen image unfrozen: B5+K2+K1
 * set display mode attributes/text: B7+K2
 * set display mode attributes: B7+K2+K3
 * set display mode text: B7+K2+K1
+* set screen image frozen/unfrozen: B5+K2
+* set screen image frozen: B5+K2+K3
+* set screen image unfrozen: B5+K2+K1
+* describe character: K2+RoutingKey
+* show current date and time: B6+K1
 
 Cursor Functions
 * go to screen cursor: K2
@@ -86,7 +87,4 @@ Configuration Functions
 Menu Operations
 * restore preferences from disk: K1+K3+B2
 * save preferences to disk: K1+K3+B5
-
-Speech Functions
-* describe character: K2+RoutingKey
 

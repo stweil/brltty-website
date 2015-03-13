@@ -17,8 +17,9 @@ Special Modes
 * enter/leave command learn mode: Hot6
 * enter/leave preferences menu: Hot7
 * enter/leave status display: Hot8
-* set screen image frozen/unfrozen: RightSelector+Hot5
 * set display mode attributes/text: Hot2
+* set screen image frozen/unfrozen: RightSelector+Hot5
+* describe character: RightWheelPress+RoutingKey
 
 Cursor Functions
 * go to screen cursor: RightSelector
@@ -77,7 +78,4 @@ Configuration Functions
 Menu Operations
 * restore preferences from disk: RightSelector+Hot6
 * save preferences to disk: RightSelector+Hot7
-
-Speech Functions
-* describe character: RightWheelPress+RoutingKey
 

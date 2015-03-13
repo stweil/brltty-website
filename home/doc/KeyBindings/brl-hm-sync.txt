@@ -8,8 +8,8 @@ Special Modes
 * enter/leave help display: LeftUp+LeftDown+RightUp+RightDown
 * enter/leave preferences menu: LeftDown+RightUp+RightDown
 * enter/leave status display: LeftUp+RightUp+RightDown
-* set screen image frozen/unfrozen: LeftDown+RightUp
 * set display mode attributes/text: LeftDown+RightDown
+* set screen image frozen/unfrozen: LeftDown+RightUp
 
 Cursor Functions
 * go to screen cursor or go back after cursor tracking: RightUp+RightDown

@@ -9,8 +9,8 @@ Special Modes
 * enter/leave command learn mode: Status2
 * enter/leave preferences menu: LeftControl+End
 * enter/leave status display: LeftControl+Escape
-* set screen image frozen/unfrozen: LeftControl+Enter
 * set display mode attributes/text: LeftShift+Left
+* set screen image frozen/unfrozen: LeftControl+Enter
 
 Cursor Functions
 * go to screen cursor or go back after cursor tracking: End
@@ -40,11 +40,11 @@ Configuration Functions
 * set text style 6-dot/8-dot: LeftShift+Right
 * set track screen cursor on/off: Escape
 
+Special Modes
+* describe character: RightShift+Down, RoutingKey
+
 Clipboard Functions
 * insert clipboard text after screen cursor: RightShift+Right
-
-Speech Functions
-* describe character: RightShift+Down, RoutingKey
 
 Clipboard Functions
 * start new clipboard at character: RightShift+Home, RoutingKey

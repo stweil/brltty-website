@@ -17,10 +17,11 @@ Special Modes
 * enter/leave command learn mode: Dot1+Dot2+Dot3+JoystickEnter
 * enter/leave preferences menu: Dot1+Dot2+Dot3+Dot4+JoystickEnter
 * enter/leave status display: Dot2+Dot3+Dot4+JoystickEnter
-* set screen image frozen/unfrozen: Dot1+Dot2+Dot4+JoystickEnter
 * set display mode attributes/text: Dot1+JoystickEnter
 * set display mode attributes: Dot1+JoystickRight
 * set display mode text: Dot1+JoystickLeft
+* set screen image frozen/unfrozen: Dot1+Dot2+Dot4+JoystickEnter
+* describe character at cursor: ScrollRight+JoystickEnter
 
 Cursor Functions
 * go to screen cursor: ScrollLeft+ScrollRight
@@ -89,9 +90,6 @@ Configuration Functions
 Menu Operations
 * restore preferences from disk: Dot1+Dot2+Dot3+Dot4+JoystickLeft
 * save preferences to disk: Dot1+Dot2+Dot3+Dot4+JoystickRight
-
-Speech Functions
-* describe character at cursor: ScrollRight+JoystickEnter
 
 Keyboard Input
 * braille keyboard dot1: Dot1

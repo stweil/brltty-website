@@ -8,16 +8,17 @@ Special Modes
 * enter/leave help display: Thumb2+Dot1+Dot2+Dot5
 * enter/leave command learn mode: Thumb2+Dot1+Dot2+Dot3
 * enter/leave preferences menu: Thumb2+Dot1+Dot2+Dot3+Dot4
-* show current date and time: Thumb1+Thumb4
 * enter/leave status display: Thumb2+Dot2+Dot3+Dot4
-* set screen image frozen/unfrozen: Thumb2+Dot1+Dot2+Dot4
-* set screen image frozen: Thumb2+Dot1+Dot2+Dot4+Dot8
-* set screen image unfrozen: Thumb2+Dot1+Dot2+Dot4+Dot7
 * set display mode attributes/text:
   + Left+Up
   + Thumb2+Dot1+Dot4+Dot5
 * set display mode attributes: Thumb2+Dot1+Dot4+Dot5+Dot8
 * set display mode text: Thumb2+Dot1+Dot4+Dot5+Dot7
+* set screen image frozen/unfrozen: Thumb2+Dot1+Dot2+Dot4
+* set screen image frozen: Thumb2+Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Thumb2+Dot1+Dot2+Dot4+Dot7
+* describe character: Right+RoutingKey
+* show current date and time: Thumb1+Thumb4
 
 Cursor Functions
 * go to screen cursor: Right
@@ -105,7 +106,6 @@ Menu Operations
 * save preferences to disk: Thumb2+Dot1+Dot2+Dot3+Dot4+Dot8
 
 Speech Functions
-* describe character: Right+RoutingKey
 * set autospeak on/off: Right+Down
 
 Keyboard Input
