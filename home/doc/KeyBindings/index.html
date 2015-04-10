@@ -4,10 +4,13 @@
 </HEAD>
 <BODY>
 <H1>Key Binding Lists</H1>
-<BR>
-Note: You can set the keytable when launching BRLTTY using the <tt>--keyboard-table=</tt> command line argument.
-<BR>
 <H2>Computer Keyboard Bindings</H2>
+In order to use one of these keyboard tables,
+you need to explicitly specify it in one of the following ways:
+<UL>
+<LI>Use BRLTTY's <TT>-k</TT> (or <TT>--keyboard-table=</TT>) command line option.
+<LI>Use the <TT>keyboard-table</TT> configuration file (<TT>brltty.conf</TT>) directive.
+</UL>
 <UL>
 <LI><A HREF="kbd-braille.html">Bindings for Braille Keyboards</A>
 <LI><A HREF="kbd-desktop.html">Bindings for Full Keyboards</A>
@@ -17,6 +20,9 @@ Note: You can set the keytable when launching BRLTTY using the <tt>--keyboard-ta
 </UL>
 <HR>
 <H2>Braille Device Bindings</H2>
+The driver automatically selects the appropriate key table for the device model being used.
+Click on the driver's name for general information about it.
+Click on the device model for its key bindings.
 <DL>
 <DT><A HREF="brl-at.txt">Albatross</A><DD>
 <UL>

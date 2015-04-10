@@ -146,6 +146,7 @@ Keyboard Input
   + Space+Dot4+Dot6
 * insert key: Space+Dot3+Dot5
 * delete key: Space+Dot2+Dot5+Dot6
+* function key: Space+RoutingKey
 * switch to previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
 * switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
 
