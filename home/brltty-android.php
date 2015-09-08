@@ -12,6 +12,7 @@ and if you'd like to do some translating for us,
 then we'd sure appreciate your help.
 So far, we have translations for the following languages:
 <UL>
+<LI>Czech
 <LI>Chinese
 <LI>Finnish
 <LI>French
