@@ -6,7 +6,7 @@ Version 5.2, Nov 2014
 
 Copyright (C) 1995-2015 by The BRLTTY Developers.
 
-Web Page: http://mielke.cc/brltty/
+Web Page: http://brltty.com/
 
 BRLTTY is free software. It comes with ABSOLUTELY NO WARRANTY.
 
@@ -181,6 +181,7 @@ The following braille displays are supported:
 -  Albatross [46/80]
 -  Alva [ABT(3nn), Delphi(4nn), Satellite(5nn), Braille System 40,
          Braille Controller 640/680, Easy Link 12]
+-  B2G
 -  Baum [BrailleConnect 12/24/32/40/64/80, Brailliant 24/32/40/64/80, Conny 12,
          DM80 Plus, EcoVario 24/32/40/64/80, Inka, PocketVario 24,
          Pronto! V3 18/40, Pronto! V4 18/40, RBT 40/80, Refreshabraille 18,
@@ -190,8 +191,8 @@ The following braille displays are supported:
 -  BrailleLite [18/40/M20/M40]
 -  BrailleMemo [Pocket (16), Smart (16), 32, 40]
 -  BrailleNote [18/32]
+-  Braudi
 -  BrlAPI
--  B2G [20]
 -  Cebra [20/40/60/80/100/120/140]
 -  CombiBraille [25/45/85]
 -  EcoBraille [20/40/80]
@@ -220,6 +221,7 @@ The following braille displays are supported:
                Trio 40/Elba20/Elba32, Live 20/40]
 -  Pegasus [20/27/40/80]
 -  Seika [3/4/5 (40), 80, Mini (16)]
+-  TechniBraille
 -  TSI [Navigator 20/40/80, PowerBraille 40/65/80]
 -  TTY [terminfo]
 -  VideoBraille [40]

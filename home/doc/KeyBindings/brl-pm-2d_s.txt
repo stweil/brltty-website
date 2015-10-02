@@ -120,10 +120,6 @@ Speech Functions
 * set autospeak off: Status.18+Dot7
 
 Keyboard Input
-* set braille input mode dots/text: Status.20
-* set braille input mode dots: Status.20+Dot8
-* set braille input mode text: Status.20+Dot7
-* tab key: Dot2+Shift
 * cursor-left key: Dot2+Home
 * cursor-right key: Dot2+End
 * cursor-up key: Dot2+Up
@@ -134,12 +130,16 @@ Keyboard Input
 * end key: Dot5+End
 * insert key: Dot5+Shift
 * function key: Dot2+RoutingKey1
+* tab key: Dot2+Shift
 * clear all sticky input modifiers: Dot6+Shift
 * cycle the Shift sticky input modifier (next, on, off): Dot6+Up
 * cycle the Control sticky input modifier (next, on, off): Dot6+Down
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Dot6+Home
 * cycle the GUI (Windows) sticky input modifier (next, on, off): Dot6+End
-* switch to virtual terminal: Dot5+RoutingKey1
+* switch to a specific virtual terminal: Dot5+RoutingKey1
+* set braille input mode dots/text: Status.20
+* set braille input mode dots: Status.20+Dot8
+* set braille input mode text: Status.20+Dot7
 
 Special Functions
 * restart braille driver: Status.16
@@ -221,11 +221,8 @@ Menu Operations
 * save preferences to disk: Dot1+Dot2+Dot3+Dot4+Dot8
 
 Keyboard Input
-* set braille keyboard enabled/disabled: Dot1+Dot3
-* set braille keyboard enabled: Dot1+Dot3+Dot8
-* set braille keyboard disabled: Dot1+Dot3+Dot7
-* enter key: Dot8
-* tab key: Dot2+Dot3+Dot5+Dot6
+* type braille dots [7]: Dot7
+* type braille dots [8]: Dot8
 * backspace key: Dot7
 * escape key: Dot2+Dot6
 * cursor-left key: Dot3
@@ -238,8 +235,13 @@ Keyboard Input
 * end key: Dot5
 * insert key: Dot3+Dot5
 * delete key: Dot2+Dot5+Dot6
-* switch to previous virtual terminal: Dot1+Dot2+Dot3+Dot6+Dot7
-* switch to next virtual terminal: Dot1+Dot2+Dot3+Dot6+Dot8
+* enter key: Dot8
+* tab key: Dot4+Dot5
+* switch to the previous virtual terminal: Dot1+Dot2+Dot3+Dot6+Dot7
+* switch to the next virtual terminal: Dot1+Dot2+Dot3+Dot6+Dot8
+* set braille keyboard enabled/disabled: Dot1+Dot3
+* set braille keyboard enabled: Dot1+Dot3+Dot8
+* set braille keyboard disabled: Dot1+Dot3+Dot7
 
 Braille Input Mode
 ------------------
@@ -253,9 +255,9 @@ Keyboard Input
 * braille keyboard dot6: Dot6
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
-* enter key: Dot3+Up
+* type braille dots [space]: Dot3+Down
 * backspace key: Dot3+Home
 * escape key: Dot3+Shift
 * delete key: Dot3+End
-* type braille character [space]: Dot3+Down
+* enter key: Dot3+Up
 

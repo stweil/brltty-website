@@ -141,12 +141,9 @@ Keyboard Input
 * braille keyboard space: RightSpace
 * braille keyboard control: LeftThumb
 * braille keyboard meta: RightThumb
-* set braille keyboard enabled/disabled: Space+Dot1+Dot3
-* set braille keyboard enabled: Space+Dot1+Dot3+Dot8
-* set braille keyboard disabled: Space+Dot1+Dot3+Dot7
-* enter key: Space+Dot8
-* tab key: Space+Dot2+Dot3+Dot5+Dot6
-* backspace key: Space+Dot7
+* type braille dots [7]: Space+Dot7
+* type braille dots [8]: Space+Dot8
+* backspace key: Dot7
 * escape key: Space+Dot2+Dot6
 * cursor-left key: Space+Dot3
 * cursor-right key: Space+Dot6
@@ -158,8 +155,13 @@ Keyboard Input
 * end key: Space+Dot5
 * insert key: Space+Dot3+Dot5
 * delete key: Space+Dot2+Dot5+Dot6
-* switch to previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
-* switch to next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
+* enter key: Dot8
+* tab key: Space+Dot4+Dot5
+* switch to the previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
+* switch to the next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
+* set braille keyboard enabled/disabled: Space+Dot1+Dot3
+* set braille keyboard enabled: Space+Dot1+Dot3+Dot8
+* set braille keyboard disabled: Space+Dot1+Dot3+Dot7
 
 Special Functions
 * restart braille driver: LeftKeyFront+BarUp2

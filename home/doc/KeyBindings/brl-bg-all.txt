@@ -1,0 +1,171 @@
+Key Table: B2G
+==============
+
+Notes
+* The eight, rectangular, concave keys (in two groups of four) near the back are a braille keyboard.
+  The four on the left, from left to right, are: Dot7, Dot3, Dot2, Dot1.
+  The four on the right, from left to right, are: Dot4, Dot5, Dot6, Dot8.
+* The square pad with a small, round button in the middle, in between Dot1 and Dot4, is the D-Pad (directional pad).
+  Its four edges are the Up, Down, Left, and Right keys.
+  The button in the middle is the Center key.
+* The long, rectangular key in front of Dot1, the D-Pad, and Dot4 is the Space bar.
+* The small, round buttons just behind each cell are the routing keys.
+* The convex, square button to the left of the routing keys is the Backward key.
+* The convex, square button to the right of the routing keys is the Forward key.
+* The two small, round buttons on the right side near the front are the volume keys.
+  From front to back, they are: Softer, Louder.
+
+Default Bindings
+----------------
+
+Special Modes
+* enter/leave help display: Space+Dot1+Dot2+Dot5
+* enter/leave command learn mode: Space+Dot1+Dot2+Dot3
+* enter/leave preferences menu: Space+Dot1+Dot2+Dot3+Dot4
+* enter/leave status display: Space+Dot2+Dot3+Dot4
+* set display mode attributes/text: Space+Dot1+Dot4+Dot5
+* set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
+* set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+* set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
+* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+* describe character: Forward+RoutingKey
+
+Cursor Functions
+* go to screen cursor: Center
+* go back after cursor tracking: Space+Center
+* bring screen cursor to character: RoutingKey
+* bring screen cursor to current line: Space+Dot1+Dot2+Dot3+Dot6
+
+Vertical Navigation
+* go up one line: Up
+* go down one line: Down
+* go to top line: Space+Up
+* go to bottom line: Space+Down
+* go up to nearest line with different content: Backward+Up
+* go down to nearest line with different content: Backward+Down
+* go up to nearest line with different highlighting: Backward+Left
+* go down to nearest line with different highlighting: Backward+Right
+* go up to first line of paragraph: Forward+Left
+* go down to first line of next paragraph: Forward+Right
+* go up to previous command prompt: Forward+Up
+* go down to next command prompt: Forward+Down
+* go up to nearest line with less indent than character: Up+RoutingKey
+* go down to nearest line with less indent than character: Down+RoutingKey
+* go up to nearest line with different character: Left+RoutingKey
+* go down to nearest line with different character: Right+RoutingKey
+
+Horizontal Navigation
+* go left one braille window: Backward
+* go right one braille window: Forward
+* go left to nearest non-blank braille window: Space+Backward
+* go right to nearest non-blank braille window: Space+Forward
+* go to beginning of line: Left
+* go to end of line: Right
+* go left one character: Space+Left
+* go right one character: Space+Right
+* place left end of braille window at character: Backward+RoutingKey
+
+Clipboard Functions
+* start new clipboard at character: Dot7+RoutingKey
+* append to clipboard from character: Dot3+RoutingKey
+* linear copy to character: Dot6+RoutingKey
+* rectangular copy to character: Dot8+RoutingKey
+* copy characters to clipboard: RoutingKey+RoutingKey
+* append characters to clipboard: RoutingKey+RoutingKey+Space
+* insert clipboard text after screen cursor: Space+Dot1+Dot3+Dot4+Dot6
+* insert clipboard history entry after screen cursor: Center+RoutingKey
+* search backward for clipboard text: Backward+Center
+* search forward for clipboard text: Forward+Center
+* save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
+* restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
+
+Configuration Functions
+* set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
+* set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
+* set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
+* set text style 6-dot: Space+Dot2+Dot3+Dot5
+* set text style 8-dot: Space+Dot2+Dot3+Dot6
+* set skipping of lines with identical content on/off: Space+Dot2+Dot4
+* set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
+* set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
+* set skipping of blank braille windows on/off: Space+Dot1+Dot2
+* set skipping of blank braille windows on: Space+Dot1+Dot2+Dot8
+* set skipping of blank braille windows off: Space+Dot1+Dot2+Dot7
+* set sliding braille window on/off: Space+Dot2+Dot4+Dot5+Dot6
+* set sliding braille window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
+* set sliding braille window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
+* set track screen cursor on/off: Space+Dot2+Dot3+Dot4+Dot5
+* set track screen cursor on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
+* set track screen cursor off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
+* set screen cursor visibility on/off: Space+Dot1+Dot4
+* set screen cursor visibility on: Space+Dot1+Dot4+Dot8
+* set screen cursor visibility off: Space+Dot1+Dot4+Dot7
+* set attribute underlining on/off: Space+Dot1+Dot3+Dot6
+* set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
+* set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
+
+Menu Operations
+* restore preferences from disk: Space+Dot1+Dot2+Dot3+Dot4+Dot7
+* save preferences to disk: Space+Dot1+Dot2+Dot3+Dot4+Dot8
+
+Keyboard Input
+* braille keyboard dot1: Dot1
+* braille keyboard dot2: Dot2
+* braille keyboard dot3: Dot3
+* braille keyboard dot4: Dot4
+* braille keyboard dot5: Dot5
+* braille keyboard dot6: Dot6
+* braille keyboard dot7: Dot7
+* braille keyboard dot8: Dot8
+* braille keyboard space: Space
+* braille keyboard uppercase: Up
+* braille keyboard control: Down
+* braille keyboard meta: Left
+* braille keyboard altgr: Right
+* braille keyboard gui: Center
+* type braille dots [7]: Space+Dot7
+* type braille dots [8]: Space+Dot8
+* backspace key: Dot7
+* escape key: Space+Dot2+Dot6
+* cursor-left key: Space+Dot3
+* cursor-right key: Space+Dot6
+* cursor-up key: Space+Dot1
+* cursor-down key: Space+Dot4
+* page-up key: Space+Dot2+Dot3
+* page-down key: Space+Dot5+Dot6
+* home key: Space+Dot2
+* end key: Space+Dot5
+* insert key: Space+Dot3+Dot5
+* delete key: Space+Dot2+Dot5+Dot6
+* function key: Space+RoutingKey
+* enter key: Dot8
+* tab key: Space+Dot4+Dot5
+* switch to a specific virtual terminal: Dot2+RoutingKey
+* switch to the previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
+* switch to the next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
+* bind to a specific virtual terminal: Dot5+RoutingKey
+* set braille keyboard enabled/disabled: Space+Dot1+Dot3
+* set braille keyboard enabled: Space+Dot1+Dot3+Dot8
+* set braille keyboard disabled: Space+Dot1+Dot3+Dot7
+
+Special Functions
+* remember current braille window position: Dot1+RoutingKey
+* go to remembered braille window position: Dot4+RoutingKey
+* stop the braille driver: Louder+Softer
+
+Menu Bindings
+-------------
+
+Special Modes
+* enter/leave preferences menu: Dot6
+
+Menu Operations
+* go to previous item: Dot1
+* go to next item: Dot4
+* select previous choice: Dot2
+* select next choice: Dot5
+* go to previous menu level: Dot3
+* restore preferences from disk: Dot7
+* save preferences to disk: Dot8
+

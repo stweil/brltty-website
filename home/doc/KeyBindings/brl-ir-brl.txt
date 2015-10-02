@@ -69,8 +69,6 @@ Keyboard Input
 * braille keyboard control: L4
 * braille keyboard meta: L5
 * braille keyboard uppercase: L3
-* enter key: Backspace+Space
-* tab key: Space+Dot2+Dot3+Dot4+Dot5
 * backspace key: Backspace
 * escape key: Space+Dot1+Dot5
 * cursor-left key: Space+Dot2
@@ -95,18 +93,20 @@ Keyboard Input
 * function key #10: Backspace+Dot2+Dot4+Dot5
 * function key #11: Backspace+Dot1+Dot3
 * function key #12: Backspace+Dot1+Dot2+Dot3
-* switch to virtual terminal #1: Backspace+Dot2
-* switch to virtual terminal #2: Backspace+Dot2+Dot3
-* switch to virtual terminal #3: Backspace+Dot2+Dot5
-* switch to virtual terminal #4: Backspace+Dot2+Dot5+Dot6
-* switch to virtual terminal #5: Backspace+Dot2+Dot6
-* switch to virtual terminal #6: Backspace+Dot2+Dot3+Dot5
-* switch to virtual terminal #7: Backspace+Dot2+Dot3+Dot5+Dot6
-* switch to virtual terminal #8: Backspace+Dot2+Dot3+Dot6
-* switch to virtual terminal #9: Backspace+Dot3+Dot5
-* switch to virtual terminal #10: Backspace+Dot3+Dot5+Dot6
-* switch to virtual terminal #11: Backspace+Dot2+Dot7
-* switch to virtual terminal #12: Backspace+Dot2+Dot3+Dot7
-* switch to previous virtual terminal: Backspace+Dot3
-* switch to next virtual terminal: Backspace+Dot6
+* enter key: Backspace+Space
+* tab key: Space+Dot2+Dot3+Dot4+Dot5
+* switch to a specific virtual terminal #1: Backspace+Dot2
+* switch to a specific virtual terminal #2: Backspace+Dot2+Dot3
+* switch to a specific virtual terminal #3: Backspace+Dot2+Dot5
+* switch to a specific virtual terminal #4: Backspace+Dot2+Dot5+Dot6
+* switch to a specific virtual terminal #5: Backspace+Dot2+Dot6
+* switch to a specific virtual terminal #6: Backspace+Dot2+Dot3+Dot5
+* switch to a specific virtual terminal #7: Backspace+Dot2+Dot3+Dot5+Dot6
+* switch to a specific virtual terminal #8: Backspace+Dot2+Dot3+Dot6
+* switch to a specific virtual terminal #9: Backspace+Dot3+Dot5
+* switch to a specific virtual terminal #10: Backspace+Dot3+Dot5+Dot6
+* switch to a specific virtual terminal #11: Backspace+Dot2+Dot7
+* switch to a specific virtual terminal #12: Backspace+Dot2+Dot3+Dot7
+* switch to the previous virtual terminal: Backspace+Dot3
+* switch to the next virtual terminal: Backspace+Dot6
 

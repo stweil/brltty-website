@@ -131,20 +131,20 @@ Keyboard Input
 * function key #10: B12+Zero
 * function key #11: B12+B13
 * function key #12: B12+B14
-* switch to virtual terminal #1: B11+One
-* switch to virtual terminal #2: B11+Two
-* switch to virtual terminal #3: B11+Three
-* switch to virtual terminal #4: B11+Four
-* switch to virtual terminal #5: B11+Five
-* switch to virtual terminal #6: B11+Six
-* switch to virtual terminal #7: B11+Seven
-* switch to virtual terminal #8: B11+Eight
-* switch to virtual terminal #9: B11+Nine
-* switch to virtual terminal #10: B11+Zero
-* switch to virtual terminal #11: B11+B13
-* switch to virtual terminal #12: B11+B14
-* switch to previous virtual terminal: B13
-* switch to next virtual terminal: B14
+* switch to a specific virtual terminal #1: B11+One
+* switch to a specific virtual terminal #2: B11+Two
+* switch to a specific virtual terminal #3: B11+Three
+* switch to a specific virtual terminal #4: B11+Four
+* switch to a specific virtual terminal #5: B11+Five
+* switch to a specific virtual terminal #6: B11+Six
+* switch to a specific virtual terminal #7: B11+Seven
+* switch to a specific virtual terminal #8: B11+Eight
+* switch to a specific virtual terminal #9: B11+Nine
+* switch to a specific virtual terminal #10: B11+Zero
+* switch to a specific virtual terminal #11: B11+B13
+* switch to a specific virtual terminal #12: B11+B14
+* switch to the previous virtual terminal: B13
+* switch to the next virtual terminal: B14
 
 Special Functions
 * remember current braille window position:

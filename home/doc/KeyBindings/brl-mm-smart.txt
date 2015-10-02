@@ -146,16 +146,12 @@ Keyboard Input
 * braille keyboard dot8: dot8
 * braille keyboard control: Control
 * braille keyboard meta: Alt
-* set braille keyboard enabled/disabled: Read+dot1+dot3
-* set braille keyboard enabled: Read+dot1+dot3+dot8
-* set braille keyboard disabled: Read+dot1+dot3+dot7
-* enter key:
-  + dot7
-  + Read+dot8
-* tab key: Read+dot2+dot3+dot5+dot6
+* type braille dots [C]: dot8
+* type braille dots [7]: Read+dot7
+* type braille dots [8]: Read+dot8
 * backspace key:
   + Backspace
-  + Read+dot7
+  + dot7
 * escape key:
   + Escape
   + Read+dot2+dot6
@@ -186,10 +182,16 @@ Keyboard Input
   + Delete
   + Read+dot2+dot5+dot6
 * function key: PanRight+RoutingKey
-* type braille character [C]: dot8
-* switch to virtual terminal: PanLeft+RoutingKey
-* switch to previous virtual terminal: Read+dot1+dot2+dot3+dot6+dot7
-* switch to next virtual terminal: Read+dot1+dot2+dot3+dot6+dot8
+* enter key:
+  + dot7
+  + dot8
+* tab key: Read+dot4+dot5
+* switch to a specific virtual terminal: PanLeft+RoutingKey
+* switch to the previous virtual terminal: Read+dot1+dot2+dot3+dot6+dot7
+* switch to the next virtual terminal: Read+dot1+dot2+dot3+dot6+dot8
+* set braille keyboard enabled/disabled: Read+dot1+dot3
+* set braille keyboard enabled: Read+dot1+dot3+dot8
+* set braille keyboard disabled: Read+dot1+dot3+dot7
 
 Menu Bindings
 -------------

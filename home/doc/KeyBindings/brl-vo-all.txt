@@ -121,12 +121,9 @@ Keyboard Input
 * braille keyboard space: Thumb3
 * braille keyboard uppercase: Left
 * braille keyboard control: Right
-* set braille keyboard enabled/disabled: Thumb2+Dot1+Dot3
-* set braille keyboard enabled: Thumb2+Dot1+Dot3+Dot8
-* set braille keyboard disabled: Thumb2+Dot1+Dot3+Dot7
-* enter key: Thumb2+Dot8
-* tab key: Thumb2+Dot2+Dot3+Dot5+Dot6
-* backspace key: Thumb2+Dot7
+* type braille dots [7]: Thumb2+Dot7
+* type braille dots [8]: Thumb2+Dot8
+* backspace key: Dot7
 * escape key: Thumb2+Dot2+Dot6
 * cursor-left key: Thumb2+Dot3
 * cursor-right key: Thumb2+Dot6
@@ -143,9 +140,14 @@ Keyboard Input
 * insert key: Thumb2+Dot3+Dot5
 * delete key: Thumb2+Dot2+Dot5+Dot6
 * function key: Down+RoutingKey
-* switch to virtual terminal: Up+RoutingKey
-* switch to previous virtual terminal: Thumb2+Dot1+Dot2+Dot3+Dot6+Dot7
-* switch to next virtual terminal: Thumb2+Dot1+Dot2+Dot3+Dot6+Dot8
+* enter key: Dot8
+* tab key: Thumb2+Dot4+Dot5
+* switch to a specific virtual terminal: Up+RoutingKey
+* switch to the previous virtual terminal: Thumb2+Dot1+Dot2+Dot3+Dot6+Dot7
+* switch to the next virtual terminal: Thumb2+Dot1+Dot2+Dot3+Dot6+Dot8
+* set braille keyboard enabled/disabled: Thumb2+Dot1+Dot3
+* set braille keyboard enabled: Thumb2+Dot1+Dot3+Dot8
+* set braille keyboard disabled: Thumb2+Dot1+Dot3+Dot7
 
 Menu Bindings
 -------------

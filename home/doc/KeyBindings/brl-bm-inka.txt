@@ -93,8 +93,8 @@ Speech Functions
 * set autospeak on/off: Display3+Display4+Display6
 
 Keyboard Input
-* switch to previous virtual terminal: Display3+Display4+Display5+Display6
-* switch to next virtual terminal: Display1+Display2+Display3+Display6
+* switch to the previous virtual terminal: Display3+Display4+Display5+Display6
+* switch to the next virtual terminal: Display1+Display2+Display3+Display6
 
 Special Functions
 * remember current braille window position: Display1+Display3+HorizontalSensor

@@ -245,18 +245,11 @@ Keyboard Input
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
 * braille keyboard space: B11
-* set braille keyboard enabled/disabled: B11+Dot1+Dot3
-* set braille keyboard enabled: B11+Dot1+Dot3+Dot8
-* set braille keyboard disabled: B11+Dot1+Dot3+Dot7
-* enter key:
-  + B11+Dot8
-  + Dot2+Press
-* tab key:
-  + B11+Dot2+Dot3+Dot5+Dot6
-  + Dot1+Press
+* type braille dots [7]: B11+Dot7
+* type braille dots [8]: B11+Dot8
 * backspace key:
   + B9
-  + B11+Dot7
+  + Dot7
   + Dot2+Left
 * escape key:
   + B11+Dot2+Dot6
@@ -291,15 +284,24 @@ Keyboard Input
 * delete key:
   + B11+Dot2+Dot5+Dot6
   + Dot2+Right
-* switch to virtual terminal: Display4+Display5+Display6+RoutingKey
-* switch to previous virtual terminal:
+* enter key:
+  + Dot8
+  + Dot2+Press
+* tab key:
+  + B11+Dot4+Dot5
+  + Dot1+Press
+* switch to a specific virtual terminal: Display4+Display5+Display6+RoutingKey
+* switch to the previous virtual terminal:
   + Display3+Display4+Display5+Display6
   + B11+Dot1+Dot2+Dot3+Dot6+Dot7
   + Dot4+Dot5+Left
-* switch to next virtual terminal:
+* switch to the next virtual terminal:
   + Display1+Display2+Display3+Display6
   + B11+Dot1+Dot2+Dot3+Dot6+Dot8
   + Dot4+Dot5+Right
+* set braille keyboard enabled/disabled: B11+Dot1+Dot3
+* set braille keyboard enabled: B11+Dot1+Dot3+Dot8
+* set braille keyboard disabled: B11+Dot1+Dot3+Dot7
 
 Special Functions
 * remember current braille window position: Display1+Display3+RoutingKey

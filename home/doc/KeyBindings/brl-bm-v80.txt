@@ -139,14 +139,14 @@ Keyboard Input
 * braille keyboard dot4: Command5
 * braille keyboard dot5: Command6
 * braille keyboard dot6: Command7
-* enter key: Command4+Command5
-* tab key: Command4+Command6
 * backspace key: Command4+Command2
 * cursor-left key: Command4+Command1
 * cursor-right key: Command4+Command7
-* switch to virtual terminal: Display4+Display5+Display6+RoutingKey
-* switch to previous virtual terminal: Display3+Display4+Display5+Display6
-* switch to next virtual terminal: Display1+Display2+Display3+Display6
+* enter key: Command4+Command5
+* tab key: Command4+Command6
+* switch to a specific virtual terminal: Display4+Display5+Display6+RoutingKey
+* switch to the previous virtual terminal: Display3+Display4+Display5+Display6
+* switch to the next virtual terminal: Display1+Display2+Display3+Display6
 
 Special Functions
 * remember current braille window position: Display1+Display3+RoutingKey

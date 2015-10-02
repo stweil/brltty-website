@@ -132,7 +132,7 @@ Keyboard Input
 * cursor-up key: LeftRockerTop
 * cursor-down key: LeftRockerBottom
 * function key: LeftRockerTop+LeftRockerBottom+RoutingKey
-* switch to virtual terminal: RightRockerTop+RightRockerBottom+RoutingKey
+* switch to a specific virtual terminal: RightRockerTop+RightRockerBottom+RoutingKey
 
 Special Functions
 * remember current braille window position: B7+RoutingKey

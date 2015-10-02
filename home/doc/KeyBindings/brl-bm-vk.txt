@@ -46,7 +46,7 @@ Configuration Functions
 Keyboard Input
 * cursor-up key: Display4
 * cursor-down key: Display6
-* switch to virtual terminal: Display4+Display5+Display6+RoutingKey
+* switch to a specific virtual terminal: Display4+Display5+Display6+RoutingKey
 
 Special Functions
 * remember current braille window position: Display1+Display3+RoutingKey

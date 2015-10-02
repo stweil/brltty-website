@@ -119,7 +119,6 @@ Configuration Functions
 * set skipping of blank braille windows off: Backspace+Dot1+Dot2
 
 Keyboard Input
-* tab key: Space+Dot2+Dot3+Dot5+Dot6
 * backspace key: Backspace
 * escape key: Space+Dot2+Dot6
 * cursor-left key: Space+Dot2+Dot3
@@ -132,6 +131,7 @@ Keyboard Input
 * end key: Space+Dot3
 * insert key: Space+Dot3+Dot5
 * delete key: Space+Dot2+Dot5+Dot6
+* tab key: Space+Dot2+Dot3+Dot5+Dot6
 
 Special Modes
 * enter/leave help display: Backspace+Dot1+Dot2+Dot5
@@ -156,7 +156,7 @@ Configuration Functions
 
 Keyboard Input
 * enter key: Enter
-* switch to previous virtual terminal: Backspace+Dot1+Dot2+Dot3+Dot6
+* switch to the previous virtual terminal: Backspace+Dot1+Dot2+Dot3+Dot6
 
 Special Functions
 * go to remembered braille window position: Enter+Dot1+Dot3+Dot4, RoutingKey
@@ -166,7 +166,7 @@ Configuration Functions
 * set sliding braille window on: Enter+Dot2+Dot4+Dot5+Dot6
 
 Keyboard Input
-* switch to next virtual terminal: Enter+Dot1+Dot2+Dot3+Dot6
+* switch to the next virtual terminal: Enter+Dot1+Dot2+Dot3+Dot6
 
 Special Functions
 * restart braille driver: Enter+Dot1+Dot2+Dot3+Dot4+Dot5+Dot6

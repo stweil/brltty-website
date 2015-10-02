@@ -39,9 +39,6 @@ Clipboard Functions
 * start new clipboard at character: LeftJoystickDown+RightJoystickLeft, RoutingKey1
 
 Keyboard Input
-* enter key: Backspace+Space
-* tab key: Space+Dot2+Dot5+Dot6
-* tab key + shift: Space+Dot2+Dot3+Dot6
 * backspace key: Backspace
 * escape key: Space+Dot1+Dot2+Dot4+Dot5
 * cursor-left key: Space+Dot2
@@ -66,6 +63,9 @@ Keyboard Input
 * function key #10: Backspace+Dot2+Dot4+Dot5
 * function key #11: Backspace+Dot1+Dot3
 * function key #12: Backspace+Dot1+Dot2+Dot3
+* enter key: Backspace+Space
+* tab key: Space+Dot2+Dot5+Dot6
+* tab key + shift: Space+Dot2+Dot3+Dot6
 * cycle the Shift sticky input modifier (next, on, off): Space+Dot7
 * cycle the Control sticky input modifier (next, on, off): Space+Dot7+Dot8
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dot8
