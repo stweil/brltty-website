@@ -5,5 +5,25 @@
    $brltty->add_subsection("Restrictions", "brltty-restrictions.php", "restrictions");
    $brltty->add_subsection("Supported Braille Displays", "brltty-displays.php", "displays");
    $brltty->add_subsection("Supported Speech Synthesizers", "brltty-synthesizers.php", "synthesizers");
+
+   function list_drivers (&$drivers) {
+      if (count($drivers) > 0) {
+         echo("<DL>\n");
+            foreach ($drivers as $driver) {
+               $name = array_shift($driver);
+               echo("<DT>$name<DD>\n");
+
+               if (count($driver) > 0) {
+                  echo("<UL>\n");
+                     foreach ($driver as $model) {
+                        echo("<LI>$model</LI>\n");
+                     }
+                  echo("</UL>\n");
+               }
+            }
+         echo("</DL>\n");
+      }
+   }
+
    $brltty->end();
 ?>
