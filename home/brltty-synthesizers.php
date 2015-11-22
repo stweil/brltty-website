@@ -4,7 +4,7 @@ or if you know the technical details required to get another one to work,
 then please <A HREF="contact.html">let us know</A>.
 
 <?php
-   $drivers=array(
+   $speech_synthesizers = array(
       array("Alva", "Delphi (4nn)"),
       array("BrailleLite"),
       array("CombiBraille"),
@@ -20,5 +20,5 @@ then please <A HREF="contact.html">let us know</A>.
       array("ViaVoice", "text to speech engine"),
    );
 
-   list_drivers($drivers);
+   list_drivers($speech_synthesizers);
 ?>

@@ -9,13 +9,15 @@
    function list_drivers (&$drivers) {
       if (count($drivers) > 0) {
          echo("<DL>\n");
+            reset($drivers);
+
             foreach ($drivers as $driver) {
-               $name = array_shift($driver);
+               $name = $driver[0];
                echo("<DT>$name<DD>\n");
 
-               if (count($driver) > 0) {
+               if (count($driver) > 1) {
                   echo("<UL>\n");
-                     foreach ($driver as $model) {
+                     foreach (array_slice($driver, 1) as $model) {
                         echo("<LI>$model</LI>\n");
                      }
                   echo("</UL>\n");

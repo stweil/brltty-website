@@ -4,7 +4,7 @@ or if you know the technical details required to get another one to work,
 then please <A HREF="contact.html">let us know</A>.
 
 <?php
-   $drivers = array(
+   $braille_displays = array(
       array("Albatross",
          "46/80"
       ),
@@ -162,5 +162,5 @@ then please <A HREF="contact.html">let us know</A>.
       ),
    );
 
-   list_drivers($drivers);
+   list_drivers($braille_displays);
 ?>
