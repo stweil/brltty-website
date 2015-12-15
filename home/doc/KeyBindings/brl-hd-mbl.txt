@@ -46,10 +46,10 @@ Vertical Navigation
 * go down to nearest line with less indent than character: B4+RoutingKey
 
 Horizontal Navigation
-* go left one braille window: K1
-* go right one braille window: K3
-* go left to nearest non-blank braille window: B2+K1
-* go right to nearest non-blank braille window: B2+K3
+* go backward one braille window: K1
+* go forward one braille window: K3
+* go backward skipping blank braille windows: B2+K1
+* go forward skipping blank braille windows: B2+K3
 * go to beginning of line: B3+K1
 * go to end of line: B3+K3
 * go left one character: B1+K1

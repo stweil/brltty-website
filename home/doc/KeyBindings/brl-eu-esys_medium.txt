@@ -19,6 +19,9 @@ Default Bindings
 ----------------
 
 Special Modes
+* enter/leave help display: LeftJoystickRight+RightJoystickDown
+* enter/leave command learn mode: LeftJoystickRight+RightJoystickUp
+* enter/leave preferences menu: LeftJoystickRight+Switch1Left+Switch1Right
 * describe character: RoutingKey2
 
 Cursor Functions
@@ -34,13 +37,45 @@ Vertical Navigation
 * go down to next command prompt: LeftJoystickRight
 
 Horizontal Navigation
-* go left one braille window: RightJoystickLeft
-* go right one braille window: RightJoystickRight
+* go backward one braille window:
+  + RightJoystickLeft
+  + Switch1Left
+* go forward one braille window:
+  + RightJoystickRight
+  + Switch1Right
+* go to beginning of line: LeftJoystickRight+Switch1Left
+* go to end of line: LeftJoystickRight+Switch1Right
 
 Clipboard Functions
 * start new clipboard at character: LeftJoystickDown+RightJoystickLeft, RoutingKey1
+* append to clipboard from character: LeftJoystickDown+RightJoystickUp, RoutingKey1
+* linear copy to character: LeftJoystickDown+RightJoystickRight, RoutingKey1
+* rectangular copy to character: LeftJoystickDown+RightJoystickDown, RoutingKey1
+* insert clipboard text after screen cursor: LeftJoystickDown+RightJoystickPress
+
+Configuration Functions
+* set track screen cursor on/off: LeftJoystickRight+Switch2Left+Switch2Right
+
+Speech Functions
+* stop speaking: LeftJoystickLeft+Switch1Left+Switch1Right
+* speak current line: LeftJoystickLeft+RightJoystickPress
+* speak from top of screen through current line: LeftJoystickLeft+RightJoystickUp
+* speak from current line through bottom of screen: LeftJoystickLeft+RightJoystickDown
+* decrease speaking volume: LeftJoystickLeft+RightJoystickLeft
+* increase speaking volume: LeftJoystickLeft+RightJoystickRight
+* decrease speaking rate: LeftJoystickLeft+Switch1Left
+* increase speaking rate: LeftJoystickLeft+Switch1Right
 
 Keyboard Input
+* braille keyboard dot1: Dot1
+* braille keyboard dot2: Dot2
+* braille keyboard dot3: Dot3
+* braille keyboard dot4: Dot4
+* braille keyboard dot5: Dot5
+* braille keyboard dot6: Dot6
+* braille keyboard dot7: Dot7
+* braille keyboard dot8: Dot8
+* braille keyboard space: Space
 * backspace key: Backspace
 * escape key: Space+Dot1+Dot2+Dot4+Dot5
 * cursor-left key: Space+Dot2
@@ -71,51 +106,4 @@ Keyboard Input
 * cycle the Shift sticky input modifier (next, on, off): Space+Dot7
 * cycle the Control sticky input modifier (next, on, off): Space+Dot7+Dot8
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dot8
-
-Clipboard Functions
-* append to clipboard from character: LeftJoystickDown+RightJoystickUp, RoutingKey1
-
-Clipboard Functions
-* rectangular copy to character: LeftJoystickDown+RightJoystickDown, RoutingKey1
-
-Clipboard Functions
-* linear copy to character: LeftJoystickDown+RightJoystickRight, RoutingKey1
-
-Special Modes
-* enter/leave help display: LeftJoystickRight+RightJoystickDown
-* enter/leave command learn mode: LeftJoystickRight+RightJoystickUp
-* enter/leave preferences menu: LeftJoystickRight+Switch1Left+Switch1Right
-
-Horizontal Navigation
-* go left one braille window: Switch1Left
-* go right one braille window: Switch1Right
-* go to beginning of line: LeftJoystickRight+Switch1Left
-* go to end of line: LeftJoystickRight+Switch1Right
-
-Clipboard Functions
-* insert clipboard text after screen cursor: LeftJoystickDown+RightJoystickPress
-
-Configuration Functions
-* set track screen cursor on/off: LeftJoystickRight+Switch2Left+Switch2Right
-
-Speech Functions
-* stop speaking: LeftJoystickLeft+Switch1Left+Switch1Right
-* speak current line: LeftJoystickLeft+RightJoystickPress
-* speak from top of screen through current line: LeftJoystickLeft+RightJoystickUp
-* speak from current line through bottom of screen: LeftJoystickLeft+RightJoystickDown
-* decrease speaking volume: LeftJoystickLeft+RightJoystickLeft
-* increase speaking volume: LeftJoystickLeft+RightJoystickRight
-* decrease speaking rate: LeftJoystickLeft+Switch1Left
-* increase speaking rate: LeftJoystickLeft+Switch1Right
-
-Keyboard Input
-* braille keyboard dot1: Dot1
-* braille keyboard dot2: Dot2
-* braille keyboard dot3: Dot3
-* braille keyboard dot4: Dot4
-* braille keyboard dot5: Dot5
-* braille keyboard dot6: Dot6
-* braille keyboard dot7: Dot7
-* braille keyboard dot8: Dot8
-* braille keyboard space: Space
 

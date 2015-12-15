@@ -62,7 +62,7 @@ Macros</h2></td></tr>
 <tr class="separator:gab0f523a333efcd272ac591785747f8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadf7ed09ca3d6694bcd993fa3c351cebf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__write.html#gadf7ed09ca3d6694bcd993fa3c351cebf">BRLAPI_CURSOR_OFF</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:gadf7ed09ca3d6694bcd993fa3c351cebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaff27465103fb53fb7725e7cb0e89ef00"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__write.html#gaff27465103fb53fb7725e7cb0e89ef00">BRLAPI_WRITEARGUMENTS_INITIALIZER</a>&#160;&#160;&#160;{ <a class="el" href="group__brlapi__write.html#gab1a71f82cac5d0b7ea1170697fe0dfc2">BRLAPI_DISPLAY_DEFAULT</a>, 0, 0, NULL, -1, NULL, NULL, <a class="el" href="group__brlapi__write.html#gab0f523a333efcd272ac591785747f8ce">BRLAPI_CURSOR_LEAVE</a>, NULL }</td></tr>
+<tr class="memitem:gaff27465103fb53fb7725e7cb0e89ef00"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__write.html#gaff27465103fb53fb7725e7cb0e89ef00">BRLAPI_WRITEARGUMENTS_INITIALIZER</a></td></tr>
 <tr class="separator:gaff27465103fb53fb7725e7cb0e89ef00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -139,11 +139,22 @@ Text is translated by the server one to one, by just using a simple wchar_t to p
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define BRLAPI_WRITEARGUMENTS_INITIALIZER&#160;&#160;&#160;{ <a class="el" href="group__brlapi__write.html#gab1a71f82cac5d0b7ea1170697fe0dfc2">BRLAPI_DISPLAY_DEFAULT</a>, 0, 0, NULL, -1, NULL, NULL, <a class="el" href="group__brlapi__write.html#gab0f523a333efcd272ac591785747f8ce">BRLAPI_CURSOR_LEAVE</a>, NULL }</td>
+          <td class="memname">#define BRLAPI_WRITEARGUMENTS_INITIALIZER</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Allows to initialize a structure of type <em><a class="el" href="structbrlapi__writeArguments__t.html">brlapi_writeArguments_t</a></em> * with default values: displayNumber = <a class="el" href="group__brlapi__write.html#gab1a71f82cac5d0b7ea1170697fe0dfc2">BRLAPI_DISPLAY_DEFAULT</a>; (unspecified) regionBegin = regionSize = 0; (update the whole display, DEPRECATED and will be forbidden in next release. You must always express the region you wish to update) text = andMask = orMask = NULL; (no text, no attribute) cursor = <a class="el" href="group__brlapi__write.html#gab0f523a333efcd272ac591785747f8ce">BRLAPI_CURSOR_LEAVE</a>; (don't touch cursor) </p>
+<b>Value:</b><div class="fragment"><div class="line">{ \</div>
+<div class="line">  .displayNumber = <a class="code" href="group__brlapi__write.html#gab1a71f82cac5d0b7ea1170697fe0dfc2">BRLAPI_DISPLAY_DEFAULT</a>, \</div>
+<div class="line">  .regionBegin = 0, \</div>
+<div class="line">  .regionSize = 0, \</div>
+<div class="line">  .text = NULL, \</div>
+<div class="line">  .textSize = -1, \</div>
+<div class="line">  .andMask = NULL, \</div>
+<div class="line">  .orMask = NULL, \</div>
+<div class="line">  .cursor = <a class="code" href="group__brlapi__write.html#gab0f523a333efcd272ac591785747f8ce">BRLAPI_CURSOR_LEAVE</a>, \</div>
+<div class="line">  .charset = NULL \</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Allows to initialize a structure of type <em><a class="el" href="structbrlapi__writeArguments__t.html">brlapi_writeArguments_t</a></em> * with default values: displayNumber = <a class="el" href="group__brlapi__write.html#gab1a71f82cac5d0b7ea1170697fe0dfc2">BRLAPI_DISPLAY_DEFAULT</a>; (unspecified) regionBegin = regionSize = 0; (update the whole display, DEPRECATED and will be forbidden in next release. You must always express the region you wish to update) text = andMask = orMask = NULL; (no text, no attribute) cursor = <a class="el" href="group__brlapi__write.html#gab0f523a333efcd272ac591785747f8ce">BRLAPI_CURSOR_LEAVE</a>; (don't touch cursor) </p>
 
 </div>
 </div>

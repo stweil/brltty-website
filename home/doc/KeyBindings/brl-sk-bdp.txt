@@ -10,6 +10,15 @@ Notes
 Default Bindings
 ----------------
 
+Special Modes
+* enter/leave help display: K1+K2
+* enter/leave command learn mode: K1+K3
+* enter/leave preferences menu: K1+K6
+* enter/leave status display: K1+K7
+* set display mode attributes/text: K8+K2
+* set screen image frozen/unfrozen: K8+K3
+* describe character: K1+K8+K5, RoutingKey
+
 Cursor Functions
 * go to screen cursor or go back after cursor tracking: K5
 * bring screen cursor to character: RoutingKey
@@ -31,58 +40,29 @@ Vertical Navigation
 * go up to previous command prompt: K4+K6
 * go down to next command prompt: K4+K7
 * go up to nearest line with less indent than character: K1+K8+K2, RoutingKey
-
-Horizontal Navigation
-* go left one braille window: K1
-* go right one braille window: K8
-* go left to nearest non-blank braille window: K6
-* go right to nearest non-blank braille window: K7
-* go to beginning of line: K2+K3
-
-Clipboard Functions
-* insert clipboard text after screen cursor: K6+K7
-
-Configuration Functions
-* set track screen cursor on/off: K4
-
-Vertical Navigation
 * go down to nearest line with less indent than character: K1+K8+K3, RoutingKey
+* go up to nearest line with different character: K1+K8+K6, RoutingKey
+* go down to nearest line with different character: K1+K8+K7, RoutingKey
 
 Horizontal Navigation
+* go backward one braille window: K1
+* go forward one braille window: K8
+* go backward skipping blank braille windows: K6
+* go forward skipping blank braille windows: K7
+* go to beginning of line: K2+K3
 * place left end of braille window at character: K1+K8+K4, RoutingKey
-
-Special Modes
-* describe character: K1+K8+K5, RoutingKey
-
-Vertical Navigation
-* go up to nearest line with different character: K1+K8+K6, RoutingKey
-
-Vertical Navigation
-* go down to nearest line with different character: K1+K8+K7, RoutingKey
 
 Clipboard Functions
 * start new clipboard at character: K1+K8+K2+K6, RoutingKey
-
-Clipboard Functions
 * append to clipboard from character: K1+K8+K2+K7, RoutingKey
-
-Clipboard Functions
 * linear copy to character: K1+K8+K3+K6, RoutingKey
-
-Clipboard Functions
 * rectangular copy to character: K1+K8+K3+K7, RoutingKey
-
-Special Modes
-* enter/leave help display: K1+K2
-* enter/leave command learn mode: K1+K3
-* enter/leave preferences menu: K1+K6
-* enter/leave status display: K1+K7
-* set display mode attributes/text: K8+K2
-* set screen image frozen/unfrozen: K8+K3
+* insert clipboard text after screen cursor: K6+K7
 
 Configuration Functions
 * set text style 6-dot/8-dot: K8+K6
 * set skipping of lines with identical content on/off: K8+K7
+* set track screen cursor on/off: K4
 
 Menu Operations
 * restore preferences from disk: K1+K4
@@ -92,14 +72,14 @@ Menu Bindings
 -------------
 
 Horizontal Navigation
-* go left one braille window: K1
-* go right one braille window: K8
+* go backward one braille window: K1
+* go forward one braille window: K8
 
 Menu Operations
-* go to previous item: K2
-* go to next item: K3
-* go to first item: K4
-* go to last item: K5
+* go up to previous item: K2
+* go down to next item: K3
+* go up to first item: K4
+* go down to last item: K5
 * select previous choice: K6
 * select next choice: K7
 

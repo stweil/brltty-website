@@ -1,5 +1,5 @@
-Key Table: Metec I with 3 keys
-==============================
+Key Table: Metec BD I with 3 Keys
+=================================
 
 Default Bindings
 ----------------
@@ -21,7 +21,7 @@ Vertical Navigation
 * go to bottom line: Select+Down
 
 Horizontal Navigation
-* go right one braille window:
+* go forward one braille window:
   + Select
   + Up+Down
 
@@ -38,10 +38,10 @@ Special Modes
 * enter/leave preferences menu: Select+Up+Down
 
 Menu Operations
-* go to previous item: Up
-* go to next item: Down
-* go to first item: Select+Up
-* go to last item: Select+Down
+* go up to previous item: Up
+* go down to next item: Down
+* go up to first item: Select+Up
+* go down to last item: Select+Down
 * select previous choice: Up+Down
 * select next choice: Select
 

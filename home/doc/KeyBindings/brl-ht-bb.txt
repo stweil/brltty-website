@@ -47,8 +47,8 @@ Vertical Navigation
 * go down to nearest line with different character: Display5+Display6+RoutingKey
 
 Horizontal Navigation
-* go left one braille window: Display2
-* go right one braille window: Display5
+* go backward one braille window: Display2
+* go forward one braille window: Display5
 * go to beginning of line: Display1+Display2+Display3
 * go to end of line: Display4+Display5+Display6
 * go left one character: Display1+Display3

@@ -2,7 +2,7 @@ BRLTTY is a background process (daemon) providing access to the Linux/Unix
 console (when in text mode) for a blind person using a refreshable braille
 display.
 
-Version 5.2, Nov 2014
+Version 5.3, Dec 2015
 
 Copyright (C) 1995-2015 by The BRLTTY Developers.
 
@@ -210,10 +210,10 @@ The following braille displays are supported:
 -  Iris
 -  Libbraille
 -  LogText [32]
--  MDV [MB208/MB408L/MB408S (protocol 5)]
+-  MDV [MB208, MB248, MB408L, MB408L+, Lilli Blu]
 -  Metec [BD-40]
 -  MiniBraille [20]
--  MultiBraille [MB125CR/MB145CR/MB185CR]
+-  MultiBraille [MB125CR, MB145CR, MB185CR]
 -  NinePoint
 -  Papenmeier [Compact 486, Compact/Tiny, IB 80 CR Soft, 2D Lite (plus),
                2D Screen Soft, EL 80, EL 2D 40/66/80, EL 40/66/70/80 S,
@@ -227,7 +227,7 @@ The following braille displays are supported:
 -  VideoBraille [40]
 -  Virtual [TCP/Unix, client/server]
 -  VisioBraille [20/40]
--  Voyager [44/70], Part232 (serial adapter), BraillePen/EasyLink
+-  Voyager [44/70, Part232 (serial adapter), BraillePen/EasyLink]
 -  XWindow [X11, Windows]
 
 The following speech synthesizers are supported:

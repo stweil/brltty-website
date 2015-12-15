@@ -4,56 +4,6 @@ Key Table: HIMS Braille Sense
 Default Bindings
 ----------------
 
-Cursor Functions
-* go to screen cursor: F4
-* go back after cursor tracking: F1+F4
-* bring screen cursor to character: RoutingKey
-* bring screen cursor to current line: F2+F3
-
-Vertical Navigation
-* go up one line: F2
-* go down one line: F3
-* go to beginning of top line: F1+F2+Backward
-* go to beginning of bottom line: F1+F2+Forward
-* go up to nearest line with different content: F2+Backward
-* go down to nearest line with different content: F2+Forward
-* go up to nearest line with different highlighting: F3+Backward
-* go down to nearest line with different highlighting: F3+Forward
-* go up to first line of paragraph: F4+Backward
-* go down to first line of next paragraph: F4+Forward
-* go up to previous command prompt: F1+Backward
-* go down to next command prompt: F1+Forward
-
-Horizontal Navigation
-* go left one braille window: Backward
-* go right one braille window: Forward
-* go left to nearest non-blank braille window: F1+F2
-* go right to nearest non-blank braille window: F3+F4
-* go to beginning of line: Backward+Forward
-* go left one character: F3+F4+Backward
-* go right one character: F3+F4+Forward
-
-Clipboard Functions
-* start new clipboard at character: F1+F3+F4, RoutingKey
-
-Clipboard Functions
-* append to clipboard from character: F2+F3+F4, RoutingKey
-
-Clipboard Functions
-* linear copy to character: F1+F2+F3, RoutingKey
-
-Clipboard Functions
-* rectangular copy to character: F1+F2+F4, RoutingKey
-
-Horizontal Navigation
-* place left end of braille window at character: F1+F3, RoutingKey
-
-Clipboard Functions
-* insert clipboard text after screen cursor: F1+F2+F3+F4
-
-Special Modes
-* describe character: F2+F4, RoutingKey
-
 Special Modes
 * enter/leave help display: Space+Dot1+Dot2+Dot5
 * enter/leave command learn mode: Space+Dot1+Dot2+Dot3
@@ -62,15 +12,74 @@ Special Modes
 * set display mode attributes/text: Space+Dot1+Dot4+Dot5
 * set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
 * set display mode text: Space+Dot1+Dot4+Dot5+Dot7
-* set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
+* set screen image frozen/unfrozen:
+  + LeftScrollUp+LeftScrollDown+RightScrollUp+RightScrollDown
+  + Space+Dot1+Dot2+Dot4
 * set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
 * set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+* describe character: F2+F4, RoutingKey
+* show current date and time: RightScrollUp+RightScrollDown
 
 Cursor Functions
-* bring screen cursor to current line: Space+Dot1+Dot2+Dot3+Dot6
+* go to screen cursor: F4
+* go back after cursor tracking: F1+F4
+* bring screen cursor to character: RoutingKey
+* bring screen cursor to current line:
+  + F2+F3
+  + Space+Dot1+Dot2+Dot3+Dot6
+
+Vertical Navigation
+* go up one line:
+  + F2
+  + LeftScrollUp
+* go down one line:
+  + F3
+  + LeftScrollDown
+* go to top line: LeftScrollUp+RightScrollUp
+* go to bottom line: LeftScrollDown+RightScrollDown
+* go to beginning of top line: F1+F2+Backward
+* go to beginning of bottom line: F1+F2+Forward
+* go up to nearest line with different content: F2+Backward
+* go down to nearest line with different content: F2+Forward
+* go up to nearest line with different highlighting: F3+Backward
+* go down to nearest line with different highlighting: F3+Forward
+* go up to first line of paragraph:
+  + F4+Backward
+  + LeftScrollUp+LeftScrollDown+RightScrollUp
+* go down to first line of next paragraph:
+  + F4+Forward
+  + LeftScrollUp+LeftScrollDown+RightScrollDown
+* go up to previous command prompt:
+  + F1+Backward
+  + RightScrollUp+RightScrollDown+LeftScrollUp
+* go down to next command prompt:
+  + F1+Forward
+  + RightScrollUp+RightScrollDown+LeftScrollDown
+
+Horizontal Navigation
+* go backward one braille window:
+  + Backward
+  + RightScrollUp
+* go forward one braille window:
+  + Forward
+  + RightScrollDown
+* go backward skipping blank braille windows: F1+F2
+* go forward skipping blank braille windows: F3+F4
+* go to beginning of line:
+  + Backward+Forward
+  + LeftScrollUp+LeftScrollDown
+* go left one character: F3+F4+Backward
+* go right one character: F3+F4+Forward
+* place left end of braille window at character: F1+F3, RoutingKey
 
 Clipboard Functions
-* insert clipboard text after screen cursor: Space+Dot1+Dot3+Dot4+Dot6
+* start new clipboard at character: F1+F3+F4, RoutingKey
+* append to clipboard from character: F2+F3+F4, RoutingKey
+* linear copy to character: F1+F2+F3, RoutingKey
+* rectangular copy to character: F1+F2+F4, RoutingKey
+* insert clipboard text after screen cursor:
+  + F1+F2+F3+F4
+  + Space+Dot1+Dot3+Dot4+Dot6
 * save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
 * restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
 
@@ -78,8 +87,12 @@ Configuration Functions
 * set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
 * set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
 * set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
-* set text style 6-dot: Space+Dot2+Dot3+Dot5
-* set text style 8-dot: Space+Dot2+Dot3+Dot6
+* set text style 6-dot:
+  + LeftScrollDown+RightScrollUp
+  + Space+Dot2+Dot3+Dot5
+* set text style 8-dot:
+  + LeftScrollUp+RightScrollDown
+  + Space+Dot2+Dot3+Dot6
 * set skipping of lines with identical content on/off: Space+Dot2+Dot4
 * set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
 * set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
@@ -117,9 +130,7 @@ Keyboard Input
 * braille keyboard control: F3
 * type braille dots [7]: Space+Dot7
 * type braille dots [8]: Space+Dot8
-* backspace key:
-  + Dot7
-  + Dot7
+* backspace key: Dot7
 * escape key: Space+Dot2+Dot6
 * cursor-left key: Space+Dot3
 * cursor-right key: Space+Dot6
@@ -140,12 +151,8 @@ Keyboard Input
 * insert key: Space+Dot3+Dot5
 * delete key: Space+Dot2+Dot5+Dot6
 * function key: Space+RoutingKey
-* enter key:
-  + Dot8
-  + Dot8
-* tab key:
-  + Space+Dot4+Dot5
-  + Space+Dot4+Dot5
+* enter key: Dot8
+* tab key: Space+Dot4+Dot5
 * switch to the previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
 * switch to the next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
 * set braille keyboard enabled/disabled: Space+Dot1+Dot3
@@ -155,11 +162,31 @@ Keyboard Input
 Menu Bindings
 -------------
 
+Special Modes
+* enter/leave preferences menu: Dot8
+
+Horizontal Navigation
+* go backward one braille window: LeftScrollUp+LeftScrollDown
+* go forward one braille window: RightScrollUp+RightScrollDown
+
 Menu Operations
-* go to previous item: F2
-* go to next item: F3
-* go to first item: F1+F2
-* go to last item: F3+F4
-* select previous choice: Backward
-* select next choice: Forward
+* go up to previous item:
+  + LeftScrollUp
+  + Dot1
+* go down to next item:
+  + LeftScrollDown
+  + Dot4
+* go up to first item:
+  + LeftScrollUp+RightScrollUp
+  + Dot2
+* go down to last item:
+  + LeftScrollDown+RightScrollDown
+  + Dot5
+* select previous choice:
+  + RightScrollUp
+  + Dot3
+* select next choice:
+  + RightScrollDown
+  + Dot6
+* go to previous menu level: Dot7
 

@@ -142,10 +142,10 @@ Special Modes
 * enter/leave preferences menu: CapsLock+ShiftLeft+ArrowDown
 
 Menu Operations
-* go to previous item: CapsLock+ArrowUp
-* go to next item: CapsLock+ArrowDown
-* go to first item: CapsLock+Home
-* go to last item: CapsLock+End
+* go up to previous item: CapsLock+ArrowUp
+* go down to next item: CapsLock+ArrowDown
+* go up to first item: CapsLock+Home
+* go down to last item: CapsLock+End
 * select previous choice: CapsLock+ArrowLeft
 * select next choice: CapsLock+ArrowRight
 * go to previous menu level: CapsLock+ShiftLeft+ArrowUp

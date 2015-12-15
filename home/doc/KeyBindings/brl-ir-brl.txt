@@ -35,8 +35,8 @@ Vertical Navigation
 * go down to next command prompt: L6
 
 Horizontal Navigation
-* go left one braille window: L1
-* go right one braille window: L8
+* go backward one braille window: L1
+* go forward one braille window: L8
 * place left end of braille window at character: L3+RoutingKey
 
 Clipboard Functions
@@ -52,9 +52,6 @@ Configuration Functions
 * set text style 8-dot: L3+L2+L7
 * set screen cursor visibility on/off: L2+L3
 * set alert tunes on/off: L6+L7
-
-Special Functions
-* restart speech driver: L6+L8
 
 Keyboard Input
 * braille keyboard dot1: Dot1
@@ -109,4 +106,7 @@ Keyboard Input
 * switch to a specific virtual terminal #12: Backspace+Dot2+Dot3+Dot7
 * switch to the previous virtual terminal: Backspace+Dot3
 * switch to the next virtual terminal: Backspace+Dot6
+
+Special Functions
+* restart speech driver: L6+L8
 

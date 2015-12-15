@@ -19,10 +19,20 @@ Special Modes
 * describe character: L6+RoutingKey
 
 Cursor Functions
+* go to screen cursor: L7+L6
 * bring screen cursor to character: RoutingKey
 
+Vertical Navigation
+* go up one line: L5+XtE0.73
+* go down one line: L5+XtE0.81
+* go to beginning of top line: L7
+* go to beginning of bottom line: L6
+
 Horizontal Navigation
-* go left to nearest non-blank braille window: L1
+* go backward one braille window: L5+XtE0.76
+* go forward one braille window: L5+XtE0.78
+* go backward skipping blank braille windows: L1
+* go forward skipping blank braille windows: L8
 * place left end of braille window at character: L3+RoutingKey
 
 Clipboard Functions
@@ -34,25 +44,9 @@ Clipboard Functions
 * insert clipboard history entry after screen cursor: L2+L3+L4, RoutingKey
 
 Configuration Functions
+* set text style 6-dot/8-dot: L4+L5
 * set text style 6-dot: L2+L3+L7
 * set text style 8-dot: L2+L3+L6
-
-Cursor Functions
-* go to screen cursor: L7+L6
-
-Vertical Navigation
-* go up one line: L5+XtE0.73
-* go down one line: L5+XtE0.81
-* go to beginning of top line: L7
-* go to beginning of bottom line: L6
-
-Horizontal Navigation
-* go left one braille window: L5+XtE0.76
-* go right one braille window: L5+XtE0.78
-* go right to nearest non-blank braille window: L8
-
-Configuration Functions
-* set text style 6-dot/8-dot: L4+L5
 * set screen cursor visibility on/off: L4
 * set alert tunes on/off: L1+L2
 

@@ -1,0 +1,182 @@
+Key Table: Voyager Protocol Converter
+=====================================
+
+Default Bindings
+----------------
+
+Special Modes
+* enter/leave help display: Thumb2+Dot1+Dot2+Dot5
+* enter/leave command learn mode: Thumb2+Dot1+Dot2+Dot3
+* enter/leave preferences menu: Thumb2+Dot1+Dot2+Dot3+Dot4
+* enter/leave status display: Thumb2+Dot2+Dot3+Dot4
+* set display mode attributes/text:
+  + Left+Up
+  + Thumb2+Dot1+Dot4+Dot5
+* set display mode attributes: Thumb2+Dot1+Dot4+Dot5+Dot8
+* set display mode text: Thumb2+Dot1+Dot4+Dot5+Dot7
+* set screen image frozen/unfrozen: Thumb2+Dot1+Dot2+Dot4
+* set screen image frozen: Thumb2+Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Thumb2+Dot1+Dot2+Dot4+Dot7
+* describe character: Right+RoutingKey
+* show current date and time: Thumb1+Thumb4
+
+Cursor Functions
+* go to screen cursor: Right
+* go back after cursor tracking: Left
+* bring screen cursor to character: RoutingKey
+* bring screen cursor to current line: Thumb2+Dot1+Dot2+Dot3+Dot6
+
+Vertical Navigation
+* go up one line: Thumb2
+* go down one line: Thumb3
+* go to top line: Thumb4+Thumb2
+* go to bottom line: Thumb4+Thumb3
+* go to beginning of top line: Thumb1+Thumb2
+* go to beginning of bottom line: Thumb1+Thumb3
+* go up to nearest line with different content: Thumb2+Up
+* go down to nearest line with different content: Thumb2+Down
+* go up to nearest line with different highlighting: Thumb1+Up
+* go down to nearest line with different highlighting: Thumb1+Down
+* go up to first line of paragraph: Thumb4+Up
+* go down to first line of next paragraph: Thumb4+Down
+* go up to previous command prompt: Thumb3+Up
+* go down to next command prompt: Thumb3+Down
+* go up to nearest line with less indent than character: Thumb1+Thumb2+RoutingKey
+* go down to nearest line with less indent than character: Thumb1+Thumb3+RoutingKey
+* go up to nearest line with different character: Thumb4+Thumb2+RoutingKey
+* go down to nearest line with different character: Thumb4+Thumb3+RoutingKey
+
+Horizontal Navigation
+* go backward one braille window: Thumb1
+* go forward one braille window: Thumb4
+* go backward skipping blank braille windows: Thumb2+Left
+* go forward skipping blank braille windows: Thumb2+Right
+* go to beginning of line: Thumb4+Left
+* go to end of line: Thumb4+Right
+* go left one character: Thumb3+Left
+* go right one character: Thumb3+Right
+* place left end of braille window at character: Left+RoutingKey
+
+Clipboard Functions
+* start new clipboard at character: Thumb1+RoutingKey
+* append to clipboard from character: Thumb2+RoutingKey
+* linear copy to character: Thumb3+RoutingKey
+* rectangular copy to character: Thumb4+RoutingKey
+* copy characters to clipboard: RoutingKey+RoutingKey
+* insert clipboard text after screen cursor:
+  + Thumb2+Dot1+Dot3+Dot4+Dot6
+  + Thumb2+Thumb3
+* search backward for clipboard text: Thumb1+Left
+* search forward for clipboard text: Thumb1+Right
+* save clipboard to disk: Thumb2+Dot1+Dot3+Dot4+Dot6+Dot8
+* restore clipboard from disk: Thumb2+Dot1+Dot3+Dot4+Dot6+Dot7
+
+Configuration Functions
+* set autorepeat on/off:
+  + Right+Up
+  + Thumb2+Dot1+Dot2+Dot3+Dot5
+* set autorepeat on: Thumb2+Dot1+Dot2+Dot3+Dot5+Dot8
+* set autorepeat off: Thumb2+Dot1+Dot2+Dot3+Dot5+Dot7
+* set text style 6-dot/8-dot: Left+Down
+* set text style 6-dot: Thumb2+Dot2+Dot3+Dot5
+* set text style 8-dot: Thumb2+Dot2+Dot3+Dot6
+* set skipping of lines with identical content on/off: Thumb2+Dot2+Dot4
+* set skipping of lines with identical content on: Thumb2+Dot2+Dot4+Dot8
+* set skipping of lines with identical content off: Thumb2+Dot2+Dot4+Dot7
+* set skipping of blank braille windows on/off: Thumb2+Dot1+Dot2
+* set skipping of blank braille windows on: Thumb2+Dot1+Dot2+Dot8
+* set skipping of blank braille windows off: Thumb2+Dot1+Dot2+Dot7
+* set sliding braille window on/off: Thumb2+Dot2+Dot4+Dot5+Dot6
+* set sliding braille window on: Thumb2+Dot2+Dot4+Dot5+Dot6+Dot8
+* set sliding braille window off: Thumb2+Dot2+Dot4+Dot5+Dot6+Dot7
+* set track screen cursor on/off:
+  + Left+Right
+  + Thumb2+Dot2+Dot3+Dot4+Dot5
+* set track screen cursor on: Thumb2+Dot2+Dot3+Dot4+Dot5+Dot8
+* set track screen cursor off: Thumb2+Dot2+Dot3+Dot4+Dot5+Dot7
+* set screen cursor visibility on/off: Thumb2+Dot1+Dot4
+* set screen cursor visibility on: Thumb2+Dot1+Dot4+Dot8
+* set screen cursor visibility off: Thumb2+Dot1+Dot4+Dot7
+* set attribute underlining on/off: Thumb2+Dot1+Dot3+Dot6
+* set attribute underlining on: Thumb2+Dot1+Dot3+Dot6+Dot8
+* set attribute underlining off: Thumb2+Dot1+Dot3+Dot6+Dot7
+
+Menu Operations
+* restore preferences from disk: Thumb2+Dot1+Dot2+Dot3+Dot4+Dot7
+* save preferences to disk: Thumb2+Dot1+Dot2+Dot3+Dot4+Dot8
+
+Speech Functions
+* set autospeak on/off: Right+Down
+
+Keyboard Input
+* braille keyboard dot1: Dot1
+* braille keyboard dot2: Dot2
+* braille keyboard dot3: Dot3
+* braille keyboard dot4: Dot4
+* braille keyboard dot5: Dot5
+* braille keyboard dot6: Dot6
+* braille keyboard dot7: Dot7
+* braille keyboard dot8: Dot8
+* braille keyboard space: Thumb2
+* braille keyboard space: Thumb3
+* braille keyboard uppercase: Left
+* braille keyboard control: Right
+* type braille dots [7]: Thumb2+Dot7
+* type braille dots [8]: Thumb2+Dot8
+* backspace key: Dot7
+* escape key: Thumb2+Dot2+Dot6
+* cursor-left key: Thumb2+Dot3
+* cursor-right key: Thumb2+Dot6
+* cursor-up key:
+  + Up
+  + Thumb2+Dot1
+* cursor-down key:
+  + Down
+  + Thumb2+Dot4
+* page-up key: Thumb2+Dot2+Dot3
+* page-down key: Thumb2+Dot5+Dot6
+* home key: Thumb2+Dot2
+* end key: Thumb2+Dot5
+* insert key: Thumb2+Dot3+Dot5
+* delete key: Thumb2+Dot2+Dot5+Dot6
+* function key: Down+RoutingKey
+* enter key: Dot8
+* tab key: Thumb2+Dot4+Dot5
+* switch to a specific virtual terminal: Up+RoutingKey
+* switch to the previous virtual terminal: Thumb2+Dot1+Dot2+Dot3+Dot6+Dot7
+* switch to the next virtual terminal: Thumb2+Dot1+Dot2+Dot3+Dot6+Dot8
+* set braille keyboard enabled/disabled: Thumb2+Dot1+Dot3
+* set braille keyboard enabled: Thumb2+Dot1+Dot3+Dot8
+* set braille keyboard disabled: Thumb2+Dot1+Dot3+Dot7
+
+Menu Bindings
+-------------
+
+Special Modes
+* enter/leave preferences menu:
+  + Dot8
+  + Left+Right
+
+Menu Operations
+* go up to previous item:
+  + Dot1
+  + Thumb2
+* go down to next item:
+  + Dot4
+  + Thumb3
+* go up to first item:
+  + Dot2
+  + Up
+* go down to last item:
+  + Dot5
+  + Down
+* select previous choice:
+  + Dot3
+  + Left
+* select next choice:
+  + Dot6
+  + Right
+* go to previous menu level: Dot7
+* restore preferences from disk: Left+Up
+* save preferences to disk: Left+Down
+

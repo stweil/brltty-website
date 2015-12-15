@@ -37,8 +37,8 @@ Vertical Navigation
 * go down several lines: ThumbLeft+CursorDown
 
 Horizontal Navigation
-* go left one braille window: NavLeft
-* go right one braille window: NavRight
+* go backward one braille window: NavLeft
+* go forward one braille window: NavRight
 * go to beginning of line: CursorUp+NavLeft
 * go to end of line: CursorUp+NavRight
 * go left one character: ThumbLeft+CursorLeft

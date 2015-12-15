@@ -79,10 +79,10 @@ Vertical Navigation
 * go down to nearest line with different character: Display5+Display6+RoutingKey
 
 Horizontal Navigation
-* go left one braille window:
+* go backward one braille window:
   + Thumb1
   + Display2
-* go right one braille window:
+* go forward one braille window:
   + Thumb4
   + Display5
 * go to beginning of line: Display1+Display2+Display3
@@ -193,6 +193,9 @@ Keyboard Input
 * insert key: Space+Dot3+Dot5
 * delete key: Space+Dot2+Dot5+Dot6
 * function key: Space+RoutingKey
+* function key: Thumb3+Space+RoutingKey
+* function key: Thumb2+Space+RoutingKey
+* function key: Thumb2+Thumb3+Space+RoutingKey
 * enter key: Dot8
 * tab key: Space+Dot4+Dot5
 * switch to a specific virtual terminal: Display4+Display5+Display6+RoutingKey
@@ -215,19 +218,34 @@ Menu Bindings
 -------------
 
 Special Modes
-* enter/leave preferences menu: Thumb2+Thumb3
+* enter/leave preferences menu:
+  + Dot8
+  + Thumb2+Thumb3
 
 Horizontal Navigation
-* go left one braille window: Thumb1
-* go right one braille window: Thumb4
+* go backward one braille window: Thumb1
+* go forward one braille window: Thumb4
 
 Menu Operations
-* go to previous item: Thumb2
-* go to next item: Thumb3
-* go to first item: Thumb1+Thumb2
-* go to last item: Thumb1+Thumb3
-* select previous choice: Thumb4+Thumb2
-* select next choice: Thumb4+Thumb3
+* go up to previous item:
+  + Dot1
+  + Thumb2
+* go down to next item:
+  + Dot4
+  + Thumb3
+* go up to first item:
+  + Dot2
+  + Thumb1+Thumb2
+* go down to last item:
+  + Dot5
+  + Thumb1+Thumb3
+* select previous choice:
+  + Dot3
+  + Thumb4+Thumb2
+* select next choice:
+  + Dot6
+  + Thumb4+Thumb3
+* go to previous menu level: Dot7
 * restore preferences from disk: Thumb2+Thumb3+Thumb1
 * save preferences to disk: Thumb2+Thumb3+Thumb4
 

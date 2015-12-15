@@ -5,19 +5,38 @@ Default Bindings
 ----------------
 
 Special Modes
-* enter/leave help display: F1
-* enter/leave command learn mode: F2
-* enter/leave preferences menu: F4
-* enter/leave status display: F3
-* set display mode attributes/text: F5
-* set screen image frozen/unfrozen: LeftScrollUp+LeftScrollDown+RightScrollUp+RightScrollDown
+* enter/leave help display:
+  + F1
+  + Space+Dot1+Dot2+Dot5
+* enter/leave command learn mode:
+  + F2
+  + Space+Dot1+Dot2+Dot3
+* enter/leave preferences menu:
+  + F4
+  + Space+Dot1+Dot2+Dot3+Dot4
+* enter/leave status display:
+  + F3
+  + Space+Dot2+Dot3+Dot4
+* set display mode attributes/text:
+  + F5
+  + Space+Dot1+Dot4+Dot5
+* set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
+* set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+* set screen image frozen/unfrozen:
+  + LeftScrollUp+LeftScrollDown+RightScrollUp+RightScrollDown
+  + Space+Dot1+Dot2+Dot4
+* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
+* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+* describe character: RightPadUp+RightPadDown, RoutingKey
 * show current date and time: RightScrollUp+RightScrollDown
 
 Cursor Functions
 * go to screen cursor: F7
 * go back after cursor tracking: F6
 * bring screen cursor to character: RoutingKey
-* bring screen cursor to current line: LeftPadLeft+LeftPadRight
+* bring screen cursor to current line:
+  + LeftPadLeft+LeftPadRight
+  + Space+Dot1+Dot2+Dot3+Dot6
 
 Vertical Navigation
 * go up one line: LeftScrollUp
@@ -32,71 +51,29 @@ Vertical Navigation
 * go down to first line of next paragraph: LeftScrollUp+LeftScrollDown+RightScrollDown
 * go up to previous command prompt: RightScrollUp+RightScrollDown+LeftScrollUp
 * go down to next command prompt: RightScrollUp+RightScrollDown+LeftScrollDown
+* go up to nearest line with less indent than character: LeftPadRight+LeftPadUp, RoutingKey
+* go down to nearest line with less indent than character: LeftPadRight+LeftPadDown, RoutingKey
 * go up to nearest line with different character: LeftPadLeft+LeftPadUp, RoutingKey
-
-Horizontal Navigation
-* go left one braille window: RightScrollUp
-* go right one braille window: RightScrollDown
-* go left to nearest non-blank braille window: RightPadLeft
-* go right to nearest non-blank braille window: RightPadRight
-* go to beginning of line: LeftScrollUp+LeftScrollDown
-
-Clipboard Functions
-* search backward for clipboard text: LeftPadLeft
-* search forward for clipboard text: LeftPadRight
-
-Configuration Functions
-* set text style 6-dot: LeftScrollDown+RightScrollUp
-* set text style 8-dot: LeftScrollUp+RightScrollDown
-* set track screen cursor on/off: F8
-
-Vertical Navigation
 * go down to nearest line with different character: LeftPadLeft+LeftPadDown, RoutingKey
 
-Vertical Navigation
-* go up to nearest line with less indent than character: LeftPadRight+LeftPadUp, RoutingKey
-
-Vertical Navigation
-* go down to nearest line with less indent than character: LeftPadRight+LeftPadDown, RoutingKey
-
-Clipboard Functions
-* start new clipboard at character: RightPadLeft+RightPadUp, RoutingKey
-
-Clipboard Functions
-* append to clipboard from character: RightPadLeft+RightPadDown, RoutingKey
-
-Clipboard Functions
-* linear copy to character: RightPadRight+RightPadUp, RoutingKey
-
-Clipboard Functions
-* rectangular copy to character: RightPadRight+RightPadDown, RoutingKey
-
 Horizontal Navigation
+* go backward one braille window: RightScrollUp
+* go forward one braille window: RightScrollDown
+* go backward skipping blank braille windows: RightPadLeft
+* go forward skipping blank braille windows: RightPadRight
+* go to beginning of line: LeftScrollUp+LeftScrollDown
 * place left end of braille window at character: LeftPadUp+LeftPadDown, RoutingKey
 
 Clipboard Functions
-* insert clipboard text after screen cursor: RightPadLeft+RightPadRight
-
-Special Modes
-* describe character: RightPadUp+RightPadDown, RoutingKey
-
-Special Modes
-* enter/leave help display: Space+Dot1+Dot2+Dot5
-* enter/leave command learn mode: Space+Dot1+Dot2+Dot3
-* enter/leave preferences menu: Space+Dot1+Dot2+Dot3+Dot4
-* enter/leave status display: Space+Dot2+Dot3+Dot4
-* set display mode attributes/text: Space+Dot1+Dot4+Dot5
-* set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
-* set display mode text: Space+Dot1+Dot4+Dot5+Dot7
-* set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
-* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
-* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
-
-Cursor Functions
-* bring screen cursor to current line: Space+Dot1+Dot2+Dot3+Dot6
-
-Clipboard Functions
-* insert clipboard text after screen cursor: Space+Dot1+Dot3+Dot4+Dot6
+* start new clipboard at character: RightPadLeft+RightPadUp, RoutingKey
+* append to clipboard from character: RightPadLeft+RightPadDown, RoutingKey
+* linear copy to character: RightPadRight+RightPadUp, RoutingKey
+* rectangular copy to character: RightPadRight+RightPadDown, RoutingKey
+* insert clipboard text after screen cursor:
+  + RightPadLeft+RightPadRight
+  + Space+Dot1+Dot3+Dot4+Dot6
+* search backward for clipboard text: LeftPadLeft
+* search forward for clipboard text: LeftPadRight
 * save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
 * restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
 
@@ -104,8 +81,12 @@ Configuration Functions
 * set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
 * set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
 * set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
-* set text style 6-dot: Space+Dot2+Dot3+Dot5
-* set text style 8-dot: Space+Dot2+Dot3+Dot6
+* set text style 6-dot:
+  + LeftScrollDown+RightScrollUp
+  + Space+Dot2+Dot3+Dot5
+* set text style 8-dot:
+  + LeftScrollUp+RightScrollDown
+  + Space+Dot2+Dot3+Dot6
 * set skipping of lines with identical content on/off: Space+Dot2+Dot4
 * set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
 * set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
@@ -115,7 +96,9 @@ Configuration Functions
 * set sliding braille window on/off: Space+Dot2+Dot4+Dot5+Dot6
 * set sliding braille window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
 * set sliding braille window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
-* set track screen cursor on/off: Space+Dot2+Dot3+Dot4+Dot5
+* set track screen cursor on/off:
+  + F8
+  + Space+Dot2+Dot3+Dot4+Dot5
 * set track screen cursor on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
 * set track screen cursor off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
 * set screen cursor visibility on/off: Space+Dot1+Dot4
@@ -143,9 +126,7 @@ Keyboard Input
 * braille keyboard control: F5
 * type braille dots [7]: Space+Dot7
 * type braille dots [8]: Space+Dot8
-* backspace key:
-  + Dot7
-  + Dot7
+* backspace key: Dot7
 * escape key: Space+Dot2+Dot6
 * cursor-left key: Space+Dot3
 * cursor-right key: Space+Dot6
@@ -166,12 +147,8 @@ Keyboard Input
 * insert key: Space+Dot3+Dot5
 * delete key: Space+Dot2+Dot5+Dot6
 * function key: Space+RoutingKey
-* enter key:
-  + Dot8
-  + Dot8
-* tab key:
-  + Space+Dot4+Dot5
-  + Space+Dot4+Dot5
+* enter key: Dot8
+* tab key: Space+Dot4+Dot5
 * switch to the previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
 * switch to the next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
 * set braille keyboard enabled/disabled: Space+Dot1+Dot3
@@ -181,15 +158,31 @@ Keyboard Input
 Menu Bindings
 -------------
 
+Special Modes
+* enter/leave preferences menu: Dot8
+
 Horizontal Navigation
-* go left one braille window: LeftScrollUp+LeftScrollDown
-* go right one braille window: RightScrollUp+RightScrollDown
+* go backward one braille window: LeftScrollUp+LeftScrollDown
+* go forward one braille window: RightScrollUp+RightScrollDown
 
 Menu Operations
-* go to previous item: LeftScrollUp
-* go to next item: LeftScrollDown
-* go to first item: LeftScrollUp+RightScrollUp
-* go to last item: LeftScrollDown+RightScrollDown
-* select previous choice: RightScrollUp
-* select next choice: RightScrollDown
+* go up to previous item:
+  + LeftScrollUp
+  + Dot1
+* go down to next item:
+  + LeftScrollDown
+  + Dot4
+* go up to first item:
+  + LeftScrollUp+RightScrollUp
+  + Dot2
+* go down to last item:
+  + LeftScrollDown+RightScrollDown
+  + Dot5
+* select previous choice:
+  + RightScrollUp
+  + Dot3
+* select next choice:
+  + RightScrollDown
+  + Dot6
+* go to previous menu level: Dot7
 

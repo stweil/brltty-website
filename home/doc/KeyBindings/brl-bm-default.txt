@@ -103,14 +103,14 @@ Vertical Navigation
 * go down to nearest line with different character: Display5+Display6+RoutingKey
 
 Horizontal Navigation
-* go left one braille window:
+* go backward one braille window:
   + Display2
   + Left
-* go right one braille window:
+* go forward one braille window:
   + Display5
   + Right
-* go left to nearest non-blank braille window: Dot5+Left
-* go right to nearest non-blank braille window: Dot5+Right
+* go backward skipping blank braille windows: Dot5+Left
+* go forward skipping blank braille windows: Dot5+Right
 * go to beginning of line:
   + Display1+Display2+Display3
   + Dot4+Left
@@ -308,19 +308,35 @@ Menu Bindings
 -------------
 
 Special Modes
-* enter/leave preferences menu: Press
+* enter/leave preferences menu:
+  + Dot8
+  + Press
 
 Horizontal Navigation
-* go left one braille window: B9+Left
-* go right one braille window: B9+Right
+* go backward one braille window: B9+Left
+* go forward one braille window: B9+Right
 
 Menu Operations
-* go to previous item: Up
-* go to next item: Down
-* go to first item: B9+Up
-* go to last item: B9+Down
-* select previous choice: Left
-* select next choice: Right
-* go to previous menu level: B9
+* go up to previous item:
+  + Dot1
+  + Up
+* go down to next item:
+  + Dot4
+  + Down
+* go up to first item:
+  + Dot2
+  + B9+Up
+* go down to last item:
+  + Dot5
+  + B9+Down
+* select previous choice:
+  + Dot3
+  + Left
+* select next choice:
+  + Dot6
+  + Right
+* go to previous menu level:
+  + Dot7
+  + B9
 * save preferences to disk: B9+Press
 

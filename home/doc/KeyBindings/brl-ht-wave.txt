@@ -40,8 +40,8 @@ Vertical Navigation
 * go down to nearest line with less indent than character: Right+RoutingKey
 
 Horizontal Navigation
-* go left one braille window: Left
-* go right one braille window: Right
+* go backward one braille window: Left
+* go forward one braille window: Right
 * place left end of braille window at character: B1+RoutingKey
 
 Clipboard Functions

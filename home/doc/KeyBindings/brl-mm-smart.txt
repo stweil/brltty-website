@@ -76,10 +76,10 @@ Vertical Navigation
 * go down to next command prompt: Select+Read+ArrowDown
 
 Horizontal Navigation
-* go left one braille window: PanLeft
-* go right one braille window: PanRight
-* go left to nearest non-blank braille window: Read+PanLeft
-* go right to nearest non-blank braille window: Read+PanRight
+* go backward one braille window: PanLeft
+* go forward one braille window: PanRight
+* go backward skipping blank braille windows: Read+PanLeft
+* go forward skipping blank braille windows: Read+PanRight
 * go to beginning of line: Select+PanLeft
 * go to end of line: Select+PanRight
 * go left one character: Alt+PanLeft
@@ -149,9 +149,7 @@ Keyboard Input
 * type braille dots [C]: dot8
 * type braille dots [7]: Read+dot7
 * type braille dots [8]: Read+dot8
-* backspace key:
-  + Backspace
-  + dot7
+* backspace key: Backspace
 * escape key:
   + Escape
   + Read+dot2+dot6
@@ -182,9 +180,7 @@ Keyboard Input
   + Delete
   + Read+dot2+dot5+dot6
 * function key: PanRight+RoutingKey
-* enter key:
-  + dot7
-  + dot8
+* enter key: dot7
 * tab key: Read+dot4+dot5
 * switch to a specific virtual terminal: PanLeft+RoutingKey
 * switch to the previous virtual terminal: Read+dot1+dot2+dot3+dot6+dot7
@@ -200,10 +196,10 @@ Special Modes
 * enter/leave preferences menu: dot8
 
 Menu Operations
-* go to previous item: dot1
-* go to next item: dot4
-* go to first item: dot2
-* go to last item: dot5
+* go up to previous item: dot1
+* go down to next item: dot4
+* go up to first item: dot2
+* go down to last item: dot5
 * select previous choice: dot3
 * select next choice: dot6
 * go to previous menu level: dot7

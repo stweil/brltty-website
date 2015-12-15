@@ -5,7 +5,10 @@ Default Bindings
 ----------------
 
 Special Modes
-* enter/leave help display: Dot1+Dot2+Dot5
+* enter/leave help display:
+  + Dot1+Dot2+Dot5
+  + Status6
+* enter/leave command learn mode: Status5
 * enter/leave preferences menu: Dot1+Dot3+Dot4+Dot6
 * enter/leave status display: Dot3+Dot4
 * set display mode attributes/text: Dot1+Dot3+Dot4
@@ -13,6 +16,7 @@ Special Modes
 
 Cursor Functions
 * go to screen cursor: Dot3+Dot6
+* bring screen cursor to character: RoutingKey
 
 Vertical Navigation
 * go up one line:
@@ -33,10 +37,10 @@ Vertical Navigation
 * go down several lines: Dot4+Dot5
 
 Horizontal Navigation
-* go left one braille window:
+* go backward one braille window:
   + Thumb1
   + Dot3
-* go right one braille window:
+* go forward one braille window:
   + Thumb5
   + Dot6
 * go to beginning of line:
@@ -56,6 +60,9 @@ Horizontal Navigation
 
 Clipboard Functions
 * start new clipboard at character: Status1, RoutingKey
+* append to clipboard from character: Status2, RoutingKey
+* linear copy to character: Status3, RoutingKey
+* rectangular copy to character: Status4, RoutingKey
 * insert clipboard text after screen cursor: Dot1+Dot2+Dot3+Dot4
 
 Configuration Functions
@@ -79,20 +86,4 @@ Speech Functions
 * speak current line:
   + Thumb1+Thumb5
   + Dot1+Dot5+Dot6
-
-Clipboard Functions
-* append to clipboard from character: Status2, RoutingKey
-
-Clipboard Functions
-* linear copy to character: Status3, RoutingKey
-
-Clipboard Functions
-* rectangular copy to character: Status4, RoutingKey
-
-Special Modes
-* enter/leave help display: Status6
-* enter/leave command learn mode: Status5
-
-Cursor Functions
-* bring screen cursor to character: RoutingKey
 

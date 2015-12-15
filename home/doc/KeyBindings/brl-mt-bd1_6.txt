@@ -1,5 +1,5 @@
-Key Table: Metec I with 6 keys
-==============================
+Key Table: Metec BD I with 6 Keys
+=================================
 
 Default Bindings
 ----------------
@@ -19,8 +19,8 @@ Vertical Navigation
 * go to bottom line: LeftDown
 
 Horizontal Navigation
-* go left one braille window: LeftSelect
-* go right one braille window: RightSelect
+* go backward one braille window: LeftSelect
+* go forward one braille window: RightSelect
 * place left end of braille window at character: LeftDown+RoutingKey
 
 Clipboard Functions
@@ -36,10 +36,10 @@ Special Modes
 * enter/leave preferences menu: LeftSelect+LeftUp+LeftDown
 
 Menu Operations
-* go to previous item: RightUp
-* go to next item: RightDown
-* go to first item: LeftUp
-* go to last item: LeftDown
+* go up to previous item: RightUp
+* go down to next item: RightDown
+* go up to first item: LeftUp
+* go down to last item: LeftDown
 * select previous choice: LeftSelect
 * select next choice: RightSelect
 

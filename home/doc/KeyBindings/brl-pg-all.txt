@@ -11,6 +11,7 @@ Special Modes
 * enter/leave status display: LeftControl+Escape
 * set display mode attributes/text: LeftShift+Left
 * set screen image frozen/unfrozen: LeftControl+Enter
+* describe character: RightShift+Down, RoutingKey
 
 Cursor Functions
 * go to screen cursor or go back after cursor tracking: End
@@ -32,44 +33,33 @@ Vertical Navigation
 * go down to next command prompt: LeftShift+Enter
 
 Horizontal Navigation
-* go left one braille window: Left
-* go right one braille window: Right
+* go backward one braille window: Left
+* go forward one braille window: Right
 * place left end of braille window at character: RightShift+Left, RoutingKey
+
+Clipboard Functions
+* start new clipboard at character: RightShift+Home, RoutingKey
+* append to clipboard from character: RightShift+Enter, RoutingKey
+* linear copy to character: RightShift+End, RoutingKey
+* rectangular copy to character: RightShift+Escape, RoutingKey
+* insert clipboard text after screen cursor: RightShift+Right
 
 Configuration Functions
 * set text style 6-dot/8-dot: LeftShift+Right
 * set track screen cursor on/off: Escape
 
-Special Modes
-* describe character: RightShift+Down, RoutingKey
-
-Clipboard Functions
-* insert clipboard text after screen cursor: RightShift+Right
-
-Clipboard Functions
-* start new clipboard at character: RightShift+Home, RoutingKey
-
-Clipboard Functions
-* append to clipboard from character: RightShift+Enter, RoutingKey
-
-Clipboard Functions
-* linear copy to character: RightShift+End, RoutingKey
-
-Clipboard Functions
-* rectangular copy to character: RightShift+Escape, RoutingKey
-
 Menu Bindings
 -------------
 
 Horizontal Navigation
-* go left one braille window: Left
-* go right one braille window: Right
+* go backward one braille window: Left
+* go forward one braille window: Right
 
 Menu Operations
-* go to previous item: Up
-* go to next item: Down
-* go to first item: Home
-* go to last item: Enter
+* go up to previous item: Up
+* go down to next item: Down
+* go up to first item: Home
+* go down to last item: Enter
 * select previous choice: End
 * select next choice: Escape
 

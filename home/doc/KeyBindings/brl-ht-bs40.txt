@@ -80,10 +80,10 @@ Vertical Navigation
 * go down to nearest line with less indent than character: SpaceRight+RoutingKey
 
 Horizontal Navigation
-* go left one braille window:
+* go backward one braille window:
   + SpaceLeft
   + LeftRockerTop+LeftRockerBottom
-* go right one braille window:
+* go forward one braille window:
   + SpaceRight
   + RightRockerTop+RightRockerBottom
 * go to beginning of line: B1+SpaceLeft

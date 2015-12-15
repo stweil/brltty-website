@@ -27,8 +27,8 @@ Vertical Navigation
 * go down to nearest line with different character: Display5+Display6+RoutingKey
 
 Horizontal Navigation
-* go left one braille window: Display2
-* go right one braille window: Display5
+* go backward one braille window: Display2
+* go forward one braille window: Display5
 * place left end of braille window at character: Display6+RoutingKey
 
 Clipboard Functions

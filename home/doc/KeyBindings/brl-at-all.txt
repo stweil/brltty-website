@@ -56,8 +56,8 @@ Vertical Navigation
 * go down to nearest line with different character: Attribute3+RoutingKey2
 
 Horizontal Navigation
-* go left one braille window: Left
-* go right one braille window: Right
+* go backward one braille window: Left
+* go forward one braille window: Right
 * go left one character:
   + LeftWheelLeft
   + RightWheelLeft

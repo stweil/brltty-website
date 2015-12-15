@@ -422,10 +422,10 @@ ul.auto-toc {
 <div class="section" id="horizontal-navigation">
 <h3><a class="toc-backref" href="#id7">Horizontal Navigation</a></h3>
 <ul class="simple">
-<li>go left one braille window: LeftButton</li>
-<li>go right one braille window: RightButton</li>
-<li>go left to nearest non-blank braille window: LeftJoystickRight+RightJoystickLeft</li>
-<li>go right to nearest non-blank braille window: LeftJoystickRight+RightJoystickRight</li>
+<li>go backward one braille window: LeftButton</li>
+<li>go forward one braille window: RightButton</li>
+<li>go backward skipping blank braille windows: LeftJoystickRight+RightJoystickLeft</li>
+<li>go forward skipping blank braille windows: LeftJoystickRight+RightJoystickRight</li>
 <li>go to beginning of line: LeftJoystickLeft</li>
 <li>go to end of line: LeftJoystickRight</li>
 <li>go left one character: RightJoystickLeft</li>
@@ -612,18 +612,47 @@ ul.auto-toc {
 <div class="section" id="id1">
 <h3><a class="toc-backref" href="#id15">Special Modes</a></h3>
 <ul class="simple">
-<li>enter/leave preferences menu: RightJoystickPress</li>
+<li>enter/leave preferences menu:<ul>
+<li>Dot8</li>
+<li>RightJoystickPress</li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="id2">
 <h3><a class="toc-backref" href="#id16">Menu Operations</a></h3>
 <ul class="simple">
-<li>go to previous item: RightJoystickUp</li>
-<li>go to next item: RightJoystickDown</li>
-<li>go to first item: LeftJoystickUp</li>
-<li>go to last item: LeftJoystickDown</li>
-<li>select previous choice: RightJoystickLeft</li>
-<li>select next choice: RightJoystickRight</li>
+<li>go up to previous item:<ul>
+<li>Dot1</li>
+<li>RightJoystickUp</li>
+</ul>
+</li>
+<li>go down to next item:<ul>
+<li>Dot4</li>
+<li>RightJoystickDown</li>
+</ul>
+</li>
+<li>go up to first item:<ul>
+<li>Dot2</li>
+<li>LeftJoystickUp</li>
+</ul>
+</li>
+<li>go down to last item:<ul>
+<li>Dot5</li>
+<li>LeftJoystickDown</li>
+</ul>
+</li>
+<li>select previous choice:<ul>
+<li>Dot3</li>
+<li>RightJoystickLeft</li>
+</ul>
+</li>
+<li>select next choice:<ul>
+<li>Dot6</li>
+<li>RightJoystickRight</li>
+</ul>
+</li>
+<li>go to previous menu level: Dot7</li>
 <li>restore preferences from disk: LeftJoystickLeft</li>
 <li>save preferences to disk: LeftJoystickRight</li>
 </ul>

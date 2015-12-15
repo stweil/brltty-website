@@ -62,8 +62,8 @@ Vertical Navigation
 * go down to nearest line with different character: Dot4+Dot5+RoutingKey1
 
 Horizontal Navigation
-* go left one braille window: Dot1+Up
-* go right one braille window: Dot1+Down
+* go backward one braille window: Dot1+Up
+* go forward one braille window: Dot1+Down
 * go to beginning of line: Dot1+Shift
 * go to end of line: Dot4+Shift
 * go left one character: Dot4+Home
@@ -151,22 +151,20 @@ Menu Bindings
 -------------
 
 Special Modes
-* enter/leave preferences menu: Shift
-
-Horizontal Navigation
-* go left one braille window: Dot7
-* go right one braille window: Dot8
+* enter/leave preferences menu:
+  + Dot8
+  + Shift
 
 Menu Operations
-* go to previous item: Up
-* go to next item: Down
-* go to first item: Dot1
-* go to last item: Dot4
-* select previous choice: Home
-* select next choice: End
-* go to previous menu level: Dot3
-* restore preferences from disk: Dot2
-* save preferences to disk: Dot5
+* go up to previous item: Dot1
+* go down to next item: Dot4
+* go up to first item: Dot2
+* go down to last item: Dot5
+* select previous choice: Dot3
+* select next choice: Dot6
+* go to previous menu level: Dot7
+* restore preferences from disk: Home
+* save preferences to disk: End
 
 Chorded Commands Mode
 ---------------------

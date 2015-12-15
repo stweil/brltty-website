@@ -44,8 +44,8 @@ Vertical Navigation
 * go down to nearest line with less indent than character: RoutingKey+RightRockerDown
 
 Horizontal Navigation
-* go left one braille window: Backward
-* go right one braille window: Forward
+* go backward one braille window: Backward
+* go forward one braille window: Forward
 * go to beginning of line: LeftRockerUp+Backward
 * go to end of line: LeftRockerUp+Forward
 * go left one character: RoutingKey.1+RoutingKey.2

@@ -331,38 +331,27 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#id1" id="id13"></a><ul>
-<li><a class="reference internal" href="#notes" id="id14">Notes</a></li>
+<li><a class="reference internal" href="#id1" id="id2"></a><ul>
+<li><a class="reference internal" href="#notes" id="id3">Notes</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#default-bindings" id="id15">Default Bindings</a><ul>
-<li><a class="reference internal" href="#special-modes" id="id16">Special Modes</a></li>
-<li><a class="reference internal" href="#cursor-functions" id="id17">Cursor Functions</a></li>
-<li><a class="reference internal" href="#vertical-navigation" id="id18">Vertical Navigation</a></li>
-<li><a class="reference internal" href="#horizontal-navigation" id="id19">Horizontal Navigation</a></li>
-<li><a class="reference internal" href="#clipboard-functions" id="id20">Clipboard Functions</a></li>
-<li><a class="reference internal" href="#keyboard-input" id="id21">Keyboard Input</a></li>
-<li><a class="reference internal" href="#id2" id="id22">Clipboard Functions</a></li>
-<li><a class="reference internal" href="#id3" id="id23">Clipboard Functions</a></li>
-<li><a class="reference internal" href="#id4" id="id24">Clipboard Functions</a></li>
-<li><a class="reference internal" href="#configuration-functions" id="id25">Configuration Functions</a></li>
-<li><a class="reference internal" href="#id5" id="id26">Clipboard Functions</a></li>
-<li><a class="reference internal" href="#id6" id="id27">Special Modes</a></li>
-<li><a class="reference internal" href="#id7" id="id28">Configuration Functions</a></li>
-<li><a class="reference internal" href="#id8" id="id29">Special Modes</a></li>
-<li><a class="reference internal" href="#id9" id="id30">Cursor Functions</a></li>
-<li><a class="reference internal" href="#id10" id="id31">Vertical Navigation</a></li>
-<li><a class="reference internal" href="#id11" id="id32">Horizontal Navigation</a></li>
-<li><a class="reference internal" href="#id12" id="id33">Keyboard Input</a></li>
-<li><a class="reference internal" href="#special-functions" id="id34">Special Functions</a></li>
+<li><a class="reference internal" href="#default-bindings" id="id4">Default Bindings</a><ul>
+<li><a class="reference internal" href="#special-modes" id="id5">Special Modes</a></li>
+<li><a class="reference internal" href="#cursor-functions" id="id6">Cursor Functions</a></li>
+<li><a class="reference internal" href="#vertical-navigation" id="id7">Vertical Navigation</a></li>
+<li><a class="reference internal" href="#horizontal-navigation" id="id8">Horizontal Navigation</a></li>
+<li><a class="reference internal" href="#clipboard-functions" id="id9">Clipboard Functions</a></li>
+<li><a class="reference internal" href="#configuration-functions" id="id10">Configuration Functions</a></li>
+<li><a class="reference internal" href="#keyboard-input" id="id11">Keyboard Input</a></li>
+<li><a class="reference internal" href="#special-functions" id="id12">Special Functions</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="id1">
-<h2><a class="toc-backref" href="#id13"></a></h2>
+<h2><a class="toc-backref" href="#id2"></a></h2>
 <div class="section" id="notes">
-<h3><a class="toc-backref" href="#id14">Notes</a></h3>
+<h3><a class="toc-backref" href="#id3">Notes</a></h3>
 <ul class="simple">
 <li>The cursor routing keys are the small, round buttons just behind the braille cells.</li>
 <li>RoutingKey1 means pressing a cursor routing key once (a single click).</li>
@@ -376,53 +365,116 @@ ul.auto-toc {
 </div>
 </div>
 <div class="section" id="default-bindings">
-<h2><a class="toc-backref" href="#id15">Default Bindings</a></h2>
+<h2><a class="toc-backref" href="#id4">Default Bindings</a></h2>
 <div class="section" id="special-modes">
-<h3><a class="toc-backref" href="#id16">Special Modes</a></h3>
+<h3><a class="toc-backref" href="#id5">Special Modes</a></h3>
 <ul class="simple">
 <li>enter/leave help display: Down+Left, L4</li>
 <li>enter/leave command learn mode: Down+Left, L5</li>
+<li>enter/leave preferences menu:<ul>
+<li>Down+Right, Up</li>
+<li>L4</li>
+</ul>
+</li>
+<li>enter/leave status display: L5</li>
+<li>set screen image frozen/unfrozen: L3+L4</li>
 <li>describe character: RoutingKey2</li>
 </ul>
 </div>
 <div class="section" id="cursor-functions">
-<h3><a class="toc-backref" href="#id17">Cursor Functions</a></h3>
+<h3><a class="toc-backref" href="#id6">Cursor Functions</a></h3>
 <ul class="simple">
-<li>go to screen cursor: Down+Left, Up</li>
+<li>go to screen cursor:<ul>
+<li>Down+Left, Up</li>
+<li>L6+L7</li>
+</ul>
+</li>
 <li>go back after cursor tracking: Down+Left, Down</li>
 <li>bring screen cursor to character: RoutingKey1</li>
 </ul>
 </div>
 <div class="section" id="vertical-navigation">
-<h3><a class="toc-backref" href="#id18">Vertical Navigation</a></h3>
+<h3><a class="toc-backref" href="#id7">Vertical Navigation</a></h3>
 <ul class="simple">
-<li>go to beginning of top line: Down+Left, L1</li>
-<li>go to beginning of bottom line: Down+Left, L8</li>
+<li>go up one line: L2</li>
+<li>go down one line: L7</li>
+<li>go to beginning of top line:<ul>
+<li>Down+Left, L1</li>
+<li>L1+L2</li>
+</ul>
+</li>
+<li>go to beginning of bottom line:<ul>
+<li>Down+Left, L8</li>
+<li>L7+L8</li>
+</ul>
+</li>
+<li>go up to previous command prompt: L3</li>
+<li>go down to next command prompt: L6</li>
 </ul>
 </div>
 <div class="section" id="horizontal-navigation">
-<h3><a class="toc-backref" href="#id19">Horizontal Navigation</a></h3>
+<h3><a class="toc-backref" href="#id8">Horizontal Navigation</a></h3>
 <ul class="simple">
+<li>go backward one braille window: L1</li>
+<li>go forward one braille window: L8</li>
 <li>go to beginning of line: Down+Left, Left</li>
 <li>go to end of line: Down+Left, Right</li>
 </ul>
 </div>
 <div class="section" id="clipboard-functions">
-<h3><a class="toc-backref" href="#id20">Clipboard Functions</a></h3>
+<h3><a class="toc-backref" href="#id9">Clipboard Functions</a></h3>
 <ul class="simple">
+<li>start new clipboard at character: Down+Right, L1, RoutingKey1</li>
+<li>append to clipboard from character: Down+Right, L2, RoutingKey1</li>
+<li>linear copy to character: Down+Right, L8, RoutingKey1</li>
+<li>rectangular copy to character: Down+Right, L6, RoutingKey1</li>
+<li>insert clipboard text after screen cursor: Down+Right, L7</li>
 <li>search backward for clipboard text: Down+Left, L3</li>
 <li>search forward for clipboard text: Down+Left, L6</li>
 </ul>
 </div>
-<div class="section" id="keyboard-input">
-<h3><a class="toc-backref" href="#id21">Keyboard Input</a></h3>
+<div class="section" id="configuration-functions">
+<h3><a class="toc-backref" href="#id10">Configuration Functions</a></h3>
 <ul class="simple">
+<li>set track screen cursor on/off: Down+Right, Down</li>
+<li>set screen cursor visibility on/off: Down+Right, L3</li>
+<li>set alert tunes on/off: Down+Right, Right</li>
+</ul>
+</div>
+<div class="section" id="keyboard-input">
+<h3><a class="toc-backref" href="#id11">Keyboard Input</a></h3>
+<ul class="simple">
+<li>braille keyboard dot1: Dot1</li>
+<li>braille keyboard dot2: Dot2</li>
+<li>braille keyboard dot3: Dot3</li>
+<li>braille keyboard dot4: Dot4</li>
+<li>braille keyboard dot5: Dot5</li>
+<li>braille keyboard dot6: Dot6</li>
+<li>braille keyboard dot7: Dot7</li>
+<li>braille keyboard dot8: Dot8</li>
+<li>braille keyboard space: Space</li>
 <li>backspace key: Backspace</li>
 <li>escape key: Space+Dot1+Dot2+Dot4+Dot5</li>
-<li>cursor-left key: Space+Dot2</li>
-<li>cursor-right key: Space+Dot5</li>
-<li>cursor-up key: Space+Dot4</li>
-<li>cursor-down key: Space+Dot6</li>
+<li>cursor-left key:<ul>
+<li>Space+Dot2</li>
+<li>Left</li>
+</ul>
+</li>
+<li>cursor-right key:<ul>
+<li>Space+Dot5</li>
+<li>Right</li>
+</ul>
+</li>
+<li>cursor-up key:<ul>
+<li>Space+Dot4</li>
+<li>Up</li>
+</ul>
+</li>
+<li>cursor-down key:<ul>
+<li>Space+Dot6</li>
+<li>Down</li>
+</ul>
+</li>
 <li>page-up key: Space+Dot1+Dot3</li>
 <li>page-down key: Space+Dot4+Dot6</li>
 <li>home key: Space+Dot1+Dot2+Dot3</li>
@@ -449,102 +501,8 @@ ul.auto-toc {
 <li>cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dot8</li>
 </ul>
 </div>
-<div class="section" id="id2">
-<h3><a class="toc-backref" href="#id22">Clipboard Functions</a></h3>
-<ul class="simple">
-<li>start new clipboard at character: Down+Right, L1, RoutingKey1</li>
-</ul>
-</div>
-<div class="section" id="id3">
-<h3><a class="toc-backref" href="#id23">Clipboard Functions</a></h3>
-<ul class="simple">
-<li>append to clipboard from character: Down+Right, L2, RoutingKey1</li>
-</ul>
-</div>
-<div class="section" id="id4">
-<h3><a class="toc-backref" href="#id24">Clipboard Functions</a></h3>
-<ul class="simple">
-<li>rectangular copy to character: Down+Right, L6, RoutingKey1</li>
-</ul>
-</div>
-<div class="section" id="configuration-functions">
-<h3><a class="toc-backref" href="#id25">Configuration Functions</a></h3>
-<ul class="simple">
-<li>set screen cursor visibility on/off: Down+Right, L3</li>
-</ul>
-</div>
-<div class="section" id="id5">
-<h3><a class="toc-backref" href="#id26">Clipboard Functions</a></h3>
-<ul class="simple">
-<li>linear copy to character: Down+Right, L8, RoutingKey1</li>
-<li>insert clipboard text after screen cursor: Down+Right, L7</li>
-</ul>
-</div>
-<div class="section" id="id6">
-<h3><a class="toc-backref" href="#id27">Special Modes</a></h3>
-<ul class="simple">
-<li>enter/leave preferences menu: Down+Right, Up</li>
-</ul>
-</div>
-<div class="section" id="id7">
-<h3><a class="toc-backref" href="#id28">Configuration Functions</a></h3>
-<ul class="simple">
-<li>set track screen cursor on/off: Down+Right, Down</li>
-<li>set alert tunes on/off: Down+Right, Right</li>
-</ul>
-</div>
-<div class="section" id="id8">
-<h3><a class="toc-backref" href="#id29">Special Modes</a></h3>
-<ul class="simple">
-<li>enter/leave preferences menu: L4</li>
-<li>enter/leave status display: L5</li>
-<li>set screen image frozen/unfrozen: L3+L4</li>
-</ul>
-</div>
-<div class="section" id="id9">
-<h3><a class="toc-backref" href="#id30">Cursor Functions</a></h3>
-<ul class="simple">
-<li>go to screen cursor: L6+L7</li>
-</ul>
-</div>
-<div class="section" id="id10">
-<h3><a class="toc-backref" href="#id31">Vertical Navigation</a></h3>
-<ul class="simple">
-<li>go up one line: L2</li>
-<li>go down one line: L7</li>
-<li>go to beginning of top line: L1+L2</li>
-<li>go to beginning of bottom line: L7+L8</li>
-<li>go up to previous command prompt: L3</li>
-<li>go down to next command prompt: L6</li>
-</ul>
-</div>
-<div class="section" id="id11">
-<h3><a class="toc-backref" href="#id32">Horizontal Navigation</a></h3>
-<ul class="simple">
-<li>go left one braille window: L1</li>
-<li>go right one braille window: L8</li>
-</ul>
-</div>
-<div class="section" id="id12">
-<h3><a class="toc-backref" href="#id33">Keyboard Input</a></h3>
-<ul class="simple">
-<li>braille keyboard dot1: Dot1</li>
-<li>braille keyboard dot2: Dot2</li>
-<li>braille keyboard dot3: Dot3</li>
-<li>braille keyboard dot4: Dot4</li>
-<li>braille keyboard dot5: Dot5</li>
-<li>braille keyboard dot6: Dot6</li>
-<li>braille keyboard dot7: Dot7</li>
-<li>braille keyboard dot8: Dot8</li>
-<li>braille keyboard space: Space</li>
-<li>cursor-left key: Left</li>
-<li>cursor-right key: Right</li>
-<li>cursor-up key: Up</li>
-<li>cursor-down key: Down</li>
-</ul>
-</div>
 <div class="section" id="special-functions">
-<h3><a class="toc-backref" href="#id34">Special Functions</a></h3>
+<h3><a class="toc-backref" href="#id12">Special Functions</a></h3>
 <ul class="simple">
 <li>restart braille driver: L1+L2+L3+L4</li>
 <li>restart speech driver: L5+L6+L7+L8</li>

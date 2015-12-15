@@ -1,0 +1,64 @@
+Key Table: MDV Models with Function Keys
+========================================
+
+Default Bindings
+----------------
+
+Special Modes
+* enter/leave preferences menu: F10
+* enter/leave status display: Shift+F2
+* set display mode attributes/text: Shift+F6
+* set screen image frozen/unfrozen: Shift+F1
+
+Cursor Functions
+* go to screen cursor: F4
+* bring screen cursor to character: RoutingKey
+
+Vertical Navigation
+* go up one line: Up
+* go down one line: Down
+* go to beginning of top line: F1
+* go to beginning of bottom line: F2
+
+Horizontal Navigation
+* go backward one braille window: Left
+* go forward one braille window: Right
+* go left one character: F3
+* go right one character: F8
+* go left half a braille window: Shift+F3
+* go right half a braille window: Shift+F8
+
+Clipboard Functions
+* start new clipboard at character: RoutingKey+Left
+* linear copy to character: RoutingKey+Right
+* rectangular copy to character: RoutingKey+Down
+* copy characters to clipboard: RoutingKey+RoutingKey
+* append characters to clipboard: RoutingKey+Up
+* insert clipboard text after screen cursor:
+  + RoutingKey.2+RoutingKey.3
+  + Shift+F10
+
+Configuration Functions
+* set skipping of lines with identical content on/off: F6
+* set skipping of blank braille windows on/off: F7
+* set track screen cursor on/off: F5
+* set screen cursor style block/underline: Shift+F4
+* set screen cursor visibility on/off: Shift+F5
+* set screen cursor blinking on/off: Long+F4
+* set attribute underlining on/off: Shift+Long+F6
+* set attribute blinking on/off: Long+F6
+* set capital letter blinking on/off: Long+F5
+
+Keyboard Input
+* cursor-up key: Shift+Up
+* cursor-down key: Shift+Down
+
+Menu Bindings
+-------------
+
+Menu Operations
+* go up to previous item: Up
+* go down to next item: Down
+* select previous choice: F9
+* select next choice: F10
+

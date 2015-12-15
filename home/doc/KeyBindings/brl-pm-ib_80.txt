@@ -37,8 +37,8 @@ Vertical Navigation
 * go down to nearest line with less indent than character: Braille+RoutingKey1
 
 Horizontal Navigation
-* go left one braille window: Function
-* go right one braille window: Attribute
+* go backward one braille window: Function
+* go forward one braille window: Attribute
 * go to beginning of line: Function+Home
 * go to end of line: Attribute+Home
 * go left one character: Cursor+Home

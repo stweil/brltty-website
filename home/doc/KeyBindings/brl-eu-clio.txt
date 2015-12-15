@@ -10,22 +10,87 @@ Default Bindings
 ----------------
 
 Special Modes
-* switch to Default Bindings: Star, Star
+* enter/leave help display: Sharp, H
+* enter/leave command learn mode:
+  + Sharp, One
+  + Sharp, L
+* enter/leave preferences menu: H
+* enter/leave status display: I
+* set display mode attributes/text: Sharp, A
+* set screen image frozen/unfrozen: A
+* switch to Default Bindings: St
+  + ar, Star
+  + arp, Sharp
+
+Cursor Functions
+* go to screen cursor:
+  + Sharp, Up
+  + Five
+* go back after cursor tracking: Sharp, Down
+* bring screen cursor to character: RoutingKey
+
+Vertical Navigation
+* go up one line: F
+* go down one line: L
+* go to beginning of top line:
+  + Sharp, Three
+  + Sharp, E
+  + One
+* go to beginning of bottom line:
+  + Sharp, Nine
+  + Sharp, M
+  + Seven
+* go up to nearest line with different content: Three
+* go down to nearest line with different content: Nine
+* go up to previous command prompt: G
+* go down to next command prompt: K
+
+Horizontal Navigation
+* go backward one braille window: E
+* go forward one braille window: M
+* go to beginning of line: Sharp, Left
+* go to end of line: Sharp, Right
 
 Clipboard Functions
 * start new clipboard at character: Star, E, RoutingKey
+* append to clipboard from character: Star, F, RoutingKey
+* linear copy to character: Star, M, RoutingKey
+* rectangular copy to character: Star, K, RoutingKey
+* insert clipboard text after screen cursor: Star, L
+* search backward for clipboard text: Sharp, G
+* search forward for clipboard text: Sharp, K
 
 Configuration Functions
-* set track screen cursor on/off: Star, Down
+* set track screen cursor on/off:
+  + Star, Down
+  + Zero
+* set screen cursor visibility on/off: Star, G
 * set alert tunes on/off: Star, Right
 
 Keyboard Input
+* braille keyboard dot1: Dot1
+* braille keyboard dot2: Dot2
+* braille keyboard dot3: Dot3
+* braille keyboard dot4: Dot4
+* braille keyboard dot5: Dot5
+* braille keyboard dot6: Dot6
+* braille keyboard dot7: Dot7
+* braille keyboard dot8: Dot8
+* braille keyboard space: Space
 * backspace key: Backspace
 * escape key: Space+Dot1+Dot2+Dot4+Dot5
-* cursor-left key: Space+Dot2
-* cursor-right key: Space+Dot5
-* cursor-up key: Space+Dot4
-* cursor-down key: Space+Dot6
+* cursor-left key:
+  + Space+Dot2
+  + Left
+* cursor-right key:
+  + Space+Dot5
+  + Right
+* cursor-up key:
+  + Space+Dot4
+  + Up
+* cursor-down key:
+  + Space+Dot6
+  + Down
 * page-up key: Space+Dot1+Dot3
 * page-down key: Space+Dot4+Dot6
 * home key: Space+Dot1+Dot2+Dot3
@@ -50,86 +115,4 @@ Keyboard Input
 * cycle the Shift sticky input modifier (next, on, off): Space+Dot7
 * cycle the Control sticky input modifier (next, on, off): Space+Dot7+Dot8
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dot8
-
-Clipboard Functions
-* append to clipboard from character: Star, F, RoutingKey
-
-Clipboard Functions
-* rectangular copy to character: Star, K, RoutingKey
-
-Configuration Functions
-* set screen cursor visibility on/off: Star, G
-
-Clipboard Functions
-* linear copy to character: Star, M, RoutingKey
-* insert clipboard text after screen cursor: Star, L
-
-Special Modes
-* enter/leave help display: Sharp, H
-* enter/leave command learn mode:
-  + Sharp, One
-  + Sharp, L
-* set display mode attributes/text: Sharp, A
-* switch to Default Bindings: Sharp, Sharp
-
-Cursor Functions
-* go to screen cursor: Sharp, Up
-* go back after cursor tracking: Sharp, Down
-
-Vertical Navigation
-* go to beginning of top line:
-  + Sharp, Three
-  + Sharp, E
-* go to beginning of bottom line:
-  + Sharp, Nine
-  + Sharp, M
-
-Horizontal Navigation
-* go to beginning of line: Sharp, Left
-* go to end of line: Sharp, Right
-
-Clipboard Functions
-* search backward for clipboard text: Sharp, G
-* search forward for clipboard text: Sharp, K
-
-Special Modes
-* enter/leave preferences menu: H
-* enter/leave status display: I
-* set screen image frozen/unfrozen: A
-
-Cursor Functions
-* go to screen cursor: Five
-* bring screen cursor to character: RoutingKey
-
-Vertical Navigation
-* go up one line: F
-* go down one line: L
-* go to beginning of top line: One
-* go to beginning of bottom line: Seven
-* go up to nearest line with different content: Three
-* go down to nearest line with different content: Nine
-* go up to previous command prompt: G
-* go down to next command prompt: K
-
-Horizontal Navigation
-* go left one braille window: E
-* go right one braille window: M
-
-Configuration Functions
-* set track screen cursor on/off: Zero
-
-Keyboard Input
-* braille keyboard dot1: Dot1
-* braille keyboard dot2: Dot2
-* braille keyboard dot3: Dot3
-* braille keyboard dot4: Dot4
-* braille keyboard dot5: Dot5
-* braille keyboard dot6: Dot6
-* braille keyboard dot7: Dot7
-* braille keyboard dot8: Dot8
-* braille keyboard space: Space
-* cursor-left key: Left
-* cursor-right key: Right
-* cursor-up key: Up
-* cursor-down key: Down
 

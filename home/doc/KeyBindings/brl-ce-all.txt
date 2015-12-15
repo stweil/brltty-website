@@ -40,10 +40,10 @@ Vertical Navigation
 * go down to nearest line with different character: PadRight1+RoutingKey
 
 Horizontal Navigation
-* go left one braille window: PadLeft1
-* go right one braille window: PadRight1
-* go left to nearest non-blank braille window: LeftLower1+PadLeft1
-* go right to nearest non-blank braille window: LeftLower1+PadRight1
+* go backward one braille window: PadLeft1
+* go forward one braille window: PadRight1
+* go backward skipping blank braille windows: LeftLower1+PadLeft1
+* go forward skipping blank braille windows: LeftLower1+PadRight1
 * go to beginning of line: LeftMiddle1+PadLeft1
 * go to end of line: LeftMiddle1+PadRight1
 * go left one character: RightMiddle1+PadLeft1
@@ -80,14 +80,14 @@ Special Modes
 * enter/leave preferences menu: PadCenter1
 
 Horizontal Navigation
-* go left one braille window: LeftMiddle1
-* go right one braille window: RightMiddle1
+* go backward one braille window: LeftMiddle1
+* go forward one braille window: RightMiddle1
 
 Menu Operations
-* go to previous item: PadUp1
-* go to next item: PadDown1
-* go to first item: LeftUpper1
-* go to last item: LeftLower1
+* go up to previous item: PadUp1
+* go down to next item: PadDown1
+* go up to first item: LeftUpper1
+* go down to last item: LeftLower1
 * select previous choice: PadLeft1
 * select next choice: PadRight1
 * restore preferences from disk: RightUpper1

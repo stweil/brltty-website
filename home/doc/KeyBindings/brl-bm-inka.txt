@@ -51,13 +51,13 @@ Vertical Navigation
 * go up to nearest line with different character: Display5+Display4+HorizontalSensor
 * go down to nearest line with different character: Display5+Display6+HorizontalSensor
 * go to selected line: RightSensor
-* go to selected line, normalized position: ScaledRightSensor
-* go to selected line, left margin: LeftSensor
-* go to selected line, left margin, normalized position: ScaledLeftSensor
+* go to selected line + scaled: ScaledRightSensor
+* go to selected line + toleft: LeftSensor
+* go to selected line + scaled + toleft: ScaledLeftSensor
 
 Horizontal Navigation
-* go left one braille window: Display2
-* go right one braille window: Display5
+* go backward one braille window: Display2
+* go forward one braille window: Display5
 * go to beginning of line: Display1+Display2+Display3
 * go to end of line: Display4+Display5+Display6
 * go left one character: Display1+Display3

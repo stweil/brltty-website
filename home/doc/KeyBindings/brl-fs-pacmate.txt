@@ -44,10 +44,10 @@ Vertical Navigation
 * go down to next command prompt: LeftAdvance+LeftWheelDown
 
 Horizontal Navigation
-* go left one braille window:
+* go backward one braille window:
   + LeftAdvance
   + RightWheelUp
-* go right one braille window:
+* go forward one braille window:
   + RightAdvance
   + RightWheelDown
 * go to beginning of line: LeftWheelPress

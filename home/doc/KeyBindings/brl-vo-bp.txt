@@ -46,10 +46,10 @@ Vertical Navigation
 * go down to next command prompt: ScrollLeft+ScrollRight+JoystickDown
 
 Horizontal Navigation
-* go left one braille window: ScrollLeft
-* go right one braille window: ScrollRight
-* go left to nearest non-blank braille window: ScrollLeft+Shift
-* go right to nearest non-blank braille window: ScrollRight+Control
+* go backward one braille window: ScrollLeft
+* go forward one braille window: ScrollRight
+* go backward skipping blank braille windows: ScrollLeft+Shift
+* go forward skipping blank braille windows: ScrollRight+Control
 * go to beginning of line: Shift+JoystickLeft
 * go to end of line: Shift+JoystickRight
 * go left one character: ScrollLeft+JoystickLeft
@@ -184,8 +184,8 @@ Menu Bindings
 -------------
 
 Menu Operations
-* go to previous item: JoystickUp
-* go to next item: JoystickDown
+* go up to previous item: JoystickUp
+* go down to next item: JoystickDown
 * select previous choice: JoystickLeft
 * select next choice: JoystickRight
 * save preferences to disk: JoystickEnter

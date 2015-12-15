@@ -22,8 +22,8 @@ Vertical Navigation
 * go to beginning of bottom line: LeftUp+LeftDown+RightDown
 
 Horizontal Navigation
-* go left one braille window: RightUp
-* go right one braille window: RightDown
+* go backward one braille window: RightUp
+* go forward one braille window: RightDown
 * go to beginning of line: LeftUp+LeftDown
 
 Configuration Functions
@@ -34,14 +34,14 @@ Menu Bindings
 -------------
 
 Horizontal Navigation
-* go left one braille window: LeftUp+LeftDown
-* go right one braille window: RightUp+RightDown
+* go backward one braille window: LeftUp+LeftDown
+* go forward one braille window: RightUp+RightDown
 
 Menu Operations
-* go to previous item: LeftUp
-* go to next item: LeftDown
-* go to first item: LeftUp+RightUp
-* go to last item: LeftDown+RightDown
+* go up to previous item: LeftUp
+* go down to next item: LeftDown
+* go up to first item: LeftUp+RightUp
+* go down to last item: LeftDown+RightDown
 * select previous choice: RightUp
 * select next choice: RightDown
 

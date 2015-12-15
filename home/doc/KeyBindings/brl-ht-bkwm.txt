@@ -19,8 +19,8 @@ Vertical Navigation
 * go down one line: Enter+Forward
 
 Horizontal Navigation
-* go left one braille window: Backward
-* go right one braille window: Forward
+* go backward one braille window: Backward
+* go forward one braille window: Forward
 * go to beginning of line: Escape+Enter+Backward
 * go to end of line: Escape+Enter+Forward
 
@@ -35,14 +35,14 @@ Special Modes
 * enter/leave preferences menu: Enter
 
 Horizontal Navigation
-* go left one braille window: Backward
-* go right one braille window: Forward
+* go backward one braille window: Backward
+* go forward one braille window: Forward
 
 Menu Operations
-* go to previous item: Enter+Backward
-* go to next item: Enter+Forward
-* go to first item: Escape+Enter+Backward
-* go to last item: Escape+Enter+Forward
+* go up to previous item: Enter+Backward
+* go down to next item: Enter+Forward
+* go up to first item: Escape+Enter+Backward
+* go down to last item: Escape+Enter+Forward
 * select previous choice: Escape+Backward
 * select next choice: Escape+Forward
 * restore preferences from disk: Escape

@@ -331,32 +331,26 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#id1" id="id8"></a><ul>
-<li><a class="reference internal" href="#notes" id="id9">Notes</a></li>
+<li><a class="reference internal" href="#id1" id="id2"></a><ul>
+<li><a class="reference internal" href="#notes" id="id3">Notes</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#default-bindings" id="id10">Default Bindings</a><ul>
-<li><a class="reference internal" href="#special-modes" id="id11">Special Modes</a></li>
-<li><a class="reference internal" href="#cursor-functions" id="id12">Cursor Functions</a></li>
-<li><a class="reference internal" href="#vertical-navigation" id="id13">Vertical Navigation</a></li>
-<li><a class="reference internal" href="#horizontal-navigation" id="id14">Horizontal Navigation</a></li>
-<li><a class="reference internal" href="#clipboard-functions" id="id15">Clipboard Functions</a></li>
-<li><a class="reference internal" href="#keyboard-input" id="id16">Keyboard Input</a></li>
-<li><a class="reference internal" href="#id2" id="id17">Clipboard Functions</a></li>
-<li><a class="reference internal" href="#id3" id="id18">Clipboard Functions</a></li>
-<li><a class="reference internal" href="#id4" id="id19">Clipboard Functions</a></li>
-<li><a class="reference internal" href="#id5" id="id20">Special Modes</a></li>
-<li><a class="reference internal" href="#id6" id="id21">Clipboard Functions</a></li>
-<li><a class="reference internal" href="#speech-functions" id="id22">Speech Functions</a></li>
-<li><a class="reference internal" href="#id7" id="id23">Keyboard Input</a></li>
+<li><a class="reference internal" href="#default-bindings" id="id4">Default Bindings</a><ul>
+<li><a class="reference internal" href="#special-modes" id="id5">Special Modes</a></li>
+<li><a class="reference internal" href="#cursor-functions" id="id6">Cursor Functions</a></li>
+<li><a class="reference internal" href="#vertical-navigation" id="id7">Vertical Navigation</a></li>
+<li><a class="reference internal" href="#horizontal-navigation" id="id8">Horizontal Navigation</a></li>
+<li><a class="reference internal" href="#clipboard-functions" id="id9">Clipboard Functions</a></li>
+<li><a class="reference internal" href="#speech-functions" id="id10">Speech Functions</a></li>
+<li><a class="reference internal" href="#keyboard-input" id="id11">Keyboard Input</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="id1">
-<h2><a class="toc-backref" href="#id8"></a></h2>
+<h2><a class="toc-backref" href="#id2"></a></h2>
 <div class="section" id="notes">
-<h3><a class="toc-backref" href="#id9">Notes</a></h3>
+<h3><a class="toc-backref" href="#id3">Notes</a></h3>
 <ul class="simple">
 <li>The cursor routing keys are the small, round buttons just behind the braille cells.</li>
 <li>RoutingKey1 means pressing a cursor routing key once (a single click).</li>
@@ -369,22 +363,24 @@ ul.auto-toc {
 </div>
 </div>
 <div class="section" id="default-bindings">
-<h2><a class="toc-backref" href="#id10">Default Bindings</a></h2>
+<h2><a class="toc-backref" href="#id4">Default Bindings</a></h2>
 <div class="section" id="special-modes">
-<h3><a class="toc-backref" href="#id11">Special Modes</a></h3>
+<h3><a class="toc-backref" href="#id5">Special Modes</a></h3>
 <ul class="simple">
+<li>enter/leave help display: LeftJoystickRight+RightJoystickDown</li>
+<li>enter/leave command learn mode: LeftJoystickRight+RightJoystickUp</li>
 <li>describe character: RoutingKey2</li>
 </ul>
 </div>
 <div class="section" id="cursor-functions">
-<h3><a class="toc-backref" href="#id12">Cursor Functions</a></h3>
+<h3><a class="toc-backref" href="#id6">Cursor Functions</a></h3>
 <ul class="simple">
 <li>go to screen cursor: RightJoystickPress</li>
 <li>bring screen cursor to character: RoutingKey1</li>
 </ul>
 </div>
 <div class="section" id="vertical-navigation">
-<h3><a class="toc-backref" href="#id13">Vertical Navigation</a></h3>
+<h3><a class="toc-backref" href="#id7">Vertical Navigation</a></h3>
 <ul class="simple">
 <li>go up one line: RightJoystickUp</li>
 <li>go down one line: RightJoystickDown</li>
@@ -395,21 +391,44 @@ ul.auto-toc {
 </ul>
 </div>
 <div class="section" id="horizontal-navigation">
-<h3><a class="toc-backref" href="#id14">Horizontal Navigation</a></h3>
+<h3><a class="toc-backref" href="#id8">Horizontal Navigation</a></h3>
 <ul class="simple">
-<li>go left one braille window: RightJoystickLeft</li>
-<li>go right one braille window: RightJoystickRight</li>
+<li>go backward one braille window: RightJoystickLeft</li>
+<li>go forward one braille window: RightJoystickRight</li>
 </ul>
 </div>
 <div class="section" id="clipboard-functions">
-<h3><a class="toc-backref" href="#id15">Clipboard Functions</a></h3>
+<h3><a class="toc-backref" href="#id9">Clipboard Functions</a></h3>
 <ul class="simple">
 <li>start new clipboard at character: LeftJoystickDown+RightJoystickLeft, RoutingKey1</li>
+<li>append to clipboard from character: LeftJoystickDown+RightJoystickUp, RoutingKey1</li>
+<li>linear copy to character: LeftJoystickDown+RightJoystickRight, RoutingKey1</li>
+<li>rectangular copy to character: LeftJoystickDown+RightJoystickDown, RoutingKey1</li>
+<li>insert clipboard text after screen cursor: LeftJoystickDown+RightJoystickPress</li>
+</ul>
+</div>
+<div class="section" id="speech-functions">
+<h3><a class="toc-backref" href="#id10">Speech Functions</a></h3>
+<ul class="simple">
+<li>speak current line: LeftJoystickLeft+RightJoystickPress</li>
+<li>speak from top of screen through current line: LeftJoystickLeft+RightJoystickUp</li>
+<li>speak from current line through bottom of screen: LeftJoystickLeft+RightJoystickDown</li>
+<li>decrease speaking volume: LeftJoystickLeft+RightJoystickLeft</li>
+<li>increase speaking volume: LeftJoystickLeft+RightJoystickRight</li>
 </ul>
 </div>
 <div class="section" id="keyboard-input">
-<h3><a class="toc-backref" href="#id16">Keyboard Input</a></h3>
+<h3><a class="toc-backref" href="#id11">Keyboard Input</a></h3>
 <ul class="simple">
+<li>braille keyboard dot1: Dot1</li>
+<li>braille keyboard dot2: Dot2</li>
+<li>braille keyboard dot3: Dot3</li>
+<li>braille keyboard dot4: Dot4</li>
+<li>braille keyboard dot5: Dot5</li>
+<li>braille keyboard dot6: Dot6</li>
+<li>braille keyboard dot7: Dot7</li>
+<li>braille keyboard dot8: Dot8</li>
+<li>braille keyboard space: Space</li>
 <li>backspace key: Backspace</li>
 <li>escape key: Space+Dot1+Dot2+Dot4+Dot5</li>
 <li>cursor-left key: Space+Dot2</li>
@@ -440,61 +459,6 @@ ul.auto-toc {
 <li>cycle the Shift sticky input modifier (next, on, off): Space+Dot7</li>
 <li>cycle the Control sticky input modifier (next, on, off): Space+Dot7+Dot8</li>
 <li>cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dot8</li>
-</ul>
-</div>
-<div class="section" id="id2">
-<h3><a class="toc-backref" href="#id17">Clipboard Functions</a></h3>
-<ul class="simple">
-<li>append to clipboard from character: LeftJoystickDown+RightJoystickUp, RoutingKey1</li>
-</ul>
-</div>
-<div class="section" id="id3">
-<h3><a class="toc-backref" href="#id18">Clipboard Functions</a></h3>
-<ul class="simple">
-<li>rectangular copy to character: LeftJoystickDown+RightJoystickDown, RoutingKey1</li>
-</ul>
-</div>
-<div class="section" id="id4">
-<h3><a class="toc-backref" href="#id19">Clipboard Functions</a></h3>
-<ul class="simple">
-<li>linear copy to character: LeftJoystickDown+RightJoystickRight, RoutingKey1</li>
-</ul>
-</div>
-<div class="section" id="id5">
-<h3><a class="toc-backref" href="#id20">Special Modes</a></h3>
-<ul class="simple">
-<li>enter/leave help display: LeftJoystickRight+RightJoystickDown</li>
-<li>enter/leave command learn mode: LeftJoystickRight+RightJoystickUp</li>
-</ul>
-</div>
-<div class="section" id="id6">
-<h3><a class="toc-backref" href="#id21">Clipboard Functions</a></h3>
-<ul class="simple">
-<li>insert clipboard text after screen cursor: LeftJoystickDown+RightJoystickPress</li>
-</ul>
-</div>
-<div class="section" id="speech-functions">
-<h3><a class="toc-backref" href="#id22">Speech Functions</a></h3>
-<ul class="simple">
-<li>speak current line: LeftJoystickLeft+RightJoystickPress</li>
-<li>speak from top of screen through current line: LeftJoystickLeft+RightJoystickUp</li>
-<li>speak from current line through bottom of screen: LeftJoystickLeft+RightJoystickDown</li>
-<li>decrease speaking volume: LeftJoystickLeft+RightJoystickLeft</li>
-<li>increase speaking volume: LeftJoystickLeft+RightJoystickRight</li>
-</ul>
-</div>
-<div class="section" id="id7">
-<h3><a class="toc-backref" href="#id23">Keyboard Input</a></h3>
-<ul class="simple">
-<li>braille keyboard dot1: Dot1</li>
-<li>braille keyboard dot2: Dot2</li>
-<li>braille keyboard dot3: Dot3</li>
-<li>braille keyboard dot4: Dot4</li>
-<li>braille keyboard dot5: Dot5</li>
-<li>braille keyboard dot6: Dot6</li>
-<li>braille keyboard dot7: Dot7</li>
-<li>braille keyboard dot8: Dot8</li>
-<li>braille keyboard space: Space</li>
 </ul>
 </div>
 </div>

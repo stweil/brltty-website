@@ -35,8 +35,8 @@ Vertical Navigation
 * go up to previous command prompt: Prog+Home+Up
 
 Horizontal Navigation
-* go left one braille window: Left
-* go right one braille window: Right
+* go backward one braille window: Left
+* go forward one braille window: Right
 * go to beginning of line: Home+Left
 * go to end of line: Home+Right
 * go left one character: Prog+Left
@@ -74,14 +74,14 @@ Special Modes
 * enter/leave preferences menu: Prog
 
 Horizontal Navigation
-* go left one braille window: Left
-* go right one braille window: Right
+* go backward one braille window: Left
+* go forward one braille window: Right
 
 Menu Operations
-* go to previous item: Up
-* go to next item: Down
-* go to first item: Home+Up
-* go to last item: Home+Down
+* go up to previous item: Up
+* go down to next item: Down
+* go up to first item: Home+Up
+* go down to last item: Home+Down
 * select previous choice: Home
 * select next choice: Cursor
 * restore preferences from disk: Home+Left

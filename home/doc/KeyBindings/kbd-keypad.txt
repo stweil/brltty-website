@@ -41,10 +41,10 @@ Vertical Navigation
 * go down to nearest line with different character at cursor: KPMultiply+KP6
 
 Horizontal Navigation
-* go left one braille window: KP0+KP4
-* go right one braille window: KP0+KP6
-* go left to nearest non-blank braille window: KPPeriod+KP4
-* go right to nearest non-blank braille window: KPPeriod+KP6
+* go backward one braille window: KP0+KP4
+* go forward one braille window: KP0+KP6
+* go backward skipping blank braille windows: KPPeriod+KP4
+* go forward skipping blank braille windows: KPPeriod+KP6
 * go to beginning of line: KP0+KPPeriod+KP4
 * go to end of line: KP0+KPPeriod+KP6
 * go left one character: KP0+KPPeriod+KP1
@@ -123,14 +123,14 @@ Special Modes
 * enter/leave preferences menu: KP0+KPEnter
 
 Horizontal Navigation
-* go left one braille window: KP0+KP4
-* go right one braille window: KP0+KP6
+* go backward one braille window: KP0+KP4
+* go forward one braille window: KP0+KP6
 
 Menu Operations
-* go to previous item: KP0+KP8
-* go to next item: KP0+KP2
-* go to first item: KP0+KP7
-* go to last item: KP0+KP1
+* go up to previous item: KP0+KP8
+* go down to next item: KP0+KP2
+* go up to first item: KP0+KP7
+* go down to last item: KP0+KP1
 * select previous choice: KP0+KP9
 * select next choice: KP0+KP3
 * go to previous menu level: KP0+KP5

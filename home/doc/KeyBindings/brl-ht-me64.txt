@@ -78,10 +78,10 @@ Vertical Navigation
 * go down to nearest line with less indent than character: Right+RoutingKey
 
 Horizontal Navigation
-* go left one braille window:
+* go backward one braille window:
   + Left
   + LeftRockerTop+LeftRockerBottom
-* go right one braille window:
+* go forward one braille window:
   + Right
   + RightRockerTop+RightRockerBottom
 * go to beginning of line: B1+Left
@@ -111,6 +111,7 @@ Clipboard Functions
 * search forward for clipboard text: B3+B5
 
 Configuration Functions
+* set touch navigation on/off: B1+B4+Left
 * set text style 6-dot/8-dot: B7
 * set skipping of lines with identical content on/off: B6+B1
 * set skipping of blank braille windows on/off: B6+B2

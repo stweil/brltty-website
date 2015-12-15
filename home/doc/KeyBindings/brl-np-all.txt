@@ -17,10 +17,10 @@ Vertical Navigation
 * go down one line: PadDown
 
 Horizontal Navigation
-* go left one braille window:
+* go backward one braille window:
   + PadLeft
   + NavLeft
-* go right one braille window:
+* go forward one braille window:
   + PadRight
   + NavRight
 

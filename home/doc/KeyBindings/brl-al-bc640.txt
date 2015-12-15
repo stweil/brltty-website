@@ -78,10 +78,10 @@ Vertical Navigation
 * go down to nearest line with different character: ThumbDown+RoutingKey1
 
 Horizontal Navigation
-* go left one braille window: ThumbLeft
-* go right one braille window: ThumbRight
-* go left to nearest non-blank braille window: ThumbHome+ThumbLeft
-* go right to nearest non-blank braille window: ThumbHome+ThumbRight
+* go backward one braille window: ThumbLeft
+* go forward one braille window: ThumbRight
+* go backward skipping blank braille windows: ThumbHome+ThumbLeft
+* go forward skipping blank braille windows: ThumbHome+ThumbRight
 * go to beginning of line: ETouchLeftRear
 * go to end of line: ETouchRightRear
 * go left one character: ETouchLeftFront
@@ -227,28 +227,39 @@ Menu Bindings
 Special Modes
 * enter/leave preferences menu:
   + SmartpadF1
+  + Dot8
   + ThumbHome
 
 Horizontal Navigation
-* go left one braille window: ThumbLeft
-* go right one braille window: ThumbRight
+* go backward one braille window: ThumbLeft
+* go forward one braille window: ThumbRight
 
 Menu Operations
-* go to previous item:
+* go up to previous item:
   + SmartpadUp
+  + Dot1
   + ThumbUp
-* go to next item:
+* go down to next item:
   + SmartpadDown
+  + Dot4
   + ThumbDown
-* go to first item: ETouchLeftRear
-* go to last item: ETouchLeftFront
+* go up to first item:
+  + Dot2
+  + ETouchLeftRear
+* go down to last item:
+  + Dot5
+  + ETouchLeftFront
 * select previous choice:
   + SmartpadLeft
+  + Dot3
   + ETouchRightRear
 * select next choice:
   + SmartpadRight
+  + Dot6
   + ETouchRightFront
-* go to previous menu level: SmartpadF2
+* go to previous menu level:
+  + SmartpadF2
+  + Dot7
 * restore preferences from disk:
   + SmartpadF4
   + ETouchLeftRear+ETouchLeftFront

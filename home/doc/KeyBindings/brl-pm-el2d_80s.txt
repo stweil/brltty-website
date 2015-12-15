@@ -56,8 +56,8 @@ Vertical Navigation
 * go to selected line: StatusKey2
 
 Horizontal Navigation
-* go left one braille window: BarLeft1
-* go right one braille window: BarRight1
+* go backward one braille window: BarLeft1
+* go forward one braille window: BarRight1
 * go to beginning of line: BarLeft2
 * go to end of line: BarRight2
 * place left end of braille window at character: BarUp2+RoutingKey1
