@@ -119,7 +119,7 @@ Keyboard Input
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
 * braille keyboard space: Space
-* braille keyboard uppercase: Up
+* braille keyboard upper: Up
 * braille keyboard control: Down
 * braille keyboard meta: Left
 * braille keyboard altgr: Right

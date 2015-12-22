@@ -65,7 +65,7 @@ Keyboard Input
 * braille keyboard space: Space
 * braille keyboard control: L4
 * braille keyboard meta: L5
-* braille keyboard uppercase: L3
+* braille keyboard upper: L3
 * backspace key: Backspace
 * escape key: Space+Dot1+Dot5
 * cursor-left key: Space+Dot2

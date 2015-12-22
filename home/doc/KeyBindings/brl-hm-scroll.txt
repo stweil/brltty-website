@@ -1,80 +1,67 @@
-Key Table: HIMS Braille Edge
-============================
+Key Table: HIMS Braille Sense with Four Scroll Keys
+===================================================
 
 Default Bindings
 ----------------
 
 Special Modes
 * enter/leave help display:
-  + LeftScrollUp+LeftScrollDown+RightScrollUp+RightScrollDown
   + Space+Dot1+Dot2+Dot5
-* enter/leave command learn mode:
-  + F5
-  + Space+Dot1+Dot2+Dot3
+  + LeftScrollUp+LeftScrollDown+RightScrollUp+RightScrollDown
+* enter/leave command learn mode: Space+Dot1+Dot2+Dot3
 * enter/leave preferences menu:
-  + RightScrollUp+RightScrollDown+LeftScrollDown
   + Space+Dot1+Dot2+Dot3+Dot4
+  + RightScrollUp+RightScrollDown+LeftScrollDown
 * enter/leave status display:
-  + RightScrollUp+RightScrollDown+LeftScrollUp
   + Space+Dot2+Dot3+Dot4
+  + RightScrollUp+RightScrollDown+LeftScrollUp
 * set display mode attributes/text:
-  + LeftScrollDown+RightScrollDown
   + Space+Dot1+Dot4+Dot5
+  + LeftScrollDown+RightScrollDown
 * set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
 * set display mode text: Space+Dot1+Dot4+Dot5+Dot7
 * set screen image frozen/unfrozen:
-  + LeftScrollDown+RightScrollUp
   + Space+Dot1+Dot2+Dot4
+  + LeftScrollDown+RightScrollUp
 * set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
 * set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
-* describe character: RightPadUp+RightPadDown, RoutingKey
-* show current date and time: F6
+* describe character: F2+F4, RoutingKey
 
 Cursor Functions
+* go to screen cursor: F4
 * go to screen cursor or go back after cursor tracking: RightScrollUp+RightScrollDown
+* go back after cursor tracking: F1+F4
 * bring screen cursor to character: RoutingKey
 * bring screen cursor to current line:
-  + LeftPadLeft+LeftPadRight
   + Space+Dot1+Dot2+Dot3+Dot6
+  + F2+F3
 
 Vertical Navigation
-* go up one line: LeftScrollUp
-* go down one line: LeftScrollDown
+* go up one line:
+  + F2
+  + LeftScrollUp
+* go down one line:
+  + F3
+  + LeftScrollDown
 * go to top line: LeftScrollUp+LeftScrollDown+RightScrollUp
 * go to bottom line: LeftScrollUp+LeftScrollDown+RightScrollDown
-* go up to nearest line with different content: RightPadUp
-* go down to nearest line with different content: RightPadDown
-* go up to nearest line with different highlighting: LeftPadUp
-* go down to nearest line with different highlighting: LeftPadDown
-* go up to first line of paragraph: F3
-* go down to first line of next paragraph: F4
-* go up to previous command prompt: F1
-* go down to next command prompt: F2
-* go up to nearest line with less indent than character: LeftPadRight+LeftPadUp, RoutingKey
-* go down to nearest line with less indent than character: LeftPadRight+LeftPadDown, RoutingKey
-* go up to nearest line with different character: LeftPadLeft+LeftPadUp, RoutingKey
-* go down to nearest line with different character: LeftPadLeft+LeftPadDown, RoutingKey
 
 Horizontal Navigation
 * go backward one braille window: RightScrollUp
 * go forward one braille window: RightScrollDown
-* go backward skipping blank braille windows: RightPadLeft
-* go forward skipping blank braille windows: RightPadRight
+* go backward skipping blank braille windows: F1+F2
+* go forward skipping blank braille windows: F3+F4
 * go to beginning of line: LeftScrollUp+LeftScrollDown
-* go left one character: F7
-* go right one character: F8
-* place left end of braille window at character: LeftPadUp+LeftPadDown, RoutingKey
+* place left end of braille window at character: F1+F3, RoutingKey
 
 Clipboard Functions
-* start new clipboard at character: RightPadLeft+RightPadUp, RoutingKey
-* append to clipboard from character: RightPadLeft+RightPadDown, RoutingKey
-* linear copy to character: RightPadRight+RightPadUp, RoutingKey
-* rectangular copy to character: RightPadRight+RightPadDown, RoutingKey
+* start new clipboard at character: F1+F3+F4, RoutingKey
+* append to clipboard from character: F2+F3+F4, RoutingKey
+* linear copy to character: F1+F2+F3, RoutingKey
+* rectangular copy to character: F1+F2+F4, RoutingKey
 * insert clipboard text after screen cursor:
-  + RightPadLeft+RightPadRight
   + Space+Dot1+Dot3+Dot4+Dot6
-* search backward for clipboard text: LeftPadLeft
-* search forward for clipboard text: LeftPadRight
+  + F1+F2+F3+F4
 * save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
 * restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
 
@@ -85,32 +72,24 @@ Configuration Functions
 * set text style 6-dot/8-dot: LeftScrollUp+RightScrollDown
 * set text style 6-dot: Space+Dot2+Dot3+Dot5
 * set text style 8-dot: Space+Dot2+Dot3+Dot6
-* set skipping of lines with identical content on/off:
-  + Space+F3
-  + Space+Dot2+Dot4
+* set skipping of lines with identical content on/off: Space+Dot2+Dot4
 * set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
 * set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
-* set skipping of blank braille windows on/off:
-  + Space+F6
-  + Space+Dot1+Dot2
+* set skipping of blank braille windows on/off: Space+Dot1+Dot2
 * set skipping of blank braille windows on: Space+Dot1+Dot2+Dot8
 * set skipping of blank braille windows off: Space+Dot1+Dot2+Dot7
 * set sliding braille window on/off: Space+Dot2+Dot4+Dot5+Dot6
 * set sliding braille window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
 * set sliding braille window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
 * set track screen cursor on/off:
-  + LeftScrollUp+RightScrollUp
   + Space+Dot2+Dot3+Dot4+Dot5
+  + LeftScrollUp+RightScrollUp
 * set track screen cursor on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
 * set track screen cursor off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
-* set screen cursor visibility on/off:
-  + Space+F8
-  + Space+Dot1+Dot4
+* set screen cursor visibility on/off: Space+Dot1+Dot4
 * set screen cursor visibility on: Space+Dot1+Dot4+Dot8
 * set screen cursor visibility off: Space+Dot1+Dot4+Dot7
-* set attribute underlining on/off:
-  + Space+F7
-  + Space+Dot1+Dot3+Dot6
+* set attribute underlining on/off: Space+Dot1+Dot3+Dot6
 * set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
 * set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
 
@@ -128,8 +107,8 @@ Keyboard Input
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
 * braille keyboard space: Space
-* braille keyboard meta: F4
-* braille keyboard control: F5
+* braille keyboard meta: F2
+* braille keyboard control: F3
 * type braille dots [7]: Space+Dot7
 * type braille dots [8]: Space+Dot8
 * backspace key: Dot7
@@ -144,26 +123,21 @@ Keyboard Input
 * end key: Space+Dot5
 * insert key: Space+Dot3+Dot5
 * delete key: Space+Dot2+Dot5+Dot6
-* function key: Space+F4, RoutingKey
 * enter key: Dot8
 * tab key: Space+Dot4+Dot5
-* switch to a specific virtual terminal: Space+F5, RoutingKey
 * switch to the previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
 * switch to the next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
-* set braille keyboard enabled/disabled:
-  + Space+F1
-  + Space+Dot1+Dot3
+* set braille keyboard enabled/disabled: Space+Dot1+Dot3
 * set braille keyboard enabled: Space+Dot1+Dot3+Dot8
 * set braille keyboard disabled: Space+Dot1+Dot3+Dot7
-* set braille input mode dots/text: Space+F2
 
 Menu Bindings
 -------------
 
 Special Modes
 * enter/leave preferences menu:
-  + RightScrollUp+RightScrollDown+LeftScrollDown
   + Dot8
+  + RightScrollUp+RightScrollDown+LeftScrollDown
 
 Horizontal Navigation
 * go backward one braille window: LeftScrollUp+LeftScrollDown
@@ -171,26 +145,26 @@ Horizontal Navigation
 
 Menu Operations
 * go up to previous item:
-  + LeftScrollUp
   + Dot1
+  + LeftScrollUp
 * go down to next item:
-  + LeftScrollDown
   + Dot4
+  + LeftScrollDown
 * go up to first item:
-  + LeftScrollUp+RightScrollUp
   + Dot2
+  + LeftScrollUp+RightScrollUp
 * go down to last item:
-  + LeftScrollDown+RightScrollDown
   + Dot5
+  + LeftScrollDown+RightScrollDown
 * select previous choice:
-  + RightScrollUp
   + Dot3
+  + RightScrollUp
 * select next choice:
-  + RightScrollDown
   + Dot6
+  + RightScrollDown
 * go to previous menu level:
-  + RightScrollUp+RightScrollDown+LeftScrollUp
   + Dot7
+  + RightScrollUp+RightScrollDown+LeftScrollUp
 * restore preferences from disk: LeftScrollUp+LeftScrollDown+RightScrollUp
 * save preferences to disk: LeftScrollUp+LeftScrollDown+RightScrollDown
 

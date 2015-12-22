@@ -119,7 +119,7 @@ Keyboard Input
 * braille keyboard dot8: Dot8
 * braille keyboard space: Thumb2
 * braille keyboard space: Thumb3
-* braille keyboard uppercase: Left
+* braille keyboard upper: Left
 * braille keyboard control: Right
 * type braille dots [7]: Thumb2+Dot7
 * type braille dots [8]: Thumb2+Dot8

@@ -1063,6 +1063,7 @@ If it isn't supplied then <CODE>+0</CODE> is assumed.</LI>
 A context contains definitions created by the
 <A HREF="#key-table-bind">bind</A>, 
 <A HREF="#key-table-hotkey">hotkey</A>,
+<A HREF="#key-table-ignore">ignore</A>,
 <A HREF="#key-table-map">map</A>,
 and
 <A HREF="#key-table-superimpose">superimpose</A>
@@ -1233,6 +1234,21 @@ the directory containing the including key table or subtable.</P>
 </UL>
 </P>
 
+<H3><A NAME="key-table-ignore"></A> The Ignore Directive</H3>
+
+<P>Ignore a specific key while within the current context.</P>
+<P><CODE>ignore</CODE> <EM>key</EM>
+<DL>
+<DT><B><EM>key</EM></B><DD>
+<P>The name of the key which is to be ignored.</P>
+</DL>
+</P>
+<P>Examples:
+<UL>
+<LI><CODE>ignore Key1</CODE></LI>
+</UL>
+</P>
+
 <H3><A NAME="key-table-map"></A> The Map Directive</H3>
 
 <P>Map a key to a braille keyboard function.
@@ -1266,7 +1282,7 @@ It may be one of the following keywords:
 <P>The space bar.</P>
 <DT><B>SHIFT</B><DD>
 <P>The shift key.</P>
-<DT><B>UPPERCASE</B><DD>
+<DT><B>UPPER</B><DD>
 <P>If a lowercase letter is being entered
 then translate it to its uppercase equivalent.</P>
 <DT><B>CONTROL</B><DD>

@@ -174,6 +174,7 @@ and/or combinations. A context contains definitions created by any of:
 
 *  `The Bind Directive`_
 *  `The Hotkey Directive`_
+*  `The Ignore Directive`_
 *  `The Map Directive`_
 *  `The Superimpose Directive`_
 
@@ -329,6 +330,20 @@ Examples::
 
    ifNotKey Key2 bind Key1 HOME
 
+The Ignore Directive
+--------------------
+
+.. parsed-literal:: ignore *key*
+
+Use this directive to ignore a specific key while within the current context.
+
+*key*
+   The name of the key which is to be ignored.
+
+Examples::
+
+   ignore Key1
+
 The Map Directive
 -----------------
 
@@ -367,7 +382,7 @@ defined within the current context.
       The space bar.
    ``SHIFT``
       The shift key.
-   ``UPPERCASE``
+   ``UPPER``
       If a lowercase letter is being entered then translate it to its
       uppercase equivalent.
    ``CONTROL``

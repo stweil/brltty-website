@@ -110,10 +110,11 @@
            6.4.1.5 The Hotkey Directive
            6.4.1.6 The IfKey Directive
            6.4.1.7 The Include Directive
-           6.4.1.8 The Map Directive
-           6.4.1.9 The Note Directive
-           6.4.1.10 The Superimpose Directive
-           6.4.1.11 The Title Directive
+           6.4.1.8 The Ignore Directive
+           6.4.1.9 The Map Directive
+           6.4.1.10 The Note Directive
+           6.4.1.11 The Superimpose Directive
+           6.4.1.12 The Title Directive
         6.4.2 Keyboard Properties
 
   7. Advanced Topics
@@ -5213,7 +5214,7 @@
 
   Define alternate ways to interpret certain key events and/or
   combinations.  A context contains definitions created by the ``bind'',
-  ``hotkey'', ``map'', and ``superimpose'' directives.
+  ``hotkey'', ``ignore'', ``map'', and ``superimpose'' directives.
 
   context _n_a_m_e [_t_i_t_l_e]
 
@@ -5360,7 +5361,20 @@
 
   ·  include /path/to/my/keys.kti
 
-  66..44..11..88..  TThhee MMaapp DDiirreeccttiivvee
+  66..44..11..88..  TThhee IIggnnoorree DDiirreeccttiivvee
+
+  Ignore a specific key while within the current context.
+
+  ignore _k_e_y
+
+     _k_e_y
+        The name of the key which is to be ignored.
+
+  Examples:
+
+  ·  ignore Key1
+
+  66..44..11..99..  TThhee MMaapp DDiirreeccttiivvee
 
   Map a key to a braille keyboard function.  The mapping is defined
   within the current context.
@@ -5405,7 +5419,7 @@
         SSHHIIFFTT
            The shift key.
 
-        UUPPPPEERRCCAASSEE
+        UUPPPPEERR
            If a lowercase letter is being entered then translate it to
            its uppercase equivalent.
 
@@ -5428,7 +5442,7 @@
 
   ·  map Key1 DOT1
 
-  66..44..11..99..  TThhee NNoottee DDiirreeccttiivvee
+  66..44..11..1100..  TThhee NNoottee DDiirreeccttiivvee
 
   Add a person-readable explanation to the key table's help text.  Notes
   are commonly used, for example, to describe the placement, sizes, and
@@ -5451,7 +5465,7 @@
 
   ·  note Key1 is the round key at the far left on the front surface.
 
-  66..44..11..1100..  TThhee SSuuppeerriimmppoossee DDiirreeccttiivvee
+  66..44..11..1111..  TThhee SSuuppeerriimmppoossee DDiirreeccttiivvee
 
   Implicitly include a braille keyboard function whenever a braille
   keyboard command consisting of at least one dot is executed.  The
@@ -5468,7 +5482,7 @@
 
   ·  superimpose DOT7
 
-  66..44..11..1111..  TThhee TTiittllee DDiirreeccttiivvee
+  66..44..11..1122..  TThhee TTiittllee DDiirreeccttiivvee
 
   Provide a person-readable summary of the key table's purpose.
 

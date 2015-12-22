@@ -1,5 +1,21 @@
-Key Table: HIMS SyncBraille
-===========================
+Key Table: HIMS Braille Sense with QWERTY Keyboard
+==================================================
+
+Notes
+* Function Key Bindings
+  + Function-b: skip blank windows on/off
+  + Function-c: cursor show/hide
+  + Function-d: display mode attributes/text
+  + Function-f: screen image frozen/unfrozen
+  + Function-h: help screen enter/leave
+  + Function-i: skip identical lines on/off
+  + Function-l: learn mode enter/leave
+  + Function-p: preferences menu enter/leave
+  + Function-s: status line enter/leave
+  + Function-t: cursor tracking on/off
+  + Function-u: highlight underline on/off
+  + Function-v: bring cursor to current line
+  + Function-w: sliding window on/off
 
 Default Bindings
 ----------------

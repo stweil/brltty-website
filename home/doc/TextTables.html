@@ -339,16 +339,19 @@ ul.auto-toc {
 <li><a class="reference internal" href="#the-assigndefault-directive" id="id10">The AssignDefault Directive</a></li>
 <li><a class="reference internal" href="#the-ifvar-directive" id="id11">The IfVar Directive</a></li>
 <li><a class="reference internal" href="#the-ifnotvar-directive" id="id12">The IfNotVar Directive</a></li>
-<li><a class="reference internal" href="#the-endif-directive" id="id13">The EndIf Directive</a></li>
-<li><a class="reference internal" href="#the-else-directive" id="id14">The Else Directive</a></li>
+<li><a class="reference internal" href="#the-beginvariables-directive" id="id13">The BeginVariables Directive</a></li>
+<li><a class="reference internal" href="#the-endvariables-directive" id="id14">The EndVariables Directive</a></li>
+<li><a class="reference internal" href="#the-listvariables-directive" id="id15">The ListVariables Directive</a></li>
+<li><a class="reference internal" href="#the-endif-directive" id="id16">The EndIf Directive</a></li>
+<li><a class="reference internal" href="#the-else-directive" id="id17">The Else Directive</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#operands" id="id15">Operands</a><ul>
-<li><a class="reference internal" href="#the-string-operand" id="id16">The String Operand</a></li>
-<li><a class="reference internal" href="#the-dots-operand" id="id17">The Dots Operand</a></li>
+<li><a class="reference internal" href="#operands" id="id18">Operands</a><ul>
+<li><a class="reference internal" href="#the-string-operand" id="id19">The String Operand</a></li>
+<li><a class="reference internal" href="#the-dots-operand" id="id20">The Dots Operand</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#text-table-list" id="id18">Text Table List</a></li>
+<li><a class="reference internal" href="#text-table-list" id="id21">Text Table List</a></li>
 </ul>
 </div>
 <div class="section" id="description">
@@ -560,9 +563,11 @@ relative, it is anchored at the directory containing the including file.</dd>
 <pre class="literal-block">
 assign <em>variable</em> <em>value</em>
 </pre>
-<p>Use this directive to create or update a variable associated with the current
-include level. The variable is visible to the current and to lower include
-levels, but not to higher include levels.</p>
+<p>Use this directive to create or update a variable associated with
+the current nesting level (see <a class="reference internal" href="#the-beginvariables-directive">The BeginVariables Directive</a>)
+of the current include level (see <a class="reference internal" href="#the-include-directive">The Include Directive</a>).
+The variable is visible to the current and to lower include levels,
+but not to higher include levels.</p>
 <dl class="docutils">
 <dt><em>variable</em></dt>
 <dd>The name of the variable. If the variable doesn't already exist at the
@@ -584,8 +589,10 @@ assign IndirectValue \{variableName}
 <pre class="literal-block">
 assignDefault <em>variable</em> <em>value</em>
 </pre>
-<p>Use this directive to assign a default value to a variable associated with the
-current include level. It's functionally equivalent to:</p>
+<p>Use this directive to assign a default value to a variable associated with
+the current nesting level (see <a class="reference internal" href="#the-beginvariables-directive">The BeginVariables Directive</a>)
+of the current include level (see <a class="reference internal" href="#the-include-directive">The Include Directive</a>).
+It's functionally equivalent to:</p>
 <pre class="literal-block">
 ifNotVar <em>variable</em> assign <em>variable</em> <em>value</em>
 </pre>
@@ -645,8 +652,46 @@ to all subsequent lines until <a class="reference internal" href="#the-endif-dir
 ifNotVar var1 assign var1 default\svalue
 </pre>
 </div>
+<div class="section" id="the-beginvariables-directive">
+<h3><a class="toc-backref" href="#id13">The BeginVariables Directive</a></h3>
+<pre class="literal-block">
+beginVariables
+</pre>
+<p>Use this directive to open a new variable nesting level.
+<a class="reference internal" href="#the-assign-directive">The Assign Directive</a>) will define variables at this new nesting level,
+and will hide variables with the same names in any previous nesting level.
+These variables will remain defined until <a class="reference internal" href="#the-endvariables-directive">The EndVariables Directive</a>
+that is at the same variable nesting level.</p>
+<p>Examples:</p>
+<pre class="literal-block">
+assign x 1
+# \{x} evaluates to 1
+beginVariables
+# \{x} still evaluates to 1
+assign x 2
+# \{x} now evaluates to 2
+endVariables
+# \{x} evaluates to 1 again
+</pre>
+</div>
+<div class="section" id="the-endvariables-directive">
+<h3><a class="toc-backref" href="#id14">The EndVariables Directive</a></h3>
+<pre class="literal-block">
+endVariables
+</pre>
+<p>Use this directive to close the current variable nesting level.
+See <a class="reference internal" href="#the-beginvariables-directive">The BeginVariables Directive</a> for details.</p>
+</div>
+<div class="section" id="the-listvariables-directive">
+<h3><a class="toc-backref" href="#id15">The ListVariables Directive</a></h3>
+<pre class="literal-block">
+listVariables
+</pre>
+<p>Use this directive to list all of the currently defiined variables.
+It can be helpful when debugging.</p>
+</div>
 <div class="section" id="the-endif-directive">
-<h3><a class="toc-backref" href="#id13">The EndIf Directive</a></h3>
+<h3><a class="toc-backref" href="#id16">The EndIf Directive</a></h3>
 <pre class="literal-block">
 endIf
 </pre>
@@ -659,7 +704,7 @@ endIf
 </pre>
 </div>
 <div class="section" id="the-else-directive">
-<h3><a class="toc-backref" href="#id14">The Else Directive</a></h3>
+<h3><a class="toc-backref" href="#id17">The Else Directive</a></h3>
 <pre class="literal-block">
 else
 </pre>
@@ -677,9 +722,9 @@ endIf
 </div>
 </div>
 <div class="section" id="operands">
-<h2><a class="toc-backref" href="#id15">Operands</a></h2>
+<h2><a class="toc-backref" href="#id18">Operands</a></h2>
 <div class="section" id="the-string-operand">
-<h3><a class="toc-backref" href="#id16">The String Operand</a></h3>
+<h3><a class="toc-backref" href="#id19">The String Operand</a></h3>
 <p>A <em>string</em> operand may be specified as a non-whitespace sequence of:</p>
 <ul>
 <li><p class="first">Any single character other than a backslash (\\) or a white-space
@@ -783,7 +828,7 @@ character.</p>
 </ul>
 </div>
 <div class="section" id="the-dots-operand">
-<h3><a class="toc-backref" href="#id17">The Dots Operand</a></h3>
+<h3><a class="toc-backref" href="#id20">The Dots Operand</a></h3>
 <p>A <em>dots</em> operand is a sequence of one to eight dot numbers. If the dot numbers
 are enclosed within (parentheses) then they may be separated from one another
 by whitespace. A dot number is a digit within the range <tt class="docutils literal">1</tt>-<tt class="docutils literal">8</tt>
@@ -794,7 +839,7 @@ in conjunction with any other dot number.</p>
 </div>
 </div>
 <div class="section" id="text-table-list">
-<h2><a class="toc-backref" href="#id18">Text Table List</a></h2>
+<h2><a class="toc-backref" href="#id21">Text Table List</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />

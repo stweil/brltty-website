@@ -331,83 +331,93 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#default-bindings" id="id2">Default Bindings</a><ul>
-<li><a class="reference internal" href="#special-modes" id="id3">Special Modes</a></li>
-<li><a class="reference internal" href="#cursor-functions" id="id4">Cursor Functions</a></li>
-<li><a class="reference internal" href="#vertical-navigation" id="id5">Vertical Navigation</a></li>
-<li><a class="reference internal" href="#horizontal-navigation" id="id6">Horizontal Navigation</a></li>
-<li><a class="reference internal" href="#configuration-functions" id="id7">Configuration Functions</a></li>
+<li><a class="reference internal" href="#default-bindings" id="id3">Default Bindings</a><ul>
+<li><a class="reference internal" href="#special-modes" id="id4">Special Modes</a></li>
+<li><a class="reference internal" href="#cursor-functions" id="id5">Cursor Functions</a></li>
+<li><a class="reference internal" href="#vertical-navigation" id="id6">Vertical Navigation</a></li>
+<li><a class="reference internal" href="#horizontal-navigation" id="id7">Horizontal Navigation</a></li>
+<li><a class="reference internal" href="#configuration-functions" id="id8">Configuration Functions</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#menu-bindings" id="id8">Menu Bindings</a><ul>
-<li><a class="reference internal" href="#id1" id="id9">Horizontal Navigation</a></li>
-<li><a class="reference internal" href="#menu-operations" id="id10">Menu Operations</a></li>
+<li><a class="reference internal" href="#menu-bindings" id="id9">Menu Bindings</a><ul>
+<li><a class="reference internal" href="#id1" id="id10">Special Modes</a></li>
+<li><a class="reference internal" href="#id2" id="id11">Horizontal Navigation</a></li>
+<li><a class="reference internal" href="#menu-operations" id="id12">Menu Operations</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="default-bindings">
-<h2><a class="toc-backref" href="#id2">Default Bindings</a></h2>
+<h2><a class="toc-backref" href="#id3">Default Bindings</a></h2>
 <div class="section" id="special-modes">
-<h3><a class="toc-backref" href="#id3">Special Modes</a></h3>
+<h3><a class="toc-backref" href="#id4">Special Modes</a></h3>
 <ul class="simple">
-<li>enter/leave help display: LeftUp+LeftDown+RightUp+RightDown</li>
-<li>enter/leave preferences menu: LeftDown+RightUp+RightDown</li>
-<li>enter/leave status display: LeftUp+RightUp+RightDown</li>
-<li>set display mode attributes/text: LeftDown+RightDown</li>
-<li>set screen image frozen/unfrozen: LeftDown+RightUp</li>
+<li>enter/leave help display: LeftScrollUp+LeftScrollDown+RightScrollUp+RightScrollDown</li>
+<li>enter/leave preferences menu: RightScrollUp+RightScrollDown+LeftScrollDown</li>
+<li>enter/leave status display: RightScrollUp+RightScrollDown+LeftScrollUp</li>
+<li>set display mode attributes/text: LeftScrollDown+RightScrollDown</li>
+<li>set screen image frozen/unfrozen: LeftScrollDown+RightScrollUp</li>
 </ul>
 </div>
 <div class="section" id="cursor-functions">
-<h3><a class="toc-backref" href="#id4">Cursor Functions</a></h3>
+<h3><a class="toc-backref" href="#id5">Cursor Functions</a></h3>
 <ul class="simple">
-<li>go to screen cursor or go back after cursor tracking: RightUp+RightDown</li>
+<li>go to screen cursor or go back after cursor tracking: RightScrollUp+RightScrollDown</li>
 <li>bring screen cursor to character: RoutingKey</li>
 </ul>
 </div>
 <div class="section" id="vertical-navigation">
-<h3><a class="toc-backref" href="#id5">Vertical Navigation</a></h3>
+<h3><a class="toc-backref" href="#id6">Vertical Navigation</a></h3>
 <ul class="simple">
-<li>go up one line: LeftUp</li>
-<li>go down one line: LeftDown</li>
-<li>go to beginning of top line: LeftUp+LeftDown+RightUp</li>
-<li>go to beginning of bottom line: LeftUp+LeftDown+RightDown</li>
+<li>go up one line: LeftScrollUp</li>
+<li>go down one line: LeftScrollDown</li>
+<li>go to top line: LeftScrollUp+LeftScrollDown+RightScrollUp</li>
+<li>go to bottom line: LeftScrollUp+LeftScrollDown+RightScrollDown</li>
 </ul>
 </div>
 <div class="section" id="horizontal-navigation">
-<h3><a class="toc-backref" href="#id6">Horizontal Navigation</a></h3>
+<h3><a class="toc-backref" href="#id7">Horizontal Navigation</a></h3>
 <ul class="simple">
-<li>go backward one braille window: RightUp</li>
-<li>go forward one braille window: RightDown</li>
-<li>go to beginning of line: LeftUp+LeftDown</li>
+<li>go backward one braille window: RightScrollUp</li>
+<li>go forward one braille window: RightScrollDown</li>
+<li>go to beginning of line: LeftScrollUp+LeftScrollDown</li>
 </ul>
 </div>
 <div class="section" id="configuration-functions">
-<h3><a class="toc-backref" href="#id7">Configuration Functions</a></h3>
+<h3><a class="toc-backref" href="#id8">Configuration Functions</a></h3>
 <ul class="simple">
-<li>set text style 6-dot/8-dot: LeftUp+RightDown</li>
-<li>set track screen cursor on/off: LeftUp+RightUp</li>
+<li>set text style 6-dot/8-dot: LeftScrollUp+RightScrollDown</li>
+<li>set track screen cursor on/off: LeftScrollUp+RightScrollUp</li>
 </ul>
 </div>
 </div>
 <div class="section" id="menu-bindings">
-<h2><a class="toc-backref" href="#id8">Menu Bindings</a></h2>
+<h2><a class="toc-backref" href="#id9">Menu Bindings</a></h2>
 <div class="section" id="id1">
-<h3><a class="toc-backref" href="#id9">Horizontal Navigation</a></h3>
+<h3><a class="toc-backref" href="#id10">Special Modes</a></h3>
 <ul class="simple">
-<li>go backward one braille window: LeftUp+LeftDown</li>
-<li>go forward one braille window: RightUp+RightDown</li>
+<li>enter/leave preferences menu: RightScrollUp+RightScrollDown+LeftScrollDown</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3><a class="toc-backref" href="#id11">Horizontal Navigation</a></h3>
+<ul class="simple">
+<li>go backward one braille window: LeftScrollUp+LeftScrollDown</li>
+<li>go forward one braille window: RightScrollUp+RightScrollDown</li>
 </ul>
 </div>
 <div class="section" id="menu-operations">
-<h3><a class="toc-backref" href="#id10">Menu Operations</a></h3>
+<h3><a class="toc-backref" href="#id12">Menu Operations</a></h3>
 <ul class="simple">
-<li>go up to previous item: LeftUp</li>
-<li>go down to next item: LeftDown</li>
-<li>go up to first item: LeftUp+RightUp</li>
-<li>go down to last item: LeftDown+RightDown</li>
-<li>select previous choice: RightUp</li>
-<li>select next choice: RightDown</li>
+<li>go up to previous item: LeftScrollUp</li>
+<li>go down to next item: LeftScrollDown</li>
+<li>go up to first item: LeftScrollUp+RightScrollUp</li>
+<li>go down to last item: LeftScrollDown+RightScrollDown</li>
+<li>select previous choice: RightScrollUp</li>
+<li>select next choice: RightScrollDown</li>
+<li>go to previous menu level: RightScrollUp+RightScrollDown+LeftScrollUp</li>
+<li>restore preferences from disk: LeftScrollUp+LeftScrollDown+RightScrollUp</li>
+<li>save preferences to disk: LeftScrollUp+LeftScrollDown+RightScrollDown</li>
 </ul>
 </div>
 </div>
