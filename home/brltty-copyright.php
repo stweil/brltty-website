@@ -1,5 +1,5 @@
-<B>BRLTTY</B> is Copyright (C) 1995-2003 by the
-<A HREF="contact.html">BRLTTY Team</A>.
+<B>BRLTTY</B> is Copyright (C) 1995-2016 by
+<A HREF="contact.html">The BRLTTY Developers</A>.
 <BR>
 <B>BRLTTY</B> comes with NO WARRANTY.
 <BR>
