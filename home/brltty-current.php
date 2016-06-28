@@ -5,37 +5,6 @@
    global $brlapi_files;
    put_versions('BrlAPI', $brlapi_files, BRLAPI_CURRENT);
 ?>
-<B>BRLTTY</B> can also be downloaded from:
-<DL>
-<?php
-   function put_alternate ($name, $home, $directory, $files) {
-      echo("<DT><A HREF=\"$home\">$name</A><DD>\n");
-      echo("<A HREF=\"$directory\">$directory</A>\n");
-      echo("<UL>\n");
-      reset($files);
-      while (list($key, $file) = each($files)) {
-         echo("<LI><A HREF=\"$directory$file\">$file</A>\n");
-      }
-      echo("</UL>\n");
-   }
-   put_alternate(
-      "The Public's Library", "http://www.ibiblio.org",
-      "ftp://ibiblio.org/pub/Linux/system/access/", array(
-         "brltty-3.0.tar.gz",
-         "brltty-3.0-2.i386.rpm",
-         "brltty-3.0-2.src.rpm"
-      )
-   );
-   put_alternate(
-      "The Blinux Site", "http://www.leb.net/blinux/",
-      "ftp://leb.net/pub/blinux/brltty/", array(
-         "brltty-3.0.tar.gz",
-         "brltty-3.0-2.i386.rpm",
-         "brltty-3.0-2.src.rpm"
-      )
-   );
-?>
-</DL>
 <P>
 After downloading the package, install it as follows:
 <DL>
