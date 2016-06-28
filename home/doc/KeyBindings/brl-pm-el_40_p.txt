@@ -2,14 +2,18 @@ Key Table: Papenmeier BrailleX EL 40 P
 ======================================
 
 Notes
-* RoutingKey1 refers to any of the keys behind the text cells.
+* The long key on the front is the Easy Access Bar.
+  It can be moved two steps in each direction (left, right, up, down).
+* RoutingKey1 refers to the row of keys just behind the text cells.
+* The rocker at the left side of the top that doesn't stay when pressed
+  is named the Left Key.
+* The rockers at each side of the top that stay when pressed
+  are named the Left and Right Switch.
 
 Default Bindings
 ----------------
 
 Special Modes
-* enter/leave help display: RightKeyRear
-* enter/leave command learn mode: RightKeyFront
 * enter/leave preferences menu: LeftKeyFront+BarRight1
 * enter/leave status display: LeftKeyFront+BarLeft1
 * set display mode attributes/text: LeftKeyRear+BarLeft1
@@ -51,34 +55,20 @@ Clipboard Functions
 Configuration Functions
 * set autorepeat on/off: LeftKeyFront+BarDown1
 * set text style 6-dot/8-dot: LeftKeyRear+BarUp1
-* set skipping of lines with identical content on/off: RightKeyFront+BarLeft1
-* set skipping of blank braille windows on/off: RightKeyFront+BarRight1
-* set sliding braille window on/off: RightKeyFront+BarRight2
 * set track screen cursor on/off: LeftKeyRear+BarRight1
 * set screen cursor visibility on/off: LeftKeyRear+BarRight2
 * set attribute underlining on/off: LeftKeyRear+BarLeft2
 * set capital letter blinking on/off: LeftKeyRear+BarUp2
-* set alert tunes on/off: RightKeyFront+BarDown1
 
 Menu Operations
 * restore preferences from disk: LeftKeyFront+BarLeft2
 * save preferences to disk: LeftKeyFront+BarRight2
 
 Speech Functions
-* stop speaking: RightKeyRear+BarLeft1
-* speak current line: RightKeyRear+BarRight1
-* speak from top of screen through current line: RightKeyRear+BarUp1
-* speak from current line through bottom of screen: RightKeyRear+BarDown1
-* go to current speaking position: RightKeyFront+BarUp1
-* decrease speaking volume: RightKeyRear+BarDown2
-* increase speaking volume: RightKeyRear+BarUp2
-* decrease speaking rate: RightKeyRear+BarLeft2
-* increase speaking rate: RightKeyRear+BarRight2
 * set autospeak on/off: LeftKeyFront+BarUp1
 
 Special Functions
 * restart braille driver: LeftKeyFront+BarUp2
-* restart speech driver: RightKeyFront+BarUp2
 
 Menu Bindings
 -------------

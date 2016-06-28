@@ -123,7 +123,9 @@ Horizontal Navigation
 * go right one character:
   + Display4+Display6
   + Dot6+Right
-* place left end of braille window at character: Display6+RoutingKey
+* place left end of braille window at character:
+  + Display6+RoutingKey
+  + B9+RoutingKey
 
 Clipboard Functions
 * start new clipboard at character:
@@ -139,7 +141,9 @@ Clipboard Functions
   + Display5+RoutingKey
   + RoutingKey+Down
 * copy characters to clipboard: RoutingKey+RoutingKey
-* append characters to clipboard: Display2+RoutingKey+RoutingKey
+* append characters to clipboard:
+  + Display2+RoutingKey+RoutingKey
+  + B10+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
   + Display1+Display2+Display3+Display4
   + B10+Dot1+Dot3+Dot4+Dot6
@@ -280,6 +284,7 @@ Keyboard Input
 * delete key:
   + B10+Dot2+Dot5+Dot6
   + Dot2+Right
+* function key: B10+RoutingKey
 * enter key:
   + Dot8
   + Dot2+Press

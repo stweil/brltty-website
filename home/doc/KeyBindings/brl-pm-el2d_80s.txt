@@ -2,8 +2,13 @@ Key Table: Papenmeier BrailleX EL2D-80s
 =======================================
 
 Notes
-* RoutingKey1 refers to any of the keys behind the text cells.
+* The long key on the front is the Easy Access Bar.
+  It can be moved two steps in each direction (left, right, up, down).
+* RoutingKey1 refers to the row of keys just behind the text cells.
+* RoutingKey2 refers to the row of keys behind the RoutingKey1 row.
 * The keys to the left of the status cells are named Status.1 through Status.20.
+* The rockers at each side of the top that don't stay when pressed
+  are named the Left and Right Key.
 
 Default Bindings
 ----------------
@@ -32,8 +37,8 @@ Special Modes
 * set screen image frozen: Status.8+BarRight1
 * set screen image unfrozen: Status.8+BarLeft1
 * describe character:
-  + BarDown2+RoutingKey1
   + RoutingKey2
+  + BarDown2+RoutingKey1
 * show current date and time: Status.19
 
 Cursor Functions
@@ -63,10 +68,18 @@ Horizontal Navigation
 * place left end of braille window at character: BarUp2+RoutingKey1
 
 Clipboard Functions
-* start new clipboard at character: BarLeft2+RoutingKey1
-* append to clipboard from character: BarLeft1+RoutingKey1
-* linear copy to character: BarRight1+RoutingKey1
-* rectangular copy to character: BarRight2+RoutingKey1
+* start new clipboard at character:
+  + BarLeft2+RoutingKey1
+  + LeftKeyRear+RoutingKey1
+* append to clipboard from character:
+  + BarLeft1+RoutingKey1
+  + LeftKeyFront+RoutingKey1
+* linear copy to character:
+  + BarRight1+RoutingKey1
+  + RightKeyRear+RoutingKey1
+* rectangular copy to character:
+  + BarRight2+RoutingKey1
+  + RightKeyFront+RoutingKey1
 * insert clipboard text after screen cursor:
   + Status.20
   + LeftKeyRear+BarDown1
@@ -136,4 +149,17 @@ Special Functions
   + Status.16
   + LeftKeyFront+BarUp2
 * restart speech driver: RightKeyFront+BarUp2
+
+Menu Bindings
+-------------
+
+Menu Operations
+* go up to previous item: BarUp1
+* go down to next item: BarDown1
+* go up to first item: BarUp2
+* go down to last item: BarDown2
+* select previous choice: BarLeft1
+* select next choice: BarRight1
+* restore preferences from disk: BarLeft2
+* save preferences to disk: BarRight2
 

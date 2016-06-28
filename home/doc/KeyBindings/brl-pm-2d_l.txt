@@ -2,7 +2,7 @@ Key Table: Papenmeier BrailleX 2D Lite (plus)
 =============================================
 
 Notes
-* RoutingKey1 refers to any of the keys behind the text cells.
+* RoutingKey1 refers to the row of keys just behind the text cells.
 * The keys to the left of the status cells are named Status.1 through Status.13.
 
 Default Bindings

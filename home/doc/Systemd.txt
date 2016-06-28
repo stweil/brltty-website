@@ -3,74 +3,70 @@ Using Systemd Service Management
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: prologue.rst
-.. |service warning| replace:: system service support not available on this platform
 
-Choosing the Correct Service Unit
-=================================
+.. |default user configuration directory| replace:: /etc
+.. |default system unit directory| replace:: |default user configuration directory|/systemd/system
+.. |service unit| replace:: brltty.service
+.. |service instance unit| replace:: brltty@.service
+.. |wrapper directory| replace:: /sbin
+.. |wrapper script| replace:: brltty-systemd-wrapper
 
-Two service units for BRLTTY can be found within the ``Autostart/Systemd/`` 
-subdirectory of BRLTTY's source tree.
+Installing the Service Units
+============================
 
-For Older Versions of Systemd
------------------------------
+You need to copy both the service unit and the service instance unit
+into Systemd's system unit directory.
+You can find out where this directory is on your system with this command::
 
-If your system is using Systemd for service administration,
-but, when configuring BRLTTY, you get the following warning:
+   pkg-config systemd --variable=systemdsystemunitpath
 
-.. parsed-literal:: |service warning|
+The output from this command is a colon-delimited list of directories.
+Look for the one that starts with |default user configuration directory|.
+Assuming that Systemd's system unit directory is |default system unit directory|
+(please ensure to use whatever it really is on your system):
 
-then you'll need to use the older service unit.
-It's provided as ``brltty-old.service``.
-Remember to install it as ``brltty.service``.
+1) Define the service instance unit for BRLTTY as follows:
 
-You're getting this warning for one of the following reasons:
+  .. parsed-literal:: cp |service instance unit| |default system unit directory|/|service instance unit|
 
-* Your system is using an older version of Systemd.
+2) Define the service unit for BRLTTY as follows:
 
-* You haven't installed Systemd's development package.
-  Check your system and your distribution for a package named something like
-  ``systemd-dev`` or ``systemd-devel``.
-  If the development package isn't installed but is available
-  then we recommend that you install it and then reconfigure BRLTTY.
+  .. parsed-literal:: cp |service unit| |default system unit directory|/|service unit|
 
-For Newer Versions of Systemd
------------------------------
+3) Tell Systemd that these units have been defined as follows::
 
-If your system is using Systemd for service administration,
-and, when configuring BRLTTY, you don't get the following warning:
+     systemctl daemon-reload
 
-.. parsed-literal:: |service warning|
+You also need to install a wrapper script that's used by the service units:
 
-then you should use the newer service unit.
-It's provided as ``brltty.service``.
-
-Installing the Service Unit
-===========================
-
-You need to copy the service unit into Systemd's unit directory. You can locate
-Systemd's unit directory with this command::
-
-   pkg-config systemd --variable=systemduserunitdir
-
-Assuming that Systemd's unit directory is ``/usr/lib/systemd/user`` (please 
-ensure to use whatever it really is on your system), define the service unit 
-for BRLTTY as follows::
-
-   cp brltty.service /usr/lib/systemd/user/brltty.service
+  .. parsed-literal:: cp |wrapper script| |wrapper directory|/|wrapper script|
+  .. parsed-literal:: chmod 755 |wrapper directory|/|wrapper script|
 
 Managing the BRLTTY Service
 ===========================
 
 Once the unit file is in the right place, you'll be able to use standard 
-Systemd commands to manage the ``brltty`` service. The most common ones are::
+Systemd commands to manage the ``brltty`` service. The most common ones are:
 
-   systemctl status brltty
-   systemctl start brltty
-   systemctl stop brltty
-   systemctl enable brltty
-   systemctl disable brltty
+systemctl start brltty
+   Explicitly start the ``brltty`` service.
 
-Nothing is automatic. If you'd like to start the ``brltty`` service right away
+systemctl stop brltty
+   Explicitly stop the ``brltty`` service.
+
+systemctl enable brltty
+   Automatically start the ``brltty`` service on system boot.
+
+systemctl disable brltty
+   Don't automatically start the ``brltty`` service on system boot.
+
+systemctl status brltty
+   Show the current status of the ``brltty`` service.
+
+journalctl -u brltty
+   Show system log messages pertaining to the ``brltty`` service.
+
+Nothing is implicit. If you'd like to start the ``brltty`` service right away
 then use the ``start`` function. If you'd like the ``brltty`` service to be
 automatically started when the system is booted then use the ``enable``
 function.

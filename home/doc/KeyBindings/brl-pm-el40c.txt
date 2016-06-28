@@ -2,7 +2,14 @@ Key Table: Papenmeier BrailleX EL40c
 ====================================
 
 Notes
-* RoutingKey1 refers to any of the keys behind the text cells.
+* The long key on the front is the Easy Access Bar.
+  It can only be moved one step in each direction (left, right, up, down).
+  To emulate the second step, also press any of the lower routing keys
+  (those in the row just behind the text cells).
+* RoutingKey1 refers to the row of keys just behind the text cells.
+* RoutingKey2 refers to the row of keys behind the RoutingKey1 row.
+* The rockers at each side of the top that don't stay when pressed
+  are named the Left and Right Key.
 
 Default Bindings
 ----------------
@@ -14,9 +21,7 @@ Special Modes
 * enter/leave status display: LeftKeyFront+BarLeft1
 * set display mode attributes/text: LeftKeyRear+BarLeft1
 * set screen image frozen/unfrozen: LeftKeyFront+BarDown2
-* describe character:
-  + BarDown2+RoutingKey1
-  + RoutingKey2
+* describe character: RoutingKey2
 
 Cursor Functions
 * go to screen cursor: LeftKeyFront
@@ -29,21 +34,18 @@ Vertical Navigation
 * go down one line: BarDown1
 * go to top line: BarUp2
 * go to bottom line: BarDown2
-* go up to nearest line with less indent than character: BarUp1+RoutingKey1
-* go down to nearest line with less indent than character: BarDown1+RoutingKey1
 
 Horizontal Navigation
 * go backward one braille window: BarLeft1
 * go forward one braille window: BarRight1
 * go to beginning of line: BarLeft2
 * go to end of line: BarRight2
-* place left end of braille window at character: BarUp2+RoutingKey1
 
 Clipboard Functions
-* start new clipboard at character: BarLeft2+RoutingKey1
-* append to clipboard from character: BarLeft1+RoutingKey1
-* linear copy to character: BarRight1+RoutingKey1
-* rectangular copy to character: BarRight2+RoutingKey1
+* start new clipboard at character: LeftKeyRear+RoutingKey1
+* append to clipboard from character: LeftKeyFront+RoutingKey1
+* linear copy to character: RightKeyRear+RoutingKey1
+* rectangular copy to character: RightKeyFront+RoutingKey1
 * insert clipboard text after screen cursor: LeftKeyRear+BarDown1
 
 Configuration Functions
@@ -77,4 +79,17 @@ Speech Functions
 Special Functions
 * restart braille driver: LeftKeyFront+BarUp2
 * restart speech driver: RightKeyFront+BarUp2
+
+Menu Bindings
+-------------
+
+Menu Operations
+* go up to previous item: BarUp1
+* go down to next item: BarDown1
+* go up to first item: BarUp2
+* go down to last item: BarDown2
+* select previous choice: BarLeft1
+* select next choice: BarRight1
+* restore preferences from disk: BarLeft2
+* save preferences to disk: BarRight2
 

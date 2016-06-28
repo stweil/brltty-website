@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="Docutils 0.10: http://docutils.sourceforge.net/" />
-<title>Key Table: Papenmeier BrailleX Trio</title>
+<title>Key Table: Papenmeier BrailleX Live</title>
 <style type="text/css">
 
 /*
@@ -322,11 +322,11 @@ ul.auto-toc {
 </style>
 </head>
 <body>
-<div class="document" id="key-table-papenmeier-braillex-trio">
-<h1 class="title">Key Table: Papenmeier BrailleX Trio</h1>
+<div class="document" id="key-table-papenmeier-braillex-live">
+<h1 class="title">Key Table: Papenmeier BrailleX Live</h1>
 
 <ul class="simple">
-<li><a class="reference external" href="brl-pm-trio.txt">Help Screen Version</a></li>
+<li><a class="reference external" href="brl-pm-live.txt">Help Screen Version</a></li>
 </ul>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
@@ -361,7 +361,9 @@ ul.auto-toc {
 <h3><a class="toc-backref" href="#id5">Notes</a></h3>
 <ul class="simple">
 <li>The long key on the front is the Easy Access Bar.
-It can be moved two steps in each direction (left, right, up, down).</li>
+It can only be moved one step in each direction (left, right, up, down).
+To emulate the second step, also press any of the lower routing keys
+(those in the row just behind the text cells).</li>
 <li>RoutingKey1 refers to the row of keys just behind the text cells.</li>
 <li>The rockers at each side of the top that don't stay when pressed
 are named the Left and Right Key.</li>
@@ -407,7 +409,6 @@ are named the Left and Right Key.</li>
 </li>
 <li>set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8</li>
 <li>set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7</li>
-<li>describe character: BarDown2+RoutingKey1</li>
 </ul>
 </div>
 <div class="section" id="cursor-functions">
@@ -430,8 +431,6 @@ are named the Left and Right Key.</li>
 <li>go down one line: BarDown1</li>
 <li>go to top line: BarUp2</li>
 <li>go to bottom line: BarDown2</li>
-<li>go up to nearest line with less indent than character: BarUp1+RoutingKey1</li>
-<li>go down to nearest line with less indent than character: BarDown1+RoutingKey1</li>
 </ul>
 </div>
 <div class="section" id="horizontal-navigation">
@@ -441,32 +440,15 @@ are named the Left and Right Key.</li>
 <li>go forward one braille window: BarRight1</li>
 <li>go to beginning of line: BarLeft2</li>
 <li>go to end of line: BarRight2</li>
-<li>place left end of braille window at character: BarUp2+RoutingKey1</li>
 </ul>
 </div>
 <div class="section" id="clipboard-functions">
 <h3><a class="toc-backref" href="#id11">Clipboard Functions</a></h3>
 <ul class="simple">
-<li>start new clipboard at character:<ul>
-<li>BarLeft2+RoutingKey1</li>
-<li>LeftKeyRear+RoutingKey1</li>
-</ul>
-</li>
-<li>append to clipboard from character:<ul>
-<li>BarLeft1+RoutingKey1</li>
-<li>LeftKeyFront+RoutingKey1</li>
-</ul>
-</li>
-<li>linear copy to character:<ul>
-<li>BarRight1+RoutingKey1</li>
-<li>RightKeyRear+RoutingKey1</li>
-</ul>
-</li>
-<li>rectangular copy to character:<ul>
-<li>BarRight2+RoutingKey1</li>
-<li>RightKeyFront+RoutingKey1</li>
-</ul>
-</li>
+<li>start new clipboard at character: LeftKeyRear+RoutingKey1</li>
+<li>append to clipboard from character: LeftKeyFront+RoutingKey1</li>
+<li>linear copy to character: RightKeyRear+RoutingKey1</li>
+<li>rectangular copy to character: RightKeyFront+RoutingKey1</li>
 <li>insert clipboard text after screen cursor:<ul>
 <li>LeftKeyRear+BarDown1</li>
 <li>Space+Dot1+Dot3+Dot4+Dot6</li>

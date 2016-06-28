@@ -139,7 +139,9 @@ Clipboard Functions
   + Display5+RoutingKey
   + RoutingKey+Down
 * copy characters to clipboard: RoutingKey+RoutingKey
-* append characters to clipboard: Display2+RoutingKey+RoutingKey
+* append characters to clipboard:
+  + Display2+RoutingKey+RoutingKey
+  + B9+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
   + Display1+Display2+Display3+Display4
   + B9+Dot1+Dot3+Dot4+Dot6
@@ -279,6 +281,7 @@ Keyboard Input
 * delete key:
   + B9+Dot2+Dot5+Dot6
   + Dot2+Right
+* function key: B9+RoutingKey
 * enter key:
   + Dot8
   + Dot2+Press

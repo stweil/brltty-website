@@ -2,7 +2,24 @@ Key Table: Papenmeier BrailleX Elba 20
 ======================================
 
 Notes
-* RoutingKey1 refers to any of the keys behind the text cells.
+* The long key on the front is the Easy Access Bar.
+  It can be moved two steps in each direction (left, right, up, down).
+* RoutingKey1 refers to the row of keys just behind the text cells.
+* The left and right keys are emulated. Enter key emulation mode by
+  pressing Thumb1 + Thumb2 (Left Windows + Right Windows). Then press:
+  + Left Key Rear: Left Thumb (Left Windows)
+  + Left Key Front: Space + Left Thumb (Context + Left Windows)
+  + Right Key Rear: Right Thumb (Right Windows)
+  + Right Key Front: Space + Right Thumb (Context + Right Windows)
+* The left and right switches are emulated. Enter key emulation mode by
+  pressing Thumb1 + Thumb2 (Left Windows + Right Windows). Then press:
+  + Left Switch Rear: Dot 1 (f)
+  + Left Switch Center: Dot 2 (d)
+  + Left Switch Front: Dot 3 (s)
+  + Right Switch Rear: Dot 4 (j)
+  + Right Switch Center: Dot 5 (k)
+  + Right Switch Front: Dot 6 (l)
+  + center both switches: Dot 7 (a)
 
 Default Bindings
 ----------------
@@ -42,10 +59,18 @@ Horizontal Navigation
 * place left end of braille window at character: BarUp2+RoutingKey1
 
 Clipboard Functions
-* start new clipboard at character: BarLeft2+RoutingKey1
-* append to clipboard from character: BarLeft1+RoutingKey1
-* linear copy to character: BarRight1+RoutingKey1
-* rectangular copy to character: BarRight2+RoutingKey1
+* start new clipboard at character:
+  + BarLeft2+RoutingKey1
+  + LeftKeyRear+RoutingKey1
+* append to clipboard from character:
+  + BarLeft1+RoutingKey1
+  + LeftKeyFront+RoutingKey1
+* linear copy to character:
+  + BarRight1+RoutingKey1
+  + RightKeyRear+RoutingKey1
+* rectangular copy to character:
+  + BarRight2+RoutingKey1
+  + RightKeyFront+RoutingKey1
 * insert clipboard text after screen cursor: LeftKeyRear+BarDown1
 
 Configuration Functions

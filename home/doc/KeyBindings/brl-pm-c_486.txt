@@ -2,7 +2,7 @@ Key Table: Papenmeier BrailleX Compact 486
 ==========================================
 
 Notes
-* RoutingKey1 refers to any of the keys behind the text cells.
+* RoutingKey1 refers to the row of keys just behind the text cells.
 
 Default Bindings
 ----------------

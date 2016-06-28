@@ -72,9 +72,11 @@ Vertical Navigation
 * go to top line:
   + Display1+Display4
   + Dot4+Up
+  + B11+Up
 * go to bottom line:
   + Display3+Display6
   + Dot4+Down
+  + B11+Down
 * go to beginning of top line: Display2+Display4
 * go to beginning of bottom line: Display2+Display6
 * go up to nearest line with different content:
@@ -113,8 +115,12 @@ Horizontal Navigation
 * go forward one braille window:
   + Display5
   + Right
-* go backward skipping blank braille windows: Dot5+Left
-* go forward skipping blank braille windows: Dot5+Right
+* go backward skipping blank braille windows:
+  + Dot5+Left
+  + B11+Left
+* go forward skipping blank braille windows:
+  + Dot5+Right
+  + B11+Right
 * go to beginning of line:
   + Display1+Display2+Display3
   + Dot4+Left
@@ -127,7 +133,9 @@ Horizontal Navigation
 * go right one character:
   + Display4+Display6
   + Dot6+Right
-* place left end of braille window at character: Display6+RoutingKey
+* place left end of braille window at character:
+  + Display6+RoutingKey
+  + B9+RoutingKey
 
 Clipboard Functions
 * start new clipboard at character:
@@ -143,11 +151,14 @@ Clipboard Functions
   + Display5+RoutingKey
   + RoutingKey+Down
 * copy characters to clipboard: RoutingKey+RoutingKey
-* append characters to clipboard: Display2+RoutingKey+RoutingKey
+* append characters to clipboard:
+  + Display2+RoutingKey+RoutingKey
+  + B11+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
   + Display1+Display2+Display3+Display4
   + B11+Dot1+Dot3+Dot4+Dot6
   + Dot2+Down
+  + B11+Press
 * search backward for clipboard text:
   + Display2+Display4+Display6+Display1
   + Dot4+Dot5+Dot6+Left
@@ -284,13 +295,17 @@ Keyboard Input
 * delete key:
   + B11+Dot2+Dot5+Dot6
   + Dot2+Right
+* function key: B11+RoutingKey
 * enter key:
+  + B10
   + Dot8
   + Dot2+Press
 * tab key:
   + B11+Dot4+Dot5
   + Dot1+Press
-* switch to a specific virtual terminal: Display4+Display5+Display6+RoutingKey
+* switch to a specific virtual terminal:
+  + Display4+Display5+Display6+RoutingKey
+  + B10+RoutingKey
 * switch to the previous virtual terminal:
   + Display3+Display4+Display5+Display6
   + B11+Dot1+Dot2+Dot3+Dot6+Dot7

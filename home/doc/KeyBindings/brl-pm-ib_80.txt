@@ -2,7 +2,7 @@ Key Table: Papenmeier BrailleX IB 80 CR Soft
 ============================================
 
 Notes
-* RoutingKey1 refers to any of the keys behind the text cells.
+* RoutingKey1 refers to the row of keys just behind the text cells.
 * The keys behind the status cells are named Status.1 through Status.4.
 
 Default Bindings

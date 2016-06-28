@@ -2,9 +2,9 @@ BRLTTY is a background process (daemon) providing access to the Linux/Unix
 console (when in text mode) for a blind person using a refreshable braille
 display.
 
-Version 5.3, Dec 2015
+Version 5.4, Jun 2016
 
-Copyright (C) 1995-2015 by The BRLTTY Developers.
+Copyright (C) 1995-2016 by The BRLTTY Developers.
 
 Web Page: http://brltty.com/
 
@@ -167,13 +167,15 @@ BRLTTY has been tested on:
 *  an Alpha workstation
 *  a StrongARM based Netwinder
 *  several Linux kernels (1.2.13 and beyond)
-*  all major Linux distributions (including Red Hat, Debian, Slackware, SuSE)
+*  all major Linux distributions (including Red Hat, Fedora, Debian, Ubuntu, Slackware, SuSE)
 *  Solaris/Sparc (release 7 and beyond)
 *  Solaris/Intel (release 9 and beyond)
 *  OpenBSD/Intel (release 3.4 and beyond)
 *  FreeBSD/Intel (release 5.1 and beyond)
 *  NetBSD/Intel (release 1.6 and beyond)
 *  Windows 95/98/XP
+*  MS-DOS
+*  Mac OS X (in conjunction with a supplied patch for the screen program)
 *  Android/ARM (4.0 and beyond)
 
 The following braille displays are supported:
@@ -190,7 +192,7 @@ The following braille displays are supported:
 -  BrailComm [III]
 -  BrailleLite [18/40/M20/M40]
 -  BrailleMemo [Pocket (16), Smart (16), 32, 40]
--  BrailleNote [18/32]
+-  BrailleNote [18/32, Apex]
 -  Braudi
 -  BrlAPI
 -  Cebra [20/40/60/80/100/120/140]
@@ -205,7 +207,7 @@ The following braille displays are supported:
               Braille Wave, Easy Braille, Braille Star 40/80,
               Connect Braille 40, Bookworm]
 -  Hedo [ProfiLine, MobilLine]
--  HIMS [Braille Sense, SyncBraille, Braille Edge]
+-  HIMS [Braille Sense, SyncBraille, Braille Edge, Smart Beetle]
 -  HumanWare [Brailliant 32/40/80 bi]
 -  Iris
 -  Libbraille
