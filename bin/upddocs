@@ -125,7 +125,7 @@ cd "${sourceRoot}"
 
 cd "${buildRoot}/${documentSubdirectory}"
 make -s
-updateDirectory "BrlAPIref/html" "BrlAPIref" "*.html"
+updateDirectory "BrlAPIref/html" "BrlAPIref" "*.html" "*.png" "*.js" "*.css"
 
 for root in "${buildRoot}" "${sourceRoot}"
 do
