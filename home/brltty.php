@@ -14,11 +14,6 @@
          $this->add_owner("nico@cam.org");
          $this->add_owner("s.doyon@videotron.ca");
 
-         $this->set_colour("BGCOLOR", "white");
-         $this->set_colour("TEXT", "black");
-         $this->set_colour("LINK", "gray");
-         $this->set_colour("VLINK", "gray");
-
          $this->add_section("Home", "index.html");
          $this->add_section("Download", "download.html");
          $this->add_section("Details", "details.html");

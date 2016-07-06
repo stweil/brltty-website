@@ -156,19 +156,19 @@
       return $files;
    }
    function put_files (&$files) {
-      echo("<CENTER>\n");
-      echo("<TABLE>\n");
-      echo("<TR>\n");
-      echo("<Th>Name</Th>\n");
-      echo("<Th>Category</Th>\n");
-      echo("<Th>Size</Th>\n");
-      echo("<Th>Date</Th>\n");
-      echo("</TR>\n");
+      echo("<p>\n");
+      echo("<table align=center>\n");
+      echo("<tr>\n");
+      echo("<th>Name</th>\n");
+      echo("<th>Category</th>\n");
+      echo("<th>Size</th>\n");
+      echo("<th>Date</th>\n");
+      echo("</tr>\n");
       reset($files);
       while (list($key, $file) = each($files)) {
-         echo("<TR>\n");
-         echo("<TD ALIGN=left><A HREF=\"" . $file['path'] . "\"><CODE>" . $file['name'] . "</CODE></A></TD>\n");
-         echo("<TD ALIGN=left>" . $file['category'] . "</TD>\n");
+         echo("<tr>\n");
+         echo("<td align=\"left\"><a href=\"" . $file['path'] . "\"><code>" . $file['name'] . "</code></a></td>\n");
+         echo("<td align=\"left\">" . $file['category'] . "</td>\n");
          $size = $file['size'];
          $scale = 0;
          $factor = 1000;
@@ -176,22 +176,24 @@
             $size /= $factor;
             $scale++;
          }
-         echo("<TD ALIGN=right>" . round($size) . substr(' KMG', $scale, 1) . "</TD>\n");
-         echo("<TD ALIGN=left>" . date('Y-m-d', $file['time']) . "</TD>\n");
-         echo("</TR>\n");
+         echo("<td align=\"right\">" . round($size) . substr(' KMG', $scale, 1) . "</td>\n");
+         echo("<td align=\"left\">" . date('Y-m-d', $file['time']) . "</td>\n");
+         echo("</tr>\n");
       }
-      echo("</TABLE>\n");
-      echo("</CENTER>\n");
+      echo("</table>\n");
+      echo("</p>\n");
    }
 
    function put_version ($package_name, &$package_files, $version_name, $version_description) {
       $files = get_version_files($package_files, $version_name);
       $date = date('F j, Y', $files[0]['time']);
-      echo("The $version_description version of <B>$package_name</B> is $version_name ($date).\n"); 
+
+      echo("<p>\n");
+      echo("The $version_description version of <b>$package_name</b> is $version_name ($date).\n"); 
       echo("It can be downloaded in the following formats:\n"); 
-      echo("<P>\n");
+      echo("</p>\n");
+
       put_files($files);
-      echo("<P>\n");
    }
    function put_latest_version ($package_name, &$package_files, $current_version) {
       $latest_release = end($package_files);

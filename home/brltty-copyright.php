@@ -1,9 +1,11 @@
-<B>BRLTTY</B> is Copyright (C) 1995-2016 by
-<A HREF="contact.html">The BRLTTY Developers</A>.
-<BR>
-<B>BRLTTY</B> comes with NO WARRANTY.
-<BR>
+<p>
+<b>BRLTTY</b> is Copyright (C) 1995-2016 by
+<a href="contact.html">The BRLTTY Developers</a>.
+<br />
+<b>BRLTTY</b> comes with NO WARRANTY.
+<br />
 This is free software, placed under the
-<A HREF="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</A>, as
+<a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a>, as
 published by the
-<A HREF="http://www.gnu.org/">Free Software Foundation</A>.
+<a href="http://www.gnu.org/">Free Software Foundation</a>.
+</p>

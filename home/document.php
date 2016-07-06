@@ -2,15 +2,15 @@
    function write_link ($url, $text=null) {
       if ($text == null) $text = $url;
       $attributes = array(
-         'HREF' => $url
+         'href' => $url
       );
-      write_element('A', $attributes);
+      write_element('a', $attributes);
       echo($text);
-      echo('</A>');
+      echo('</a>');
    }
    function write_mailto ($address) {
-      write_element("A", array("HREF" => "mailto:$address"));
-      echo("<CODE>&lt;$address&gt;</CODE></A>");
+      write_element("a", array("href" => "mailto:$address"));
+      echo("<code>&lt;$address&gt;</code></a>");
    }
    function write_element ($name, $attributes=null) {
       echo("<$name");
@@ -32,10 +32,10 @@
    class document {
       var $document_relations;
       function add_forward_relation ($name, $url) {
-         $this->add_relation("REL", $name, $url);
+         $this->add_relation("rel", $name, $url);
       }
       function add_reverse_relation ($name, $url) {
-         $this->add_relation("REV", $name, $url);
+         $this->add_relation("rev", $name, $url);
       }
       function add_relation ($type, $name, $url) {
          if (!isset($this->document_relations[$type])) {
@@ -48,7 +48,7 @@
 	 while (list($type, $names) = each($this->document_relations)) {
 	    reset($names);
 	    while (list($name, $url) = each($names)) {
-	       echo("<LINK $type=$name HREF=\"$url\">\n");
+	       echo("<link $type=$name href=\"$url\" />\n");
 	    }
 	 }
       }
@@ -69,10 +69,10 @@
       var $document_image;
       function set_image ($url, $height, $width) {
 	 $this->document_image = array(
-            'SRC'    => $url,
-            'HEIGHT' => $height,
-            'WIDTH'  => $width,
-            'ALT'    => $this->document_name
+            'src'    => $url,
+            'height' => $height,
+            'width'  => $width,
+            'alt'    => $this->document_name
          );
       }
 
@@ -91,21 +91,21 @@
       }
       function write_contents () {
          if (count($this->document_subsections) > 1) {
-            echo("<UL>\n");
+            echo("<ul>\n");
             reset($this->document_subsections);
             while (list($key, $subsection) = each($this->document_subsections)) {
-               echo("<LI><A HREF=\"#" . $subsection['anchor'] . "\">" . $subsection['name'] . "</A>\n");
+               echo("<li><a href=\"#" . $subsection['anchor'] . "\">" . $subsection['name'] . "</a></li>\n");
             }
-            echo("</UL>\n");
-            echo("<HR>\n");
+            echo("</ul>\n");
+            echo("<hr />\n");
          }
       }
       function write_subsections () {
          reset($this->document_subsections);
          while (list($key, $subsection) = each($this->document_subsections)) {
-            echo("<H2><A NAME=\"" . $subsection['anchor'] . "\">" . $subsection['name'] . "</A></H2>\n");
+            echo("<h2><a name=\"" . $subsection['anchor'] . "\">" . $subsection['name'] . "</a></h2>\n");
             $this->include_subsection($subsection['file']);
-            echo("<HR>\n");
+            echo("<hr />\n");
          }
       }
       function include_subsection ($file) {
@@ -124,42 +124,45 @@
 
       function begin ($section, $title=null) {
 	 if (count($this->document_owners) > 0) {
-	    $this->add_reverse_relation("made", $this->owners_mailto());
+	    $this->add_reverse_relation("\"made\"", $this->owners_mailto());
 	 }
 
-	 echo("<HTML>\n");
-	 echo("<HEAD>\n");
+	 echo("<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n");
+         echo("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 4.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n");
+
+	 echo("<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\n");
+	 echo("<head>\n");
 
 	 if ($title == null) {
 	    $title = $section;
 	 }
-	 echo("<TITLE>$this->document_name - $title</TITLE>\n");
+	 echo("<title>$this->document_name - $title</title>\n");
 
 	 $this->write_relations();
-	 echo("</HEAD>\n");
+	 echo("</head>\n");
 
-	 write_element("BODY", $this->document_colours);
+	 write_element("body", $this->document_colours);
 	 echo("\n");
 
 	 if (is_array($this->document_image)) {
-	    echo("<DIV ALIGN=center>");
-	    write_element("IMG", $this->document_image);
-	    echo("</DIV>\n");
+	    echo("<div align=\"center\">");
+	    write_element("img", $this->document_image);
+	    echo("</div>\n");
 	 } else {
-	    echo("<H1>$this->document_name</H1>\n");
+	    echo("<h1>$this->document_name</h1>\n");
 	 }
 
 	 $this->document_selector->set_default($section);
 	 $this->document_selector->write();
 
-	 echo("<H2>$title</H2>\n");
+	 echo("<h2>$title</h2>\n");
       }
       function end () {
          $this->write_contents();
          $this->write_subsections();
 	 $this->document_selector->write();
-	 echo("</BODY>\n");
-	 echo("</HTML>\n");
+	 echo("</body>\n");
+	 echo("</html>\n");
       }
    }
 
@@ -217,21 +220,21 @@
          $this->selector();
       }
       function before () {
-         return "<DIV ALIGN=center><SMALL>\n";
+         return "<div align=\"center\"><small>\n";
       }
       function between () {
          return "|\n";
       }
       function after () {
-         return "</SMALL></DIV>\n";
+         return "</small></div>\n";
       }
       function item ($name, $url, $active) {
 	 if ($active) {
-	    $open = "<B>";
-	    $close = "</B>";
+	    $open = "<b>";
+	    $close = "</b>";
 	 } else {
-	    $open = "<A HREF=\"$url\">";
-	    $close = "</A>";
+	    $open = "<a href=\"$url\">";
+	    $close = "</a>";
 	 }
 	 return $open . str_replace(" ", "&nbsp;", $name) . $close . "\n";
       }
