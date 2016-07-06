@@ -189,6 +189,7 @@
       $date = date('F j, Y', $files[0]['time']);
       echo("The $version_description version of <B>$package_name</B> is $version_name ($date).\n"); 
       echo("It can be downloaded in the following formats:\n"); 
+      echo("<P>\n");
       put_files($files);
       echo("<P>\n");
    }
