@@ -1,0 +1,8 @@
+<?php
+   require "brltty.php";
+   require "brltty-files.php";
+   $brltty = new brltty_document("Archive");
+   $brltty->add_subsection("All BRLTTY Releases", "brltty-archive-brltty.php", "BRLTTY");
+   $brltty->add_subsection("All BrlAPI Releases", "brltty-archive-brlapi.php", "BrlAPI");
+   $brltty->end();
+?>

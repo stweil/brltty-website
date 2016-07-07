@@ -86,7 +86,7 @@
       }
 
       var $document_subsections;
-      function add_subsection ($name, $file, $anchor) {
+      function add_subsection ($name, $file, $anchor=null) {
          $this->document_subsections[] = array(
             'name'   => $name,
             'file'   => $file,
@@ -97,9 +97,20 @@
          if (count($this->document_subsections) > 1) {
             echo("<ul>\n");
             reset($this->document_subsections);
+
             while (list($key, $subsection) = each($this->document_subsections)) {
-               echo("<li><a href=\"#" . $subsection['anchor'] . "\">" . $subsection['name'] . "</a></li>\n");
+               echo("<li><a href=\"");
+               $anchor = $subsection['anchor'];
+
+               if ($anchor == null) {
+                  echo($subsection['file']);
+               } else {
+                  echo("#" . $subsection['anchor']);
+               }
+
+               echo("\">" . $subsection['name'] . "</a></li>\n");
             }
+
             echo("</ul>\n");
             echo("<hr />\n");
          }
@@ -107,7 +118,10 @@
       function write_subsections () {
          reset($this->document_subsections);
          while (list($key, $subsection) = each($this->document_subsections)) {
-            echo("<h2><a name=\"" . $subsection['anchor'] . "\">" . $subsection['name'] . "</a></h2>\n");
+            $anchor = $subsection['anchor'];
+            if ($anchor == null) continue;
+
+            echo("<h2><a name=\"" . $anchor . "\">" . $subsection['name'] . "</a></h2>\n");
             $this->include_subsection($subsection['file']);
             echo("<hr />\n");
          }
