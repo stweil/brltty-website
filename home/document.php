@@ -1,6 +1,15 @@
 <?php
    function write_meta ($header, $value) {
-      echo("<meta http-equiv=\"$header\" content=\"$value\" />\n");
+      write_element(
+         "meta",
+         array(
+            "http-equiv" => $header,
+            "content"    => $value
+         ),
+         false
+      );
+
+      echo("\n");
    }
 
    function write_link ($url, $text=null) {
@@ -17,11 +26,19 @@
       write_element("a", array("href" => "mailto:$address"));
       echo("<code>&lt;$address&gt;</code></a>");
    }
-   function write_element ($name, $attributes=null, $end=false) {
+   function write_element ($name, $attributes=null, $content=true) {
       echo("<$name");
       if (is_array($attributes)) write_attributes($attributes);
-      if ($end) echo(" /");
-      echo(">");
+
+      if (!is_string($content)) {
+         if (is_bool($content)) {
+            if (!$content) echo(" /");
+            echo(">");
+            return;
+         }
+      }
+
+      echo(">$content</$name>");
    }
    function write_attributes (&$attributes) {
       reset($attributes);
@@ -163,7 +180,7 @@
 
 	 if (is_array($this->document_image)) {
 	    echo("<center>");
-	    write_element("img", $this->document_image, true);
+	    write_element("img", $this->document_image, false);
 	    echo("</center>\n");
 	 } else {
 	    echo("<h1>$this->document_name</h1>\n");
