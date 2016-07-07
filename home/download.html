@@ -156,32 +156,35 @@
       return $files;
    }
    function put_files (&$files) {
-      echo("<p>\n");
-      echo("<table align=center>\n");
+      echo("<table align=\"center\">\n");
+
       echo("<tr>\n");
       echo("<th>Name</th>\n");
       echo("<th>Category</th>\n");
       echo("<th>Size</th>\n");
       echo("<th>Date</th>\n");
       echo("</tr>\n");
+
       reset($files);
       while (list($key, $file) = each($files)) {
-         echo("<tr>\n");
-         echo("<td align=\"left\"><a href=\"" . $file['path'] . "\"><code>" . $file['name'] . "</code></a></td>\n");
-         echo("<td align=\"left\">" . $file['category'] . "</td>\n");
          $size = $file['size'];
          $scale = 0;
          $factor = 1000;
+
          while ($size >= $factor) {
             $size /= $factor;
             $scale++;
          }
+
+         echo("<tr>\n");
+         echo("<td align=\"left\"><a href=\"" . $file['path'] . "\"><code>" . $file['name'] . "</code></a></td>\n");
+         echo("<td align=\"left\">" . $file['category'] . "</td>\n");
          echo("<td align=\"right\">" . round($size) . substr(' KMG', $scale, 1) . "</td>\n");
          echo("<td align=\"left\">" . date('Y-m-d', $file['time']) . "</td>\n");
          echo("</tr>\n");
       }
+
       echo("</table>\n");
-      echo("</p>\n");
    }
 
    function put_version ($package_name, &$package_files, $version_name, $version_description) {

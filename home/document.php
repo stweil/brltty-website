@@ -1,6 +1,11 @@
 <?php
+   function write_meta ($header, $value) {
+      echo("<meta http-equiv=\"$header\" content=\"$value\" />\n");
+   }
+
    function write_link ($url, $text=null) {
       if ($text == null) $text = $url;
+
       $attributes = array(
          'href' => $url
       );
@@ -12,11 +17,10 @@
       write_element("a", array("href" => "mailto:$address"));
       echo("<code>&lt;$address&gt;</code></a>");
    }
-   function write_element ($name, $attributes=null) {
+   function write_element ($name, $attributes=null, $end=false) {
       echo("<$name");
-      if (is_array($attributes)) {
-         write_attributes($attributes);
-      }
+      if (is_array($attributes)) write_attributes($attributes);
+      if ($end) echo(" /");
       echo(">");
    }
    function write_attributes (&$attributes) {
@@ -128,16 +132,15 @@
 	 }
 
 	 echo("<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n");
-         echo("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 4.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n");
+         echo("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n");
 
 	 echo("<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\n");
 	 echo("<head>\n");
 
-	 if ($title == null) {
-	    $title = $section;
-	 }
+	 if ($title == null) $title = $section;
 	 echo("<title>$this->document_name - $title</title>\n");
 
+         write_meta("Content-Type", "text/html; charset=utf-8");
 	 $this->write_relations();
 	 echo("</head>\n");
 
@@ -145,9 +148,9 @@
 	 echo("\n");
 
 	 if (is_array($this->document_image)) {
-	    echo("<div align=\"center\">");
-	    write_element("img", $this->document_image);
-	    echo("</div>\n");
+	    echo("<center>");
+	    write_element("img", $this->document_image, true);
+	    echo("</center>\n");
 	 } else {
 	    echo("<h1>$this->document_name</h1>\n");
 	 }
@@ -220,13 +223,13 @@
          $this->selector();
       }
       function before () {
-         return "<div align=\"center\"><small>\n";
+         return "<center><small>\n";
       }
       function between () {
          return "|\n";
       }
       function after () {
-         return "</small></div>\n";
+         return "</small></center>\n";
       }
       function item ($name, $url, $active) {
 	 if ($active) {
