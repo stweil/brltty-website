@@ -30,15 +30,20 @@
       echo("<$name");
       if (is_array($attributes)) write_attributes($attributes);
 
-      if (!is_string($content)) {
-         if (is_bool($content)) {
-            if (!$content) echo(" /");
-            echo(">");
-            return;
-         }
-      }
+      if (is_bool($content)) {
+         if (!$content) echo(" /");
+         echo(">");
+      } else {
+         echo(">");
 
-      echo(">$content</$name>");
+         if (is_string($content)) {
+            echo("$content");
+         } else if ($content instanceof Closure) {
+            $content();
+         }
+
+         echo("</$name>");
+      }
    }
    function write_attributes (&$attributes) {
       reset($attributes);
