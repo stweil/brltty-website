@@ -14,7 +14,7 @@ The current members of the <B>BRLTTY</B> team are:
 <LI>Tunes via sound card, sequencer, and OPL3.
 <LI>Author of driver for <CITE>Theta</CITE> text to speech engine from <A HREF="http://www.cepstral.com/">Cepstral</A>.
 </UL>
-<?php contributor("Nicolas Pitre", "nico@cam.org", "http://www.cam.org/~nico/"); ?>
+<?php contributor("Nicolas Pitre", "nico@fluxnic.net", "http://www.fluxnic.net"); ?>
 <UL>
 <LI>Former maintainer.
 <LI>Active developer.
