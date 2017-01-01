@@ -11,8 +11,6 @@
          $this->set_image("brltty.jpg", 160, 500);
 
          $this->add_owner("dave@mielke.cc");
-         $this->add_owner("nico@fluxnic.net");
-         $this->add_owner("s.doyon@videotron.ca");
 
          $this->add_section("Home", "index.html");
          $this->add_section("Download", "download.html");
