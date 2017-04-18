@@ -134,7 +134,7 @@
 
    $GLOBALS['archive_directory'] = 'archive';
    $GLOBALS['brltty_files'] = get_released_files('brltty');
-   $GLOBALS['brlapi_files'] = get_released_files('brlapi');
+   $GLOBALS['brlapi_files'] = get_released_files('(?:(?:java|ocaml|python|tcl)-)?brlapi');
 
    function get_version_files (&$package_files, $version) {
       reset($package_files);
