@@ -21,54 +21,6 @@ trickier to pair a Bluetooth device via the command line, but it can be done.
 How to do it depends on the version of the Bluetooth software stack that you're
 using.
 
-For Bluetooth Version 4
-~~~~~~~~~~~~~~~~~~~~~~~
-
-You need to find out your host's Bluetooth Device Address (referred to later in 
-this document as *host-address*). To do this, run the command::
-
-   hciconfig hci0
-
-Look for the (indented) line which begins with ``BD Address:``. The very next 
-"word" on that line is your host's Bluetooth Device Address. It'll be six 
-two-digit hexadecimal numbers separated by colons (``:``). Examples in this 
-document use the value ``01:23:45:67:89:AB``.
-
-You need to find out your device's Bluetooth Device Address (referred to later 
-in this document as *device-address*). To do this, run the command::
-
-   hcitool scan
-
-This command can take a while to complete as it gives devices a fair bit of
-time to respond. Each device which responds creates one two-column output line.
-The first column is its Bluetooth Device Address (examples in this document use
-the value ``12:34:56:78:9A:BC``), and the second column is its 
-current name. Manufacturers usually set a device's initial name to its product 
-name and model number so that it's easy to spot within the scan output. If your 
-device allows you to change its name, it's okay to do so even after you've 
-paired it.
-
-A device needs to be "visible" in order for the scan to find it. Most devices 
-are "invisible" by default, but have a way to be made temporarily visible. You 
-should check your device's manual to find out how to do this. In many cases,
-there's either a button which needs to be pressed or a menu item which needs to 
-be selected. Since both the device's temporary visibility and the host's scan 
-time out, make your device visible just before you initiate the scan.
-
-You need to know what PIN (password) your device is expecting. Your device's 
-documentation should contain this information. Many devices allow you to set 
-the PIN, in which case they'll have a menu which allows you to do this. 
-Examples in this document use the value ``1234``.
-
-Go into the directory ``/var/lib/bluetooth/<host-address>``. In there (create
-if necessary) is the file ``pincodes``. Each line in this file associates a
-device with its PIN. It has two fields separated by space. The first field is
-the device's Bluetooth Device Address and the second field is its PIN. The 
-Bluetooth Device Address must be in uppercase. For example::
-
-   cat /var/lib/bluetooth/01:23:45:67:89:AB/pincodes
-   12:34:56:78:9A:BC 1234
-
 For Bluetooth Version 5
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -127,14 +79,12 @@ enable scan mode:
    [CHG] Controller 01:23:45:67:89:AB Discovering: no
 
 To be able to receive PIN code requests directly on the console, you need to
-enable the *agent*, and to select the *default-agent*:
+enable the *agent*:
 
 .. code-block:: console
 
    [bluetooth]# agent on
    Agent registered
-   [bluetooth]# default-agent
-   Default agent request successful
 
 Now you are finally ready to initiate the pairing:
 
@@ -150,6 +100,54 @@ Now you are finally ready to initiate the pairing:
    [CHG] Device 12:34:56:78:9A:BC Paired: yes
    Pairing successful
    [CHG] Device 12:34:56:78:9A:BC Connected: no
+
+For Bluetooth Version 4
+~~~~~~~~~~~~~~~~~~~~~~~
+
+You need to find out your host's Bluetooth Device Address (referred to later in 
+this document as *host-address*). To do this, run the command::
+
+   hciconfig hci0
+
+Look for the (indented) line which begins with ``BD Address:``. The very next 
+"word" on that line is your host's Bluetooth Device Address. It'll be six 
+two-digit hexadecimal numbers separated by colons (``:``). Examples in this 
+document use the value ``01:23:45:67:89:AB``.
+
+You need to find out your device's Bluetooth Device Address (referred to later 
+in this document as *device-address*). To do this, run the command::
+
+   hcitool scan
+
+This command can take a while to complete as it gives devices a fair bit of
+time to respond. Each device which responds creates one two-column output line.
+The first column is its Bluetooth Device Address (examples in this document use
+the value ``12:34:56:78:9A:BC``), and the second column is its 
+current name. Manufacturers usually set a device's initial name to its product 
+name and model number so that it's easy to spot within the scan output. If your 
+device allows you to change its name, it's okay to do so even after you've 
+paired it.
+
+A device needs to be "visible" in order for the scan to find it. Most devices 
+are "invisible" by default, but have a way to be made temporarily visible. You 
+should check your device's manual to find out how to do this. In many cases,
+there's either a button which needs to be pressed or a menu item which needs to 
+be selected. Since both the device's temporary visibility and the host's scan 
+time out, make your device visible just before you initiate the scan.
+
+You need to know what PIN (password) your device is expecting. Your device's 
+documentation should contain this information. Many devices allow you to set 
+the PIN, in which case they'll have a menu which allows you to do this. 
+Examples in this document use the value ``1234``.
+
+Go into the directory ``/var/lib/bluetooth/<host-address>``. In there (create
+if necessary) is the file ``pincodes``. Each line in this file associates a
+device with its PIN. It has two fields separated by space. The first field is
+the device's Bluetooth Device Address and the second field is its PIN. The 
+Bluetooth Device Address must be in uppercase. For example::
+
+   cat /var/lib/bluetooth/01:23:45:67:89:AB/pincodes
+   12:34:56:78:9A:BC 1234
 
 
 Using a Bluetooth Device with BRLTTY
@@ -173,4 +171,37 @@ or::
 
    cat /etc/brltty.conf
    braille-device bluetooth:12:34:56:78:9A:BC
+
+On some platforms,
+BRLTTY supports the detection of a Bluetooth device based on its name.
+These platforms include:
+
+* Android
+* Linux (if the Bluetooth version is at least 5)
+* Windows
+
+The address of the device needn't be specified on these platforms -
+specifying just ``bluetooth:`` is sufficient.
+BRLTTY will find the braille device based on its name.
+It'll only consider devices that have already been paired with the host.
+
+If two (or more) braille devices are paired with your host,
+and if both of them are near by, turned on, and configured for Bluetooth access,
+then, of course, BRLTTY might choose the wrong one.
+As long as both of them don't have the same Bluetooth name,
+you can still specify the intended device without knowing its address.
+You can limit the devices that BRLTTY will consider
+by specifying the beginning of its Bluetooth name::
+
+   bluetooth:name=prefix
+
+If you need to specify a space within the prefix, then:
+
+* On the command line, use quotes::
+
+    -d "bluetooth:name=braille device"
+
+* In ``/etc/brltty.conf``, use \\s::
+
+    braille-device bluetooth:name=braille\sdevice
 

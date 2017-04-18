@@ -29,26 +29,26 @@ Default Bindings
 Special Modes
 * enter/leave help display:
   + ETouchLeftRear+ETouchRightRear
-  + Space+Dot1+Dot2+Dot5
+  + Space+Dots125
 * enter/leave command learn mode:
   + ETouchLeftRear+ETouchRightFront
-  + Space+Dot1+Dot2+Dot3
+  + Space+Dots123
 * enter/leave preferences menu:
   + ETouchLeftFront+ETouchRightFront
-  + Space+Dot1+Dot2+Dot3+Dot4
+  + Space+Dots1234
 * enter/leave status display:
   + ETouchLeftFront+ETouchRightRear
-  + Space+Dot2+Dot3+Dot4
+  + Space+Dots234
 * set display mode attributes/text:
   + ETouchLeftRear+ETouchRightRear+ETouchRightFront
-  + Space+Dot1+Dot4+Dot5
-* set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
-* set display mode text: Space+Dot1+Dot4+Dot5+Dot7
+  + Space+Dots145
+* set display mode attributes: Space+Dots1458
+* set display mode text: Space+Dots1457
 * set screen image frozen/unfrozen:
   + ETouchLeftRear+ETouchLeftFront+ETouchRightRear
-  + Space+Dot1+Dot2+Dot4
-* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
-* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+  + Space+Dots124
+* set screen image frozen: Space+Dots1248
+* set screen image unfrozen: Space+Dots1247
 * describe character: ETouchLeftRear+ETouchLeftFront+RoutingKey1
 * show current date and time: SmartpadF2
 
@@ -57,7 +57,7 @@ Cursor Functions
 * bring screen cursor to character: RoutingKey1
 * bring screen cursor to current line:
   + ThumbLeft+ThumbRight
-  + Space+Dot1+Dot2+Dot3+Dot6
+  + Space+Dots1236
 
 Vertical Navigation
 * go up one line: ThumbUp
@@ -97,49 +97,49 @@ Clipboard Functions
 * insert clipboard text after screen cursor:
   + SmartpadEnter
   + ETouchRightRear+ETouchRightFront
-  + Space+Dot1+Dot3+Dot4+Dot6
+  + Space+Dots1346
 * search backward for clipboard text: ETouchRightRear+ThumbUp
 * search forward for clipboard text: ETouchRightRear+ThumbDown
-* save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
-* restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
+* save clipboard to disk: Space+Dots13468
+* restore clipboard from disk: Space+Dots13467
 
 Configuration Functions
-* set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
-* set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
-* set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
+* set autorepeat on/off: Space+Dots1235
+* set autorepeat on: Space+Dots12358
+* set autorepeat off: Space+Dots12357
 * set text style 6-dot/8-dot: ThumbLeft+ETouchRightFront
-* set text style 6-dot: Space+Dot2+Dot3+Dot5
-* set text style 8-dot: Space+Dot2+Dot3+Dot6
-* set skipping of lines with identical content on/off: Space+Dot2+Dot4
-* set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
-* set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
-* set skipping of blank braille windows on/off: Space+Dot1+Dot2
-* set skipping of blank braille windows on: Space+Dot1+Dot2+Dot8
-* set skipping of blank braille windows off: Space+Dot1+Dot2+Dot7
-* set sliding braille window on/off: Space+Dot2+Dot4+Dot5+Dot6
-* set sliding braille window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
-* set sliding braille window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
-* set track screen cursor on/off: Space+Dot2+Dot3+Dot4+Dot5
+* set text style 6-dot: Space+Dots235
+* set text style 8-dot: Space+Dots236
+* set skipping of lines with identical content on/off: Space+Dots24
+* set skipping of lines with identical content on: Space+Dots248
+* set skipping of lines with identical content off: Space+Dots247
+* set skipping of blank braille windows on/off: Space+Dots12
+* set skipping of blank braille windows on: Space+Dots128
+* set skipping of blank braille windows off: Space+Dots127
+* set sliding braille window on/off: Space+Dots2456
+* set sliding braille window on: Space+Dots24568
+* set sliding braille window off: Space+Dots24567
+* set track screen cursor on/off: Space+Dots2345
 * set track screen cursor on:
   + ThumbUp+ThumbDown
-  + Space+Dot2+Dot3+Dot4+Dot5+Dot8
+  + Space+Dots23458
 * set track screen cursor off:
   + ThumbDown+ThumbUp
-  + Space+Dot2+Dot3+Dot4+Dot5+Dot7
+  + Space+Dots23457
 * set screen cursor visibility on/off:
   + ThumbLeft+ETouchLeftRear
-  + Space+Dot1+Dot4
-* set screen cursor visibility on: Space+Dot1+Dot4+Dot8
-* set screen cursor visibility off: Space+Dot1+Dot4+Dot7
+  + Space+Dots14
+* set screen cursor visibility on: Space+Dots148
+* set screen cursor visibility off: Space+Dots147
 * set attribute underlining on/off:
   + ThumbLeft+ETouchLeftFront
-  + Space+Dot1+Dot3+Dot6
-* set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
-* set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
+  + Space+Dots136
+* set attribute underlining on: Space+Dots1368
+* set attribute underlining off: Space+Dots1367
 
 Menu Operations
-* restore preferences from disk: Space+Dot1+Dot2+Dot3+Dot4+Dot7
-* save preferences to disk: Space+Dot1+Dot2+Dot3+Dot4+Dot8
+* restore preferences from disk: Space+Dots12347
+* save preferences to disk: Space+Dots12348
 
 Speech Functions
 * stop speaking: SmartpadF3+SmartpadF4
@@ -170,7 +170,7 @@ Keyboard Input
 * backspace key: Dot7
 * escape key:
   + Windows
-  + Space+Dot2+Dot6
+  + Space+Dots26
 * cursor-left key:
   + SmartpadLeft
   + Space+Dot3
@@ -185,10 +185,10 @@ Keyboard Input
   + Space+Dot4
 * page-up key:
   + SmartpadF2+SmartpadUp
-  + Space+Dot2+Dot3
+  + Space+Dots23
 * page-down key:
   + SmartpadF2+SmartpadDown
-  + Space+Dot5+Dot6
+  + Space+Dots56
 * home key:
   + SmartpadF2+SmartpadLeft
   + Space+Dot2
@@ -197,25 +197,32 @@ Keyboard Input
   + Space+Dot5
 * insert key:
   + SmartpadF1+SmartpadEnter
-  + Space+Dot3+Dot5
+  + Space+Dots35
 * delete key:
   + SmartpadF2+SmartpadEnter
-  + Space+Dot2+Dot5+Dot6
+  + Space+Dots256
 * function key: SmartpadF2+RoutingKey1
 * enter key:
   + Enter
   + Dot8
-* tab key: Space+Dot4+Dot5
+* tab key: Space+Dots45
+* clear all sticky input modifiers: Space+Dots78
+* cycle the Upper sticky input modifier (next, on, off): Space+Dots68
+* cycle the Shift sticky input modifier (next, on, off): Space+Dots48
+* cycle the Control sticky input modifier (next, on, off): Space+Dots38
+* cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dots28
+* cycle the AltGr (Right Alt) sticky input modifier (next, on, off): Space+Dots58
+* cycle the GUI (Windows) sticky input modifier (next, on, off): Space+Dots18
 * switch to a specific virtual terminal: SmartpadF1+RoutingKey1
 * switch to the previous virtual terminal:
   + SmartpadF1+SmartpadLeft
-  + Space+Dot1+Dot2+Dot3+Dot6+Dot7
+  + Space+Dots12367
 * switch to the next virtual terminal:
   + SmartpadF1+SmartpadRight
-  + Space+Dot1+Dot2+Dot3+Dot6+Dot8
-* set braille keyboard enabled/disabled: Space+Dot1+Dot3
-* set braille keyboard enabled: Space+Dot1+Dot3+Dot8
-* set braille keyboard disabled: Space+Dot1+Dot3+Dot7
+  + Space+Dots12368
+* set braille keyboard enabled/disabled: Space+Dots13
+* set braille keyboard enabled: Space+Dots138
+* set braille keyboard disabled: Space+Dots137
 
 Special Functions
 * restart braille driver: SmartpadF1+SmartpadF2+SmartpadEnter

@@ -13,14 +13,14 @@ Default Bindings
 ----------------
 
 Special Modes
-* enter/leave help display: Dot1+Dot2+Dot5+JoystickEnter
-* enter/leave command learn mode: Dot1+Dot2+Dot3+JoystickEnter
-* enter/leave preferences menu: Dot1+Dot2+Dot3+Dot4+JoystickEnter
-* enter/leave status display: Dot2+Dot3+Dot4+JoystickEnter
+* enter/leave help display: Dots125+JoystickEnter
+* enter/leave command learn mode: Dots123+JoystickEnter
+* enter/leave preferences menu: Dots1234+JoystickEnter
+* enter/leave status display: Dots234+JoystickEnter
 * set display mode attributes/text: Dot1+JoystickEnter
 * set display mode attributes: Dot1+JoystickRight
 * set display mode text: Dot1+JoystickLeft
-* set screen image frozen/unfrozen: Dot1+Dot2+Dot4+JoystickEnter
+* set screen image frozen/unfrozen: Dots124+JoystickEnter
 * describe character at cursor: ScrollRight+JoystickEnter
 
 Cursor Functions
@@ -66,30 +66,30 @@ Clipboard Functions
 * insert clipboard text after screen cursor: Control+JoystickEnter
 
 Configuration Functions
-* set text style 6-dot: Dot2+Dot3+Dot5+JoystickEnter
-* set text style 8-dot: Dot2+Dot3+Dot6+JoystickEnter
-* set skipping of lines with identical content on/off: Dot2+Dot4+JoystickEnter
-* set skipping of lines with identical content on: Dot2+Dot4+JoystickRight
-* set skipping of lines with identical content off: Dot2+Dot4+JoystickLeft
-* set skipping of blank braille windows on/off: Dot1+Dot2+JoystickEnter
-* set skipping of blank braille windows on: Dot1+Dot2+JoystickRight
-* set skipping of blank braille windows off: Dot1+Dot2+JoystickLeft
-* set sliding braille window on/off: Dot2+Dot4+Dot5+Dot6+JoystickEnter
-* set sliding braille window on: Dot2+Dot4+Dot5+Dot6+JoystickRight
-* set sliding braille window off: Dot2+Dot4+Dot5+Dot6+JoystickLeft
-* set track screen cursor on/off: Dot2+Dot3+Dot4+Dot5+JoystickEnter
-* set track screen cursor on: Dot2+Dot3+Dot4+Dot5+JoystickRight
-* set track screen cursor off: Dot2+Dot3+Dot4+Dot5+JoystickLeft
-* set screen cursor visibility on/off: Dot1+Dot4+JoystickEnter
-* set screen cursor visibility on: Dot1+Dot4+JoystickRight
-* set screen cursor visibility off: Dot1+Dot4+JoystickLeft
-* set attribute underlining on/off: Dot1+Dot3+Dot6+JoystickEnter
-* set attribute underlining on: Dot1+Dot3+Dot6+JoystickRight
-* set attribute underlining off: Dot1+Dot3+Dot6+JoystickLeft
+* set text style 6-dot: Dots235+JoystickEnter
+* set text style 8-dot: Dots236+JoystickEnter
+* set skipping of lines with identical content on/off: Dots24+JoystickEnter
+* set skipping of lines with identical content on: Dots24+JoystickRight
+* set skipping of lines with identical content off: Dots24+JoystickLeft
+* set skipping of blank braille windows on/off: Dots12+JoystickEnter
+* set skipping of blank braille windows on: Dots12+JoystickRight
+* set skipping of blank braille windows off: Dots12+JoystickLeft
+* set sliding braille window on/off: Dots2456+JoystickEnter
+* set sliding braille window on: Dots2456+JoystickRight
+* set sliding braille window off: Dots2456+JoystickLeft
+* set track screen cursor on/off: Dots2345+JoystickEnter
+* set track screen cursor on: Dots2345+JoystickRight
+* set track screen cursor off: Dots2345+JoystickLeft
+* set screen cursor visibility on/off: Dots14+JoystickEnter
+* set screen cursor visibility on: Dots14+JoystickRight
+* set screen cursor visibility off: Dots14+JoystickLeft
+* set attribute underlining on/off: Dots136+JoystickEnter
+* set attribute underlining on: Dots136+JoystickRight
+* set attribute underlining off: Dots136+JoystickLeft
 
 Menu Operations
-* restore preferences from disk: Dot1+Dot2+Dot3+Dot4+JoystickLeft
-* save preferences to disk: Dot1+Dot2+Dot3+Dot4+JoystickRight
+* restore preferences from disk: Dots1234+JoystickLeft
+* save preferences to disk: Dots1234+JoystickRight
 
 Keyboard Input
 * braille keyboard dot1: Dot1
@@ -103,10 +103,10 @@ Keyboard Input
 * braille keyboard space: Space
 * backspace key:
   + Space+Shift
-  + Space+Dot1+Dot2
+  + Space+Dots12
 * escape key:
   + Space+Shift+Control
-  + Space+Dot1+Dot3+Dot4+Dot6
+  + Space+Dots1346
 * cursor-left key:
   + Space+Dot1
   + JoystickLeft
@@ -126,59 +126,59 @@ Keyboard Input
   + Space+Dot6
   + Space+JoystickDown
 * home key:
-  + Space+Dot1+Dot2+Dot5
+  + Space+Dots125
   + Space+JoystickLeft
 * end key:
-  + Space+Dot1+Dot5
+  + Space+Dots15
   + Space+JoystickRight
 * insert key:
-  + Space+Dot2+Dot4
+  + Space+Dots24
   + Space+JoystickEnter
-* delete key: Space+Dot1+Dot4+Dot5
+* delete key: Space+Dots145
 * function key #1: Space+Shift+Dot1
-* function key #2: Space+Shift+Dot1+Dot2
-* function key #3: Space+Shift+Dot1+Dot4
-* function key #4: Space+Shift+Dot1+Dot4+Dot5
-* function key #5: Space+Shift+Dot1+Dot5
-* function key #6: Space+Shift+Dot1+Dot2+Dot4
-* function key #7: Space+Shift+Dot1+Dot2+Dot4+Dot5
-* function key #8: Space+Shift+Dot1+Dot2+Dot5
-* function key #9: Space+Shift+Dot2+Dot4
-* function key #10: Space+Shift+Dot2+Dot4+Dot5
-* function key #11: Space+Shift+Dot1+Dot3
-* function key #12: Space+Shift+Dot1+Dot2+Dot3
-* function key #13: Space+Shift+Dot1+Dot3+Dot4
-* function key #14: Space+Shift+Dot1+Dot3+Dot4+Dot5
-* function key #15: Space+Shift+Dot1+Dot3+Dot5
-* function key #16: Space+Shift+Dot1+Dot2+Dot3+Dot4
-* function key #17: Space+Shift+Dot1+Dot2+Dot3+Dot4+Dot5
-* function key #18: Space+Shift+Dot1+Dot2+Dot3+Dot5
-* function key #19: Space+Shift+Dot2+Dot3+Dot4
-* function key #20: Space+Shift+Dot2+Dot3+Dot4+Dot5
+* function key #2: Space+Shift+Dots12
+* function key #3: Space+Shift+Dots14
+* function key #4: Space+Shift+Dots145
+* function key #5: Space+Shift+Dots15
+* function key #6: Space+Shift+Dots124
+* function key #7: Space+Shift+Dots1245
+* function key #8: Space+Shift+Dots125
+* function key #9: Space+Shift+Dots24
+* function key #10: Space+Shift+Dots245
+* function key #11: Space+Shift+Dots13
+* function key #12: Space+Shift+Dots123
+* function key #13: Space+Shift+Dots134
+* function key #14: Space+Shift+Dots1345
+* function key #15: Space+Shift+Dots135
+* function key #16: Space+Shift+Dots1234
+* function key #17: Space+Shift+Dots12345
+* function key #18: Space+Shift+Dots1235
+* function key #19: Space+Shift+Dots234
+* function key #20: Space+Shift+Dots2345
 * enter key:
   + Space+Control
-  + Space+Dot1+Dot2+Dot3+Dot5
-* tab key: Space+Dot2+Dot3+Dot4+Dot5
+  + Space+Dots1235
+* tab key: Space+Dots2345
 * switch to a specific virtual terminal #1: Space+Control+Dot1
-* switch to a specific virtual terminal #2: Space+Control+Dot1+Dot2
-* switch to a specific virtual terminal #3: Space+Control+Dot1+Dot4
-* switch to a specific virtual terminal #4: Space+Control+Dot1+Dot4+Dot5
-* switch to a specific virtual terminal #5: Space+Control+Dot1+Dot5
-* switch to a specific virtual terminal #6: Space+Control+Dot1+Dot2+Dot4
-* switch to a specific virtual terminal #7: Space+Control+Dot1+Dot2+Dot4+Dot5
-* switch to a specific virtual terminal #8: Space+Control+Dot1+Dot2+Dot5
-* switch to a specific virtual terminal #9: Space+Control+Dot2+Dot4
-* switch to a specific virtual terminal #10: Space+Control+Dot2+Dot4+Dot5
-* switch to a specific virtual terminal #11: Space+Control+Dot1+Dot3
-* switch to a specific virtual terminal #12: Space+Control+Dot1+Dot2+Dot3
-* switch to a specific virtual terminal #13: Space+Control+Dot1+Dot3+Dot4
-* switch to a specific virtual terminal #14: Space+Control+Dot1+Dot3+Dot4+Dot5
-* switch to a specific virtual terminal #15: Space+Control+Dot1+Dot3+Dot5
-* switch to a specific virtual terminal #16: Space+Control+Dot1+Dot2+Dot3+Dot4
-* switch to a specific virtual terminal #17: Space+Control+Dot1+Dot2+Dot3+Dot4+Dot5
-* switch to a specific virtual terminal #18: Space+Control+Dot1+Dot2+Dot3+Dot5
-* switch to a specific virtual terminal #19: Space+Control+Dot2+Dot3+Dot4
-* switch to a specific virtual terminal #20: Space+Control+Dot2+Dot3+Dot4+Dot5
+* switch to a specific virtual terminal #2: Space+Control+Dots12
+* switch to a specific virtual terminal #3: Space+Control+Dots14
+* switch to a specific virtual terminal #4: Space+Control+Dots145
+* switch to a specific virtual terminal #5: Space+Control+Dots15
+* switch to a specific virtual terminal #6: Space+Control+Dots124
+* switch to a specific virtual terminal #7: Space+Control+Dots1245
+* switch to a specific virtual terminal #8: Space+Control+Dots125
+* switch to a specific virtual terminal #9: Space+Control+Dots24
+* switch to a specific virtual terminal #10: Space+Control+Dots245
+* switch to a specific virtual terminal #11: Space+Control+Dots13
+* switch to a specific virtual terminal #12: Space+Control+Dots123
+* switch to a specific virtual terminal #13: Space+Control+Dots134
+* switch to a specific virtual terminal #14: Space+Control+Dots1345
+* switch to a specific virtual terminal #15: Space+Control+Dots135
+* switch to a specific virtual terminal #16: Space+Control+Dots1234
+* switch to a specific virtual terminal #17: Space+Control+Dots12345
+* switch to a specific virtual terminal #18: Space+Control+Dots1235
+* switch to a specific virtual terminal #19: Space+Control+Dots234
+* switch to a specific virtual terminal #20: Space+Control+Dots2345
 
 Menu Bindings
 -------------

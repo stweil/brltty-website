@@ -78,7 +78,7 @@ Keyboard Input
 * braille keyboard dot8: Dot8
 * braille keyboard space: Space
 * backspace key: Backspace
-* escape key: Space+Dot1+Dot2+Dot4+Dot5
+* escape key: Space+Dots1245
 * cursor-left key:
   + Space+Dot2
   + Left
@@ -91,28 +91,28 @@ Keyboard Input
 * cursor-down key:
   + Space+Dot6
   + Down
-* page-up key: Space+Dot1+Dot3
-* page-down key: Space+Dot4+Dot6
-* home key: Space+Dot1+Dot2+Dot3
-* end key: Space+Dot4+Dot5+Dot6
-* insert key: Space+Dot1+Dot3+Dot5
-* delete key: Space+Dot3+Dot6
+* page-up key: Space+Dots13
+* page-down key: Space+Dots46
+* home key: Space+Dots123
+* end key: Space+Dots456
+* insert key: Space+Dots135
+* delete key: Space+Dots36
 * function key #1: Backspace+Dot1
-* function key #2: Backspace+Dot1+Dot2
-* function key #3: Backspace+Dot1+Dot4
-* function key #4: Backspace+Dot1+Dot4+Dot5
-* function key #5: Backspace+Dot1+Dot5
-* function key #6: Backspace+Dot1+Dot2+Dot4
-* function key #7: Backspace+Dot1+Dot2+Dot4+Dot5
-* function key #8: Backspace+Dot1+Dot2+Dot5
-* function key #9: Backspace+Dot2+Dot4
-* function key #10: Backspace+Dot2+Dot4+Dot5
-* function key #11: Backspace+Dot1+Dot3
-* function key #12: Backspace+Dot1+Dot2+Dot3
+* function key #2: Backspace+Dots12
+* function key #3: Backspace+Dots14
+* function key #4: Backspace+Dots145
+* function key #5: Backspace+Dots15
+* function key #6: Backspace+Dots124
+* function key #7: Backspace+Dots1245
+* function key #8: Backspace+Dots125
+* function key #9: Backspace+Dots24
+* function key #10: Backspace+Dots245
+* function key #11: Backspace+Dots13
+* function key #12: Backspace+Dots123
 * enter key: Backspace+Space
-* tab key: Space+Dot2+Dot5+Dot6
-* tab key + shift: Space+Dot2+Dot3+Dot6
+* tab key: Space+Dots256
+* tab key + shift: Space+Dots236
 * cycle the Shift sticky input modifier (next, on, off): Space+Dot7
-* cycle the Control sticky input modifier (next, on, off): Space+Dot7+Dot8
+* cycle the Control sticky input modifier (next, on, off): Space+Dots78
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dot8
 

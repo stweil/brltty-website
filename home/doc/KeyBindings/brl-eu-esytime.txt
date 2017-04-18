@@ -5,87 +5,101 @@ Notes
 * The cursor routing keys are the small, round buttons just behind the braille cells.
 * RoutingKey1 means pressing a cursor routing key once (a single click).
 * RoutingKey2 means pressing a cursor routing key twice quickly (a double click).
-* The eight dot keys of the braille keyboard are behind the cursor routing keys.
-* From left to right, they are: Dot7, Dot3, Dot2, Dot1, Dot4, Dot5, Dot6, Dot8.
-* The two keys of the braille keyboard in front of the braille cells, from left to right, are: Backspace, Space.
-* The joysticks are the small, round, five-way (left, right, up, down, press) controls to the left and right of the cursor routing keys.
+* The four keys below the left joystick, from top to bottom, are:
+  L1, Escape, Tab, Shift.
+* The four keys below the right joystick, from top to bottom, are:
+  L5, Insert, Alt, Control.
+* Some key combinations have been reserved for internal use:
+  + LeftJoystickDown: the Alt key
+  + LeftJoystickPress: the Alt key pressed twice in a row
+  + LeftJoystickDown + RightJoystick(Right/Left): enable/disable braille functions
+  + LeftJoystickDown + RightJoystick(Up/Down): switch to internal/external (Esytime/PC) USB interface
+  + LeftJoystickDown + L1 + Escape: switch to single-hand braille keyboard 1
+  + LeftJoystickDown + Shift + Tab: switch to single-hand braille keyboard 2
+  + LeftJoystickDown + Insert + L5: switch to standard (two-hand) braille keyboard
+  + RightJoystickPress: the Enter key
+  + RightJoystick(left/right/up/down): the Arrow Left/Right/Up/Down key
 
 Default Bindings
 ----------------
 
 Special Modes
-* enter/leave help display: LeftJoystickRight+RightJoystickDown
-* enter/leave command learn mode: LeftJoystickRight+RightJoystickUp
-* describe character: RoutingKey2
+* enter/leave help display: L1+RightJoystickUp
+* enter/leave command learn mode: L1+RightJoystickDown
+* enter/leave preferences menu: L1+RightJoystickPress
+* enter/leave status display: LeftJoystickDown+RightJoystickPress
+* set display mode attributes/text: LeftJoystickUp+RightJoystickPress
+* set screen image frozen/unfrozen: L5+RightJoystickUp
+* describe character:
+  + RoutingKey2
+  + RightJoystickPress+RoutingKey1
+* show current date and time: L1+LeftJoystickPress
 
 Cursor Functions
-* go to screen cursor: RightJoystickPress
+* go to screen cursor: L1+L5
+* go back after cursor tracking: LeftJoystickPress+RightJoystickPress
 * bring screen cursor to character: RoutingKey1
+* bring screen cursor to current line: L5+LeftJoystickPress
 
 Vertical Navigation
-* go up one line: RightJoystickUp
-* go down one line: RightJoystickDown
-* go to beginning of top line: LeftJoystickUp
-* go to beginning of bottom line: LeftJoystickDown
-* go up to previous command prompt: LeftJoystickLeft
-* go down to next command prompt: LeftJoystickRight
+* go up one line: LeftJoystickLeft
+* go down one line: LeftJoystickRight
+* go to top line: LeftJoystickLeft+RightJoystickPress
+* go to bottom line: LeftJoystickRight+RightJoystickPress
+* go up to nearest line with different content: LeftJoystickLeft+RightJoystickUp
+* go down to nearest line with different content: LeftJoystickRight+RightJoystickUp
+* go up to nearest line with different highlighting: LeftJoystickLeft+RightJoystickDown
+* go down to nearest line with different highlighting: LeftJoystickRight+RightJoystickDown
+* go up to first line of paragraph: LeftJoystickLeft+RightJoystickRight
+* go down to first line of next paragraph: LeftJoystickRight+RightJoystickRight
+* go up to previous command prompt: LeftJoystickLeft+RightJoystickLeft
+* go down to next command prompt: LeftJoystickRight+RightJoystickLeft
+* go up to nearest line with less indent than character: LeftJoystickUp+RoutingKey1
+* go down to nearest line with less indent than character: LeftJoystickDown+RoutingKey1
+* go up to nearest line with different character: LeftJoystickLeft+RoutingKey1
+* go down to nearest line with different character: LeftJoystickRight+RoutingKey1
 
 Horizontal Navigation
-* go backward one braille window: RightJoystickLeft
-* go forward one braille window: RightJoystickRight
+* go backward one braille window: L1
+* go forward one braille window: L5
+* go backward skipping blank braille windows: L5+LeftJoystickLeft
+* go forward skipping blank braille windows: L5+LeftJoystickRight
+* go to beginning of line: L5+LeftJoystickUp
+* go to end of line: L5+LeftJoystickDown
+* go left one character: L1+LeftJoystickLeft
+* go right one character: L1+LeftJoystickRight
+* place left end of braille window at character: LeftJoystickPress+RoutingKey1
 
 Clipboard Functions
-* start new clipboard at character: LeftJoystickDown+RightJoystickLeft, RoutingKey1
-* append to clipboard from character: LeftJoystickDown+RightJoystickUp, RoutingKey1
-* linear copy to character: LeftJoystickDown+RightJoystickRight, RoutingKey1
-* rectangular copy to character: LeftJoystickDown+RightJoystickDown, RoutingKey1
-* insert clipboard text after screen cursor: LeftJoystickDown+RightJoystickPress
+* start new clipboard at character: RightJoystickLeft+RoutingKey1
+* append to clipboard from character: RightJoystickUp+RoutingKey1
+* linear copy to character: RightJoystickRight+RoutingKey1
+* rectangular copy to character: RightJoystickDown+RoutingKey1
+* insert clipboard text after screen cursor: L5+RightJoystickPress
+* search backward for clipboard text: L1+LeftJoystickUp
+* search forward for clipboard text: L1+LeftJoystickDown
+* save clipboard to disk: L5+RightJoystickRight
+* restore clipboard from disk: L5+RightJoystickLeft
 
-Speech Functions
-* speak current line: LeftJoystickLeft+RightJoystickPress
-* speak from top of screen through current line: LeftJoystickLeft+RightJoystickUp
-* speak from current line through bottom of screen: LeftJoystickLeft+RightJoystickDown
-* decrease speaking volume: LeftJoystickLeft+RightJoystickLeft
-* increase speaking volume: LeftJoystickLeft+RightJoystickRight
+Configuration Functions
+* set autorepeat on/off: L5+RightJoystickDown
+* set text style 6-dot: LeftJoystickUp+RightJoystickUp
+* set text style 8-dot: LeftJoystickUp+RightJoystickDown
+* set track screen cursor on/off: LeftJoystickUp
+* set screen cursor visibility on/off: LeftJoystickUp+RightJoystickLeft
+* set attribute underlining on/off: LeftJoystickUp+RightJoystickRight
 
-Keyboard Input
-* braille keyboard dot1: Dot1
-* braille keyboard dot2: Dot2
-* braille keyboard dot3: Dot3
-* braille keyboard dot4: Dot4
-* braille keyboard dot5: Dot5
-* braille keyboard dot6: Dot6
-* braille keyboard dot7: Dot7
-* braille keyboard dot8: Dot8
-* braille keyboard space: Space
-* backspace key: Backspace
-* escape key: Space+Dot1+Dot2+Dot4+Dot5
-* cursor-left key: Space+Dot2
-* cursor-right key: Space+Dot5
-* cursor-up key: Space+Dot4
-* cursor-down key: Space+Dot6
-* page-up key: Space+Dot1+Dot3
-* page-down key: Space+Dot4+Dot6
-* home key: Space+Dot1+Dot2+Dot3
-* end key: Space+Dot4+Dot5+Dot6
-* insert key: Space+Dot1+Dot3+Dot5
-* delete key: Space+Dot3+Dot6
-* function key #1: Backspace+Dot1
-* function key #2: Backspace+Dot1+Dot2
-* function key #3: Backspace+Dot1+Dot4
-* function key #4: Backspace+Dot1+Dot4+Dot5
-* function key #5: Backspace+Dot1+Dot5
-* function key #6: Backspace+Dot1+Dot2+Dot4
-* function key #7: Backspace+Dot1+Dot2+Dot4+Dot5
-* function key #8: Backspace+Dot1+Dot2+Dot5
-* function key #9: Backspace+Dot2+Dot4
-* function key #10: Backspace+Dot2+Dot4+Dot5
-* function key #11: Backspace+Dot1+Dot3
-* function key #12: Backspace+Dot1+Dot2+Dot3
-* enter key: Backspace+Space
-* tab key: Space+Dot2+Dot5+Dot6
-* tab key + shift: Space+Dot2+Dot3+Dot6
-* cycle the Shift sticky input modifier (next, on, off): Space+Dot7
-* cycle the Control sticky input modifier (next, on, off): Space+Dot7+Dot8
-* cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dot8
+Menu Operations
+* restore preferences from disk: L1+RightJoystickLeft
+* save preferences to disk: L1+RightJoystickRight
+
+Menu Bindings
+-------------
+
+Menu Operations
+* go up to previous item: L5+RightJoystickUp
+* go down to next item: L5+RightJoystickDown
+* select previous choice: L5+RightJoystickLeft
+* select next choice: L5+RightJoystickRight
+* go to previous menu level: L5+RightJoystickPress
 

@@ -14,16 +14,16 @@ Default Bindings
 ----------------
 
 Special Modes
-* enter/leave help display: Space+Dot1+Dot2+Dot5
-* enter/leave command learn mode: Space+Dot1+Dot2+Dot3
-* enter/leave preferences menu: Space+Dot1+Dot2+Dot3+Dot4
-* enter/leave status display: Space+Dot2+Dot3+Dot4
-* set display mode attributes/text: Space+Dot1+Dot4+Dot5
-* set display mode attributes: Space+Dot1+Dot4+Dot5+Dot8
-* set display mode text: Space+Dot1+Dot4+Dot5+Dot7
-* set screen image frozen/unfrozen: Space+Dot1+Dot2+Dot4
-* set screen image frozen: Space+Dot1+Dot2+Dot4+Dot8
-* set screen image unfrozen: Space+Dot1+Dot2+Dot4+Dot7
+* enter/leave help display: Space+Dots125
+* enter/leave command learn mode: Space+Dots123
+* enter/leave preferences menu: Space+Dots1234
+* enter/leave status display: Space+Dots234
+* set display mode attributes/text: Space+Dots145
+* set display mode attributes: Space+Dots1458
+* set display mode text: Space+Dots1457
+* set screen image frozen/unfrozen: Space+Dots124
+* set screen image frozen: Space+Dots1248
+* set screen image unfrozen: Space+Dots1247
 * describe character:
   + RightNavPress+RoutingKey
   + NavrowKey
@@ -32,7 +32,7 @@ Cursor Functions
 * go to screen cursor: RightSelector
 * go back after cursor tracking: LeftSelector
 * bring screen cursor to character: RoutingKey
-* bring screen cursor to current line: Space+Dot1+Dot2+Dot3+Dot6
+* bring screen cursor to current line: Space+Dots1236
 
 Vertical Navigation
 * go up one line:
@@ -79,40 +79,40 @@ Clipboard Functions
 * copy characters to clipboard: RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
   + LeftSelector+RightSelector
-  + Space+Dot1+Dot3+Dot4+Dot6
+  + Space+Dots1346
 * search backward for clipboard text: RightSelector+LeftNavUp
 * search forward for clipboard text: RightSelector+LeftNavDown
-* save clipboard to disk: Space+Dot1+Dot3+Dot4+Dot6+Dot8
-* restore clipboard from disk: Space+Dot1+Dot3+Dot4+Dot6+Dot7
+* save clipboard to disk: Space+Dots13468
+* restore clipboard from disk: Space+Dots13467
 
 Configuration Functions
-* set autorepeat on/off: Space+Dot1+Dot2+Dot3+Dot5
-* set autorepeat on: Space+Dot1+Dot2+Dot3+Dot5+Dot8
-* set autorepeat off: Space+Dot1+Dot2+Dot3+Dot5+Dot7
-* set text style 6-dot: Space+Dot2+Dot3+Dot5
-* set text style 8-dot: Space+Dot2+Dot3+Dot6
-* set skipping of lines with identical content on/off: Space+Dot2+Dot4
-* set skipping of lines with identical content on: Space+Dot2+Dot4+Dot8
-* set skipping of lines with identical content off: Space+Dot2+Dot4+Dot7
-* set skipping of blank braille windows on/off: Space+Dot1+Dot2
-* set skipping of blank braille windows on: Space+Dot1+Dot2+Dot8
-* set skipping of blank braille windows off: Space+Dot1+Dot2+Dot7
-* set sliding braille window on/off: Space+Dot2+Dot4+Dot5+Dot6
-* set sliding braille window on: Space+Dot2+Dot4+Dot5+Dot6+Dot8
-* set sliding braille window off: Space+Dot2+Dot4+Dot5+Dot6+Dot7
-* set track screen cursor on/off: Space+Dot2+Dot3+Dot4+Dot5
-* set track screen cursor on: Space+Dot2+Dot3+Dot4+Dot5+Dot8
-* set track screen cursor off: Space+Dot2+Dot3+Dot4+Dot5+Dot7
-* set screen cursor visibility on/off: Space+Dot1+Dot4
-* set screen cursor visibility on: Space+Dot1+Dot4+Dot8
-* set screen cursor visibility off: Space+Dot1+Dot4+Dot7
-* set attribute underlining on/off: Space+Dot1+Dot3+Dot6
-* set attribute underlining on: Space+Dot1+Dot3+Dot6+Dot8
-* set attribute underlining off: Space+Dot1+Dot3+Dot6+Dot7
+* set autorepeat on/off: Space+Dots1235
+* set autorepeat on: Space+Dots12358
+* set autorepeat off: Space+Dots12357
+* set text style 6-dot: Space+Dots235
+* set text style 8-dot: Space+Dots236
+* set skipping of lines with identical content on/off: Space+Dots24
+* set skipping of lines with identical content on: Space+Dots248
+* set skipping of lines with identical content off: Space+Dots247
+* set skipping of blank braille windows on/off: Space+Dots12
+* set skipping of blank braille windows on: Space+Dots128
+* set skipping of blank braille windows off: Space+Dots127
+* set sliding braille window on/off: Space+Dots2456
+* set sliding braille window on: Space+Dots24568
+* set sliding braille window off: Space+Dots24567
+* set track screen cursor on/off: Space+Dots2345
+* set track screen cursor on: Space+Dots23458
+* set track screen cursor off: Space+Dots23457
+* set screen cursor visibility on/off: Space+Dots14
+* set screen cursor visibility on: Space+Dots148
+* set screen cursor visibility off: Space+Dots147
+* set attribute underlining on/off: Space+Dots136
+* set attribute underlining on: Space+Dots1368
+* set attribute underlining off: Space+Dots1367
 
 Menu Operations
-* restore preferences from disk: Space+Dot1+Dot2+Dot3+Dot4+Dot7
-* save preferences to disk: Space+Dot1+Dot2+Dot3+Dot4+Dot8
+* restore preferences from disk: Space+Dots12347
+* save preferences to disk: Space+Dots12348
 
 Keyboard Input
 * braille keyboard dot1: Dot1
@@ -131,7 +131,7 @@ Keyboard Input
 * backspace key:
   + Dot7
   + Space+LeftShift
-* escape key: Space+Dot2+Dot6
+* escape key: Space+Dots26
 * cursor-left key: Space+Dot3
 * cursor-right key: Space+Dot6
 * cursor-up key:
@@ -140,23 +140,30 @@ Keyboard Input
 * cursor-down key:
   + Space+Dot4
   + LeftRockerDown
-* page-up key: Space+Dot2+Dot3
-* page-down key: Space+Dot5+Dot6
+* page-up key: Space+Dots23
+* page-down key: Space+Dots56
 * home key: Space+Dot2
 * end key: Space+Dot5
-* insert key: Space+Dot3+Dot5
-* delete key: Space+Dot2+Dot5+Dot6
+* insert key: Space+Dots35
+* delete key: Space+Dots256
 * function key: Space+RoutingKey
 * enter key:
   + Dot8
   + Space+RightShift
-* tab key: Space+Dot4+Dot5
+* tab key: Space+Dots45
+* clear all sticky input modifiers: Space+Dots78
+* cycle the Upper sticky input modifier (next, on, off): Space+Dots68
+* cycle the Shift sticky input modifier (next, on, off): Space+Dots48
+* cycle the Control sticky input modifier (next, on, off): Space+Dots38
+* cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dots28
+* cycle the AltGr (Right Alt) sticky input modifier (next, on, off): Space+Dots58
+* cycle the GUI (Windows) sticky input modifier (next, on, off): Space+Dots18
 * switch to a specific virtual terminal: RightShift+RoutingKey
-* switch to the previous virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot7
-* switch to the next virtual terminal: Space+Dot1+Dot2+Dot3+Dot6+Dot8
-* set braille keyboard enabled/disabled: Space+Dot1+Dot3
-* set braille keyboard enabled: Space+Dot1+Dot3+Dot8
-* set braille keyboard disabled: Space+Dot1+Dot3+Dot7
+* switch to the previous virtual terminal: Space+Dots12367
+* switch to the next virtual terminal: Space+Dots12368
+* set braille keyboard enabled/disabled: Space+Dots13
+* set braille keyboard enabled: Space+Dots138
+* set braille keyboard disabled: Space+Dots137
 
 Menu Bindings
 -------------

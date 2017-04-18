@@ -6,16 +6,16 @@ Default Bindings
 
 Special Modes
 * enter/leave help display:
-  + Dot1+Dot2+Dot5
+  + Dots125
   + Status6
 * enter/leave command learn mode: Status5
-* enter/leave preferences menu: Dot1+Dot3+Dot4+Dot6
-* enter/leave status display: Dot3+Dot4
-* set display mode attributes/text: Dot1+Dot3+Dot4
-* set screen image frozen/unfrozen: Dot1+Dot2+Dot4
+* enter/leave preferences menu: Dots1346
+* enter/leave status display: Dots34
+* set display mode attributes/text: Dots134
+* set screen image frozen/unfrozen: Dots124
 
 Cursor Functions
-* go to screen cursor: Dot3+Dot6
+* go to screen cursor: Dots36
 * bring screen cursor to character: RoutingKey
 
 Vertical Navigation
@@ -27,14 +27,14 @@ Vertical Navigation
   + Dot4
 * go to top line:
   + Thumb2+Thumb3
-  + Dot1+Dot2+Dot3
+  + Dots123
 * go to bottom line:
   + Thumb3+Thumb4
-  + Dot4+Dot5+Dot6
+  + Dots456
 * go to beginning of top line: Thumb1+Thumb2
 * go to beginning of bottom line: Thumb4+Thumb5
-* go up several lines: Dot1+Dot2
-* go down several lines: Dot4+Dot5
+* go up several lines: Dots12
+* go down several lines: Dots45
 
 Horizontal Navigation
 * go backward one braille window:
@@ -45,45 +45,45 @@ Horizontal Navigation
   + Dot6
 * go to beginning of line:
   + Thumb1+Thumb3
-  + Dot2+Dot3
+  + Dots23
 * go to end of line:
   + Thumb3+Thumb5
-  + Dot5+Dot6
-* go left one character: Dot1+Dot3
-* go right one character: Dot4+Dot6
+  + Dots56
+* go left one character: Dots13
+* go right one character: Dots46
 * go left half a braille window:
   + Thumb1+Thumb4
-  + Dot2+Dot4+Dot6
+  + Dots246
 * go right half a braille window:
   + Thumb2+Thumb5
-  + Dot1+Dot3+Dot5
+  + Dots135
 
 Clipboard Functions
 * start new clipboard at character: Status1, RoutingKey
 * append to clipboard from character: Status2, RoutingKey
 * linear copy to character: Status3, RoutingKey
 * rectangular copy to character: Status4, RoutingKey
-* insert clipboard text after screen cursor: Dot1+Dot2+Dot3+Dot4
+* insert clipboard text after screen cursor: Dots1234
 
 Configuration Functions
-* set text style 6-dot/8-dot: Dot2+Dot3+Dot5
-* set skipping of lines with identical content on/off: Dot2+Dot4+Dot5
-* set sliding braille window on/off: Dot2+Dot4+Dot5+Dot6
+* set text style 6-dot/8-dot: Dots235
+* set skipping of lines with identical content on/off: Dots245
+* set sliding braille window on/off: Dots2456
 * set track screen cursor on/off:
   + Thumb3
-  + Dot1+Dot4
+  + Dots14
 * set screen cursor visibility on/off: Dot5
-* set alert tunes on/off: Dot2+Dot3+Dot4
+* set alert tunes on/off: Dots234
 
 Menu Operations
-* restore preferences from disk: Dot1+Dot2+Dot3+Dot5
-* save preferences to disk: Dot1+Dot2+Dot3+Dot4+Dot5+Dot6
+* restore preferences from disk: Dots1235
+* save preferences to disk: Dots123456
 
 Speech Functions
 * stop speaking:
   + Thumb2+Thumb4
-  + Dot1+Dot6
+  + Dots16
 * speak current line:
   + Thumb1+Thumb5
-  + Dot1+Dot5+Dot6
+  + Dots156
 

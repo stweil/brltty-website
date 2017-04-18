@@ -6,6 +6,7 @@ Default Bindings
 
 Special Modes
 * enter/leave help display: B8
+* enter/leave command learn mode: B4+B5
 * enter/leave preferences menu: B7+B1
 * enter/leave status display: B7+B6
 * set display mode attributes/text: B6

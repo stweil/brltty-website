@@ -2,9 +2,9 @@ BRLTTY is a background process (daemon) providing access to the Linux/Unix
 console (when in text mode) for a blind person using a refreshable braille
 display.
 
-Version 5.4, Jun 2016
+Version 5.5, Apr 2017
 
-Copyright (C) 1995-2016 by The BRLTTY Developers.
+Copyright (C) 1995-2017 by The BRLTTY Developers.
 
 Web Page: http://brltty.com/
 
@@ -62,8 +62,8 @@ Contacting Us
 =============
 
 We recommend that you contact us via BRLTTY's mailing list. You can post to the
-list by sending an e-mail to <BRLTTY@mielke.cc>. To subscribe, go to the list's
-Information Page at [http://mielke.cc/mailman/listinfo/brltty].
+list by sending an e-mail to <BRLTTY@brltty.com>. To subscribe, go to the list's
+Information Page at [http://brltty.com/mailman/listinfo/brltty].
 
 If you have any interest in BRLTTY, please drop us a note. We're interested in
 knowing who BRLTTY's users are. Even if all goes well and you have no problems
@@ -185,7 +185,7 @@ The following braille displays are supported:
          Braille Controller 640/680, Easy Link 12]
 -  B2G
 -  Baum [BrailleConnect 12/24/32/40/64/80, Brailliant 24/32/40/64/80, Conny 12,
-         DM80 Plus, EcoVario 24/32/40/64/80, Inka, PocketVario 24,
+         DM80 Plus, EcoVario 24/32/40/64/80, Inka, Orbit 20, PocketVario 24,
          Pronto! V3 18/40, Pronto! V4 18/40, RBT 40/80, Refreshabraille 18,
          SuperVario 32/40/64/80, Vario 40/80, VarioConnect 12/24/32/40/64/80,
          VarioPro 40/64/80, VarioUltra 20/32/40]
@@ -202,7 +202,7 @@ The following braille displays are supported:
 -  FreedomScientific [Focus 1 44/70/84, Focus 2 40/80, Focus Blue 14/40,
                       PAC Mate 20/40]
 -  HandyTech [Modular 20/40/80, Modular Evolution 64/88, Modular Connect 88,
-              Active Braille, Active Star 40,
+              Active Braille, Active Star 40, Actilino,
               Basic Braille 16/20/32/40/48/64/80, Braillino,
               Braille Wave, Easy Braille, Braille Star 40/80,
               Connect Braille 40, Bookworm]

@@ -311,10 +311,13 @@ for run-time selection.</P>
 <P>Specify the default device to which the braille display is connected
 (see section 
 <A HREF="BRLTTY-12.html#operand-braille-device">Braille Device Specification</A>).
-If this option isn't specified,
-then <CODE>usb:</CODE> is assumed if USB support is available,
-and an operating system appropriate path
-for the primary (first) serial port (device) is assumed if not.
+If this option isn't specified then
+<CODE>usb:</CODE> is assumed if USB support is available,
+<CODE>bluetooth:</CODE> is assumed if Bluetooth support is available,
+and <CODE>usb:,bluetooth:</CODE> is assumed if both are available.
+If neither USB nor Bluetooth support is available then
+an operating system appropriate path
+for the primary (first) serial port (device) is assumed.
 See the 
 <A HREF="BRLTTY-4.html#configure-braille-device">braille-device</A> configuration file directive
 and the 

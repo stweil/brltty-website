@@ -13,7 +13,7 @@ Default Bindings
 
 Special Modes
 * enter/leave help display: B8
-* enter/leave command learn mode: Seven
+* enter/leave command learn mode: B4+B5
 * enter/leave preferences menu:
   + B7+B1
   + One
@@ -229,4 +229,13 @@ Special Functions
 * go to remembered braille window position #10: B10+Zero
 * go to remembered braille window position #11: B10+B13
 * go to remembered braille window position #12: B10+B14
+
+Menu Bindings
+-------------
+
+Menu Operations
+* go up to previous item: RightRockerTop
+* go down to next item: RightRockerBottom
+* select previous choice: LeftRockerTop
+* select next choice: LeftRockerBottom
 

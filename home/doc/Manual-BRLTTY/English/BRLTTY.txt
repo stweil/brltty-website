@@ -9,9 +9,9 @@
 
   Dave Mielke <dave@mielke.cc>
 
-  Version 5.4, Jun 2016
+  Version 5.5, April 2017
 
-  Copyright © 1995-2016 by The BRLTTY Developers.  BRLTTY is free soft-
+  Copyright © 1995-2017 by The BRLTTY Developers.  BRLTTY is free soft-
   ware, and comes with ABSOLUTELY NO WARRANTY.  It is placed under the
   terms of version 2 or later of The GNU General Public License as pub-
   lished by The Free Software Foundation.
@@ -637,11 +637,14 @@
      --with-braille-device=device,...
         Specify the default device to which the braille display is
         connected (see section ``Braille Device Specification'').  If
-        this option isn't specified, then usb: is assumed if USB support
-        is available, and an operating system appropriate path for the
-        primary (first) serial port (device) is assumed if not.  See the
-        ``braille-device'' configuration file directive and the ``-d''
-        command line option for run-time selection.
+        this option isn't specified then usb: is assumed if USB support
+        is available, bluetooth: is assumed if Bluetooth support is
+        available, and usb:,bluetooth: is assumed if both are available.
+        If neither USB nor Bluetooth support is available then an
+        operating system appropriate path for the primary (first) serial
+        port (device) is assumed.  See the ``braille-device''
+        configuration file directive and the ``-d'' command line option
+        for run-time selection.
 
      --with-libbraille=directory
         Specify the installed location of the Libbraille package, and
@@ -2575,7 +2578,7 @@
   configuration file.  The default name for this file is
   /etc/brltty.conf, although it may be overridden with the ``-f''
   command line option.  It doesn't need to exist.  A template for it can
-  be found within the DOCS subdirectory.
+  be found within the Documents subdirectory.
 
   Blank lines are ignored.  A comment begin with a number sign (#), and
   continues to the end of the line.  The following directives are
@@ -5701,6 +5704,7 @@
                               DM80 Plus
                               EcoVario 24/32/40/64/80
                               Inka
+                              Orbit 20
                               PocketVario 24
                               Pronto! V3 18/40
                               Pronto! V4 18/40
@@ -5721,7 +5725,6 @@
                               Apex
           Braudi
           BrlAPI
-          B2G
           Cebra               20/40/60/80/100/120/140
           CombiBraille        25/45/85
           EcoBraille          20/40/80
@@ -5740,6 +5743,7 @@
                               Modular Connect 88
                               Active Braille
                               Active Star 40
+                              Actilino
                               Basic Braille 16/20/32/40/48/64/80
                               Braillino
                               Braille Wave
@@ -5927,9 +5931,9 @@
   The following device types are supported:
 
      Bluetooth
-        For a bluetooth device, specify bluetooth:address (bt: and
-        bluez: may also be used).  The address must be six two-digit
-        hexadecimal numbers separated by colons, e.g. 01:23:45:67:89:AB.
+        For a bluetooth device, specify bluetooth:address.  The address
+        must be six two-digit hexadecimal numbers separated by colons,
+        e.g. 01:23:45:67:89:AB.
 
      Serial
         For a serial device, specify serial:/path/to/device.  The

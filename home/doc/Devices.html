@@ -481,7 +481,7 @@ then <tt class="docutils literal">none</tt> is assumed.</dd>
 <td>Value</td>
 </tr>
 <tr><td><tt class="docutils literal">serialNumber=</tt></td>
-<td>an arbitrary sequence of characters (exept <tt class="docutils literal">=</tt>)</td>
+<td>an arbitrary sequence of characters (except <tt class="docutils literal">=</tt>)</td>
 </tr>
 <tr><td><tt class="docutils literal">vendorIdentifier=</tt></td>
 <td>an integer within the range 1-65535 (0X0001-0XFFFF)</td>
@@ -529,14 +529,14 @@ supplied then <tt class="docutils literal">yes</tt> is assumed.</dd>
 <col width="82%" />
 </colgroup>
 <tbody valign="top">
-<tr><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr><td>Name</td>
+<td>Value</td>
 </tr>
 <tr><td><tt class="docutils literal">address=</tt></td>
 <td>six two-digit hexadecimal numbers separated by <tt class="docutils literal">:</tt> or <tt class="docutils literal">-</tt></td>
 </tr>
-<tr><td><tt class="docutils literal">timeout=</tt></td>
-<td>an integer within the range <tt class="docutils literal">1</tt>-<tt class="docutils literal">59</tt></td>
+<tr><td><tt class="docutils literal">name=</tt></td>
+<td>one or more arbitrary characters</td>
 </tr>
 <tr><td><tt class="docutils literal">channel=</tt></td>
 <td>an integer within the range <tt class="docutils literal">1</tt>-<tt class="docutils literal">30</tt></td>
@@ -544,20 +544,33 @@ supplied then <tt class="docutils literal">yes</tt> is assumed.</dd>
 <tr><td><tt class="docutils literal">discover=</tt></td>
 <td><tt class="docutils literal">yes</tt>, <tt class="docutils literal">no</tt></td>
 </tr>
+<tr><td><tt class="docutils literal">timeout=</tt></td>
+<td>an integer within the range <tt class="docutils literal">1</tt>-<tt class="docutils literal">59</tt></td>
+</tr>
 </tbody>
 </table>
 </blockquote>
-<p>The <tt class="docutils literal">address=</tt> parameter is required. All of the others are optional, and it
-shouldn't normally be necessary to supply any of them.</p>
+<p>All of the parameters are optional except that
+the <tt class="docutils literal">address=</tt> parameter is required on platforms where
+BRLTTY can't yet detect a Bluetooth device based on its name.
+It shouldn't normally be necessary to supply any of the others.</p>
+<p>BRLTTY can detect a Bluetooth device by name on the following platforms:</p>
+<ul class="simple">
+<li>Android</li>
+<li>Linux (if the Bluetooth version is at least 5)</li>
+<li>Windows</li>
+</ul>
 <dl class="docutils">
 <dt><tt class="docutils literal">address=</tt></dt>
 <dd>Specify the Bluetooth address of the device. It must be six two-digit
 hexadecimal numbers (the &quot;letter&quot; digits may be in either case) separated
 from one another by either a colon (<tt class="docutils literal">:</tt>) or a minus (<tt class="docutils literal">-</tt>) sign.</dd>
-<dt><tt class="docutils literal">timeout=</tt></dt>
-<dd>Specify the number of seconds to wait for a connection to the device to be
-acquired. It must be an integer within the range <tt class="docutils literal">1</tt>-<tt class="docutils literal">59</tt>. If this
-parameter isn't supplied then a reasonable default is assumed.</dd>
+<dt><tt class="docutils literal">name=</tt></dt>
+<dd>Specify the Bluetooth name of the device. It must be one or more
+arbitrary characters. They need only match the beginning (so not
+necessarily all) of the name. Case is significant.
+Only the names of paired devices are considered.
+This parameter is ignored if the <tt class="docutils literal">address=</tt> parameter has been specified.</dd>
 <dt><tt class="docutils literal">channel=</tt></dt>
 <dd>Specify the RFCOMM channel to use. It must be an integer within the range
 <tt class="docutils literal">1</tt>-<tt class="docutils literal">30</tt>. If this parameter isn't supplied then either a driver-supplied
@@ -576,6 +589,10 @@ according to the following sequence of tests:</p>
 <li>Otherwise, <strong>yes</strong>.</li>
 </ol>
 </dd>
+<dt><tt class="docutils literal">timeout=</tt></dt>
+<dd>Specify the number of seconds to wait for a connection to the device to be
+acquired. It must be an integer within the range <tt class="docutils literal">1</tt>-<tt class="docutils literal">59</tt>. If this
+parameter isn't supplied then a reasonable default is assumed.</dd>
 </dl>
 </div>
 </div>

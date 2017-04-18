@@ -322,9 +322,12 @@ pour la sélection à l'exécution.</P>
 <P>Spécifie le port par défaut auquel l'afficheur braille est relié
 (voir la section 
 <A HREF="BRLTTY-12.html#operand-braille-device">Spécification du port braille</A>). Si vous ne spécifiez pas
-cette option, usb: est assumé si le support USB est disponible, et un
-chemin approprié pour le port série Com1 correspondant au système 
-d'exploitation est assumé. Voir la ligne
+cette option, usb: est supposé si le support USB est disponible,
+bluetooth: est supposé si le support Bluetooth est disponible, et
+usb:,bluetooth: est supposé si les deux sont disponibles. Si ni le support
+USB ni le support Bluetooth ne sont disponibles, un
+chemin approprié pour le périphérique du port série primaire correspondant au système
+d'exploitation est supposé. Voir la ligne
 <A HREF="BRLTTY-4.html#configure-braille-device">braille-device</A> du
 fichier de configuration et l'option 
 <A HREF="BRLTTY-4.html#options-braille-device">-d</A> de la ligne de commande
@@ -1831,7 +1834,7 @@ vous ne spécifiez aucun fichier, l'entrée standard est traitée.</P>
 est ancré au répertoire configuré par l'option de compilation
 <A HREF="#build-data-directory">--with-data-directory</A>.
 L'extension .ctb est facultative. Si vous ne fournissez pas cette option,
-en-us-g2 est assumé.</P>
+en-us-g2 est supposé.</P>
 <DT><B><CODE>-t</CODE><EM>file</EM>|<CODE>auto</CODE> <CODE>--text-table=</CODE><EM>file</EM>|<CODE>auto</CODE></B><DD>
 <P>Spécifie la table de texte (voir
 la section 

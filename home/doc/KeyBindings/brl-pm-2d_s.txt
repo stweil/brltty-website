@@ -27,11 +27,11 @@ Special Modes
 * set screen image unfrozen: Status.8+Dot7
 * describe character: Dot4+RoutingKey1
 * show current date and time:
-  + Dot1+Dot2+Dot3+Dot7
+  + Dots1237
   + Status.21
-* switch to Default Bindings: Dot2+Dot3+Shift
-* switch to Chorded Commands Mode: Dot2+Dot3+Home
-* switch to Braille Input Mode: Dot2+Dot3+End
+* switch to Default Bindings: Dots23+Shift
+* switch to Chorded Commands Mode: Dots23+Home
+* switch to Braille Input Mode: Dots23+End
 
 Cursor Functions
 * go to screen cursor: Shift
@@ -54,12 +54,12 @@ Vertical Navigation
 * go down to first line of next paragraph: Dot6
 * go up to previous command prompt: Dot7
 * go down to next command prompt: Dot8
-* go up several lines: Dot1+Dot2
-* go down several lines: Dot4+Dot5
-* go up to nearest line with less indent than character: Dot3+Dot7+RoutingKey1
-* go down to nearest line with less indent than character: Dot6+Dot8+RoutingKey1
-* go up to nearest line with different character: Dot1+Dot2+RoutingKey1
-* go down to nearest line with different character: Dot4+Dot5+RoutingKey1
+* go up several lines: Dots12
+* go down several lines: Dots45
+* go up to nearest line with less indent than character: Dots37+RoutingKey1
+* go down to nearest line with less indent than character: Dots68+RoutingKey1
+* go up to nearest line with different character: Dots12+RoutingKey1
+* go down to nearest line with different character: Dots45+RoutingKey1
 
 Horizontal Navigation
 * go backward one braille window: Dot1+Up
@@ -78,8 +78,8 @@ Clipboard Functions
 * linear copy to character: Dot6+RoutingKey1
 * rectangular copy to character: Dot8+RoutingKey1
 * insert clipboard text after screen cursor: Status.22
-* search backward for clipboard text: Dot3+Dot7
-* search forward for clipboard text: Dot6+Dot8
+* search backward for clipboard text: Dots37
+* search forward for clipboard text: Dots68
 
 Configuration Functions
 * set autorepeat on/off: Status.19
@@ -166,72 +166,79 @@ Chorded Commands Mode
 ---------------------
 
 Special Modes
-* enter/leave help display: Dot1+Dot2+Dot5
-* enter/leave command learn mode: Dot1+Dot2+Dot3
-* enter/leave preferences menu: Dot1+Dot2+Dot3+Dot4
-* enter/leave status display: Dot2+Dot3+Dot4
-* set display mode attributes/text: Dot1+Dot4+Dot5
-* set display mode attributes: Dot1+Dot4+Dot5+Dot8
-* set display mode text: Dot1+Dot4+Dot5+Dot7
-* set screen image frozen/unfrozen: Dot1+Dot2+Dot4
-* set screen image frozen: Dot1+Dot2+Dot4+Dot8
-* set screen image unfrozen: Dot1+Dot2+Dot4+Dot7
+* enter/leave help display: Dots125
+* enter/leave command learn mode: Dots123
+* enter/leave preferences menu: Dots1234
+* enter/leave status display: Dots234
+* set display mode attributes/text: Dots145
+* set display mode attributes: Dots1458
+* set display mode text: Dots1457
+* set screen image frozen/unfrozen: Dots124
+* set screen image frozen: Dots1248
+* set screen image unfrozen: Dots1247
 
 Cursor Functions
-* bring screen cursor to current line: Dot1+Dot2+Dot3+Dot6
+* bring screen cursor to current line: Dots1236
 
 Clipboard Functions
-* insert clipboard text after screen cursor: Dot1+Dot3+Dot4+Dot6
-* save clipboard to disk: Dot1+Dot3+Dot4+Dot6+Dot8
-* restore clipboard from disk: Dot1+Dot3+Dot4+Dot6+Dot7
+* insert clipboard text after screen cursor: Dots1346
+* save clipboard to disk: Dots13468
+* restore clipboard from disk: Dots13467
 
 Configuration Functions
-* set autorepeat on/off: Dot1+Dot2+Dot3+Dot5
-* set autorepeat on: Dot1+Dot2+Dot3+Dot5+Dot8
-* set autorepeat off: Dot1+Dot2+Dot3+Dot5+Dot7
-* set text style 6-dot: Dot2+Dot3+Dot5
-* set text style 8-dot: Dot2+Dot3+Dot6
-* set skipping of lines with identical content on/off: Dot2+Dot4
-* set skipping of lines with identical content on: Dot2+Dot4+Dot8
-* set skipping of lines with identical content off: Dot2+Dot4+Dot7
-* set skipping of blank braille windows on/off: Dot1+Dot2
-* set skipping of blank braille windows on: Dot1+Dot2+Dot8
-* set skipping of blank braille windows off: Dot1+Dot2+Dot7
-* set sliding braille window on/off: Dot2+Dot4+Dot5+Dot6
-* set sliding braille window on: Dot2+Dot4+Dot5+Dot6+Dot8
-* set sliding braille window off: Dot2+Dot4+Dot5+Dot6+Dot7
-* set track screen cursor on/off: Dot2+Dot3+Dot4+Dot5
-* set track screen cursor on: Dot2+Dot3+Dot4+Dot5+Dot8
-* set track screen cursor off: Dot2+Dot3+Dot4+Dot5+Dot7
-* set screen cursor visibility on/off: Dot1+Dot4
-* set screen cursor visibility on: Dot1+Dot4+Dot8
-* set screen cursor visibility off: Dot1+Dot4+Dot7
-* set attribute underlining on/off: Dot1+Dot3+Dot6
-* set attribute underlining on: Dot1+Dot3+Dot6+Dot8
-* set attribute underlining off: Dot1+Dot3+Dot6+Dot7
+* set autorepeat on/off: Dots1235
+* set autorepeat on: Dots12358
+* set autorepeat off: Dots12357
+* set text style 6-dot: Dots235
+* set text style 8-dot: Dots236
+* set skipping of lines with identical content on/off: Dots24
+* set skipping of lines with identical content on: Dots248
+* set skipping of lines with identical content off: Dots247
+* set skipping of blank braille windows on/off: Dots12
+* set skipping of blank braille windows on: Dots128
+* set skipping of blank braille windows off: Dots127
+* set sliding braille window on/off: Dots2456
+* set sliding braille window on: Dots24568
+* set sliding braille window off: Dots24567
+* set track screen cursor on/off: Dots2345
+* set track screen cursor on: Dots23458
+* set track screen cursor off: Dots23457
+* set screen cursor visibility on/off: Dots14
+* set screen cursor visibility on: Dots148
+* set screen cursor visibility off: Dots147
+* set attribute underlining on/off: Dots136
+* set attribute underlining on: Dots1368
+* set attribute underlining off: Dots1367
 
 Menu Operations
-* restore preferences from disk: Dot1+Dot2+Dot3+Dot4+Dot7
-* save preferences to disk: Dot1+Dot2+Dot3+Dot4+Dot8
+* restore preferences from disk: Dots12347
+* save preferences to disk: Dots12348
 
 Keyboard Input
-* escape key: Dot2+Dot6
+* escape key: Dots26
 * cursor-left key: Dot3
 * cursor-right key: Dot6
 * cursor-up key: Dot1
 * cursor-down key: Dot4
-* page-up key: Dot2+Dot3
-* page-down key: Dot5+Dot6
+* page-up key: Dots23
+* page-down key: Dots56
 * home key: Dot2
 * end key: Dot5
-* insert key: Dot3+Dot5
-* delete key: Dot2+Dot5+Dot6
-* tab key: Dot4+Dot5
-* switch to the previous virtual terminal: Dot1+Dot2+Dot3+Dot6+Dot7
-* switch to the next virtual terminal: Dot1+Dot2+Dot3+Dot6+Dot8
-* set braille keyboard enabled/disabled: Dot1+Dot3
-* set braille keyboard enabled: Dot1+Dot3+Dot8
-* set braille keyboard disabled: Dot1+Dot3+Dot7
+* insert key: Dots35
+* delete key: Dots256
+* tab key: Dots45
+* clear all sticky input modifiers: Dots78
+* cycle the Upper sticky input modifier (next, on, off): Dots68
+* cycle the Shift sticky input modifier (next, on, off): Dots48
+* cycle the Control sticky input modifier (next, on, off): Dots38
+* cycle the Meta (Left Alt) sticky input modifier (next, on, off): Dots28
+* cycle the AltGr (Right Alt) sticky input modifier (next, on, off): Dots58
+* cycle the GUI (Windows) sticky input modifier (next, on, off): Dots18
+* switch to the previous virtual terminal: Dots12367
+* switch to the next virtual terminal: Dots12368
+* set braille keyboard enabled/disabled: Dots13
+* set braille keyboard enabled: Dots138
+* set braille keyboard disabled: Dots137
 
 Braille Input Mode
 ------------------

@@ -14,9 +14,9 @@
   Jean-Philippe Mengual <texou@accelibreinfo.eu> pour
   Traduc.org
 
-  Version 5.4, Jui 2016
+  Version 5.5, Avril 2017
 
-  Copyright © 1995-2016 by Les Développeurs de BRLTTY.  BRLTTY est un
+  Copyright © 1995-2017 by Les Développeurs de BRLTTY.  BRLTTY est un
   logiciel libre, et n'est fourni avec AUCUNE GARANTIE. Il est placé
   sous les termes de la version 2 ou ultérieure de la GNU General Public
   License publiée par The Free Software Foundation.
@@ -683,11 +683,15 @@
      --with-braille-device=pilote,...
         Spécifie le port par défaut auquel l'afficheur braille est relié
         (voir la section ``Spécification du port braille''). Si vous ne
-        spécifiez pas cette option, usb: est assumé si le support USB
-        est disponible, et un chemin approprié pour le port série Com1
-        correspondant au système d'exploitation est assumé. Voir la
-        ligne ``braille-device'' du fichier de configuration et l'option
-        ``-d'' de la ligne de commande pour la sélection à l'exécution.
+        spécifiez pas cette option, usb: est supposé si le support USB
+        est disponible, bluetooth: est supposé si le support Bluetooth
+        est disponible, et usb:,bluetooth: est supposé si les deux sont
+        disponibles. Si ni le support USB ni le support Bluetooth ne
+        sont disponibles, un chemin approprié pour le périphérique du
+        port série primaire correspondant au système d'exploitation est
+        supposé. Voir la ligne ``braille-device'' du fichier de
+        configuration et l'option ``-d'' de la ligne de commande pour la
+        sélection à l'exécution.
 
      --with-libbraille=répertoire
         Spécifie l'endroit où se trouve le paquet libbraille, et compile
@@ -2102,7 +2106,7 @@
         est relatif, il est ancré au répertoire configuré par l'option
         de compilation ``--with-data-directory''.  L'extension .ctb est
         facultative. Si vous ne fournissez pas cette option, en-us-g2
-        est assumé.
+        est supposé.
 
      -tfile|auto --text-table=file|auto
         Spécifie la table de texte (voir la section ``Tables de texte''
@@ -2772,7 +2776,7 @@
   fichier est /etc/brltty.conf, même s'il peut être contourné par
   l'option en ligne de commande ``-f''.  Son existence n'est pas
   indispensable.  Vous pouvez trouver un fichier type dans le sous-
-  répertoire DOCS
+  répertoire Documents
 
   Les lignes vides sont ignorées.  Un commentaire commence par un signe
   nombre (#), et continue jusqu'à la fin de la ligne.  Les lignes de
@@ -6126,111 +6130,119 @@
 
   BRLTTY supporte les afficheurs braille suivants:
 
-           Nom                 Modèles
-           _____________________________________________________________
-           Albatross           46/80
-           Alva                ABT (3nn)
-                               Delphi (4nn)
-                               Satellite (5nn)
-                               Braille System 40
-                               Braille Controller 640/680
-           B2G
-           Baum                BrailleConnect 12/24/32/40/64/80
-                               Brailliant 24/32/40/64/80
-                               Conny 12
-                               DM80 Plus
-                               EcoVario 24/32/40/64/80
-                               Inka
-                               PocketVario 24
-                               Pronto! V3 18/40
-                               Pronto! V4 18/40
-                               RBT 40/80
-                               Refreshabraille 18
-                               SuperVario 32/40/64/80
-                               Vario 40/80
-                               VarioConnect 12/24/32/40/64/80
-                               VarioPro 40/64/80
-                               VarioUltra 20/32/40
-           BrailComm           III
-           BrailleLite         18/40/M20/M40
-           BrailleNote         18/32
-                               Apex
-           Braudi
-           BrlAPI
-           Cebra               20/40/60/80/100/120/140
-           CombiBraille        25/45/85
-           EcoBraille          20/40/80
-           EuroBraille         AzerBraille
-                               Clio
-                               Esys
-                               Iris
-                               NoteBraille
-                               Scriba
-           FreedomScientific   Focus 1 44/70/84
-                               Focus 2 40/80
-                               Focus Blue 14/40
-                               PAC Mate 20/40
-           HandyTech           Modular 20/40/80
-                               Modular Evolution 64/88
-                               Modular Connect 88
-                               Active Braille
-                               Active Star 40
-                               Braille Wave
-                               Easy Braille
-                               Braille Star 40/80
-                               Connect Braille 40
-                               Bookworm
-                               Braillino
-           Hedo                ProfiLine
-                               MobilLine
-           HIMS                Braille Sense
-                               SyncBraille
-                               Braille Edge
-                               Smart Beetle
-           HumanWare           Brailliant 32/40/80 bi
-           Iris
-           Libbraille
-           LogText             32
-           MDV                 MB208
-                               MB248
-                               MB408L
-                               MB408L+
-                               Lilli Blu
-           Metec               BD-40
-           MiniBraille         20
-           MultiBraille        MB125CR/MB145CR/MB185CR
-           NinePoint           8
-           Papenmeier          Compact 486
-                               Compact/Tiny
-                               IB 80 CR Soft
-                               2D Lite (plus)
-                               2D Screen Soft
-                               EL 80
-                               EL 2D 40/66/80
-                               EL 40/66/70/80 S
-                               EL 40/60/80 C
-                               EL 2D 80 S
-                               EL 40 P
-                               EL 80 II
-                               Elba 20/32
-                               Trio 40/Elba20/Elba32
-                               Live 20/40
-           Pegasus             20/27/40/80
-           Seika               3/4/5 (40)
-                               80
-                               Mini (16)
-           TechniBraille
-           TSI                 Navigator 20/40/80
-                               PowerBraille 40/65/80
-           TTY                 terminfo
-           VideoBraille        40
-           Virtual             TCP/Unix, client/serveur
-           VisioBraille        20/40
-           Voyager             44/70
-                               Part232 (adaptateur série)
-                               BraillePen/EasyLink
-           XWindow             X11
-                               Windows
+          Nom                 Modèles
+          ______________________________________________________________
+          Albatross           46/80
+          Alva                ABT (3nn)
+                              Delphi (4nn)
+                              Satellite (5nn)
+                              Braille System 40
+                              Braille Controller 640/680
+                              Easy Link 12
+          B2G
+          Baum                BrailleConnect 12/24/32/40/64/80
+                              Brailliant 24/32/40/64/80
+                              Conny 12
+                              DM80 Plus
+                              EcoVario 24/32/40/64/80
+                              Inka
+                              Orbit 20
+                              PocketVario 24
+                              Pronto! V3 18/40
+                              Pronto! V4 18/40
+                              RBT 40/80
+                              Refreshabraille 18
+                              SuperVario 32/40/64/80
+                              Vario 40/80
+                              VarioConnect 12/24/32/40/64/80
+                              VarioPro 40/64/80
+                              VarioUltra 20/32/40
+          BrailComm           III
+          BrailleLite         18/40/M20/M40
+          BrailleMemo         Pocket (16)
+                              Smart (16)
+                              32
+                              40
+          BrailleNote         18/32
+                              Apex
+          Braudi
+          BrlAPI
+          Cebra               20/40/60/80/100/120/140
+          CombiBraille        25/45/85
+          EcoBraille          20/40/80
+          EuroBraille         AzerBraille
+                              Clio
+                              Esys
+                              Iris
+                              NoteBraille
+                              Scriba
+          FreedomScientific   Focus 1 44/70/84
+                              Focus 2 40/80
+                              Focus Blue 14/40
+                              PAC Mate 20/40
+          HandyTech           Modular 20/40/80
+                              Modular Evolution 64/88
+                              Modular Connect 88
+                              Active Braille
+                              Active Star 40
+                              Actilino
+                              Basic Braille 16/20/32/40/48/64/80
+                              Braillino
+                              Braille Wave
+                              Easy Braille
+                              Braille Star 40/80
+                              Connect Braille 40
+                              Bookworm
+          Hedo                ProfiLine
+                              MobilLine
+          HIMS                Braille Sense
+                              SyncBraille
+                              Braille Edge
+                              Smart Beetle
+          HumanWare           Brailliant 32/40/80 bi
+          Iris
+          Libbraille
+          LogText             32
+          MDV                 MB208
+                              MB248
+                              MB408L
+                              MB408L+
+                              Lilli Blu
+          Metec               BD-40
+          MiniBraille         20
+          MultiBraille        MB125CR/MB145CR/MB185CR
+          NinePoint           8
+          Papenmeier          Compact 486
+                              Compact/Tiny
+                              IB 80 CR Soft
+                              2D Lite (plus)
+                              2D Screen Soft
+                              EL 80
+                              EL 2D 40/66/80
+                              EL 40/66/70/80 S
+                              EL 40/60/80 C
+                              EL 2D 80 S
+                              EL 40 P
+                              EL 80 II
+                              Elba 20/32
+                              Trio 40/Elba20/Elba32
+                              Live 20/40
+          Pegasus             20/27/40/80
+          Seika               3/4/5 (40)
+                              80
+                              Mini (16)
+          TechniBraille
+          TSI                 Navigator 20/40/80
+                              PowerBraille 40/65/80
+          TTY                 terminfo
+          VideoBraille        40
+          Virtual             TCP/Unix, client/server
+          VisioBraille        20/40
+          Voyager             44/70
+                              Part232 (serial adapter)
+                              BraillePen/EasyLink
+          XWindow             X11
+                              Windows
 
 
   9.  Synthèses vocales supportées
@@ -6364,10 +6376,10 @@
   Les types de périphérique suivants sont supportés:
 
      Bluetooth
-        Pour un périphérique bluetooth, spécifiez bluetooth:addresse
-        ?vous pouvez aussi utiliser bt: et bluez: ).  L'adresse doit se
-        composer de six nombres hexadécimaux à deux chiffres séparés par
-        des "deux-points", par exemple 01:23:45:67:89:AB.
+        Pour un périphérique bluetooth, spécifiez bluetooth:addresse.
+        L'adresse doit se composer de six nombres hexadécimaux à deux
+        chiffres séparés par des "deux-points", par exemple
+        01:23:45:67:89:AB.
 
      Série
         Pour un périphérique en port série, spécifiez

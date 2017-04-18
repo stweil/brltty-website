@@ -13,47 +13,47 @@ Default Bindings
 ----------------
 
 Special Modes
-* enter/leave help display: Backspace+Dot1+Dot2+Dot5
-* enter/leave command learn mode: Space+Dot1+Dot4+Dot5+Dot6
-* enter/leave preferences menu: Space+Dot1+Dot4
-* enter/leave status display: Backspace+Dot2+Dot3+Dot4
+* enter/leave help display: Backspace+Dots125
+* enter/leave command learn mode: Space+Dots1456
+* enter/leave preferences menu: Space+Dots14
+* enter/leave status display: Backspace+Dots234
 * set display mode attributes: Backspace+Dot1
-* set display mode text: Backspace+Dot2+Dot3+Dot4+Dot5
-* set screen image frozen/unfrozen: Enter+Dot1+Dot2+Dot4
-* describe character: Backspace+Dot1+Dot4+Dot5, RoutingKey
-* switch to Default Bindings: Space+Dot1+Dot3+Dot4+Dot5
+* set display mode text: Backspace+Dots2345
+* set screen image frozen/unfrozen: Enter+Dots124
+* describe character: Backspace+Dots145, RoutingKey
+* switch to Default Bindings: Space+Dots1345
 
 Cursor Functions
 * go to screen cursor:
-  + Dot2+Dot5
+  + Dots25
   + Space
 * go back after cursor tracking: Back+Advance
 * bring screen cursor to character: RoutingKey
-* bring screen cursor to current line: Space+Dot1+Dot2+Dot5+Dot6
+* bring screen cursor to current line: Space+Dots1256
 
 Vertical Navigation
 * go up one line:
   + Back
-  + Dot1+Dot3
+  + Dots13
 * go down one line:
   + Advance
-  + Dot4+Dot6
-* go to top line: Dot1+Dot4
-* go to bottom line: Dot3+Dot6
+  + Dots46
+* go to top line: Dots14
+* go to bottom line: Dots36
 * go to beginning of top line:
   + Previous+Advance
-  + Dot1+Dot2+Dot3
+  + Dots123
 * go to beginning of bottom line:
   + Previous+Next
-  + Dot4+Dot5+Dot6
-* go up to nearest line with different content: Dot1+Dot4+Dot5
-* go down to nearest line with different content: Dot2+Dot5+Dot6
-* go up to nearest line with different highlighting: Dot1+Dot2+Dot5
-* go down to nearest line with different highlighting: Dot2+Dot3+Dot6
-* go up several lines: Dot2+Dot4+Dot5
-* go down several lines: Dot3+Dot5+Dot6
-* go up to nearest line with less indent than character: Dot2+Dot4, RoutingKey
-* go down to nearest line with less indent than character: Dot3+Dot5, RoutingKey
+  + Dots456
+* go up to nearest line with different content: Dots145
+* go down to nearest line with different content: Dots256
+* go up to nearest line with different highlighting: Dots125
+* go down to nearest line with different highlighting: Dots236
+* go up several lines: Dots245
+* go down several lines: Dots356
+* go up to nearest line with less indent than character: Dots24, RoutingKey
+* go down to nearest line with less indent than character: Dots35, RoutingKey
 
 Horizontal Navigation
 * go backward one braille window:
@@ -62,8 +62,8 @@ Horizontal Navigation
 * go forward one braille window:
   + Next
   + Dot5
-* go backward skipping blank braille windows: Dot2+Dot3
-* go forward skipping blank braille windows: Dot5+Dot6
+* go backward skipping blank braille windows: Dots23
+* go forward skipping blank braille windows: Dots56
 * go to beginning of line:
   + Previous+Back
   + Dot3
@@ -72,59 +72,59 @@ Horizontal Navigation
   + Dot6
 * go left one character: Dot1
 * go right one character: Dot4
-* go left half a braille window: Dot1+Dot2
-* go right half a braille window: Dot4+Dot5
-* place left end of braille window at character: Space+Dot1+Dot2+Dot3, RoutingKey
+* go left half a braille window: Dots12
+* go right half a braille window: Dots45
+* place left end of braille window at character: Space+Dots123, RoutingKey
 
 Clipboard Functions
-* start new clipboard at character: Space+Dot1+Dot2+Dot3+Dot5+Dot6, RoutingKey
-* append to clipboard from character: Space+Dot2+Dot4+Dot6, RoutingKey
-* linear copy to character: Space+Dot1+Dot2+Dot4+Dot5+Dot6, RoutingKey
-* rectangular copy to character: Space+Dot2+Dot3+Dot4+Dot5+Dot6, RoutingKey
-* insert clipboard text after screen cursor: Space+Dot1+Dot2+Dot3+Dot4
-* search backward for clipboard text: Dot1+Dot2+Dot4
-* search forward for clipboard text: Dot2+Dot3+Dot5
+* start new clipboard at character: Space+Dots12356, RoutingKey
+* append to clipboard from character: Space+Dots246, RoutingKey
+* linear copy to character: Space+Dots12456, RoutingKey
+* rectangular copy to character: Space+Dots23456, RoutingKey
+* insert clipboard text after screen cursor: Space+Dots1234
+* search backward for clipboard text: Dots124
+* search forward for clipboard text: Dots235
 
 Configuration Functions
-* set text style 6-dot: Backspace+Dot2+Dot3+Dot5
-* set text style 8-dot: Backspace+Dot2+Dot3+Dot6
-* set skipping of lines with identical content on: Enter+Dot2+Dot4
-* set skipping of lines with identical content off: Backspace+Dot2+Dot4
-* set skipping of blank braille windows on: Enter+Dot1+Dot2
-* set skipping of blank braille windows off: Backspace+Dot1+Dot2
-* set sliding braille window on: Enter+Dot2+Dot4+Dot5+Dot6
-* set sliding braille window off: Backspace+Dot2+Dot4+Dot5+Dot6
+* set text style 6-dot: Backspace+Dots235
+* set text style 8-dot: Backspace+Dots236
+* set skipping of lines with identical content on: Enter+Dots24
+* set skipping of lines with identical content off: Backspace+Dots24
+* set skipping of blank braille windows on: Enter+Dots12
+* set skipping of blank braille windows off: Backspace+Dots12
+* set sliding braille window on: Enter+Dots2456
+* set sliding braille window off: Backspace+Dots2456
 * set track screen cursor on/off: Back+Next
 
 Menu Operations
-* restore preferences from disk: Space+Dot1+Dot4+Dot5
-* save preferences to disk: Space+Dot2+Dot4+Dot5+Dot6
+* restore preferences from disk: Space+Dots145
+* save preferences to disk: Space+Dots2456
 
 Speech Functions
-* stop speaking: Space+Dot1+Dot3+Dot4
-* speak current line: Space+Dot2+Dot3+Dot4
+* stop speaking: Space+Dots134
+* speak current line: Space+Dots234
 
 Keyboard Input
 * backspace key: Backspace
-* escape key: Space+Dot2+Dot6
-* cursor-left key: Space+Dot2+Dot3
-* cursor-right key: Space+Dot5+Dot6
-* cursor-up key: Space+Dot2+Dot5
-* cursor-down key: Space+Dot3+Dot6
+* escape key: Space+Dots26
+* cursor-left key: Space+Dots23
+* cursor-right key: Space+Dots56
+* cursor-up key: Space+Dots25
+* cursor-down key: Space+Dots36
 * page-up key: Space+Dot5
 * page-down key: Space+Dot6
 * home key: Space+Dot2
 * end key: Space+Dot3
-* insert key: Space+Dot3+Dot5
-* delete key: Space+Dot2+Dot5+Dot6
+* insert key: Space+Dots35
+* delete key: Space+Dots256
 * enter key: Enter
-* tab key: Space+Dot2+Dot3+Dot5+Dot6
-* switch to the previous virtual terminal: Backspace+Dot1+Dot2+Dot3+Dot6
-* switch to the next virtual terminal: Enter+Dot1+Dot2+Dot3+Dot6
+* tab key: Space+Dots2356
+* switch to the previous virtual terminal: Backspace+Dots1236
+* switch to the next virtual terminal: Enter+Dots1236
 
 Special Functions
-* remember current braille window position: Backspace+Dot1+Dot3+Dot4, RoutingKey
-* go to remembered braille window position: Enter+Dot1+Dot3+Dot4, RoutingKey
-* restart braille driver: Enter+Dot1+Dot2+Dot3+Dot4+Dot5+Dot6
-* restart speech driver: Backspace+Dot1+Dot2+Dot3+Dot4+Dot5+Dot6
+* remember current braille window position: Backspace+Dots134, RoutingKey
+* go to remembered braille window position: Enter+Dots134, RoutingKey
+* restart braille driver: Enter+Dots123456
+* restart speech driver: Backspace+Dots123456
 

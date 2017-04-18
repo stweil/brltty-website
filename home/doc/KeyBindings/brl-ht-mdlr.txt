@@ -15,7 +15,7 @@ Special Modes
 * enter/leave help display:
   + Status1
   + B8
-* enter/leave command learn mode: Seven
+* enter/leave command learn mode: B4+B5
 * enter/leave preferences menu:
   + Status2
   + B7+B1

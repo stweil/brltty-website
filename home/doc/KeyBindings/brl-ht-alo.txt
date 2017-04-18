@@ -1,5 +1,5 @@
-Key Table: HandyTech Connect Braille 40
-=======================================
+Key Table: HandyTech Actilino
+=============================
 
 Default Bindings
 ----------------
@@ -114,6 +114,7 @@ Clipboard Functions
 * search forward for clipboard text: B3+B5
 
 Configuration Functions
+* set touch navigation on/off: B1+B4+SpaceLeft
 * set text style 6-dot/8-dot: B7
 * set skipping of lines with identical content on/off: B6+B1
 * set skipping of blank braille windows on/off: B6+B2
@@ -132,9 +133,16 @@ Speech Functions
 * speak current line: B2+B3+SpaceRight
 
 Keyboard Input
-* cursor-up key: LeftRockerTop
-* cursor-down key: LeftRockerBottom
+* cursor-left key: Left
+* cursor-right key: Right
+* cursor-up key:
+  + Up
+  + LeftRockerTop
+* cursor-down key:
+  + Down
+  + LeftRockerBottom
 * function key: LeftRockerTop+LeftRockerBottom+RoutingKey
+* enter key: Action
 * switch to a specific virtual terminal: RightRockerTop+RightRockerBottom+RoutingKey
 
 Special Functions
