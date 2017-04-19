@@ -19,7 +19,7 @@ then please <A HREF="contact.html">let us know</A>.
 
       array("Baum",
          "BrailleConnect 12/24/32/40/64/.80", "Brailliant 24/32/40/64/.80",
-         "Conny 12", "DM80 Plus", "EcoVario 24/32/40/64/.80", "Inka",
+         "Conny 12", "DM80 Plus", "EcoVario 24/32/40/64/.80", "Inka", "Orbit 20",
          "PocketVario 24", "Pronto! V3 18/40", "Pronto! V4 18/40",
          "RBT 40/80", "Refreshabraille 18", "SuperVario 24/32/40/64/.80",
          "Vario 40/80", "VarioConnect 12/24/32/40/64/.80",
@@ -72,7 +72,7 @@ then please <A HREF="contact.html">let us know</A>.
 
       array("HandyTech",
          "Modular 20/40/80", "Modular Evolution 64/88",
-         "Modular Connect 88", "Active Braille", "Active Star 40",
+         "Modular Connect 88", "Active Braille", "Active Star 40", "Actilino",
          "Basic Braille 16/20/32/40/48/64/80", "Braillino", "Braille Wave",
          "Easy Braille", "Braille Star 40/80", "Connect Braille 40",
          "Bookworm"
@@ -87,7 +87,7 @@ then please <A HREF="contact.html">let us know</A>.
       ),
 
       array("HumanWare",
-         "Brailliant 32/40/80 bi"
+         "Brailliant 32/40/80 bi", "Braille Note Touch"
       ),
 
       array("Iris"
