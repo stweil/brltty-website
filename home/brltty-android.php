@@ -18,6 +18,7 @@ So far, we have translations for the following languages:
 <ul>
    <li>Czech</li>
    <li>Chinese</li>
+   <li>Danish</li>
    <li>Finnish</li>
    <li>French</li>
    <li>German</li>
