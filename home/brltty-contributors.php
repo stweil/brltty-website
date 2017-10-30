@@ -28,11 +28,11 @@ Vienna, Austria.
 <UL>
 <LI>Author of driver for <CITE>EcoBraille</CITE> from <A HREF="http://cidat.once.es/">La O.N.C.E.</A>
 </UL>
-<?php contributor("Jos Lemmens", "jlemmens@inter.nl.net"); ?>
+<?php contributor("Jos Lemmens", "JLemmens@Inter.nl.net"); ?>
 <UL>
 <LI>Provider of parallel port support library for <CITE>Alva</CITE> from <A HREF="http://www.alva-bv.nl/alvacorp/alva_corp_home.html">Alva B.V.</A>
 </UL>
-<?php contributor("Yannick Plassiard", "Yannick.Plassiard@free.fr"); ?>
+<?php contributor("Yannick Plassiard", "PlassiardYannick@GMail.com"); ?>
 <UL>
 <LI>Maintainer of driver for <CITE>EuroBraille</CITE> from <A HREF="http://www.eurobraille.fr/">EuroBraille</A>.
 </UL>
@@ -44,7 +44,7 @@ Vienna, Austria.
 <UL>
 <LI>Author of driver for <CITE>MultiBraille</CITE> from <A HREF="http://www.braillevoyager.nl/uk/index.html">Tieman B.V.</A>
 </UL>
-<?php contributor("Mario Lang", "mlang@delysid.org"); ?>
+<?php contributor("Mario Lang", "MLang@Blind.Guru"); ?>
 <UL>
 <LI>Author of driver for <CITE>Vario/RBT</CITE> (native mode) from <A HREF="http://www.baum.de/English/homeeng1.htm">Baum</A>.
 <LI>Author of driver for <CITE><A HREF="http://www.speech.cs.cmu.edu/flite/index.html">Festival Lite</A></CITE> text to speech engine from <A HREF="http://www.cmu.edu">Carnegie Mellon University</A> (<A HREF="http://www.cs.cmu.edu">School of Computer Science</A>).
@@ -53,7 +53,7 @@ Vienna, Austria.
 <UL>
 <LI>Author of driver for <CITE>Vario/RBT</CITE> (emulation 2) from <A HREF="http://www.baum.de/English/homeeng1.htm">Baum</A>.
 </UL>
-<?php contributor("Sébastien Hinderer", "sebastien.hinderer@libertysurf.fr"); ?>
+<?php contributor("Sébastien Hinderer", "Sebastien.Hinderer@libertysurf.fr"); ?>
 <UL>
 <LI>Author of driver for <CITE>VisioBraille</CITE> from <A HREF="http://www.handialog.com/indexuk.htm">Handialog</A>.
 <LI>Co-author of Application Programming Interface.
@@ -70,11 +70,11 @@ Vienna, Austria.
 <UL>
 <LI>Designer of kernel module for <CITE>Voyager</CITE> from <A HREF="http://www.braillevoyager.nl/uk/index.html">Tieman B.V.</A>.
 </UL>
-<?php contributor("John Boyer", "director@chpi.org"); ?>
+<?php contributor("John Boyer", "Director@CHPI.org"); ?>
 <UL>
 <LI>Author of support for in-line contracted braille.
 </UL>
-<?php contributor("Samuel Thibault", "samuel.thibault@labri.fr"); ?>
+<?php contributor("Samuel Thibault", "Samuel.Thibault@labri.fr"); ?>
 <UL>
 <LI>Co-author of the Application Programming Interface.
 <LI>Author of the Tty and XWindow test drivers.
