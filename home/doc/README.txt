@@ -2,50 +2,20 @@ BRLTTY is a background process (daemon) providing access to the Linux/Unix
 console (when in text mode) for a blind person using a refreshable braille
 display.
 
-Version 5.5, Apr 2017
+Version 5.6, Feb 2018
 
-Copyright (C) 1995-2017 by The BRLTTY Developers.
+Copyright (C) 1995-2018 by The BRLTTY Developers.
 
 Web Page: http://brltty.com/
 
 BRLTTY is free software. It comes with ABSOLUTELY NO WARRANTY.
 
-BRLTTY is placed under the terms of the GNU General Public License [GPL] as 
-published by the Free Software Foundation; see the file LICENSE-GPL for 
-details. Version 2 (or any later version) of the GPL may be used when 
+BRLTTY is placed under the terms of the GNU Lesser General Public License
+[LGPL] as published by the Free Software Foundation; see the file LICENSE-LGPL
+for details. Version 2.1 (or any later version) of the LGPL may be used when 
 redistributing and/or modifying this software. This statement applies to all 
 the files contained within this directory structure except for those which are 
 explicitly listed as exceptions within the following paragraphs.
-
-A special exception has been made for all of the text, attributes, and 
-contraction tables and subtables (which reside within the Tables/ 
-subdirectory). They are placed under the terms of the GNU Lesser General Public 
-License [LGPL] as published by the Free Software Foundation; see the file 
-LICENSE-LGPL for details. Version 2.1 (or any later version) of the LGPL may be 
-used when redistributing and/or modifying these files. The files covered by 
-this special exception are:
-
-   *.ttb
-   *.tti
-   *.atb
-   *.ati
-   *.ctb
-   *.cti
-
-A special exception has been made for those files which are part of the client 
-side of BrlAPI (BRLTTY's Application Programming Interface). They are placed 
-under the terms of the GNU Lesser General Public License [LGPL] as published by 
-the Free Software Foundation; see the file LICENSE-LGPL for details. Version 
-2.1 (or any later version) of the LGPL may be used when redistributing and/or 
-modifying these files. The files covered by this special exception are:
-
-   brlapi.h.in
-   brlapi_keycodes.h
-   brlapi_protocol.h
-   brlapi_client.c
-   brlapi_common.h
-   brldefs-ht.h
-   brldefs-vs.h
 
 This software is maintained by: Dave Mielke <dave@mielke.cc>
 
@@ -208,7 +178,8 @@ The following braille displays are supported:
               Connect Braille 40, Bookworm]
 -  Hedo [ProfiLine, MobilLine]
 -  HIMS [Braille Sense, SyncBraille, Braille Edge, Smart Beetle]
--  HumanWare [Brailliant 32/40/80 bi]
+-  HumanWare [Brailliant BI 14/32/40, Brailliant B 80, BrailleNote Touch]
+-  Inceptor [BrailleMe]
 -  Iris
 -  Libbraille
 -  LogText [32]

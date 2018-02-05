@@ -1,7 +1,9 @@
-Key Table: HumanWare Brailliant B (has no keyboard)
-===================================================
+Key Table: HumanWare Brailliant B 80
+====================================
 
 Notes
+* There are four thumb keys on the front. From left to right, they are:
+  Previous, Back, Advance, Next.
 * There are three display keys at each end of the braille cells.
   From top to bottom:
   + The three at the left are named Display1, Display2, and Display3.
@@ -22,7 +24,7 @@ Special Modes
 
 Cursor Functions
 * go to screen cursor:
-  + Thumb2+Thumb3
+  + Back+Advance
   + Display2+Display4+Display6
 * go back after cursor tracking: Display1+Display6
 * bring screen cursor to character: RoutingKey
@@ -30,24 +32,24 @@ Cursor Functions
 
 Vertical Navigation
 * go up one line:
-  + Thumb2
+  + Back
   + Display4
 * go down one line:
-  + Thumb3
+  + Advance
   + Display6
 * go to top line: Display1+Display4
 * go to bottom line: Display3+Display6
 * go to beginning of top line:
-  + Thumb1+Thumb2
+  + Previous+Back
   + Display2+Display4
 * go to beginning of bottom line:
-  + Thumb1+Thumb3
+  + Previous+Advance
   + Display2+Display6
 * go up to nearest line with different content:
-  + Thumb4+Thumb2
+  + Next+Back
   + Display5+Display4
 * go down to nearest line with different content:
-  + Thumb4+Thumb3
+  + Next+Advance
   + Display5+Display6
 * go up to nearest line with different highlighting: Display2+Display1
 * go down to nearest line with different highlighting: Display2+Display3
@@ -62,10 +64,10 @@ Vertical Navigation
 
 Horizontal Navigation
 * go backward one braille window:
-  + Thumb1
+  + Previous
   + Display2
 * go forward one braille window:
-  + Thumb4
+  + Next
   + Display5
 * go to beginning of line: Display1+Display2+Display3
 * go to end of line: Display4+Display5+Display6
@@ -75,21 +77,21 @@ Horizontal Navigation
 
 Clipboard Functions
 * start new clipboard at character:
-  + Thumb1+RoutingKey
+  + Previous+RoutingKey
   + Display1+RoutingKey
 * append to clipboard from character:
-  + Thumb2+RoutingKey
+  + Back+RoutingKey
   + Display2+RoutingKey
 * linear copy to character:
-  + Thumb4+RoutingKey
+  + Next+RoutingKey
   + Display4+RoutingKey
 * rectangular copy to character:
-  + Thumb3+RoutingKey
+  + Advance+RoutingKey
   + Display5+RoutingKey
 * copy characters to clipboard: RoutingKey+RoutingKey
 * append characters to clipboard: Display2+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
-  + Thumb1+Thumb4
+  + Previous+Next
   + Display1+Display2+Display3+Display4
 * search backward for clipboard text: Display2+Display4+Display6+Display1
 * search forward for clipboard text: Display2+Display4+Display6+Display3
@@ -127,19 +129,19 @@ Menu Bindings
 -------------
 
 Special Modes
-* enter/leave preferences menu: Thumb2+Thumb3
+* enter/leave preferences menu: Back+Advance
 
 Horizontal Navigation
-* go backward one braille window: Thumb1
-* go forward one braille window: Thumb4
+* go backward one braille window: Previous
+* go forward one braille window: Next
 
 Menu Operations
-* go up to previous item: Thumb2
-* go down to next item: Thumb3
-* go up to first item: Thumb1+Thumb2
-* go down to last item: Thumb1+Thumb3
-* select previous choice: Thumb4+Thumb2
-* select next choice: Thumb4+Thumb3
-* restore preferences from disk: Thumb2+Thumb3+Thumb1
-* save preferences to disk: Thumb2+Thumb3+Thumb4
+* go up to previous item: Back
+* go down to next item: Advance
+* go up to first item: Previous+Back
+* go down to last item: Previous+Advance
+* select previous choice: Next+Back
+* select next choice: Next+Advance
+* restore preferences from disk: Back+Advance+Previous
+* save preferences to disk: Back+Advance+Next
 

@@ -14,9 +14,9 @@
   Jean-Philippe Mengual <texou@accelibreinfo.eu> pour
   Traduc.org
 
-  Version 5.5, Avril 2017
+  Version 5.6, Février 2018
 
-  Copyright © 1995-2017 by Les Développeurs de BRLTTY.  BRLTTY est un
+  Copyright © 1995-2018 by Les Développeurs de BRLTTY.  BRLTTY est un
   logiciel libre, et n'est fourni avec AUCUNE GARANTIE. Il est placé
   sous les termes de la version 2 ou ultérieure de la GNU General Public
   License publiée par The Free Software Foundation.
@@ -150,14 +150,14 @@
   1.1.  Licence
 
   Ce programme est un logiciel libre. Vous pouvez le redistribuer et/ou
-  le modifier sous les termes de la GNU General Public License stipulée
-  par la Free Software Foundation. Vous pouvez utiliser une version 2
-  (ou supérieure) de la licence.
+  le modifier sous les termes de la GNU Lesser General Public License
+  stipulée par la Free Software Foundation. Vous pouvez utiliser une
+  version 2,1 (ou supérieure) de la licence.
 
   Vous devriez avoir reçu une copie de la licence avec le programme.
-  Elle devrait être dans le fichier LICENSE-GPL du répertoire principal.
-  Si ce n'est pas le cas, écrivez à la Free Software Foundation Inc.,
-  675 Mass Ave, Cambridge, MA 02139, USA.
+  Elle devrait être dans le fichier LICENSE-LGPL du répertoire
+  principal. Si ce n'est pas le cas, écrivez à la Free Software
+  Foundation Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
   1.2.  Mise en garde
 
@@ -4669,7 +4669,7 @@
   nl_NL        Autrichien (Pays-Bas)
   no           Norvégien
   no-generic   Norvégien (avec le support des autres langues)
-  no-oub       Norvégien (Offentlig Utvalg for Blindeskrift)
+  no-oup       Norvégien (Offentlig Utvalg for punktskrift)
   nwc          Newari (ancien)
   or           Oriya
   pa           Panjabi
@@ -4682,6 +4682,7 @@
   sat          Santali
   sd           Sindhi
   sk           Slovaque
+  sl           Slovène
   sv           Suédois
   sv-1989      Suédois (standard 1989)
   sv-1996      Suédois (standard 1996)
@@ -4689,6 +4690,7 @@
   ta           Tamoul
   te           Telugu
   tr           Turc
+  uk           Ukrainien
   vi           Vietnamien
 
 
@@ -5083,6 +5085,7 @@
       ko-g1            Coréen (1er degré)
       ko-g2            Coréen (2ème degré)
       ko               Coréen (désabrégé)
+      lt               Lituanien
       mg               Malagasky (abrégé)
       mun              Munda (abrégé)
       nl               Autrichien (abrégé)
@@ -6199,7 +6202,10 @@
                               SyncBraille
                               Braille Edge
                               Smart Beetle
-          HumanWare           Brailliant 32/40/80 bi
+          HumanWare           Brailliant BI 14/32/40
+                              Brailliant B 80
+                              BrailleNote Touch
+          Inceptor            BrailleMe
           Iris
           Libbraille
           LogText             32
@@ -6271,6 +6277,7 @@
                     Code   Name
                     ____________________________________________________
                     al     Alva
+                    an     Android
                     at     Albatross
                     ba     BrlAPI
                     bc     BrailComm
@@ -6291,11 +6298,13 @@
                     hm     HIMS
                     ht     HandyTech
                     hw     HumanWare
+                    ic     Inceptor
                     ir     Iris
                     lb     Libbraille
                     lt     LogText
                     mb     MultiBraille
                     md     MDV
+                    mm     BrailleMemo
                     mn     MiniBraille
                     mp     Mikropuhe
                     mt     Metec

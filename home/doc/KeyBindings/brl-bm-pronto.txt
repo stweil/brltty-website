@@ -236,6 +236,7 @@ Speech Functions
   + B9+Press
 
 Keyboard Input
+* braille keyboard space: B9
 * braille keyboard dot1: Dot1
 * braille keyboard dot2: Dot2
 * braille keyboard dot3: Dot3
@@ -248,7 +249,6 @@ Keyboard Input
 * type braille dots [7]: B10+Dot7
 * type braille dots [8]: B10+Dot8
 * backspace key:
-  + B9
   + Dot7
   + Dot2+Left
 * escape key:

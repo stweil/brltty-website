@@ -44,9 +44,9 @@
         <tt><htmlurl url="mailto:texou@accelibreinfo.eu" name="&lt;texou@accelibreinfo.eu&gt;"></tt>
       pour
         <tt><htmlurl url="http://www.traduc.org/" name="Traduc.org"></tt>
-  <date>Version 5.5, Avril 2017
+  <date>Version 5.6, Février 2018
   <abstract>
-    Copyright &copy; 1995-2017 by Les Développeurs de BRLTTY.
+    Copyright &copy; 1995-2018 by Les Développeurs de BRLTTY.
     BRLTTY est un logiciel libre, et n'est fourni avec AUCUNE
     GARANTIE. Il est placé sous les termes de la version 2 ou
     ultérieure de la <bf>GNU General Public License</bf> publiée par
@@ -62,11 +62,11 @@
 
 <sect1>Licence<p>
 Ce programme est un logiciel libre. Vous pouvez le redistribuer et/ou
-le modifier sous les termes de la <htmlurl url="http://www.gnu.org/licenses/licenses.html#GPL" name="GNU General Public License">
-stipulée par la <htmlurl url="http://www.gnu.org/fsf/fsf.html" name="Free Software Foundation">. Vous pouvez utiliser une version 2 (ou supérieure) de la licence.
+le modifier sous les termes de la <htmlurl url="http://www.gnu.org/licenses/licenses.html#LGPL" name="GNU Lesser General Public License">
+stipulée par la <htmlurl url="http://www.gnu.org/fsf/fsf.html" name="Free Software Foundation">. Vous pouvez utiliser une version 2,1 (ou supérieure) de la licence.
 
 Vous devriez avoir reçu une copie de la licence avec le
-programme. Elle devrait être dans le fichier <tt/LICENSE-GPL/ du
+programme. Elle devrait être dans le fichier <tt/LICENSE-LGPL/ du
 répertoire principal. Si ce n'est pas le cas, écrivez à la Free Software
 Foundation Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 

@@ -1,0 +1,49 @@
+Key Table: Innovision
+=====================
+
+Default Bindings
+----------------
+
+Cursor Functions
+* bring screen cursor to character: RoutingKey
+
+Vertical Navigation
+* go up one line: LeftUp
+* go down one line: LeftDown
+* go to top line: Space+Dots23+Enter
+* go to bottom line: Space+Dots26+Enter
+* go up to nearest line with different content: Space+Dots13+Enter
+* go down to nearest line with different content: Space+Dots16+Enter
+* go up to nearest line with different highlighting: Space+RightUp
+* go down to nearest line with different highlighting: Space+RightDown
+* go up to first line of paragraph: Space+Dot1+LeftUp
+* go down to first line of next paragraph: Space+Dot1+LeftDown
+* go up to previous command prompt: Space+Dots13
+* go down to next command prompt: Space+Dots16
+
+Horizontal Navigation
+* go backward one braille window: RightUp
+* go forward one braille window: RightDown
+* go backward skipping blank braille windows: Space+Dot1+RightUp
+* go forward skipping blank braille windows: Space+Dot1+RightDown
+
+Keyboard Input
+* braille keyboard dot1: Dot1
+* braille keyboard dot2: Dot2
+* braille keyboard dot3: Dot3
+* braille keyboard dot4: Dot4
+* braille keyboard dot5: Dot5
+* braille keyboard dot6: Dot6
+* braille keyboard dot7: Dot7
+* braille keyboard dot8: Dot8
+* braille keyboard space: Space
+* backspace key: Space+Back
+* page-up key: Space+Dot3
+* page-down key: Space+Dot6
+* delete key: Space+Enter
+* function key #1: Space+Dot3+Enter
+* function key #2: Space+Dots123456
+* function key #3: Space+Dot5+LeftUp
+* function key #4: Space+Dots25
+* enter key: Enter
+

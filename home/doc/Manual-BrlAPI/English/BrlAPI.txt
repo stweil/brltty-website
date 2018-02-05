@@ -71,8 +71,8 @@
               BRLAPI_ERROR_PROTOCOL_VERSION error packet is returned and
               the connection is closed.
         7.4.2 BRLAPI_PACKET_AUTH
-        7.4.3 BRLAPI_PACKET_GETDRIVERID (see brlapi_getDriverId() )
-        7.4.4 BRLAPI_PACKET_GETDRIVERNAME (see brlapi_getDriverName() )
+        7.4.3 BRLAPI_PACKET_GETDRIVERNAME (see brlapi_getDriverName() )
+        7.4.4 BRLAPI_PACKET_GETMODELID (see brlapi_getModelIdentifier() )
         7.4.5 BRLAPI_PACKET_GETDISPLAYSIZE (see brlapi_getDisplaySize() )
         7.4.6 BRLAPI_PACKET_ENTERTTYMODE (see brlapi_enterTtyMode() and
               brlapi_enterTtyModeWithPath() )
@@ -1362,9 +1362,8 @@
      ask for a tty or raw mode. The client can send either of these
      types of packet:
 
-     ·  BRLAPI_PACKET_GETDRIVERID, BRLAPI_PACKET_GETDRIVERNAME or
-        BRLAPI_PACKET_GETDISPLAYSIZE to get pieces of information from
-        the server,
+     ·  BRLAPI_PACKET_GETDRIVERNAME or BRLAPI_PACKET_GETDISPLAYSIZE to
+        get pieces of information from the server,
 
      ·  BRLAPI_PACKET_ENTERTTYMODE to enter tty handling mode,
 
@@ -1390,9 +1389,8 @@
 
      ·  BRLAPI_PACKET_ENTERRAWMODE to enter raw mode,
 
-     ·  BRLAPI_PACKET_GETDRIVERID, BRLAPI_PACKET_GETDRIVERNAME or
-        BRLAPI_PACKET_GETDISPLAYSIZE to get pieces of information from
-        the server,
+     ·  BRLAPI_PACKET_GETDRIVERNAME or BRLAPI_PACKET_GETDISPLAYSIZE to
+        get pieces of information from the server,
 
      And the server might send BRLAPI_PACKET_KEY packets to signal key
      presses.
@@ -1468,15 +1466,16 @@
   Note: when the Operating system permits it, the server may use
   implicit credential check, and then advertise the none method.
 
-  7.4.3.  BRLAPI_PACKET_GETDRIVERID (see brlapi_getDriverId() )
-
-  This should be sent by the client when it needs the 2-char identifier
-  of the current brltty driver. The returned string is \0 terminated.
-
-  7.4.4.  BRLAPI_PACKET_GETDRIVERNAME (see brlapi_getDriverName() )
+  7.4.3.  BRLAPI_PACKET_GETDRIVERNAME (see brlapi_getDriverName() )
 
   This should be sent by the client when it needs the full name of the
   current brltty driver. The returned string is \0 terminated.
+
+  7.4.4.  BRLAPI_PACKET_GETMODELID (see brlapi_getModelIdentifier() )
+
+  This should be sent by the client when it needs to identify which
+  model of braille display is currently used by brltty.  The returned
+  string is \0 terminated.
 
   7.4.5.  BRLAPI_PACKET_GETDISPLAYSIZE (see brlapi_getDisplaySize() )
 

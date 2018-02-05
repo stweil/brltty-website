@@ -102,7 +102,7 @@ client then doesn't need to send a <CODE>BRLAPI_PACKET_AUTH</CODE> packet.
 <LI>normal mode: the client is authorized to use the server, but didn't ask for a tty
 or raw mode. The client can send either of these types of packet:
 <UL>
-<LI><CODE>BRLAPI_PACKET_GETDRIVERID</CODE>, <CODE>BRLAPI_PACKET_GETDRIVERNAME</CODE>
+<LI><CODE>BRLAPI_PACKET_GETDRIVERNAME</CODE>
 or <CODE>BRLAPI_PACKET_GETDISPLAYSIZE</CODE> to get pieces of information from the server,</LI>
 <LI><CODE>BRLAPI_PACKET_ENTERTTY</CODE>MODE to enter tty handling mode,</LI>
 <LI><CODE>BRLAPI_PACKET_ENTERRAWMODE</CODE> to enter raw mode,</LI>
@@ -121,7 +121,7 @@ normal mode,</LI>
 <LI><CODE>BRLAPI_PACKET_IGNOREKEYRANGE</CODE> and <CODE>BRLAPI_PACKET_ACCEPTKEYRANGE</CODE> to mask and unmask keys,</LI>
 <LI><CODE>BRLAPI_PACKET_WRITE</CODE> to display text on this tty,</LI>
 <LI><CODE>BRLAPI_PACKET_ENTERRAWMODE</CODE> to enter raw mode,</LI>
-<LI><CODE>BRLAPI_PACKET_GETDRIVERID</CODE>, <CODE>BRLAPI_PACKET_GETDRIVERNAME</CODE>
+<LI><CODE>BRLAPI_PACKET_GETDRIVERNAME</CODE>
 or <CODE>BRLAPI_PACKET_GETDISPLAYSIZE</CODE> to get pieces of information from the server,</LI>
 </UL>
 
@@ -188,15 +188,16 @@ the credentials sufficient.</LI>
 <P>Note: when the Operating system permits it, the server may use implicit
 credential check, and then advertise the <CODE>none</CODE> method.</P>
 
-<H3><CODE>BRLAPI_PACKET_GETDRIVERID</CODE> (see <EM>brlapi_getDriverId()</EM>)</H3>
-
-<P>This should be sent by the client when it needs the 2-char identifier of
-the current <CODE>brltty</CODE> driver. The returned string is \0 terminated.</P>
-
 <H3><CODE>BRLAPI_PACKET_GETDRIVERNAME</CODE> (see <EM>brlapi_getDriverName()</EM>)</H3>
 
 <P>This should be sent by the client when it needs the full name of
 the current <CODE>brltty</CODE> driver. The returned string is \0 terminated.</P>
+
+<H3><CODE>BRLAPI_PACKET_GETMODELID</CODE> (see <EM>brlapi_getModelIdentifier()</EM>)</H3>
+
+<P>This should be sent by the client when it needs to identify
+which model of braille display is currently used by <CODE>brltty</CODE>.
+The returned string is \0 terminated.</P>
 
 <H3><CODE>BRLAPI_PACKET_GETDISPLAYSIZE</CODE> (see <EM>brlapi_getDisplaySize()</EM>)</H3>
 
