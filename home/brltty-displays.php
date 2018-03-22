@@ -90,6 +90,10 @@ then please <A HREF="contact.html">let us know</A>.
          "Brailliant BI 14/32/40", "Brailliant B 80", "BrailleNote Touch"
       ),
 
+      array("Inceptor",
+         "BrailleMe"
+      ),
+
       array("Iris"
       ),
 
