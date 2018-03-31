@@ -162,8 +162,8 @@ Keyboard Input
 * braille keyboard dot6: Dot6
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
-* braille keyboard space: Space
 * braille keyboard control: Control
+* braille keyboard space: Space
 * braille keyboard meta: Alt
 * type braille dots [7]: Space+Dot7
 * type braille dots [8]: Space+Dot8
@@ -203,8 +203,8 @@ Keyboard Input
   + Space+Dots256
 * function key: SmartpadF2+RoutingKey1
 * enter key:
-  + Enter
   + Dot8
+  + Enter
 * tab key: Space+Dots45
 * clear all sticky input modifiers: Space+Dots78
 * cycle the Upper sticky input modifier (next, on, off): Space+Dots68
@@ -213,7 +213,7 @@ Keyboard Input
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dots28
 * cycle the AltGr (Right Alt) sticky input modifier (next, on, off): Space+Dots58
 * cycle the GUI (Windows) sticky input modifier (next, on, off): Space+Dots18
-* switch to a specific virtual terminal: SmartpadF1+RoutingKey1
+* switch to specific virtual terminal: SmartpadF1+RoutingKey1
 * switch to the previous virtual terminal:
   + SmartpadF1+SmartpadLeft
   + Space+Dots12367
@@ -234,8 +234,8 @@ Menu Bindings
 Special Modes
 * enter/leave preferences menu:
   + SmartpadF1
-  + Dot8
   + ThumbHome
+  + Dot8
 
 Horizontal Navigation
 * go backward one braille window: ThumbLeft
@@ -244,26 +244,26 @@ Horizontal Navigation
 Menu Operations
 * go up to previous item:
   + SmartpadUp
-  + Dot1
   + ThumbUp
+  + Dot1
 * go down to next item:
   + SmartpadDown
-  + Dot4
   + ThumbDown
+  + Dot4
 * go up to first item:
-  + Dot2
   + ETouchLeftRear
+  + Dot2
 * go down to last item:
-  + Dot5
   + ETouchLeftFront
+  + Dot5
 * select previous choice:
+  + ETouchRightRear
   + SmartpadLeft
   + Dot3
-  + ETouchRightRear
 * select next choice:
+  + ETouchRightFront
   + SmartpadRight
   + Dot6
-  + ETouchRightFront
 * go to previous menu level:
   + SmartpadF2
   + Dot7

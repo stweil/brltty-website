@@ -139,10 +139,10 @@ Keyboard Input
 * braille keyboard dot6: Dot6
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
-* braille keyboard space: LeftSpace
-* braille keyboard space: RightSpace
-* braille keyboard control: LeftThumb
 * braille keyboard meta: RightThumb
+* braille keyboard control: LeftThumb
+* braille keyboard space: RightSpace
+* braille keyboard space: LeftSpace
 * type braille dots [7]: Space+Dot7
 * type braille dots [8]: Space+Dot8
 * backspace key: Dot7

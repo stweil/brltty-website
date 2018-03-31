@@ -14,8 +14,7 @@ BRLTTY is placed under the terms of the GNU Lesser General Public License
 [LGPL] as published by the Free Software Foundation; see the file LICENSE-LGPL
 for details. Version 2.1 (or any later version) of the LGPL may be used when 
 redistributing and/or modifying this software. This statement applies to all 
-the files contained within this directory structure except for those which are 
-explicitly listed as exceptions within the following paragraphs.
+the files contained within this directory structure.
 
 This software is maintained by: Dave Mielke <dave@mielke.cc>
 
@@ -210,6 +209,7 @@ The following speech synthesizers are supported:
 -  BrailleLite
 -  CombiBraille
 -  eSpeak [text to speech engine]
+-  eSpeak-NG [text to speech engine]
 -  ExternalSpeech [runs /usr/local/bin/externalspeech]
 -  Festival [text to speech engine]
 -  FestivalLite [text to speech engine]

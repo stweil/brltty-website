@@ -6,8 +6,8 @@ Default Bindings
 
 Special Modes
 * enter/leave help display:
-  + LeftScrollUp+LeftScrollDown+RightScrollUp+RightScrollDown
   + Space+Dots125
+  + LeftScrollUp+LeftScrollDown+RightScrollUp+RightScrollDown
 * enter/leave command learn mode:
   + F5
   + Space+Dots123
@@ -154,7 +154,7 @@ Keyboard Input
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dots28
 * cycle the AltGr (Right Alt) sticky input modifier (next, on, off): Space+Dots58
 * cycle the GUI (Windows) sticky input modifier (next, on, off): Space+Dots18
-* switch to a specific virtual terminal: Space+F5, RoutingKey
+* switch to specific virtual terminal: Space+F5, RoutingKey
 * switch to the previous virtual terminal: Space+Dots12367
 * switch to the next virtual terminal: Space+Dots12368
 * set braille keyboard enabled/disabled:
@@ -169,8 +169,8 @@ Menu Bindings
 
 Special Modes
 * enter/leave preferences menu:
-  + RightScrollUp+RightScrollDown+LeftScrollDown
   + Dot8
+  + RightScrollUp+RightScrollDown+LeftScrollDown
 
 Horizontal Navigation
 * go backward one braille window: LeftScrollUp+LeftScrollDown
@@ -178,26 +178,26 @@ Horizontal Navigation
 
 Menu Operations
 * go up to previous item:
-  + LeftScrollUp
   + Dot1
+  + LeftScrollUp
 * go down to next item:
-  + LeftScrollDown
   + Dot4
+  + LeftScrollDown
 * go up to first item:
-  + LeftScrollUp+RightScrollUp
   + Dot2
+  + LeftScrollUp+RightScrollUp
 * go down to last item:
-  + LeftScrollDown+RightScrollDown
   + Dot5
+  + LeftScrollDown+RightScrollDown
 * select previous choice:
-  + RightScrollUp
   + Dot3
+  + RightScrollUp
 * select next choice:
-  + RightScrollDown
   + Dot6
+  + RightScrollDown
 * go to previous menu level:
-  + RightScrollUp+RightScrollDown+LeftScrollUp
   + Dot7
+  + RightScrollUp+RightScrollDown+LeftScrollUp
 * restore preferences from disk: LeftScrollUp+LeftScrollDown+RightScrollUp
 * save preferences to disk: LeftScrollUp+LeftScrollDown+RightScrollDown
 

@@ -25,8 +25,8 @@ Special Modes
 
 Cursor Functions
 * go to screen cursor:
-  + Dots25
   + Space
+  + Dots25
 * go back after cursor tracking: Back+Advance
 * bring screen cursor to character: RoutingKey
 * bring screen cursor to current line: Space+Dots1256
@@ -57,19 +57,19 @@ Vertical Navigation
 
 Horizontal Navigation
 * go backward one braille window:
-  + Previous
   + Dot2
+  + Previous
 * go forward one braille window:
-  + Next
   + Dot5
+  + Next
 * go backward skipping blank braille windows: Dots23
 * go forward skipping blank braille windows: Dots56
 * go to beginning of line:
-  + Previous+Back
   + Dot3
+  + Previous+Back
 * go to end of line:
-  + Next+Advance
   + Dot6
+  + Next+Advance
 * go left one character: Dot1
 * go right one character: Dot4
 * go left half a braille window: Dots12

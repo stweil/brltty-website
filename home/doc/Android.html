@@ -334,17 +334,32 @@ ul.auto-toc {
 <li><a class="reference internal" href="#starting-and-stopping-brltty" id="id5">Starting and Stopping BRLTTY</a></li>
 <li><a class="reference internal" href="#connecting-and-defining-your-braille-device" id="id6">Connecting and Defining Your Braille Device</a></li>
 <li><a class="reference internal" href="#using-a-braille-keyboard" id="id7">Using a Braille Keyboard</a></li>
-<li><a class="reference internal" href="#navigating-the-screen" id="id8">Navigating the Screen</a></li>
-<li><a class="reference internal" href="#when-brltty-crashes" id="id9">When BRLTTY Crashes</a></li>
-<li><a class="reference internal" href="#known-issues" id="id10">Known Issues</a></li>
+<li><a class="reference internal" href="#navigating-the-screen" id="id8">Navigating the Screen</a><ul>
+<li><a class="reference internal" href="#using-multiple-hosts" id="id9">Using Multiple Hosts</a></li>
+<li><a class="reference internal" href="#accessibility-focus" id="id10">Accessibility Focus</a></li>
+<li><a class="reference internal" href="#the-cursor-routing-keys" id="id11">The Cursor Routing Keys</a></li>
+<li><a class="reference internal" href="#input-areas" id="id12">Input Areas</a></li>
+<li><a class="reference internal" href="#widget-representation" id="id13">Widget Representation</a><ul>
+<li><a class="reference internal" href="#check-boxes" id="id14">Check Boxes</a></li>
+<li><a class="reference internal" href="#radio-buttons" id="id15">Radio Buttons</a></li>
+<li><a class="reference internal" href="#switches" id="id16">Switches</a></li>
+<li><a class="reference internal" href="#range-controls" id="id17">Range Controls</a></li>
+<li><a class="reference internal" href="#disabled-controls" id="id18">Disabled Controls</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#building-brltty" id="id11">Building BRLTTY</a><ul>
-<li><a class="reference internal" href="#preparing-your-host-environment" id="id12">Preparing Your Host Environment</a></li>
-<li><a class="reference internal" href="#installing-and-preparing-the-brltty-source-tree" id="id13">Installing and Preparing the BRLTTY Source Tree</a></li>
-<li><a class="reference internal" href="#building-brltty-for-android" id="id14">Building BRLTTY for Android</a></li>
-<li><a class="reference internal" href="#preparing-your-android-device" id="id15">Preparing Your Android Device</a></li>
-<li><a class="reference internal" href="#installing-brltty-on-your-android-device" id="id16">Installing BRLTTY on Your Android Device</a></li>
+<li><a class="reference internal" href="#global-actions" id="id19">Global Actions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#when-brltty-crashes" id="id20">When BRLTTY Crashes</a></li>
+<li><a class="reference internal" href="#known-issues" id="id21">Known Issues</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#building-brltty" id="id22">Building BRLTTY</a><ul>
+<li><a class="reference internal" href="#preparing-your-host-environment" id="id23">Preparing Your Host Environment</a></li>
+<li><a class="reference internal" href="#installing-and-preparing-the-brltty-source-tree" id="id24">Installing and Preparing the BRLTTY Source Tree</a></li>
+<li><a class="reference internal" href="#building-brltty-for-android" id="id25">Building BRLTTY for Android</a></li>
+<li><a class="reference internal" href="#preparing-your-android-device" id="id26">Preparing Your Android Device</a></li>
+<li><a class="reference internal" href="#installing-brltty-on-your-android-device" id="id27">Installing BRLTTY on Your Android Device</a></li>
 </ul>
 </li>
 </ul>
@@ -457,10 +472,10 @@ the device. For each installed accessibility service, there's an associated
 indicator that says <tt class="docutils literal">On</tt> if that service is currently running, and <tt class="docutils literal">Off</tt> if
 it isn't.</p>
 <p>Find <tt class="docutils literal">BRLTTY</tt> and tap on it. This brings up a window with two items in it.
-One is a &quot;switch&quot; (which accessibility services present as a checkbox) for
-turning BRLTTY on and off. The other is a button that takes you to BRLTTY's
-<tt class="docutils literal">Settings</tt> screen. You should go through BRLTTY's settings, making changes as
-desired, as well as define your braille device(s), before starting BRLTTY.</p>
+One is a &quot;switch&quot; for turning BRLTTY on and off. The other is a button that
+takes you to BRLTTY's <tt class="docutils literal">Settings</tt> screen. You should go through BRLTTY's
+settings, making changes as desired, as well as define your braille device(s),
+before starting BRLTTY.</p>
 </div>
 <div class="section" id="connecting-and-defining-your-braille-device">
 <h3><a class="toc-backref" href="#id6">Connecting and Defining Your Braille Device</a></h3>
@@ -513,8 +528,8 @@ of them you're willing to trust.</p>
 <tt class="docutils literal">Settings</tt> application, and then tapping on <tt class="docutils literal">Language and Input</tt>. The
 <tt class="docutils literal">Keyboard and Input Methods</tt> section of this screen contains a selector
 labeled <tt class="docutils literal">Default</tt> (that's used to select the current input method), as well
-as a checkbox for each installed input method. An input method is enabled if
-its checkbox is checked, and can only be selected if it has been enabled.</p>
+as a check box for each installed input method. An input method is enabled if
+its check box is checked, and can only be selected if it has been enabled.</p>
 <p>BRLTTY's input method is called <tt class="docutils literal">BRLTTY Input Service</tt>. While you may wish to
 enable it ahead of time, you probably don't want to select it ahead of time.
 The reason for this is that Android only allows exactly one input method to be
@@ -526,14 +541,16 @@ displayed. This dialog asks you to select an input method, and presents a set
 of radio buttons - one for each currently enabled input method. If there's no
 radio button for BRLTTY's input method then it hasn't been enabled yet.</p>
 <p>To enable it, tap the button within the dialog labeled <tt class="docutils literal">Set up input
-methods</tt>. This screen contains a checkbox for each installed input method.
-Check the checkbox for BRLTTY's input method to enable it. Then tap the
+methods</tt>. This screen contains a check box for each installed input method.
+Check the check box for BRLTTY's input method to enable it. Then tap the
 <tt class="docutils literal">Back</tt> button to return to the <tt class="docutils literal">Language and Input</tt> screen, find the
 <tt class="docutils literal">Keyboard and Input Methods</tt> section of that screen, and set the <tt class="docutils literal">Default</tt>
 input method to BRLTTY's input method.</p>
 </div>
 <div class="section" id="navigating-the-screen">
 <h3><a class="toc-backref" href="#id8">Navigating the Screen</a></h3>
+<div class="section" id="using-multiple-hosts">
+<h4><a class="toc-backref" href="#id9">Using Multiple Hosts</a></h4>
 <p>BRLTTY only remains connected to your braille device while your Android device
 is unlocked or while its screen is on. If your Android device is locked and its
 screen is off then BRLTTY automatically disconnects from your braille device.
@@ -550,6 +567,9 @@ the same way that pressing its keys, touching its screen, etc does. This means
 that your Android device will stay awake and unlocked even though you're only
 controlling it from your braille device, and that it'll also still
 automatically lock once you're no longer using it.</p>
+</div>
+<div class="section" id="accessibility-focus">
+<h4><a class="toc-backref" href="#id10">Accessibility Focus</a></h4>
 <p>The &quot;accessibility focus&quot; feature of Android is used for cursor tracking and
 routing. It's a soft cursor, not visible on the screen, that can be
 programmatically associated with any screen element. All screen readers that
@@ -557,10 +577,15 @@ use it to define the current element for actions (like tapping) will implicitly
 cooperate reasonably seamlessly with one another.</p>
 <p>The cursor is usually placed on the first character of the screen element that
 currently has accessibility focus. The one exception to this is within an
-editable input area. If that area has input focus then the cursor is placed at
+input area. If that area has input focus then the cursor is placed at
 the location within it where input will be inserted.</p>
+<p>When a home screen folder is opened, BRLTTY automatically sets accessibility
+focus to that folder's first entry. This eliminates the need to search for it.</p>
+</div>
+<div class="section" id="the-cursor-routing-keys">
+<h4><a class="toc-backref" href="#id11">The Cursor Routing Keys</a></h4>
 <p>The cursor routing keys of the braille device perform their usual function when
-within an editable input area if it has input focus - the key above a given
+within an input area if it has input focus - the key above a given
 character brings the cursor to that character. In any other context, however, a
 cursor routing key performs an action on the screen element under it. Starting
 with the leftmost routing key over a screen element, which we'll call key #1,
@@ -572,17 +597,95 @@ these actions are as follows:</p>
 <li>scroll backward (or up)</li>
 <li>scroll forward (or down)</li>
 </ol>
-<p>When an editable input area has input focus, BRLTTY's attribute underlining
+</div>
+<div class="section" id="input-areas">
+<h4><a class="toc-backref" href="#id12">Input Areas</a></h4>
+<p>When an input area has input focus, BRLTTY's attribute underlining
 feature is used to highlight the selected text region.</p>
-<p>When a home screen folder is opened, BRLTTY automatically sets accessibility
-focus to that folder's first entry. This eliminates the need to search for it.</p>
-<p>A checkbox is rendered as a pair of [square brackets]. A space between them
-means that the box isn't checked, and an <tt class="docutils literal">X</tt> between them means that it is
-checked.</p>
-<p>A two-position switch is rendered as though it were a checkbox. The box isn't
-checked if the switch is in its <tt class="docutils literal">off</tt> position, and is checked if the switch
-is in its <tt class="docutils literal">on</tt> position. The label associated with the switch's current
-position appears just after the [square brackets].</p>
+</div>
+<div class="section" id="widget-representation">
+<h4><a class="toc-backref" href="#id13">Widget Representation</a></h4>
+<div class="section" id="check-boxes">
+<h5><a class="toc-backref" href="#id14">Check Boxes</a></h5>
+<p>A check box is rendered as a three-cell symbol:</p>
+<ol class="arabic simple">
+<li>dots 123478 (the left side of the box)</li>
+<li>dots 2356 (the check mark)</li>
+<li>dots 145678 (the right side of the box)</li>
+</ol>
+<p>The check mark is present if the box is checked and absent if it isn't.
+If the check box has a label then it appears to the right of the symbol.
+The braille representations are:</p>
+<ul class="simple">
+<li>⣏⠶⣹ checked</li>
+<li>⣏ ⣹ not checked</li>
+</ul>
+</div>
+<div class="section" id="radio-buttons">
+<h5><a class="toc-backref" href="#id15">Radio Buttons</a></h5>
+<p>A radio button is rendered as a three-cell symbol:</p>
+<ol class="arabic simple">
+<li>dots 2348 (the left side of the button)</li>
+<li>dots 2356 (the check mark)</li>
+<li>dots 1567 (the right side of the button)</li>
+</ol>
+<p>The check mark shows which of the radio buttons is currently selected.
+The label for each radio button appears to the right of its symbol.
+The braille representations are:</p>
+<ul class="simple">
+<li>⢎⠶⡱ selected</li>
+<li>⢎ ⡱ not selected</li>
+</ul>
+</div>
+<div class="section" id="switches">
+<h5><a class="toc-backref" href="#id16">Switches</a></h5>
+<p>A (two-position) switch is rendered as a three-cell symbol:</p>
+<ol class="arabic simple">
+<li>dots 4568 (the left side of the switch)</li>
+<li>dots 1478 (the top and bottom of the switch)</li>
+<li>dots 1237 (the right side of the switch)</li>
+</ol>
+<p>Dots 25 are added to the middle cell if the switch is on,
+and dots 36 are added to the middle cell if the switch is off.
+In other words, the switch is up when on and down when off.
+The label for the switch's current state appears to the right of the symbol.
+The braille representations are:</p>
+<ul class="simple">
+<li>⢸⣛⡇ on</li>
+<li>⢸⣭⡇ off</li>
+</ul>
+</div>
+<div class="section" id="range-controls">
+<h5><a class="toc-backref" href="#id17">Range Controls</a></h5>
+<p>A range control is one which can be adjusted (rather than set or edited).
+They include widgets like progress bars, volume sliders, etc.
+They're rendered as a three-value summary:</p>
+<pre class="literal-block">
+* An at sign followed by the current setting.
+* The minimum and maximum settings, separated by a dash, within parentheses.
+</pre>
+<p>The developer of an application can choose which value range a given control uses.
+For example, a 16-position volume control currently set to 75% might look like this:</p>
+<pre class="literal-block">
+&#64;11 (0 - 15)
+</pre>
+<p>It could, however, also look like this:</p>
+<pre class="literal-block">
+&#64;75% (0% - 100%)
+</pre>
+</div>
+<div class="section" id="disabled-controls">
+<h5><a class="toc-backref" href="#id18">Disabled Controls</a></h5>
+<p>If a control is currently disabled then the word <tt class="docutils literal">disabled</tt>,
+enclosed within parentheses, appears to the right of its label.
+For example:</p>
+<pre class="literal-block">
+Connect &lt;disabled)
+</pre>
+</div>
+</div>
+<div class="section" id="global-actions">
+<h4><a class="toc-backref" href="#id19">Global Actions</a></h4>
 <p>Android supports a number of global actions that can be performed by pressing
 special hardware buttons and/or by touching reserved areas on the screen.
 BRLTTY also offers a way to perform these actions from your braille device.
@@ -665,8 +768,9 @@ some other key or key combination. For braille devices that have a braille
 keyboard, the most common key to be used in conjunction with a cursor routing
 key in order to emulate a keyboard function key is the space bar.</p>
 </div>
+</div>
 <div class="section" id="when-brltty-crashes">
-<h3><a class="toc-backref" href="#id9">When BRLTTY Crashes</a></h3>
+<h3><a class="toc-backref" href="#id20">When BRLTTY Crashes</a></h3>
 <p>We hope, of course, that BRLTTY won't crash. If it does, though, we want to
 know about it.</p>
 <p>If BRLTTY does crash, you'll get a dialog with a message like this:</p>
@@ -696,7 +800,7 @@ the part of it that shows how BRLTTY crashed may already have been
 automatically removed.</p>
 </div>
 <div class="section" id="known-issues">
-<h3><a class="toc-backref" href="#id10">Known Issues</a></h3>
+<h3><a class="toc-backref" href="#id21">Known Issues</a></h3>
 <p>Serial devices aren't supported. Even though Android devices don't have serial
 ports, serial devices still can be connected via a USB to Serial adapter. Users
 who have older, serial-only braille devices should still be able to use them
@@ -704,9 +808,9 @@ with their Android devices.</p>
 </div>
 </div>
 <div class="section" id="building-brltty">
-<h2><a class="toc-backref" href="#id11">Building BRLTTY</a></h2>
+<h2><a class="toc-backref" href="#id22">Building BRLTTY</a></h2>
 <div class="section" id="preparing-your-host-environment">
-<h3><a class="toc-backref" href="#id12">Preparing Your Host Environment</a></h3>
+<h3><a class="toc-backref" href="#id23">Preparing Your Host Environment</a></h3>
 <p>You need the Android SDK (Software Development Kit) for:</p>
 <ul class="simple">
 <li>installing an application onto your device</li>
@@ -715,6 +819,11 @@ with their Android devices.</p>
 <p>You can get it from <a class="reference external" href="http://developer.android.com/sdk/index.html">The Android SDK Web Page</a>.</p>
 <p>You need the Android NDK (Native Development Kit) if you want to do your own
 builds. You can get it from <a class="reference external" href="https://developer.android.com/tools/sdk/ndk/index.html">The Android NDK Web Page</a>.</p>
+<p>BRLTTY is currently being built using:</p>
+<ul class="simple">
+<li>Version 21.1.2 of the SDK build tools.</li>
+<li>Version r16b of the NDK.</li>
+</ul>
 <p>The SDK initially only includes support for the current Android API
 (Application Programming Interface) level. BRLTTY, however, needs to support
 earlier API levels so that it can run on older releases of Android. Support for
@@ -745,7 +854,7 @@ apt-get install libncurses5:i386 libstdc++6:i386 zlib1g:i386 libc6:i386
 </pre>
 </div>
 <div class="section" id="installing-and-preparing-the-brltty-source-tree">
-<h3><a class="toc-backref" href="#id13">Installing and Preparing the BRLTTY Source Tree</a></h3>
+<h3><a class="toc-backref" href="#id24">Installing and Preparing the BRLTTY Source Tree</a></h3>
 <p>Choose the directory that should contain BRLTTY's source tree (which needn't
 yet exist). Then extract the latest BRLTTY source into it with the following
 command:</p>
@@ -780,7 +889,7 @@ default set of options to <tt class="docutils literal">configure</tt>, it's easy
 customization.</p>
 </div>
 <div class="section" id="building-brltty-for-android">
-<h3><a class="toc-backref" href="#id14">Building BRLTTY for Android</a></h3>
+<h3><a class="toc-backref" href="#id25">Building BRLTTY for Android</a></h3>
 <p>In order to be able to build an Android application, a number of Android build
 tools need to be added to your command search path. This is done via the
 following command:</p>
@@ -804,7 +913,7 @@ lot of it) - only warnings and errors are displayed.</p>
 <p><tt class="docutils literal">apk</tt> is the file extension used for an installable Android package.</p>
 </div>
 <div class="section" id="preparing-your-android-device">
-<h3><a class="toc-backref" href="#id15">Preparing Your Android Device</a></h3>
+<h3><a class="toc-backref" href="#id26">Preparing Your Android Device</a></h3>
 <p>You need <tt class="docutils literal">USB Debugging</tt> to be enabled. This is done from the <tt class="docutils literal">Developer
 Options</tt> screen. You can get to it from the <tt class="docutils literal">Settings</tt> screen.</p>
 <p>Launch the <tt class="docutils literal">Settings</tt> aplication, and look, near the bottom, for <tt class="docutils literal">Developer
@@ -815,14 +924,14 @@ screen. Then, on the <tt class="docutils literal">About Phone</tt> screen, look 
 line. Tap on <tt class="docutils literal">Build Nubmer</tt> seven times and your device will officially
 declare you to be a developer. You should then be able to find <tt class="docutils literal">Developer
 Options</tt> on the <tt class="docutils literal">Settings</tt> screen.</p>
-<p>There's a checkbox at the top-right of the <tt class="docutils literal">Developer Options</tt> screen. It
+<p>There's a check box at the top-right of the <tt class="docutils literal">Developer Options</tt> screen. It
 needs to be checked so that all of the other controls on that screen will be
 enabled. After doing that, check the <tt class="docutils literal">USB Debugging</tt> checkebox (which can be
 found within the <tt class="docutils literal">Debugging</tt> section). This enables the <tt class="docutils literal">adb</tt> (Android
 Debug Bridge) tool to perform functions on your Android device.</p>
 </div>
 <div class="section" id="installing-brltty-on-your-android-device">
-<h3><a class="toc-backref" href="#id16">Installing BRLTTY on Your Android Device</a></h3>
+<h3><a class="toc-backref" href="#id27">Installing BRLTTY on Your Android Device</a></h3>
 <p>In order to install BRLTTY onto your device, or to remove it from your device,
 you need to be in BRLTTY's Android Application directory:</p>
 <pre class="literal-block">

@@ -59,8 +59,8 @@ Clipboard Functions
 * start new clipboard at character: Function+RoutingKey1
 * rectangular copy to character: Attribute+RoutingKey1
 * insert clipboard text after screen cursor:
-  + Function+Attribute
   + Status.13
+  + Function+Attribute
 * search backward for clipboard text: Braille+Up
 * search forward for clipboard text: Braille+Down
 

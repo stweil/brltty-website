@@ -64,8 +64,8 @@ Clipboard Functions
 * rectangular copy to character: Thumb4+RoutingKey
 * copy characters to clipboard: RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
-  + Thumb2+Dots1346
   + Thumb2+Thumb3
+  + Thumb2+Dots1346
 * search backward for clipboard text: Thumb1+Left
 * search forward for clipboard text: Thumb1+Right
 * save clipboard to disk: Thumb2+Dots13468
@@ -109,18 +109,18 @@ Speech Functions
 * set autospeak on/off: Right+Down
 
 Keyboard Input
-* braille keyboard dot1: Dot1
-* braille keyboard dot2: Dot2
-* braille keyboard dot3: Dot3
-* braille keyboard dot4: Dot4
 * braille keyboard dot5: Dot5
 * braille keyboard dot6: Dot6
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
-* braille keyboard space: Thumb2
-* braille keyboard space: Thumb3
+* braille keyboard dot1: Dot1
+* braille keyboard dot2: Dot2
 * braille keyboard upper: Left
 * braille keyboard control: Right
+* braille keyboard dot3: Dot3
+* braille keyboard dot4: Dot4
+* braille keyboard space: Thumb2
+* braille keyboard space: Thumb3
 * type braille dots [7]: Thumb2+Dot7
 * type braille dots [8]: Thumb2+Dot8
 * backspace key: Dot7
@@ -149,7 +149,7 @@ Keyboard Input
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Thumb2+Dots28
 * cycle the AltGr (Right Alt) sticky input modifier (next, on, off): Thumb2+Dots58
 * cycle the GUI (Windows) sticky input modifier (next, on, off): Thumb2+Dots18
-* switch to a specific virtual terminal: Up+RoutingKey
+* switch to specific virtual terminal: Up+RoutingKey
 * switch to the previous virtual terminal: Thumb2+Dots12367
 * switch to the next virtual terminal: Thumb2+Dots12368
 * set braille keyboard enabled/disabled: Thumb2+Dots13
@@ -178,8 +178,8 @@ Menu Operations
   + Dot5
   + Down
 * select previous choice:
-  + Dot3
   + Left
+  + Dot3
 * select next choice:
   + Dot6
   + Right

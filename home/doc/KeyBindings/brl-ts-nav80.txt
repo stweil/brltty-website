@@ -80,8 +80,8 @@ Clipboard Functions
 Configuration Functions
 * set text style 6-dot/8-dot: LeftOuter+RightOuter+CursorDown
 * set skipping of lines with identical content on/off:
-  + LeftOuter+RightOuter+RightInner+LeftThumb
   + LeftOuter+RightOuter+RightInner+RightThumb
+  + LeftOuter+RightOuter+RightInner+LeftThumb
 * set sliding braille window on/off: LeftOuter+RightOuter+CursorLeft
 * set track screen cursor on/off: LeftThumb
 * set screen cursor visibility on/off: LeftOuter+RightOuter+CursorUp
@@ -102,8 +102,8 @@ Speech Functions
   + RightOuter+LeftInner
   + CursorRight+CursorUp+LeftOuter+LeftInner
 * speak current line:
-  + RightOuter+RightInner
   + CursorRight+LeftOuter
+  + RightOuter+RightInner
 * speak from current line through bottom of screen: LeftOuter+RightOuter+RightInner
 * go to current speaking position: RightThumb+RightOuter
 
@@ -123,8 +123,8 @@ Menu Bindings
 
 Menu Operations
 * select previous choice:
-  + LeftThumb
   + CursorUp
+  + LeftThumb
 * select next choice:
   + RightThumb
   + CursorDown

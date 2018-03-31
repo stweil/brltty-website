@@ -6261,6 +6261,7 @@
            BrailleLite
            CombiBraille
            eSpeak           text to speech engine
+           eSpeak-NG        text to speech engine
            ExternalSpeech   runs /usr/local/bin/externalspeech
            Festival         text to speech engine
            FestivalLite     text to speech engine
@@ -6288,6 +6289,7 @@
                     bn     BrailleNote
                     cb     CombiBraille
                     ec     EcoBraille
+                    en     eSpeak-NG
                     es     eSpeak
                     eu     EuroBraille
                     fl     FestivalLite

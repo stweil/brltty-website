@@ -86,7 +86,7 @@ Speech Functions
 * set autospeak on/off: Display3+Display4+Display6
 
 Keyboard Input
-* switch to a specific virtual terminal: Display4+Display5+Display6+RoutingKey
+* switch to specific virtual terminal: Display4+Display5+Display6+RoutingKey
 * switch to the previous virtual terminal: Display3+Display4+Display5+Display6
 * switch to the next virtual terminal: Display1+Display2+Display3+Display6
 

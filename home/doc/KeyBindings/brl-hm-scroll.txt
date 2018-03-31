@@ -10,19 +10,19 @@ Special Modes
   + LeftScrollUp+LeftScrollDown+RightScrollUp+RightScrollDown
 * enter/leave command learn mode: Space+Dots123
 * enter/leave preferences menu:
-  + Space+Dots1234
   + RightScrollUp+RightScrollDown+LeftScrollDown
+  + Space+Dots1234
 * enter/leave status display:
-  + Space+Dots234
   + RightScrollUp+RightScrollDown+LeftScrollUp
+  + Space+Dots234
 * set display mode attributes/text:
-  + Space+Dots145
   + LeftScrollDown+RightScrollDown
+  + Space+Dots145
 * set display mode attributes: Space+Dots1458
 * set display mode text: Space+Dots1457
 * set screen image frozen/unfrozen:
-  + Space+Dots124
   + LeftScrollDown+RightScrollUp
+  + Space+Dots124
 * set screen image frozen: Space+Dots1248
 * set screen image unfrozen: Space+Dots1247
 * describe character: F2+F4, RoutingKey
@@ -33,8 +33,8 @@ Cursor Functions
   + RightScrollUp+RightScrollDown
 * bring screen cursor to character: RoutingKey
 * bring screen cursor to current line:
-  + Space+Dots1236
   + F2+F3
+  + Space+Dots1236
 
 Vertical Navigation
 * go up one line:
@@ -60,8 +60,8 @@ Clipboard Functions
 * linear copy to character: F1+F2+F3, RoutingKey
 * rectangular copy to character: F1+F2+F4, RoutingKey
 * insert clipboard text after screen cursor:
-  + Space+Dots1346
   + F1+F2+F3+F4
+  + Space+Dots1346
 * save clipboard to disk: Space+Dots13468
 * restore clipboard from disk: Space+Dots13467
 
@@ -82,8 +82,8 @@ Configuration Functions
 * set sliding braille window on: Space+Dots24568
 * set sliding braille window off: Space+Dots24567
 * set track screen cursor on/off:
-  + Space+Dots2345
   + LeftScrollUp+RightScrollUp
+  + Space+Dots2345
 * set track screen cursor on: Space+Dots23458
 * set track screen cursor off: Space+Dots23457
 * set screen cursor visibility on/off: Space+Dots14

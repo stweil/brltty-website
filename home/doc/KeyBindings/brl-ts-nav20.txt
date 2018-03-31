@@ -49,8 +49,8 @@ Horizontal Navigation
 Configuration Functions
 * set text style 6-dot/8-dot: NavLeft+NavRight+CursorDown
 * set skipping of lines with identical content on/off:
-  + NavLeft+NavRight+NavDown+ThumbLeft
   + NavLeft+NavRight+NavDown+ThumbRight
+  + NavLeft+NavRight+NavDown+ThumbLeft
 * set sliding braille window on/off: NavLeft+NavRight+CursorLeft
 * set track screen cursor on/off: ThumbLeft
 * set screen cursor visibility on/off: NavLeft+NavRight+CursorUp
@@ -71,8 +71,8 @@ Speech Functions
   + NavRight+NavUp
   + CursorRight+CursorUp+NavLeft+NavUp
 * speak current line:
-  + NavRight+NavDown
   + CursorRight+NavLeft
+  + NavRight+NavDown
 * speak from current line through bottom of screen: NavLeft+NavRight+NavDown
 * go to current speaking position: ThumbRight+NavRight
 
@@ -90,8 +90,8 @@ Menu Bindings
 
 Menu Operations
 * select previous choice:
-  + ThumbLeft
   + CursorUp
+  + ThumbLeft
 * select next choice:
   + ThumbRight
   + CursorDown

@@ -27,8 +27,8 @@ Special Modes
 * set screen image unfrozen: Status.8+Dot7
 * describe character: Dot4+RoutingKey1
 * show current date and time:
-  + Dots1237
   + Status.21
+  + Dots1237
 * switch to Default Bindings: Dots23+Shift
 * switch to Chorded Commands Mode: Dots23+Home
 * switch to Braille Input Mode: Dots23+End
@@ -136,7 +136,7 @@ Keyboard Input
 * cycle the Control sticky input modifier (next, on, off): Dot6+Down
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Dot6+Home
 * cycle the GUI (Windows) sticky input modifier (next, on, off): Dot6+End
-* switch to a specific virtual terminal: Dot5+RoutingKey1
+* switch to specific virtual terminal: Dot5+RoutingKey1
 * set braille input mode dots/text: Status.20
 * set braille input mode dots: Status.20+Dot8
 * set braille input mode text: Status.20+Dot7
@@ -244,13 +244,13 @@ Braille Input Mode
 ------------------
 
 Keyboard Input
-* braille keyboard dot1: Dot1
-* braille keyboard dot2: Dot2
+* braille keyboard dot7: Dot7
 * braille keyboard dot3: Dot3
+* braille keyboard dot2: Dot2
+* braille keyboard dot1: Dot1
 * braille keyboard dot4: Dot4
 * braille keyboard dot5: Dot5
 * braille keyboard dot6: Dot6
-* braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
 * type braille dots [space]: Dot3+Down
 * backspace key: Dot3+Home

@@ -15,8 +15,8 @@ Special Modes
 Cursor Functions
 * go back after cursor tracking: CapsLock+DeleteBackward
 * bring screen cursor to speech cursor:
-  + ControlRight+ShiftRight
   + Tab+Nine
+  + ControlRight+ShiftRight
 
 Vertical Navigation
 * go up one line: CapsLock+ArrowUp
@@ -50,34 +50,34 @@ Menu Operations
 
 Speech Functions
 * stop speaking:
+  + CapsLock+ShiftLeft+J
   + ControlLeft
   + ControlRight
-  + CapsLock+ShiftLeft+J
 * speak current line:
-  + CapsLock+Space
   + CapsLock+ShiftLeft+K
+  + CapsLock+Space
 * speak from top of screen through current line:
-  + CapsLock+PageUp
   + CapsLock+ShiftLeft+I
+  + CapsLock+PageUp
 * speak from current line through bottom of screen:
-  + CapsLock+PageDown
   + CapsLock+ShiftLeft+Comma
+  + CapsLock+PageDown
 * go to current speaking position: CapsLock+ShiftLeft+Nine
 * decrease speaking volume:
-  + CapsLock+F7
   + CapsLock+ShiftLeft+M
+  + CapsLock+F7
 * increase speaking volume:
-  + CapsLock+F8
   + CapsLock+ShiftLeft+Period
+  + CapsLock+F8
 * decrease speaking rate:
-  + CapsLock+F5
   + CapsLock+ShiftLeft+U
+  + CapsLock+F5
 * increase speaking rate:
-  + CapsLock+F6
   + CapsLock+ShiftLeft+O
+  + CapsLock+F6
 * set autospeak on/off:
-  + CapsLock+F9
   + CapsLock+ShiftLeft+L
+  + CapsLock+F9
 * set autospeak selected line on/off: CapsLock+ShiftLeft+ControlLeft+K
 * set autospeak selected character on/off: CapsLock+ShiftLeft+ControlLeft+J
 * set autospeak inserted characters on/off: CapsLock+ShiftLeft+ControlLeft+Period
@@ -91,35 +91,35 @@ Speech Navigation
 * go to and speak previous character: Tab+M
 * go to and speak next character: Tab+Period
 * go to and speak first non-blank character on line:
-  + ControlRight+ArrowLeft
   + Tab+ControlLeft+M
+  + ControlRight+ArrowLeft
 * go to and speak last non-blank character on line:
-  + ControlRight+ArrowRight
   + Tab+ControlLeft+Period
+  + ControlRight+ArrowRight
 * speak current word: Tab+K
 * spell current word: Tab+ControlLeft+K
 * go to and speak previous word:
-  + ShiftRight+ArrowLeft
   + Tab+J
+  + ShiftRight+ArrowLeft
 * go to and speak next word:
-  + ShiftRight+ArrowRight
   + Tab+L
+  + ShiftRight+ArrowRight
 * speak current line: Tab+I
 * go to and speak previous line:
-  + ShiftRight+ArrowUp
   + Tab+U
+  + ShiftRight+ArrowUp
 * go to and speak next line:
-  + ShiftRight+ArrowDown
   + Tab+O
+  + ShiftRight+ArrowDown
 * go to and speak first non-blank line on screen:
-  + ControlRight+ArrowUp
   + Tab+ControlLeft+U
+  + ControlRight+ArrowUp
 * go to and speak last non-blank line on screen:
-  + ControlRight+ArrowDown
   + Tab+ControlLeft+O
+  + ControlRight+ArrowDown
 * speak speech cursor location:
-  + ShiftRight+Enter
   + Tab+Eight
+  + ShiftRight+Enter
 * set speech cursor visibility on/off: Tab+ControlLeft+Eight
 
 Special Functions

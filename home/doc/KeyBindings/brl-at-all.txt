@@ -26,15 +26,15 @@ Cursor Functions
 Vertical Navigation
 * go up one line:
   + Up1
-  + Up2
   + Up3
   + LeftWheelUp
+  + Up2
   + RightWheelUp
 * go down one line:
   + Down1
+  + LeftWheelDown
   + Down2
   + Down3
-  + LeftWheelDown
   + RightWheelDown
 * go to beginning of top line:
   + Home1

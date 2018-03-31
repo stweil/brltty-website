@@ -76,17 +76,17 @@ Keyboard Input
 * backspace key: Backspace
 * escape key: Space+Dots1245
 * cursor-left key:
-  + Space+Dot2
   + Left
+  + Space+Dot2
 * cursor-right key:
-  + Space+Dot5
   + Right
+  + Space+Dot5
 * cursor-up key:
-  + Space+Dot4
   + Up
+  + Space+Dot4
 * cursor-down key:
-  + Space+Dot6
   + Down
+  + Space+Dot6
 * page-up key: Space+Dots13
 * page-down key: Space+Dots46
 * home key: Space+Dots123

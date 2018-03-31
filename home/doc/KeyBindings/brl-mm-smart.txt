@@ -116,18 +116,18 @@ Configuration Functions
 * set sliding braille window on: Read+dots24568
 * set sliding braille window off: Read+dots24567
 * set track screen cursor on/off:
-  + Read+dots2345
   + Alt+ArrowLeft
+  + Read+dots2345
 * set track screen cursor on: Read+dots23458
 * set track screen cursor off: Read+dots23457
 * set screen cursor visibility on/off:
-  + Read+dots14
   + Control+ArrowLeft
+  + Read+dots14
 * set screen cursor visibility on: Read+dots148
 * set screen cursor visibility off: Read+dots147
 * set attribute underlining on/off:
-  + Read+dots136
   + Control+ArrowRight
+  + Read+dots136
 * set attribute underlining on: Read+dots1368
 * set attribute underlining off: Read+dots1367
 
@@ -136,16 +136,16 @@ Menu Operations
 * save preferences to disk: Read+dots12348
 
 Keyboard Input
-* braille keyboard dot1: dot1
-* braille keyboard dot2: dot2
-* braille keyboard dot3: dot3
-* braille keyboard dot4: dot4
-* braille keyboard dot5: dot5
-* braille keyboard dot6: dot6
-* braille keyboard dot7: dot7
-* braille keyboard dot8: dot8
 * braille keyboard control: Control
 * braille keyboard meta: Alt
+* braille keyboard dot8: dot8
+* braille keyboard dot6: dot6
+* braille keyboard dot5: dot5
+* braille keyboard dot4: dot4
+* braille keyboard dot7: dot7
+* braille keyboard dot3: dot3
+* braille keyboard dot2: dot2
+* braille keyboard dot1: dot1
 * type braille dots [C]: dot8
 * type braille dots [7]: Read+dot7
 * type braille dots [8]: Read+dot8
@@ -189,7 +189,7 @@ Keyboard Input
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Read+dots28
 * cycle the AltGr (Right Alt) sticky input modifier (next, on, off): Read+dots58
 * cycle the GUI (Windows) sticky input modifier (next, on, off): Read+dots18
-* switch to a specific virtual terminal: PanLeft+RoutingKey
+* switch to specific virtual terminal: PanLeft+RoutingKey
 * switch to the previous virtual terminal: Read+dots12367
 * switch to the next virtual terminal: Read+dots12368
 * set braille keyboard enabled/disabled: Read+dots13

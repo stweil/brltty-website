@@ -45,11 +45,11 @@ Vertical Navigation
 
 Horizontal Navigation
 * go backward one braille window:
-  + LeftAdvance
   + RightWheelUp
+  + LeftAdvance
 * go forward one braille window:
-  + RightAdvance
   + RightWheelDown
+  + RightAdvance
 * go to beginning of line: LeftWheelPress
 * go to end of line: RightWheelPress
 * go left one character: RightWheelPress+RightWheelUp

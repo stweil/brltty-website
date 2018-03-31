@@ -21,8 +21,8 @@ Cursor Functions
 * go to screen cursor or go back after cursor tracking: F4
 * bring screen cursor to character: RoutingKey
 * bring screen cursor to current line:
-  + Space+Dots1236
   + F2+F3
+  + Space+Dots1236
 
 Vertical Navigation
 * go up one line: F2
@@ -54,8 +54,8 @@ Clipboard Functions
 * linear copy to character: F1+F2+F3, RoutingKey
 * rectangular copy to character: F1+F2+F4, RoutingKey
 * insert clipboard text after screen cursor:
-  + Space+Dots1346
   + F1+F2+F3+F4
+  + Space+Dots1346
 * save clipboard to disk: Space+Dots13468
 * restore clipboard from disk: Space+Dots13467
 

@@ -18,48 +18,48 @@ Default Bindings
 
 Special Modes
 * enter/leave help display:
-  + Display1+Display2+Display5
   + StatusButton1
+  + Display1+Display2+Display5
 * enter/leave command learn mode:
-  + Display1+Display4+Display5+Display6
   + StatusButton2
+  + Display1+Display4+Display5+Display6
 * enter/leave preferences menu:
-  + Display1+Display3+Display4
   + StatusButton4
+  + Display1+Display3+Display4
 * enter/leave status display:
-  + Display2+Display5
   + StatusButton3
+  + Display2+Display5
 * set display mode attributes/text: Display1+Display4+Display5
 * set screen image frozen/unfrozen:
-  + Display1+Display2+Display4
   + StatusKey3
+  + Display1+Display2+Display4
 * describe character: Display3+RoutingKey
 * show current date and time: Display1+Display5
 
 Cursor Functions
 * go to screen cursor:
-  + Display2+Display4+Display6
   + FirstWheelPress
   + SecondWheelPress
   + ThirdWheelPress
   + FourthWheelPress
+  + Display2+Display4+Display6
 * go back after cursor tracking: Display1+Display6
 * bring screen cursor to character: RoutingKey
 * bring screen cursor to current line: Display1+Display3+Display4+Display6
 
 Vertical Navigation
 * go up one line:
-  + Display4
   + FirstWheelUp
   + SecondWheelUp
   + ThirdWheelUp
   + FourthWheelUp
+  + Display4
 * go down one line:
-  + Display6
   + FirstWheelDown
   + SecondWheelDown
   + ThirdWheelDown
   + FourthWheelDown
+  + Display6
 * go to top line: Display1+Display4
 * go to bottom line: Display3+Display6
 * go to beginning of top line: Display2+Display4
@@ -105,8 +105,8 @@ Configuration Functions
 * set track screen cursor off: Display3
 * set screen cursor visibility on/off: StatusKey1
 * set attribute underlining on/off:
-  + Display2+Display3+Display4+Display5
   + StatusKey2
+  + Display2+Display3+Display4+Display5
 
 Menu Operations
 * restore preferences from disk: Display1+Display2+Display3+Display5
@@ -121,7 +121,7 @@ Speech Functions
 * set autospeak on/off: Display3+Display4+Display6
 
 Keyboard Input
-* switch to a specific virtual terminal: Display4+Display5+Display6+RoutingKey
+* switch to specific virtual terminal: Display4+Display5+Display6+RoutingKey
 * switch to the previous virtual terminal: Display3+Display4+Display5+Display6
 * switch to the next virtual terminal: Display1+Display2+Display3+Display6
 

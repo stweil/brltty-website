@@ -6,8 +6,8 @@ Default Bindings
 
 Special Modes
 * enter/leave help display:
-  + Dots125
   + Status6
+  + Dots125
 * enter/leave command learn mode: Status5
 * enter/leave preferences menu: Dots1346
 * enter/leave status display: Dots34
@@ -20,11 +20,11 @@ Cursor Functions
 
 Vertical Navigation
 * go up one line:
-  + Thumb2
   + Dot1
+  + Thumb2
 * go down one line:
-  + Thumb4
   + Dot4
+  + Thumb4
 * go to top line:
   + Thumb2+Thumb3
   + Dots123
@@ -38,17 +38,17 @@ Vertical Navigation
 
 Horizontal Navigation
 * go backward one braille window:
-  + Thumb1
   + Dot3
+  + Thumb1
 * go forward one braille window:
-  + Thumb5
   + Dot6
+  + Thumb5
 * go to beginning of line:
-  + Thumb1+Thumb3
   + Dots23
+  + Thumb1+Thumb3
 * go to end of line:
-  + Thumb3+Thumb5
   + Dots56
+  + Thumb3+Thumb5
 * go left one character: Dots13
 * go right one character: Dots46
 * go left half a braille window:
@@ -81,8 +81,8 @@ Menu Operations
 
 Speech Functions
 * stop speaking:
-  + Thumb2+Thumb4
   + Dots16
+  + Thumb2+Thumb4
 * speak current line:
   + Thumb1+Thumb5
   + Dots156

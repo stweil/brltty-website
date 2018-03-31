@@ -8,19 +8,19 @@ Special Modes
 * enter/leave help display: Space+Dots125
 * enter/leave command learn mode: Space+Dots123
 * enter/leave preferences menu:
-  + Space+Dots1234
   + F10
+  + Space+Dots1234
 * enter/leave status display:
-  + Space+Dots234
   + Shift+F2
+  + Space+Dots234
 * set display mode attributes/text:
-  + Space+Dots145
   + Shift+F6
+  + Space+Dots145
 * set display mode attributes: Space+Dots1458
 * set display mode text: Space+Dots1457
 * set screen image frozen/unfrozen:
-  + Space+Dots124
   + Shift+F1
+  + Space+Dots124
 * set screen image frozen: Space+Dots1248
 * set screen image unfrozen: Space+Dots1247
 * set hidden screen cursor on: press StatusKey.1
@@ -52,9 +52,9 @@ Clipboard Functions
 * copy characters to clipboard: RoutingKey+RoutingKey
 * append characters to clipboard: RoutingKey+Up
 * insert clipboard text after screen cursor:
+  + Shift+F10
   + RoutingKey.2+RoutingKey.3
   + Space+Dots1346
-  + Shift+F10
 * save clipboard to disk: Space+Dots13468
 * restore clipboard from disk: Space+Dots13467
 
@@ -65,33 +65,33 @@ Configuration Functions
 * set text style 6-dot: Space+Dots235
 * set text style 8-dot: Space+Dots236
 * set skipping of lines with identical content on/off:
-  + Space+Dots24
   + F6
+  + Space+Dots24
 * set skipping of lines with identical content on: Space+Dots248
 * set skipping of lines with identical content off: Space+Dots247
 * set skipping of blank braille windows on/off:
-  + Space+Dots12
   + F7
+  + Space+Dots12
 * set skipping of blank braille windows on: Space+Dots128
 * set skipping of blank braille windows off: Space+Dots127
 * set sliding braille window on/off: Space+Dots2456
 * set sliding braille window on: Space+Dots24568
 * set sliding braille window off: Space+Dots24567
 * set track screen cursor on/off:
-  + Space+Dots2345
   + F5
+  + Space+Dots2345
 * set track screen cursor on: Space+Dots23458
 * set track screen cursor off: Space+Dots23457
 * set screen cursor style block/underline: Shift+F4
 * set screen cursor visibility on/off:
-  + Space+Dots14
   + Shift+F5
+  + Space+Dots14
 * set screen cursor visibility on: Space+Dots148
 * set screen cursor visibility off: Space+Dots147
 * set screen cursor blinking on/off: Long+F4
 * set attribute underlining on/off:
-  + Space+Dots136
   + Shift+Long+F6
+  + Space+Dots136
 * set attribute underlining on: Space+Dots1368
 * set attribute underlining off: Space+Dots1367
 * set attribute blinking on/off: Long+F6
@@ -102,7 +102,6 @@ Menu Operations
 * save preferences to disk: Space+Dots12348
 
 Keyboard Input
-* braille keyboard space: Space
 * braille keyboard dot1: Dot1
 * braille keyboard dot2: Dot2
 * braille keyboard dot3: Dot3
@@ -111,6 +110,7 @@ Keyboard Input
 * braille keyboard dot6: Dot6
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
+* braille keyboard space: Space
 * type braille dots [7]: Space+Dot7
 * type braille dots [8]: Space+Dot8
 * backspace key: Dot7
@@ -160,10 +160,10 @@ Menu Operations
 * go up to first item: Dot2
 * go down to last item: Dot5
 * select previous choice:
-  + Dot3
   + F9
+  + Dot3
 * select next choice:
-  + Dot6
   + F10
+  + Dot6
 * go to previous menu level: Dot7
 

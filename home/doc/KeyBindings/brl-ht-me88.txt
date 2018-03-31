@@ -15,8 +15,8 @@ Special Modes
 * enter/leave help display: B8
 * enter/leave command learn mode: B4+B5
 * enter/leave preferences menu:
-  + B7+B1
   + One
+  + B7+B1
 * enter/leave status display: B7+B6
 * set display mode attributes/text: B6
 * set screen image frozen/unfrozen: B8+B6
@@ -25,10 +25,10 @@ Special Modes
 
 Cursor Functions
 * go to screen cursor:
-  + LeftRockerTop+LeftRockerBottom+RightRockerTop+RightRockerBottom
-  + LeftRockerTop+LeftRockerBottom+B3
-  + RightRockerTop+RightRockerBottom+B6
   + B1
+  + RightRockerTop+RightRockerBottom+B6
+  + LeftRockerTop+LeftRockerBottom+B3
+  + LeftRockerTop+LeftRockerBottom+RightRockerTop+RightRockerBottom
 * go back after cursor tracking: B3
 * bring screen cursor to character: RoutingKey
 
@@ -40,42 +40,42 @@ Vertical Navigation
   + RightRockerBottom
   + B5
 * go to top line:
-  + LeftRockerTop+LeftRockerBottom+RightRockerTop
-  + LeftRockerTop+LeftRockerBottom+B4
   + RightRockerTop+B6
   + B2+Left
+  + LeftRockerTop+LeftRockerBottom+RightRockerTop
+  + LeftRockerTop+LeftRockerBottom+B4
 * go to bottom line:
-  + LeftRockerTop+LeftRockerBottom+RightRockerBottom
-  + LeftRockerTop+LeftRockerBottom+B2
-  + RightRockerBottom+B6
   + B2+Right
+  + RightRockerBottom+B6
+  + LeftRockerTop+LeftRockerBottom+B2
+  + LeftRockerTop+LeftRockerBottom+RightRockerBottom
 * go to beginning of top line:
+  + B2
+  + LeftRockerTop+B3
   + RightRockerTop+RightRockerBottom+LeftRockerTop
   + RightRockerTop+RightRockerBottom+B5
-  + LeftRockerTop+B3
-  + B2
 * go to beginning of bottom line:
+  + LeftRockerBottom+B3
   + RightRockerTop+RightRockerBottom+LeftRockerBottom
   + RightRockerTop+RightRockerBottom+B7
-  + LeftRockerBottom+B3
 * go up to nearest line with different content:
   + LeftRockerTop+RightRockerTop
-  + LeftRockerTop+B4
   + RightRockerTop+B5
+  + LeftRockerTop+B4
   + B8+B4
 * go down to nearest line with different content:
-  + LeftRockerTop+RightRockerBottom
   + LeftRockerTop+B2
+  + LeftRockerTop+RightRockerBottom
   + RightRockerBottom+B5
   + B8+B5
 * go up to nearest line with different highlighting:
   + LeftRockerBottom+RightRockerTop
-  + LeftRockerBottom+B4
   + RightRockerTop+B7
+  + LeftRockerBottom+B4
   + B6+B4
 * go down to nearest line with different highlighting:
-  + LeftRockerBottom+RightRockerBottom
   + LeftRockerBottom+B2
+  + LeftRockerBottom+RightRockerBottom
   + RightRockerBottom+B7
   + B6+B5
 * go up to first line of paragraph: B1+B4
@@ -107,8 +107,8 @@ Clipboard Functions
   + LeftRockerTop+RoutingKey
   + B4+RoutingKey
 * append to clipboard from character:
-  + LeftRockerBottom+RoutingKey
   + B3+RoutingKey
+  + LeftRockerBottom+RoutingKey
 * linear copy to character:
   + RightRockerTop+RoutingKey
   + B6+RoutingKey
@@ -140,16 +140,16 @@ Menu Operations
 * select next choice: Six
 * restore preferences from disk: B7+B2
 * save preferences to disk:
-  + B7+B3
   + Five
+  + B7+B3
 
 Speech Functions
 * stop speaking:
-  + B2+B3+Left
   + B12
+  + B2+B3+Left
 * speak current line:
-  + B2+B3+Right
   + B10
+  + B2+B3+Right
 * speak from top of screen through current line: B9
 * speak from current line through bottom of screen: B11
 * go to current speaking position: Zero
@@ -169,9 +169,8 @@ Keyboard Input
 * end key: Zero+One
 * insert key: Zero+B13
 * delete key: Zero+B14
-* function key:
-  + LeftRockerTop+LeftRockerBottom+RoutingKey
-  + B12+One
+* function key #1: B12+One
+* function key: LeftRockerTop+LeftRockerBottom+RoutingKey
 * function key #2: B12+Two
 * function key #3: B12+Three
 * function key #4: B12+Four
@@ -183,27 +182,25 @@ Keyboard Input
 * function key #10: B12+Zero
 * function key #11: B12+B13
 * function key #12: B12+B14
-* switch to a specific virtual terminal:
-  + RightRockerTop+RightRockerBottom+RoutingKey
-  + B11+One
-* switch to a specific virtual terminal #2: B11+Two
-* switch to a specific virtual terminal #3: B11+Three
-* switch to a specific virtual terminal #4: B11+Four
-* switch to a specific virtual terminal #5: B11+Five
-* switch to a specific virtual terminal #6: B11+Six
-* switch to a specific virtual terminal #7: B11+Seven
-* switch to a specific virtual terminal #8: B11+Eight
-* switch to a specific virtual terminal #9: B11+Nine
-* switch to a specific virtual terminal #10: B11+Zero
-* switch to a specific virtual terminal #11: B11+B13
-* switch to a specific virtual terminal #12: B11+B14
+* switch to specific virtual terminal #1: B11+One
+* switch to specific virtual terminal: RightRockerTop+RightRockerBottom+RoutingKey
+* switch to specific virtual terminal #2: B11+Two
+* switch to specific virtual terminal #3: B11+Three
+* switch to specific virtual terminal #4: B11+Four
+* switch to specific virtual terminal #5: B11+Five
+* switch to specific virtual terminal #6: B11+Six
+* switch to specific virtual terminal #7: B11+Seven
+* switch to specific virtual terminal #8: B11+Eight
+* switch to specific virtual terminal #9: B11+Nine
+* switch to specific virtual terminal #10: B11+Zero
+* switch to specific virtual terminal #11: B11+B13
+* switch to specific virtual terminal #12: B11+B14
 * switch to the previous virtual terminal: B13
 * switch to the next virtual terminal: B14
 
 Special Functions
-* remember current braille window position:
-  + B7+RoutingKey
-  + B9+One
+* remember current braille window position #1: B9+One
+* remember current braille window position: B7+RoutingKey
 * remember current braille window position #2: B9+Two
 * remember current braille window position #3: B9+Three
 * remember current braille window position #4: B9+Four
@@ -215,9 +212,8 @@ Special Functions
 * remember current braille window position #10: B9+Zero
 * remember current braille window position #11: B9+B13
 * remember current braille window position #12: B9+B14
-* go to remembered braille window position:
-  + B8+RoutingKey
-  + B10+One
+* go to remembered braille window position #1: B10+One
+* go to remembered braille window position: B8+RoutingKey
 * go to remembered braille window position #2: B10+Two
 * go to remembered braille window position #3: B10+Three
 * go to remembered braille window position #4: B10+Four

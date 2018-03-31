@@ -76,17 +76,17 @@ Vertical Navigation
   + Display2+Display3
   + Front6+Front10
 * go up to first line of paragraph:
-  + Display2+Display5+Display4
   + Front6+Front3
+  + Display2+Display5+Display4
 * go down to first line of next paragraph:
-  + Display2+Display5+Display6
   + Front6+Front4
+  + Display2+Display5+Display6
 * go up to previous command prompt:
-  + Display2+Display5+Display1+Display4
   + Front5+Front3
+  + Display2+Display5+Display1+Display4
 * go down to next command prompt:
-  + Display2+Display5+Display3+Display6
   + Front5+Front4
+  + Display2+Display5+Display3+Display6
 * go up to nearest line with less indent than character: Display2+Display1+RoutingKey
 * go down to nearest line with less indent than character: Display2+Display3+RoutingKey
 * go up to nearest line with different character: Display5+Display4+RoutingKey
@@ -132,10 +132,10 @@ Speech Functions
 * set autospeak on/off: Display3+Display4+Display6
 
 Keyboard Input
-* braille keyboard space: Command4
-* braille keyboard dot1: Command3
-* braille keyboard dot2: Command2
 * braille keyboard dot3: Command1
+* braille keyboard dot2: Command2
+* braille keyboard dot1: Command3
+* braille keyboard space: Command4
 * braille keyboard dot4: Command5
 * braille keyboard dot5: Command6
 * braille keyboard dot6: Command7
@@ -144,7 +144,7 @@ Keyboard Input
 * cursor-right key: Command4+Command7
 * enter key: Command4+Command5
 * tab key: Command4+Command6
-* switch to a specific virtual terminal: Display4+Display5+Display6+RoutingKey
+* switch to specific virtual terminal: Display4+Display5+Display6+RoutingKey
 * switch to the previous virtual terminal: Display3+Display4+Display5+Display6
 * switch to the next virtual terminal: Display1+Display2+Display3+Display6
 

@@ -95,6 +95,10 @@ Functions</h2></td></tr>
 <tr class="separator:ga3b5ba0c43d48792e7071e772b50b9cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga557d77c4e1bf70a0d01b619aea152120"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="brlapi_8h.html#aaf61afab5ea0f7574217a09dba040428">BRLAPI_STDCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__keys.html#ga557d77c4e1bf70a0d01b619aea152120">brlapi__readKey</a> (<a class="el" href="group__brlapi__handles.html#ga57f2aec62b18f8aefea2ab550744b0c1">brlapi_handle_t</a> *handle, int wait, <a class="el" href="group__brlapi__keycodes.html#ga956fddb34f9b399e884b1fafdb037b6a">brlapi_keyCode_t</a> *code)</td></tr>
 <tr class="separator:ga557d77c4e1bf70a0d01b619aea152120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac20d1c276c44c3f5d5670b3662a789c1"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="brlapi_8h.html#aaf61afab5ea0f7574217a09dba040428">BRLAPI_STDCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__keys.html#gac20d1c276c44c3f5d5670b3662a789c1">brlapi_readKeyWithTimeout</a> (int timeout_ms, <a class="el" href="group__brlapi__keycodes.html#ga956fddb34f9b399e884b1fafdb037b6a">brlapi_keyCode_t</a> *code)</td></tr>
+<tr class="separator:gac20d1c276c44c3f5d5670b3662a789c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade40db3b2ac3445c4e45cabfa441bb25"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="brlapi_8h.html#aaf61afab5ea0f7574217a09dba040428">BRLAPI_STDCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__keys.html#gade40db3b2ac3445c4e45cabfa441bb25">brlapi__readKeyWithTimeout</a> (<a class="el" href="group__brlapi__handles.html#ga57f2aec62b18f8aefea2ab550744b0c1">brlapi_handle_t</a> *handle, int timeout_ms, <a class="el" href="group__brlapi__keycodes.html#ga956fddb34f9b399e884b1fafdb037b6a">brlapi_keyCode_t</a> *code)</td></tr>
+<tr class="separator:gade40db3b2ac3445c4e45cabfa441bb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga51f541d3e9e1a797a4e4c5ef884f02cb"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="brlapi_8h.html#aaf61afab5ea0f7574217a09dba040428">BRLAPI_STDCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__keys.html#ga51f541d3e9e1a797a4e4c5ef884f02cb">brlapi_ignoreKeys</a> (<a class="el" href="group__brlapi__keys.html#ga04da4d59bcca169be939b8ebfc274bd2">brlapi_rangeType_t</a> type, const <a class="el" href="group__brlapi__keycodes.html#ga956fddb34f9b399e884b1fafdb037b6a">brlapi_keyCode_t</a> keys[], unsigned int count)</td></tr>
 <tr class="separator:ga51f541d3e9e1a797a4e4c5ef884f02cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6bd1a8af2c1d1b09a55d5647fbc9e035"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="brlapi_8h.html#aaf61afab5ea0f7574217a09dba040428">BRLAPI_STDCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__keys.html#ga6bd1a8af2c1d1b09a55d5647fbc9e035">brlapi__ignoreKeys</a> (<a class="el" href="group__brlapi__handles.html#ga57f2aec62b18f8aefea2ab550744b0c1">brlapi_handle_t</a> *handle, <a class="el" href="group__brlapi__keys.html#ga04da4d59bcca169be939b8ebfc274bd2">brlapi_rangeType_t</a> type, const <a class="el" href="group__brlapi__keycodes.html#ga956fddb34f9b399e884b1fafdb037b6a">brlapi_keyCode_t</a> keys[], unsigned int count)</td></tr>
@@ -438,6 +442,38 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="gade40db3b2ac3445c4e45cabfa441bb25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="brlapi_8h.html#aaf61afab5ea0f7574217a09dba040428">BRLAPI_STDCALL</a> brlapi__readKeyWithTimeout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__brlapi__handles.html#ga57f2aec62b18f8aefea2ab550744b0c1">brlapi_handle_t</a> *&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__brlapi__keycodes.html#ga956fddb34f9b399e884b1fafdb037b6a">brlapi_keyCode_t</a> *&#160;</td>
+          <td class="paramname"><em>code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ga9f04b39792b1849250fb547772fddd7c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -716,6 +752,44 @@ Functions</h2></td></tr>
 <p>while (brlapi_readKey(0, &amp;code) { // process keycode code // ... }</p>
 <p>The <code>while</code> loop is needed for processing <em>all</em> pending key presses, else some of them may be left in libbrlapi's internal key buffer and you wouldn't get them immediately.</p>
 <dl class="section note"><dt>Note</dt><dd>If the read is interrupted by a signal, <a class="el" href="group__brlapi__keys.html#ga3b5ba0c43d48792e7071e772b50b9cbe">brlapi_readKey()</a> will return -1, brlapi_errno will be BRLAPI_ERROR_LIBCERR and errno will be EINTR. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gac20d1c276c44c3f5d5670b3662a789c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="brlapi_8h.html#aaf61afab5ea0f7574217a09dba040428">BRLAPI_STDCALL</a> brlapi_readKeyWithTimeout </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__brlapi__keycodes.html#ga956fddb34f9b399e884b1fafdb037b6a">brlapi_keyCode_t</a> *&#160;</td>
+          <td class="paramname"><em>code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Read a key from the braille keyboard, unless a timeout expires</p>
+<p>This function works like brlapi_readKey, except that parameter <em>wait</em> is replaced by a <em>timeout_ms</em> parameter</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout_ms</td><td>specifies how long the function should wait for a keypress. </td></tr>
+    <tr><td class="paramname">code</td><td>holds the key code if a key press is indeed read.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If the timeout expires without any key being pressed, 0 is returned.</p>
+<p>If timeout_ms is set to 0, this function looks for key events that have been already received, but does not wait at all if no event was received.</p>
+<p>If timeout_ms is set to a negative value, this function behaves like brlapi_readKey, i.e. it uses an infinite timeout. </p>
 
 </div>
 </div>

@@ -154,11 +154,11 @@ Keyboard Input
   + Space+Dot4
   + Space+RightJoystickDown
 * page-up key:
-  + Space+Dots23
   + Space+LeftJoystickUp
+  + Space+Dots23
 * page-down key:
-  + Space+Dots56
   + Space+LeftJoystickDown
+  + Space+Dots56
 * home key:
   + Space+Dot2
   + Space+LeftJoystickLeft
@@ -166,11 +166,11 @@ Keyboard Input
   + Space+Dot5
   + Space+LeftJoystickRight
 * insert key:
-  + Space+Dots35
   + Space+LeftJoystickPress
+  + Space+Dots35
 * delete key:
-  + Space+Dots256
   + Space+RightJoystickPress
+  + Space+Dots256
 * function key: Space+RoutingKey
 * enter key:
   + Dot8
@@ -183,7 +183,7 @@ Keyboard Input
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dots28
 * cycle the AltGr (Right Alt) sticky input modifier (next, on, off): Space+Dots58
 * cycle the GUI (Windows) sticky input modifier (next, on, off): Space+Dots18
-* switch to a specific virtual terminal: Backspace+RoutingKey
+* switch to specific virtual terminal: Backspace+RoutingKey
 * switch to the previous virtual terminal: Space+Dots12367
 * switch to the next virtual terminal: Space+Dots12368
 * set braille keyboard enabled/disabled: Space+Dots13

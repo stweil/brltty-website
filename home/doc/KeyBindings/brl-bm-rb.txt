@@ -14,31 +14,31 @@ Default Bindings
 
 Special Modes
 * enter/leave help display:
+  + Dot4+Press
   + Display1+Display2+Display5
   + B9+Dots125
-  + Dot4+Press
 * enter/leave command learn mode:
+  + Dot6+Press
   + Display1+Display4+Display5+Display6
   + B9+Dots123
-  + Dot6+Press
 * enter/leave preferences menu:
   + Display1+Display3+Display4
-  + B9+Dots1234
   + Dots456+Press
+  + B9+Dots1234
 * enter/leave status display:
   + Display2+Display5
-  + B9+Dots234
   + Dot5+Press
+  + B9+Dots234
 * set display mode attributes/text:
   + Display1+Display4+Display5
-  + B9+Dots145
   + Dots45+Down
+  + B9+Dots145
 * set display mode attributes: B9+Dots1458
 * set display mode text: B9+Dots1457
 * set screen image frozen/unfrozen:
   + Display1+Display2+Display4
-  + B9+Dots124
   + Dots45+Up
+  + B9+Dots124
 * set screen image frozen: B9+Dots1248
 * set screen image unfrozen: B9+Dots1247
 * describe character:
@@ -54,9 +54,9 @@ Cursor Functions
 * go back after cursor tracking: Display1+Display6
 * bring screen cursor to character: RoutingKey
 * bring screen cursor to current line:
+  + Dots46+Press
   + Display1+Display3+Display4+Display6
   + B9+Dots1236
-  + Dots46+Press
 
 Vertical Navigation
 * go up one line:
@@ -92,11 +92,11 @@ Vertical Navigation
   + Display2+Display5+Display6
   + Dots46+Down
 * go up to previous command prompt:
-  + Display2+Display5+Display1+Display4
   + Dots46+Left
+  + Display2+Display5+Display1+Display4
 * go down to next command prompt:
-  + Display2+Display5+Display3+Display6
   + Dots46+Right
+  + Display2+Display5+Display3+Display6
 * go up to nearest line with less indent than character: Display2+Display1+RoutingKey
 * go down to nearest line with less indent than character: Display2+Display3+RoutingKey
 * go up to nearest line with different character: Display5+Display4+RoutingKey
@@ -112,11 +112,11 @@ Horizontal Navigation
 * go backward skipping blank braille windows: Dot5+Left
 * go forward skipping blank braille windows: Dot5+Right
 * go to beginning of line:
-  + Display1+Display2+Display3
   + Dot4+Left
+  + Display1+Display2+Display3
 * go to end of line:
-  + Display4+Display5+Display6
   + Dot4+Right
+  + Display4+Display5+Display6
 * go left one character:
   + Display1+Display3
   + Dot6+Left
@@ -143,9 +143,9 @@ Clipboard Functions
   + Display2+RoutingKey+RoutingKey
   + B9+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
+  + Dot2+Down
   + Display1+Display2+Display3+Display4
   + B9+Dots1346
-  + Dot2+Down
 * search backward for clipboard text:
   + Display2+Display4+Display6+Display1
   + Dots456+Left
@@ -177,13 +177,13 @@ Configuration Functions
 * set skipping of blank braille windows on: B9+Dots128
 * set skipping of blank braille windows off: B9+Dots127
 * set sliding braille window on/off:
-  + B9+Dots2456
   + Dots56+Down
+  + B9+Dots2456
 * set sliding braille window on: B9+Dots24568
 * set sliding braille window off: B9+Dots24567
 * set track screen cursor on/off:
-  + B9+Dots2345
   + Dots56+Press
+  + B9+Dots2345
 * set track screen cursor on:
   + Display1
   + B9+Dots23458
@@ -202,12 +202,12 @@ Configuration Functions
 Menu Operations
 * restore preferences from disk:
   + Display1+Display2+Display3+Display5
-  + B9+Dots12347
   + Dots456+Up
+  + B9+Dots12347
 * save preferences to disk:
   + Display2+Display4+Display5+Display6
-  + B9+Dots12348
   + Dots456+Down
+  + B9+Dots12348
 
 Speech Functions
 * stop speaking:
@@ -217,23 +217,24 @@ Speech Functions
   + Display3+Display5
   + B10+Right
 * speak from top of screen through current line:
-  + Display3+Display5+Display4
   + B10+Up
+  + Display3+Display5+Display4
 * speak from current line through bottom of screen:
-  + Display3+Display5+Display6
   + B10+Down
+  + Display3+Display5+Display6
 * go to current speaking position:
-  + Display1+Display3+Display5
   + B10+Press
+  + Display1+Display3+Display5
 * decrease speaking volume: B9+Down
 * increase speaking volume: B9+Up
 * decrease speaking rate: B9+Left
 * increase speaking rate: B9+Right
 * set autospeak on/off:
-  + Display3+Display4+Display6
   + B9+Press
+  + Display3+Display4+Display6
 
 Keyboard Input
+* braille keyboard space: B9
 * braille keyboard dot1: Dot1
 * braille keyboard dot2: Dot2
 * braille keyboard dot3: Dot3
@@ -242,15 +243,14 @@ Keyboard Input
 * braille keyboard dot6: Dot6
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
-* braille keyboard space: B9
 * type braille dots [7]: B9+Dot7
 * type braille dots [8]: B9+Dot8
 * backspace key:
   + Dot7
   + Dot2+Left
 * escape key:
-  + B9+Dots26
   + Dot3+Press
+  + B9+Dots26
 * cursor-left key:
   + B9+Dot3
   + Dot1+Left
@@ -264,11 +264,11 @@ Keyboard Input
   + B9+Dot4
   + Dot1+Down
 * page-up key:
-  + B9+Dots23
   + Dot3+Up
+  + B9+Dots23
 * page-down key:
-  + B9+Dots56
   + Dot3+Down
+  + B9+Dots56
 * home key:
   + B9+Dot2
   + Dot3+Left
@@ -276,18 +276,18 @@ Keyboard Input
   + B9+Dot5
   + Dot3+Right
 * insert key:
-  + B9+Dots35
   + Dot2+Up
+  + B9+Dots35
 * delete key:
-  + B9+Dots256
   + Dot2+Right
+  + B9+Dots256
 * function key: B9+RoutingKey
 * enter key:
   + Dot8
   + Dot2+Press
 * tab key:
-  + B9+Dots45
   + Dot1+Press
+  + B9+Dots45
 * clear all sticky input modifiers: B9+Dots78
 * cycle the Upper sticky input modifier (next, on, off): B9+Dots68
 * cycle the Shift sticky input modifier (next, on, off): B9+Dots48
@@ -295,15 +295,15 @@ Keyboard Input
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): B9+Dots28
 * cycle the AltGr (Right Alt) sticky input modifier (next, on, off): B9+Dots58
 * cycle the GUI (Windows) sticky input modifier (next, on, off): B9+Dots18
-* switch to a specific virtual terminal: Display4+Display5+Display6+RoutingKey
+* switch to specific virtual terminal: Display4+Display5+Display6+RoutingKey
 * switch to the previous virtual terminal:
+  + Dots45+Left
   + Display3+Display4+Display5+Display6
   + B9+Dots12367
-  + Dots45+Left
 * switch to the next virtual terminal:
+  + Dots45+Right
   + Display1+Display2+Display3+Display6
   + B9+Dots12368
-  + Dots45+Right
 * set braille keyboard enabled/disabled: B9+Dots13
 * set braille keyboard enabled: B9+Dots138
 * set braille keyboard disabled: B9+Dots137
@@ -345,7 +345,7 @@ Menu Operations
   + Dot6
   + Right
 * go to previous menu level:
-  + Dot7
   + B9
+  + Dot7
 * save preferences to disk: B9+Press
 

@@ -40,11 +40,11 @@ Vertical Navigation
 
 Horizontal Navigation
 * go backward one braille window:
-  + RightJoystickLeft
   + Switch1Left
+  + RightJoystickLeft
 * go forward one braille window:
-  + RightJoystickRight
   + Switch1Right
+  + RightJoystickRight
 * go to beginning of line: LeftJoystickRight+Switch1Left
 * go to end of line: LeftJoystickRight+Switch1Right
 

@@ -119,11 +119,11 @@ Keyboard Input
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
 * braille keyboard space: Space
-* braille keyboard upper: Up
-* braille keyboard control: Down
+* braille keyboard gui: Center
 * braille keyboard meta: Left
 * braille keyboard altgr: Right
-* braille keyboard gui: Center
+* braille keyboard upper: Up
+* braille keyboard control: Down
 * type braille dots [7]: Space+Dot7
 * type braille dots [8]: Space+Dot8
 * backspace key: Dot7
@@ -148,10 +148,10 @@ Keyboard Input
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dots28
 * cycle the AltGr (Right Alt) sticky input modifier (next, on, off): Space+Dots58
 * cycle the GUI (Windows) sticky input modifier (next, on, off): Space+Dots18
-* switch to a specific virtual terminal: Dot2+RoutingKey
+* switch to specific virtual terminal: Dot2+RoutingKey
 * switch to the previous virtual terminal: Space+Dots12367
 * switch to the next virtual terminal: Space+Dots12368
-* bind to a specific virtual terminal: Dot5+RoutingKey
+* bind to specific virtual terminal: Dot5+RoutingKey
 * set braille keyboard enabled/disabled: Space+Dots13
 * set braille keyboard enabled: Space+Dots138
 * set braille keyboard disabled: Space+Dots137

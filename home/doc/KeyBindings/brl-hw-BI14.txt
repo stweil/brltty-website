@@ -132,8 +132,8 @@ Menu Bindings
 
 Special Modes
 * enter/leave preferences menu:
-  + Back+Advance
   + Dot8
+  + Back+Advance
 
 Horizontal Navigation
 * go backward one braille window: Previous
@@ -141,23 +141,23 @@ Horizontal Navigation
 
 Menu Operations
 * go up to previous item:
-  + Back
   + Dot1
+  + Back
 * go down to next item:
-  + Advance
   + Dot4
+  + Advance
 * go up to first item:
-  + Previous+Back
   + Dot2
+  + Previous+Back
 * go down to last item:
-  + Previous+Advance
   + Dot5
+  + Previous+Advance
 * select previous choice:
-  + Next+Back
   + Dot3
+  + Next+Back
 * select next choice:
-  + Next+Advance
   + Dot6
+  + Next+Advance
 * go to previous menu level: Dot7
 * restore preferences from disk: Back+Advance+Previous
 * save preferences to disk: Back+Advance+Next

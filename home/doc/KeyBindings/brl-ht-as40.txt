@@ -19,58 +19,58 @@ Special Modes
 Cursor Functions
 * go to screen cursor:
   + B1
-  + LeftRockerTop+LeftRockerBottom+RightRockerTop+RightRockerBottom
-  + LeftRockerTop+LeftRockerBottom+B3
   + RightRockerTop+RightRockerBottom+B6
+  + LeftRockerTop+LeftRockerBottom+B3
+  + LeftRockerTop+LeftRockerBottom+RightRockerTop+RightRockerBottom
 * go back after cursor tracking: B3
 * bring screen cursor to character: RoutingKey
 
 Vertical Navigation
 * go up one line:
-  + B4
   + RightRockerTop
+  + B4
 * go down one line:
-  + B5
   + RightRockerBottom
+  + B5
 * go to top line:
+  + RightRockerTop+B6
   + B2+SpaceLeft
   + LeftRockerTop+LeftRockerBottom+RightRockerTop
   + LeftRockerTop+LeftRockerBottom+B4
-  + RightRockerTop+B6
 * go to bottom line:
   + B2+SpaceRight
-  + LeftRockerTop+LeftRockerBottom+RightRockerBottom
-  + LeftRockerTop+LeftRockerBottom+B2
   + RightRockerBottom+B6
+  + LeftRockerTop+LeftRockerBottom+B2
+  + LeftRockerTop+LeftRockerBottom+RightRockerBottom
 * go to beginning of top line:
   + B2
+  + LeftRockerTop+B3
   + RightRockerTop+RightRockerBottom+LeftRockerTop
   + RightRockerTop+RightRockerBottom+B5
-  + LeftRockerTop+B3
 * go to beginning of bottom line:
+  + LeftRockerBottom+B3
   + RightRockerTop+RightRockerBottom+LeftRockerBottom
   + RightRockerTop+RightRockerBottom+B7
-  + LeftRockerBottom+B3
 * go up to nearest line with different content:
-  + B8+B4
   + LeftRockerTop+RightRockerTop
-  + LeftRockerTop+B4
   + RightRockerTop+B5
+  + LeftRockerTop+B4
+  + B8+B4
 * go down to nearest line with different content:
-  + B8+B5
-  + LeftRockerTop+RightRockerBottom
   + LeftRockerTop+B2
+  + LeftRockerTop+RightRockerBottom
   + RightRockerBottom+B5
+  + B8+B5
 * go up to nearest line with different highlighting:
-  + B6+B4
   + LeftRockerBottom+RightRockerTop
-  + LeftRockerBottom+B4
   + RightRockerTop+B7
+  + LeftRockerBottom+B4
+  + B6+B4
 * go down to nearest line with different highlighting:
-  + B6+B5
-  + LeftRockerBottom+RightRockerBottom
   + LeftRockerBottom+B2
+  + LeftRockerBottom+RightRockerBottom
   + RightRockerBottom+B7
+  + B6+B5
 * go up to first line of paragraph: B1+B4
 * go down to first line of next paragraph: B1+B5
 * go up to previous command prompt: B2+B4
@@ -97,17 +97,17 @@ Horizontal Navigation
 
 Clipboard Functions
 * start new clipboard at character:
-  + B4+RoutingKey
   + LeftRockerTop+RoutingKey
+  + B4+RoutingKey
 * append to clipboard from character:
   + B3+RoutingKey
   + LeftRockerBottom+RoutingKey
 * linear copy to character:
-  + B6+RoutingKey
   + RightRockerTop+RoutingKey
+  + B6+RoutingKey
 * rectangular copy to character:
-  + B5+RoutingKey
   + RightRockerBottom+RoutingKey
+  + B5+RoutingKey
 * copy characters to clipboard: RoutingKey+RoutingKey
 * insert clipboard text after screen cursor: SpaceLeft+SpaceRight
 * search backward for clipboard text: B3+B4
@@ -136,7 +136,7 @@ Keyboard Input
 * cursor-up key: LeftRockerTop
 * cursor-down key: LeftRockerBottom
 * function key: LeftRockerTop+LeftRockerBottom+RoutingKey
-* switch to a specific virtual terminal: RightRockerTop+RightRockerBottom+RoutingKey
+* switch to specific virtual terminal: RightRockerTop+RightRockerBottom+RoutingKey
 
 Special Functions
 * remember current braille window position: B7+RoutingKey
@@ -158,16 +158,16 @@ Special Modes
 * switch to Default Bindings: B1+B8+SpaceLeft
 
 Keyboard Input
-* braille keyboard dot1: B4
-* braille keyboard dot2: B3
+* braille keyboard dot7: B1
 * braille keyboard dot3: B2
+* braille keyboard dot2: B3
+* braille keyboard dot1: B4
+* braille keyboard control: SpaceLeft
 * braille keyboard dot4: B5
 * braille keyboard dot5: B6
-* braille keyboard dot6: B7
-* braille keyboard dot7: B1
-* braille keyboard dot8: B8
-* braille keyboard control: SpaceLeft
 * braille keyboard meta: SpaceRight
+* braille keyboard dot6: B7
+* braille keyboard dot8: B8
 * type braille dots [space]: SpaceLeft
 * backspace key: SpaceLeft+B1
 * enter key: SpaceRight

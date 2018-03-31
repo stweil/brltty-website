@@ -18,9 +18,9 @@ Special Modes
 * enter/leave status display: I
 * set display mode attributes/text: Sharp, A
 * set screen image frozen/unfrozen: A
-* switch to Default Bindings: St
-  + ar, Star
-  + arp, Sharp
+* switch to Default Bindings:
+  + Star, Star
+  + Sharp, Sharp
 
 Cursor Functions
 * go to screen cursor:
@@ -74,23 +74,23 @@ Keyboard Input
 * braille keyboard dot4: Dot4
 * braille keyboard dot5: Dot5
 * braille keyboard dot6: Dot6
+* braille keyboard space: Space
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
-* braille keyboard space: Space
 * backspace key: Backspace
 * escape key: Space+Dots1245
 * cursor-left key:
-  + Space+Dot2
   + Left
+  + Space+Dot2
 * cursor-right key:
-  + Space+Dot5
   + Right
+  + Space+Dot5
 * cursor-up key:
-  + Space+Dot4
   + Up
+  + Space+Dot4
 * cursor-down key:
-  + Space+Dot6
   + Down
+  + Space+Dot6
 * page-up key: Space+Dots13
 * page-down key: Space+Dots46
 * home key: Space+Dots123

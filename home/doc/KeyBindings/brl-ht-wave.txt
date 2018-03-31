@@ -80,16 +80,16 @@ Special Modes
 * switch to Default Bindings: B1+B8+Left
 
 Keyboard Input
-* braille keyboard dot1: B4
-* braille keyboard dot2: B3
+* braille keyboard dot7: B1
 * braille keyboard dot3: B2
+* braille keyboard dot2: B3
+* braille keyboard dot1: B4
+* braille keyboard control: Space
 * braille keyboard dot4: B5
+* braille keyboard meta: Return
 * braille keyboard dot5: B6
 * braille keyboard dot6: B7
-* braille keyboard dot7: B1
 * braille keyboard dot8: B8
-* braille keyboard control: Space
-* braille keyboard meta: Return
 * type braille dots [space]: Space
 * backspace key: Space+B1
 * enter key: Return

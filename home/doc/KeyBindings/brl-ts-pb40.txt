@@ -65,8 +65,8 @@ Clipboard Functions
 Configuration Functions
 * set text style 6-dot/8-dot: Backward+Forward+LeftRockerDown
 * set skipping of lines with identical content on/off:
-  + Backward+Forward+RightRockerDown+Convex
   + Backward+Forward+RightRockerDown+Concave
+  + Backward+Forward+RightRockerDown+Convex
 * set track screen cursor on/off: Convex
 * set screen cursor visibility on/off: Backward+Forward+LeftRockerUp
 * set screen cursor blinking on/off: Backward+Forward+LeftRockerUp+Convex
@@ -98,8 +98,8 @@ Menu Bindings
 
 Menu Operations
 * select previous choice:
-  + Convex
   + LeftRockerUp
+  + Convex
 * select next choice:
   + Concave
   + LeftRockerDown

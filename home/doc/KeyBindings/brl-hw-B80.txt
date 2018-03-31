@@ -32,25 +32,25 @@ Cursor Functions
 
 Vertical Navigation
 * go up one line:
-  + Back
   + Display4
+  + Back
 * go down one line:
-  + Advance
   + Display6
+  + Advance
 * go to top line: Display1+Display4
 * go to bottom line: Display3+Display6
 * go to beginning of top line:
-  + Previous+Back
   + Display2+Display4
+  + Previous+Back
 * go to beginning of bottom line:
-  + Previous+Advance
   + Display2+Display6
+  + Previous+Advance
 * go up to nearest line with different content:
-  + Next+Back
   + Display5+Display4
+  + Next+Back
 * go down to nearest line with different content:
-  + Next+Advance
   + Display5+Display6
+  + Next+Advance
 * go up to nearest line with different highlighting: Display2+Display1
 * go down to nearest line with different highlighting: Display2+Display3
 * go up to first line of paragraph: Display2+Display5+Display4
@@ -64,11 +64,11 @@ Vertical Navigation
 
 Horizontal Navigation
 * go backward one braille window:
-  + Previous
   + Display2
+  + Previous
 * go forward one braille window:
-  + Next
   + Display5
+  + Next
 * go to beginning of line: Display1+Display2+Display3
 * go to end of line: Display4+Display5+Display6
 * go left one character: Display1+Display3
@@ -77,17 +77,17 @@ Horizontal Navigation
 
 Clipboard Functions
 * start new clipboard at character:
-  + Previous+RoutingKey
   + Display1+RoutingKey
+  + Previous+RoutingKey
 * append to clipboard from character:
-  + Back+RoutingKey
   + Display2+RoutingKey
+  + Back+RoutingKey
 * linear copy to character:
-  + Next+RoutingKey
   + Display4+RoutingKey
+  + Next+RoutingKey
 * rectangular copy to character:
-  + Advance+RoutingKey
   + Display5+RoutingKey
+  + Advance+RoutingKey
 * copy characters to clipboard: RoutingKey+RoutingKey
 * append characters to clipboard: Display2+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
@@ -116,7 +116,7 @@ Speech Functions
 * set autospeak on/off: Display3+Display4+Display6
 
 Keyboard Input
-* switch to a specific virtual terminal: Display4+Display5+Display6+RoutingKey
+* switch to specific virtual terminal: Display4+Display5+Display6+RoutingKey
 * switch to the previous virtual terminal: Display3+Display4+Display5+Display6
 * switch to the next virtual terminal: Display1+Display2+Display3+Display6
 

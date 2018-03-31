@@ -80,6 +80,7 @@ Menu Operations
 * save preferences to disk: Dot0+Dots12348
 
 Keyboard Input
+* braille keyboard space: Dot0
 * braille keyboard dot1: Dot1
 * braille keyboard dot2: Dot2
 * braille keyboard dot3: Dot3
@@ -88,7 +89,6 @@ Keyboard Input
 * braille keyboard dot6: Dot6
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
-* braille keyboard space: Dot0
 * type braille dots [7]: Dot0+Dot7
 * type braille dots [8]: Dot0+Dot8
 * backspace key: Dot7

@@ -377,9 +377,9 @@ ul.auto-toc {
 <ul class="simple">
 <li>go to screen cursor:<ul>
 <li>B1</li>
-<li>LeftRockerTop+LeftRockerBottom+RightRockerTop+RightRockerBottom</li>
-<li>LeftRockerTop+LeftRockerBottom+B3</li>
 <li>RightRockerTop+RightRockerBottom+B6</li>
+<li>LeftRockerTop+LeftRockerBottom+B3</li>
+<li>LeftRockerTop+LeftRockerBottom+RightRockerTop+RightRockerBottom</li>
 </ul>
 </li>
 <li>go back after cursor tracking: B3</li>
@@ -390,68 +390,68 @@ ul.auto-toc {
 <h3><a class="toc-backref" href="#id7">Vertical Navigation</a></h3>
 <ul class="simple">
 <li>go up one line:<ul>
-<li>B4</li>
 <li>RightRockerTop</li>
+<li>B4</li>
 </ul>
 </li>
 <li>go down one line:<ul>
-<li>B5</li>
 <li>RightRockerBottom</li>
+<li>B5</li>
 </ul>
 </li>
 <li>go to top line:<ul>
+<li>RightRockerTop+B6</li>
 <li>B2+SpaceLeft</li>
 <li>LeftRockerTop+LeftRockerBottom+RightRockerTop</li>
 <li>LeftRockerTop+LeftRockerBottom+B4</li>
-<li>RightRockerTop+B6</li>
 </ul>
 </li>
 <li>go to bottom line:<ul>
 <li>B2+SpaceRight</li>
-<li>LeftRockerTop+LeftRockerBottom+RightRockerBottom</li>
-<li>LeftRockerTop+LeftRockerBottom+B2</li>
 <li>RightRockerBottom+B6</li>
+<li>LeftRockerTop+LeftRockerBottom+B2</li>
+<li>LeftRockerTop+LeftRockerBottom+RightRockerBottom</li>
 </ul>
 </li>
 <li>go to beginning of top line:<ul>
 <li>B2</li>
+<li>LeftRockerTop+B3</li>
 <li>RightRockerTop+RightRockerBottom+LeftRockerTop</li>
 <li>RightRockerTop+RightRockerBottom+B5</li>
-<li>LeftRockerTop+B3</li>
 </ul>
 </li>
 <li>go to beginning of bottom line:<ul>
+<li>LeftRockerBottom+B3</li>
 <li>RightRockerTop+RightRockerBottom+LeftRockerBottom</li>
 <li>RightRockerTop+RightRockerBottom+B7</li>
-<li>LeftRockerBottom+B3</li>
 </ul>
 </li>
 <li>go up to nearest line with different content:<ul>
-<li>B8+B4</li>
 <li>LeftRockerTop+RightRockerTop</li>
-<li>LeftRockerTop+B4</li>
 <li>RightRockerTop+B5</li>
+<li>LeftRockerTop+B4</li>
+<li>B8+B4</li>
 </ul>
 </li>
 <li>go down to nearest line with different content:<ul>
-<li>B8+B5</li>
-<li>LeftRockerTop+RightRockerBottom</li>
 <li>LeftRockerTop+B2</li>
+<li>LeftRockerTop+RightRockerBottom</li>
 <li>RightRockerBottom+B5</li>
+<li>B8+B5</li>
 </ul>
 </li>
 <li>go up to nearest line with different highlighting:<ul>
-<li>B6+B4</li>
 <li>LeftRockerBottom+RightRockerTop</li>
-<li>LeftRockerBottom+B4</li>
 <li>RightRockerTop+B7</li>
+<li>LeftRockerBottom+B4</li>
+<li>B6+B4</li>
 </ul>
 </li>
 <li>go down to nearest line with different highlighting:<ul>
-<li>B6+B5</li>
-<li>LeftRockerBottom+RightRockerBottom</li>
 <li>LeftRockerBottom+B2</li>
+<li>LeftRockerBottom+RightRockerBottom</li>
 <li>RightRockerBottom+B7</li>
+<li>B6+B5</li>
 </ul>
 </li>
 <li>go up to first line of paragraph: B1+B4</li>
@@ -490,8 +490,8 @@ ul.auto-toc {
 <h3><a class="toc-backref" href="#id9">Clipboard Functions</a></h3>
 <ul class="simple">
 <li>start new clipboard at character:<ul>
-<li>B4+RoutingKey</li>
 <li>LeftRockerTop+RoutingKey</li>
+<li>B4+RoutingKey</li>
 </ul>
 </li>
 <li>append to clipboard from character:<ul>
@@ -500,13 +500,13 @@ ul.auto-toc {
 </ul>
 </li>
 <li>linear copy to character:<ul>
-<li>B6+RoutingKey</li>
 <li>RightRockerTop+RoutingKey</li>
+<li>B6+RoutingKey</li>
 </ul>
 </li>
 <li>rectangular copy to character:<ul>
-<li>B5+RoutingKey</li>
 <li>RightRockerBottom+RoutingKey</li>
+<li>B5+RoutingKey</li>
 </ul>
 </li>
 <li>copy characters to clipboard: RoutingKey+RoutingKey</li>
@@ -548,7 +548,7 @@ ul.auto-toc {
 <li>cursor-up key: LeftRockerTop</li>
 <li>cursor-down key: LeftRockerBottom</li>
 <li>function key: LeftRockerTop+LeftRockerBottom+RoutingKey</li>
-<li>switch to a specific virtual terminal: RightRockerTop+RightRockerBottom+RoutingKey</li>
+<li>switch to specific virtual terminal: RightRockerTop+RightRockerBottom+RoutingKey</li>
 </ul>
 </div>
 <div class="section" id="special-functions">
@@ -582,16 +582,16 @@ ul.auto-toc {
 <div class="section" id="id3">
 <h3><a class="toc-backref" href="#id19">Keyboard Input</a></h3>
 <ul class="simple">
-<li>braille keyboard dot1: B4</li>
-<li>braille keyboard dot2: B3</li>
+<li>braille keyboard dot7: B1</li>
 <li>braille keyboard dot3: B2</li>
+<li>braille keyboard dot2: B3</li>
+<li>braille keyboard dot1: B4</li>
+<li>braille keyboard control: SpaceLeft</li>
 <li>braille keyboard dot4: B5</li>
 <li>braille keyboard dot5: B6</li>
-<li>braille keyboard dot6: B7</li>
-<li>braille keyboard dot7: B1</li>
-<li>braille keyboard dot8: B8</li>
-<li>braille keyboard control: SpaceLeft</li>
 <li>braille keyboard meta: SpaceRight</li>
+<li>braille keyboard dot6: B7</li>
+<li>braille keyboard dot8: B8</li>
 <li>type braille dots [space]: SpaceLeft</li>
 <li>backspace key: SpaceLeft+B1</li>
 <li>enter key: SpaceRight</li>

@@ -35,8 +35,8 @@ Clipboard Functions
 * copy characters to clipboard: RoutingKey+RoutingKey
 * append characters to clipboard: RoutingKey+Up
 * insert clipboard text after screen cursor:
-  + RoutingKey.2+RoutingKey.3
   + Shift+F10
+  + RoutingKey.2+RoutingKey.3
 
 Configuration Functions
 * set skipping of lines with identical content on/off: F6
