@@ -66,7 +66,7 @@ then please <A HREF="contact.html">let us know</A>.
       ),
 
       array("FreedomScientific",
-         "Focus 1 44/70/84", "Focus 2 40/80", "Focus Blue 14/40",
+         "Focus 1 44/70/84", "Focus 2 40/80", "Focus Blue 14/40/80",
          "PAC Mate 20/40"
       ),
 
