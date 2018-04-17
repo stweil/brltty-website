@@ -1,5 +1,5 @@
-Key Table: Innovision
-=====================
+Key Table: BrailleMe
+====================
 
 Default Bindings
 ----------------
