@@ -145,7 +145,31 @@
       }
       return $files;
    }
-   function put_files (&$files) {
+   function put_file_row (&$file) {
+      $size = $file['size'];
+      $scale = 0;
+      $factor = 1000;
+
+      while ($size >= $factor) {
+         $size /= $factor;
+         $scale++;
+      }
+
+      echo("<tr>\n");
+      echo("<td align=\"left\"><a href=\"" . $file['path'] . "\"><code>" . $file['name'] . "</code></a></td>\n");
+      echo("<td align=\"left\">" . $file['category'] . "</td>\n");
+      echo("<td align=\"right\">" . round($size) . substr(' KMG', $scale, 1) . "</td>\n");
+      echo("<td align=\"left\">" . date('Y-m-d', $file['time']) . "</td>\n");
+      echo("</tr>\n");
+   }
+   function put_file_rows (&$files) {
+      $all_files = array_reverse($files);
+
+      while (list($key, $file) = each($all_files)) {
+         put_file_row($file);
+      }
+   }
+   function put_file_table (&$files) {
       echo("<table align=\"center\">\n");
 
       echo("<tr>\n");
@@ -155,24 +179,20 @@
       echo("<th>Date</th>\n");
       echo("</tr>\n");
 
-      reset($files);
-      while (list($key, $file) = each($files)) {
-         $size = $file['size'];
-         $scale = 0;
-         $factor = 1000;
+      $all_files = array_reverse($files);
+      $release_files = array();
+      $previous_release = "";
 
-         while ($size >= $factor) {
-            $size /= $factor;
-            $scale++;
+      while (list($key, $file) = each($all_files)) {
+         $next_release = $file['release'];
+         if (strcmp($next_release, $previous_release) != 0) {
+            put_file_rows($release_files);
+            $release_files = array();
+            $previous_release = $next_release;
          }
-
-         echo("<tr>\n");
-         echo("<td align=\"left\"><a href=\"" . $file['path'] . "\"><code>" . $file['name'] . "</code></a></td>\n");
-         echo("<td align=\"left\">" . $file['category'] . "</td>\n");
-         echo("<td align=\"right\">" . round($size) . substr(' KMG', $scale, 1) . "</td>\n");
-         echo("<td align=\"left\">" . date('Y-m-d', $file['time']) . "</td>\n");
-         echo("</tr>\n");
+         $release_files[] = $file;
       }
+      put_file_rows($release_files);
 
       echo("</table>\n");
    }
@@ -186,7 +206,7 @@
       echo("It can be downloaded in the following formats:\n"); 
       echo("</p>\n");
 
-      put_files($files);
+      put_file_table($files);
    }
    function put_latest_version ($package_name, &$package_files, $current_version) {
       $latest_release = end($package_files);

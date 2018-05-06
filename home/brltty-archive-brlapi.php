@@ -4,5 +4,5 @@ Most of the old releases of <b>BrlAPI</b> are still available:
 
 <?php
    global $brlapi_files;
-   put_files($brlapi_files);
+   put_file_table($brlapi_files);
 ?>
