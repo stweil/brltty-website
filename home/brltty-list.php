@@ -3,11 +3,11 @@ This list is for informal discussions between the users and developers of <B>BRL
 Your questions, comments, suggestions, criticisms, and contributions are always welcome.
 <P>
 You can post to the list by sending e-mail to
-<?php write_mailto("BRLTTY@brltty.com"); ?>.
+<?php write_mailto("BRLTTY@brltty.app"); ?>.
 If you aren't subscribed to the list
 then your posts will be held for moderator approval.
 To subscribe, unsubscribe, change settings, view archives, etc, go to the list's
-<?php write_link("http://brltty.com/mailman/listinfo/brltty", "Information Page"); ?>.
+<?php write_link("http://brltty.app/mailman/listinfo/brltty", "Information Page"); ?>.
 <P>
 We offer a special invitation to the developers of braille displays.
 It's our goal to support as many models as possible within the Linux/Unix environment.

@@ -164,7 +164,7 @@
   1.3.  Contact Information
 
   BRLTTY represents the work of a team.  For up-to-date information, see
-  BRLTTY's web page at [http://brltty.com/].  As of this writing, the
+  BRLTTY's web page at [http://brltty.app/].  As of this writing, the
   team includes:
 
   ·  Dave Mielke (maintainer, active)

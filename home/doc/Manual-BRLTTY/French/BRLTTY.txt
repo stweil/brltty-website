@@ -169,7 +169,7 @@
   1.3.  Contacts
 
   BRLTTY est le travail d'une équipe. Pour des informations actualisées,
-  voyez la page Web de BRLTTY sur [http://brltty.com/]. Ont participé à
+  voyez la page Web de BRLTTY sur [http://brltty.app/]. Ont participé à
   ce document et au logiciel:
 
 

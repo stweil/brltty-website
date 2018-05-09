@@ -24,6 +24,7 @@ Special Modes
 
 Cursor Functions
 * go to screen cursor: Back+Advance
+* bring screen cursor to character: RoutingKey
 * bring screen cursor to current line: Space+Dots1236
 
 Vertical Navigation
