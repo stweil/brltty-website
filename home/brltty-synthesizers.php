@@ -9,6 +9,7 @@ then please <A HREF="contact.html">let us know</A>.
       array("BrailleLite"),
       array("CombiBraille"),
       array("eSpeak", "text to speech engine"),
+      array("eSpeak-NG", "text to speech engine"),
       array("ExternalSpeech", "text to speech engine"),
       array("Festival", "text to speech engine"),
       array("FestivalLite", "text to speech engine"),
