@@ -62,7 +62,7 @@ Speech Functions
 * speak from current line through bottom of screen:
   + CapsLock+ShiftLeft+Comma
   + CapsLock+PageDown
-* go to current speaking position: CapsLock+ShiftLeft+Nine
+* go to current speaking position: CapsLock+ShiftLeft+Eight
 * decrease speaking volume:
   + CapsLock+ShiftLeft+M
   + CapsLock+F7
@@ -84,6 +84,7 @@ Speech Functions
 * set autospeak deleted characters on/off: CapsLock+ShiftLeft+ControlLeft+M
 * set autospeak replaced characters on/off: CapsLock+ShiftLeft+ControlLeft+Comma
 * set autospeak completed words on/off: CapsLock+ShiftLeft+ControlLeft+L
+* set autospeak indent of current line on/off: Tab+ControlLeft+Zero
 
 Speech Navigation
 * speak current character: Tab+Comma
@@ -117,6 +118,7 @@ Speech Navigation
 * go to and speak last non-blank line on screen:
   + Tab+ControlLeft+O
   + ControlRight+ArrowDown
+* speak indent of current line: Tab+Zero
 * speak speech cursor location:
   + Tab+Eight
   + ShiftRight+Enter

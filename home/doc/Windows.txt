@@ -186,7 +186,7 @@ As of the time of this writing, LibUSB-1.0 binary snapshots can be found on
    2) Symlink the header and library files into your MinGW
       installation::
 
-         ln -s LibUSB-1.0/include/libusb-1.0 /mingw/include/
+         ln -s LibUSB-1.0/include/libusbx-1.0 /mingw/include/libusb-1.0
          ln -s LibUSB-1.0/MinGW32/dll/libusb-1.0.dll.a /mingw/lib/
          ln -s LibUSB-1.0/MinGW32/dll/libusb-1.0.dll /mingw/bin/
 
@@ -396,33 +396,47 @@ BRLTTY's source tree, builds the Windows archive and installer for BRLTTY.
 Required Software Components
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Links to the pages where we found these
+installers, components, and files are listed.
+In case any of these links becomes out-of-date, however,
+copies of some of them have been preserived at
+`<http://BRLTTY.app/archive/Windows/>`_.
+
 The following software components should already be installed:
 
 *  ``MinGW`` [32-bit] (from `<http://mingw.org/>`_)
 
-   The following ``MinGW`` packages should be installed:
+The following ``MinGW`` packages may still need to be installed:
 
-   +  ``mingw32-pdcurses``
-   +  ``mingw32-pthreads-w32``
-   +  ``msys-bison``
-   +  ``msys-dos2unix``
-   +  ``msys-groff``
-   +  ``msys-m4``
-   +  ``msys-zip``
+*  ``msys-bison``
+*  ``msys-dos2unix``
+*  ``msys-groff``
+*  ``msys-m4``
+*  ``msys-tar``
+*  ``msys-unzip``
+*  ``msys-wget``
+*  ``msys-zip``
+*  ``mingw32-libpdcurses``
+*  ``mingw32-pthreads-w32``
+*  ``mingw32-tcl``
+
+The following packages should also be installed:
 
 *  ``AutoHotkey`` (from `<http://www.autohotkey.com/>`_)
 
    The ``mkwin`` script assumes that it has been installed in
-   ``C:\Program Files\AutoHotkey``. The ``-A`` (AutoHotkey) option can be used
-   to specify another location.
+   ``C:\Program Files (x86)\AutoHotkey``.
+   The ``-A`` (AutoHotkey) option can be used to specify another location.
+   The installer currently being used is named ``AutoHotkey104805_Install.exe``.
 
 *  ``NSIS`` (from `<http://nsis.sourceforge.net/>`_)
 
    The ``mkwin`` script assumes that it has been installed in
-   ``C:\Program Files\NSIS``. The ``-N`` (NSIS) option can be used to specify
-   another location.
+   ``C:\Program Files (x86)\NSIS``.
+   The ``-N`` (NSIS) option can be used to specify another location.
+   The installer currently being used is named ``nsis-3.0b0-setup.exe``.
 
-*  ``Python`` (from `<http://www.python.org>`_)
+*  ``Python`` (from `<http://www.python.org/>`_)
 
    The 32-bit variants are required. Version 2 or 3 may be used. If the
    ``python`` command isn't in your command search path, or if you'd like to
@@ -433,60 +447,122 @@ The following software components should already be installed:
 
    A corresponding version of ``Cython`` must be installed for each version of
    ``Python``. Each ``Cython`` version is installed within the corresponding
-   ``Python`` version's hierarchy.
+   ``Python`` version's hierarchy. Install ``Cython`` with the command::
+
+      pip install cython
+
+   Copies of the files mentioned below are at
+   `<http://BRLTTY.app/archive/Windows/Cython/>`_:
+
+   +  To force use of MinGW's (rather than Microsoft's) C compiler,
+      add ``distutils.cfg`` to the ``Python/lib/distutils/`` directory.
+      It should contain these lines::
+
+         [build]
+         compiler = mingw32
+
+   +  If you get a message like "Unknown MS Compiler version 1900"
+      then you'll probably need to apply the patch ``patch1``
+      (from `<https://bugs.python.org/file40608/patch.diff>`_)
+      when within the ``Python/lib/distutils/`` directory::
+
+         cd Python/lib/distutils
+         patch patch1
+
+   +  If you get a message like "cannot find -lvcruntime140"
+      then you'll need to add the 32-bit version of ``vcruntime140.dll``
+      (from `<http://www.dll-files.com/>`_)
+      to the ``Python/libs/`` directory.
+      You can verify that you have the 32-bit version with the ``file`` command::
+
+         file vcruntime140.dll
+         vcruntime140.dll: PE32 executable (DLL) (console) Intel 80386, for MS Windows
+
+      A message like "vcruntime140.dll: file not recognized: File format not recognized"
+      probably means that you don't have the 32-bit version of the DLL.
 
 *  ``LibUSB-Win32`` (from `<http://libusb-win32.sourceforge.net/>`_)
 
    The ``mkwin`` script assumes that it has been installed in
-   ``C:\LibUSB-Win32``. The ``-U`` (LibUSB-Win32) option can be used to specify
-   another location.
+   ``C:\LibUSB-Win32``.
+   The ``-U`` (LibUSB-Win32) option can be used to specify another location.
+   The archive currently being used is named ``libusb-win32-bin-1.2.6.0.zip``.
+   Our copy of this archive has a top-level directory named ``libusb-win32-bin-1.2.6.0``.
 
 *  ``LibUSB-1.0`` (from `<http://www.libusb.org/wiki/windows_backend>`_)
 
    The ``mkwin`` script assumes that it has been installed in
-   ``C:\LibUSB-1.0``. The ``-X`` (libusbx) option can be used to specify
-   another location.
+   ``C:\LibUSB-1.0``.
+   The ``-X`` (libusbx) option can be used to specify another location.
+   The archive currently being used is named ``libusbx-1.0.18-win.7z``.
+   Our copy of this archive doesn't have a top-level directory.
+   We have an alternate copy of this archive named ``libusbx-1.0.18-win.tar.gz``.
 
 *  ``WinUSB`` (from `<http://www.libusb.org/wiki/windows_backend>`_)
 
-   The ``mkwin`` script assumes that it has been installed in ``C:\WinUSB``.
+   The ``mkwin`` script assumes that it has been installed in
+   ``C:\WinUSB``.
    The ``-W`` (WinUSB) option can be used to specify another location.
+   The archive currently being used is named ``winusb.zip``.
+   Our copy of this archive doesn't have a top-level directory.
 
 *  ``ICU`` (from `<http://icu-project.org/>`_)
 
-   The ``mkwin`` script assumes that it has been installed in ``C:\ICU``. The
-   ``-I`` (ICU) option can be used to specify another location. The archive's
-   only top-level directory is named ``icu``, so unpack it when in MinGW's
-   ``/c/`` directory. Since Windows file systems aren't case sensitive,
+   The ``mkwin`` script assumes that it has been installed in ``C:\ICU``.
+   The ``-I`` (ICU) option can be used to specify another location.
+   The archive currently being used is named ``icu4c-53_1-Win32-msvc10.zip``.
+   Our copy of this archive has a top-level directory named ``icu``.
+   Since Windows file systems don't have case sensitive names,
    renaming it from ``icu`` to ``ICU`` is optional.
 
 *  ``pkg-config`` (from `<http://gtk.org/download/win32.php>`_)
 
-   Its archive should be unpacked when in MinGW's ``/mingw/`` directory.
+   The archive currently being used is named ``pkg-config_0.28-1_win32.zip``.
+   Our copy of this archive doesn't have a top-level directory.
+   It should be unpacked when in MinGW's ``/mingw/`` directory.
 
 *  ``Glib`` (from `<http://gtk.org/download/win32.php>`_)
 
-   Its archive should be unpacked when in MinGW's ``/mingw/`` directory.
+   The archive currently being used is named ``glib_2.34.3-1_win32.zip``.
+   Our copy of this archive doesn't have a top-level directory.
+   It should be unpacked when in MinGW's ``/mingw/`` directory.
 
 *  ``gettext-runtime`` (from `<http://gtk.org/download/win32.php>`_)
 
-   Its archive should be unpacked when in MinGW's ``/mingw/`` directory. Only
-   install it if your MinGW installation doesn't already have it. Check for the
-   presence of a ``libintl`` DLL in MinGW's ``/mingw/bin/`` directory.
+   Only install it if your MinGW installation doesn't already have it.
+   Check for the presence of a ``libintl`` DLL in MinGW's ``/mingw/bin/`` directory.
 
-The ``mkwin`` script uses the ``lib`` command, which belongs to MSVC (Microsoft Visual 
-C++). On newer Windows systems, MSVC has become a component of Microsoft Visual 
-Studio. If you don't have it then you'll need to get the following files from
-someone who does:
+The ``mkwin`` script uses the ``lib`` command,
+which belongs to MSVC (Microsoft Visual C++).
+On newer Windows systems, MSVC has become
+a component of Microsoft Visual Studio.
+If you don't have it then you'll need to get
+the following files from someone who does.
+Copies of them are at `<http://BRLTTY.app/archive/Windows/MSVC/>`_.
 
 *  lib.exe
 *  link.exe
 *  mspdb100.dll
 *  msvcr100.dll
 
-All of them should be placed in the same directory. Either add this directory
-to your command search path or use the ``-M`` (MSVC) option to specify its
-location.
+All of them should be placed within the same directory
+(MinGW's ``/usr/local/bin/`` directory may be a good place).
+Either add this directory to your command search path
+or use the ``-M`` (MSVC) option to specify its location.
+
+If you'd like to have USB support then create the symbolic links as described
+within the MinGW instructions for using `LibUSB-Win32`_ and/or `LibUSB-1.0`_.
+You'll also need to create ``.pc`` (pkg-config) files for them within MinGW's
+``/mingw/lib/pkgconfig>`` directory. The ones we've created are at
+`<http://BRLTTY.app/archive/Windows/pkgconfig/>`_.
+
+If you'd like to have Bluetooth support then you'll need to add
+the files listed below to MinGW's ``/mingw/include/`` directory.
+Copies of them are at `<http://BRLTTY.app/archive/Windows/Bluetooth/>`_.
+
+*  ws2bth.h
+*  bthdef.h
+*  bthsdpdef.h
 
 More Options
 ~~~~~~~~~~~~

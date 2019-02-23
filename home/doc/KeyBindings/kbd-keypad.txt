@@ -76,7 +76,7 @@ Speech Functions
 * speak current line: KPEnter+KP5
 * speak from top of screen through current line: KPEnter+KP8
 * speak from current line through bottom of screen: KPEnter+KP2
-* go to current speaking position: KPEnter+KPMultiply
+* go to current speaking position: KPEnter+KPDivide
 * decrease speaking volume: KPEnter+KP1
 * increase speaking volume: KPEnter+KP3
 * decrease speaking rate: KPEnter+KP7
@@ -88,6 +88,7 @@ Speech Functions
 * set autospeak deleted characters on/off: KPEnter+KP0+KP1
 * set autospeak replaced characters on/off: KPEnter+KP0+KP2
 * set autospeak completed words on/off: KPEnter+KP0+KP6
+* set autospeak indent of current line on/off: KPPlus+KP0+KPMinus
 
 Speech Navigation
 * speak current character: KPPlus+KP2
@@ -105,6 +106,7 @@ Speech Navigation
 * go to and speak next line: KPPlus+KP9
 * go to and speak first non-blank line on screen: KPPlus+KP0+KP7
 * go to and speak last non-blank line on screen: KPPlus+KP0+KP9
+* speak indent of current line: KPPlus+KPMinus
 * speak speech cursor location: KPPlus+KPDivide
 * set speech cursor visibility on/off: KPPlus+KP0+KPDivide
 

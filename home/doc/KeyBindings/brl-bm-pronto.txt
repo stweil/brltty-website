@@ -310,6 +310,8 @@ Keyboard Input
 * set braille keyboard enabled/disabled: B10+Dots13
 * set braille keyboard enabled: B10+Dots138
 * set braille keyboard disabled: B10+Dots137
+* set braille input mode dots: B10+Dots468
+* set braille input mode text: B10+Dots467
 
 Special Functions
 * remember current braille window position: Display1+Display3+RoutingKey

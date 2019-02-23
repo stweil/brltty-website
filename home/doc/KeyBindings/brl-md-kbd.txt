@@ -1,6 +1,12 @@
 Key Table: MDV Models with a Keyboard
 =====================================
 
+Notes
+* RoutingKey refers to any of the keys immediately behind the text cells.
+* The long key in the center of the front surface is named Shift.
+  The two round keys to its left, from left to right, are named: Left, Up.
+  The two round keys to its right, from left to right, are named: Down, Right.
+
 Default Bindings
 ----------------
 
@@ -23,10 +29,18 @@ Cursor Functions
 Vertical Navigation
 * go up one line: Up
 * go down one line: Down
+* go to top line: Long+Up
+* go to bottom line: Long+Down
+* go up to first line of paragraph: Shift+Long+Left
+* go down to first line of next paragraph: Shift+Long+Right
+* go up to previous command prompt: Shift+Long+Up
+* go down to next command prompt: Shift+Long+Down
 
 Horizontal Navigation
 * go backward one braille window: Left
 * go forward one braille window: Right
+* go to beginning of line: Long+Left
+* go to end of line: Long+Right
 
 Clipboard Functions
 * start new clipboard at character: RoutingKey+Left
@@ -83,8 +97,12 @@ Keyboard Input
 * type braille dots [8]: Space+Dot8
 * backspace key: Dot7
 * escape key: Space+Dots26
-* cursor-left key: Space+Dot3
-* cursor-right key: Space+Dot6
+* cursor-left key:
+  + Shift+Left
+  + Space+Dot3
+* cursor-right key:
+  + Shift+Right
+  + Space+Dot6
 * cursor-up key:
   + Shift+Up
   + Space+Dot1
@@ -111,6 +129,8 @@ Keyboard Input
 * set braille keyboard enabled/disabled: Space+Dots13
 * set braille keyboard enabled: Space+Dots138
 * set braille keyboard disabled: Space+Dots137
+* set braille input mode dots: Space+Dots468
+* set braille input mode text: Space+Dots467
 
 Menu Bindings
 -------------

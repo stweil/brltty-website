@@ -118,6 +118,8 @@ Keyboard Input
 * set braille keyboard enabled/disabled: Dot0+Dots13
 * set braille keyboard enabled: Dot0+Dots138
 * set braille keyboard disabled: Dot0+Dots137
+* set braille input mode dots: Dot0+Dots468
+* set braille input mode text: Dot0+Dots467
 
 Menu Bindings
 -------------

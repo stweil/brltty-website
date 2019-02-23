@@ -239,6 +239,8 @@ Keyboard Input
 * set braille keyboard enabled/disabled: Dots13
 * set braille keyboard enabled: Dots138
 * set braille keyboard disabled: Dots137
+* set braille input mode dots: Dots468
+* set braille input mode text: Dots467
 
 Braille Input Mode
 ------------------

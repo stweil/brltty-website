@@ -3,13 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="Docutils 0.10: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
 <title>Key Tables</title>
 <style type="text/css">
 
 /*
 :Author: David Goodger (goodger@python.org)
-:Id: $Id: html4css1.css 7434 2012-05-11 21:06:27Z milde $
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
 :Copyright: This stylesheet has been placed in the public domain.
 
 Default cascading style sheet for the HTML output of Docutils.
@@ -36,6 +36,14 @@ table.borderless td, table.borderless th {
 
 .hidden {
   display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
 
 a.toc-backref {
   text-decoration: none ;
@@ -77,7 +85,7 @@ div.tip p.admonition-title {
 
 div.attention p.admonition-title, div.caution p.admonition-title,
 div.danger p.admonition-title, div.error p.admonition-title,
-div.warning p.admonition-title {
+div.warning p.admonition-title, .code .error {
   color: red ;
   font-weight: bold ;
   font-family: sans-serif }
@@ -161,18 +169,23 @@ h2.subtitle {
 hr.docutils {
   width: 75% }
 
-img.align-left, .figure.align-left, object.align-left {
+img.align-left, .figure.align-left, object.align-left, table.align-left {
   clear: left ;
   float: left ;
   margin-right: 1em }
 
-img.align-right, .figure.align-right, object.align-right {
+img.align-right, .figure.align-right, object.align-right, table.align-right {
   clear: right ;
   float: right ;
   margin-left: 1em }
 
 img.align-center, .figure.align-center, object.align-center {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
   margin-left: auto;
   margin-right: auto;
 }
@@ -193,6 +206,15 @@ div.align-right {
 
 /* div.align-center * { */
 /*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
 
 ol.simple, ul.simple {
   margin-bottom: 1em }
@@ -253,13 +275,14 @@ pre.literal-block, pre.doctest-block, pre.math, pre.code {
   margin-left: 2em ;
   margin-right: 2em }
 
-pre.code .ln { /* line numbers */
-  color: grey;
-}
-
-.code {
-  background-color: #eeeeee
-}
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
 
 span.classifier {
   font-family: sans-serif ;
@@ -312,6 +335,21 @@ table.docutils th.field-name, table.docinfo th.docinfo-name {
   white-space: nowrap ;
   padding-left: 0 }
 
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
 h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
 h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
   font-size: 100% }
@@ -336,25 +374,27 @@ ul.auto-toc {
 <li><a class="reference internal" href="#the-hotkey-directive" id="id7">The Hotkey Directive</a></li>
 <li><a class="reference internal" href="#the-ifkey-directive" id="id8">The IfKey Directive</a></li>
 <li><a class="reference internal" href="#the-ifnotkey-directive" id="id9">The IfNotKey Directive</a></li>
-<li><a class="reference internal" href="#the-ignore-directive" id="id10">The Ignore Directive</a></li>
-<li><a class="reference internal" href="#the-map-directive" id="id11">The Map Directive</a></li>
-<li><a class="reference internal" href="#the-note-directive" id="id12">The Note Directive</a></li>
-<li><a class="reference internal" href="#the-superimpose-directive" id="id13">The Superimpose Directive</a></li>
-<li><a class="reference internal" href="#the-title-directive" id="id14">The Title Directive</a></li>
-<li><a class="reference internal" href="#the-include-directive" id="id15">The Include Directive</a></li>
-<li><a class="reference internal" href="#the-assign-directive" id="id16">The Assign Directive</a></li>
-<li><a class="reference internal" href="#the-assigndefault-directive" id="id17">The AssignDefault Directive</a></li>
-<li><a class="reference internal" href="#the-ifvar-directive" id="id18">The IfVar Directive</a></li>
-<li><a class="reference internal" href="#the-ifnotvar-directive" id="id19">The IfNotVar Directive</a></li>
-<li><a class="reference internal" href="#the-beginvariables-directive" id="id20">The BeginVariables Directive</a></li>
-<li><a class="reference internal" href="#the-endvariables-directive" id="id21">The EndVariables Directive</a></li>
-<li><a class="reference internal" href="#the-listvariables-directive" id="id22">The ListVariables Directive</a></li>
-<li><a class="reference internal" href="#the-endif-directive" id="id23">The EndIf Directive</a></li>
-<li><a class="reference internal" href="#the-else-directive" id="id24">The Else Directive</a></li>
+<li><a class="reference internal" href="#the-ifplatform-directive" id="id10">The IfPlatform Directive</a></li>
+<li><a class="reference internal" href="#the-ifnotplatform-directive" id="id11">The IfNotPlatform Directive</a></li>
+<li><a class="reference internal" href="#the-ignore-directive" id="id12">The Ignore Directive</a></li>
+<li><a class="reference internal" href="#the-map-directive" id="id13">The Map Directive</a></li>
+<li><a class="reference internal" href="#the-note-directive" id="id14">The Note Directive</a></li>
+<li><a class="reference internal" href="#the-superimpose-directive" id="id15">The Superimpose Directive</a></li>
+<li><a class="reference internal" href="#the-title-directive" id="id16">The Title Directive</a></li>
+<li><a class="reference internal" href="#the-include-directive" id="id17">The Include Directive</a></li>
+<li><a class="reference internal" href="#the-assign-directive" id="id18">The Assign Directive</a></li>
+<li><a class="reference internal" href="#the-assigndefault-directive" id="id19">The AssignDefault Directive</a></li>
+<li><a class="reference internal" href="#the-ifvar-directive" id="id20">The IfVar Directive</a></li>
+<li><a class="reference internal" href="#the-ifnotvar-directive" id="id21">The IfNotVar Directive</a></li>
+<li><a class="reference internal" href="#the-beginvariables-directive" id="id22">The BeginVariables Directive</a></li>
+<li><a class="reference internal" href="#the-endvariables-directive" id="id23">The EndVariables Directive</a></li>
+<li><a class="reference internal" href="#the-listvariables-directive" id="id24">The ListVariables Directive</a></li>
+<li><a class="reference internal" href="#the-endif-directive" id="id25">The EndIf Directive</a></li>
+<li><a class="reference internal" href="#the-else-directive" id="id26">The Else Directive</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#keyboard-table-list" id="id25">Keyboard Table List</a></li>
-<li><a class="reference internal" href="#braille-driver-list" id="id26">Braille Driver List</a></li>
+<li><a class="reference internal" href="#keyboard-table-list" id="id27">Keyboard Table List</a></li>
+<li><a class="reference internal" href="#braille-driver-list" id="id28">Braille Driver List</a></li>
 </ul>
 </div>
 <div class="section" id="description">
@@ -643,10 +683,12 @@ particular key.</p>
 <dt><em>key</em></dt>
 <dd>The name of the key whose availability is to be tested.</dd>
 <dt><em>directive</em></dt>
-<dd>The directive which is to be conditionally processed. It may contain spaces.
-This operand is optional. If it isn't supplied then this directive applies
-to all subsequent lines until <a class="reference internal" href="#the-endif-directive">The EndIf Directive</a> or
-<a class="reference internal" href="#the-else-directive">The Else Directive</a> that is at the same conditional nesting level.</dd>
+<dd>The directive that is to be conditionally processed.
+It may contain spaces.
+This operand is optional.
+If it isn't supplied then this directive applies to all subsequent lines
+until <a class="reference internal" href="#the-endif-directive">The EndIf Directive</a> or <a class="reference internal" href="#the-else-directive">The Else Directive</a>
+that is at the same conditional nesting level.</dd>
 </dl>
 <p>Examples:</p>
 <pre class="literal-block">
@@ -664,18 +706,72 @@ have a particular key.</p>
 <dt><em>key</em></dt>
 <dd>The name of the key whose availability is to be tested.</dd>
 <dt><em>directive</em></dt>
-<dd>The directive which is to be conditionally processed. It may contain spaces.
-This operand is optional. If it isn't supplied then this directive applies
-to all subsequent lines until <a class="reference internal" href="#the-endif-directive">The EndIf Directive</a> or
-<a class="reference internal" href="#the-else-directive">The Else Directive</a> that is at the same conditional nesting level.</dd>
+<dd>The directive that is to be conditionally processed.
+It may contain spaces.
+This operand is optional.
+If it isn't supplied then this directive applies to all subsequent lines
+until <a class="reference internal" href="#the-endif-directive">The EndIf Directive</a> or <a class="reference internal" href="#the-else-directive">The Else Directive</a>
+that is at the same conditional nesting level.</dd>
 </dl>
 <p>Examples:</p>
 <pre class="literal-block">
 ifNotKey Key2 bind Key1 HOME
 </pre>
 </div>
+<div class="section" id="the-ifplatform-directive">
+<h3><a class="toc-backref" href="#id10">The IfPlatform Directive</a></h3>
+<pre class="literal-block">
+ifPlatform <em>platform</em> <em>directive</em>
+</pre>
+<p>Use this directive to only process one or more directives if running on the
+named host platform.</p>
+<dl class="docutils">
+<dt><em>platform</em></dt>
+<dd>The name of a host platform.
+The following platform names are recognized:
+android, apple, cygwin, dos, grub, linux,
+mingw32, mingw64, openbsd, sun, windows.</dd>
+<dt><em>directive</em></dt>
+<dd>The directive that is to be conditionally processed.
+It may contain spaces.
+This operand is optional.
+If it isn't supplied then this directive applies to all subsequent lines
+until <a class="reference internal" href="#the-endif-directive">The EndIf Directive</a> or <a class="reference internal" href="#the-else-directive">The Else Directive</a>
+that is at the same conditional nesting level.</dd>
+</dl>
+<p>Examples:</p>
+<pre class="literal-block">
+ifPlatform android include android.kti
+</pre>
+</div>
+<div class="section" id="the-ifnotplatform-directive">
+<h3><a class="toc-backref" href="#id11">The IfNotPlatform Directive</a></h3>
+<pre class="literal-block">
+ifNotPlatform <em>platform</em> <em>directive</em>
+</pre>
+<p>Use this directive to only process one or more directives if not running on
+the named host platform.</p>
+<dl class="docutils">
+<dt><em>platform</em></dt>
+<dd>The name of a host platform.
+The following platform names are recognized:
+android, apple, cygwin, dos, grub, linux,
+mingw32, mingw64, openbsd, sun, windows.</dd>
+<dt><em>directive</em></dt>
+<dd>The directive that is to be conditionally processed.
+It may contain spaces.
+This operand is optional.
+If it isn't supplied then this directive applies to all subsequent lines
+until <a class="reference internal" href="#the-endif-directive">The EndIf Directive</a> or <a class="reference internal" href="#the-else-directive">The Else Directive</a>
+that is at the same conditional nesting level.</dd>
+</dl>
+<p>Examples:</p>
+<pre class="literal-block">
+ifNotPlatform grub include advanced.kti
+</pre>
+</div>
 <div class="section" id="the-ignore-directive">
-<h3><a class="toc-backref" href="#id10">The Ignore Directive</a></h3>
+<h3><a class="toc-backref" href="#id12">The Ignore Directive</a></h3>
 <pre class="literal-block">
 ignore <em>key</em>
 </pre>
@@ -690,7 +786,7 @@ ignore Key1
 </pre>
 </div>
 <div class="section" id="the-map-directive">
-<h3><a class="toc-backref" href="#id11">The Map Directive</a></h3>
+<h3><a class="toc-backref" href="#id13">The Map Directive</a></h3>
 <pre class="literal-block">
 map <em>key</em> <em>function</em>
 </pre>
@@ -754,7 +850,7 @@ map Key1 DOT1
 </pre>
 </div>
 <div class="section" id="the-note-directive">
-<h3><a class="toc-backref" href="#id12">The Note Directive</a></h3>
+<h3><a class="toc-backref" href="#id14">The Note Directive</a></h3>
 <pre class="literal-block">
 note <em>text</em>
 </pre>
@@ -803,7 +899,7 @@ Continue the second outer list element.</p>
 </ul>
 </div>
 <div class="section" id="the-superimpose-directive">
-<h3><a class="toc-backref" href="#id13">The Superimpose Directive</a></h3>
+<h3><a class="toc-backref" href="#id15">The Superimpose Directive</a></h3>
 <pre class="literal-block">
 superimpose <em>function</em>
 </pre>
@@ -822,7 +918,7 @@ superimpose DOT7
 </pre>
 </div>
 <div class="section" id="the-title-directive">
-<h3><a class="toc-backref" href="#id14">The Title Directive</a></h3>
+<h3><a class="toc-backref" href="#id16">The Title Directive</a></h3>
 <pre class="literal-block">
 title &lt;text&gt;
 </pre>
@@ -840,7 +936,7 @@ title Bindings for Keypad-based Navigation
 </pre>
 </div>
 <div class="section" id="the-include-directive">
-<h3><a class="toc-backref" href="#id15">The Include Directive</a></h3>
+<h3><a class="toc-backref" href="#id17">The Include Directive</a></h3>
 <pre class="literal-block">
 include <em>file</em> # <em>comment</em>
 </pre>
@@ -854,7 +950,7 @@ relative, it is anchored at the directory containing the including file.</dd>
 </dl>
 </div>
 <div class="section" id="the-assign-directive">
-<h3><a class="toc-backref" href="#id16">The Assign Directive</a></h3>
+<h3><a class="toc-backref" href="#id18">The Assign Directive</a></h3>
 <pre class="literal-block">
 assign <em>variable</em> <em>value</em>
 </pre>
@@ -880,7 +976,7 @@ assign IndirectValue \{variableName}
 </pre>
 </div>
 <div class="section" id="the-assigndefault-directive">
-<h3><a class="toc-backref" href="#id17">The AssignDefault Directive</a></h3>
+<h3><a class="toc-backref" href="#id19">The AssignDefault Directive</a></h3>
 <pre class="literal-block">
 assignDefault <em>variable</em> <em>value</em>
 </pre>
@@ -907,7 +1003,7 @@ assignDefault format plain\stext
 </pre>
 </div>
 <div class="section" id="the-ifvar-directive">
-<h3><a class="toc-backref" href="#id18">The IfVar Directive</a></h3>
+<h3><a class="toc-backref" href="#id20">The IfVar Directive</a></h3>
 <pre class="literal-block">
 ifVar <em>variable</em> <em>directive</em>
 </pre>
@@ -916,10 +1012,12 @@ ifVar <em>variable</em> <em>directive</em>
 <dt><em>variable</em></dt>
 <dd>The name of the variable whose existence is to be tested.</dd>
 <dt><em>directive</em></dt>
-<dd>The directive that is to be conditionally processed. It may contain spaces.
-This operand is optional. If it isn't supplied then this directive applies
-to all subsequent lines until <a class="reference internal" href="#the-endif-directive">The EndIf Directive</a> or
-<a class="reference internal" href="#the-else-directive">The Else Directive</a> that is at the same conditional nesting level.</dd>
+<dd>The directive that is to be conditionally processed.
+It may contain spaces.
+This operand is optional.
+If it isn't supplied then this directive applies to all subsequent lines
+until <a class="reference internal" href="#the-endif-directive">The EndIf Directive</a> or <a class="reference internal" href="#the-else-directive">The Else Directive</a>
+that is at the same conditional nesting level.</dd>
 </dl>
 <p>Examples:</p>
 <pre class="literal-block">
@@ -927,7 +1025,7 @@ ifVar var1 ifVar var2 assign concatenation \{var1}\{var2}
 </pre>
 </div>
 <div class="section" id="the-ifnotvar-directive">
-<h3><a class="toc-backref" href="#id19">The IfNotVar Directive</a></h3>
+<h3><a class="toc-backref" href="#id21">The IfNotVar Directive</a></h3>
 <pre class="literal-block">
 ifNotVar <em>variable</em> <em>directive</em>
 </pre>
@@ -937,10 +1035,12 @@ exist.</p>
 <dt><em>variable</em></dt>
 <dd>The name of the variable whose existence is to be tested.</dd>
 <dt><em>directive</em></dt>
-<dd>The directive that is to be conditionally processed. It may contain spaces.
-This operand is optional. If it isn't supplied then this directive applies
-to all subsequent lines until <a class="reference internal" href="#the-endif-directive">The EndIf Directive</a> or
-<a class="reference internal" href="#the-else-directive">The Else Directive</a> that is at the same conditional nesting level.</dd>
+<dd>The directive that is to be conditionally processed.
+It may contain spaces.
+This operand is optional.
+If it isn't supplied then this directive applies to all subsequent lines
+until <a class="reference internal" href="#the-endif-directive">The EndIf Directive</a> or <a class="reference internal" href="#the-else-directive">The Else Directive</a>
+that is at the same conditional nesting level.</dd>
 </dl>
 <p>Examples:</p>
 <pre class="literal-block">
@@ -948,7 +1048,7 @@ ifNotVar var1 assign var1 default\svalue
 </pre>
 </div>
 <div class="section" id="the-beginvariables-directive">
-<h3><a class="toc-backref" href="#id20">The BeginVariables Directive</a></h3>
+<h3><a class="toc-backref" href="#id22">The BeginVariables Directive</a></h3>
 <pre class="literal-block">
 beginVariables
 </pre>
@@ -970,7 +1070,7 @@ endVariables
 </pre>
 </div>
 <div class="section" id="the-endvariables-directive">
-<h3><a class="toc-backref" href="#id21">The EndVariables Directive</a></h3>
+<h3><a class="toc-backref" href="#id23">The EndVariables Directive</a></h3>
 <pre class="literal-block">
 endVariables
 </pre>
@@ -978,7 +1078,7 @@ endVariables
 See <a class="reference internal" href="#the-beginvariables-directive">The BeginVariables Directive</a> for details.</p>
 </div>
 <div class="section" id="the-listvariables-directive">
-<h3><a class="toc-backref" href="#id22">The ListVariables Directive</a></h3>
+<h3><a class="toc-backref" href="#id24">The ListVariables Directive</a></h3>
 <pre class="literal-block">
 listVariables
 </pre>
@@ -986,7 +1086,7 @@ listVariables
 It can be helpful when debugging.</p>
 </div>
 <div class="section" id="the-endif-directive">
-<h3><a class="toc-backref" href="#id23">The EndIf Directive</a></h3>
+<h3><a class="toc-backref" href="#id25">The EndIf Directive</a></h3>
 <pre class="literal-block">
 endIf
 </pre>
@@ -999,7 +1099,7 @@ endIf
 </pre>
 </div>
 <div class="section" id="the-else-directive">
-<h3><a class="toc-backref" href="#id24">The Else Directive</a></h3>
+<h3><a class="toc-backref" href="#id26">The Else Directive</a></h3>
 <pre class="literal-block">
 else
 </pre>
@@ -1017,7 +1117,7 @@ endIf
 </div>
 </div>
 <div class="section" id="keyboard-table-list">
-<h2><a class="toc-backref" href="#id25">Keyboard Table List</a></h2>
+<h2><a class="toc-backref" href="#id27">Keyboard Table List</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />
@@ -1048,7 +1148,7 @@ endIf
 </table>
 </div>
 <div class="section" id="braille-driver-list">
-<h2><a class="toc-backref" href="#id26">Braille Driver List</a></h2>
+<h2><a class="toc-backref" href="#id28">Braille Driver List</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />

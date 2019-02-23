@@ -223,6 +223,8 @@ Keyboard Input
 * set braille keyboard enabled/disabled: Space+Dots13
 * set braille keyboard enabled: Space+Dots138
 * set braille keyboard disabled: Space+Dots137
+* set braille input mode dots: Space+Dots468
+* set braille input mode text: Space+Dots467
 
 Special Functions
 * restart braille driver: SmartpadF1+SmartpadF2+SmartpadEnter

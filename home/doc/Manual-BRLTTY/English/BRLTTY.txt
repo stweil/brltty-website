@@ -9,9 +9,9 @@
 
   Dave Mielke <dave@mielke.cc>
 
-  Version 5.6, February 2018
+  Version 6.0, February 2019
 
-  Copyright © 1995-2018 by The BRLTTY Developers.  BRLTTY is free soft-
+  Copyright © 1995-2019 by The BRLTTY Developers.  BRLTTY is free soft-
   ware, and comes with ABSOLUTELY NO WARRANTY.  It is placed under the
   terms of version 2 or later of The GNU General Public License as pub-
   lished by The Free Software Foundation.
@@ -818,21 +818,6 @@
            /usr/local, /usr/local/Theta, /usr/local/theta, /opt/Theta,
            or /opt/theta.  This is equivalent to specifying --with-
            theta.
-
-     --with-viavoice=directory
-        Specify the installed location of the ViaVoice text-to-speech
-        package, and build the ViaVoice speech synthesizer driver (see
-        ``Build Restrictions'').  Any of the following words can also be
-        used as the operand of this option:
-
-        no Don't build the driver.  This is equivalent to specifying
-           --without-viavoice.
-
-        yes
-           Build the driver if the package can be found in /usr,
-           /usr/local, /usr/local/ViaVoice, /usr/local/viavoice,
-           /opt/ViaVoice, or /opt/viavoice.  This is equivalent to
-           specifying --with-viavoice.
 
      --with-screen-driver=driver
         Specify the screen drivers which are to be linked into the
@@ -4322,6 +4307,7 @@
     sa           Sanskrit
     sat          Santali
     sd           Sindhi
+    se           Sami (Northern)
     sk           Slovak
     sl           Slovenian
     sv           Swedish
@@ -4695,36 +4681,38 @@
 
   The following contraction tables are provided:
 
-       Name             Language
-       af               Afrikaans (contracted)
-       am               Amharic (uncontracted)
-       de-basis         German (uncontracted)
-       de-kurzschrift   German (contracted - 1998 standard)
-       de-vollschrift   German (basic contractions)
-       en-ueb-g2        English (Unified English Braille, grade 2)
-       en-us-g2         English (US, grade 2)
-       es               Spanish (grade 2)
-       fr-abrege        French (contracted)
-       fr-integral      French (uncontracted)
-       ha               Hausa (contracted)
-       id               Indonesian (contracted)
-       ja               Japanese (uncontracted)
-       ko-g1            Korean (grade 1)
-       ko-g2            Korean (grade 2)
-       ko               Korean (uncontracted)
-       lt               Lituanian
-       mg               Malagasy (contracted)
-       mun              Munda (contracted)
-       nl               Dutch (contracted)
-       ny               Chichewa (contracted)
-       ipa              International Phonetic Alphabet
-       pt               Portuguese (grade 2)
-       si               Sinhalese (uncontracted)
-       sw               Swahili (contracted)
-       th               Thai (contracted)
-       zh-tw            Chinese (Taiwan, uncontracted)
-       zh-tw-ucb        Chinese (Taiwan, Unique Chinese Braille)
-       zu               Zulu (contracted)
+     Name                  Language
+     af                    Afrikaans (contracted)
+     am                    Amharic (uncontracted)
+     de-basis              German (uncontracted)
+     de-kurzschrift        German (contracted - 1998 standard)
+     de-kurzschrift-1998   German (contracted - 1998 standard)
+     de-kurzschrift-2015   German (contracted - 2015 standard)
+     de-vollschrift        German (basic contractions)
+     en-ueb-g2             English (Unified English Braille, grade 2)
+     en-us-g2              English (US, grade 2)
+     es                    Spanish (grade 2)
+     fr-abrege             French (contracted)
+     fr-integral           French (uncontracted)
+     ha                    Hausa (contracted)
+     id                    Indonesian (contracted)
+     ja                    Japanese (uncontracted)
+     ko-g1                 Korean (grade 1)
+     ko-g2                 Korean (grade 2)
+     ko                    Korean (uncontracted)
+     lt                    Lituanian
+     mg                    Malagasy (contracted)
+     mun                   Munda (contracted)
+     nl                    Dutch (contracted)
+     ny                    Chichewa (contracted)
+     ipa                   International Phonetic Alphabet
+     pt                    Portuguese (grade 2)
+     si                    Sinhalese (uncontracted)
+     sw                    Swahili (contracted)
+     th                    Thai (contracted)
+     zh-tw                 Chinese (Taiwan, uncontracted)
+     zh-tw-ucb             Chinese (Taiwan, Unique Chinese Braille)
+     zu                    Zulu (contracted)
 
 
   See the ``-c'' command line option, and the ``contraction-table''
@@ -5746,6 +5734,7 @@
                               Active Braille
                               Active Star 40
                               Actilino
+                              Activator
                               Basic Braille 16/20/32/40/48/64/80
                               Braillino
                               Braille Wave
