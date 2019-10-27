@@ -1,9 +1,38 @@
-<dl>
-   <dt><a href="archive/Android/brltty-latest.apk">brltty-latest.apk</a></dt>
-   <dd>The latest version of BRLTTY for Android.</dd>
+<?php
+   function list_android_file($name, $description, $title=null) {
+      global $archive_directory;
+      $path = $archive_directory . "/Android/" . $name;
+      $time = filemtime($path);
 
-   <dt><a href="archive/Android/brltty-on-android.html">Using BRLTTY on Android</a></dt>
-   <dd>The latest documentation for BRLTTY on Android.</dd>
+      if ($title == null) $title = $name;
+      echo("<dt>");
+         write_link($path, $title);
+      echo("</dt>");
+
+      echo("<dd>");
+         echo($description);
+         echo(" It was last updated on ");
+         echo(date("Y-m-d", $time));
+         echo(" at ");
+         echo(date("H:i", $time));
+         echo(".");
+      echo("</dd>\n");
+   }
+?>
+
+<dl>
+   <?php
+      list_android_file(
+         "brltty-latest.apk",
+         "The latest version of BRLTTY for Android."
+      );
+
+      list_android_file(
+         "brltty-on-android.html",
+         "The latest documentation for BRLTTY on Android.",
+         "Using BRLTTY on Android"
+      );
+   ?>
 </dl>
 
 <p>
