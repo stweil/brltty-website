@@ -11,11 +11,15 @@
 
       echo("<dd>");
          echo($description);
-         echo(" It was last updated on ");
-         echo(date("Y-m-d", $time));
-         echo(" at ");
-         echo(date("H:i", $time));
-         echo(".");
+         echo("<ul>");
+            echo("<li>");
+               echo("Last updated on ");
+               echo(date("Y-m-d", $time));
+               echo(" at ");
+               echo(date("H:i", $time));
+               echo(".");
+            echo("</li>");
+         echo("</ul>");
       echo("</dd>\n");
    }
 ?>
