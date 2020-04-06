@@ -1,4 +1,4 @@
 <?php
-   define('BRLTTY_CURRENT', '6.0');
-   define('BRLAPI_CURRENT', '0.7.0');
+   define('BRLTTY_CURRENT', '6.1');
+   define('BRLAPI_CURRENT', '0.8.0');
 ?>

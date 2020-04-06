@@ -49,6 +49,10 @@ then please <A HREF="contact.html">let us know</A>.
       array("BrlAPI"
       ),
 
+      array("Canute",
+         "360 (40x9)"
+      ),
+
       array("Cebra",
          "20/40/60/80/100/120/140"
       ),
@@ -87,11 +91,12 @@ then please <A HREF="contact.html">let us know</A>.
       ),
 
       array("HumanWare",
-         "Brailliant BI 14/32/40", "Brailliant B 80", "BrailleNote Touch"
+         "Brailliant BI 14/32/40", "Brailliant B 80", "BrailleNote Touch",
+         "BrailleOne", "APH Chameleon 20", "APH Mantis Q40", "NLS eReader"
       ),
 
       array("Inceptor",
-         "BrailleMe"
+         "BrailleMe (20)"
       ),
 
       array("Iris"
