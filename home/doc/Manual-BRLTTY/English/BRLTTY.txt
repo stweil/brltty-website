@@ -9,9 +9,9 @@
 
   Dave Mielke <dave@mielke.cc>
 
-  Version 6.0, February 2019
+  Version 6.1, April 2020
 
-  Copyright © 1995-2019 by The BRLTTY Developers.  BRLTTY is free soft-
+  Copyright © 1995-2020 by The BRLTTY Developers.  BRLTTY is free soft-
   ware, and comes with ABSOLUTELY NO WARRANTY.  It is placed under the
   terms of version 2 or later of The GNU General Public License as pub-
   lished by The Free Software Foundation.
@@ -4681,38 +4681,38 @@
 
   The following contraction tables are provided:
 
-     Name                  Language
-     af                    Afrikaans (contracted)
-     am                    Amharic (uncontracted)
-     de-basis              German (uncontracted)
-     de-kurzschrift        German (contracted - 1998 standard)
-     de-kurzschrift-1998   German (contracted - 1998 standard)
-     de-kurzschrift-2015   German (contracted - 2015 standard)
-     de-vollschrift        German (basic contractions)
-     en-ueb-g2             English (Unified English Braille, grade 2)
-     en-us-g2              English (US, grade 2)
-     es                    Spanish (grade 2)
-     fr-abrege             French (contracted)
-     fr-integral           French (uncontracted)
-     ha                    Hausa (contracted)
-     id                    Indonesian (contracted)
-     ja                    Japanese (uncontracted)
-     ko-g1                 Korean (grade 1)
-     ko-g2                 Korean (grade 2)
-     ko                    Korean (uncontracted)
-     lt                    Lituanian
-     mg                    Malagasy (contracted)
-     mun                   Munda (contracted)
-     nl                    Dutch (contracted)
-     ny                    Chichewa (contracted)
-     ipa                   International Phonetic Alphabet
-     pt                    Portuguese (grade 2)
-     si                    Sinhalese (uncontracted)
-     sw                    Swahili (contracted)
-     th                    Thai (contracted)
-     zh-tw                 Chinese (Taiwan, uncontracted)
-     zh-tw-ucb             Chinese (Taiwan, Unique Chinese Braille)
-     zu                    Zulu (contracted)
+          Name        Language
+          af          Afrikaans (contracted)
+          am          Amharic (uncontracted)
+          de-g0       German (uncontracted)
+          de-g1       German (basic contractions)
+          de-g2       German (contracted - 1998 standard)
+          de-1998     German (contracted - 1998 standard)
+          de-2015     German (contracted - 2015 standard)
+          en-ueb-g2   English (Unified English Braille, grade 2)
+          en-us-g2    English (US, grade 2)
+          es          Spanish (grade 2)
+          fr-g1       French (uncontracted)
+          fr-g2       French (contracted)
+          ha          Hausa (contracted)
+          id          Indonesian (contracted)
+          ja          Japanese (uncontracted)
+          ko-g1       Korean (grade 1)
+          ko-g2       Korean (grade 2)
+          ko          Korean (uncontracted)
+          lt          Lituanian
+          mg          Malagasy (contracted)
+          mun         Munda (contracted)
+          nl          Dutch (contracted)
+          ny          Chichewa (contracted)
+          ipa         International Phonetic Alphabet
+          pt          Portuguese (grade 2)
+          si          Sinhalese (uncontracted)
+          sw          Swahili (contracted)
+          th          Thai (contracted)
+          zh-tw       Chinese (Taiwan, uncontracted)
+          zh-tw-ucb   Chinese (Taiwan, Unique Chinese Braille)
+          zu          Zulu (contracted)
 
 
   See the ``-c'' command line option, and the ``contraction-table''
@@ -5715,6 +5715,7 @@
                               Apex
           Braudi
           BrlAPI
+          Canute              360 (40x9)
           Cebra               20/40/60/80/100/120/140
           CombiBraille        25/45/85
           EcoBraille          20/40/80
@@ -5751,7 +5752,11 @@
           HumanWare           Brailliant BI 14/32/40
                               Brailliant B 80
                               BrailleNote Touch
-          Inceptor            BrailleMe
+                              BrailleOne
+                              APH Chameleon 20
+                              APH Mantis Q40
+                              NLS eReader
+          Inceptor            BrailleMe (20)
           Iris
           Libbraille
           LogText             32
@@ -5835,6 +5840,8 @@
                     bm     Baum (Native, HT, PB1, PB2)
                     bn     BrailleNote
                     cb     CombiBraille
+                    ce     Cebra
+                    cn     Canute
                     ec     EcoBraille
                     en     eSpeak-NG
                     es     eSpeak

@@ -21,8 +21,8 @@ Special Modes
 
 Cursor Functions
 * go to screen cursor: KP0+KPEnter
-* go to screen cursor or go back after cursor tracking: ACTION_Undo
 * go back after cursor tracking: ControlLeft+ACTION_Undo
+* go to screen cursor or go back after cursor tracking: ACTION_Undo
 
 Vertical Navigation
 * go up one line: KP0+KP8

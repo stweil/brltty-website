@@ -1,5 +1,5 @@
-Key Table: Metec BD I with 3 Keys and Status Cells
-==================================================
+Key Table: Metec BD I (with 3 keys and status cells)
+====================================================
 
 Default Bindings
 ----------------

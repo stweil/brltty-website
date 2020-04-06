@@ -331,6 +331,63 @@ The data must hold the special value <CODE>BRLAPI_DEVICE_MAGIC</CODE>: <CODE>0xd
 then the name of the driver (one byte for the length, then the name) to avoid
 erroneous raw mode activating.</P>
 
+<H3><CODE>BRLAPI_PACKET_PARAM_REQUEST</CODE></H3>
+
+
+<P>This packet is sent by the client to request values of parameters. The packet
+begins with an integer which holds flags (see <CODE>BRLAPI_PARAMF_*</CODE>) which
+describe which, how, and when the value should be returned by the server:
+<UL>
+<LI> When the <CODE>BRLAPI_PARAMF_GLOBAL</CODE> flag is set, the server will
+return/subscribe the global value instead of the local value.</LI>
+<LI> When the <CODE>BRLAPI_PARAMF_GET</CODE> flag is set, the server acknowledges the
+request by returning the latest value with a <CODE>BRLAPI_PACKET_PARAM_VALUE</CODE>
+packet. Otherwise the server acknowledges the request with a
+<CODE>BRLAPI_PACKET_ACK</CODE> packet, without providing the value.</LI>
+<LI> When the <CODE>BRLAPI_PARAMF_SUBSCRIBE</CODE> flag is set, the server will keep
+sending asynchronously the value of the parameter whenever it changes, with
+<CODE>BRLAPI_PACKET_PARAM_UPDATE</CODE> packets, until
+another request packet has the <CODE>BRLAPI_PARAMF_UNSUBSCRIBE</CODE> flag set for this
+parameter.</LI>
+<LI> When the <CODE>BRLAPI_PARAMF_SELF</CODE> flag is set along
+<CODE>BRLAPI_PARAMF_SUBSCRIBE</CODE>, the server will send the value of the parameter
+when it is changed even by the client itself.</LI>
+<LI> When the <CODE>BRLAPI_PARAMF_UNSUBSCRIBE</CODE> flag is set, the server
+will stop sending asynchronously the value of the parameter with
+<CODE>BRLAPI_PACKET_PARAM_UPDATE</CODE> packets.</LI>
+</UL>
+</P>
+<P>It does not make sense to set both the <CODE>BRLAPI_PARAMF_SUBSCRIBE</CODE> and
+<CODE>BRLAPI_PARAMF_UNSUBSCRIBE</CODE> flags.</P>
+<P>Then an integer representing the parameter to be requested.
+Then two integers that form (in big-endian order) a 64bit value used to
+subspecify the precise parameter to be requested (e.g. a keycode number).</P>
+<P>If several <CODE>BRLAPI_PARAMF_SUBSCRIBE</CODE> packets are sent by the client, as
+many <CODE>BRLAPI_PARAMF_UNSUBSCRIBE</CODE> packets have to be sent by the client before
+the server stops sending <CODE>BRLAPI_PACKET_PARAM_UPDATE</CODE> packets.</P>
+
+<H3><CODE>BRLAPI_PACKET_PARAM_VALUE</CODE></H3>
+
+<P>This packet is sent by the client or the server to provide the value of a
+parameter. The packet begins with an integer which holds flags (see
+<CODE>BRLAPI_PVF_*</CODE>) which describe which value is being transmitted:</P>
+<P>
+<UL>
+<LI> When the <CODE>BRLAPI_PVF_GLOBAL</CODE> flag is set, the value is the global value
+instead of the local value.</LI>
+</UL>
+</P>
+<P>Then an integer representing the parameter being transmitted. Then two integers
+that form (in big-endian order) a 64bit value used to subspecify the precise
+parameter being transmitted (e.g. a keycode number).  Eventually, the packet
+contains the value.</P>
+<P>When the packet is sent by the client, it defines the new value of the
+parameter, and if it is a global value, the server broadcasts the new value to
+all clients which have subscribed to updates. The packet is then acknowledged by
+the server on success. If the value can not be changed, the server returns an
+error (e.g. <CODE>BRLAPI_ERROR_READONLY_PARAMETER</CODE>).</P>
+
+<H3><CODE>BRLAPI_PACKET_PARAM_VALUE</CODE>This packet is sent asynchronously by the server to provide an update of a value of a parameter. This is sent only if the client has previously sent a <CODE>BRLAPI_PACKET_PARAM_REQUEST</CODE> packet with the <CODE>BRLAPI_PARAMF_SUBSCRIBE</CODE>for the corresponding parameter. It is structured exactly like a <CODE>BRLAPI_PACKET_PARAM_VALUE</CODE> packet.</H3>
 
 <HR>
 Next

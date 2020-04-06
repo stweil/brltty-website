@@ -111,8 +111,8 @@ Speech Navigation
 * set speech cursor visibility on/off: KPPlus+KP0+KPDivide
 
 Keyboard Input
-* set braille input mode dots: KPPeriod+KPPlus
-* set braille input mode text: KPPeriod+KPMinus
+* set braille typing mode dots: KPPeriod+KPPlus
+* set braille typing mode text: KPPeriod+KPMinus
 
 Special Functions
 * restart braille driver: KPMinus+KPDivide

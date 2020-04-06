@@ -137,9 +137,9 @@ Keyboard Input
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Dot6+Home
 * cycle the GUI (Windows) sticky input modifier (next, on, off): Dot6+End
 * switch to specific virtual terminal: Dot5+RoutingKey1
-* set braille input mode dots/text: Status.20
-* set braille input mode dots: Status.20+Dot8
-* set braille input mode text: Status.20+Dot7
+* set braille typing mode dots/text: Status.20
+* set braille typing mode dots: Status.20+Dot8
+* set braille typing mode text: Status.20+Dot7
 
 Special Functions
 * restart braille driver: Status.16
@@ -236,11 +236,10 @@ Keyboard Input
 * cycle the GUI (Windows) sticky input modifier (next, on, off): Dots18
 * switch to the previous virtual terminal: Dots12367
 * switch to the next virtual terminal: Dots12368
-* set braille keyboard enabled/disabled: Dots13
 * set braille keyboard enabled: Dots138
 * set braille keyboard disabled: Dots137
-* set braille input mode dots: Dots468
-* set braille input mode text: Dots467
+* set braille typing mode dots: Dots468
+* set braille typing mode text: Dots467
 
 Braille Input Mode
 ------------------

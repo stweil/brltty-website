@@ -1,5 +1,5 @@
-Key Table: Iris with Braille Keyboard
-=====================================
+Key Table: Iris (with braille keyboard)
+=======================================
 
 Notes
 * The braille keyboard has two thumb keys rather than a single space bar.

@@ -140,6 +140,8 @@ or reading braille keys any more, it has to leave the tty, so
 that either <EM>brltty</EM> can continue its job, or another client can
 take control of it.</P>
 
+<H3>Parameter handling The server exposes some parameters to the client. Some parameters are global to all clients (e.g. the braille display size), while others are local per client (e.g. retaindots, i.e. whether to send Perkins presses as dot patterns or as letters). Some parameters are read-only (e.g. the braille display size), while others are read-write (e.g. retaindots). Some parameters may change during execution, while others change only when a client set it. Clients can either request the current value of a parameter, or set its value (if it is read-write), or request the server to notify on value change.</H3>
+
 <H3>Raw mode.</H3>
 
 <P>Only one client can be in raw mode at the same time. In

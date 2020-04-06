@@ -1,5 +1,5 @@
-Key Table: Metec BD I with 3 Keys
-=================================
+Key Table: Metec BD I (with 3 keys)
+===================================
 
 Default Bindings
 ----------------

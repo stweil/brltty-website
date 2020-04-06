@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">BrlAPI
-   &#160;<span id="projectnumber">0.7</span>
+   &#160;<span id="projectnumber">0.8</span>
    </div>
   </td>
  </tr>
@@ -78,6 +78,12 @@ $(function() {
 <li>brlapi__getModelIdentifier()
 : <a class="el" href="group__brlapi__info.html#ga08b18e894c58ecc39ca16c58aadf609b">brlapi.h</a>
 </li>
+<li>brlapi__getParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#gaf990688f172e126f78911d5ec139cd85">brlapi.h</a>
+</li>
+<li>brlapi__getParameterAlloc()
+: <a class="el" href="group__brlapi__parameterManagement.html#gad7da6fc16267b6f85f0750c868a7783e">brlapi.h</a>
+</li>
 <li>brlapi__ignoreAllKeys()
 : <a class="el" href="group__brlapi__keys.html#gae0bc6b3628c42fa6387f3a398e424932">brlapi.h</a>
 </li>
@@ -95,6 +101,9 @@ $(function() {
 </li>
 <li>brlapi__openConnection()
 : <a class="el" href="group__brlapi__connection.html#gab72663955b05e29196285f945f55aa87">brlapi.h</a>
+</li>
+<li>brlapi__pause()
+: <a class="el" href="group__brlapi__misc.html#gae00a39cf6d33aaa34040c2b64d96c846">brlapi.h</a>
 </li>
 <li>brlapi__readKey()
 : <a class="el" href="group__brlapi__keys.html#ga557d77c4e1bf70a0d01b619aea152120">brlapi.h</a>
@@ -120,11 +129,20 @@ $(function() {
 <li>brlapi__setFocus()
 : <a class="el" href="group__brlapi__tty.html#gad02a955f6bb02723e907f93cbef2616b">brlapi.h</a>
 </li>
+<li>brlapi__setParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#gac34f241ffc47ae352f0a969c52e79314">brlapi.h</a>
+</li>
 <li>brlapi__strexception()
 : <a class="el" href="group__brlapi__error.html#ga6d4ed39756fc3d136ede88e00fc6cc95">brlapi.h</a>
 </li>
 <li>brlapi__suspendDriver()
 : <a class="el" href="group__brlapi__driverspecific.html#ga85b90b4b07b15e6784df102058faf888">brlapi.h</a>
+</li>
+<li>brlapi__unwatchParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#gaf73d5405114a93cde7b401d46fac7085">brlapi.h</a>
+</li>
+<li>brlapi__watchParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#gaac3e47d0a19e924493511e4542d3aa15">brlapi.h</a>
 </li>
 <li>brlapi__write()
 : <a class="el" href="group__brlapi__write.html#gac35d4baf687d4d1726c76e5c5b33cdb0">brlapi.h</a>
@@ -189,6 +207,15 @@ $(function() {
 <li>brlapi_getPacketTypeName()
 : <a class="el" href="group__brlapi__error.html#gaf4d79a54121e82b25540de7203463402">brlapi.h</a>
 </li>
+<li>brlapi_getParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#ga98d54aab015cf203e3ab07f870106d71">brlapi.h</a>
+</li>
+<li>brlapi_getParameterAlloc()
+: <a class="el" href="group__brlapi__parameterManagement.html#ga52ff91940e2f96c466f1765bcc2f86cf">brlapi.h</a>
+</li>
+<li>brlapi_getParameterProperties()
+: <a class="el" href="brlapi__param_8h.html#a482d729c41c9ab512e9fa6d9353f7e20">brlapi_param.h</a>
+</li>
 <li>brlapi_ignoreKeyRanges()
 : <a class="el" href="group__brlapi__keys.html#gaf2eaa6152bfdee19b0a886fd40046d41">brlapi.h</a>
 </li>
@@ -203,6 +230,9 @@ $(function() {
 </li>
 <li>brlapi_openConnection()
 : <a class="el" href="group__brlapi__connection.html#gacd26dc42640bdad09a389be10b9e3618">brlapi.h</a>
+</li>
+<li>brlapi_pause()
+: <a class="el" href="group__brlapi__misc.html#gac90c1a7037c2a19cf43e2bd575fac275">brlapi.h</a>
 </li>
 <li>brlapi_perror()
 : <a class="el" href="group__brlapi__error.html#ga5717bfb2ac0e9a906f6b591b9943bd23">brlapi.h</a>
@@ -240,6 +270,9 @@ $(function() {
 <li>brlapi_setFocus()
 : <a class="el" href="group__brlapi__tty.html#ga404a4af6b41cdacfb33fbbb09c1ce961">brlapi.h</a>
 </li>
+<li>brlapi_setParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#ga4c60626783bca2db8be2f13577bc7a74">brlapi.h</a>
+</li>
 <li>brlapi_strerror()
 : <a class="el" href="group__brlapi__error.html#ga04c3125a4b0f5af895728f36b3852a27">brlapi.h</a>
 </li>
@@ -248,6 +281,12 @@ $(function() {
 </li>
 <li>brlapi_suspendDriver()
 : <a class="el" href="group__brlapi__driverspecific.html#gaf8f3c595385588c557ee168ece7ec9f9">brlapi.h</a>
+</li>
+<li>brlapi_unwatchParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#gada9130bcae1b3e0f7dd52e3155270a16">brlapi.h</a>
+</li>
+<li>brlapi_watchParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#ga35baff069a8f443d9f0e403a2a1ec298">brlapi.h</a>
 </li>
 <li>brlapi_write()
 : <a class="el" href="group__brlapi__write.html#ga287f9a11719e1c350fb0280a38e0e069">brlapi.h</a>

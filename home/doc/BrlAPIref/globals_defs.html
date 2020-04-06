@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">BrlAPI
-   &#160;<span id="projectnumber">0.7</span>
+   &#160;<span id="projectnumber">0.8</span>
    </div>
   </td>
  </tr>
@@ -126,6 +126,9 @@ $(function() {
 <li>BRLAPI_DOTS
 : <a class="el" href="group__brlapi__keycodes.html#gae01727afff33b4fcb303a82f1144a471">brlapi_constants.h</a>
 </li>
+<li>BRLAPI_DRV_KEY_PRESS
+: <a class="el" href="group__brlapi__keycodes.html#gae414ac725eb8cd1ac9c22836b44668dd">brlapi_keycodes.h</a>
+</li>
 <li>brlapi_errfun
 : <a class="el" href="group__brlapi__error.html#ga4de3d0faf1ac3eab59b6799b6ad5faee">brlapi.h</a>
 </li>
@@ -176,6 +179,9 @@ $(function() {
 </li>
 <li>BRLAPI_ERROR_PROTOCOL_VERSION
 : <a class="el" href="group__brlapi__error.html#gade12420f962cdc605ff892b3d8dde695">brlapi.h</a>
+</li>
+<li>BRLAPI_ERROR_READONLY_PARAMETER
+: <a class="el" href="group__brlapi__error.html#gab225bacb401171aad35af90cb9122c5b">brlapi.h</a>
 </li>
 <li>BRLAPI_ERROR_SUCCESS
 : <a class="el" href="group__brlapi__error.html#ga8f89856d403136f505d378091c88c526">brlapi.h</a>
@@ -534,6 +540,12 @@ $(function() {
 <li>BRLAPI_KEY_CMD_PRSEARCH
 : <a class="el" href="group__brlapi__keycodes.html#gac8bd2823ef0f4d21c64c6770ebd72f89">brlapi_constants.h</a>
 </li>
+<li>BRLAPI_KEY_CMD_REFRESH
+: <a class="el" href="group__brlapi__keycodes.html#ga05aea648d851dfa49c32edb68b672de8">brlapi_constants.h</a>
+</li>
+<li>BRLAPI_KEY_CMD_REFRESH_LINE
+: <a class="el" href="group__brlapi__keycodes.html#ga6ba8c707a8e1f6dd8d6fab987dd64d89">brlapi_constants.h</a>
+</li>
 <li>BRLAPI_KEY_CMD_RESTARTBRL
 : <a class="el" href="group__brlapi__keycodes.html#ga80cc1be9bba4b53a30632a799e092714">brlapi_constants.h</a>
 </li>
@@ -548,6 +560,9 @@ $(function() {
 </li>
 <li>BRLAPI_KEY_CMD_ROUTE_CURR_LOCN
 : <a class="el" href="group__brlapi__keycodes.html#gaf1fa72b8589e5c3da52af34de27dcd64">brlapi_constants.h</a>
+</li>
+<li>BRLAPI_KEY_CMD_ROUTE_LINE
+: <a class="el" href="group__brlapi__keycodes.html#gaccd514aae845ad0595141ebd95d5dfba">brlapi_constants.h</a>
 </li>
 <li>BRLAPI_KEY_CMD_SAY_ABOVE
 : <a class="el" href="group__brlapi__keycodes.html#gac10d09bced98a928e0dbad24ee338a82">brlapi_constants.h</a>
@@ -858,6 +873,9 @@ $(function() {
 <li>BRLAPI_KEY_TYPE_SYM
 : <a class="el" href="group__brlapi__keycodes.html#ga993c03b8b0890699148acc73e9308ffc">brlapi_keycodes.h</a>
 </li>
+<li>BRLAPI_KEYCODE_C
+: <a class="el" href="group__brlapi__keycodes.html#ga27e12c2073e5fddd264f2c302fe27892">brlapi_keycodes.h</a>
+</li>
 <li>brlapi_leaveRaw
 : <a class="el" href="group__brlapi__deprecated.html#ga1ff5a5c3e4566fb4fa569f14b18a91cd">brlapi.h</a>
 </li>
@@ -875,6 +893,9 @@ $(function() {
 </li>
 <li>BRLAPI_MAXPACKETSIZE
 : <a class="el" href="group__brlapi__protocol.html#ga226a35313d1fb8e6ce43b45a040b8060">brlapi_protocol.h</a>
+</li>
+<li>BRLAPI_MAXPARAMSIZE
+: <a class="el" href="group__brlapi__protocol.html#ga8f71c13a83989954aad5cdd6a25b8c29">brlapi_protocol.h</a>
 </li>
 <li>BRLAPI_MINOR
 : <a class="el" href="group__brlapi__version.html#gae62937b1b372ea491deeee4451f44e83">brlapi.h</a>
@@ -924,6 +945,15 @@ $(function() {
 <li>BRLAPI_PACKET_PACKET
 : <a class="el" href="group__brlapi__protocol.html#gadacd3f3d969abfbfe1646082fc7cbcdf">brlapi_protocol.h</a>
 </li>
+<li>BRLAPI_PACKET_PARAM_REQUEST
+: <a class="el" href="group__brlapi__protocol.html#gafc40bc1fe6c273b2ed4192fc0bb6b1f7">brlapi_protocol.h</a>
+</li>
+<li>BRLAPI_PACKET_PARAM_UPDATE
+: <a class="el" href="group__brlapi__protocol.html#gada2c96a331e2251dab4abfc7e83ea579">brlapi_protocol.h</a>
+</li>
+<li>BRLAPI_PACKET_PARAM_VALUE
+: <a class="el" href="group__brlapi__protocol.html#ga3569f95eb12a3073ba472d07d4111658">brlapi_protocol.h</a>
+</li>
 <li>BRLAPI_PACKET_RESUMEDRIVER
 : <a class="el" href="group__brlapi__protocol.html#ga0ca55799c3e9b227f43e7539bce32438">brlapi_protocol.h</a>
 </li>
@@ -939,6 +969,27 @@ $(function() {
 <li>BRLAPI_PACKET_WRITE
 : <a class="el" href="group__brlapi__protocol.html#ga30fd33abe54249e0df012e0672555b96">brlapi_protocol.h</a>
 </li>
+<li>BRLAPI_PARAM_CLIENT_PRIORITY_DEFAULT
+: <a class="el" href="brlapi__param_8h.html#a849d9ed91fcbbe146aab1397addbe35f">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAMF_GET
+: <a class="el" href="group__brlapi__protocol.html#ga3cd38a98dd2dedbd462238df1b1c10ec">brlapi_protocol.h</a>
+</li>
+<li>BRLAPI_PARAMF_GLOBAL
+: <a class="el" href="group__brlapi__parameterManagement.html#gafc52007f6c60508b58b89e34dd553dd4">brlapi.h</a>
+</li>
+<li>BRLAPI_PARAMF_LOCAL
+: <a class="el" href="group__brlapi__parameterManagement.html#gae0a7a21efa88464aa595815bd6b94adc">brlapi.h</a>
+</li>
+<li>BRLAPI_PARAMF_SELF
+: <a class="el" href="group__brlapi__parameterManagement.html#ga0ea393f92f9153d26d121ae368678c77">brlapi.h</a>
+</li>
+<li>BRLAPI_PARAMF_SUBSCRIBE
+: <a class="el" href="group__brlapi__protocol.html#ga10c3f1af43e29bb61fab68861d54af26">brlapi_protocol.h</a>
+</li>
+<li>BRLAPI_PARAMF_UNSUBSCRIBE
+: <a class="el" href="group__brlapi__protocol.html#ga90900211762bc8f3f0474eb183a28e80">brlapi_protocol.h</a>
+</li>
 <li>BRLAPI_PRIuKEYCODE
 : <a class="el" href="group__brlapi__keycodes.html#gae80b548d72b4d636637eb8fcebc88d25">brlapi_keycodes.h</a>
 </li>
@@ -947,6 +998,9 @@ $(function() {
 </li>
 <li>BRLAPI_PROTOCOL_VERSION
 : <a class="el" href="group__brlapi__protocol.html#ga474ab793dc36cc75725fe2db0f6539cd">brlapi_protocol.h</a>
+</li>
+<li>BRLAPI_PVF_GLOBAL
+: <a class="el" href="group__brlapi__protocol.html#ga4c65f4549f2ad86f2aa6f9f7aade3686">brlapi_protocol.h</a>
 </li>
 <li>BRLAPI_RELEASE
 : <a class="el" href="group__brlapi__version.html#gafaee688e8b3561f3b788ed238338968c">brlapi.h</a>

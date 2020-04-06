@@ -14,9 +14,9 @@
   Jean-Philippe Mengual <texou@accelibreinfo.eu> pour
   Traduc.org
 
-  Version 6.0, Février 2019
+  Version 6.1, Avril 2020
 
-  Copyright © 1995-2019 by Les Développeurs de BRLTTY.  BRLTTY est un
+  Copyright © 1995-2020 by Les Développeurs de BRLTTY.  BRLTTY est un
   logiciel libre, et n'est fourni avec AUCUNE GARANTIE. Il est placé
   sous les termes de la version 2 ou ultérieure de la GNU General Public
   License publiée par The Free Software Foundation.
@@ -5055,38 +5055,38 @@
   Les tables d'abrégé suivantes sont fournies:
 
 
-    Nom                   Langue
-    af                    Afrikaans (abrégé)
-    am                    Amharic (désabrégé)
-    de-basis              Allemand (désabrégé)
-    de-kurzschrift        Allemand (abrégé - standard 1998)
-    de-kurzschrift-1998   Allemand (abrégé - standard 1998)
-    de-kurzschrift-2015   Allemand (abrégé - standard 2015)
-    de-vollschrift        Allemand (abréviations de base)
-    en-ueb-g2             Anglais (Braille anglais unifié, 2ème degré)
-    en-us-g2              Anglais (USA, 2ème degré)
-    es                    Espagnol (2ème degré)
-    fr-abrege             Français (abrégé)
-    fr-integral           Français (désabrégé)
-    ha                    Hausa (abrégé)
-    id                    Indonésien (abrégé)
-    ja                    Japoneais (désabrégé)
-    ko-g1                 Coréen (1er degré)
-    ko-g2                 Coréen (2ème degré)
-    ko                    Coréen (désabrégé)
-    lt                    Lituanien
-    mg                    Malagasky (abrégé)
-    mun                   Munda (abrégé)
-    nl                    Autrichien (abrégé)
-    ny                    Chichewa (abrégé)
-    ipa                   Alphabet phonétique international
-    pt                    Portuguais (2ème degré)
-    si                    Cingalais (désabrégé)
-    sw                    Swahili (abrégé)
-    th                    Thaïlandais (abrégé)
-    zh-tw                 Chinois (Taiwan, désabrégé)
-    zh-tw-ucb             Chinois (Taiwan, braille chinois unique)
-    zu                    Zoulou (abrégé)
+         Nom         Langue
+         af          Afrikaans (abrégé)
+         am          Amharic (désabrégé)
+         de-g0       Allemand (désabrégé)
+         de-g1       Allemand (abréviations de base)
+         de-g2       Allemand (abrégé - standard 1998)
+         de-1998     Allemand (abrégé - standard 1998)
+         de-2015     Allemand (abrégé - standard 2015)
+         en-ueb-g2   Anglais (Braille anglais unifié, 2ème degré)
+         en-us-g2    Anglais (USA, 2ème degré)
+         es          Espagnol (2ème degré)
+         fr-g1       Français (désabrégé)
+         fr-g2       Français (abrégé)
+         ha          Hausa (abrégé)
+         id          Indonésien (abrégé)
+         ja          Japoneais (désabrégé)
+         ko-g1       Coréen (1er degré)
+         ko-g2       Coréen (2ème degré)
+         ko          Coréen (désabrégé)
+         lt          Lituanien
+         mg          Malagasky (abrégé)
+         mun         Munda (abrégé)
+         nl          Autrichien (abrégé)
+         ny          Chichewa (abrégé)
+         ipa         Alphabet phonétique international
+         pt          Portuguais (2ème degré)
+         si          Cingalais (désabrégé)
+         sw          Swahili (abrégé)
+         th          Thaïlandais (abrégé)
+         zh-tw       Chinois (Taiwan, désabrégé)
+         zh-tw-ucb   Chinois (Taiwan, braille chinois unique)
+         zu          Zoulou (abrégé)
 
 
   Voir l'option ``-c'' en ligne de commande et la ligne ``contraction-
@@ -6159,6 +6159,7 @@
                               Apex
           Braudi
           BrlAPI
+          Canute              360 (40x9)
           Cebra               20/40/60/80/100/120/140
           CombiBraille        25/45/85
           EcoBraille          20/40/80
@@ -6195,7 +6196,11 @@
           HumanWare           Brailliant BI 14/32/40
                               Brailliant B 80
                               BrailleNote Touch
-          Inceptor            BrailleMe
+                              BrailleOne
+                              APH Chameleon 20
+                              APH Mantis Q40
+                              NLS eReader
+          Inceptor            BrailleMe (20)
           Iris
           Libbraille
           LogText             32
@@ -6278,6 +6283,8 @@
                     bm     Baum (Native, HT, PB1, PB2)
                     bn     BrailleNote
                     cb     CombiBraille
+                    ce     Cebra
+                    cn     Canute
                     ec     EcoBraille
                     en     eSpeak-NG
                     es     eSpeak

@@ -192,11 +192,10 @@ Keyboard Input
 * switch to specific virtual terminal: PanLeft+RoutingKey
 * switch to the previous virtual terminal: Read+dots12367
 * switch to the next virtual terminal: Read+dots12368
-* set braille keyboard enabled/disabled: Read+dots13
 * set braille keyboard enabled: Read+dots138
 * set braille keyboard disabled: Read+dots137
-* set braille input mode dots: Read+dots468
-* set braille input mode text: Read+dots467
+* set braille typing mode dots: Read+dots468
+* set braille typing mode text: Read+dots467
 
 Menu Bindings
 -------------

@@ -1,7 +1,7 @@
   BrlAPI Reference manual
   Sébastien Hinderer <Sebastien.Hinderer@ens-lyon.org>
   Samuel Thibault <Samuel.Thibault@ens-lyon.org>
-  V1.4, December 2006
+  V1.5, November 2019
 
   This document describes BrlAPI.
   ______________________________________________________________________
@@ -21,9 +21,21 @@
         2.3.2 Authorization.
         2.3.3 Real use of the braille terminal.
            2.3.3.1 Braille display and braille key presses processing.
-           2.3.3.2 Raw mode.
-           2.3.3.3 Suspend Mode.
-           2.3.3.4 Remarks.
+           2.3.3.2 Parameter handling The server exposes some parameters
+                   to the client. Some parameters are global to all
+                   clients (e.g. the braille display size), while others
+                   are local per client (e.g. retaindots, i.e. whether to
+                   send Perkins presses as dot patterns or as letters).
+                   Some parameters are read-only (e.g. the braille
+                   display size), while others are read-write (e.g.
+                   retaindots). Some parameters may change during
+                   execution, while others change only when a client set
+                   it. Clients can either request the current value of a
+                   parameter, or set its value (if it is read-write), or
+                   request the server to notify on value change.
+           2.3.3.3 Raw mode.
+           2.3.3.4 Suspend Mode.
+           2.3.3.5 Remarks.
         2.3.4 Disconnection.
 
   3. Concurrency management between BrlAPI clients
@@ -88,6 +100,15 @@
         7.4.14 BRLAPI_PACKET_PACKET (see brlapi_sendRaw() and
                brlapi_recvRaw() )
         7.4.15 BRLAPI_PACKET_SUSPENDDRIVER (see brlapi_suspendDriver() )
+        7.4.16 BRLAPI_PACKET_PARAM_REQUEST
+        7.4.17 BRLAPI_PACKET_PARAM_VALUE
+        7.4.18 BRLAPI_PACKET_PARAM_VALUE This packet is sent
+               asynchronously by the server to provide an update of a
+               value of a parameter. This is sent only if the client has
+               previously sent a BRLAPI_PACKET_PARAM_REQUEST packet with
+               the BRLAPI_PARAMF_SUBSCRIBE for the corresponding
+               parameter. It is structured exactly like a
+               BRLAPI_PACKET_PARAM_VALUE packet.
 
 
   ______________________________________________________________________
@@ -373,7 +394,18 @@
   braille keys any more, it has to leave the tty, so that either brltty
   can continue its job, or another client can take control of it.
 
-  2.3.3.2.  Raw mode.
+  2.3.3.2.  Parameter handling The server exposes some parameters to the
+  client. Some parameters are global to all clients (e.g. the braille
+  display size), while others are local per client (e.g. retaindots,
+  i.e. whether to send Perkins presses as dot patterns or as letters).
+  Some parameters are read-only (e.g. the braille display size), while
+  others are read-write (e.g. retaindots). Some parameters may change
+  during execution, while others change only when a client set it.
+  Clients can either request the current value of a parameter, or set
+  its value (if it is read-write), or request the server to notify on
+  value change.
+
+  2.3.3.3.  Raw mode.
 
   Only one client can be in raw mode at the same time. In this mode,
   data coming from the braille terminal are checked by the driver (to
@@ -384,7 +416,7 @@
   in raw mode are passed to the driver which is expected to deliver them
   to the braille terminal without any modification.
 
-  2.3.3.3.  Suspend Mode.
+  2.3.3.4.  Suspend Mode.
 
   Only one client can be in suspend mode at the same time. This mode is
   also exclusive with raw mode. In this mode, the server keeps the
@@ -396,7 +428,7 @@
   it lets the client take advantage of server's ability to talk with the
   device (USB/bluetooth support for instance).
 
-  2.3.3.4.  Remarks.
+  2.3.3.5.  Remarks.
 
 
   ·  The operations described in the three previous subsections are not
@@ -498,10 +530,10 @@
   B's sheet becomes transparent), and as a result A's output appear on
   the braille display (by transparency through B's sheet).
 
-  The sheet order is determined by the Tty "get"ting order. Some
-  mecanism will be added in near future for clients to precise "at which
-  level its sheet should be inserted" so as to avoid race conditions on
-  the "get"ting order.
+  The sheet order is by default determined by the Tty "get"ting order.
+  Clients can however change their priority (which by default is 50) to
+  a higher value in order to show up higher in the pile, or to a lower
+  value in order to hide lower in the pile.
 
   3.3.  Hierarchy
 
@@ -1621,6 +1653,77 @@
   special value BRLAPI_DEVICE_MAGIC: 0xdeadbeef, then the name of the
   driver (one byte for the length, then the name) to avoid erroneous raw
   mode activating.
+
+  7.4.16.  BRLAPI_PACKET_PARAM_REQUEST
+
+  This packet is sent by the client to request values of parameters. The
+  packet begins with an integer which holds flags (see BRLAPI_PARAMF_*)
+  which describe which, how, and when the value should be returned by
+  the server:
+
+  ·  When the BRLAPI_PARAMF_GLOBAL flag is set, the server will
+     return/subscribe the global value instead of the local value.
+
+  ·  When the BRLAPI_PARAMF_GET flag is set, the server acknowledges the
+     request by returning the latest value with a
+     BRLAPI_PACKET_PARAM_VALUE packet. Otherwise the server acknowledges
+     the request with a BRLAPI_PACKET_ACK packet, without providing the
+     value.
+
+  ·  When the BRLAPI_PARAMF_SUBSCRIBE flag is set, the server will keep
+     sending asynchronously the value of the parameter whenever it
+     changes, with BRLAPI_PACKET_PARAM_UPDATE packets, until another
+     request packet has the BRLAPI_PARAMF_UNSUBSCRIBE flag set for this
+     parameter.
+
+  ·  When the BRLAPI_PARAMF_SELF flag is set along
+     BRLAPI_PARAMF_SUBSCRIBE, the server will send the value of the
+     parameter when it is changed even by the client itself.
+
+  ·  When the BRLAPI_PARAMF_UNSUBSCRIBE flag is set, the server will
+     stop sending asynchronously the value of the parameter with
+     BRLAPI_PACKET_PARAM_UPDATE packets.
+
+  It does not make sense to set both the BRLAPI_PARAMF_SUBSCRIBE and
+  BRLAPI_PARAMF_UNSUBSCRIBE flags.
+
+  Then an integer representing the parameter to be requested.  Then two
+  integers that form (in big-endian order) a 64bit value used to
+  subspecify the precise parameter to be requested (e.g. a keycode
+  number).
+
+  If several BRLAPI_PARAMF_SUBSCRIBE packets are sent by the client, as
+  many BRLAPI_PARAMF_UNSUBSCRIBE packets have to be sent by the client
+  before the server stops sending BRLAPI_PACKET_PARAM_UPDATE packets.
+
+  7.4.17.  BRLAPI_PACKET_PARAM_VALUE
+
+  This packet is sent by the client or the server to provide the value
+  of a parameter. The packet begins with an integer which holds flags
+  (see BRLAPI_PVF_*) which describe which value is being transmitted:
+
+
+  ·  When the BRLAPI_PVF_GLOBAL flag is set, the value is the global
+     value instead of the local value.
+
+  Then an integer representing the parameter being transmitted. Then two
+  integers that form (in big-endian order) a 64bit value used to
+  subspecify the precise parameter being transmitted (e.g. a keycode
+  number). Eventually, the packet contains the value.
+
+  When the packet is sent by the client, it defines the new value of the
+  parameter, and if it is a global value, the server broadcasts the new
+  value to all clients which have subscribed to updates. The packet is
+  then acknowledged by the server on success. If the value can not be
+  changed, the server returns an error (e.g.
+  BRLAPI_ERROR_READONLY_PARAMETER).
+
+  7.4.18.  BRLAPI_PACKET_PARAM_VALUE  This packet is sent asynchronously
+  by the server to provide an update of a value of a parameter. This is
+  sent only if the client has previously sent a
+  BRLAPI_PACKET_PARAM_REQUEST packet with the BRLAPI_PARAMF_SUBSCRIBE
+  for the corresponding parameter. It is structured exactly like a
+  BRLAPI_PACKET_PARAM_VALUE packet.
 
 
 

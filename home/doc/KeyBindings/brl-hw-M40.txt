@@ -1,0 +1,54 @@
+Key Table: APH Mantis Q40
+=========================
+
+Notes
+* There are four thumb keys on the front. From left to right, they are:
+  Previous, Back, Advance, Next.
+* RoutingKey refers to any of the keys immediately behind the braille cells.
+
+Default Bindings
+----------------
+
+Cursor Functions
+* go to screen cursor: Back+Advance
+* bring screen cursor to character: RoutingKey
+
+Vertical Navigation
+* go up one line: Back
+* go down one line: Advance
+* go to beginning of top line: Previous+Back
+* go to beginning of bottom line: Previous+Advance
+* go up to nearest line with different content: Next+Back
+* go down to nearest line with different content: Next+Advance
+
+Horizontal Navigation
+* go backward one braille window: Previous
+* go forward one braille window: Next
+
+Clipboard Functions
+* start new clipboard at character: Previous+RoutingKey
+* append to clipboard from character: Back+RoutingKey
+* linear copy to character: Next+RoutingKey
+* rectangular copy to character: Advance+RoutingKey
+* insert clipboard text after screen cursor: Previous+Next
+
+Menu Bindings
+-------------
+
+Special Modes
+* enter/leave preferences menu: Back+Advance
+
+Horizontal Navigation
+* go backward one braille window: Previous
+* go forward one braille window: Next
+
+Menu Operations
+* go up to previous item: Back
+* go down to next item: Advance
+* go up to first item: Previous+Back
+* go down to last item: Previous+Advance
+* select previous choice: Next+Back
+* select next choice: Next+Advance
+* restore preferences from disk: Back+Advance+Previous
+* save preferences to disk: Back+Advance+Next
+

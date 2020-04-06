@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">BrlAPI
-   &#160;<span id="projectnumber">0.7</span>
+   &#160;<span id="projectnumber">0.8</span>
    </div>
   </td>
  </tr>
@@ -39,7 +39,7 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_a5c23e4d4d2f2652fc21caa9afd4c5c7.html">opt</a></li><li class="navelem"><a class="el" href="dir_98ba5e9149d81016592d2ec3a6566102.html">dave</a></li><li class="navelem"><a class="el" href="dir_7a8bb6dcee0c4871a98e49d9b821c763.html">web</a></li><li class="navelem"><a class="el" href="dir_a920779cc78680f85122e76f657ad672.html">brltty</a></li><li class="navelem"><a class="el" href="dir_d67b8ceefefb138b9ad36d3849c18725.html">source</a></li><li class="navelem"><a class="el" href="dir_71d5ea2c8fd05cbff7da63a8520e6e99.html">Programs</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_19225156eb7ba052e31d1a736469917a.html">mnt</a></li><li class="navelem"><a class="el" href="dir_99470aa6a75ae168e89348b71705345a.html">opt</a></li><li class="navelem"><a class="el" href="dir_71a699bbeef7ba75e63ba318314e5085.html">dave</a></li><li class="navelem"><a class="el" href="dir_fd049c3be2b376a7ab516b2eced71fd0.html">web</a></li><li class="navelem"><a class="el" href="dir_5df7da14590de30d2d3fe75854b021bd.html">brltty</a></li><li class="navelem"><a class="el" href="dir_b0b260a68eb646d36ddf9297f8a376d2.html">source</a></li><li class="navelem"><a class="el" href="dir_f6ec228eb00759868624efad81d01f15.html">Programs</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -78,6 +78,10 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrlapi__writeArgumentsPacket__t.html">brlapi_writeArgumentsPacket_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrlapi__paramValuePacket__t.html">brlapi_paramValuePacket_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrlapi__paramRequestPacket__t.html">brlapi_paramRequestPacket_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionbrlapi__packet__t.html">brlapi_packet_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -87,7 +91,7 @@ Macros</h2></td></tr>
 <tr class="separator:ab5eb23180f7cc12b7d6c04a8ec067fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga474ab793dc36cc75725fe2db0f6539cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#ga474ab793dc36cc75725fe2db0f6539cd">BRLAPI_PROTOCOL_VERSION</a>&#160;&#160;&#160;((uint32_t) 8) /** Communication protocol version */</td></tr>
 <tr class="separator:ga474ab793dc36cc75725fe2db0f6539cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga226a35313d1fb8e6ce43b45a040b8060"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#ga226a35313d1fb8e6ce43b45a040b8060">BRLAPI_MAXPACKETSIZE</a>&#160;&#160;&#160;512</td></tr>
+<tr class="memitem:ga226a35313d1fb8e6ce43b45a040b8060"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#ga226a35313d1fb8e6ce43b45a040b8060">BRLAPI_MAXPACKETSIZE</a>&#160;&#160;&#160;4096</td></tr>
 <tr class="separator:ga226a35313d1fb8e6ce43b45a040b8060"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga59dd4fd2ec9a136698f981134c1bf413"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#ga59dd4fd2ec9a136698f981134c1bf413">BRLAPI_PACKET_VERSION</a>&#160;&#160;&#160;'v'</td></tr>
 <tr class="separator:ga59dd4fd2ec9a136698f981134c1bf413"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,6 +133,12 @@ Macros</h2></td></tr>
 <tr class="separator:ga26c12ffe4fa36cfa3a9f43422d05b204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0ca55799c3e9b227f43e7539bce32438"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#ga0ca55799c3e9b227f43e7539bce32438">BRLAPI_PACKET_RESUMEDRIVER</a>&#160;&#160;&#160;'R'</td></tr>
 <tr class="separator:ga0ca55799c3e9b227f43e7539bce32438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3569f95eb12a3073ba472d07d4111658"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#ga3569f95eb12a3073ba472d07d4111658">BRLAPI_PACKET_PARAM_VALUE</a>&#160;&#160;&#160;(('P'&lt;&lt;8) + 'V')</td></tr>
+<tr class="separator:ga3569f95eb12a3073ba472d07d4111658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc40bc1fe6c273b2ed4192fc0bb6b1f7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#gafc40bc1fe6c273b2ed4192fc0bb6b1f7">BRLAPI_PACKET_PARAM_REQUEST</a>&#160;&#160;&#160;(('P'&lt;&lt;8) + 'R')</td></tr>
+<tr class="separator:gafc40bc1fe6c273b2ed4192fc0bb6b1f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada2c96a331e2251dab4abfc7e83ea579"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#gada2c96a331e2251dab4abfc7e83ea579">BRLAPI_PACKET_PARAM_UPDATE</a>&#160;&#160;&#160;(('P'&lt;&lt;8) + 'U')</td></tr>
+<tr class="separator:gada2c96a331e2251dab4abfc7e83ea579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga51947eca7c98c48dd65947de7dd007b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#ga51947eca7c98c48dd65947de7dd007b7">BRLAPI_DEVICE_MAGIC</a>&#160;&#160;&#160;(0xdeadbeefL)</td></tr>
 <tr class="separator:ga51947eca7c98c48dd65947de7dd007b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad5b2bfe3d15d25b0484c4c58f400ae3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#gad5b2bfe3d15d25b0484c4c58f400ae3d">BRLAPI_HEADERSIZE</a>&#160;&#160;&#160;sizeof(<a class="el" href="structbrlapi__header__t.html">brlapi_header_t</a>)</td></tr>
@@ -153,6 +163,16 @@ Macros</h2></td></tr>
 <tr class="separator:ga7e2bd4369f039add78e2b3d112f77978"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2da000ca3c25898208885cda63032250"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#ga2da000ca3c25898208885cda63032250">BRLAPI_WF_CHARSET</a>&#160;&#160;&#160;0X40</td></tr>
 <tr class="separator:ga2da000ca3c25898208885cda63032250"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c65f4549f2ad86f2aa6f9f7aade3686"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#ga4c65f4549f2ad86f2aa6f9f7aade3686">BRLAPI_PVF_GLOBAL</a>&#160;&#160;&#160;0X01    /** Value is the global value */</td></tr>
+<tr class="separator:ga4c65f4549f2ad86f2aa6f9f7aade3686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f71c13a83989954aad5cdd6a25b8c29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#ga8f71c13a83989954aad5cdd6a25b8c29">BRLAPI_MAXPARAMSIZE</a>&#160;&#160;&#160;(<a class="el" href="group__brlapi__protocol.html#ga226a35313d1fb8e6ce43b45a040b8060">BRLAPI_MAXPACKETSIZE</a> - (sizeof(uint32_t) + sizeof(<a class="el" href="group__brlapi__parameterManagement.html#ga782298bde7cda8e91bd54e9537e2c6eb">brlapi_param_t</a>) + 2*sizeof(uint32_t)))</td></tr>
+<tr class="separator:ga8f71c13a83989954aad5cdd6a25b8c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3cd38a98dd2dedbd462238df1b1c10ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#ga3cd38a98dd2dedbd462238df1b1c10ec">BRLAPI_PARAMF_GET</a>&#160;&#160;&#160;0X100    /** Get current parameter value    */</td></tr>
+<tr class="separator:ga3cd38a98dd2dedbd462238df1b1c10ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10c3f1af43e29bb61fab68861d54af26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#ga10c3f1af43e29bb61fab68861d54af26">BRLAPI_PARAMF_SUBSCRIBE</a>&#160;&#160;&#160;0X200    /** Subscribe to parameter updates */</td></tr>
+<tr class="separator:ga10c3f1af43e29bb61fab68861d54af26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90900211762bc8f3f0474eb183a28e80"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__protocol.html#ga90900211762bc8f3f0474eb183a28e80">BRLAPI_PARAMF_UNSUBSCRIBE</a>&#160;&#160;&#160;0X400    /** Unsubscribe from parameter updates */</td></tr>
+<tr class="separator:ga90900211762bc8f3f0474eb183a28e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>

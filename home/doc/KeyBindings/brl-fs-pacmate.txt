@@ -6,8 +6,8 @@ Notes
 * The 10 middle keys (5 on each side of the center) are special.
 * The two outer ones are named LeftSelector and RightSelector.
 * The eight inner ones are named Hot1 through Hot8.
-* The LeftAdvance key is any key to the left of the special keys.
-* The RightAdvance key is any key to the right of the special keys.
+* The PanLeft key is any key to the left of the special keys.
+* The PanRight key is any key to the right of the special keys.
 
 Default Bindings
 ----------------
@@ -30,26 +30,26 @@ Cursor Functions
 Vertical Navigation
 * go up one line: LeftWheelUp
 * go down one line: LeftWheelDown
-* go to top line: RightSelector+LeftAdvance
-* go to bottom line: RightSelector+RightAdvance
-* go to beginning of top line: LeftSelector+LeftAdvance
-* go to beginning of bottom line: LeftSelector+RightAdvance
+* go to top line: RightSelector+PanLeft
+* go to bottom line: RightSelector+PanRight
+* go to beginning of top line: LeftSelector+PanLeft
+* go to beginning of bottom line: LeftSelector+PanRight
 * go up to nearest line with different content: LeftWheelPress+LeftWheelUp
 * go down to nearest line with different content: LeftWheelPress+LeftWheelDown
 * go up to nearest line with different highlighting: LeftSelector+LeftWheelUp
 * go down to nearest line with different highlighting: LeftSelector+LeftWheelDown
-* go up to first line of paragraph: RightAdvance+LeftWheelUp
-* go down to first line of next paragraph: RightAdvance+LeftWheelDown
-* go up to previous command prompt: LeftAdvance+LeftWheelUp
-* go down to next command prompt: LeftAdvance+LeftWheelDown
+* go up to first line of paragraph: PanRight+LeftWheelUp
+* go down to first line of next paragraph: PanRight+LeftWheelDown
+* go up to previous command prompt: PanLeft+LeftWheelUp
+* go down to next command prompt: PanLeft+LeftWheelDown
 
 Horizontal Navigation
 * go backward one braille window:
   + RightWheelUp
-  + LeftAdvance
+  + PanLeft
 * go forward one braille window:
   + RightWheelDown
-  + RightAdvance
+  + PanRight
 * go to beginning of line: LeftWheelPress
 * go to end of line: RightWheelPress
 * go left one character: RightWheelPress+RightWheelUp
@@ -57,10 +57,10 @@ Horizontal Navigation
 * place left end of braille window at character: LeftWheelPress+RoutingKey
 
 Clipboard Functions
-* start new clipboard at character: LeftAdvance+RoutingKey
+* start new clipboard at character: PanLeft+RoutingKey
 * append to clipboard from character: LeftSelector+RoutingKey
 * linear copy to character: RightSelector+RoutingKey
-* rectangular copy to character: RightAdvance+RoutingKey
+* rectangular copy to character: PanRight+RoutingKey
 * copy characters to clipboard: RoutingKey+RoutingKey
 * insert clipboard text after screen cursor: LeftSelector+RightSelector
 * search backward for clipboard text: RightSelector+LeftWheelUp

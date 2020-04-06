@@ -168,11 +168,10 @@ Keyboard Input
 * cycle the GUI (Windows) sticky input modifier (next, on, off): Space+Dots18
 * switch to the previous virtual terminal: Space+Dots12367
 * switch to the next virtual terminal: Space+Dots12368
-* set braille keyboard enabled/disabled: Space+Dots13
 * set braille keyboard enabled: Space+Dots138
 * set braille keyboard disabled: Space+Dots137
-* set braille input mode dots: Space+Dots468
-* set braille input mode text: Space+Dots467
+* set braille typing mode dots: Space+Dots468
+* set braille typing mode text: Space+Dots467
 
 Special Functions
 * restart braille driver: LeftKeyFront+BarUp2

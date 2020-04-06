@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">BrlAPI
-   &#160;<span id="projectnumber">0.7</span>
+   &#160;<span id="projectnumber">0.8</span>
    </div>
   </td>
  </tr>
@@ -828,6 +828,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 on error or signal interrupt and *code is then undefined, 0 if the timeout expired and no key was pressed, or 1 and *code holds the key code.</dd></dl>
 <p>If the timeout expires without any key being pressed, 0 is returned.</p>
 <p>If timeout_ms is set to 0, this function looks for key events that have been already received, but does not wait at all if no event was received.</p>
 <p>If timeout_ms is set to a negative value, this function behaves like brlapi_readKey, i.e. it uses an infinite timeout. </p>

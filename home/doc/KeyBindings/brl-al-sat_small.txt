@@ -1,5 +1,5 @@
-Key Table: Alva Satellite [5nn] (small)
-=======================================
+Key Table: Alva Satellite 544
+=============================
 
 Notes
 * The keypads at either side of the top are named LeftPad and RightPad.

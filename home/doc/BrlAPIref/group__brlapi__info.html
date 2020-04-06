@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">BrlAPI
-   &#160;<span id="projectnumber">0.7</span>
+   &#160;<span id="projectnumber">0.8</span>
    </div>
   </td>
  </tr>
@@ -255,7 +255,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>-1 on error, or a positive value giving the size of the needed buffer, if the supplied one is too small (same as snprintf()). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 on error, otherwise a positive value giving the size of the needed buffer (including '\0'). If that value is bigger than <code>size</code>, the value was truncated and the caller should retry with a bigger buffer accordingly. </dd></dl>
 
 </div>
 </div>
@@ -293,7 +293,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>-1 on error, or a positive value giving the size of the needed buffer, if the supplied one is too small (same as snprintf()). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 on error, otherwise a positive value giving the size of the needed buffer (including '\0'). If that value is bigger than <code>size</code>, the value was truncated and the caller should retry with a bigger buffer accordingly. </dd></dl>
 
 </div>
 </div>

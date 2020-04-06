@@ -394,8 +394,8 @@ ul.auto-toc {
 <li>The 10 middle keys (5 on each side of the center) are special.</li>
 <li>The two outer ones are named LeftSelector and RightSelector.</li>
 <li>The eight inner ones are named Hot1 through Hot8.</li>
-<li>The LeftAdvance key is any key to the left of the special keys.</li>
-<li>The RightAdvance key is any key to the right of the special keys.</li>
+<li>The PanLeft key is any key to the left of the special keys.</li>
+<li>The PanRight key is any key to the right of the special keys.</li>
 </ul>
 </div>
 </div>
@@ -427,18 +427,18 @@ ul.auto-toc {
 <ul class="simple">
 <li>go up one line: LeftWheelUp</li>
 <li>go down one line: LeftWheelDown</li>
-<li>go to top line: RightSelector+LeftAdvance</li>
-<li>go to bottom line: RightSelector+RightAdvance</li>
-<li>go to beginning of top line: LeftSelector+LeftAdvance</li>
-<li>go to beginning of bottom line: LeftSelector+RightAdvance</li>
+<li>go to top line: RightSelector+PanLeft</li>
+<li>go to bottom line: RightSelector+PanRight</li>
+<li>go to beginning of top line: LeftSelector+PanLeft</li>
+<li>go to beginning of bottom line: LeftSelector+PanRight</li>
 <li>go up to nearest line with different content: LeftWheelPress+LeftWheelUp</li>
 <li>go down to nearest line with different content: LeftWheelPress+LeftWheelDown</li>
 <li>go up to nearest line with different highlighting: LeftSelector+LeftWheelUp</li>
 <li>go down to nearest line with different highlighting: LeftSelector+LeftWheelDown</li>
-<li>go up to first line of paragraph: RightAdvance+LeftWheelUp</li>
-<li>go down to first line of next paragraph: RightAdvance+LeftWheelDown</li>
-<li>go up to previous command prompt: LeftAdvance+LeftWheelUp</li>
-<li>go down to next command prompt: LeftAdvance+LeftWheelDown</li>
+<li>go up to first line of paragraph: PanRight+LeftWheelUp</li>
+<li>go down to first line of next paragraph: PanRight+LeftWheelDown</li>
+<li>go up to previous command prompt: PanLeft+LeftWheelUp</li>
+<li>go down to next command prompt: PanLeft+LeftWheelDown</li>
 </ul>
 </div>
 <div class="section" id="horizontal-navigation">
@@ -446,12 +446,12 @@ ul.auto-toc {
 <ul class="simple">
 <li>go backward one braille window:<ul>
 <li>RightWheelUp</li>
-<li>LeftAdvance</li>
+<li>PanLeft</li>
 </ul>
 </li>
 <li>go forward one braille window:<ul>
 <li>RightWheelDown</li>
-<li>RightAdvance</li>
+<li>PanRight</li>
 </ul>
 </li>
 <li>go to beginning of line: LeftWheelPress</li>
@@ -464,10 +464,10 @@ ul.auto-toc {
 <div class="section" id="clipboard-functions">
 <h3><a class="toc-backref" href="#id9">Clipboard Functions</a></h3>
 <ul class="simple">
-<li>start new clipboard at character: LeftAdvance+RoutingKey</li>
+<li>start new clipboard at character: PanLeft+RoutingKey</li>
 <li>append to clipboard from character: LeftSelector+RoutingKey</li>
 <li>linear copy to character: RightSelector+RoutingKey</li>
-<li>rectangular copy to character: RightAdvance+RoutingKey</li>
+<li>rectangular copy to character: PanRight+RoutingKey</li>
 <li>copy characters to clipboard: RoutingKey+RoutingKey</li>
 <li>insert clipboard text after screen cursor: LeftSelector+RightSelector</li>
 <li>search backward for clipboard text: RightSelector+LeftWheelUp</li>

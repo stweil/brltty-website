@@ -1,5 +1,5 @@
-Key Table: HIMS Braille Sense with QWERTY Keyboard
-==================================================
+Key Table: HIMS Braille Sense (with QWERTY keyboard)
+====================================================
 
 Notes
 * Function Key Bindings

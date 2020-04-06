@@ -1,5 +1,5 @@
-Key Table: MDV Models with Function Keys
-========================================
+Key Table: MDV (with function keys)
+===================================
 
 Notes
 * RoutingKey refers to any of the keys immediately behind the text cells.

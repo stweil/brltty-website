@@ -86,9 +86,10 @@ write, the server clears its ouput buffer (i.e. <EM>B</EM>'s sheet becomes
 transparent), and as a result <EM>A</EM>'s output appear on the braille display (by
 transparency through <EM>B</EM>'s sheet).</P>
 
-<P>The sheet order is determined by the Tty "get"ting order. Some mecanism will be
-added in near future for clients to precise "at which level its sheet should be
-inserted" so as to avoid race conditions on the "get"ting order.</P>
+<P>The sheet order is by default determined by the Tty "get"ting order. Clients
+can however change their priority (which by default is 50) to a higher value in
+order to show up higher in the pile, or to a lower value in order to hide lower
+in the pile.</P>
 
 <H2><A NAME="ss3.3">3.3</A> <A HREF="BrlAPI.html#toc3.3">Hierarchy</A>
 </H2>

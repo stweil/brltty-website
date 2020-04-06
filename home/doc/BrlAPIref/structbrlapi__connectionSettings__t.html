@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">BrlAPI
-   &#160;<span id="projectnumber">0.7</span>
+   &#160;<span id="projectnumber">0.8</span>
    </div>
   </td>
  </tr>
@@ -53,27 +53,27 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a8dbec98b6b7bb5ff0de80490f6a8a9cd"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrlapi__connectionSettings__t.html#a8dbec98b6b7bb5ff0de80490f6a8a9cd">auth</a></td></tr>
-<tr class="separator:a8dbec98b6b7bb5ff0de80490f6a8a9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d9d3a3849ef30c8e52f339042d24b2c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrlapi__connectionSettings__t.html#a1d9d3a3849ef30c8e52f339042d24b2c">host</a></td></tr>
-<tr class="separator:a1d9d3a3849ef30c8e52f339042d24b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2852eb381cfe217a66c5bc1e296fae29"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrlapi__connectionSettings__t.html#a2852eb381cfe217a66c5bc1e296fae29">auth</a></td></tr>
+<tr class="separator:a2852eb381cfe217a66c5bc1e296fae29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a196bef2693f763f07af38da73bae3684"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbrlapi__connectionSettings__t.html#a196bef2693f763f07af38da73bae3684">host</a></td></tr>
+<tr class="separator:a196bef2693f763f07af38da73bae3684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This structure holds every parameter needed to connect to <em>BrlAPI:</em> which file the authorization key can be found in and which computer to connect to.</p>
-<dl class="section user"><dt>Examples:</dt><dd><div class="fragment"><div class="line"><a class="code" href="structbrlapi__connectionSettings__t.html">brlapi_connectionSettings_t</a> settings;</div><div class="line"></div><div class="line">settings.<a class="code" href="structbrlapi__connectionSettings__t.html#a8dbec98b6b7bb5ff0de80490f6a8a9cd">auth</a>=<span class="stringliteral">&quot;/etc/brlapi.key&quot;</span>;</div><div class="line">settings.<a class="code" href="structbrlapi__connectionSettings__t.html#a1d9d3a3849ef30c8e52f339042d24b2c">host</a>=<span class="stringliteral">&quot;foo&quot;</span>;</div></div><!-- fragment --></dd></dl>
+<dl class="section user"><dt>Examples:</dt><dd><div class="fragment"><div class="line"><a class="code" href="structbrlapi__connectionSettings__t.html">brlapi_connectionSettings_t</a> settings;</div><div class="line"></div><div class="line">settings.<a class="code" href="structbrlapi__connectionSettings__t.html#a2852eb381cfe217a66c5bc1e296fae29">auth</a>=<span class="stringliteral">&quot;/etc/brlapi.key&quot;</span>;</div><div class="line">settings.<a class="code" href="structbrlapi__connectionSettings__t.html#a196bef2693f763f07af38da73bae3684">host</a>=<span class="stringliteral">&quot;foo&quot;</span>;</div></div><!-- fragment --></dd></dl>
 <p><em>libbrlapi</em> will read authorization key from file <code>/etc/brlapi</code>.key and connect to the machine called "foo", on the default TCP port.</p>
-<div class="fragment"><div class="line">settings.<a class="code" href="structbrlapi__connectionSettings__t.html#a1d9d3a3849ef30c8e52f339042d24b2c">host</a>=<span class="stringliteral">&quot;10.1.0.2&quot;</span>;</div></div><!-- fragment --><p>lets directly enter an IP address instead of a machine name.</p>
-<div class="fragment"><div class="line">settings.<a class="code" href="structbrlapi__connectionSettings__t.html#a1d9d3a3849ef30c8e52f339042d24b2c">host</a>=<span class="stringliteral">&quot;:1&quot;</span>;</div></div><!-- fragment --><p>lets <em>libbrlapi</em> connect to the local computer, on port BRLAPI_SOCKETPORTNUM+1</p>
+<div class="fragment"><div class="line">settings.<a class="code" href="structbrlapi__connectionSettings__t.html#a196bef2693f763f07af38da73bae3684">host</a>=<span class="stringliteral">&quot;10.1.0.2&quot;</span>;</div></div><!-- fragment --><p>lets directly enter an IP address instead of a machine name.</p>
+<div class="fragment"><div class="line">settings.<a class="code" href="structbrlapi__connectionSettings__t.html#a196bef2693f763f07af38da73bae3684">host</a>=<span class="stringliteral">&quot;:1&quot;</span>;</div></div><!-- fragment --><p>lets <em>libbrlapi</em> connect to the local computer, on port BRLAPI_SOCKETPORTNUM+1</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__brlapi__connection.html#gacd26dc42640bdad09a389be10b9e3618">brlapi_openConnection()</a> </dd></dl>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a8dbec98b6b7bb5ff0de80490f6a8a9cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dbec98b6b7bb5ff0de80490f6a8a9cd">&#9670;&nbsp;</a></span>auth</h2>
+<a id="a2852eb381cfe217a66c5bc1e296fae29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2852eb381cfe217a66c5bc1e296fae29">&#9670;&nbsp;</a></span>auth</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* brlapi_connectionSettings_t::auth</td>
+          <td class="memname">const char* brlapi_connectionSettings_t::auth</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -82,14 +82,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a1d9d3a3849ef30c8e52f339042d24b2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d9d3a3849ef30c8e52f339042d24b2c">&#9670;&nbsp;</a></span>host</h2>
+<a id="a196bef2693f763f07af38da73bae3684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a196bef2693f763f07af38da73bae3684">&#9670;&nbsp;</a></span>host</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* brlapi_connectionSettings_t::host</td>
+          <td class="memname">const char* brlapi_connectionSettings_t::host</td>
         </tr>
       </table>
 </div><div class="memdoc">

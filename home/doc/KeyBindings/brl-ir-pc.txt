@@ -1,5 +1,5 @@
-Key Table: Iris with PC Keyboard
-================================
+Key Table: Iris (with PC keyboard)
+==================================
 
 Notes
 * The eight extra keys at the ends of the keyboard are known as linear keys.

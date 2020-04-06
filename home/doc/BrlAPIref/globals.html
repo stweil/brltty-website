@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">BrlAPI
-   &#160;<span id="projectnumber">0.7</span>
+   &#160;<span id="projectnumber">0.8</span>
    </div>
   </td>
  </tr>
@@ -90,6 +90,12 @@ $(function() {
 <li>brlapi__getModelIdentifier()
 : <a class="el" href="group__brlapi__info.html#ga08b18e894c58ecc39ca16c58aadf609b">brlapi.h</a>
 </li>
+<li>brlapi__getParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#gaf990688f172e126f78911d5ec139cd85">brlapi.h</a>
+</li>
+<li>brlapi__getParameterAlloc()
+: <a class="el" href="group__brlapi__parameterManagement.html#gad7da6fc16267b6f85f0750c868a7783e">brlapi.h</a>
+</li>
 <li>brlapi__ignoreAllKeys
 : <a class="el" href="group__brlapi__keys.html#ga153ea2355180cb7cc0b35f8bfa71071b">brlapi.h</a>
 </li>
@@ -107,6 +113,9 @@ $(function() {
 </li>
 <li>brlapi__openConnection()
 : <a class="el" href="group__brlapi__connection.html#gab72663955b05e29196285f945f55aa87">brlapi.h</a>
+</li>
+<li>brlapi__pause()
+: <a class="el" href="group__brlapi__misc.html#gae00a39cf6d33aaa34040c2b64d96c846">brlapi.h</a>
 </li>
 <li>brlapi__readKey()
 : <a class="el" href="group__brlapi__keys.html#ga557d77c4e1bf70a0d01b619aea152120">brlapi.h</a>
@@ -132,11 +141,20 @@ $(function() {
 <li>brlapi__setFocus()
 : <a class="el" href="group__brlapi__tty.html#gad02a955f6bb02723e907f93cbef2616b">brlapi.h</a>
 </li>
+<li>brlapi__setParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#gac34f241ffc47ae352f0a969c52e79314">brlapi.h</a>
+</li>
 <li>brlapi__strexception()
 : <a class="el" href="group__brlapi__error.html#ga6d4ed39756fc3d136ede88e00fc6cc95">brlapi.h</a>
 </li>
 <li>brlapi__suspendDriver()
 : <a class="el" href="group__brlapi__driverspecific.html#ga85b90b4b07b15e6784df102058faf888">brlapi.h</a>
+</li>
+<li>brlapi__unwatchParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#gaf73d5405114a93cde7b401d46fac7085">brlapi.h</a>
+</li>
+<li>brlapi__watchParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#gaac3e47d0a19e924493511e4542d3aa15">brlapi.h</a>
 </li>
 <li>brlapi__write()
 : <a class="el" href="group__brlapi__write.html#gac35d4baf687d4d1726c76e5c5b33cdb0">brlapi.h</a>
@@ -234,6 +252,9 @@ $(function() {
 <li>BRLAPI_DOTS
 : <a class="el" href="group__brlapi__keycodes.html#gae01727afff33b4fcb303a82f1144a471">brlapi_constants.h</a>
 </li>
+<li>BRLAPI_DRV_KEY_PRESS
+: <a class="el" href="group__brlapi__keycodes.html#gae414ac725eb8cd1ac9c22836b44668dd">brlapi_keycodes.h</a>
+</li>
 <li>brlapi_enterRawMode()
 : <a class="el" href="group__brlapi__driverspecific.html#gad636a35db7cf7b2eaa67e6bd6d166a95">brlapi.h</a>
 </li>
@@ -300,6 +321,9 @@ $(function() {
 <li>BRLAPI_ERROR_PROTOCOL_VERSION
 : <a class="el" href="group__brlapi__error.html#gade12420f962cdc605ff892b3d8dde695">brlapi.h</a>
 </li>
+<li>BRLAPI_ERROR_READONLY_PARAMETER
+: <a class="el" href="group__brlapi__error.html#gab225bacb401171aad35af90cb9122c5b">brlapi.h</a>
+</li>
 <li>BRLAPI_ERROR_SUCCESS
 : <a class="el" href="group__brlapi__error.html#ga8f89856d403136f505d378091c88c526">brlapi.h</a>
 </li>
@@ -350,6 +374,15 @@ $(function() {
 </li>
 <li>brlapi_getPacketTypeName()
 : <a class="el" href="group__brlapi__error.html#gaf4d79a54121e82b25540de7203463402">brlapi.h</a>
+</li>
+<li>brlapi_getParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#ga98d54aab015cf203e3ab07f870106d71">brlapi.h</a>
+</li>
+<li>brlapi_getParameterAlloc()
+: <a class="el" href="group__brlapi__parameterManagement.html#ga52ff91940e2f96c466f1765bcc2f86cf">brlapi.h</a>
+</li>
+<li>brlapi_getParameterProperties()
+: <a class="el" href="brlapi__param_8h.html#a482d729c41c9ab512e9fa6d9353f7e20">brlapi_param.h</a>
 </li>
 <li>brlapi_getRaw
 : <a class="el" href="group__brlapi__deprecated.html#gafde9914cc7c182efd7ff46a4c9c24723">brlapi.h</a>
@@ -699,6 +732,12 @@ $(function() {
 <li>BRLAPI_KEY_CMD_PRSEARCH
 : <a class="el" href="group__brlapi__keycodes.html#gac8bd2823ef0f4d21c64c6770ebd72f89">brlapi_constants.h</a>
 </li>
+<li>BRLAPI_KEY_CMD_REFRESH
+: <a class="el" href="group__brlapi__keycodes.html#ga05aea648d851dfa49c32edb68b672de8">brlapi_constants.h</a>
+</li>
+<li>BRLAPI_KEY_CMD_REFRESH_LINE
+: <a class="el" href="group__brlapi__keycodes.html#ga6ba8c707a8e1f6dd8d6fab987dd64d89">brlapi_constants.h</a>
+</li>
 <li>BRLAPI_KEY_CMD_RESTARTBRL
 : <a class="el" href="group__brlapi__keycodes.html#ga80cc1be9bba4b53a30632a799e092714">brlapi_constants.h</a>
 </li>
@@ -713,6 +752,9 @@ $(function() {
 </li>
 <li>BRLAPI_KEY_CMD_ROUTE_CURR_LOCN
 : <a class="el" href="group__brlapi__keycodes.html#gaf1fa72b8589e5c3da52af34de27dcd64">brlapi_constants.h</a>
+</li>
+<li>BRLAPI_KEY_CMD_ROUTE_LINE
+: <a class="el" href="group__brlapi__keycodes.html#gaccd514aae845ad0595141ebd95d5dfba">brlapi_constants.h</a>
 </li>
 <li>BRLAPI_KEY_CMD_SAY_ABOVE
 : <a class="el" href="group__brlapi__keycodes.html#gac10d09bced98a928e0dbad24ee338a82">brlapi_constants.h</a>
@@ -1023,6 +1065,9 @@ $(function() {
 <li>BRLAPI_KEY_TYPE_SYM
 : <a class="el" href="group__brlapi__keycodes.html#ga993c03b8b0890699148acc73e9308ffc">brlapi_keycodes.h</a>
 </li>
+<li>BRLAPI_KEYCODE_C
+: <a class="el" href="group__brlapi__keycodes.html#ga27e12c2073e5fddd264f2c302fe27892">brlapi_keycodes.h</a>
+</li>
 <li>brlapi_keyCode_t
 : <a class="el" href="group__brlapi__keycodes.html#ga956fddb34f9b399e884b1fafdb037b6a">brlapi_keycodes.h</a>
 </li>
@@ -1039,7 +1084,7 @@ $(function() {
 : <a class="el" href="group__brlapi__tty.html#ga681f2c7f09e33a32a2731e4e77ce7cec">brlapi.h</a>
 </li>
 <li>brlapi_libcerrno
-: <a class="el" href="group__brlapi__error.html#ga89ebe31438bab6230b4af91fd1e046e2">brlapi.h</a>
+: <a class="el" href="group__brlapi__error.html#ga735f3a4c1aaaff61e11b29c612bcb2eb">brlapi.h</a>
 </li>
 <li>BRLAPI_MAJOR
 : <a class="el" href="group__brlapi__version.html#ga4d56f1d71fa768566e709b12862f163a">brlapi.h</a>
@@ -1049,6 +1094,9 @@ $(function() {
 </li>
 <li>BRLAPI_MAXPACKETSIZE
 : <a class="el" href="group__brlapi__protocol.html#ga226a35313d1fb8e6ce43b45a040b8060">brlapi_protocol.h</a>
+</li>
+<li>BRLAPI_MAXPARAMSIZE
+: <a class="el" href="group__brlapi__protocol.html#ga8f71c13a83989954aad5cdd6a25b8c29">brlapi_protocol.h</a>
 </li>
 <li>BRLAPI_MINOR
 : <a class="el" href="group__brlapi__version.html#gae62937b1b372ea491deeee4451f44e83">brlapi.h</a>
@@ -1104,6 +1152,15 @@ $(function() {
 <li>BRLAPI_PACKET_PACKET
 : <a class="el" href="group__brlapi__protocol.html#gadacd3f3d969abfbfe1646082fc7cbcdf">brlapi_protocol.h</a>
 </li>
+<li>BRLAPI_PACKET_PARAM_REQUEST
+: <a class="el" href="group__brlapi__protocol.html#gafc40bc1fe6c273b2ed4192fc0bb6b1f7">brlapi_protocol.h</a>
+</li>
+<li>BRLAPI_PACKET_PARAM_UPDATE
+: <a class="el" href="group__brlapi__protocol.html#gada2c96a331e2251dab4abfc7e83ea579">brlapi_protocol.h</a>
+</li>
+<li>BRLAPI_PACKET_PARAM_VALUE
+: <a class="el" href="group__brlapi__protocol.html#ga3569f95eb12a3073ba472d07d4111658">brlapi_protocol.h</a>
+</li>
 <li>BRLAPI_PACKET_RESUMEDRIVER
 : <a class="el" href="group__brlapi__protocol.html#ga0ca55799c3e9b227f43e7539bce32438">brlapi_protocol.h</a>
 </li>
@@ -1122,6 +1179,261 @@ $(function() {
 <li>brlapi_packetType_t
 : <a class="el" href="group__brlapi__error.html#gae2fac75a86e7a9dc54f4b3c23bc319e9">brlapi.h</a>
 </li>
+<li>BRLAPI_PARAM_AUDIBLE_ALERTS
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba6e48f8efab337f11505af38bd4968fe3">brlapi_param.h</a>
+</li>
+<li>brlapi_param_audibleAlerts_t
+: <a class="el" href="brlapi__param_8h.html#ae8298bfa1634aa3ff5bf9c35e397f425">brlapi_param.h</a>
+</li>
+<li>brlapi_param_bool_t
+: <a class="el" href="brlapi__param_8h.html#af3fa8e14323e7a8a53e95bd12829f58f">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_BOUND_COMMAND_CODES
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebaf0e263d53196a6751ddcb0f97b044069">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_CLIENT_PRIORITY
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba74630ebe9bc45915d3f33e330962a706">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_CLIENT_PRIORITY_DEFAULT
+: <a class="el" href="brlapi__param_8h.html#a849d9ed91fcbbe146aab1397addbe35f">brlapi_param.h</a>
+</li>
+<li>brlapi_param_clientPriority_t
+: <a class="el" href="brlapi__param_8h.html#a55b473e33e1fce9b1da114e204adaab5">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_CLIPBOARD_CONTENT
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba87df8e95938f1d2916e15bce13aa51dd">brlapi_param.h</a>
+</li>
+<li>brlapi_param_clipboardContent_t
+: <a class="el" href="brlapi__param_8h.html#a60d56bfc5fc79a92b9963fc55ab0052a">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_COMMAND_LONG_NAME
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba4f48783aafde26cfc705c44eb3e21561">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_COMMAND_SHORT_NAME
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba0cd6d6c0c09083f6782c54751525d116">brlapi_param.h</a>
+</li>
+<li>brlapi_param_commandCode_t
+: <a class="el" href="brlapi__param_8h.html#a5fa18553ded50688cfcca7dc028dcf65">brlapi_param.h</a>
+</li>
+<li>brlapi_param_commandLongName_t
+: <a class="el" href="brlapi__param_8h.html#ad492df28ff6e6cb1f954e48e54b0e263">brlapi_param.h</a>
+</li>
+<li>brlapi_param_commandShortName_t
+: <a class="el" href="brlapi__param_8h.html#aa832836acd8857fa7d3d0ea7cbd24f30">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_COMPUTER_BRAILLE_CELL_SIZE
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebaf42e57e573f36b56c42bb0462f14858f">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_COMPUTER_BRAILLE_ROW_CELLS
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba7b66a8deeb3f0082d3b92a8979c1d3bd">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_COMPUTER_BRAILLE_ROWS_MASK
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba7b0dbcf585d4cd651a16a3ee2337c905">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_COMPUTER_BRAILLE_TABLE
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebadefd346f4e4ccd89a5f4bdf15a1fb992">brlapi_param.h</a>
+</li>
+<li>brlapi_param_computerBrailleCellSize_t
+: <a class="el" href="brlapi__param_8h.html#a823290f8cb0fd01785cca40be5cdf766">brlapi_param.h</a>
+</li>
+<li>brlapi_param_computerBrailleRowsMask_t
+: <a class="el" href="brlapi__param_8h.html#ae54c5d7c818f331c2db713777aea0bba">brlapi_param.h</a>
+</li>
+<li>brlapi_param_computerBrailleTable_t
+: <a class="el" href="brlapi__param_8h.html#a6cc3cb8b8369ac3a0a83c737d56bccb0">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_COUNT
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba39d3a631facb14fd66546cb8a13071dc">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_CURSOR_BLINK_PERCENTAGE
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebab3fba156f05230ab95a1b9cd543dc1ce">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_CURSOR_BLINK_PERIOD
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebac4d456b137ef32d279f1c733b5c88678">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_CURSOR_DOTS
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebaf2de26d35413561709db613eb0b900fb">brlapi_param.h</a>
+</li>
+<li>brlapi_param_cursorBlinkPercentage_t
+: <a class="el" href="brlapi__param_8h.html#adfeab9f7a7c96ef57b4298df1f9dba51">brlapi_param.h</a>
+</li>
+<li>brlapi_param_cursorBlinkPeriod_t
+: <a class="el" href="brlapi__param_8h.html#a69c87edeedc36f6ae10b5abe6e260873">brlapi_param.h</a>
+</li>
+<li>brlapi_param_cursorDots_t
+: <a class="el" href="brlapi__param_8h.html#a8527c80729680322eba4a2bc70224584">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_DEVICE_CELL_SIZE
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba4ac44d2c38c1b1707965f4948823e6b9">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_DEVICE_IDENTIFIER
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba58bf13fb22ef0bdc0e6f992a83855315">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_DEVICE_KEY_CODES
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebaad2b5ec8a8c4b3f97292980959a8e821">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_DEVICE_MODEL
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebae8fa964e21edc5d231be7e1a709d6e57">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_DEVICE_ONLINE
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba8051cb5cb068a823d9941a000e99ab94">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_DEVICE_SPEED
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebadb56099a0d5ae37b17be5dbaff6f1e19">brlapi_param.h</a>
+</li>
+<li>brlapi_param_deviceCellSize_t
+: <a class="el" href="brlapi__param_8h.html#a2a9cd53f928bccba6da6e896ee3ded40">brlapi_param.h</a>
+</li>
+<li>brlapi_param_deviceIdentifier_t
+: <a class="el" href="brlapi__param_8h.html#a012212a3bdcc9b4e0eaa36cd62caf6af">brlapi_param.h</a>
+</li>
+<li>brlapi_param_deviceModel_t
+: <a class="el" href="brlapi__param_8h.html#ab365ec9207f71de94bc88e7a0887d2d5">brlapi_param.h</a>
+</li>
+<li>brlapi_param_deviceOnline_t
+: <a class="el" href="brlapi__param_8h.html#a8e1b356168f8e84c753b59bf749fd483">brlapi_param.h</a>
+</li>
+<li>brlapi_param_deviceSpeed_t
+: <a class="el" href="brlapi__param_8h.html#a5f3983537c59a2b2c3ec90273bd7c91f">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_DISPLAY_SIZE
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba0bfc553e62e53187dd0563f2b6d31d46">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_DRIVER_CODE
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebafab1bcd37e240dc1e97938528fccb7a6">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_DRIVER_NAME
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba1e9e4a177bd74d1fb263fda2f9127440">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_DRIVER_VERSION
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba6b3c8d708ac3cf5211f477bcf5f96ead">brlapi_param.h</a>
+</li>
+<li>brlapi_param_driverCode_t
+: <a class="el" href="brlapi__param_8h.html#afc11a26cc5f4ea75a1ab3ebec55cb775">brlapi_param.h</a>
+</li>
+<li>brlapi_param_driverName_t
+: <a class="el" href="brlapi__param_8h.html#a711a786e89d67336ff0c1a4e657a6201">brlapi_param.h</a>
+</li>
+<li>brlapi_param_driverVersion_t
+: <a class="el" href="brlapi__param_8h.html#a3bd961aed01d64b4ce60cbace4dde162">brlapi_param.h</a>
+</li>
+<li>brlapi_param_flags_t
+: <a class="el" href="group__brlapi__parameterManagement.html#ga5d275bb36c808b5442593929eb1dbb2d">brlapi.h</a>
+</li>
+<li>BRLAPI_PARAM_KEY_LONG_NAME
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebaf69aa55826171956a54435b10ebd89a4">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_KEY_SHORT_NAME
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebab53fafd85ed4fc19d714e0431c92482d">brlapi_param.h</a>
+</li>
+<li>brlapi_param_keyCode_t
+: <a class="el" href="brlapi__param_8h.html#af52c7a9f29daab060369ef7c0eaf992f">brlapi_param.h</a>
+</li>
+<li>brlapi_param_keyLongName_t
+: <a class="el" href="brlapi__param_8h.html#a19286d896ea4c17d7dcbe4d8083d27fe">brlapi_param.h</a>
+</li>
+<li>brlapi_param_keyShortName_t
+: <a class="el" href="brlapi__param_8h.html#a5d2dc6514d7f5e62c7cbe0c35a48176b">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_LITERARY_BRAILLE
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba2415f973bdca1909e805b89477ddb9d4">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_LITERARY_BRAILLE_TABLE
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebabfe68442f91e34a94c6184fd411e020b">brlapi_param.h</a>
+</li>
+<li>brlapi_param_literaryBraille_t
+: <a class="el" href="brlapi__param_8h.html#ab93de99573c80c443ffe8bf85a05b07e">brlapi_param.h</a>
+</li>
+<li>brlapi_param_literaryBrailleTable_t
+: <a class="el" href="brlapi__param_8h.html#afcffb576198367d73885d22c1c868680">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_MESSAGE_LOCALE
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebaebc3ee0baf70a01a7305a4e441c6bd7d">brlapi_param.h</a>
+</li>
+<li>brlapi_param_messageLocale_t
+: <a class="el" href="brlapi__param_8h.html#a68b3be64c3ea88b3a6129570a6b5d63a">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_RENDERED_CELLS
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebac2a1f31466a19157db93943633ce762e">brlapi_param.h</a>
+</li>
+<li>brlapi_param_renderedCells_t
+: <a class="el" href="brlapi__param_8h.html#a213186e8039742a161eb6e9d97fc7658">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_RETAIN_DOTS
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6ebacdf1e6fef2e5a0355476079d6a269c59">brlapi_param.h</a>
+</li>
+<li>brlapi_param_retainDots_t
+: <a class="el" href="brlapi__param_8h.html#af3f5fc52f71cc99821592ac426429b09">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_SERVER_VERSION
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba056a621b557527bb19533b547aec076c">brlapi_param.h</a>
+</li>
+<li>brlapi_param_serverVersion_t
+: <a class="el" href="brlapi__param_8h.html#a5c515235ea5c3e44b8fb22020a285c72">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_SKIP_IDENTICAL_LINES
+: <a class="el" href="group__brlapi__parameterManagement.html#gga782298bde7cda8e91bd54e9537e2c6eba0075aa5952774b864c33cc36802ae7ac">brlapi_param.h</a>
+</li>
+<li>brlapi_param_skipIdenticalLines_t
+: <a class="el" href="brlapi__param_8h.html#a25386e9a61767874bdada8964ec825a1">brlapi_param.h</a>
+</li>
+<li>brlapi_param_subparam_t
+: <a class="el" href="brlapi__param_8h.html#ab84a200f74588b3486e19ee4122b6a48">brlapi_param.h</a>
+</li>
+<li>brlapi_param_t
+: <a class="el" href="group__brlapi__parameterManagement.html#ga782298bde7cda8e91bd54e9537e2c6eb">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_TYPE_BOOLEAN
+: <a class="el" href="brlapi__param_8h.html#a8ef6c5fda0ba3c3ef6eeba871607c8adaae9245a964e0402c3cf8309374325605">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_TYPE_KEYCODE
+: <a class="el" href="brlapi__param_8h.html#a8ef6c5fda0ba3c3ef6eeba871607c8ada06898cb5681828cddd8a2262b1d3cd99">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_TYPE_STRING
+: <a class="el" href="brlapi__param_8h.html#a8ef6c5fda0ba3c3ef6eeba871607c8adabad7396a83a0e53f991f74b944f44b67">brlapi_param.h</a>
+</li>
+<li>brlapi_param_type_t
+: <a class="el" href="brlapi__param_8h.html#a8ef6c5fda0ba3c3ef6eeba871607c8ad">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_TYPE_UINT16
+: <a class="el" href="brlapi__param_8h.html#a8ef6c5fda0ba3c3ef6eeba871607c8ada875dddc6aa6a55b2c92c6e2b071bc0d4">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_TYPE_UINT32
+: <a class="el" href="brlapi__param_8h.html#a8ef6c5fda0ba3c3ef6eeba871607c8adad39c6ecdb6e3dbcc7fc02b4867c68f40">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_TYPE_UINT64
+: <a class="el" href="brlapi__param_8h.html#a8ef6c5fda0ba3c3ef6eeba871607c8ada094a40dc96c403f6c233916660112a60">brlapi_param.h</a>
+</li>
+<li>BRLAPI_PARAM_TYPE_UINT8
+: <a class="el" href="brlapi__param_8h.html#a8ef6c5fda0ba3c3ef6eeba871607c8adaa67869f1827310ecbe98581982fe92d5">brlapi_param.h</a>
+</li>
+<li>brlapi_paramCallback_t
+: <a class="el" href="group__brlapi__parameterManagement.html#gae386e27adddd3bcf5fdf378d70fe03ee">brlapi.h</a>
+</li>
+<li>brlapi_paramCallbackDescriptor_t
+: <a class="el" href="group__brlapi__parameterManagement.html#ga330857965e9bfb0916a8a455189c3314">brlapi.h</a>
+</li>
+<li>BRLAPI_PARAMF_GET
+: <a class="el" href="group__brlapi__protocol.html#ga3cd38a98dd2dedbd462238df1b1c10ec">brlapi_protocol.h</a>
+</li>
+<li>BRLAPI_PARAMF_GLOBAL
+: <a class="el" href="group__brlapi__parameterManagement.html#gafc52007f6c60508b58b89e34dd553dd4">brlapi.h</a>
+</li>
+<li>BRLAPI_PARAMF_LOCAL
+: <a class="el" href="group__brlapi__parameterManagement.html#gae0a7a21efa88464aa595815bd6b94adc">brlapi.h</a>
+</li>
+<li>BRLAPI_PARAMF_SELF
+: <a class="el" href="group__brlapi__parameterManagement.html#ga0ea393f92f9153d26d121ae368678c77">brlapi.h</a>
+</li>
+<li>BRLAPI_PARAMF_SUBSCRIBE
+: <a class="el" href="group__brlapi__protocol.html#ga10c3f1af43e29bb61fab68861d54af26">brlapi_protocol.h</a>
+</li>
+<li>BRLAPI_PARAMF_UNSUBSCRIBE
+: <a class="el" href="group__brlapi__protocol.html#ga90900211762bc8f3f0474eb183a28e80">brlapi_protocol.h</a>
+</li>
+<li>brlapi_pause()
+: <a class="el" href="group__brlapi__misc.html#gac90c1a7037c2a19cf43e2bd575fac275">brlapi.h</a>
+</li>
 <li>brlapi_perror()
 : <a class="el" href="group__brlapi__error.html#ga5717bfb2ac0e9a906f6b591b9943bd23">brlapi.h</a>
 </li>
@@ -1133,6 +1445,9 @@ $(function() {
 </li>
 <li>BRLAPI_PROTOCOL_VERSION
 : <a class="el" href="group__brlapi__protocol.html#ga474ab793dc36cc75725fe2db0f6539cd">brlapi_protocol.h</a>
+</li>
+<li>BRLAPI_PVF_GLOBAL
+: <a class="el" href="group__brlapi__protocol.html#ga4c65f4549f2ad86f2aa6f9f7aade3686">brlapi_protocol.h</a>
 </li>
 <li>brlapi_rangeType_all
 : <a class="el" href="group__brlapi__keys.html#gga04da4d59bcca169be939b8ebfc274bd2a34074d26f350d14b438c402d7ff51b8b">brlapi.h</a>
@@ -1194,6 +1509,9 @@ $(function() {
 <li>brlapi_setFocus()
 : <a class="el" href="group__brlapi__tty.html#ga404a4af6b41cdacfb33fbbb09c1ce961">brlapi.h</a>
 </li>
+<li>brlapi_setParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#ga4c60626783bca2db8be2f13577bc7a74">brlapi.h</a>
+</li>
 <li>BRLAPI_SETTINGS_INITIALIZER
 : <a class="el" href="group__brlapi__connection.html#ga45d2990108338f4764c4cabde1c3e759">brlapi.h</a>
 </li>
@@ -1235,6 +1553,12 @@ $(function() {
 </li>
 <li>brlapi_unignoreKeySet
 : <a class="el" href="group__brlapi__deprecated.html#ga020de174554f3ade9c361cbf169881b6">brlapi.h</a>
+</li>
+<li>brlapi_unwatchParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#gada9130bcae1b3e0f7dd52e3155270a16">brlapi.h</a>
+</li>
+<li>brlapi_watchParameter()
+: <a class="el" href="group__brlapi__parameterManagement.html#ga35baff069a8f443d9f0e403a2a1ec298">brlapi.h</a>
 </li>
 <li>BRLAPI_WF_ATTR_AND
 : <a class="el" href="group__brlapi__protocol.html#ga9ed86ddb71fd7ba23314c1eab176b67b">brlapi_protocol.h</a>

@@ -366,40 +366,55 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#using-brltty" id="id5">Using BRLTTY</a><ul>
+<li><a class="reference internal" href="#building-brltty" id="id5">Building BRLTTY</a><ul>
 <li><a class="reference internal" href="#system-requirements" id="id6">System Requirements</a></li>
 <li><a class="reference internal" href="#windows-98-and-me-limitation" id="id7">Windows 98 and ME Limitation</a></li>
-<li><a class="reference internal" href="#cygwin-package-management-via-the-command-line" id="id8">Cygwin Package Management via the Command Line</a><ul>
-<li><a class="reference internal" href="#apt-cyg" id="id9">apt-cyg</a></li>
+<li><a class="reference internal" href="#package-management-via-the-command-line" id="id8">Package Management via the Command Line</a><ul>
+<li><a class="reference internal" href="#managing-cygwin-packages" id="id9">Managing Cygwin Packages</a></li>
+<li><a class="reference internal" href="#managing-mingw-packages" id="id10">Managing MinGW Packages</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#usb-support" id="id10">USB Support</a><ul>
-<li><a class="reference internal" href="#libusb-win32" id="id11">LibUSB-Win32</a></li>
-<li><a class="reference internal" href="#libusb-1-0" id="id12">LibUSB-1.0</a></li>
+<li><a class="reference internal" href="#usb-support" id="id11">USB Support</a><ul>
+<li><a class="reference internal" href="#libusb-win32" id="id12">LibUSB-Win32</a></li>
+<li><a class="reference internal" href="#libusb-1-0" id="id13">LibUSB-1.0</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configuring-a-brltty-build" id="id13">Configuring a BRLTTY Build</a></li>
-<li><a class="reference internal" href="#missing-java-class-definitions-on-cygwin" id="id14">Missing Java Class Definitions on Cygwin</a></li>
-<li><a class="reference internal" href="#sticking-to-a-console" id="id15">Sticking to a Console</a></li>
-<li><a class="reference internal" href="#sharing-the-braille-device-with-other-screen-readers" id="id16">Sharing the Braille Device with Other Screen Readers</a><ul>
-<li><a class="reference internal" href="#sharing-with-jaws" id="id17">Sharing with JAWS</a></li>
+<li><a class="reference internal" href="#configuring-a-brltty-build" id="id14">Configuring a BRLTTY Build</a></li>
+<li><a class="reference internal" href="#missing-java-class-definitions-on-cygwin" id="id15">Missing Java Class Definitions on Cygwin</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-brltty" id="id16">Using BRLTTY</a><ul>
+<li><a class="reference internal" href="#windows-scripts-for-managing-brltty" id="id17">Windows Scripts for Managing BRLTTY</a><ul>
+<li><a class="reference internal" href="#run-brltty-bat" id="id18"><tt class="docutils literal"><span class="pre">run-brltty.bat</span></tt></a></li>
+<li><a class="reference internal" href="#debug-brltty-bat" id="id19"><tt class="docutils literal"><span class="pre">debug-brltty.bat</span></tt></a></li>
+<li><a class="reference internal" href="#enable-brlapi-bat" id="id20"><tt class="docutils literal"><span class="pre">enable-brlapi.bat</span></tt></a></li>
+<li><a class="reference internal" href="#disable-brlapi-bat" id="id21"><tt class="docutils literal"><span class="pre">disable-brlapi.bat</span></tt></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sticking-to-a-console" id="id22">Sticking to a Console</a></li>
+<li><a class="reference internal" href="#sharing-the-braille-device-with-other-screen-readers" id="id23">Sharing the Braille Device with Other Screen Readers</a><ul>
+<li><a class="reference internal" href="#sharing-with-jaws" id="id24">Sharing with JAWS</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#useful-scripts" id="id18">Useful Scripts</a><ul>
-<li><a class="reference internal" href="#the-mkwin-script" id="id19">The <tt class="docutils literal">mkwin</tt> Script</a><ul>
-<li><a class="reference internal" href="#required-software-components" id="id20">Required Software Components</a></li>
-<li><a class="reference internal" href="#more-options" id="id21">More Options</a></li>
-<li><a class="reference internal" href="#parameters" id="id22">Parameters</a></li>
+<li><a class="reference internal" href="#mingw-scripts-for-building-brltty" id="id25">MinGW Scripts for Building BRLTTY</a><ul>
+<li><a class="reference internal" href="#the-mkwin-script" id="id26">The <tt class="docutils literal">mkwin</tt> Script</a><ul>
+<li><a class="reference internal" href="#software-components-required-by-mkwin" id="id27">Software Components Required by <tt class="docutils literal">mkwin</tt></a></li>
+<li><a class="reference internal" href="#more-mkwin-options" id="id28">More <tt class="docutils literal">mkwin</tt> Options</a></li>
+<li><a class="reference internal" href="#mkwin-parameters" id="id29"><tt class="docutils literal">mkwin</tt> Parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-winsetup-script" id="id30">The <tt class="docutils literal">winsetup</tt> Script</a><ul>
+<li><a class="reference internal" href="#winsetup-options" id="id31"><tt class="docutils literal">winsetup</tt> Options</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section" id="using-brltty">
-<h2><a class="toc-backref" href="#id5">Using BRLTTY</a></h2>
+<div class="section" id="building-brltty">
+<h2><a class="toc-backref" href="#id5">Building BRLTTY</a></h2>
 <div class="section" id="system-requirements">
 <h3><a class="toc-backref" href="#id6">System Requirements</a></h3>
 <p>The earliest release of Windows that is supported by BRLTTY is Windows 98.</p>
@@ -463,14 +478,14 @@ that starts the root BRLTTY. You don't need to worry about unauthorized access
 over the network since the default is that only locally running programs can
 connect to BrlAPI.</p>
 </div>
-<div class="section" id="cygwin-package-management-via-the-command-line">
-<h3><a class="toc-backref" href="#id8">Cygwin Package Management via the Command Line</a></h3>
-<div class="section" id="apt-cyg">
-<h4><a class="toc-backref" href="#id9">apt-cyg</a></h4>
-<p>A convenient way to manage Cygwin packages from the command line is to use the
-<tt class="docutils literal"><span class="pre">apt-cyg</span></tt> tool. It is similar to the <tt class="docutils literal"><span class="pre">apt-get</span></tt> command which some Linux
-distributions use. As of the time of this writing, this is how you can install
-it:</p>
+<div class="section" id="package-management-via-the-command-line">
+<h3><a class="toc-backref" href="#id8">Package Management via the Command Line</a></h3>
+<div class="section" id="managing-cygwin-packages">
+<h4><a class="toc-backref" href="#id9">Managing Cygwin Packages</a></h4>
+<p>A convenient way to manage Cygwin packages from the command line
+is to use the <tt class="docutils literal"><span class="pre">apt-cyg</span></tt> command.
+It's similar to the <tt class="docutils literal"><span class="pre">apt-get</span></tt> command which some Linux distributions use.</p>
+<p>As of the time of this writing, this is how you can install it:</p>
 <pre class="literal-block">
 svn --force export http://apt-cyg.googlecode.com/svn/trunk/ /usr/local/bin/
 chmod +x /usr/local/bin/apt-cyg
@@ -497,9 +512,28 @@ apt-cyg install <em>name</em>
 apt-cyg help
 </pre>
 </div>
+<div class="section" id="managing-mingw-packages">
+<h4><a class="toc-backref" href="#id10">Managing MinGW Packages</a></h4>
+<p>A convenient way to manage MinGW packages from the command line
+is to use the <tt class="docutils literal"><span class="pre">mingw-get</span></tt> command.
+Be sure to invoke it with arguments because
+when invoked with no arguments its graphical interface is used.</p>
+<p>To list all of the packages, you can do:</p>
+<pre class="literal-block">
+mingw-get list
+</pre>
+<p>To install a package, you can do:</p>
+<pre class="literal-block">
+mingw-get install <em>name</em>
+</pre>
+<p>For full details, you can do:</p>
+<pre class="literal-block">
+mingw-get -h
+</pre>
+</div>
 </div>
 <div class="section" id="usb-support">
-<h3><a class="toc-backref" href="#id10">USB Support</a></h3>
+<h3><a class="toc-backref" href="#id11">USB Support</a></h3>
 <p>USB devices are supported thanks to the <tt class="docutils literal"><span class="pre">LibUSB-Win32</span></tt> and the <tt class="docutils literal"><span class="pre">LibUSB-1.0</span></tt>
 packages. If both are installed, preferrence is given to <tt class="docutils literal"><span class="pre">LibUSB-1.0</span></tt>.</p>
 <p>Pre-built versions of BRLTTY have USB support compiled in, and the required
@@ -508,7 +542,7 @@ them up.</p>
 <p>In order to build BRLTTY yourself with USB support enabled, you'll need to
 <strong>first</strong> install at least one of LibUSB-Win32 or LibUSB-1.0.</p>
 <div class="section" id="libusb-win32">
-<h4><a class="toc-backref" href="#id11">LibUSB-Win32</a></h4>
+<h4><a class="toc-backref" href="#id12">LibUSB-Win32</a></h4>
 <p>At the time of this writing, LibUSB-Win32 binaries can be found on
 <a class="reference external" href="http://libusb-win32.sourceforge.net/">LibUSB-Win32's Web Site</a>. They'll be named something like
 <tt class="docutils literal"><span class="pre">libusb-win32-bin-&lt;version&gt;.exe</span></tt>, and should be available on
@@ -547,7 +581,7 @@ cp LibUSB-Win32/bin/amd64/libusb0.dll brltty/hotplug/libusb0_x64.dll
 <tt class="docutils literal">brltty/hotplug/brltty.inf</tt> file.</p>
 </div>
 <div class="section" id="libusb-1-0">
-<h4><a class="toc-backref" href="#id12">LibUSB-1.0</a></h4>
+<h4><a class="toc-backref" href="#id13">LibUSB-1.0</a></h4>
 <p>As of the time of this writing, LibUSB-1.0 binary snapshots can be found on
 <a class="reference external" href="http://www.libusb.org/wiki/windows_backend">LibUSB-1.0's Web Site</a>. They'll be named something like
 <tt class="docutils literal"><span class="pre">libusb_&lt;date&gt;.7z</span></tt>.</p>
@@ -583,7 +617,7 @@ or, on braille device plug, point at the
 </div>
 </div>
 <div class="section" id="configuring-a-brltty-build">
-<h3><a class="toc-backref" href="#id13">Configuring a BRLTTY Build</a></h3>
+<h3><a class="toc-backref" href="#id14">Configuring a BRLTTY Build</a></h3>
 <p>Some of BRLTTY's configure options are of particular interest to users of the
 Windows platform:</p>
 <table class="docutils option-list" frame="void" rules="none">
@@ -602,7 +636,7 @@ well. This option builds BRLTTY such that relative paths are used.</td></tr>
 </table>
 </div>
 <div class="section" id="missing-java-class-definitions-on-cygwin">
-<h3><a class="toc-backref" href="#id14">Missing Java Class Definitions on Cygwin</a></h3>
+<h3><a class="toc-backref" href="#id15">Missing Java Class Definitions on Cygwin</a></h3>
 <p>You may get a Java failure that looks something like this:</p>
 <pre class="literal-block">
 Exception in thread &quot;main&quot; java.lang.NoClassDefFoundError:
@@ -617,8 +651,37 @@ not found in gnu.gcj.runtime.SystemClassLoader
 obtained from <a class="reference external" href="http://cygwinports.org/">Cygwin Ports</a>. You can also resolve the probem by downloading
 the <a class="reference external" href="ftp://sourceware.org/pub/java/ecj-4.5.jar">Cygwin java-ecj jar</a>, and installing it into <tt class="docutils literal">/usr/share/java/ecj.jar</tt>.</p>
 </div>
+</div>
+<div class="section" id="using-brltty">
+<h2><a class="toc-backref" href="#id16">Using BRLTTY</a></h2>
+<div class="section" id="windows-scripts-for-managing-brltty">
+<h3><a class="toc-backref" href="#id17">Windows Scripts for Managing BRLTTY</a></h3>
+<p>These <tt class="docutils literal">.bat</tt> scripts are in the top-level folder where BRLTTY has been installed.
+They should be run by a user that has administrative privileges.</p>
+<div class="section" id="run-brltty-bat">
+<h4><a class="toc-backref" href="#id18"><tt class="docutils literal"><span class="pre">run-brltty.bat</span></tt></a></h4>
+<p>Manually run BRLTTY with a log level of <tt class="docutils literal">info</tt>.
+Logs are written to the file <tt class="docutils literal">brltty.log</tt>
+in the top-level folder where BRLTTY has been installed.
+All arguments are passed through to BRLTTY.</p>
+</div>
+<div class="section" id="debug-brltty-bat">
+<h4><a class="toc-backref" href="#id19"><tt class="docutils literal"><span class="pre">debug-brltty.bat</span></tt></a></h4>
+<p>Manually run BRLTTY, via the <tt class="docutils literal"><span class="pre">run-brltty.bat</span></tt> script, with options that
+set the log level to <tt class="docutils literal">debug</tt> and enable several useful log categories.
+All arguments are passed through to the <tt class="docutils literal"><span class="pre">run-brltty.bat</span></tt> script.</p>
+</div>
+<div class="section" id="enable-brlapi-bat">
+<h4><a class="toc-backref" href="#id20"><tt class="docutils literal"><span class="pre">enable-brlapi.bat</span></tt></a></h4>
+<p>Install the BrlAPI service and start it.</p>
+</div>
+<div class="section" id="disable-brlapi-bat">
+<h4><a class="toc-backref" href="#id21"><tt class="docutils literal"><span class="pre">disable-brlapi.bat</span></tt></a></h4>
+<p>Stop the BrlAPI service and uninstall it.</p>
+</div>
+</div>
 <div class="section" id="sticking-to-a-console">
-<h3><a class="toc-backref" href="#id15">Sticking to a Console</a></h3>
+<h3><a class="toc-backref" href="#id22">Sticking to a Console</a></h3>
 <p>It may be useful to have BRLTTY only review the console that it's started in,
 i.e.  for it not to follow the keyboard focus. To achieve this, set the
 <tt class="docutils literal">FollowFocus</tt> parameter of BRLTTY's <tt class="docutils literal">Windows</tt> screen driver to <tt class="docutils literal">no</tt>. This
@@ -631,7 +694,7 @@ can be done:</p>
 </dl>
 </div>
 <div class="section" id="sharing-the-braille-device-with-other-screen-readers">
-<h3><a class="toc-backref" href="#id16">Sharing the Braille Device with Other Screen Readers</a></h3>
+<h3><a class="toc-backref" href="#id23">Sharing the Braille Device with Other Screen Readers</a></h3>
 <p>When you're not on a window that BRLTTY can handle, its default action is to
 retain control of the braille device and to present a short message explaining
 the problem. If you have another braille-capable screen reader and would like
@@ -645,7 +708,7 @@ device when you move onto a window that it can handle. Note that these actions
 take a noticeable amount of time so you should only use this option if it's
 actually needed.</p>
 <div class="section" id="sharing-with-jaws">
-<h4><a class="toc-backref" href="#id17">Sharing with JAWS</a></h4>
+<h4><a class="toc-backref" href="#id24">Sharing with JAWS</a></h4>
 <p>A common case wherein a JAWS user might want BRLTTY to be in control of the
 braille device when on a console window is when using Cygwin.</p>
 <p>There are two phases to configuring JAWS to run in the background while BRLTTY
@@ -752,14 +815,15 @@ may need to exit BRLTTY before going to Windows.</p>
 </div>
 </div>
 </div>
-<div class="section" id="useful-scripts">
-<h2><a class="toc-backref" href="#id18">Useful Scripts</a></h2>
+<div class="section" id="mingw-scripts-for-building-brltty">
+<h2><a class="toc-backref" href="#id25">MinGW Scripts for Building BRLTTY</a></h2>
 <div class="section" id="the-mkwin-script">
-<h3><a class="toc-backref" href="#id19">The <tt class="docutils literal">mkwin</tt> Script</a></h3>
-<p>The <tt class="docutils literal">mkwin</tt> script, which can be found in the <tt class="docutils literal">Windows/</tt> subdirectory of
-BRLTTY's source tree, builds the Windows archive and installer for BRLTTY.</p>
-<div class="section" id="required-software-components">
-<h4><a class="toc-backref" href="#id20">Required Software Components</a></h4>
+<h3><a class="toc-backref" href="#id26">The <tt class="docutils literal">mkwin</tt> Script</a></h3>
+<p>The <tt class="docutils literal">mkwin</tt> script,
+which can be found in the <tt class="docutils literal">Windows/</tt> subdirectory of BRLTTY's source tree,
+builds the Windows archive and installer for BRLTTY.</p>
+<div class="section" id="software-components-required-by-mkwin">
+<h4><a class="toc-backref" href="#id27">Software Components Required by <tt class="docutils literal">mkwin</tt></a></h4>
 <p>Links to the pages where we found these
 installers, components, and files are listed.
 In case any of these links becomes out-of-date, however,
@@ -810,6 +874,13 @@ to specify the top-level directory of the desired <tt class="docutils literal">P
 <pre class="literal-block">
 pip install cython
 </pre>
+<p>Some systems, either in addition to or in place of the <tt class="docutils literal">pip</tt> command,
+have the <tt class="docutils literal">pip2</tt> and/or the <tt class="docutils literal">pip3</tt> command. As you might have guessed,
+<tt class="docutils literal">pip2</tt> corresponds to <tt class="docutils literal">Python2</tt> and <tt class="docutils literal">pip3</tt> corresponds to <tt class="docutils literal">Python3</tt>.
+It's best to use the one with the most explicit version suffix.</p>
+<p>If the <tt class="docutils literal">pip</tt> command isn't already included within  the version of
+<tt class="docutils literal">Python</tt> that you're using (usually within its <tt class="docutils literal">scripts</tt> subdirectory)
+then you can install it from <a class="reference external" href="https://pip.pypa.io/en/stable/installing/">https://pip.pypa.io/en/stable/installing/</a>.</p>
 <p>Copies of the files mentioned below are at
 <a class="reference external" href="http://BRLTTY.app/archive/Windows/Cython/">http://BRLTTY.app/archive/Windows/Cython/</a>:</p>
 <ul>
@@ -920,8 +991,8 @@ Copies of them are at <a class="reference external" href="http://BRLTTY.app/arch
 <li>bthsdpdef.h</li>
 </ul>
 </div>
-<div class="section" id="more-options">
-<h4><a class="toc-backref" href="#id21">More Options</a></h4>
+<div class="section" id="more-mkwin-options">
+<h4><a class="toc-backref" href="#id28">More <tt class="docutils literal">mkwin</tt> Options</a></h4>
 <dl class="docutils">
 <dt><tt class="docutils literal"><span class="pre">-u</span></tt> (USB)</dt>
 <dd><p class="first">Specify which USB package is to be used. The following USB packages are
@@ -940,14 +1011,15 @@ resort for finding needed commands that MinGW may not have.</dd>
 can have a look at and/or modify what it will contain. If the <tt class="docutils literal">SHELL</tt>
 environment variable is set then that shell is used. If not, <tt class="docutils literal">/bin/sh</tt> is
 assumed.</dd>
-<dt><tt class="docutils literal"><span class="pre">-t</span></tt> (temporary)</dt>
-<dd>Specify the temporary directory that is to be used for the build. It must
-not already exist. If you don't specify it then an internally generated path
-is used.</dd>
+<dt><tt class="docutils literal"><span class="pre">-t</span></tt> (temporary directory)</dt>
+<dd>Specify the temporary directory that is to be used for the build.
+It must not already exist.
+If it isn't specified then an internally generated path is used.</dd>
 <dt><tt class="docutils literal"><span class="pre">-k</span></tt> (keep)</dt>
-<dd>Prevent the temporary directory from being removed at the end of a
-successful build. It isn't removed if the build fails so that you can have a
-look at what went wrong.</dd>
+<dd>Don't remove the temporary directory
+at the end of a successful build.
+It isn't removed if the build fails
+so that you can have a look at what went wrong.</dd>
 </dl>
 <dl class="docutils">
 <dt><tt class="docutils literal"><span class="pre">-v</span></tt> (verbose)</dt>
@@ -960,15 +1032,19 @@ be specified multiple times.</dd>
 <dd>Write a brief command line usage summary on standard output, and then exit.</dd>
 </dl>
 </div>
-<div class="section" id="parameters">
-<h4><a class="toc-backref" href="#id22">Parameters</a></h4>
-<p>The <tt class="docutils literal">mkwin</tt> script requires two parameters:</p>
+<div class="section" id="mkwin-parameters">
+<h4><a class="toc-backref" href="#id29"><tt class="docutils literal">mkwin</tt> Parameters</a></h4>
+<p>The <tt class="docutils literal">mkwin</tt> script accepts two parameters:</p>
 <ol class="arabic simple">
-<li>The path to the top-level directory of BRLTTY's source tree. It may be
-either relative or absolute.</li>
-<li>The build revision. It may be any character sequence that doesn't include
-whitespace. It is appended, with a prepended dash (<tt class="docutils literal">-</tt>), to BRLTTY's
-version number in order to construct the build version.</li>
+<li>The path to the top-level directory of BRLTTY's source tree.
+It may be either relative or absolute.
+This parameter is required.</li>
+<li>The build revision.
+It may be any character sequence that doesn't include whitespace.
+It is appended, with a prepended dash (<tt class="docutils literal">-</tt>), to
+BRLTTY's version number in order to construct the build version.
+This parameter is optional - if it isn't specified then
+the revision number part of the build identifier is used.</li>
 </ol>
 <p>The build name is used as:</p>
 <ul class="simple">
@@ -978,7 +1054,7 @@ version number in order to construct the build version.</li>
 </ul>
 <p>It has the following form:</p>
 <pre class="literal-block">
-brltty-win-buildVersion-usbPackage
+brltty-win-buildVersion-buildRevision-usbPackage
 </pre>
 <p>For example:</p>
 <ul class="simple">
@@ -996,6 +1072,40 @@ BRLTTY's source tree,</li>
 <li>brltty-win-5.2-4-libusb.zip (the archive)</li>
 <li>brltty-win-5.2-4-libusb.exe (the installer)</li>
 </ul>
+</div>
+</div>
+<div class="section" id="the-winsetup-script">
+<h3><a class="toc-backref" href="#id30">The <tt class="docutils literal">winsetup</tt> Script</a></h3>
+<p>The <tt class="docutils literal">winsetup</tt> script,
+which can be found in the <tt class="docutils literal">Windows/</tt> subdirectory of BRLTTY's source tree,
+ensures that all needed components are installed on your system
+so that <a class="reference internal" href="#the-mkwin-script">the mkwin script</a> can successfully build BRLTTY.</p>
+<div class="section" id="winsetup-options">
+<h4><a class="toc-backref" href="#id31"><tt class="docutils literal">winsetup</tt> Options</a></h4>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-a</span></tt> (archive URL)</dt>
+<dd>Specify the location for BRLTTY's Windows archive.</dd>
+<dt><tt class="docutils literal"><span class="pre">-d</span></tt> (dry run)</dt>
+<dd>Don't actually install anything.</dd>
+<dt><tt class="docutils literal"><span class="pre">-k</span></tt> (keep)</dt>
+<dd>Don't remove the temporary directory.</dd>
+<dt><tt class="docutils literal"><span class="pre">-p</span></tt> (Python directory)</dt>
+<dd>Specify the location where Python has been installed.</dd>
+<dt><tt class="docutils literal"><span class="pre">-t</span></tt> (temporary directory)</dt>
+<dd>Specify the temporary directory that is to be used for the installs.
+It must not already exist.
+If it isn't specified then an internally generated path is used.</dd>
+</dl>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-v</span></tt> (verbose)</dt>
+<dd>Increase output verbosity. This option complements the <tt class="docutils literal"><span class="pre">-q</span></tt> option. It may
+be specified multiple times.</dd>
+<dt><tt class="docutils literal"><span class="pre">-q</span></tt> (quiet)</dt>
+<dd>Decrease output verbosity. This option complements the <tt class="docutils literal"><span class="pre">-v</span></tt> option. It may
+be specified multiple times.</dd>
+<dt><tt class="docutils literal"><span class="pre">-h</span></tt> (help)</dt>
+<dd>Write a brief command line usage summary on standard output, and then exit.</dd>
+</dl>
 </div>
 </div>
 </div>

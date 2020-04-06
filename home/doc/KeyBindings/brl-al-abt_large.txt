@@ -1,5 +1,5 @@
-Key Table: Alva ABT [3nn] and Delphi [4nn] (large)
-==================================================
+Key Table: Alva ABT 380 / Delphi 480
+====================================
 
 Notes
 * The two long keys are named Left and Right.

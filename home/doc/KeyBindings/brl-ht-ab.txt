@@ -1,5 +1,5 @@
-Key Table: HandyTech Active Braille 40
-======================================
+Key Table: HandyTech Active Braille
+===================================
 
 Default Bindings
 ----------------

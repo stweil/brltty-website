@@ -1,14 +1,22 @@
-Key Table: FreedomScientific Focus 2 80
-=======================================
+Key Table: FreedomScientific Focus1 (original)
+==============================================
 
 Notes
-* There are two Nav controls - one at each side of the top.
-  Each has three actions: Up, Down, and Press.
-  On some models, a Nav control is a wheel which can be both rolled and pressed.
-  On others, it's an up/down rocker along with a separate pressable button.
-* The Selector keys are at either end of the front edge.
+* An eight-dot, Perkins-style, braille keyboard is near the rear of the top.
+  Its keys, From left to right, are: Dot7, Dot3, Dot2, Dot1, Dot4, Dot5, Dot6, Dot8.
+  The space bar is in front of the braille cells.
+* There is a routing key immediately behind each braille cell.
+  Some models have a navrow key immediately behind each routing key.
+* There are two Nav controls - one at each end of the braille cells.
+  They have three actions: Up, Down, and Press.
+  On newer models, each is a rocker combined with a button.
+  On older models, each is a wheel that can be both rolled and pressed.
+* The keys on the front, from left to right, are:
+  pan left, left selector, left shift - right shift, right selector, pan right.
+* The left and right shift keys are squarish and flat.
+* The left and right panning keys are long and flat with a raised double-arrow.
+* The left and right selector keys are round and concave.
   On older models, they're known as GDF (General Display Function) keys.
-* The Advance keys are just inside the rockers and outside the shift keys.
 
 Default Bindings
 ----------------
@@ -35,42 +43,30 @@ Cursor Functions
 * bring screen cursor to current line: Space+Dots1236
 
 Vertical Navigation
-* go up one line:
-  + LeftNavUp
-  + RightBumperUp
-  + RightRockerUp
-* go down one line:
-  + LeftNavDown
-  + RightBumperDown
-  + RightRockerDown
-* go to top line:
-  + RightSelector+LeftAdvance
-  + LeftSelector+LeftBumperUp
-  + RightSelector+RightBumperUp
-* go to bottom line:
-  + RightSelector+RightAdvance
-  + LeftSelector+LeftBumperDown
-  + RightSelector+RightBumperDown
-* go to beginning of top line: LeftSelector+LeftAdvance
-* go to beginning of bottom line: LeftSelector+RightAdvance
+* go up one line: LeftNavUp
+* go down one line: LeftNavDown
+* go to top line: RightSelector+PanLeft
+* go to bottom line: RightSelector+PanRight
+* go to beginning of top line: LeftSelector+PanLeft
+* go to beginning of bottom line: LeftSelector+PanRight
 * go up to nearest line with different content: LeftNavPress+LeftNavUp
 * go down to nearest line with different content: LeftNavPress+LeftNavDown
 * go up to nearest line with different highlighting: LeftSelector+LeftNavUp
 * go down to nearest line with different highlighting: LeftSelector+LeftNavDown
-* go up to first line of paragraph: RightAdvance+LeftNavUp
-* go down to first line of next paragraph: RightAdvance+LeftNavDown
-* go up to previous command prompt: LeftAdvance+LeftNavUp
-* go down to next command prompt: LeftAdvance+LeftNavDown
-* go up to nearest line with less indent than character: LeftAdvance+NavrowKey
-* go down to nearest line with less indent than character: RightAdvance+NavrowKey
+* go up to first line of paragraph: PanRight+LeftNavUp
+* go down to first line of next paragraph: PanRight+LeftNavDown
+* go up to previous command prompt: PanLeft+LeftNavUp
+* go down to next command prompt: PanLeft+LeftNavDown
+* go up to nearest line with less indent than character: PanLeft+NavrowKey
+* go down to nearest line with less indent than character: PanRight+NavrowKey
 
 Horizontal Navigation
 * go backward one braille window:
   + RightNavUp
-  + LeftAdvance
+  + PanLeft
 * go forward one braille window:
   + RightNavDown
-  + RightAdvance
+  + PanRight
 * go to beginning of line: LeftNavPress
 * go to end of line: RightNavPress
 * go left one character: RightNavPress+RightNavUp
@@ -80,10 +76,10 @@ Horizontal Navigation
   + LeftSelector+NavrowKey
 
 Clipboard Functions
-* start new clipboard at character: LeftAdvance+RoutingKey
+* start new clipboard at character: PanLeft+RoutingKey
 * append to clipboard from character: LeftSelector+RoutingKey
 * linear copy to character: RightSelector+RoutingKey
-* rectangular copy to character: RightAdvance+RoutingKey
+* rectangular copy to character: PanRight+RoutingKey
 * copy characters to clipboard: RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
   + LeftSelector+RightSelector
@@ -142,14 +138,8 @@ Keyboard Input
 * escape key: Space+Dots26
 * cursor-left key: Space+Dot3
 * cursor-right key: Space+Dot6
-* cursor-up key:
-  + LeftBumperUp
-  + LeftRockerUp
-  + Space+Dot1
-* cursor-down key:
-  + LeftBumperDown
-  + LeftRockerDown
-  + Space+Dot4
+* cursor-up key: Space+Dot1
+* cursor-down key: Space+Dot4
 * page-up key: Space+Dots23
 * page-down key: Space+Dots56
 * home key: Space+Dot2
@@ -171,11 +161,10 @@ Keyboard Input
 * switch to specific virtual terminal: RightShift+RoutingKey
 * switch to the previous virtual terminal: Space+Dots12367
 * switch to the next virtual terminal: Space+Dots12368
-* set braille keyboard enabled/disabled: Space+Dots13
 * set braille keyboard enabled: Space+Dots138
 * set braille keyboard disabled: Space+Dots137
-* set braille input mode dots: Space+Dots468
-* set braille input mode text: Space+Dots467
+* set braille typing mode dots: Space+Dots468
+* set braille typing mode text: Space+Dots467
 
 Menu Bindings
 -------------
