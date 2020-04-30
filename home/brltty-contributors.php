@@ -13,11 +13,11 @@ They include:
 <LI>Former project advisor.
 <LI>Contributor of some braille translation tables.
 </UL>
-<?php contributor("August Hörandl", "hoerandl@elina.htlw1.ac.at"); ?>
+<?php contributor("August HÃ¶randl", "hoerandl@elina.htlw1.ac.at"); ?>
 <UL>
 <LI>Author of driver for <CITE>Screen 2D Terminal</CITE> from <A HREF="http://www.papenmeier.de/">Papenmeier</A>.
 Thanks to the members of his team
-(Tibor Becker, Michael Burger, Herbert Gruber, and Heimo Schön)
+(Tibor Becker, Michael Burger, Herbert Gruber, and Heimo SchÃ¶n)
 who worked on this project at the
 <A HREF="http://www.htlw16.ac.at/">Technical High School</A>,
 <A HREF="http://elina.htlw16.ac.at/">Department of Electrical Engineering</A>,
@@ -53,7 +53,7 @@ Vienna, Austria.
 <UL>
 <LI>Author of driver for <CITE>Vario/RBT</CITE> (emulation 2) from <A HREF="http://www.baum.de/English/homeeng1.htm">Baum</A>.
 </UL>
-<?php contributor("Sébastien Hinderer", "Sebastien.Hinderer@libertysurf.fr"); ?>
+<?php contributor("SÃ©bastien Hinderer", "Sebastien.Hinderer@libertysurf.fr"); ?>
 <UL>
 <LI>Author of driver for <CITE>VisioBraille</CITE> from <A HREF="http://www.handialog.com/indexuk.htm">Handialog</A>.
 <LI>Co-author of Application Programming Interface.
