@@ -377,15 +377,20 @@ ul.auto-toc {
 </div>
 <div class="section" id="initial-setup">
 <h2><a class="toc-backref" href="#id2">Initial Setup</a></h2>
-<p>A set of Systemd service and path units needs to be installed
-into the /usr/lib/systemd/system directory,
-and a wrapper script needs to be installed
-into the /usr/libexec directory.
-A make file has been provided in order to make this easy to do.
+<p>The following steps need to be performed:</p>
+<ul class="simple">
+<li>Systemd service and path units need to be installed
+into the /usr/lib/systemd/system directory.</li>
+<li>A wrapper script needs to be installed
+into the /usr/lib/brltty directory.</li>
+<li>A file defining the non-root user that BRLTTY is to run as,
+including the supplementary groups that it needs access to,
+needs to be installed into the /usr/lib/sysusers.d directory.</li>
+</ul>
+<p>A make file has been provided in order to make this easy to do.
 It can be found within the Autostart/Systemd subdirectory
 of BRLTTY's build tree.
-To install all of these files, change to this subdirectory
-and run the command:</p>
+To install all of these files, change to this directory and run the command:</p>
 <pre class="literal-block">
 make install
 </pre>
