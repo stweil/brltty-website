@@ -34,7 +34,6 @@ BRLTTY on Linux
   (which allow keyboard key combinations to be bound
   to BRLTTY's navigation and configuration commands)
 
-.. |cap_setuid| replace:: *cap_setuid*
 .. |cap_setgid| replace:: *cap_setgid*
 .. |cap_chown| replace:: *cap_chown*
 .. |cap_fowner| replace:: *cap_fowner*
@@ -44,9 +43,8 @@ BRLTTY on Linux
 .. |cap_sys_tty_config| replace:: **cap_sys_tty_config**
 .. |cap_mknod| replace:: **cap_mknod**
 
-.. |cap_setuid reason| replace:: switching to `the unprivileged user`_
 .. |cap_setgid reason| replace:: switching to the primary group of `the unprivileged user`_ and establishing the needed `group memberships`_
-.. |cap_chown reason| replace:: claiming group ownership of the `state directories`_
+.. |cap_chown reason| replace:: claiming ownership of the `state directories`_
 .. |cap_fowner reason| replace:: adding group permissions to the `state directories`_
 .. |cap_dac_override reason| replace:: creating missing `state directories`_
 .. |cap_sys_module reason| replace:: installing the needed `kernel modules`_
@@ -69,40 +67,52 @@ we also don't feel that it's worth risking the possibility
 that our code might be hacked.
 To reduce this possibility, therefore, BRLTTY first
 establishes a `safer execution environment`_ within which to do its job.
+This is a best security practice known as "least privilege".
 
-When Started as an Unprivileged User
+When Started by an Unprivileged User
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When BRLTTY starts executing as an unprivileged user (not |super user|)
-then it simply can't do its job at all without a bit of administrative help.
-Figuratively speaking, therefore, it "hopes" that
-its executable,
-the user who started it,
-and the system
-have all been adequately configured.
+BRLTTY, as of release 6.2, can be started
+by an unprivileged user (not |super user|).
+The main use case for this is for BRLTTY to be started
+by its |default unprivileged user|.
+Others include system administrators or users
+who'd like BRLTTY to be startable
+by any user, by users who belong to a specific group, etc.
 
-* Adequate executable configuration means that
-  all of the `required capabilities`_ have been assigned to it.
+In order for an unprivileged user to successfully start BRLTTY,
+its environment needs to be prepared as follows:
 
-* Adequate user configuration means that the user who started BRLTTY
-  has all of the needed `group memberships`_.
-  This isn't necessary, i.e. BRLTTY will do this by itself,
-  if the |cap_setgid| capability has also been assigned to its executable.
+* All of its `required capabilities`_ to have been assigned to its executable.
 
-* Adequate system configuration means that
-  all of the needed `kernel modules`_ have already been installed.
-  This isn't necessary, i.e. BRLTTY will do this by itself,
-  if the |cap_sys_module| capability has also been assigned to its executable.
+* The user that starts it to have all of the needed `group memberships`_.
+  This isn't necessary, i.e. BRLTTY will join them by itself,
+  if the |cap_setgid| (temporary) capability
+  has also been assigned to its executable.
 
-If both the |cap_setuid| and |cap_setgid| capabilities
-have also been assigned to its executable
-then BRLTTY Is able to switch to `the unprivileged user`_.
-This isn't an issue when BRLTTY is started
-as its |default unprivileged user|.
+* The needed `kernel modules`_ to have been installed.
+  This isn't necessary, i.e. BRLTTY will install them by itself,
+  if the |cap_sys_module| (temporary) capability
+  has also been assigned to its executable.
 
-While BRLTTY will continue to run in spite of inadequate configuration,
-some of its individual components will likely fail.
-These failures can range all the way from minor to severe.
+* Its `state directories`_
+  to have been created,
+  to have the correct ownership,
+  and to have the correct permissions.
+  Each of these prerequisites isn't necessary,
+  i.e. BRLTTY will take care of it by itself,
+  if the associated (temporary) capability
+  has also been assigned to its executable.
+
+  .. table:: Temporary Capabilities for State Directory Prerequisites
+
+    ============  ====================
+    Prerequisite  Temporary Capability
+    ------------  --------------------
+    create        |cap_dac_override|
+    ownership     |cap_chown|
+    permissions   |cap_fowner|
+    ============  ====================
 
 Safer Execution Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -111,7 +121,7 @@ BRLTTY takes a number of steps to establish a safer execution environment:
 
 * Set a `safe command search path`_.
 * Set a `safe default shell`_.
-* Create some `private namespaces`_.
+* `Namespace isolation`_.
 * Switch to executing as `the unprivileged user`_.
 * Install the needed `kernel modules`_.
 * Establish the needed `group memberships`_.
@@ -121,23 +131,25 @@ BRLTTY takes a number of steps to establish a safer execution environment:
 The Unprivileged User
 ~~~~~~~~~~~~~~~~~~~~~
 
-The decision regarding which unprivileged user to switch to
+When BRLTTY starts executing as the super user (|super user|),
+one of the first things it does is switch
+to executing as an unprivileged user.
+The decision regarding which user to continue executing as
 is made as follows:
 
 1) The user specified via the |unprivileged user option|.
    This step only succeeds if that user exists.
-   BRLTTY skips it `when started as an unprivileged user`_.
 
 2) The |default unprivileged user|.
    This step only succeeds if that user exists.
    The actual default user can be configured at build time
    via the ``--with-unprivileged-user`` option.
-   Specifying ``--without-unprivileged-user`` causes this step to be skipped.
+   Specifying ``--without-unprivileged-user``
+   causes this step to be skipped.
 
-3) The user that started BRLTTY.
+3) The privileged user that started BRLTTY.
 
-In all cases,
-including when continuing to execute as the user that started BRLTTY,
+After selecting the user to continue executing as,
 the following is done:
 
 * Ensure that all of the user identifiers
@@ -147,10 +159,8 @@ the following is done:
 * Ensure that all of the group identifiers
   (real, effective, saved, filesystem)
   are set to the primary group of the selected user.
-  When continuing to execute as the user that started BRLTTY,
-  the current real group identifier is used.
 
-* If the user's home directory is defined then switch to it by:
+* If the selected user's home directory is defined then switch to it by:
 
   * Changing the working directory.
   * Setting the ``HOME`` environment variable.
@@ -220,27 +230,23 @@ from the days when it had to execute as the super user (|super user|).
 Another (much rarer) case would be
 when transitioning from one unprivileged user to another.
 
-There are at least a couple of reasons why BRLTTY does this job since
-it could, of course, be left for a system administrator to take care of.
-One is that the steps are well-defined so it was deemed better
-to code it right in a central place
-rather than to risk administrative error.
-The other, way more important, one is that it's extremely difficult
-for a blind user to figure out what's wrong
+The main reason that BRLTTY does this job is
+that it's extremely difficult for a blind user to figure out what's wrong
 before his/her braille device is up and running.
 Put another way, it can be near impossible for a braille user to figure out
 why BRLTTY is having problems while BRLTTY is having problems.
 
 The following actions are taken for each of the state directories:
 
-* If it doesn't exist then it's created.
+* If it doesn't exist then it is created.
   This usually requires the |cap_dac_override| (temporary) capability
   because it's usually a subdirectory of a directory
   that can only be written to by the super user (|super user|),
   e.g. ``/var/lib/``.
 
-* Its owning group is changed to be the primary group
-  of `the unprivileged user`_ that BRLTTY Is executing as.
+* Its owning user and group are changed to be
+  the user and the primary group of the user
+  that BRLTTY Is executing as.
   The same change is also made to whatever the directory contains.
   This requires the |cap_chown| (temporary) capability
   for a directory or file that's owned by a different user.
@@ -434,7 +440,7 @@ Assigning Capabilities to the Executable
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First, here's a summary of all of the capabilities that BRLTTY needs
-`when started as an unprivileged user`_.
+`when started by an unprivileged user`_.
 
 * The `required capabilities`_ are highlighted **this way**.
   They're needed throughout BRLTTY's execution.
@@ -453,7 +459,6 @@ First, here's a summary of all of the capabilities that BRLTTY needs
   |cap_fowner|          |cap_fowner reason|
   |cap_mknod|           |cap_mknod reason|
   |cap_setgid|          |cap_setgid reason|
-  |cap_setuid|          |cap_setuid reason|
   |cap_sys_admin|       |cap_sys_admin reason|
   |cap_sys_module|      |cap_sys_module reason|
   |cap_sys_tty_config|  |cap_sys_tty_config reason|
@@ -465,11 +470,11 @@ The ``setcap`` Command
 The host command to assign all of the capabilities,
 i.e. both the `required capabilities`_ and the `temporary capabilities`_,
 to BRLTTY's executable
-so that it'll be fully functional `when started as an unprivileged user`_,
+so that it'll be fully functional `when started by an unprivileged user`_,
 without requiring any additional administrator configuration,
 is::
 
-  setcap cap_setuid,cap_setgid,cap_chown,cap_fowner,cap_dac_override,cap_sys_module,cap_sys_admin,cap_sys_tty_config,cap_mknod+p /path/to/brltty
+  setcap cap_setgid,cap_chown,cap_fowner,cap_dac_override,cap_sys_module,cap_sys_admin,cap_sys_tty_config,cap_mknod+p /path/to/brltty
 
 It must be run as the super user (|super user|).
 
@@ -504,7 +509,6 @@ that that capability grants from BRLTTY.
   ``-o``  |cap_chown|           |cap_chown reason|
   ``-p``  |cap_fowner|          |cap_fowner reason|
   ``-s``  |cap_sys_tty_config|  |cap_sys_tty_config reason|
-  ``-u``  |cap_setuid|          |cap_setuid reason|
   ======  ====================  ===========================
 
 The following options are primarily for developers:
@@ -605,14 +609,14 @@ Temporary Capabilities
 
 BRLTTY only uses the privileged kernel operations
 that are granted via these capabilities
-`when started as an unprivileged user`_.
+`when started by an unprivileged user`_.
 They allow it to configure itself,
 thus not relying so heavily on explicit administrator configuration,
 and are relinquished right after this has been done.
 
 |cap_chown|
   If this capability has also been assigned to BRLTTY's executable
-  then it can claim group ownership of its `state directories`_
+  then it can claim ownership of its `state directories`_
   and their contents
   after having successfully switched to executing as `the unprivileged user`_.
   The primary group of that user is used.
@@ -637,18 +641,9 @@ and are relinquished right after this has been done.
   then it ignores the invoking user's group memberships
   and internally establishes the actually needed `group memberships`_.
 
-|cap_setuid|
-  If this capability has also been assigned to BRLTTY's executable
-  then it can switch to the |default unprivileged user|.
-  The |cap_setgid| (temporary) capability is also required
-  so that it can also switch to that user's primary group.
-  This feature doesn't allow switching to an explicit user
-  (via the |unprivileged user option|).
-
 |cap_sys_admin|
   While this is one of the `required capabilities`_,
-  it's also needed as a temporary capability
-  in order to create privileged `private namespaces`_.
+  it's also needed as a temporary capability for `namespace isolation`_.
 
 |cap_sys_module|
   If this capability has also been assigned to BRLTTY's executable
@@ -688,12 +683,24 @@ To find out what it is on your system, run this command::
 
 Note that scripts usually internally specify which shell is to be used.
 
-Private Namespaces
-~~~~~~~~~~~~~~~~~~
+Namespace Isolation
+~~~~~~~~~~~~~~~~~~~
 
-BRLTTY unshares (makes a private copy of)
-some of the kernel namespaces associated with its process.
-The namespaces that it currently unshares are:
+BRLTTY isolates some of the kernel namespaces
+that are associated with its process.
+The namespaces that it currently isolates are:
+
+cgroup
+  This namespace is used to manage control groups.
+
+IPC
+  This namespace is used to manage:
+
+  * System V interprocess communication objects
+  * POSIX message queues
+
+mount
+  This namespace is used to manage mount points.
 
 UTS
   This namespace is used to manage the host name and the NIS domain name.

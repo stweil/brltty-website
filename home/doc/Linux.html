@@ -368,7 +368,7 @@ ul.auto-toc {
 <ul class="simple">
 <li><a class="reference internal" href="#for-system-administrators" id="id2">For System Administrators</a><ul>
 <li><a class="reference internal" href="#when-brltty-starts" id="id3">When BRLTTY Starts</a><ul>
-<li><a class="reference internal" href="#when-started-as-an-unprivileged-user" id="id4">When Started as an Unprivileged User</a></li>
+<li><a class="reference internal" href="#when-started-by-an-unprivileged-user" id="id4">When Started by an Unprivileged User</a></li>
 <li><a class="reference internal" href="#safer-execution-environment" id="id5">Safer Execution Environment</a></li>
 <li><a class="reference internal" href="#the-unprivileged-user" id="id6">The Unprivileged User</a></li>
 <li><a class="reference internal" href="#state-directories" id="id7">State Directories</a><ul>
@@ -401,7 +401,7 @@ ul.auto-toc {
 <li><a class="reference internal" href="#other-protective-measures" id="id22">Other Protective Measures</a><ul>
 <li><a class="reference internal" href="#safe-command-search-path" id="id23">Safe Command Search Path</a></li>
 <li><a class="reference internal" href="#safe-default-shell" id="id24">Safe Default Shell</a></li>
-<li><a class="reference internal" href="#private-namespaces" id="id25">Private Namespaces</a></li>
+<li><a class="reference internal" href="#namespace-isolation" id="id25">Namespace Isolation</a></li>
 <li><a class="reference internal" href="#the-security-filter" id="id26">The Security Filter</a></li>
 </ul>
 </li>
@@ -427,36 +427,63 @@ While we always endeavour to ensure that BRLTTY isn't abusing this freedom,
 we also don't feel that it's worth risking the possibility
 that our code might be hacked.
 To reduce this possibility, therefore, BRLTTY first
-establishes a <a class="reference internal" href="#safer-execution-environment">safer execution environment</a> within which to do its job.</p>
-<div class="section" id="when-started-as-an-unprivileged-user">
-<h4><a class="toc-backref" href="#id4">When Started as an Unprivileged User</a></h4>
-<p>When BRLTTY starts executing as an unprivileged user (not <tt class="docutils literal">root</tt>)
-then it simply can't do its job at all without a bit of administrative help.
-Figuratively speaking, therefore, it &quot;hopes&quot; that
-its executable,
-the user who started it,
-and the system
-have all been adequately configured.</p>
-<ul class="simple">
-<li>Adequate executable configuration means that
-all of the <a class="reference internal" href="#required-capabilities">required capabilities</a> have been assigned to it.</li>
-<li>Adequate user configuration means that the user who started BRLTTY
-has all of the needed <a class="reference internal" href="#group-memberships">group memberships</a>.
-This isn't necessary, i.e. BRLTTY will do this by itself,
-if the <em>cap_setgid</em> capability has also been assigned to its executable.</li>
-<li>Adequate system configuration means that
-all of the needed <a class="reference internal" href="#kernel-modules">kernel modules</a> have already been installed.
-This isn't necessary, i.e. BRLTTY will do this by itself,
-if the <em>cap_sys_module</em> capability has also been assigned to its executable.</li>
+establishes a <a class="reference internal" href="#safer-execution-environment">safer execution environment</a> within which to do its job.
+This is a best security practice known as &quot;least privilege&quot;.</p>
+<div class="section" id="when-started-by-an-unprivileged-user">
+<h4><a class="toc-backref" href="#id4">When Started by an Unprivileged User</a></h4>
+<p>BRLTTY, as of release 6.2, can be started
+by an unprivileged user (not <tt class="docutils literal">root</tt>).
+The main use case for this is for BRLTTY to be started
+by its default unprivileged user (<tt class="docutils literal">brltty</tt>).
+Others include system administrators or users
+who'd like BRLTTY to be startable
+by any user, by users who belong to a specific group, etc.</p>
+<p>In order for an unprivileged user to successfully start BRLTTY,
+its environment needs to be prepared as follows:</p>
+<ul>
+<li><p class="first">All of its <a class="reference internal" href="#required-capabilities">required capabilities</a> to have been assigned to its executable.</p>
+</li>
+<li><p class="first">The user that starts it to have all of the needed <a class="reference internal" href="#group-memberships">group memberships</a>.
+This isn't necessary, i.e. BRLTTY will join them by itself,
+if the <em>cap_setgid</em> (temporary) capability
+has also been assigned to its executable.</p>
+</li>
+<li><p class="first">The needed <a class="reference internal" href="#kernel-modules">kernel modules</a> to have been installed.
+This isn't necessary, i.e. BRLTTY will install them by itself,
+if the <em>cap_sys_module</em> (temporary) capability
+has also been assigned to its executable.</p>
+</li>
+<li><p class="first">Its <a class="reference internal" href="#state-directories">state directories</a>
+to have been created,
+to have the correct ownership,
+and to have the correct permissions.
+Each of these prerequisites isn't necessary,
+i.e. BRLTTY will take care of it by itself,
+if the associated (temporary) capability
+has also been assigned to its executable.</p>
+<table border="1" class="docutils">
+<caption>Temporary Capabilities for State Directory Prerequisites</caption>
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Prerequisite</td>
+<td>Temporary Capability</td>
+</tr>
+<tr><td>create</td>
+<td><em>cap_dac_override</em></td>
+</tr>
+<tr><td>ownership</td>
+<td><em>cap_chown</em></td>
+</tr>
+<tr><td>permissions</td>
+<td><em>cap_fowner</em></td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
-<p>If both the <em>cap_setuid</em> and <em>cap_setgid</em> capabilities
-have also been assigned to its executable
-then BRLTTY Is able to switch to <a class="reference internal" href="#the-unprivileged-user">the unprivileged user</a>.
-This isn't an issue when BRLTTY is started
-as its default unprivileged user (<tt class="docutils literal">brltty</tt>).</p>
-<p>While BRLTTY will continue to run in spite of inadequate configuration,
-some of its individual components will likely fail.
-These failures can range all the way from minor to severe.</p>
 </div>
 <div class="section" id="safer-execution-environment">
 <h4><a class="toc-backref" href="#id5">Safer Execution Environment</a></h4>
@@ -464,7 +491,7 @@ These failures can range all the way from minor to severe.</p>
 <ul class="simple">
 <li>Set a <a class="reference internal" href="#safe-command-search-path">safe command search path</a>.</li>
 <li>Set a <a class="reference internal" href="#safe-default-shell">safe default shell</a>.</li>
-<li>Create some <a class="reference internal" href="#private-namespaces">private namespaces</a>.</li>
+<li><a class="reference internal" href="#namespace-isolation">Namespace isolation</a>.</li>
 <li>Switch to executing as <a class="reference internal" href="#the-unprivileged-user">the unprivileged user</a>.</li>
 <li>Install the needed <a class="reference internal" href="#kernel-modules">kernel modules</a>.</li>
 <li>Establish the needed <a class="reference internal" href="#group-memberships">group memberships</a>.</li>
@@ -474,21 +501,23 @@ These failures can range all the way from minor to severe.</p>
 </div>
 <div class="section" id="the-unprivileged-user">
 <h4><a class="toc-backref" href="#id6">The Unprivileged User</a></h4>
-<p>The decision regarding which unprivileged user to switch to
+<p>When BRLTTY starts executing as the super user (<tt class="docutils literal">root</tt>),
+one of the first things it does is switch
+to executing as an unprivileged user.
+The decision regarding which user to continue executing as
 is made as follows:</p>
 <ol class="arabic simple">
 <li>The user specified via the <tt class="docutils literal"><span class="pre">-u</span></tt> (<tt class="docutils literal"><span class="pre">--unprivileged-user=</span></tt>) command line option.
-This step only succeeds if that user exists.
-BRLTTY skips it <a class="reference internal" href="#when-started-as-an-unprivileged-user">when started as an unprivileged user</a>.</li>
+This step only succeeds if that user exists.</li>
 <li>The default unprivileged user (<tt class="docutils literal">brltty</tt>).
 This step only succeeds if that user exists.
 The actual default user can be configured at build time
 via the <tt class="docutils literal"><span class="pre">--with-unprivileged-user</span></tt> option.
-Specifying <tt class="docutils literal"><span class="pre">--without-unprivileged-user</span></tt> causes this step to be skipped.</li>
-<li>The user that started BRLTTY.</li>
+Specifying <tt class="docutils literal"><span class="pre">--without-unprivileged-user</span></tt>
+causes this step to be skipped.</li>
+<li>The privileged user that started BRLTTY.</li>
 </ol>
-<p>In all cases,
-including when continuing to execute as the user that started BRLTTY,
+<p>After selecting the user to continue executing as,
 the following is done:</p>
 <ul>
 <li><p class="first">Ensure that all of the user identifiers
@@ -497,11 +526,9 @@ are set to the selected user.</p>
 </li>
 <li><p class="first">Ensure that all of the group identifiers
 (real, effective, saved, filesystem)
-are set to the primary group of the selected user.
-When continuing to execute as the user that started BRLTTY,
-the current real group identifier is used.</p>
+are set to the primary group of the selected user.</p>
 </li>
-<li><p class="first">If the user's home directory is defined then switch to it by:</p>
+<li><p class="first">If the selected user's home directory is defined then switch to it by:</p>
 <ul class="simple">
 <li>Changing the working directory.</li>
 <li>Setting the <tt class="docutils literal">HOME</tt> environment variable.</li>
@@ -598,25 +625,21 @@ to automate the transition from an older release of BRLTTY
 from the days when it had to execute as the super user (<tt class="docutils literal">root</tt>).
 Another (much rarer) case would be
 when transitioning from one unprivileged user to another.</p>
-<p>There are at least a couple of reasons why BRLTTY does this job since
-it could, of course, be left for a system administrator to take care of.
-One is that the steps are well-defined so it was deemed better
-to code it right in a central place
-rather than to risk administrative error.
-The other, way more important, one is that it's extremely difficult
-for a blind user to figure out what's wrong
+<p>The main reason that BRLTTY does this job is
+that it's extremely difficult for a blind user to figure out what's wrong
 before his/her braille device is up and running.
 Put another way, it can be near impossible for a braille user to figure out
 why BRLTTY is having problems while BRLTTY is having problems.</p>
 <p>The following actions are taken for each of the state directories:</p>
 <ul class="simple">
-<li>If it doesn't exist then it's created.
+<li>If it doesn't exist then it is created.
 This usually requires the <em>cap_dac_override</em> (temporary) capability
 because it's usually a subdirectory of a directory
 that can only be written to by the super user (<tt class="docutils literal">root</tt>),
 e.g. <tt class="docutils literal">/var/lib/</tt>.</li>
-<li>Its owning group is changed to be the primary group
-of <a class="reference internal" href="#the-unprivileged-user">the unprivileged user</a> that BRLTTY Is executing as.
+<li>Its owning user and group are changed to be
+the user and the primary group of the user
+that BRLTTY Is executing as.
 The same change is also made to whatever the directory contains.
 This requires the <em>cap_chown</em> (temporary) capability
 for a directory or file that's owned by a different user.</li>
@@ -895,7 +918,7 @@ Its associated field isn't changed.</p>
 <div class="section" id="assigning-capabilities-to-the-executable">
 <h4><a class="toc-backref" href="#id14">Assigning Capabilities to the Executable</a></h4>
 <p>First, here's a summary of all of the capabilities that BRLTTY needs
-<a class="reference internal" href="#when-started-as-an-unprivileged-user">when started as an unprivileged user</a>.</p>
+<a class="reference internal" href="#when-started-by-an-unprivileged-user">when started by an unprivileged user</a>.</p>
 <ul class="simple">
 <li>The <a class="reference internal" href="#required-capabilities">required capabilities</a> are highlighted <strong>this way</strong>.
 They're needed throughout BRLTTY's execution.</li>
@@ -914,7 +937,7 @@ and are relinquished when they're no longer needed.</li>
 <td>Reason</td>
 </tr>
 <tr><td><em>cap_chown</em></td>
-<td>claiming group ownership of the <a class="reference internal" href="#state-directories">state directories</a></td>
+<td>claiming ownership of the <a class="reference internal" href="#state-directories">state directories</a></td>
 </tr>
 <tr><td><em>cap_dac_override</em></td>
 <td>creating missing <a class="reference internal" href="#state-directories">state directories</a></td>
@@ -927,9 +950,6 @@ and are relinquished when they're no longer needed.</li>
 </tr>
 <tr><td><em>cap_setgid</em></td>
 <td>switching to the primary group of <a class="reference internal" href="#the-unprivileged-user">the unprivileged user</a> and establishing the needed <a class="reference internal" href="#group-memberships">group memberships</a></td>
-</tr>
-<tr><td><em>cap_setuid</em></td>
-<td>switching to <a class="reference internal" href="#the-unprivileged-user">the unprivileged user</a></td>
 </tr>
 <tr><td><strong>cap_sys_admin</strong></td>
 <td>injecting input characters</td>
@@ -947,11 +967,11 @@ and are relinquished when they're no longer needed.</li>
 <p>The host command to assign all of the capabilities,
 i.e. both the <a class="reference internal" href="#required-capabilities">required capabilities</a> and the <a class="reference internal" href="#temporary-capabilities">temporary capabilities</a>,
 to BRLTTY's executable
-so that it'll be fully functional <a class="reference internal" href="#when-started-as-an-unprivileged-user">when started as an unprivileged user</a>,
+so that it'll be fully functional <a class="reference internal" href="#when-started-by-an-unprivileged-user">when started by an unprivileged user</a>,
 without requiring any additional administrator configuration,
 is:</p>
 <pre class="literal-block">
-setcap cap_setuid,cap_setgid,cap_chown,cap_fowner,cap_dac_override,cap_sys_module,cap_sys_admin,cap_sys_tty_config,cap_mknod+p /path/to/brltty
+setcap cap_setgid,cap_chown,cap_fowner,cap_dac_override,cap_sys_module,cap_sys_admin,cap_sys_tty_config,cap_mknod+p /path/to/brltty
 </pre>
 <p>It must be run as the super user (<tt class="docutils literal">root</tt>).</p>
 </div>
@@ -1005,7 +1025,7 @@ that that capability grants from BRLTTY.</p>
 </tr>
 <tr><td><tt class="docutils literal"><span class="pre">-o</span></tt></td>
 <td><em>cap_chown</em></td>
-<td>claiming group ownership of the <a class="reference internal" href="#state-directories">state directories</a></td>
+<td>claiming ownership of the <a class="reference internal" href="#state-directories">state directories</a></td>
 </tr>
 <tr><td><tt class="docutils literal"><span class="pre">-p</span></tt></td>
 <td><em>cap_fowner</em></td>
@@ -1014,10 +1034,6 @@ that that capability grants from BRLTTY.</p>
 <tr><td><tt class="docutils literal"><span class="pre">-s</span></tt></td>
 <td><strong>cap_sys_tty_config</strong></td>
 <td>using the built-in PC speaker</td>
-</tr>
-<tr><td><tt class="docutils literal"><span class="pre">-u</span></tt></td>
-<td><em>cap_setuid</em></td>
-<td>switching to <a class="reference internal" href="#the-unprivileged-user">the unprivileged user</a></td>
 </tr>
 </tbody>
 </table>
@@ -1130,14 +1146,14 @@ and aren't passed along to any host command that it runs.</p>
 <h4><a class="toc-backref" href="#id21">Temporary Capabilities</a></h4>
 <p>BRLTTY only uses the privileged kernel operations
 that are granted via these capabilities
-<a class="reference internal" href="#when-started-as-an-unprivileged-user">when started as an unprivileged user</a>.
+<a class="reference internal" href="#when-started-by-an-unprivileged-user">when started by an unprivileged user</a>.
 They allow it to configure itself,
 thus not relying so heavily on explicit administrator configuration,
 and are relinquished right after this has been done.</p>
 <dl class="docutils">
 <dt><em>cap_chown</em></dt>
 <dd>If this capability has also been assigned to BRLTTY's executable
-then it can claim group ownership of its <a class="reference internal" href="#state-directories">state directories</a>
+then it can claim ownership of its <a class="reference internal" href="#state-directories">state directories</a>
 and their contents
 after having successfully switched to executing as <a class="reference internal" href="#the-unprivileged-user">the unprivileged user</a>.
 The primary group of that user is used.</dd>
@@ -1158,17 +1174,9 @@ and the set-group-ID bit is set.</dd>
 <dd>If this capability has also been assigned to BRLTTY's executable
 then it ignores the invoking user's group memberships
 and internally establishes the actually needed <a class="reference internal" href="#group-memberships">group memberships</a>.</dd>
-<dt><em>cap_setuid</em></dt>
-<dd>If this capability has also been assigned to BRLTTY's executable
-then it can switch to the default unprivileged user (<tt class="docutils literal">brltty</tt>).
-The <em>cap_setgid</em> (temporary) capability is also required
-so that it can also switch to that user's primary group.
-This feature doesn't allow switching to an explicit user
-(via the <tt class="docutils literal"><span class="pre">-u</span></tt> (<tt class="docutils literal"><span class="pre">--unprivileged-user=</span></tt>) command line option).</dd>
 <dt><strong>cap_sys_admin</strong></dt>
 <dd>While this is one of the <a class="reference internal" href="#required-capabilities">required capabilities</a>,
-it's also needed as a temporary capability
-in order to create privileged <a class="reference internal" href="#private-namespaces">private namespaces</a>.</dd>
+it's also needed as a temporary capability for <a class="reference internal" href="#namespace-isolation">namespace isolation</a>.</dd>
 <dt><em>cap_sys_module</em></dt>
 <dd>If this capability has also been assigned to BRLTTY's executable
 then the needed <a class="reference internal" href="#kernel-modules">kernel modules</a> needn't have been already installed
@@ -1206,12 +1214,23 @@ ls -l /bin/sh
 </pre>
 <p>Note that scripts usually internally specify which shell is to be used.</p>
 </div>
-<div class="section" id="private-namespaces">
-<h4><a class="toc-backref" href="#id25">Private Namespaces</a></h4>
-<p>BRLTTY unshares (makes a private copy of)
-some of the kernel namespaces associated with its process.
-The namespaces that it currently unshares are:</p>
+<div class="section" id="namespace-isolation">
+<h4><a class="toc-backref" href="#id25">Namespace Isolation</a></h4>
+<p>BRLTTY isolates some of the kernel namespaces
+that are associated with its process.
+The namespaces that it currently isolates are:</p>
 <dl class="docutils">
+<dt>cgroup</dt>
+<dd>This namespace is used to manage control groups.</dd>
+<dt>IPC</dt>
+<dd><p class="first">This namespace is used to manage:</p>
+<ul class="last simple">
+<li>System V interprocess communication objects</li>
+<li>POSIX message queues</li>
+</ul>
+</dd>
+<dt>mount</dt>
+<dd>This namespace is used to manage mount points.</dd>
 <dt>UTS</dt>
 <dd>This namespace is used to manage the host name and the NIS domain name.</dd>
 </dl>
