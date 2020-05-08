@@ -367,47 +367,44 @@ ul.auto-toc {
 <p class="topic-title first">Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#least-privilege" id="id2">Least Privilege</a><ul>
-<li><a class="reference internal" href="#when-started-by-an-unprivileged-user" id="id3">When Started by an Unprivileged User</a><ul>
-<li><a class="reference internal" href="#safer-execution-environment" id="id4">Safer Execution Environment</a></li>
+<li><a class="reference internal" href="#safer-execution-environment" id="id3">Safer Execution Environment</a><ul>
+<li><a class="reference internal" href="#when-started-by-the-super-user" id="id4">When Started by the Super User</a><ul>
 <li><a class="reference internal" href="#the-unprivileged-user" id="id5">The Unprivileged User</a></li>
-<li><a class="reference internal" href="#state-directories" id="id6">State Directories</a><ul>
-<li><a class="reference internal" href="#specifying-state-directory-locations" id="id7">Specifying State Directory Locations</a></li>
-<li><a class="reference internal" href="#gaining-full-access" id="id8">Gaining Full Access</a></li>
+<li><a class="reference internal" href="#state-directories" id="id6">State Directories</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#when-started-by-an-unprivileged-user" id="id7">When Started by an Unprivileged User</a></li>
+<li><a class="reference internal" href="#privilege-parameters" id="id8">Privilege Parameters</a></li>
+<li><a class="reference internal" href="#safe-command-search-path" id="id9">Safe Command Search Path</a></li>
+<li><a class="reference internal" href="#safe-default-shell" id="id10">Safe Default Shell</a></li>
+<li><a class="reference internal" href="#namespace-isolation" id="id11">Namespace Isolation</a></li>
+<li><a class="reference internal" href="#secure-computing-filter" id="id12">Secure Computing Filter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#preparing-the-environment" id="id13">Preparing the Environment</a><ul>
+<li><a class="reference internal" href="#creating-the-unprivileged-user" id="id14">Creating the Unprivileged User</a><ul>
+<li><a class="reference internal" href="#the-useradd-command" id="id15">The <tt class="docutils literal">useradd</tt> Command</a></li>
+<li><a class="reference internal" href="#the-brltty-mkuser-script" id="id16">The <tt class="docutils literal"><span class="pre">brltty-mkuser</span></tt> Script</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#assigning-capabilities-to-the-executable" id="id17">Assigning Capabilities to the Executable</a><ul>
+<li><a class="reference internal" href="#the-setcap-command" id="id18">The <tt class="docutils literal">setcap</tt> Command</a></li>
+<li><a class="reference internal" href="#the-brltty-setcaps-script" id="id19">The <tt class="docutils literal"><span class="pre">brltty-setcaps</span></tt> Script</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#preparing-the-environment" id="id9">Preparing the Environment</a><ul>
-<li><a class="reference internal" href="#creating-the-unprivileged-user" id="id10">Creating the Unprivileged User</a><ul>
-<li><a class="reference internal" href="#the-useradd-command" id="id11">The <tt class="docutils literal">useradd</tt> Command</a></li>
-<li><a class="reference internal" href="#the-brltty-mkuser-script" id="id12">The <tt class="docutils literal"><span class="pre">brltty-mkuser</span></tt> Script</a></li>
+<li><a class="reference internal" href="#privileged-host-operations" id="id20">Privileged Host Operations</a><ul>
+<li><a class="reference internal" href="#kernel-modules" id="id21">Kernel Modules</a></li>
+<li><a class="reference internal" href="#group-memberships" id="id22">Group Memberships</a></li>
+<li><a class="reference internal" href="#required-capabilities" id="id23">Required Capabilities</a></li>
+<li><a class="reference internal" href="#temporary-capabilities" id="id24">Temporary Capabilities</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#assigning-capabilities-to-the-executable" id="id13">Assigning Capabilities to the Executable</a><ul>
-<li><a class="reference internal" href="#the-setcap-command" id="id14">The <tt class="docutils literal">setcap</tt> Command</a></li>
-<li><a class="reference internal" href="#the-brltty-setcaps-script" id="id15">The <tt class="docutils literal"><span class="pre">brltty-setcaps</span></tt> Script</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#privileged-host-operations" id="id16">Privileged Host Operations</a><ul>
-<li><a class="reference internal" href="#kernel-modules" id="id17">Kernel Modules</a></li>
-<li><a class="reference internal" href="#group-memberships" id="id18">Group Memberships</a></li>
-<li><a class="reference internal" href="#required-capabilities" id="id19">Required Capabilities</a></li>
-<li><a class="reference internal" href="#temporary-capabilities" id="id20">Temporary Capabilities</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#other-protective-measures" id="id21">Other Protective Measures</a><ul>
-<li><a class="reference internal" href="#safe-command-search-path" id="id22">Safe Command Search Path</a></li>
-<li><a class="reference internal" href="#safe-default-shell" id="id23">Safe Default Shell</a></li>
-<li><a class="reference internal" href="#namespace-isolation" id="id24">Namespace Isolation</a></li>
-<li><a class="reference internal" href="#the-security-filter" id="id25">The Security Filter</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#known-problems" id="id26">Known Problems</a><ul>
-<li><a class="reference internal" href="#writing-to-sysfs-files" id="id27">Writing to SYSFS Files</a></li>
-<li><a class="reference internal" href="#creating-virtual-devices-via-uinput" id="id28">Creating Virtual Devices via Uinput</a></li>
-<li><a class="reference internal" href="#creating-private-copies-of-device-files" id="id29">Creating Private Copies of Device Files</a></li>
+<li><a class="reference internal" href="#known-problems" id="id25">Known Problems</a><ul>
+<li><a class="reference internal" href="#writing-to-sysfs-files" id="id26">Writing to SYSFS Files</a></li>
+<li><a class="reference internal" href="#creating-virtual-devices-via-uinput" id="id27">Creating Virtual Devices via Uinput</a></li>
+<li><a class="reference internal" href="#creating-private-copies-of-device-files" id="id28">Creating Private Copies of Device Files</a></li>
 </ul>
 </li>
 </ul>
@@ -427,64 +424,10 @@ To reduce this possibility, therefore, BRLTTY first
 establishes a <a class="reference internal" href="#safer-execution-environment">safer execution environment</a> within which It only has
 access to those <a class="reference internal" href="#privileged-host-operations">privileged host operations</a> that it actually needs.
 This is a best security practice known as <strong>least privilege</strong>.</p>
-<div class="section" id="when-started-by-an-unprivileged-user">
-<h3><a class="toc-backref" href="#id3">When Started by an Unprivileged User</a></h3>
-<p>BRLTTY, as of release 6.2, can be started
-by an unprivileged user (not <tt class="docutils literal">root</tt>).
-The main use case for this is for BRLTTY to be started
-by its default unprivileged user (<tt class="docutils literal">brltty</tt>).
-Others include system administrators or users
-who'd like BRLTTY to be startable
-by any user, by users who belong to a specific group, etc.</p>
-<p>In order for an unprivileged user to successfully start BRLTTY,
-its environment needs to be prepared as follows:</p>
-<ul>
-<li><p class="first">All of its <a class="reference internal" href="#required-capabilities">required capabilities</a> to have been assigned to its executable.</p>
-</li>
-<li><p class="first">The user that starts it to have all of the needed <a class="reference internal" href="#group-memberships">group memberships</a>.
-This isn't necessary, i.e. BRLTTY will join them by itself,
-if the <em>cap_setgid</em> (temporary) capability
-has also been assigned to its executable.</p>
-</li>
-<li><p class="first">The needed <a class="reference internal" href="#kernel-modules">kernel modules</a> to have been installed.
-This isn't necessary, i.e. BRLTTY will install them by itself,
-if the <em>cap_sys_module</em> (temporary) capability
-has also been assigned to its executable.</p>
-</li>
-<li><p class="first">Its <a class="reference internal" href="#state-directories">state directories</a>
-to have been created,
-to have the correct ownership,
-and to have the correct permissions.
-Each of these prerequisites isn't necessary,
-i.e. BRLTTY will take care of it by itself,
-if the associated (temporary) capability
-has also been assigned to its executable.
-They are:</p>
-<table border="1" class="docutils">
-<caption>Temporary Capabilities for State Directory Prerequisites</caption>
-<colgroup>
-<col width="38%" />
-<col width="63%" />
-</colgroup>
-<tbody valign="top">
-<tr><td>Prerequisite</td>
-<td>Temporary Capability</td>
-</tr>
-<tr><td>creation</td>
-<td><em>cap_dac_override</em></td>
-</tr>
-<tr><td>ownership</td>
-<td><em>cap_chown</em></td>
-</tr>
-<tr><td>permissions</td>
-<td><em>cap_fowner</em></td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
 <div class="section" id="safer-execution-environment">
-<h4><a class="toc-backref" href="#id4">Safer Execution Environment</a></h4>
+<h3><a class="toc-backref" href="#id3">Safer Execution Environment</a></h3>
+<div class="section" id="when-started-by-the-super-user">
+<h4><a class="toc-backref" href="#id4">When Started by the Super User</a></h4>
 <p>BRLTTY takes a number of steps to establish a safer execution environment:</p>
 <ul class="simple">
 <li>Set a <a class="reference internal" href="#safe-command-search-path">safe command search path</a>.</li>
@@ -495,10 +438,10 @@ They are:</p>
 <li>Establish the needed <a class="reference internal" href="#group-memberships">group memberships</a>.</li>
 <li>Set its <a class="reference internal" href="#required-capabilities">required capabilities</a>.</li>
 <li>Relinquish all non-required capabilities.</li>
+<li>Install the <a class="reference internal" href="#secure-computing-filter">secure computing filter</a>.</li>
 </ul>
-</div>
 <div class="section" id="the-unprivileged-user">
-<h4><a class="toc-backref" href="#id5">The Unprivileged User</a></h4>
+<h5><a class="toc-backref" href="#id5">The Unprivileged User</a></h5>
 <p>When BRLTTY starts executing as the super user (<tt class="docutils literal">root</tt>),
 one of the first things it does is switch
 to executing as an unprivileged user.
@@ -506,15 +449,8 @@ The user is selected as follows:</p>
 <dl class="docutils">
 <dt>Explicit Specification</dt>
 <dd><p class="first">This method is only allowed when BRLTTY was started as the super user (<tt class="docutils literal">root</tt>).
-From highest to lowest precedence, it may be specified via:</p>
-<ul class="simple">
-<li>The <tt class="docutils literal"><span class="pre">-u</span></tt> (<tt class="docutils literal"><span class="pre">--unprivileged-user=</span></tt>) command line option.</li>
-<li>The <tt class="docutils literal"><span class="pre">unprivileged-user</span></tt> configuration directive
-(in <tt class="docutils literal">/etc/brltty.conf</tt>).</li>
-<li>The <tt class="docutils literal">BRLTTY_UNPRIVILEGED_USER</tt> environment variable
-(if the <tt class="docutils literal"><span class="pre">-E</span></tt> command line option has been specified).</li>
-</ul>
-<p>If the user isn't explicitly specified,
+It may be specified via the <tt class="docutils literal">user</tt> <a class="reference internal" href="#privilege-parameter">privilege parameter</a>.
+If it isn't explicitly specified,
 or if there's a problem:</p>
 <ul class="simple">
 <li>The user doesn't exist.</li>
@@ -530,11 +466,11 @@ the <tt class="docutils literal"><span class="pre">--with-unprivileged-user</spa
 If there's a problem:</p>
 <ul class="simple">
 <li>the user doesn't exist.</li>
-<li>There is no default user because
-BRLTTY was configured with the <tt class="docutils literal"><span class="pre">--without-unprivileged-user</span></tt> option.</li>
+<li>BRLTTY wasn't configured with a <tt class="docutils literal">user</tt> <a class="reference internal" href="#privilege-parameter">privilege parameter</a>.</li>
 </ul>
 <p class="last">then BRLTTY continues to execute as the super user (<tt class="docutils literal">root</tt>).
-In this case, it still establishes its <a class="reference internal" href="#safer-execution-environment">safer execution environment</a>.</p>
+In this case, it still establishes
+the rest of its <a class="reference internal" href="#safer-execution-environment">safer execution environment</a>.</p>
 </dd>
 </dl>
 <p>After having successfully switched to executing as an unprivileged user,
@@ -563,7 +499,7 @@ are set to the primary group of the selected user.</p>
 </ul>
 </div>
 <div class="section" id="state-directories">
-<h4><a class="toc-backref" href="#id6">State Directories</a></h4>
+<h5><a class="toc-backref" href="#id6">State Directories</a></h5>
 <p>A state directory is one which a program needs to be able to write data to.
 BRLTTY's state directories are:</p>
 <dl class="docutils">
@@ -593,8 +529,6 @@ or that are inaccessible (can't be opened).
 It's also where, if requested, BRLTTY creates its input FIFO
 (which allows users to take advantage of its text-to-speech capability).</dd>
 </dl>
-<div class="section" id="specifying-state-directory-locations">
-<h5><a class="toc-backref" href="#id7">Specifying State Directory Locations</a></h5>
 <p>The actual locations of these directories can be specified in a number of ways.
 From highest to lowest precedence, they are:</p>
 <ul class="simple">
@@ -639,9 +573,6 @@ From highest to lowest precedence, they are:</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="gaining-full-access">
-<h5><a class="toc-backref" href="#id8">Gaining Full Access</a></h5>
 <p>After having successfully switched to executing as <a class="reference internal" href="#the-unprivileged-user">the unprivileged user</a>,
 BRLTTY attempts to gain full access to its state directories.
 The most common case where this is necessary is
@@ -706,11 +637,210 @@ If it's really necessary to use such a directory
 then it's far better to let a human being take care of it.</p>
 </div>
 </div>
+<div class="section" id="when-started-by-an-unprivileged-user">
+<h4><a class="toc-backref" href="#id7">When Started by an Unprivileged User</a></h4>
+<p>BRLTTY, as of release 6.2, can be started
+by an unprivileged user (not <tt class="docutils literal">root</tt>).
+The main use case for this is for BRLTTY to be started
+by its default unprivileged user (<tt class="docutils literal">brltty</tt>).
+Others include system administrators or users
+who'd like BRLTTY to be startable
+by any user, by users who belong to a specific group, etc.</p>
+<p>In order for an unprivileged user to successfully start BRLTTY,
+the environment needs to be prepared as follows:</p>
+<ul>
+<li><p class="first">Assign the <a class="reference internal" href="#required-capabilities">required capabilities</a> to BRLTTY's executable.</p>
+</li>
+<li><p class="first">Give the user that's to be able to start BRLTTY
+the needed <a class="reference internal" href="#group-memberships">group memberships</a>.
+This isn't necessary, i.e. BRLTTY will join them by itself,
+if the <em>cap_setgid</em> (temporary) capability
+has also been assigned to its executable.</p>
+</li>
+<li><p class="first">Install the needed <a class="reference internal" href="#kernel-modules">kernel modules</a>.
+This isn't necessary, i.e. BRLTTY will install them by itself,
+if the <em>cap_sys_module</em> (temporary) capability
+has also been assigned to its executable.</p>
+</li>
+<li><p class="first">Ensure that BRLTTY's <a class="reference internal" href="#state-directories">state directories</a>
+have been created,
+have the correct ownership,
+and have the correct permissions.
+Each of these prerequisites isn't necessary,
+i.e. BRLTTY will take care of it by itself,
+if the associated (temporary) capability
+has also been assigned to its executable.
+They are:</p>
+<table border="1" class="docutils">
+<caption>Temporary Capabilities for State Directory Prerequisites</caption>
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Prerequisite</td>
+<td>Temporary Capability</td>
+</tr>
+<tr><td>creation</td>
+<td><em>cap_dac_override</em></td>
+</tr>
+<tr><td>ownership</td>
+<td><em>cap_chown</em></td>
+</tr>
+<tr><td>permissions</td>
+<td><em>cap_fowner</em></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="section" id="privilege-parameters">
+<span id="privilege-parameter"></span><h4><a class="toc-backref" href="#id8">Privilege Parameters</a></h4>
+<p>Privilege parameters control how BRLTTY establishes
+its <a class="reference internal" href="#safer-execution-environment">safer execution environment</a>.
+From highest to lowest precedence, they can be specified via:</p>
+<ul class="simple">
+<li>The <tt class="docutils literal"><span class="pre">--privilege-parameters</span></tt> command line option.</li>
+<li>The <tt class="docutils literal"><span class="pre">privilege-parameters</span></tt> configuration directive (in <tt class="docutils literal">/etc/brltty.conf</tt>).</li>
+<li>The <tt class="docutils literal">BRLTTY_PRIVILEGE_PARAMETERS</tt> environment variable (if the <tt class="docutils literal"><span class="pre">-E</span></tt> command line option has been specified).</li>
+<li>The <tt class="docutils literal"><span class="pre">--with-privilege-parameters</span></tt> configure option (at build time).</li>
+</ul>
+<p>Each of these takes a comma-separated list of parameters in the form:</p>
+<pre class="literal-block">
+platform:name=value
+</pre>
+<p>The <tt class="docutils literal">platform:</tt> part is optional -
+if it's omitted then the parameter setting applies on all platforms.
+It's best, therefore, to always include it.
+The platform code for Linux is <tt class="docutils literal">lx</tt>.</p>
+<p>The command line option can be specified any number of times.
+Likewise, the configuration directive can be specified any number of times.
+Additional specifications extend, rather than replace, the parameter list.
+The same parameter specified later at the same level of precedence,
+or at a higher level of precedence, overrides its earlier setting.</p>
+<p>The following privilege parameters are supported for Linux:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal">path</tt></dt>
+<dd>This parameter sets the <a class="reference internal" href="#safe-command-search-path">safe command search path</a>.
+No attempt is made to validate it.</dd>
+<dt><tt class="docutils literal">seccomp</tt></dt>
+<dd><p class="first">This parameter sets the mode of the <a class="reference internal" href="#secure-computing-filter">secure computing filter</a>.
+The supported modes are:</p>
+<dl class="last docutils">
+<dt><tt class="docutils literal">no</tt></dt>
+<dd>Don't install the filter.
+This is the default.</dd>
+<dt><tt class="docutils literal">log</tt></dt>
+<dd>Log each unapproved system call to <tt class="docutils literal">syslog</tt>.
+It's still executed.</dd>
+<dt><tt class="docutils literal">fail</tt></dt>
+<dd>Each unapproved system call fails with <tt class="docutils literal">errno</tt> set to <tt class="docutils literal">EPERM</tt>
+(operation not permitted).</dd>
+<dt><tt class="docutils literal">kill</tt></dt>
+<dd>An attempt to execute an unapproved system call
+causes the entire BRLTTY process to be killed.</dd>
+</dl>
+</dd>
+<dt><tt class="docutils literal">shell</tt></dt>
+<dd>This parameter sets the path to the <a class="reference internal" href="#safe-default-shell">safe default shell</a>.
+No attempt is made to validate it.</dd>
+<dt><tt class="docutils literal">user</tt></dt>
+<dd>This parameter sets <a class="reference internal" href="#the-unprivileged-user">the unprivileged user</a>.
+It defaults to <tt class="docutils literal">brltty</tt>.</dd>
+</dl>
+</div>
+<div class="section" id="safe-command-search-path">
+<h4><a class="toc-backref" href="#id9">Safe Command Search Path</a></h4>
+<p>A safe command search path is established
+by setting the <tt class="docutils literal">PATH</tt> environment variable
+to a system-configured set of safe directories.
+You can find out which ones they are by running this command:</p>
+<pre class="literal-block">
+getconf PATH
+</pre>
+<p>If, for some reason, the system-configured path isn't available
+then <tt class="docutils literal"><span class="pre">/usr/sbin:/sbin:/usr/bin:/bin</span></tt> is used.</p>
+<p>The path can be explicitly set
+via the <tt class="docutils literal">path</tt> <a class="reference internal" href="#privilege-parameter">privilege parameter</a>.</p>
+</div>
+<div class="section" id="safe-default-shell">
+<h4><a class="toc-backref" href="#id10">Safe Default Shell</a></h4>
+<p>A safe default shell for external software to assume
+is established by setting the <tt class="docutils literal">SHELL</tt> environment variable
+to <tt class="docutils literal">/bin/sh</tt>.
+On many systems, this is the Bourne Shell.
+On others, it's a symbolic link to some other shell.
+To find out what it is on your system, run this command:</p>
+<pre class="literal-block">
+ls -l <tt class="docutils literal">/bin/sh</tt>
+</pre>
+<p>Note that scripts usually internally specify which shell is to be used.</p>
+<p>The default shell can be explicitly set
+via the <tt class="docutils literal">shell</tt> <a class="reference internal" href="#privilege-parameter">privilege parameter</a>.</p>
+</div>
+<div class="section" id="namespace-isolation">
+<h4><a class="toc-backref" href="#id11">Namespace Isolation</a></h4>
+<p>BRLTTY isolates some of the kernel namespaces
+that are associated with its process.
+The namespaces that it currently isolates are:</p>
+<dl class="docutils">
+<dt>cgroup</dt>
+<dd>This namespace is used to manage control groups.</dd>
+<dt>IPC</dt>
+<dd><p class="first">This namespace is used to manage:</p>
+<ul class="last simple">
+<li>System V interprocess communication objects</li>
+<li>POSIX message queues</li>
+</ul>
+</dd>
+<dt>mount</dt>
+<dd>This namespace is used to manage mount points.</dd>
+<dt>UTS</dt>
+<dd>This namespace is used to manage the host name and the NIS domain name.</dd>
+</dl>
+</div>
+<div class="section" id="secure-computing-filter">
+<h4><a class="toc-backref" href="#id12">Secure Computing Filter</a></h4>
+<p>The kernel provides a secure computing filter, known as <tt class="docutils literal">seccomp</tt>,
+that verifies that only an approved set of system calls is being used.
+The default is that BRLTTY doesn't actually use it
+because, by nature, using a system call filter
+makes a program somewhat fragile.
+Reasons for this include:</p>
+<ul class="simple">
+<li>The various object libraries that BRLTTY relies on, e.g. <tt class="docutils literal">libc</tt>,
+might change which system calls they use from one release to the next.</li>
+<li>The filter is also applied to any external software,
+e.g. text-to-speech engines,
+that BRLTTY uses.</li>
+</ul>
+<p>Even though the default is that BRLTTY doesn't use the filter,
+access to it is still provided for those users or administrators who prefer
+to avail themselves of the additional protection that it offers.
+Use the <tt class="docutils literal">seccomp</tt> <a class="reference internal" href="#privilege-parameter">privilege parameter</a> to specify how BRLTTY uses it.</p>
+<ul class="simple">
+<li>Specify <tt class="docutils literal">log</tt> if you'd like BRLTTY to continue executing normally
+but to also record any unapproved system calls in the system log.</li>
+<li>Specify <tt class="docutils literal">fail</tt> if you'd like unapproved system calls to fail,
+with BRLTTY attempting to handle those failures.
+Note that, while BRLTTY endeavours to handle such failures well,
+external software that it uses might not.</li>
+<li>Specify <tt class="docutils literal">kill</tt> if you'd like an unapproved system call
+to cause the entire BRLTTY process to be summarily killed.</li>
+</ul>
+<p>The current list of approved system calls
+is in the <tt class="docutils literal">syscalls_linux.h</tt> header,
+which is in the <tt class="docutils literal">Programs/</tt> subdirectory of BRLTTY's source tree.
+BRLTTY must be rebuilt in order for changes to the list to become effective.
+Please let us know if you discover any system calls
+that are missing and should be added.</p>
+</div>
 </div>
 <div class="section" id="preparing-the-environment">
-<h3><a class="toc-backref" href="#id9">Preparing the Environment</a></h3>
+<h3><a class="toc-backref" href="#id13">Preparing the Environment</a></h3>
 <div class="section" id="creating-the-unprivileged-user">
-<h4><a class="toc-backref" href="#id10">Creating the Unprivileged User</a></h4>
+<h4><a class="toc-backref" href="#id14">Creating the Unprivileged User</a></h4>
 <p>We recommend that <a class="reference internal" href="#the-unprivileged-user">the unprivileged user</a> be named <tt class="docutils literal">brltty</tt>,
 and that it be a system user.</p>
 <p>The user's primary group should be user-specific.
@@ -731,7 +861,7 @@ We recommend something like:</p>
 Braille Device Daemon
 </pre>
 <div class="section" id="the-useradd-command">
-<h5><a class="toc-backref" href="#id11">The <tt class="docutils literal">useradd</tt> Command</a></h5>
+<h5><a class="toc-backref" href="#id15">The <tt class="docutils literal">useradd</tt> Command</a></h5>
 <p>The host command to create a user is:</p>
 <pre class="literal-block">
 useradd <em>option</em> ... <em>name</em>
@@ -785,7 +915,7 @@ its most important options are:</p>
 </table>
 </div>
 <div class="section" id="the-brltty-mkuser-script">
-<h5><a class="toc-backref" href="#id12">The <tt class="docutils literal"><span class="pre">brltty-mkuser</span></tt> Script</a></h5>
+<h5><a class="toc-backref" href="#id16">The <tt class="docutils literal"><span class="pre">brltty-mkuser</span></tt> Script</a></h5>
 <p>The top-level directory of BRLTTY's source tree contains
 a script named <tt class="docutils literal"><span class="pre">brltty-mkuser</span></tt> that simplifies the job of
 Creating and making changes to <a class="reference internal" href="#the-unprivileged-user">the unprivileged user</a>.
@@ -941,7 +1071,7 @@ Its associated field isn't changed.</p>
 </div>
 </div>
 <div class="section" id="assigning-capabilities-to-the-executable">
-<h4><a class="toc-backref" href="#id13">Assigning Capabilities to the Executable</a></h4>
+<h4><a class="toc-backref" href="#id17">Assigning Capabilities to the Executable</a></h4>
 <p>First, here's a summary of all of the capabilities that BRLTTY needs
 <a class="reference internal" href="#when-started-by-an-unprivileged-user">when started by an unprivileged user</a>.</p>
 <ul class="simple">
@@ -988,7 +1118,7 @@ and are relinquished when they're no longer needed.</li>
 </tbody>
 </table>
 <div class="section" id="the-setcap-command">
-<h5><a class="toc-backref" href="#id14">The <tt class="docutils literal">setcap</tt> Command</a></h5>
+<h5><a class="toc-backref" href="#id18">The <tt class="docutils literal">setcap</tt> Command</a></h5>
 <p>The host command to assign all of the capabilities,
 i.e. both the <a class="reference internal" href="#required-capabilities">required capabilities</a> and the <a class="reference internal" href="#temporary-capabilities">temporary capabilities</a>,
 to BRLTTY's executable
@@ -1001,7 +1131,7 @@ setcap cap_setgid,cap_chown,cap_fowner,cap_dac_override,cap_sys_module,cap_sys_a
 <p>It must be run as the super user (<tt class="docutils literal">root</tt>).</p>
 </div>
 <div class="section" id="the-brltty-setcaps-script">
-<h5><a class="toc-backref" href="#id15">The <tt class="docutils literal"><span class="pre">brltty-setcaps</span></tt> Script</a></h5>
+<h5><a class="toc-backref" href="#id19">The <tt class="docutils literal"><span class="pre">brltty-setcaps</span></tt> Script</a></h5>
 <p>The top-level directory of BRLTTY's source tree contains
 a script named <tt class="docutils literal"><span class="pre">brltty-setcaps</span></tt> that simplifies the job of
 <a class="reference internal" href="#assigning-capabilities-to-the-executable">assigning capabilities to the executable</a>.
@@ -1094,11 +1224,11 @@ that that capability grants from BRLTTY.</p>
 </div>
 </div>
 <div class="section" id="privileged-host-operations">
-<h3><a class="toc-backref" href="#id16">Privileged Host Operations</a></h3>
+<h3><a class="toc-backref" href="#id20">Privileged Host Operations</a></h3>
 <p>The privileged host operations that BRLTTY needs to be able to perform
 in order to be fully functional are:</p>
 <div class="section" id="kernel-modules">
-<h4><a class="toc-backref" href="#id17">Kernel Modules</a></h4>
+<h4><a class="toc-backref" href="#id21">Kernel Modules</a></h4>
 <p>BRLTTY relies on functionality provided by these kernel modules:</p>
 <dl class="docutils">
 <dt><strong>pcspkr</strong></dt>
@@ -1108,7 +1238,7 @@ in order to be fully functional are:</p>
 </dl>
 </div>
 <div class="section" id="group-memberships">
-<h4><a class="toc-backref" href="#id18">Group Memberships</a></h4>
+<h4><a class="toc-backref" href="#id22">Group Memberships</a></h4>
 <p>BRLTTY relies on file system and server (daemon) access
 granted via membership in these groups:</p>
 <dl class="docutils">
@@ -1150,7 +1280,7 @@ to BRLTTY's navigation and configuration commands).</dd>
 </dl>
 </div>
 <div class="section" id="required-capabilities">
-<h4><a class="toc-backref" href="#id19">Required Capabilities</a></h4>
+<h4><a class="toc-backref" href="#id23">Required Capabilities</a></h4>
 <p>BRLTTY uses the privileged kernel operations
 that are granted via these capabilities
 throughout its execution.
@@ -1168,7 +1298,7 @@ and aren't passed along to any host command that it runs.</p>
 </dl>
 </div>
 <div class="section" id="temporary-capabilities">
-<h4><a class="toc-backref" href="#id20">Temporary Capabilities</a></h4>
+<h4><a class="toc-backref" href="#id24">Temporary Capabilities</a></h4>
 <p>BRLTTY only uses the privileged kernel operations
 that are granted via these capabilities
 <a class="reference internal" href="#when-started-by-an-unprivileged-user">when started by an unprivileged user</a>.
@@ -1209,67 +1339,10 @@ because they can be internally installed.</dd>
 </dl>
 </div>
 </div>
-<div class="section" id="other-protective-measures">
-<h3><a class="toc-backref" href="#id21">Other Protective Measures</a></h3>
-<p>In addition to switching to <a class="reference internal" href="#the-unprivileged-user">the unprivileged user</a>
-and then only relying on the minimum <a class="reference internal" href="#required-capabilities">required capabilities</a>
-and the needed <a class="reference internal" href="#group-memberships">group memberships</a>,
-BRLTTY takes a few more protective measures
-in order to reduce its exposure to being hacked.</p>
-<div class="section" id="safe-command-search-path">
-<h4><a class="toc-backref" href="#id22">Safe Command Search Path</a></h4>
-<p>A safe command search path is established
-by setting the <tt class="docutils literal">PATH</tt> environment variable
-to a system-configured safe set of directories.
-You can find out what it is by running this command:</p>
-<pre class="literal-block">
-getconf PATH
-</pre>
-</div>
-<div class="section" id="safe-default-shell">
-<h4><a class="toc-backref" href="#id23">Safe Default Shell</a></h4>
-<p>A safe default shell for external software to assume
-is established by setting the <tt class="docutils literal">SHELL</tt> environment variable
-to <tt class="docutils literal">/bin/sh</tt>.
-On many systems this is the Bourne Shell.
-On others, it's a symbolic link to some other shell.
-To find out what it is on your system, run this command:</p>
-<pre class="literal-block">
-ls -l /bin/sh
-</pre>
-<p>Note that scripts usually internally specify which shell is to be used.</p>
-</div>
-<div class="section" id="namespace-isolation">
-<h4><a class="toc-backref" href="#id24">Namespace Isolation</a></h4>
-<p>BRLTTY isolates some of the kernel namespaces
-that are associated with its process.
-The namespaces that it currently isolates are:</p>
-<dl class="docutils">
-<dt>cgroup</dt>
-<dd>This namespace is used to manage control groups.</dd>
-<dt>IPC</dt>
-<dd><p class="first">This namespace is used to manage:</p>
-<ul class="last simple">
-<li>System V interprocess communication objects</li>
-<li>POSIX message queues</li>
-</ul>
-</dd>
-<dt>mount</dt>
-<dd>This namespace is used to manage mount points.</dd>
-<dt>UTS</dt>
-<dd>This namespace is used to manage the host name and the NIS domain name.</dd>
-</dl>
-</div>
-<div class="section" id="the-security-filter">
-<h4><a class="toc-backref" href="#id25">The Security Filter</a></h4>
-<p>This protective measure hasn't been implemented yet.
-The current plan is to use the kernel's <tt class="docutils literal">seccomp</tt> feature.</p>
-</div>
-</div>
 <div class="section" id="known-problems">
-<h3><a class="toc-backref" href="#id26">Known Problems</a></h3>
+<h3><a class="toc-backref" href="#id25">Known Problems</a></h3>
 <div class="section" id="writing-to-sysfs-files">
-<h4><a class="toc-backref" href="#id27">Writing to SYSFS Files</a></h4>
+<h4><a class="toc-backref" href="#id26">Writing to SYSFS Files</a></h4>
 <p>The <tt class="docutils literal">SYSFS</tt> virtual file system (usually mounted at <tt class="docutils literal">/sys/</tt>)
 contains some files that BRLTTY occasionally needs to write to.
 While they can be read by anyone,
@@ -1287,7 +1360,7 @@ of the associated PCI device.</li>
 <p>A possible approach might be to add Udev rules.</p>
 </div>
 <div class="section" id="creating-virtual-devices-via-uinput">
-<h4><a class="toc-backref" href="#id28">Creating Virtual Devices via Uinput</a></h4>
+<h4><a class="toc-backref" href="#id27">Creating Virtual Devices via Uinput</a></h4>
 <p>The <tt class="docutils literal">uinput</tt> device (<tt class="docutils literal">/dev/uinput</tt> or <tt class="docutils literal">/dev/input/uinput</tt>) is usually only readable and writable
 by the super user (<tt class="docutils literal">root</tt>).
 Without any group and/or others access,
@@ -1354,7 +1427,7 @@ An audio-based rendering of LED state changes.</li>
 </ul>
 </div>
 <div class="section" id="creating-private-copies-of-device-files">
-<h4><a class="toc-backref" href="#id29">Creating Private Copies of Device Files</a></h4>
+<h4><a class="toc-backref" href="#id28">Creating Private Copies of Device Files</a></h4>
 <p>The default location of the writable directory (usually <tt class="docutils literal">/var/run/brltty/</tt>) on a modern system
 is usually on a memory-resident file system
 that has been mounted with the <tt class="docutils literal">nodev</tt> option.
