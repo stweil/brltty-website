@@ -829,6 +829,17 @@ external software that it uses might not.</li>
 <li>Specify <tt class="docutils literal">kill</tt> if you'd like an unapproved system call
 to cause the entire BRLTTY process to be summarily killed.</li>
 </ul>
+<p>Installing the filter also includes configuring BRLTTY's process
+so that no external command that it subsequently invokes
+will be able to acquire any additional privileges.
+See the <tt class="docutils literal">PR_SET_NO_NEW_PRIVS</tt> section of the man page for <tt class="docutils literal">prctl</tt>
+for details.
+The quick summary is that, when executing any host command:</p>
+<ul class="simple">
+<li>It's set-user-ID bit will be ignored.</li>
+<li>It's set-group-ID bit will be ignored.</li>
+<li>It's file capabilities will be ignored.</li>
+</ul>
 <p>The current list of approved system calls
 is in the <tt class="docutils literal">syscalls_linux.h</tt> header,
 which is in the <tt class="docutils literal">Programs/</tt> subdirectory of BRLTTY's source tree.
