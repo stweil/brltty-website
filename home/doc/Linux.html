@@ -378,7 +378,7 @@ ul.auto-toc {
 <li><a class="reference internal" href="#safe-command-search-path" id="id9">Safe Command Search Path</a></li>
 <li><a class="reference internal" href="#safe-default-shell" id="id10">Safe Default Shell</a></li>
 <li><a class="reference internal" href="#namespace-isolation" id="id11">Namespace Isolation</a></li>
-<li><a class="reference internal" href="#secure-computing-filter" id="id12">Secure Computing Filter</a></li>
+<li><a class="reference internal" href="#system-call-filter" id="id12">System Call Filter</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#preparing-the-environment" id="id13">Preparing the Environment</a><ul>
@@ -438,7 +438,7 @@ This is a best security practice known as <strong>least privilege</strong>.</p>
 <li>Establish the needed <a class="reference internal" href="#group-memberships">group memberships</a>.</li>
 <li>Set its <a class="reference internal" href="#required-capabilities">required capabilities</a>.</li>
 <li>Relinquish all non-required capabilities.</li>
-<li>Install the <a class="reference internal" href="#secure-computing-filter">secure computing filter</a>.</li>
+<li>Install the <a class="reference internal" href="#system-call-filter">system call filter</a>.</li>
 </ul>
 <div class="section" id="the-unprivileged-user">
 <h5><a class="toc-backref" href="#id5">The Unprivileged User</a></h5>
@@ -724,8 +724,8 @@ or at a higher level of precedence, overrides its earlier setting.</p>
 <dt><tt class="docutils literal">path</tt></dt>
 <dd>This parameter sets the <a class="reference internal" href="#safe-command-search-path">safe command search path</a>.
 No attempt is made to validate it.</dd>
-<dt><tt class="docutils literal">seccomp</tt></dt>
-<dd><p class="first">This parameter sets the mode of the <a class="reference internal" href="#secure-computing-filter">secure computing filter</a>.
+<dt><tt class="docutils literal">scfmode</tt></dt>
+<dd><p class="first">This parameter sets the mode of the <a class="reference internal" href="#system-call-filter">system call filter</a>.
 The supported modes are:</p>
 <dl class="last docutils">
 <dt><tt class="docutils literal">no</tt></dt>
@@ -800,9 +800,10 @@ The namespaces that it currently isolates are:</p>
 <dd>This namespace is used to manage the host name and the NIS domain name.</dd>
 </dl>
 </div>
-<div class="section" id="secure-computing-filter">
-<h4><a class="toc-backref" href="#id12">Secure Computing Filter</a></h4>
-<p>The kernel provides a secure computing filter, known as <tt class="docutils literal">seccomp</tt>,
+<div class="section" id="system-call-filter">
+<h4><a class="toc-backref" href="#id12">System Call Filter</a></h4>
+<p>The kernel provides a system call filter,
+known as <tt class="docutils literal">seccomp</tt> (secure computing),
 that verifies that only an approved set of system calls is being used.
 The default is that BRLTTY doesn't actually use it
 because, by nature, using a system call filter
@@ -818,7 +819,7 @@ that BRLTTY uses.</li>
 <p>Even though the default is that BRLTTY doesn't use the filter,
 access to it is still provided for those users or administrators who prefer
 to avail themselves of the additional protection that it offers.
-Use the <tt class="docutils literal">seccomp</tt> <a class="reference internal" href="#privilege-parameter">privilege parameter</a> to specify how BRLTTY uses it.</p>
+Use the <tt class="docutils literal">scfmode</tt> <a class="reference internal" href="#privilege-parameter">privilege parameter</a> to specify how BRLTTY uses it.</p>
 <ul class="simple">
 <li>Specify <tt class="docutils literal">log</tt> if you'd like BRLTTY to continue executing normally
 but to also record any unapproved system calls in the system log.</li>
