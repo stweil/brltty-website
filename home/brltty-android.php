@@ -52,6 +52,7 @@ So far, we have translations for the following languages:
    <li>Czech</li>
    <li>Chinese</li>
    <li>Danish</li>
+   <li>Dutch</li>
    <li>Farsi (Persian)</li>
    <li>Finnish</li>
    <li>French</li>
