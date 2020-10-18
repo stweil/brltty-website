@@ -133,13 +133,11 @@ Keyboard Input
 * braille keyboard dot6: Dot6
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
-* braille keyboard control: Backspace
+* braille keyboard meta: Backspace
 * braille keyboard space: Space
 * type braille dots [7]: Space+Dot7
 * type braille dots [8]: Space+Dot8
-* backspace key:
-  + Dot7
-  + Backspace
+* backspace key: Dot7
 * escape key: Space+Dots26
 * cursor-left key:
   + Space+Dot3
@@ -172,9 +170,7 @@ Keyboard Input
   + Space+RightJoystickPress
   + Space+Dots256
 * function key: Space+RoutingKey
-* enter key:
-  + Dot8
-  + Backspace+Space
+* enter key: Dot8
 * tab key: Space+Dots45
 * clear all sticky input modifiers: Space+Dots78
 * cycle the Upper sticky input modifier (next, on, off): Space+Dots68

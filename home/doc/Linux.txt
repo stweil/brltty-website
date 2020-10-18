@@ -5,7 +5,7 @@ BRLTTY on Linux
 .. include:: prologue.rst
 
 .. |super user| replace:: ``root``
-.. |default user| replace:: ``brltty``
+.. |recommended user| replace:: ``brltty``
 .. |user information text| replace:: Braille Device Daemon
 .. |nologin shell path| replace:: ``/sbin/nologin``
 .. |safe shell path| replace:: ``/bin/sh``
@@ -16,6 +16,8 @@ BRLTTY on Linux
 .. |writable directory name| replace:: ``brltty``
 
 .. |configuration file path| replace:: ``/etc/brltty.conf``
+.. |key file path| replace:: ``/etc/brlapi.key``
+
 .. |sockets directory path| replace:: ``/var/lib/BrlAPI/``
 .. |updatable directory path| replace:: ``/var/lib/brltty/``
 .. |writable directory path| replace:: ``/var/run/brltty/``
@@ -25,9 +27,9 @@ BRLTTY on Linux
 .. |configuration directive| replace:: configuration directive (in |configuration file path|)
 .. |environment variable| replace:: environment variable (if the ``-E`` command line option has been specified)
 .. |configure option| replace:: configure option (at build time)
-.. |default unprivileged user| replace:: default unprivileged user (|default user|)
 .. |speaker| replace:: built-in PC speaker
 .. |uinput device| replace:: ``uinput`` device (``/dev/uinput`` or ``/dev/input/uinput``)
+.. |key file| replace:: authorization key file (usually |key file path|)
 .. |sockets directory| replace:: sockets directory (usually |sockets directory path|)
 .. |updatable directory| replace:: updatable directory (usually |updatable directory path|)
 .. |writable directory| replace:: writable directory (usually |writable directory path|)
@@ -109,18 +111,26 @@ Explicit Specification
 
   then the default user is selected.
 
-The Default User
-  The default unprivileged user is |default user|.
-  This can be configured at build time via
-  the ``--with-unprivileged-user`` option.
+The Default
+  The default unprivileged user is the one specified at build time
+  via the ``lx:user=`` parameter
+  of the ``--with-privilege-parameters`` option
+  of BRLTTY's ``configure`` command.
   If there's a problem:
 
-  * the user doesn't exist.
-  * BRLTTY wasn't configured with a ``user`` `privilege parameter`_.
+  * The user doesn't exist.
+  * BRLTTY wasn't configured to have a default unprivileged user.
 
   then BRLTTY continues to execute as |the super user|.
-  In this case, it still establishes
-  the rest of its `safer execution environment`_.
+
+Continuing to Run as the Super User
+  This is the last resort!
+  In this case:
+
+  * BRLTTY still establishes the rest of its `safer execution environment`_.
+
+  * Establishing the needed `group memberships`_ replaces
+    (rather than extends) BRLTTY's supplementary group list.
 
 After having successfully switched to executing as an unprivileged user,
 the following is done:
@@ -132,6 +142,8 @@ the following is done:
 * Ensure that all of the group identifiers
   (real, effective, saved, filesystem)
   are set to the primary group of the selected user.
+
+* Extend the supplementary group list with the needed `group memberships`_.
 
 * If the selected user's home directory is defined then switch to it by:
 
@@ -254,9 +266,7 @@ When Started by an Unprivileged User
 
 BRLTTY, as of release 6.2, can be started
 by an unprivileged user (not |super user|).
-The main use case for this is for BRLTTY to be started
-by its |default unprivileged user|.
-Others include system administrators or users
+Use cases for this include system administrators or users
 who'd like BRLTTY to be startable
 by any user, by users who belong to a specific group, etc.
 
@@ -270,6 +280,8 @@ the environment needs to be prepared as follows:
   This isn't necessary, i.e. BRLTTY will join them by itself,
   if the |cap_setgid| (temporary) capability
   has also been assigned to its executable.
+  In this case, BRLTTY will extend the supplementary group list
+  that it inherited from the user with any needed groups that are missing.
 
 * Install the needed `kernel modules`_.
   This isn't necessary, i.e. BRLTTY will install them by itself,
@@ -357,7 +369,9 @@ The following privilege parameters are supported for Linux:
 
 ``user``
   This parameter sets `the unprivileged user`_.
-  It defaults to |default user|.
+  The special value ``:STAY-PRIVILEGED:`` means
+  don't switch to an unprivileged user,
+  i.e. continue to execute as the invoking user.
 
 Safe Command Search Path
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -472,7 +486,7 @@ Preparing the Environment
 Creating the Unprivileged User
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We recommend that `the unprivileged user`_ be named |default user|,
+We recommend that `the unprivileged user`_ be named |recommended user|,
 and that it be a system user.
 
 The user's primary group should be user-specific.
@@ -544,7 +558,8 @@ The following options require special mention:
 ``-U`` *name*
   This option specifies the name of the user
   that's to be created or changed.
-  It defaults to the |default unprivileged user|.
+  If the default unprivileged user was configured at build time
+  then It defaults to that user.
 
 ``-N``
   This option allows the creation of a new user.
@@ -567,6 +582,8 @@ The user's supplementary group list is used
 to establish the needed `group memberships`_.
 Each of the following options removes a group from the full list,
 and, therefore, also removes that group's associated functionality from BRLTTY.
+If a group's name is shown in *italics* then it's only our recommendation
+as its actual name isn't defined by any standard or convention.
 
 .. table:: ``brltty-mkuser`` Options for Excluding Supplementary Groups
 
@@ -574,10 +591,11 @@ and, therefore, also removes that group's associated functionality from BRLTTY.
   Option  Removes Group     Lost Functionality
   ------  ----------------  ----------------------------------------
   ``-a``  ``audio``         playing sound via the ALSA framework
+  ``-b``  *brlapi*          reading BrlAPI's |key file|
   ``-c``  ``tty``           access to the virtual consoles
   ``-k``  ``input``         keyboard monitoring
   ``-p``  ``pulse-access``  playing sound via the Pulse Audio server
-  ``-s``  ``dialout``       access to serial devices
+  ``-s``  *dialout*         access to serial devices
   ``-u``  usually ``root``  access to USB devices
   ======  ================  ========================================
 
@@ -626,6 +644,9 @@ The following options are primarily for developers:
 
 Assigning Capabilities to the Executable
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Don't do this if you only want BRLTTY to execute successfully
+`when started as the super user`_.**
 
 First, here's a summary of all of the capabilities that BRLTTY needs
 `when started by an unprivileged user`_.
@@ -734,12 +755,21 @@ Group Memberships
 ~~~~~~~~~~~~~~~~~
 
 BRLTTY relies on file system and server (daemon) access
-granted via membership in these groups:
+granted via membership in the owning user groups.
+
+* A group name shown in **bold** is its actual name.
+
+* A group name shown in *italics* is our recommended name for it
+  as its actual name isn't defined by any standard or convention.
 
 **audio**
   For playing sound via the ALSA framework.
 
-**dialout**
+*brlapi*
+  For reading BrlAPI's |key file|.
+  In other words, the group that owns that file.
+
+*dialout*
   For serial I/O via these ``/dev/`` devices:
 
   **ttyS<n>**
@@ -872,13 +902,14 @@ after having switched to `the unprivileged user`_.
 This situation could be easily resolved
 by granting group read and write permissions to the device.
 This shouldn't be problematic because its owned by the ``root`` group.
-Even better, of course, would be to also give the device its own group
+Even better, of course, would be to give the device its own group
 (e.g. named ``uinput``).
 
 BRLTTY currently gets around this problem by including the following
-Udev rule to add group read and write permissions to the device::
+Udev rule to add an ACL (access control list) entry to the device::
 
-  KERNEL=="uinput", ACTION=="add", MODE="0660"
+  KERNEL=="uinput", ACTION=="add", TEST=="/usr/bin/setfacl",
+  RUN+="/usr/bin/setfacl -m u:brltty:rw /dev/$name"
 
 If BRLTTY finds that it isn't permitted to open the device
 (perhaps because the Udev rule isn't present)

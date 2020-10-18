@@ -6169,6 +6169,7 @@
                               Iris
                               NoteBraille
                               Scriba
+          FrankAudiodata      B2K84
           FreedomScientific   Focus 1 44/70/84
                               Focus 2 40/80
                               Focus Blue 14/40/80
@@ -6289,6 +6290,7 @@
                     en     eSpeak-NG
                     es     eSpeak
                     eu     EuroBraille
+                    fa     FrankAudiodata
                     fl     FestivalLite
                     fs     FreedomScientific
                     fv     Festival

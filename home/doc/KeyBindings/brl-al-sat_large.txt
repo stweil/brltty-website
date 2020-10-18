@@ -2,31 +2,37 @@ Key Table: Alva Satellite 570,584
 =================================
 
 Notes
-* The keypads at either side of the top are named LeftPad and RightPad.
-  The four inner keys of each are subnamed Left, Right, Up, and Down.
-  The two outer keys of each are subnamed F1 and F2.
+* The two three-position, sliding keys are named LeftTumbler and RightTumbler.
 * The two long, flat keys are named Up and Down.
 * The two long, bent keys are named Left and Right.
 * The two round keys are named Home and Cursor.
-* The two three-position, sliding keys are named LeftTumbler and RightTumbler.
+* The row of keys immediately behind the braille cells is named RoutingKey1,
+  and the row of keys further back is named RoutingKey2.
+* The keypad at the left side of the top is named SpeechPad,
+  and the one at the right side of the top is named NavPad.
+  They can be swapped via the internal menu.
+  The four inner keys of each are subnamed Left, Right, Up, and Down.
+  The two outer keys of each are subnamed F1 and F2.
+* Enter the internal menu by pressing:
+  SpeechPadF1 + SpeechPadF2 + NavPadF1 + NavPadF2
 
 Default Bindings
 ----------------
 
 Special Modes
-* enter/leave help display: RightPadF1
-* enter/leave command learn mode: RightPadF2
-* enter/leave preferences menu: RightPadLeft
-* enter/leave status display: RightPadRight
+* enter/leave help display: NavPadF1
+* enter/leave command learn mode: NavPadF2
+* enter/leave preferences menu: NavPadLeft
+* enter/leave status display: NavPadRight
 * set display mode attributes/text: Status2B
-* set screen image frozen/unfrozen: RightPadF1+RightPadLeft
+* set screen image frozen/unfrozen: NavPadF1+NavPadLeft
 * describe character: RoutingKey2
 
 Cursor Functions
 * go to screen cursor: Cursor
 * go back after cursor tracking: Home
 * bring screen cursor to character: RoutingKey1
-* bring screen cursor to current line: RightPadF2+RightPadRight
+* bring screen cursor to current line: NavPadF2+NavPadRight
 
 Vertical Navigation
 * go up one line: Up
@@ -35,14 +41,14 @@ Vertical Navigation
 * go to bottom line: Cursor+Down
 * go to beginning of top line: Home+Up
 * go to beginning of bottom line: Home+Down
-* go up to nearest line with different content: RightPadF1+Up
-* go down to nearest line with different content: RightPadF1+Down
-* go up to nearest line with different highlighting: RightPadF2+Up
-* go down to nearest line with different highlighting: RightPadF2+Down
-* go up to first line of paragraph: RightPadF1+RightPadUp
-* go down to first line of next paragraph: RightPadF1+RightPadDown
-* go up to previous command prompt: RightPadUp
-* go down to next command prompt: RightPadDown
+* go up to nearest line with different content: NavPadF1+Up
+* go down to nearest line with different content: NavPadF1+Down
+* go up to nearest line with different highlighting: NavPadF2+Up
+* go down to nearest line with different highlighting: NavPadF2+Down
+* go up to first line of paragraph: NavPadF1+NavPadUp
+* go down to first line of next paragraph: NavPadF1+NavPadDown
+* go up to previous command prompt: NavPadUp
+* go down to next command prompt: NavPadDown
 * go up to nearest line with less indent than character: Cursor+RoutingKey2
 * go down to nearest line with less indent than character: Cursor+RoutingKey1
 
@@ -58,25 +64,27 @@ Horizontal Navigation
   + Home+Right
   + RightTumblerRight
 * go left one character:
-  + RightPadF1+Left
+  + NavPadF1+Left
   + LeftTumblerLeft
 * go right one character:
-  + RightPadF1+Right
+  + NavPadF1+Right
   + LeftTumblerRight
-* go left half a braille window: RightPadF2+Left
-* go right half a braille window: RightPadF2+Right
+* go left half a braille window: NavPadF2+Left
+* go right half a braille window: NavPadF2+Right
 
 Clipboard Functions
-* start new clipboard at character: RightPadF1+RoutingKey1
-* append to clipboard from character: RightPadF1+RoutingKey2
-* linear copy to character: RightPadF2+RoutingKey2
-* rectangular copy to character: RightPadF2+RoutingKey1
-* insert clipboard text after screen cursor: RightPadF2+RightPadLeft
-* search backward for clipboard text: RightPadF2+RightPadUp
-* search forward for clipboard text: RightPadF2+RightPadDown
+* start new clipboard at character: NavPadF1+RoutingKey1
+* append to clipboard from character: NavPadF1+RoutingKey2
+* linear copy to character: NavPadF2+RoutingKey2
+* rectangular copy to character: NavPadF2+RoutingKey1
+* copy characters to clipboard: RoutingKey1+RoutingKey1
+* append characters to clipboard: RoutingKey2+RoutingKey2
+* insert clipboard text after screen cursor: NavPadF2+NavPadLeft
+* search backward for clipboard text: NavPadF2+NavPadUp
+* search forward for clipboard text: NavPadF2+NavPadDown
 
 Configuration Functions
-* set text style 6-dot/8-dot: RightPadF1+RightPadRight
+* set text style 6-dot/8-dot: NavPadF1+NavPadRight
 * set skipping of lines with identical content on/off: Status2A
 * set skipping of blank braille windows on/off: Status2C
 * set track screen cursor on/off: Home+Cursor
@@ -85,22 +93,22 @@ Configuration Functions
 * set capital letter blinking on/off: Status1C
 
 Speech Functions
-* stop speaking: LeftPadLeft
-* speak current line: LeftPadRight
-* speak from top of screen through current line: LeftPadUp
-* speak from current line through bottom of screen: LeftPadDown
-* go to current speaking position: LeftPadF1
-* decrease speaking volume: LeftPadF2+LeftPadDown
-* increase speaking volume: LeftPadF2+LeftPadUp
-* decrease speaking rate: LeftPadF2+LeftPadLeft
-* increase speaking rate: LeftPadF2+LeftPadRight
-* set autospeak on/off: LeftPadF2
+* stop speaking: SpeechPadLeft
+* speak current line: SpeechPadRight
+* speak from top of screen through current line: SpeechPadUp
+* speak from current line through bottom of screen: SpeechPadDown
+* go to current speaking position: SpeechPadF1
+* decrease speaking volume: SpeechPadF2+SpeechPadDown
+* increase speaking volume: SpeechPadF2+SpeechPadUp
+* decrease speaking rate: SpeechPadF2+SpeechPadLeft
+* increase speaking rate: SpeechPadF2+SpeechPadRight
+* set autospeak on/off: SpeechPadF2
 
 Special Functions
 * remember current braille window position: Home+RoutingKey2
 * go to remembered braille window position: Home+RoutingKey1
-* restart braille driver: RightPadF1+RightPadF2
-* restart speech driver: LeftPadF1+LeftPadF2
+* restart braille driver: NavPadF1+NavPadF2
+* restart speech driver: SpeechPadF1+SpeechPadF2
 
 Menu Bindings
 -------------

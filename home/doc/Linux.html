@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.15.2: http://docutils.sourceforge.net/" />
 <title>BRLTTY on Linux</title>
 <style type="text/css">
 
@@ -459,18 +459,26 @@ BRLTTY wasn't started as the super user (<tt class="docutils literal">root</tt>)
 </ul>
 <p class="last">then the default user is selected.</p>
 </dd>
-<dt>The Default User</dt>
-<dd><p class="first">The default unprivileged user is <tt class="docutils literal">brltty</tt>.
-This can be configured at build time via
-the <tt class="docutils literal"><span class="pre">--with-unprivileged-user</span></tt> option.
+<dt>The Default</dt>
+<dd><p class="first">The default unprivileged user is the one specified at build time
+via the <tt class="docutils literal">lx:user=</tt> parameter
+of the <tt class="docutils literal"><span class="pre">--with-privilege-parameters</span></tt> option
+of BRLTTY's <tt class="docutils literal">configure</tt> command.
 If there's a problem:</p>
 <ul class="simple">
-<li>the user doesn't exist.</li>
-<li>BRLTTY wasn't configured with a <tt class="docutils literal">user</tt> <a class="reference internal" href="#privilege-parameter">privilege parameter</a>.</li>
+<li>The user doesn't exist.</li>
+<li>BRLTTY wasn't configured to have a default unprivileged user.</li>
 </ul>
-<p class="last">then BRLTTY continues to execute as the super user (<tt class="docutils literal">root</tt>).
-In this case, it still establishes
-the rest of its <a class="reference internal" href="#safer-execution-environment">safer execution environment</a>.</p>
+<p class="last">then BRLTTY continues to execute as the super user (<tt class="docutils literal">root</tt>).</p>
+</dd>
+<dt>Continuing to Run as the Super User</dt>
+<dd><p class="first">This is the last resort!
+In this case:</p>
+<ul class="last simple">
+<li>BRLTTY still establishes the rest of its <a class="reference internal" href="#safer-execution-environment">safer execution environment</a>.</li>
+<li>Establishing the needed <a class="reference internal" href="#group-memberships">group memberships</a> replaces
+(rather than extends) BRLTTY's supplementary group list.</li>
+</ul>
 </dd>
 </dl>
 <p>After having successfully switched to executing as an unprivileged user,
@@ -483,6 +491,8 @@ are set to the selected user.</p>
 <li><p class="first">Ensure that all of the group identifiers
 (real, effective, saved, filesystem)
 are set to the primary group of the selected user.</p>
+</li>
+<li><p class="first">Extend the supplementary group list with the needed <a class="reference internal" href="#group-memberships">group memberships</a>.</p>
 </li>
 <li><p class="first">If the selected user's home directory is defined then switch to it by:</p>
 <ul class="simple">
@@ -641,9 +651,7 @@ then it's far better to let a human being take care of it.</p>
 <h4><a class="toc-backref" href="#id7">When Started by an Unprivileged User</a></h4>
 <p>BRLTTY, as of release 6.2, can be started
 by an unprivileged user (not <tt class="docutils literal">root</tt>).
-The main use case for this is for BRLTTY to be started
-by its default unprivileged user (<tt class="docutils literal">brltty</tt>).
-Others include system administrators or users
+Use cases for this include system administrators or users
 who'd like BRLTTY to be startable
 by any user, by users who belong to a specific group, etc.</p>
 <p>In order for an unprivileged user to successfully start BRLTTY,
@@ -655,7 +663,9 @@ the environment needs to be prepared as follows:</p>
 the needed <a class="reference internal" href="#group-memberships">group memberships</a>.
 This isn't necessary, i.e. BRLTTY will join them by itself,
 if the <em>cap_setgid</em> (temporary) capability
-has also been assigned to its executable.</p>
+has also been assigned to its executable.
+In this case, BRLTTY will extend the supplementary group list
+that it inherited from the user with any needed groups that are missing.</p>
 </li>
 <li><p class="first">Install the needed <a class="reference internal" href="#kernel-modules">kernel modules</a>.
 This isn't necessary, i.e. BRLTTY will install them by itself,
@@ -747,7 +757,9 @@ causes the entire BRLTTY process to be killed.</dd>
 No attempt is made to validate it.</dd>
 <dt><tt class="docutils literal">user</tt></dt>
 <dd>This parameter sets <a class="reference internal" href="#the-unprivileged-user">the unprivileged user</a>.
-It defaults to <tt class="docutils literal">brltty</tt>.</dd>
+The special value <tt class="docutils literal"><span class="pre">:STAY-PRIVILEGED:</span></tt> means
+don't switch to an unprivileged user,
+i.e. continue to execute as the invoking user.</dd>
 </dl>
 </div>
 <div class="section" id="safe-command-search-path">
@@ -940,7 +952,8 @@ brltty-mkuser -h
 <dt><tt class="docutils literal"><span class="pre">-U</span></tt> <em>name</em></dt>
 <dd>This option specifies the name of the user
 that's to be created or changed.
-It defaults to the default unprivileged user (<tt class="docutils literal">brltty</tt>).</dd>
+If the default unprivileged user was configured at build time
+then It defaults to that user.</dd>
 <dt><tt class="docutils literal"><span class="pre">-N</span></tt></dt>
 <dd>This option allows the creation of a new user.</dd>
 <dt><tt class="docutils literal"><span class="pre">-E</span></tt></dt>
@@ -958,7 +971,9 @@ These options aren't mutually exclusive - both may be specified.</p>
 <p>The user's supplementary group list is used
 to establish the needed <a class="reference internal" href="#group-memberships">group memberships</a>.
 Each of the following options removes a group from the full list,
-and, therefore, also removes that group's associated functionality from BRLTTY.</p>
+and, therefore, also removes that group's associated functionality from BRLTTY.
+If a group's name is shown in <em>italics</em> then it's only our recommendation
+as its actual name isn't defined by any standard or convention.</p>
 <table border="1" class="docutils">
 <caption><tt class="docutils literal"><span class="pre">brltty-mkuser</span></tt> Options for Excluding Supplementary Groups</caption>
 <colgroup>
@@ -975,6 +990,10 @@ and, therefore, also removes that group's associated functionality from BRLTTY.<
 <td><tt class="docutils literal">audio</tt></td>
 <td>playing sound via the ALSA framework</td>
 </tr>
+<tr><td><tt class="docutils literal"><span class="pre">-b</span></tt></td>
+<td><em>brlapi</em></td>
+<td>reading BrlAPI's authorization key file (usually <tt class="docutils literal">/etc/brlapi.key</tt>)</td>
+</tr>
 <tr><td><tt class="docutils literal"><span class="pre">-c</span></tt></td>
 <td><tt class="docutils literal">tty</tt></td>
 <td>access to the virtual consoles</td>
@@ -988,7 +1007,7 @@ and, therefore, also removes that group's associated functionality from BRLTTY.<
 <td>playing sound via the Pulse Audio server</td>
 </tr>
 <tr><td><tt class="docutils literal"><span class="pre">-s</span></tt></td>
-<td><tt class="docutils literal">dialout</tt></td>
+<td><em>dialout</em></td>
 <td>access to serial devices</td>
 </tr>
 <tr><td><tt class="docutils literal"><span class="pre">-u</span></tt></td>
@@ -1084,6 +1103,8 @@ Its associated field isn't changed.</p>
 </div>
 <div class="section" id="assigning-capabilities-to-the-executable">
 <h4><a class="toc-backref" href="#id17">Assigning Capabilities to the Executable</a></h4>
+<p><strong>Don't do this if you only want BRLTTY to execute successfully
+`when started as the super user`_.</strong></p>
 <p>First, here's a summary of all of the capabilities that BRLTTY needs
 <a class="reference internal" href="#when-started-by-an-unprivileged-user">when started by an unprivileged user</a>.</p>
 <ul class="simple">
@@ -1252,11 +1273,19 @@ in order to be fully functional are:</p>
 <div class="section" id="group-memberships">
 <h4><a class="toc-backref" href="#id22">Group Memberships</a></h4>
 <p>BRLTTY relies on file system and server (daemon) access
-granted via membership in these groups:</p>
+granted via membership in the owning user groups.</p>
+<ul class="simple">
+<li>A group name shown in <strong>bold</strong> is its actual name.</li>
+<li>A group name shown in <em>italics</em> is our recommended name for it
+as its actual name isn't defined by any standard or convention.</li>
+</ul>
 <dl class="docutils">
 <dt><strong>audio</strong></dt>
 <dd>For playing sound via the ALSA framework.</dd>
-<dt><strong>dialout</strong></dt>
+<dt><em>brlapi</em></dt>
+<dd>For reading BrlAPI's authorization key file (usually <tt class="docutils literal">/etc/brlapi.key</tt>).
+In other words, the group that owns that file.</dd>
+<dt><em>dialout</em></dt>
 <dd><p class="first">For serial I/O via these <tt class="docutils literal">/dev/</tt> devices:</p>
 <dl class="last docutils">
 <dt><strong>ttyS&lt;n&gt;</strong></dt>
@@ -1381,12 +1410,13 @@ after having switched to <a class="reference internal" href="#the-unprivileged-u
 <p>This situation could be easily resolved
 by granting group read and write permissions to the device.
 This shouldn't be problematic because its owned by the <tt class="docutils literal">root</tt> group.
-Even better, of course, would be to also give the device its own group
+Even better, of course, would be to give the device its own group
 (e.g. named <tt class="docutils literal">uinput</tt>).</p>
 <p>BRLTTY currently gets around this problem by including the following
-Udev rule to add group read and write permissions to the device:</p>
+Udev rule to add an ACL (access control list) entry to the device:</p>
 <pre class="literal-block">
-KERNEL==&quot;uinput&quot;, ACTION==&quot;add&quot;, MODE=&quot;0660&quot;
+KERNEL==&quot;uinput&quot;, ACTION==&quot;add&quot;, TEST==&quot;/usr/bin/setfacl&quot;,
+RUN+=&quot;/usr/bin/setfacl -m u:brltty:rw /dev/$name&quot;
 </pre>
 <p>If BRLTTY finds that it isn't permitted to open the device
 (perhaps because the Udev rule isn't present)

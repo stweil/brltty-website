@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.15.2: http://docutils.sourceforge.net/" />
 <title>BRLTTY on Windows</title>
 <style type="text/css">
 
@@ -1003,9 +1003,10 @@ supported:</p>
 </ul>
 </dd>
 <dt><tt class="docutils literal"><span class="pre">-C</span></tt> (Cygwin)</dt>
-<dd>Specify the root (top-level) directory of a Cygwin installation. Cygwin's
-<tt class="docutils literal">bin/</tt> directory is added to the end of the command search path as a last
-resort for finding needed commands that MinGW may not have.</dd>
+<dd>Specify the root (top-level) directory of a Cygwin installation.
+If it isn't specified then <tt class="docutils literal">/cygwin</tt> (if it exists) is assumed.
+Cygwin's <tt class="docutils literal">bin/</tt> directory is added to the end of the command search path
+as a last resort for finding needed commands that MinGW may not have.</dd>
 <dt><tt class="docutils literal"><span class="pre">-s</span></tt> (shell)</dt>
 <dd>Invoke an interactive shell just before the archive is created so that you
 can have a look at and/or modify what it will contain. If the <tt class="docutils literal">SHELL</tt>
