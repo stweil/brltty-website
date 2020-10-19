@@ -1,4 +1,6 @@
+#!/bin/bash
 . "`dirname "${0}"`/../source/brltty-prologue.sh"
+shopt -s nullglob
 
 defaultWebsiteRoot="${programDirectory}/.."
 defaultSourceRoot="source"

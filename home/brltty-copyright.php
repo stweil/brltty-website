@@ -1,5 +1,5 @@
 <p>
-<b>BRLTTY</b> is Copyright (C) 1995-2016 by
+<b>BRLTTY</b> is Copyright (C) 1995-2020 by
 <a href="contact.html">The BRLTTY Developers</a>.
 <br />
 <b>BRLTTY</b> comes with NO WARRANTY.
