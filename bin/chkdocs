@@ -1,0 +1,63 @@
+#!/bin/bash
+. "`dirname "${0}"`/prologue.sh"
+
+addFile() {
+   executeHostCommand git add -- "${filePath}"
+}
+
+removeFile() {
+   executeHostCommand git rm --quiet -- "${filePath}"
+}
+
+addOption_websiteRoot
+addOption_documentRoot
+addOption_testMode
+addProgramOption u flag updateCache "add/remove updated files from the git cache"
+parseProgramArguments "${@}"
+
+checkOption_websiteRoot
+checkOption_documentRoot
+cd "${documentRoot}"
+
+while read -r line
+do
+   # Read strips leading spaces and the cache state can be a blank.
+   # This can be detected because the second byte is never a blank.
+   [ "${line:2:1}" = " " ] || line=" ${line}"
+
+   cacheState="${line:0:1}"
+   worktreeState="${line:1:1}"
+   filePath="${line:3}"
+
+   [ "${worktreeState}" = " " ] && {
+      [[ "${cacheState}" =~ [ADMR] ]] && {
+         continue
+      }
+   }
+
+   "${updateCache}" && {
+      fileExtension="${filePath##*.}"
+
+      case "${fileExtension}"
+      in
+         css | doc | htm | html | js | pdf | png | sgml | txt)
+            [ "${cacheState}" = "?" -a "${worktreeState}" = "?" ] && {
+               addFile
+               continue
+            }
+
+            [ "${cacheState}" = " " ] && {
+               case "${worktreeState}"
+               in
+                  D) removeFile; continue;;
+                  M) addFile; continue;;
+               esac
+            }
+            ;;
+      esac
+   }
+
+   echo "${line}"
+done < <(git status -s .)
+
+exit 0

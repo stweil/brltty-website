@@ -1,19 +1,14 @@
 #!/bin/bash
 . "`dirname "${0}"`/prologue.sh"
 
-defaultTargetRoot="home/doc"
-
 addOption_websiteRoot
+addOption_documentRoot
 addOption_sourceRoot
-addProgramOption t string.directory targetRoot "top-level of target hierarchy" "${defaultTargetRoot}"
 parseProgramArguments "${@}"
 
 checkOption_websiteRoot
+checkOption_documentRoot
 checkOption_sourceRoot
-
-[ -n "${targetRoot}" ] || targetRoot="${websiteRoot}/${defaultTargetRoot}"
-verifyInputDirectory "${targetRoot}"
-[ "${targetRoot#/}" != "${targetRoot}" ] || targetRoot="${websiteRoot}/${targetRoot}"
 
 needTemporaryDirectory
 documentSubdirectory="Documents"
@@ -53,13 +48,13 @@ cd "${buildRoot}"
 relativePath() {
    local file="${1}"
 
-   realpath --relative-to "${newTargetRoot}" "${file}"
+   realpath --relative-to "${newDocumentRoot}" "${file}"
 }
 
 declare -A fileMap
 updateFile() {
    local source="${1}"
-   local target="${newTargetRoot}/${2:-${source}}"
+   local target="${newDocumentRoot}/${2:-${source}}"
 
    mkdir -p "${target%/*}"
    cp -a -- "${source}" "${target}"
@@ -91,11 +86,11 @@ updateDirectory() {
    cd "${OLDPWD}"
 }
 
-newTargetRoot="${targetRoot}.${programName}.new"
-rm -f -r "${newTargetRoot}"
+newDocumentRoot="${documentRoot}.${programName}.new"
+rm -f -r "${newDocumentRoot}"
 
 cd "${sourceRoot}"
-"./mkdocktb" -o "${newTargetRoot}/KeyBindings" -s . -b "${buildRoot}"
+"./mkdocktb" -o "${newDocumentRoot}/KeyBindings" -s . -b "${buildRoot}"
 
 cd "${buildRoot}/${documentSubdirectory}"
 make -s
@@ -123,7 +118,7 @@ do
    updateFile "${file}" "${file##README.}.txt"
 done
 
-cd "${newTargetRoot}"
+cd "${newDocumentRoot}"
 find . -type f -print |
    while read file
    do
@@ -137,7 +132,7 @@ find . -type f -print |
 
             if [[ "${line}" =~ ^~+$ ]]
             then
-               source="${newTargetRoot}/${fileMap["$(relativePath "${file}")"]}"
+               source="${newDocumentRoot}/${fileMap["$(relativePath "${file}")"]}"
                rst2html --config "${sourceRoot}/docutils.conf" "${source}" "${name}.html"
             fi
             ;;
@@ -147,10 +142,10 @@ find . -type f -print |
    done
 
 cd "${temporaryDirectory}"
-oldTargetRoot="${targetRoot}.${programName}.old"
-rm -f -r "${oldTargetRoot}"
-mv "${targetRoot}" "${oldTargetRoot}"
-mv "${newTargetRoot}" "${targetRoot}"
-rm -f -r "${oldTargetRoot}"
+oldDocumentRoot="${documentRoot}.${programName}.old"
+rm -f -r "${oldDocumentRoot}"
+mv "${documentRoot}" "${oldDocumentRoot}"
+mv "${newDocumentRoot}" "${documentRoot}"
+rm -f -r "${oldDocumentRoot}"
 
 exit 0
