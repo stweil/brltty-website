@@ -1,9 +1,9 @@
 <?php
    global $brltty_files;
-   put_versions('BRLTTY', $brltty_files, BRLTTY_CURRENT);
+   put_versions('BRLTTY', $brltty_files, BRLTTY_CURRENT_RELEASE);
 
    global $brlapi_files;
-   put_versions('BrlAPI', $brlapi_files, BRLAPI_CURRENT);
+   put_versions('BrlAPI', $brlapi_files, BRLAPI_CURRENT_RELEASE);
 ?>
 
 <p>
