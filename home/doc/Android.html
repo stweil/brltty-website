@@ -455,12 +455,12 @@ each time you interact with a control on your braille device.</li>
 </dd>
 <dt><tt class="docutils literal">BLUETOOTH</tt></dt>
 <dd><ul class="first last simple">
-<li>For communicating with your braille device via Bluetooth.</li>
+<li>For communicating with a braille device via Bluetooth.</li>
 </ul>
 </dd>
 <dt><tt class="docutils literal">BLUETOOTH_ADMIN</tt></dt>
 <dd><ul class="first last simple">
-<li>For communicating with your braille device via Bluetooth
+<li>For communicating with a braille device via Bluetooth
 on Android 4.0 (Ice Cream Sandwich).</li>
 </ul>
 </dd>
@@ -492,17 +492,17 @@ from your Android device's primary shared/external storage area.</li>
 </dd>
 <dt><tt class="docutils literal">ACCESS_WIFI_STATE</tt></dt>
 <dd><ul class="first last simple">
-<li>For getting Wi-Fi status values.</li>
+<li>For getting Wi-Fi status values (for the INDICATORS command).</li>
 </ul>
 </dd>
 <dt><tt class="docutils literal">ACCESS_FINE_LOCATION</tt></dt>
 <dd><ul class="first last simple">
-<li>For getting the Wi-Fi SSID.</li>
+<li>For getting the Wi-Fi SSID (for the INDICATORS command).</li>
 </ul>
 </dd>
 <dt><tt class="docutils literal">ACCESS_COARSE_UPDATES</tt></dt>
 <dd><ul class="first last simple">
-<li>For getting the cell signal strength.</li>
+<li>For getting the cell signal strength (for the INDICATORS command).</li>
 </ul>
 </dd>
 </dl>
@@ -1085,11 +1085,13 @@ The second endpoint may be either after or before the first one.</p>
 <h5><a class="toc-backref" href="#id30">Commands</a></h5>
 <dl class="docutils">
 <dt>HOST_COPY</dt>
-<dd>Copy the selected text to the host clipboard.</dd>
+<dd>Copy the selected text to the host clipboard
+and then deselect it.</dd>
 <dt>HOST_CUT</dt>
-<dd>Cut the selected text to the host clipboard.</dd>
+<dd>Copy the selected text to the host clipboard
+and then delete it.</dd>
 <dt>HOST_PASTE</dt>
-<dd>Paste the text on the host clipboard into the current input area.</dd>
+<dd>Insert the text on the host clipboard after the screen cursor.</dd>
 <dt>TXTSEL_ALL</dt>
 <dd>Select all of the text.</dd>
 <dt>TXTSEL_CLEAR</dt>

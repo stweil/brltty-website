@@ -195,46 +195,6 @@ of concepts used here, please refer to chapters
 <A HREF="BrlAPI-1.html#sec-intro">Introduction</A> and 
 <A HREF="BrlAPI-2.html#sec-general">General description</A>.</P>
 
-<H3>Reading braille key codes</H3>
-
-<P>When a client takes control of a tty and asks for getting raw key codes, it
-has, like in command mode, the possibility to mask some keys. The masked
-keys will then be passed to <EM>brltty</EM>. This assumes the existence of a
-conversion mechanism from key codes to <EM>brltty</EM> commands.
-This conversion mechanism can only be implemented by the braille driver,
-since 
-it is the only piece of code that knows about braille terminal specific key
-codes. So, to make it possible for client applications to read raw key
-codes, the driver has to define the following macro:
-<PRE>
-#define BRL_HAVE_KEY_CODES
-</PRE>
-
-and the following functions:
-<PRE>
-static int brl_readKey(BrailleDisplay *)
-int brl_keyToCommand(BrailleDisplay *brl, DriverCommandContext caller, int code)
-</PRE>
-</P>
-<P>The semantics of <CODE>brl_readKey()</CODE> is very similar to
-<CODE>brl_readCommand()</CODE>'s, with one essential difference: a key code
-is not context-dependant, so no context argument needs to be given to this
-function. Moreover, the code this function returns is driver-specific, and
-has to be properly defined by the driver's author so that client applications
-can rely on it.</P>
-<P>The <CODE>brl_keyToCommand()</CODE> function's purpose is to convert a key code
-as delivered by <CODE>brl_readKey()</CODE> into a <EM>brltty</EM> command. As explained
-above, this function is called by brlapi when a key is pressed on the
-braille keyboard that is ignored by the client application. The
-corresponding command is then returned to <EM>brltty</EM>.</P>
-
-<H3>Remarks</H3>
-
-<P>When these two functions are present, the only thing
-<CODE>brl_readCommand()</CODE> has to do is to call <CODE>brl_readKey()</CODE> and then
-call <CODE>brl_keyToCommand()</CODE> with the value returned by the first function
-as argument.</P>
-
 <H3>Exchanging raw data packets</H3>
 
 <P>Under some circumstances, an application running on the PC

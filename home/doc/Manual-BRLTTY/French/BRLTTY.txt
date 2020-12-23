@@ -14,7 +14,7 @@
   Jean-Philippe Mengual <texou@accelibreinfo.eu> pour
   Traduc.org
 
-  Version 6.1, Avril 2020
+  Version 6.2, Décembre 2020
 
   Copyright © 1995-2020 by Les Développeurs de BRLTTY.  BRLTTY est un
   logiciel libre, et n'est fourni avec AUCUNE GARANTIE. Il est placé
@@ -5085,7 +5085,6 @@
          sw          Swahili (abrégé)
          th          Thaïlandais (abrégé)
          zh-tw       Chinois (Taiwan, désabrégé)
-         zh-tw-ucb   Chinois (Taiwan, braille chinois unique)
          zu          Zoulou (abrégé)
 
 

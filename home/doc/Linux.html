@@ -492,6 +492,10 @@ are set to the selected user.</p>
 (real, effective, saved, filesystem)
 are set to the primary group of the selected user.</p>
 </li>
+<li><p class="first">Change the XDG runtime directory
+(set the <tt class="docutils literal">XDG_RUNTIME_DIR</tt> environment variable)
+to that of the selected user.</p>
+</li>
 <li><p class="first">Extend the supplementary group list with the needed <a class="reference internal" href="#group-memberships">group memberships</a>.</p>
 </li>
 <li><p class="first">If the selected user's home directory is defined then switch to it by:</p>
@@ -799,13 +803,6 @@ The namespaces that it currently isolates are:</p>
 <dl class="docutils">
 <dt>cgroup</dt>
 <dd>This namespace is used to manage control groups.</dd>
-<dt>IPC</dt>
-<dd><p class="first">This namespace is used to manage:</p>
-<ul class="last simple">
-<li>System V interprocess communication objects</li>
-<li>POSIX message queues</li>
-</ul>
-</dd>
 <dt>mount</dt>
 <dd>This namespace is used to manage mount points.</dd>
 <dt>UTS</dt>

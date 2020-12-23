@@ -9,7 +9,7 @@
 
   Dave Mielke <dave@mielke.cc>
 
-  Version 6.1, April 2020
+  Version 6.2, December 2020
 
   Copyright © 1995-2020 by The BRLTTY Developers.  BRLTTY is free soft-
   ware, and comes with ABSOLUTELY NO WARRANTY.  It is placed under the
@@ -4711,7 +4711,6 @@
           sw          Swahili (contracted)
           th          Thai (contracted)
           zh-tw       Chinese (Taiwan, uncontracted)
-          zh-tw-ucb   Chinese (Taiwan, Unique Chinese Braille)
           zu          Zulu (contracted)
 
 

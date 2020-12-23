@@ -143,6 +143,10 @@ the following is done:
   (real, effective, saved, filesystem)
   are set to the primary group of the selected user.
 
+* Change the XDG runtime directory
+  (set the ``XDG_RUNTIME_DIR`` environment variable)
+  to that of the selected user.
+
 * Extend the supplementary group list with the needed `group memberships`_.
 
 * If the selected user's home directory is defined then switch to it by:
@@ -415,12 +419,6 @@ The namespaces that it currently isolates are:
 
 cgroup
   This namespace is used to manage control groups.
-
-IPC
-  This namespace is used to manage:
-
-  * System V interprocess communication objects
-  * POSIX message queues
 
 mount
   This namespace is used to manage mount points.

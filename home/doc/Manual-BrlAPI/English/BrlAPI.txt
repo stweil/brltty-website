@@ -63,10 +63,8 @@
      6.1 Overview of the driver's structure
      6.2 Basic driver structure
      6.3 Enhancements for BrlAPI
-        6.3.1 Reading braille key codes
-           6.3.1.1 Remarks
-        6.3.2 Exchanging raw data packets
-           6.3.2.1 Remarks.
+        6.3.1 Exchanging raw data packets
+           6.3.1.1 Remarks.
 
   7. Protocol reference
      7.1 Reliable packet transmission channel
@@ -1205,48 +1203,7 @@
   description of concepts used here, please refer to chapters
   ``Introduction'' and ``General description''.
 
-  6.3.1.  Reading braille key codes
-
-  When a client takes control of a tty and asks for getting raw key
-  codes, it has, like in command mode, the possibility to mask some
-  keys. The masked keys will then be passed to brltty. This assumes the
-  existence of a conversion mechanism from key codes to brltty commands.
-  This conversion mechanism can only be implemented by the braille
-  driver, since it is the only piece of code that knows about braille
-  terminal specific key codes. So, to make it possible for client
-  applications to read raw key codes, the driver has to define the
-  following macro:
-
-  #define BRL_HAVE_KEY_CODES
-
-
-  and the following functions:
-
-  static int brl_readKey(BrailleDisplay *)
-  int brl_keyToCommand(BrailleDisplay *brl, DriverCommandContext caller, int code)
-
-
-
-  The semantics of brl_readKey() is very similar to brl_readCommand()'s,
-  with one essential difference: a key code is not context-dependant, so
-  no context argument needs to be given to this function. Moreover, the
-  code this function returns is driver-specific, and has to be properly
-  defined by the driver's author so that client applications can rely on
-  it.
-
-  The brl_keyToCommand() function's purpose is to convert a key code as
-  delivered by brl_readKey() into a brltty command. As explained above,
-  this function is called by brlapi when a key is pressed on the braille
-  keyboard that is ignored by the client application. The corresponding
-  command is then returned to brltty.
-
-  6.3.1.1.  Remarks
-
-  When these two functions are present, the only thing brl_readCommand()
-  has to do is to call brl_readKey() and then call brl_keyToCommand()
-  with the value returned by the first function as argument.
-
-  6.3.2.  Exchanging raw data packets
+  6.3.1.  Exchanging raw data packets
 
   Under some circumstances, an application running on the PC can be
   interested in a raw level communication with the braille terminal. For
@@ -1290,7 +1247,7 @@
   the terminal's state, so that it is able to display text in braille
   again.
 
-  6.3.2.1.  Remarks.
+  6.3.1.1.  Remarks.
 
 
   ·  If the driver provides such functions, every other functions should
