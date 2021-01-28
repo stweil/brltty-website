@@ -1,5 +1,5 @@
-Key Table: FreedomScientific Focus2 (Blue) 14
-=============================================
+Key Table: FreedomScientific Focus 14
+=====================================
 
 Notes
 * An eight-dot, Perkins-style, braille keyboard is near the rear of the top.
@@ -173,6 +173,10 @@ Keyboard Input
 * set braille keyboard disabled: Space+Dots137
 * set braille typing mode dots: Space+Dots468
 * set braille typing mode text: Space+Dots467
+
+Special Functions
+* remember current braille window position: RightRockerUp+RoutingKey
+* go to remembered braille window position: RightRockerDown+RoutingKey
 
 Menu Bindings
 -------------

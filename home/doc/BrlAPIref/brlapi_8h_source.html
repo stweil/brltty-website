@@ -39,7 +39,7 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_725956ac427828c1f2eb766e9c427bf4.html">Programs</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_7892c29a8849049d081eebdb225e1350.html">Programs</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -51,7 +51,7 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * libbrlapi - A library providing access to braille terminals for applications.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright (C) 2002-2020 by</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright (C) 2002-2021 by</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *   Samuel Thibault &lt;Samuel.Thibault@ens-lyon.org&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *   Sébastien Hinderer &lt;Sebastien.Hinderer@ens-lyon.org&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
@@ -76,13 +76,13 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/* #undef BRLAPI_WIN32 */</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="group__brlapi__version.html#gafaee688e8b3561f3b788ed238338968c">   38</a></span>&#160;<span class="preprocessor">#define BRLAPI_RELEASE &quot;0.8.1&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="group__brlapi__version.html#gafaee688e8b3561f3b788ed238338968c">   38</a></span>&#160;<span class="preprocessor">#define BRLAPI_RELEASE &quot;0.8.2&quot;</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="group__brlapi__version.html#ga4d56f1d71fa768566e709b12862f163a">   41</a></span>&#160;<span class="preprocessor">#define BRLAPI_MAJOR 0</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="group__brlapi__version.html#gae62937b1b372ea491deeee4451f44e83">   44</a></span>&#160;<span class="preprocessor">#define BRLAPI_MINOR 8</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="group__brlapi__version.html#ga06d391c89b27dbd236edf020b4581311">   47</a></span>&#160;<span class="preprocessor">#define BRLAPI_REVISION 1</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="group__brlapi__version.html#ga06d391c89b27dbd236edf020b4581311">   47</a></span>&#160;<span class="preprocessor">#define BRLAPI_REVISION 2</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="group__brlapi__handles.html#ga57f2aec62b18f8aefea2ab550744b0c1">   50</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__brlapi__version.html#gaea295bdc3a5c5defb3af3c4fb0a8fb15">brlapi_getLibraryVersion</a>(<span class="keywordtype">int</span> *major, <span class="keywordtype">int</span> *minor, <span class="keywordtype">int</span> *revision);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
@@ -134,11 +134,11 @@ $(function() {
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">#else </span><span class="comment">/* BRLAPI_WIN32 */</span><span class="preprocessor"></span></div>
 <div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="group__brlapi__connection.html#gabf9e3103b9d24698e93266d016db3f3a">  145</a></span>&#160;<span class="preprocessor">#define BRLAPI_DEFAUTH_KEYFILE &quot;keyfile:&quot; BRLAPI_ETCDIR &quot;/&quot; BRLAPI_AUTHKEYFILE</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#ifdef USE_POLKIT</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#ifdef HAVE_POLKIT</span></div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#define BRLAPI_DEFAUTH_POLKIT &quot;+polkit&quot;</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#else </span><span class="comment">/* USE_POLKIT */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#else </span><span class="comment">/* HAVE_POLKIT */</span><span class="preprocessor"></span></div>
 <div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="group__brlapi__connection.html#ga5a5181cb2bbfd6181ab8c932e10c0df4">  150</a></span>&#160;<span class="preprocessor">#define BRLAPI_DEFAUTH_POLKIT &quot;&quot;</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* USE_POLKIT */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* HAVE_POLKIT */</span><span class="preprocessor"></span></div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
 <div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="group__brlapi__connection.html#ga1b86dad4b4a50dc0875ab4c037812d5c">  153</a></span>&#160;<span class="preprocessor">#define BRLAPI_DEFAUTH BRLAPI_DEFAUTH_KEYFILE BRLAPI_DEFAUTH_POLKIT</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BRLAPI_WIN32 */</span><span class="preprocessor"></span></div>

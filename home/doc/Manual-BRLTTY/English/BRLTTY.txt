@@ -9,9 +9,9 @@
 
   Dave Mielke <dave@mielke.cc>
 
-  Version 6.2, December 2020
+  Version 6.3, January 2021
 
-  Copyright © 1995-2020 by The BRLTTY Developers.  BRLTTY is free soft-
+  Copyright © 1995-2021 by The BRLTTY Developers.  BRLTTY is free soft-
   ware, and comes with ABSOLUTELY NO WARRANTY.  It is placed under the
   terms of version 2 or later of The GNU General Public License as pub-
   lished by The Free Software Foundation.

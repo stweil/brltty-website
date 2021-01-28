@@ -405,16 +405,21 @@ ul.auto-toc {
 <li><a class="reference internal" href="#the-numsign-directive" id="id34">The NumSign Directive</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#standard-directives" id="id35">Standard Directives</a><ul>
-<li><a class="reference internal" href="#the-include-directive" id="id36">The Include Directive</a></li>
+<li><a class="reference internal" href="#special-directives" id="id35">Special Directives</a><ul>
+<li><a class="reference internal" href="#the-replace-directive" id="id36">The Replace Directive</a></li>
+<li><a class="reference internal" href="#the-emoji-directive" id="id37">The Emoji Directive</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#operands" id="id37">Operands</a><ul>
-<li><a class="reference internal" href="#the-string-operand" id="id38">The String Operand</a></li>
-<li><a class="reference internal" href="#the-representation-operand" id="id39">The Representation Operand</a></li>
+<li><a class="reference internal" href="#standard-directives" id="id38">Standard Directives</a><ul>
+<li><a class="reference internal" href="#the-include-directive" id="id39">The Include Directive</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#contraction-table-list" id="id40">Contraction Table List</a></li>
+<li><a class="reference internal" href="#operands" id="id40">Operands</a><ul>
+<li><a class="reference internal" href="#the-string-operand" id="id41">The String Operand</a></li>
+<li><a class="reference internal" href="#the-representation-operand" id="id42">The Representation Operand</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contraction-table-list" id="id43">Contraction Table List</a></li>
 </ul>
 </div>
 <div class="section" id="description">
@@ -684,10 +689,39 @@ numSign <em>representation</em>
 <p>Define the symbol which marks the beginning of a number.</p>
 </div>
 </div>
+<div class="section" id="special-directives">
+<h2><a class="toc-backref" href="#id35">Special Directives</a></h2>
+<div class="section" id="the-replace-directive">
+<h3><a class="toc-backref" href="#id36">The Replace Directive</a></h3>
+<pre class="literal-block">
+replace <em>characters</em> <em>characters</em>
+</pre>
+<p>Translate the first character sequence into the second character sequence.
+The replacement characters are then recontracted.</p>
+</div>
+<div class="section" id="the-emoji-directive">
+<h3><a class="toc-backref" href="#id37">The Emoji Directive</a></h3>
+<pre class="literal-block">
+emoji <em>language</em>
+</pre>
+<p>Translate an emoji character sequence into its description in the specified
+language. The language operand is an ISO 639 two-letter language code.</p>
+<p>This directive only works if at least ICU version 57 is installed.</p>
+<p>This directive relies on data provided by the CLDR package.
+CLDR stands for the Common Locale Data Repository project.
+Knoqwn names for this package include:</p>
+<ul class="simple">
+<li>cldr-emoji-annotation</li>
+<li>unicode-cldr</li>
+</ul>
+<p>At the time of this writing, this project is maintained at
+<a class="reference external" href="https://github.com/unicode-org/cldr">https://github.com/unicode-org/cldr</a>.</p>
+</div>
+</div>
 <div class="section" id="standard-directives">
-<h2><a class="toc-backref" href="#id35">Standard Directives</a></h2>
+<h2><a class="toc-backref" href="#id38">Standard Directives</a></h2>
 <div class="section" id="the-include-directive">
-<h3><a class="toc-backref" href="#id36">The Include Directive</a></h3>
+<h3><a class="toc-backref" href="#id39">The Include Directive</a></h3>
 <pre class="literal-block">
 include <em>file</em> # <em>comment</em>
 </pre>
@@ -702,9 +736,9 @@ relative, it is anchored at the directory containing the including file.</dd>
 </div>
 </div>
 <div class="section" id="operands">
-<h2><a class="toc-backref" href="#id37">Operands</a></h2>
+<h2><a class="toc-backref" href="#id40">Operands</a></h2>
 <div class="section" id="the-string-operand">
-<h3><a class="toc-backref" href="#id38">The String Operand</a></h3>
+<h3><a class="toc-backref" href="#id41">The String Operand</a></h3>
 <p>A <em>string</em> operand may be specified as a non-whitespace sequence of:</p>
 <ul>
 <li><p class="first">Any single character other than a backslash (\\) or a white-space
@@ -774,7 +808,7 @@ character.</p>
 </ul>
 </div>
 <div class="section" id="the-representation-operand">
-<h3><a class="toc-backref" href="#id39">The Representation Operand</a></h3>
+<h3><a class="toc-backref" href="#id42">The Representation Operand</a></h3>
 <p>The contracted braille representation of a character sequence. Braille cells
 are separated from one another by a minus (<tt class="docutils literal">-</tt>) sign. Each braille cell is
 specified as a sequence of one to eight dot numbers. A dot number is a digit
@@ -787,7 +821,7 @@ operand of the contraction directive is to be written without any translation.</
 </div>
 </div>
 <div class="section" id="contraction-table-list">
-<h2><a class="toc-backref" href="#id40">Contraction Table List</a></h2>
+<h2><a class="toc-backref" href="#id43">Contraction Table List</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />
