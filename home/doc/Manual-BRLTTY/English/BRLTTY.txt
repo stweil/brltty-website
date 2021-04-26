@@ -852,12 +852,12 @@
            equivalent to specifying --with-screen-driver.
 
         The first non-excluded driver becomes the default driver.  If
-        this option isn't specified, or if no driver is specifically
-        included, then an operating system appropriate default is
-        selected.  If a native driver for the current operating system
-        is available, then that driver is selected; if not, then sc is
-        selected.  See the ``screen-driver'' configuration file direc-
-        tive and the ``-x'' command line option for run-time selection.
+        this option isn't specified, or if no driver is specifically in-
+        cluded, then an operating system appropriate default is se-
+        lected.  If a native driver for the current operating system is
+        available, then that driver is selected; if not, then sc is se-
+        lected.  See the ``screen-driver'' configuration file directive
+        and the ``-x'' command line option for run-time selection.
 
      --with-screen-parameters=[driver:]name=value,...
         Specify the default parameter settings for the screen drivers.
@@ -1031,8 +1031,8 @@
 
         If this option isn't specified, then the rw subdirectory of the
         directory specified via the ``--with-library-directory'' build
-        option is assumed.  The directory is created if it doesn't
-        exist.
+        option is assumed.  The directory is created if it doesn't ex-
+        ist.
 
      --with-data-directory=directory
         Specify the directory within the ``installed file hierarchy''
@@ -1227,7 +1227,7 @@
         lified installer image.
 
      --with-stderr-path=path
-        Specify the path to the file or device where standard erorr
+        Specify the path to the file or device where standard error
         output is to be written.  The absolute path should be supplied.
         If this option isn't specified, then this feature isn't
         activated.  This option is primarily intended for building a
@@ -1574,9 +1574,9 @@
        rpm -Uvh brltty-release-version.architecture.rpm
 
 
-  This should be done as root.  Strictly speaking, the -U (update)
-  option is the only one which is necessary.  The -v (verbose) option
-  displays the name of the package as it's being installed.  The -h
+  This should be done as root.  Strictly speaking, the -U (update) op-
+  tion is the only one which is necessary.  The -v (verbose) option dis-
+  plays the name of the package as it's being installed.  The -h
   (hashes) option displays a progress meter (using hash signs).
 
   For the brave, we also provide the source RPM (.src.rpm) file, but
@@ -3678,10 +3678,10 @@
         tracking, etc.), other than when it moves in response to pointer
         (mouse) motion (see the ``Window Follows Pointer'' preference),
         causes the area of the screen corresponding to the new location
-        of the braille window to be highlighted.  If the ``Show
-        Attributes'' preference is enabled then only the character cor-
-        responding to the upper-left corner of the braille window is
-        highlighted.
+        of the braille window to be highlighted.  If the ``Show At-
+        tributes'' preference is enabled then only the character corre-
+        sponding to the upper-left corner of the braille window is high-
+        lighted.
 
      Alert Tunes
         Whenever a significant event with an associated tune occurs (see
@@ -4511,8 +4511,8 @@
         A dot is raised when its corresponding attribute bit is on.
         This is the default attributes table because it's the most intu-
         itive.  One of its problems, though, is that it's difficult to
-        discern the difference between normal (white on black) and
-        reverse (black on white) video.
+        discern the difference between normal (white on black) and re-
+        verse (black on white) video.
 
      invleft_right
         The lefthand column represents the foreground colours:
@@ -4580,8 +4580,8 @@
         A dot is raised when its corresponding attribute bit is on.
 
   See the ``-a'' command line option, the ``attributes-table'' configu-
-  ration file directive, and the ``--with-attributes-table'' build
-  option for details regarding how to use an alternate attributes table.
+  ration file directive, and the ``--with-attributes-table'' build op-
+  tion for details regarding how to use an alternate attributes table.
 
   6.2.1.  Attributes Table Format
 
@@ -4682,24 +4682,30 @@
   The following contraction tables are provided:
 
           Name        Language
+          auto        locale-based autoselection
           af          Afrikaans (contracted)
           am          Amharic (uncontracted)
+          de          German
           de-g0       German (uncontracted)
           de-g1       German (basic contractions)
           de-g2       German (contracted - 1998 standard)
           de-1998     German (contracted - 1998 standard)
           de-2015     German (contracted - 2015 standard)
+          en          English
+          en_US       English (United States)
           en-ueb-g2   English (Unified English Braille, grade 2)
           en-us-g2    English (US, grade 2)
           es          Spanish (grade 2)
+          fr          French
           fr-g1       French (uncontracted)
           fr-g2       French (contracted)
           ha          Hausa (contracted)
           id          Indonesian (contracted)
           ja          Japanese (uncontracted)
+          ko          Korean
+          ko-g0       Korean (uncontracted)
           ko-g1       Korean (grade 1)
           ko-g2       Korean (grade 2)
-          ko          Korean (uncontracted)
           lt          Lituanian
           mg          Malagasy (contracted)
           mun         Munda (contracted)
@@ -4710,7 +4716,7 @@
           si          Sinhalese (uncontracted)
           sw          Swahili (contracted)
           th          Thai (contracted)
-          zh-tw       Chinese (Taiwan, uncontracted)
+          zh_TW       Chinese (Taiwan, uncontracted)
           zu          Zulu (contracted)
 
 
@@ -4736,8 +4742,8 @@
   Each directive has a specific number of operands.  Any text beyond the
   last operand of a directive is interpreted as a comment.  The order of
   the entries within a contraction table is, in general, anything that
-  is convenient for its maintainer(s).  An entry which defines an
-  entity, e.g. class, must precede all references to that entity.
+  is convenient for its maintainer(s).  An entry which defines an en-
+  tity, e.g. class, must precede all references to that entity.
 
   Entries which match character sequences are automatically rearranged
   from longest to shortest so that longer matches are always preferred.

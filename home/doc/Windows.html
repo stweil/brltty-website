@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="Docutils 0.15.2: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
 <title>BRLTTY on Windows</title>
 <style type="text/css">
 
@@ -364,7 +364,7 @@ ul.auto-toc {
 <h1 class="title">BRLTTY on Windows</h1>
 
 <div class="contents topic" id="contents">
-<p class="topic-title first">Contents</p>
+<p class="topic-title">Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#building-brltty" id="id5">Building BRLTTY</a><ul>
 <li><a class="reference internal" href="#system-requirements" id="id6">System Requirements</a></li>
@@ -715,7 +715,7 @@ braille device when on a console window is when using Cygwin.</p>
 controls the braille device. First, a usable window title must be established
 and stable. Second, JAWS braille must be put to sleep.</p>
 <div class="topic">
-<p class="topic-title first">What is a Window Title?</p>
+<p class="topic-title">What is a Window Title?</p>
 <p>Every window in Windows has a title bar that contains the name of the
 application that's running in it, as well as some controls to do things like
 move and resize the window. BRLTTY doesn't show this title bar.</p>
@@ -726,7 +726,7 @@ instead. You must, therefore, tell JAWS within the window title that this is
 a Cygwin window.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Setting the Window Title</p>
+<p class="topic-title">Setting the Window Title</p>
 <p>JAWS uses one of the words in the window title as the name of the
 configuration file set to load. This file set is what tells JAWS the
 specifics of how to handle the application. It is, therefore, where JAWS
@@ -743,7 +743,7 @@ then JAWS will similarly load the <tt class="docutils literal">Cygwin</tt> confi
 </ol>
 </div>
 <div class="topic">
-<p class="topic-title first">Setting Cygwin's Window Title</p>
+<p class="topic-title">Setting Cygwin's Window Title</p>
 <p>First, it is imperative that you replace, or at least modify, the default
 <tt class="docutils literal">PS1</tt> (primary shell prompt) setting. The default for this setting, as
 distributed by Cygwin, places <tt class="docutils literal">$PWD</tt> (the path to the current working
@@ -767,7 +767,7 @@ dollar (<tt class="docutils literal">$</tt>) sign. More importantly, though, it 
 the title with <tt class="docutils literal">$PWD</tt>, renders the window unrecognizable by JAWS.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Putting JAWS Braille to Sleep</p>
+<p class="topic-title">Putting JAWS Braille to Sleep</p>
 <p>Now that a stable window title has been established, JAWS braille can
 finally be put to sleep. While in Cygwin, and with BRLTTY not running, do
 the following:</p>
@@ -786,7 +786,7 @@ like <tt class="docutils literal">&lt; &gt;</tt>). Press Space to toggle the set
 </ol>
 </div>
 <div class="topic">
-<p class="topic-title first">Putting JAWS Speech to Sleep</p>
+<p class="topic-title">Putting JAWS Speech to Sleep</p>
 <p>If you'd like to use JAWS speech in Windows, but not in Cygwin, you can do
 the following:</p>
 <ol class="arabic simple">
@@ -803,7 +803,7 @@ check box (<tt class="docutils literal">&lt; &gt;</tt>). Press Space to check it
 </ol>
 </div>
 <div class="topic">
-<p class="topic-title first">Known Problem</p>
+<p class="topic-title">Known Problem</p>
 <p>You'll always be able to switch to Cygwin, and BRLTTY (if it's running) will
 take control of the braille device automatically. Switching back to Windows
 and JAWS, however, may be problematic. The degree of success seems to depend

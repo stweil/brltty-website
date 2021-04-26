@@ -107,6 +107,10 @@
                the BRLAPI_PARAMF_SUBSCRIBE for the corresponding
                parameter. It is structured exactly like a
                BRLAPI_PACKET_PARAM_VALUE packet.
+        7.4.19 BRLAPI_PACKET_SYNCHRONIZE This packet is sent by the
+               client and just acknowledged by the server. This allows
+               the client to perform a round-try with the server, thus
+               collecting any pending exception notification.
 
 
   ______________________________________________________________________
@@ -1365,9 +1369,6 @@
      client to manage display and keypresses. For this, it can send
      either of these types of packet:
 
-     ·  BRLAPI_PACKET_ENTERTYMODE to switch to another tty, but how key
-        presses should be sent mustn't change,
-
      ·  BRLAPI_PACKET_LEAVETTYMODE to leave tty handling mode and go
         back to normal mode,
 
@@ -1393,8 +1394,8 @@
 
      ·  BRLAPI_PACKET_PACKET to send a packet to the braille terminal.
 
-     And the server might send BRLAPI_PACKET_PACKET packets to give
-     received packets from the terminal to the client.
+     And the server might send BRLAPI_PACKET_PACKET packets to give re-
+     ceived packets from the terminal to the client.
 
   ·  suspend mode: the client wants to completely drive the braille
      terminal.  The device driver is hence kept closed. No type of
@@ -1416,9 +1417,9 @@
   server. The server sends one first for letting the client know its
   protocol version. Data is an integer indicating the protocol version.
   Then client must then respond the same way for giving its version. If
-  the protocol version can't be handled by the server, a
-  BRLAPI_ERROR_PROTOCOL_VERSION error packet is returned and the connec-
-  tion is closed.
+  the protocol version can't be handled by the server, a  BRLAPI_ER-
+  ROR_PROTOCOL_VERSION error packet is returned and the connection is
+  closed.
 
   7.4.2.  BRLAPI_PACKET_AUTH
 
@@ -1472,8 +1473,8 @@
   display size. The returned data are two integers: width and then
   height.
 
-  7.4.6.  BRLAPI_PACKET_ENTERTTYMODE (see brlapi_enterTtyMode() and
-  brlapi_enterTtyModeWithPath() )
+  7.4.6.  BRLAPI_PACKET_ENTERTTYMODE (see brlapi_enterTtyMode() and  br-
+  lapi_enterTtyModeWithPath() )
 
   This should be sent by the client to get control of a tty. Sent data
   are first a series of integers: the first one gives the number of
@@ -1519,10 +1520,23 @@
   BRLAPI_PACKET_ACCEPTKEYRANGE packets to tell ranges of key codes which
   should be sent to it, and not given to brltty. The server keeps a
   dynamic list of ranges, so that arbitrary sequences of such packets
-  can be sent.  For ranges, Data are 2 pairs of integers: the lower and
-  the upper boundaries; lower and upper must be equal to tell one key,
-  for instance.  For Sets, Data simply consists of pairs of integers,
-  one per key in the set.
+  can be sent.  A range is composed of 2 keycodes: the "first" and the
+  "last" boundaries.  Each keycode is composed of 2 integers: the key
+  flags then the command code.  The range expressed by these two
+  keycodes is the set of keycodes whose command codes are between the
+  command code of the "first" keycode and the "last" keycode
+  (inclusive), and whose flags contain at least the flags of the "first"
+  keycode and at most the flags of the "last" keycode. Setting the
+  "first" and "last" keycode to the same value express only one keycode,
+  for instance. Setting the first and last keycode to the same command
+  code but setting no flags in the "first" keycode and setting one flag
+  in the "last" keycode expresses only two keycode, with the same
+  command code and no flags set except possibly the flag that is set in
+  the "last" keycode. Setting one flag i in the "first" keycode and
+  setting the same flag plus another flag j in the "last" keycode
+  expresses that the keycodes in the range have flag i set and possibly
+  flag j set, but no other flag. Several such ranges can be provided one
+  after the other.
 
   7.4.11.  BRLAPI_PACKET_WRITE (see brlapi_write() )
 
@@ -1539,13 +1553,16 @@
   ·  A region must be given as two integers indicating the beginning and
      the number of characters of the part of the braille display which
      is to be updated, the first cell of the display being numbered 1.
+     If the number is negative, its absolute value is taken into
+     account, and the update is padded or truncated to fill the rest of
+     the display.
 
   ·  The text to display can then be given, preceded by its size in
      bytes expressed as an integer. It will erase the corresponding
-     region in the AND and OR fields. The text's length in characters
-     must exactly match the region size. For multibyte text, this is the
-     number of wide characters. Notably, combining and double-width
-     characters count for 1.
+     region in the AND and OR fields. If the region size is positive,
+     the text's length in characters must exactly match the region size.
+     For multibyte text, this is the number of wide characters. Notably,
+     combining and double-width characters count for 1.
 
   ·  Then an AND field can be given, one byte per character: the 8-dot
      representation of the above text will be AND-ed with this field,
@@ -1591,8 +1608,8 @@
   To leave raw mode, the client must send a BRLAPI_PACKET_LEAVERAWMODE
   packet, which is acknowledged.
 
-  7.4.14.  BRLAPI_PACKET_PACKET (see brlapi_sendRaw() and
-  brlapi_recvRaw() )
+  7.4.14.  BRLAPI_PACKET_PACKET (see brlapi_sendRaw() and  br-
+  lapi_recvRaw() )
 
   While in raw mode, only BRLAPI_PACKET_PACKET packets can be exchanged
   between the client and the server: to send a packet to the braille
@@ -1677,10 +1694,15 @@
 
   7.4.18.  BRLAPI_PACKET_PARAM_VALUE  This packet is sent asynchronously
   by the server to provide an update of a value of a parameter. This is
-  sent only if the client has previously sent a
-  BRLAPI_PACKET_PARAM_REQUEST packet with the BRLAPI_PARAMF_SUBSCRIBE
-  for the corresponding parameter. It is structured exactly like a
-  BRLAPI_PACKET_PARAM_VALUE packet.
+  sent only if the client has previously sent a  BRLAPI_PACKET_PARAM_RE-
+  QUEST packet with the BRLAPI_PARAMF_SUBSCRIBE  for the corresponding
+  parameter. It is structured exactly like a BRLAPI_PACKET_PARAM_VALUE
+  packet.
+
+  7.4.19.  BRLAPI_PACKET_SYNCHRONIZE  This packet is sent by the client
+  and just acknowledged by the server. This allows the client to perform
+  a round-try with the server, thus collecting any pending exception no-
+  tification.
 
 
 

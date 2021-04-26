@@ -1283,8 +1283,6 @@ or raw mode. The client can send either of these types of packet:
 no power on it any more, masked keys excepted. It's up to the client to manage
 display and keypresses. For this, it can send either of these types of packet:
   <itemize>
-  <item><tt/BRLAPI_PACKET_ENTERTY/MODE to switch to another tty, but how key presses
-  should be sent mustn't change,
   <item><tt/BRLAPI_PACKET_LEAVETTYMODE/ to leave tty handling mode and go back to
   normal mode,
   <item><tt/BRLAPI_PACKET_IGNOREKEYRANGE/ and <tt/BRLAPI_PACKET_ACCEPTKEYRANGE/ to mask and unmask keys,
@@ -1434,9 +1432,21 @@ packets to tell ranges
 of key codes which should be sent to it, and not given to
 <tt/brltty/. The server keeps a dynamic list of ranges, so that arbitrary
 sequences of such packets can be sent.
-For ranges, Data are 2 pairs of integers: the lower and the
-upper boundaries; lower and upper must be equal to tell one key, for instance.
-For Sets, Data simply consists of pairs of integers, one per key in the set.
+A range is composed of 2 keycodes: the "first" and the "last" boundaries.
+Each keycode is composed of 2 integers: the key flags then the command code.
+The range expressed by these two keycodes is the set of keycodes whose command
+codes are between the command code of the "first" keycode and the "last" keycode
+(inclusive), and whose flags contain at least the flags of the "first" keycode
+and at most the flags of the "last" keycode. Setting the "first" and "last"
+keycode to the same value express only one keycode, for instance. Setting the
+first and last keycode to the same command code but setting no flags in the
+"first" keycode and setting one flag in the "last" keycode expresses only two
+keycode, with the same command code and no flags set except possibly the flag
+that is set in the "last" keycode. Setting one flag <em/i/ in the "first"
+keycode and setting the same flag plus another flag <em/j/ in the "last" keycode
+expresses that the keycodes in the range have flag <em/i/ set and possibly flag
+<em/j/ set, but no other flag. Several such ranges can be provided one after the
+other.
 
 <sect2><tt/BRLAPI_PACKET_WRITE/ (see <em/brlapi_write()/)
 <p>
@@ -1451,10 +1461,12 @@ flag weight):
 display has several. If not given, usual display is used.
 <item> A region must be given as two integers indicating the beginning and the
 number of characters of the part of the braille display which is to be updated,
-the first cell of the display being numbered 1.
+the first cell of the display being numbered 1. If the number is negative, its
+absolute value is taken into account, and the update is padded or truncated to
+fill the rest of the display.
 <item> The text to display can then be given, preceded by its size in bytes
 expressed as an integer. It will erase the corresponding region in the AND and
-OR fields. The text's length in characters must exactly match the region
+OR fields. If the region size is positive, the text's length in characters must exactly match the region
 size. For multibyte text, this is the number of wide characters. Notably,
 combining and double-width characters count for 1.
 <item> Then an AND field can be given, one byte per character: the 8-dot
@@ -1583,5 +1595,11 @@ value of a parameter. This is sent only if the client has previously sent a
 for the corresponding parameter.
 
 It is structured exactly like a <tt/BRLAPI_PACKET_PARAM_VALUE/ packet.
+
+<sect2><tt/BRLAPI_PACKET_SYNCHRONIZE/
+
+This packet is sent by the client and just acknowledged by the server. This
+allows the client to perform a round-try with the server, thus collecting any
+pending exception notification.
 
 </article>

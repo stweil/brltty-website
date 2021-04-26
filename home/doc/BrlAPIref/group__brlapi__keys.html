@@ -179,7 +179,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Accept all key presses from the braille keyboard</p>
 <p>This function asks the server to give all keys to the application, and not give them to <em>brltty</em>.</p>
-<p>Warning: after calling this function, make sure to call <a class="el" href="group__brlapi__keys.html#ga51f541d3e9e1a797a4e4c5ef884f02cb">brlapi_ignoreKeys()</a> for ignoring important keys like BRL_CMD_SWITCHVT_PREV/NEXT and such. </p>
+<p>Warning: after calling this function, make sure to call <a class="el" href="group__brlapi__keys.html#ga51f541d3e9e1a797a4e4c5ef884f02cb">brlapi_ignoreKeys()</a> for ignoring important keys like BRL_CMD_SWITCHVT_PREV/NEXT and such.</p>
+<p>The sets of such keys are reset on brlapi_enterTtyMode call. </p>
 
 </div>
 </div>
@@ -199,7 +200,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Ignore all key presses from the braille keyboard</p>
-<p>This function asks the server to give all keys to <em>brltty</em>, rather than returning them to the application via <a class="el" href="group__brlapi__keys.html#ga3b5ba0c43d48792e7071e772b50b9cbe">brlapi_readKey()</a>. </p>
+<p>This function asks the server to give all keys to <em>brltty</em>, rather than returning them to the application via <a class="el" href="group__brlapi__keys.html#ga3b5ba0c43d48792e7071e772b50b9cbe">brlapi_readKey()</a>.</p>
+<p>The sets of such keys are reset on brlapi_enterTtyMode call. </p>
 
 </div>
 </div>
@@ -526,9 +528,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Accept some key presses from the braille keyboard</p>
 <p>This function asks the server to return the provided key ranges (inclusive) to the application, and not give them to <em>brltty</em>.</p>
+<p>The sets of such keys are reset on brlapi_enterTtyMode call.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ranges</td><td>key ranges, which are inclusive </td></tr>
+    <tr><td class="paramname">ranges</td><td>key ranges, which are inclusive, see <a class="el" href="group__brlapi__keycodes.html">Types and Defines for<em>BrlAPI</em> Key Codes</a> about key ranges </td></tr>
     <tr><td class="paramname">count</td><td>number of ranges </td></tr>
   </table>
   </dd>
@@ -569,6 +572,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Accept some key presses from the braille keyboard</p>
 <p>This function asks the server to give the provided keys to the application, and not give them to <em>brltty</em>.</p>
+<p>The sets of such keys are reset on brlapi_enterTtyMode call.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>type of keys to be ignored </td></tr>
@@ -681,9 +685,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Ignore some key presses from the braille keyboard</p>
 <p>This function asks the server to give the provided key ranges to <em>brltty</em>, rather than returning them to the application via <a class="el" href="group__brlapi__keys.html#ga3b5ba0c43d48792e7071e772b50b9cbe">brlapi_readKey()</a>.</p>
+<p>The sets of such keys are reset on brlapi_enterTtyMode call.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ranges</td><td>key ranges, which are inclusive </td></tr>
+    <tr><td class="paramname">ranges</td><td>key ranges, which are inclusive, see <a class="el" href="group__brlapi__keycodes.html">Types and Defines for<em>BrlAPI</em> Key Codes</a> about key ranges </td></tr>
     <tr><td class="paramname">count</td><td>number of ranges </td></tr>
   </table>
   </dd>
@@ -724,6 +729,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Ignore some key presses from the braille keyboard</p>
 <p>This function asks the server to give the provided keys to <em>brltty</em>, rather than returning them to the application via <a class="el" href="group__brlapi__keys.html#ga3b5ba0c43d48792e7071e772b50b9cbe">brlapi_readKey()</a>.</p>
+<p>The sets of such keys are reset on brlapi_enterTtyMode call.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>type of keys to be ignored </td></tr>

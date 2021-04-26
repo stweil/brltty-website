@@ -25,15 +25,21 @@ Cursor Functions
 * go to screen cursor: RightSelector
 * go back after cursor tracking: LeftSelector
 * bring screen cursor to character: RoutingKey
-* bring screen cursor to current line: RightSelector+Hot8
+* bring screen cursor to current line:
+  + PanLeft+PanRight
+  + RightSelector+Hot8
 
 Vertical Navigation
 * go up one line: LeftWheelUp
 * go down one line: LeftWheelDown
 * go to top line: RightSelector+PanLeft
 * go to bottom line: RightSelector+PanRight
-* go to beginning of top line: LeftSelector+PanLeft
-* go to beginning of bottom line: LeftSelector+PanRight
+* go to beginning of top line:
+  + long LeftSelector
+  + LeftSelector+PanLeft
+* go to beginning of bottom line:
+  + long RightSelector
+  + LeftSelector+PanRight
 * go up to nearest line with different content: LeftWheelPress+LeftWheelUp
 * go down to nearest line with different content: LeftWheelPress+LeftWheelDown
 * go up to nearest line with different highlighting: LeftSelector+LeftWheelUp

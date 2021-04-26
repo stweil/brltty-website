@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="Docutils 0.15.2: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
 <title>Key Table: FreedomScientific Focus1 (original)</title>
 <style type="text/css">
 
@@ -367,7 +367,7 @@ ul.auto-toc {
 <li><a class="reference external" href="brl-fs-focus1.txt">Help Screen Version</a></li>
 </ul>
 <div class="contents topic" id="contents">
-<p class="topic-title first">Contents</p>
+<p class="topic-title">Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#id1" id="id4"></a><ul>
 <li><a class="reference internal" href="#notes" id="id5">Notes</a></li>
@@ -381,12 +381,14 @@ ul.auto-toc {
 <li><a class="reference internal" href="#clipboard-functions" id="id11">Clipboard Functions</a></li>
 <li><a class="reference internal" href="#configuration-functions" id="id12">Configuration Functions</a></li>
 <li><a class="reference internal" href="#menu-operations" id="id13">Menu Operations</a></li>
-<li><a class="reference internal" href="#keyboard-input" id="id14">Keyboard Input</a></li>
+<li><a class="reference internal" href="#speech-functions" id="id14">Speech Functions</a></li>
+<li><a class="reference internal" href="#speech-navigation" id="id15">Speech Navigation</a></li>
+<li><a class="reference internal" href="#keyboard-input" id="id16">Keyboard Input</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#menu-bindings" id="id15">Menu Bindings</a><ul>
-<li><a class="reference internal" href="#id2" id="id16">Special Modes</a></li>
-<li><a class="reference internal" href="#id3" id="id17">Menu Operations</a></li>
+<li><a class="reference internal" href="#menu-bindings" id="id17">Menu Bindings</a><ul>
+<li><a class="reference internal" href="#id2" id="id18">Special Modes</a></li>
+<li><a class="reference internal" href="#id3" id="id19">Menu Operations</a></li>
 </ul>
 </li>
 </ul>
@@ -396,21 +398,28 @@ ul.auto-toc {
 <div class="section" id="notes">
 <h3><a class="toc-backref" href="#id5">Notes</a></h3>
 <ul class="simple">
-<li>An eight-dot, Perkins-style, braille keyboard is near the rear of the top.
-Its keys, From left to right, are: Dot7, Dot3, Dot2, Dot1, Dot4, Dot5, Dot6, Dot8.
-The space bar is in front of the braille cells.</li>
+<li>This description is general because the key layout differs from model to model.</li>
 <li>There is a routing key immediately behind each braille cell.
-Some models have a navrow key immediately behind each routing key.</li>
+Some models have a navrow key immediately behind each routing key.
+On others, a navrow key can be emulated by long-pressing the corresponding routing key.</li>
 <li>There are two Nav controls - one at each end of the braille cells.
-They have three actions: Up, Down, and Press.
+Each has three actions: Up, Down, and Press.
 On newer models, each is a rocker combined with a button.
 On older models, each is a wheel that can be both rolled and pressed.</li>
 <li>The keys on the front, from left to right, are:
 pan left, left selector, left shift - right shift, right selector, pan right.</li>
-<li>The left and right shift keys are squarish and flat.</li>
-<li>The left and right panning keys are long and flat with a raised double-arrow.</li>
-<li>The left and right selector keys are round and concave.
+<li>The left and right pan keys are short bars.
+On some models, each has a raised double-arrow.</li>
+<li>The left and right selectors are round.
 On older models, they're known as GDF (General Display Function) keys.</li>
+<li>An eight-dot, Perkins-style, braille keyboard is near the rear of the top.
+Its keys, From left to right, are: Dot7, Dot3, Dot2, Dot1 - Dot4, Dot5, Dot6, Dot8.
+The space bar is in front of the braille cells.
+On some models, the eight dot keys are in a straight line
+behind the space bar but in front of the braille cells.</li>
+<li>The left and right shift keys are squarish.
+On some models, they're at the center of the front.
+On others, they're on either side of the space bar.</li>
 </ul>
 </div>
 </div>
@@ -430,8 +439,8 @@ On older models, they're known as GDF (General Display Function) keys.</li>
 <li>set screen image frozen: Space+Dots1248</li>
 <li>set screen image unfrozen: Space+Dots1247</li>
 <li>describe character:<ul>
-<li>RightNavPress+RoutingKey</li>
 <li>NavrowKey</li>
+<li>RightNavPress+RoutingKey</li>
 </ul>
 </li>
 </ul>
@@ -442,7 +451,12 @@ On older models, they're known as GDF (General Display Function) keys.</li>
 <li>go to screen cursor: RightSelector</li>
 <li>go back after cursor tracking: LeftSelector</li>
 <li>bring screen cursor to character: RoutingKey</li>
-<li>bring screen cursor to current line: Space+Dots1236</li>
+<li>bring screen cursor to current line:<ul>
+<li>PanLeft+PanRight</li>
+<li>Space+Dots1236</li>
+</ul>
+</li>
+<li>bring screen cursor to speech cursor: LeftSelector+RightShift+Space</li>
 </ul>
 </div>
 <div class="section" id="vertical-navigation">
@@ -452,8 +466,16 @@ On older models, they're known as GDF (General Display Function) keys.</li>
 <li>go down one line: LeftNavDown</li>
 <li>go to top line: RightSelector+PanLeft</li>
 <li>go to bottom line: RightSelector+PanRight</li>
-<li>go to beginning of top line: LeftSelector+PanLeft</li>
-<li>go to beginning of bottom line: LeftSelector+PanRight</li>
+<li>go to beginning of top line:<ul>
+<li>long LeftSelector</li>
+<li>LeftSelector+PanLeft</li>
+</ul>
+</li>
+<li>go to beginning of bottom line:<ul>
+<li>long RightSelector</li>
+<li>LeftSelector+PanRight</li>
+</ul>
+</li>
 <li>go up to nearest line with different content: LeftNavPress+LeftNavUp</li>
 <li>go down to nearest line with different content: LeftNavPress+LeftNavDown</li>
 <li>go up to nearest line with different highlighting: LeftSelector+LeftNavUp</li>
@@ -498,6 +520,7 @@ On older models, they're known as GDF (General Display Function) keys.</li>
 <li>linear copy to character: RightSelector+RoutingKey</li>
 <li>rectangular copy to character: PanRight+RoutingKey</li>
 <li>copy characters to clipboard: RoutingKey+RoutingKey</li>
+<li>append characters to clipboard: NavrowKey+NavrowKey</li>
 <li>insert clipboard text after screen cursor:<ul>
 <li>LeftSelector+RightSelector</li>
 <li>Space+Dots1346</li>
@@ -544,8 +567,45 @@ On older models, they're known as GDF (General Display Function) keys.</li>
 <li>save preferences to disk: Space+Dots12348</li>
 </ul>
 </div>
+<div class="section" id="speech-functions">
+<h3><a class="toc-backref" href="#id14">Speech Functions</a></h3>
+<ul class="simple">
+<li>stop speaking: PanRight+LeftShift</li>
+<li>speak current line: PanRight+RightShift</li>
+<li>speak from top of screen through current line: PanRight+LeftShift+Space</li>
+<li>speak from current line through bottom of screen: PanRight+RightShift+Space</li>
+<li>decrease speaking volume: Space+LeftNavDown</li>
+<li>increase speaking volume: Space+LeftNavUp</li>
+<li>decrease speaking rate: LeftShift+LeftNavDown</li>
+<li>increase speaking rate: LeftShift+LeftNavUp</li>
+<li>decrease speaking pitch: RightShift+LeftNavDown</li>
+<li>increase speaking pitch: RightShift+LeftNavUp</li>
+<li>set autospeak on/off: PanRight+Space</li>
+</ul>
+</div>
+<div class="section" id="speech-navigation">
+<h3><a class="toc-backref" href="#id15">Speech Navigation</a></h3>
+<ul class="simple">
+<li>speak current character: PanLeft+Space</li>
+<li>describe current character: long PanLeft+Space</li>
+<li>go to and speak previous character: PanLeft+LeftShift</li>
+<li>go to and speak next character: PanLeft+RightShift</li>
+<li>go to and speak first non-blank character on line: PanLeft+LeftShift+Space</li>
+<li>go to and speak last non-blank character on line: PanLeft+RightShift+Space</li>
+<li>speak current word: LeftSelector+Space</li>
+<li>spell current word: long LeftSelector+Space</li>
+<li>go to and speak previous word: LeftSelector+LeftShift</li>
+<li>go to and speak next word: LeftSelector+RightShift</li>
+<li>speak current line: RightSelector+Space</li>
+<li>go to and speak previous line: RightSelector+LeftShift</li>
+<li>go to and speak next line: RightSelector+RightShift</li>
+<li>go to and speak first non-blank line on screen: RightSelector+LeftShift+Space</li>
+<li>go to and speak last non-blank line on screen: RightSelector+RightShift+Space</li>
+<li>speak speech cursor location: LeftSelector+LeftShift+Space</li>
+</ul>
+</div>
 <div class="section" id="keyboard-input">
-<h3><a class="toc-backref" href="#id14">Keyboard Input</a></h3>
+<h3><a class="toc-backref" href="#id16">Keyboard Input</a></h3>
 <ul class="simple">
 <li>braille keyboard dot1: Dot1</li>
 <li>braille keyboard dot2: Dot2</li>
@@ -560,11 +620,7 @@ On older models, they're known as GDF (General Display Function) keys.</li>
 <li>braille keyboard space: Space</li>
 <li>type braille dots [7]: Space+Dot7</li>
 <li>type braille dots [8]: Space+Dot8</li>
-<li>backspace key:<ul>
-<li>Dot7</li>
-<li>Space+LeftShift</li>
-</ul>
-</li>
+<li>backspace key: Dot7</li>
 <li>escape key: Space+Dots26</li>
 <li>cursor-left key: Space+Dot3</li>
 <li>cursor-right key: Space+Dot6</li>
@@ -577,11 +633,7 @@ On older models, they're known as GDF (General Display Function) keys.</li>
 <li>insert key: Space+Dots35</li>
 <li>delete key: Space+Dots256</li>
 <li>function key: Space+RoutingKey</li>
-<li>enter key:<ul>
-<li>Dot8</li>
-<li>Space+RightShift</li>
-</ul>
-</li>
+<li>enter key: Dot8</li>
 <li>tab key: Space+Dots45</li>
 <li>clear all sticky input modifiers: Space+Dots78</li>
 <li>cycle the Upper sticky input modifier (next, on, off): Space+Dots68</li>
@@ -590,7 +642,7 @@ On older models, they're known as GDF (General Display Function) keys.</li>
 <li>cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dots28</li>
 <li>cycle the AltGr (Right Alt) sticky input modifier (next, on, off): Space+Dots58</li>
 <li>cycle the GUI (Windows) sticky input modifier (next, on, off): Space+Dots18</li>
-<li>switch to specific virtual terminal: RightShift+RoutingKey</li>
+<li>switch to specific virtual terminal: RightSelector+NavrowKey</li>
 <li>switch to the previous virtual terminal: Space+Dots12367</li>
 <li>switch to the next virtual terminal: Space+Dots12368</li>
 <li>set braille keyboard enabled: Space+Dots138</li>
@@ -601,15 +653,15 @@ On older models, they're known as GDF (General Display Function) keys.</li>
 </div>
 </div>
 <div class="section" id="menu-bindings">
-<h2><a class="toc-backref" href="#id15">Menu Bindings</a></h2>
+<h2><a class="toc-backref" href="#id17">Menu Bindings</a></h2>
 <div class="section" id="id2">
-<h3><a class="toc-backref" href="#id16">Special Modes</a></h3>
+<h3><a class="toc-backref" href="#id18">Special Modes</a></h3>
 <ul class="simple">
 <li>enter/leave preferences menu: Dot8</li>
 </ul>
 </div>
 <div class="section" id="id3">
-<h3><a class="toc-backref" href="#id17">Menu Operations</a></h3>
+<h3><a class="toc-backref" href="#id19">Menu Operations</a></h3>
 <ul class="simple">
 <li>go up to previous item: Dot1</li>
 <li>go down to next item: Dot4</li>

@@ -450,6 +450,10 @@ Typedefs</h2></td></tr>
 <tr class="separator:gafca55401eb8d052b49c8d5ed4a848b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga39c8da5e99056ef533d588e192760540"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__keycodes.html#ga39c8da5e99056ef533d588e192760540">BRLAPI_KEY_CMD_GUI_ITEM_LAST</a>&#160;&#160;&#160;(<a class="el" href="group__brlapi__keycodes.html#gacc8f7f3f58a917deab85e8d24f8ccd46">BRLAPI_KEY_CMD</a>(0) + 149)</td></tr>
 <tr class="separator:ga39c8da5e99056ef533d588e192760540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3afcae68c0a0aa34210eff30c03cbafa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__keycodes.html#ga3afcae68c0a0aa34210eff30c03cbafa">BRLAPI_KEY_CMD_SAY_LOWER</a>&#160;&#160;&#160;(<a class="el" href="group__brlapi__keycodes.html#gacc8f7f3f58a917deab85e8d24f8ccd46">BRLAPI_KEY_CMD</a>(0) + 150)</td></tr>
+<tr class="separator:ga3afcae68c0a0aa34210eff30c03cbafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c67f22e5e1e8bc6e92d769931989fc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__keycodes.html#ga4c67f22e5e1e8bc6e92d769931989fc8">BRLAPI_KEY_CMD_SAY_HIGHER</a>&#160;&#160;&#160;(<a class="el" href="group__brlapi__keycodes.html#gacc8f7f3f58a917deab85e8d24f8ccd46">BRLAPI_KEY_CMD</a>(0) + 151)</td></tr>
+<tr class="separator:ga4c67f22e5e1e8bc6e92d769931989fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga99d9a7158d8a66d71423592a9d29853c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__keycodes.html#ga99d9a7158d8a66d71423592a9d29853c">BRLAPI_KEY_CMD_ROUTE</a>&#160;&#160;&#160;<a class="el" href="group__brlapi__keycodes.html#gacc8f7f3f58a917deab85e8d24f8ccd46">BRLAPI_KEY_CMD</a>(1)</td></tr>
 <tr class="separator:ga99d9a7158d8a66d71423592a9d29853c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8719b9d891c48011a3673bafea9ac74d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__brlapi__keycodes.html#ga8719b9d891c48011a3673bafea9ac74d">BRLAPI_KEY_CMD_CLIP_NEW</a>&#160;&#160;&#160;<a class="el" href="group__brlapi__keycodes.html#gacc8f7f3f58a917deab85e8d24f8ccd46">BRLAPI_KEY_CMD</a>(2)</td></tr>
@@ -592,8 +596,10 @@ Typedefs</h2></td></tr>
 <li>bits 31-29 (BRLAPI_KEY_TYPE_MASK), key type: either BRLAPI_KEY_TYPE_CMD for braille commands, or BRLAPI_KEY_TYPE_SYM for standard X keysyms.</li>
 <li>bits 28-0 (BRLAPI_KEY_CODE_MASK), key code: for braille commands, see BRLAPI_KEY_CMD_* ; for standard X keysyms, this is the keysym value, see X11 documentation, a complete list is probably available on your system in /usr/include/X11/keysymdef.h</li>
 </ul>
+<p>The second and third part are thus mandatory to tell the type of keycode and the value of the keycode, and the first part contains optional flags.</p>
 <p>The third part is itself split into two parts: a command number and a command value. The relative sizes of these parts vary according to the key type.</p>
 <p>For a braille command, bits 28-16 (BRLAPI_KEY_CMD_BLK_MASK) hold the braille command number, while bits 15-0 (BRLAPI_KEY_CMD_ARG_MASK) hold the command value.</p>
+<p>The <a class="el" href="group__brlapi__keys.html#gafdac75a70de34360e62bd17cddaecb5d">brlapi_expandKeyCode()</a> function may be used for splitting key codes into these parts.</p>
 <p>For a X keysym, if it is a unicode keysym (0x1uvwxyz), then the command number part is 0x1000000 and the value part is 0xuvwxyz. Else, the command part is held by bits 28-8 and the value part is held by bits 7-0. This permits to easily handle usual cases like 0x00xy (latin1), 0x01xy (latin2), XK_Backspace (0xff08, backspace), XK_Tab (0xff09, tab), ...</p>
 <p>For instance, if key == 0x0000000020010008,</p><ul>
 <li>(key &amp; BRLAPI_KEY_TYPE_MASK) == BRLAPI_KEY_TYPE_CMD, so it's a braille command</li>
@@ -611,7 +617,7 @@ Typedefs</h2></td></tr>
 <li>(key &amp; BRLAPI_KEY_SYM_UNICODE) != 0 so it's a unicode keysym, whose value is key &amp; (BRLAPI_KEY_SYM_UNICODE-1). Of course, one can also consider (key &amp; BRLAPI_KEY_CODE_MASK) == XK_Abelowdot</li>
 <li>(key &amp; BRLAPI_KEY_FLAGS_MASK) == 0, so no modifier key was pressed during the command, and no particular flag applies to the command.</li>
 </ul>
-<p>The <a class="el" href="group__brlapi__keys.html#gafdac75a70de34360e62bd17cddaecb5d">brlapi_expandKeyCode()</a> function may be used for splitting key codes into these parts. </p>
+<p><a class="el" href="group__brlapi__keys.html#gaf2eaa6152bfdee19b0a886fd40046d41">brlapi_ignoreKeyRanges()</a> and <a class="el" href="group__brlapi__keys.html#ga9f04b39792b1849250fb547772fddd7c">brlapi_acceptKeyRanges()</a> manipulate keycode ranges. They are composed of 2 keycodes: the "first" and the "last" boundaries. The range expressed by these two keycodes is the set of keycodes whose lower part (bits 31-0) is between the lower part of the "first" keycode and the "last" keycode (inclusive), and whose high part (bits 63-32), the flags, contains at least the flags of the "first" keycode, and at most the flags of the "last" keycode. Setting the "first" and "last" keycode to the same value express only one keycode, for instance. Setting the first and last keycode to the same command code but setting no flags in the "first" keycode and setting one flag in the "last" keycode expresses only two keycode, with the same lower part and no flags set except possibly the flag that is set in the "last" keycode. Setting one flag i in the "first" keycode and setting the same flag plus another flag j in the "last" keycode expresses that the keycodes in the range have flag i set and possibly flag j set, but no other flag. </p>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga69b126bad988af229fc24b21990dab4c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga69b126bad988af229fc24b21990dab4c">&#9670;&nbsp;</a></span>BRLAPI_DOT1</h2>
@@ -3054,6 +3060,21 @@ Typedefs</h2></td></tr>
 
 </div>
 </div>
+<a id="ga4c67f22e5e1e8bc6e92d769931989fc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c67f22e5e1e8bc6e92d769931989fc8">&#9670;&nbsp;</a></span>BRLAPI_KEY_CMD_SAY_HIGHER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BRLAPI_KEY_CMD_SAY_HIGHER&#160;&#160;&#160;(<a class="el" href="group__brlapi__keycodes.html#gacc8f7f3f58a917deab85e8d24f8ccd46">BRLAPI_KEY_CMD</a>(0) + 151)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>increase speaking pitch </p>
+
+</div>
+</div>
 <a id="gad046366c8ba9961883cbb5136d55935d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad046366c8ba9961883cbb5136d55935d">&#9670;&nbsp;</a></span>BRLAPI_KEY_CMD_SAY_LINE</h2>
 
@@ -3081,6 +3102,21 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>increase speaking volume </p>
+
+</div>
+</div>
+<a id="ga3afcae68c0a0aa34210eff30c03cbafa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3afcae68c0a0aa34210eff30c03cbafa">&#9670;&nbsp;</a></span>BRLAPI_KEY_CMD_SAY_LOWER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BRLAPI_KEY_CMD_SAY_LOWER&#160;&#160;&#160;(<a class="el" href="group__brlapi__keycodes.html#gacc8f7f3f58a917deab85e8d24f8ccd46">BRLAPI_KEY_CMD</a>(0) + 150)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>decrease speaking pitch </p>
 
 </div>
 </div>
@@ -4668,14 +4704,14 @@ Typedefs</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="agroup__brlapi__keycodes_html_ga69b126bad988af229fc24b21990dab4c"><div class="ttname"><a href="group__brlapi__keycodes.html#ga69b126bad988af229fc24b21990dab4c">BRLAPI_DOT1</a></div><div class="ttdeci">#define BRLAPI_DOT1</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:446</div></div>
-<div class="ttc" id="agroup__brlapi__keycodes_html_ga0b65ae1eb6673019a4e20a479af0afd0"><div class="ttname"><a href="group__brlapi__keycodes.html#ga0b65ae1eb6673019a4e20a479af0afd0">BRLAPI_DOT4</a></div><div class="ttdeci">#define BRLAPI_DOT4</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:452</div></div>
-<div class="ttc" id="agroup__brlapi__keycodes_html_ga8ce11d773b99f8088aa563a601b55c13"><div class="ttname"><a href="group__brlapi__keycodes.html#ga8ce11d773b99f8088aa563a601b55c13">BRLAPI_DOT3</a></div><div class="ttdeci">#define BRLAPI_DOT3</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:450</div></div>
-<div class="ttc" id="agroup__brlapi__keycodes_html_ga989bc7109a7f10ff614693f6dc8d53a8"><div class="ttname"><a href="group__brlapi__keycodes.html#ga989bc7109a7f10ff614693f6dc8d53a8">BRLAPI_DOT8</a></div><div class="ttdeci">#define BRLAPI_DOT8</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:460</div></div>
-<div class="ttc" id="agroup__brlapi__keycodes_html_ga01ab50802c65eb3a61c39c2abae9a9ca"><div class="ttname"><a href="group__brlapi__keycodes.html#ga01ab50802c65eb3a61c39c2abae9a9ca">BRLAPI_DOT6</a></div><div class="ttdeci">#define BRLAPI_DOT6</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:456</div></div>
-<div class="ttc" id="agroup__brlapi__keycodes_html_ga99af20161601e2f4c3bf9c59bdcc95bc"><div class="ttname"><a href="group__brlapi__keycodes.html#ga99af20161601e2f4c3bf9c59bdcc95bc">BRLAPI_DOT7</a></div><div class="ttdeci">#define BRLAPI_DOT7</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:458</div></div>
-<div class="ttc" id="agroup__brlapi__keycodes_html_gad1f2cc21a4eb7a5d59c9a483290c0e2f"><div class="ttname"><a href="group__brlapi__keycodes.html#gad1f2cc21a4eb7a5d59c9a483290c0e2f">BRLAPI_DOT5</a></div><div class="ttdeci">#define BRLAPI_DOT5</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:454</div></div>
-<div class="ttc" id="agroup__brlapi__keycodes_html_ga5e14b9902b2378c15dcf68d36895c491"><div class="ttname"><a href="group__brlapi__keycodes.html#ga5e14b9902b2378c15dcf68d36895c491">BRLAPI_DOT2</a></div><div class="ttdeci">#define BRLAPI_DOT2</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:448</div></div>
+<div class="ttc" id="agroup__brlapi__keycodes_html_ga69b126bad988af229fc24b21990dab4c"><div class="ttname"><a href="group__brlapi__keycodes.html#ga69b126bad988af229fc24b21990dab4c">BRLAPI_DOT1</a></div><div class="ttdeci">#define BRLAPI_DOT1</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:450</div></div>
+<div class="ttc" id="agroup__brlapi__keycodes_html_ga0b65ae1eb6673019a4e20a479af0afd0"><div class="ttname"><a href="group__brlapi__keycodes.html#ga0b65ae1eb6673019a4e20a479af0afd0">BRLAPI_DOT4</a></div><div class="ttdeci">#define BRLAPI_DOT4</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:456</div></div>
+<div class="ttc" id="agroup__brlapi__keycodes_html_ga8ce11d773b99f8088aa563a601b55c13"><div class="ttname"><a href="group__brlapi__keycodes.html#ga8ce11d773b99f8088aa563a601b55c13">BRLAPI_DOT3</a></div><div class="ttdeci">#define BRLAPI_DOT3</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:454</div></div>
+<div class="ttc" id="agroup__brlapi__keycodes_html_ga989bc7109a7f10ff614693f6dc8d53a8"><div class="ttname"><a href="group__brlapi__keycodes.html#ga989bc7109a7f10ff614693f6dc8d53a8">BRLAPI_DOT8</a></div><div class="ttdeci">#define BRLAPI_DOT8</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:464</div></div>
+<div class="ttc" id="agroup__brlapi__keycodes_html_ga01ab50802c65eb3a61c39c2abae9a9ca"><div class="ttname"><a href="group__brlapi__keycodes.html#ga01ab50802c65eb3a61c39c2abae9a9ca">BRLAPI_DOT6</a></div><div class="ttdeci">#define BRLAPI_DOT6</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:460</div></div>
+<div class="ttc" id="agroup__brlapi__keycodes_html_ga99af20161601e2f4c3bf9c59bdcc95bc"><div class="ttname"><a href="group__brlapi__keycodes.html#ga99af20161601e2f4c3bf9c59bdcc95bc">BRLAPI_DOT7</a></div><div class="ttdeci">#define BRLAPI_DOT7</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:462</div></div>
+<div class="ttc" id="agroup__brlapi__keycodes_html_gad1f2cc21a4eb7a5d59c9a483290c0e2f"><div class="ttname"><a href="group__brlapi__keycodes.html#gad1f2cc21a4eb7a5d59c9a483290c0e2f">BRLAPI_DOT5</a></div><div class="ttdeci">#define BRLAPI_DOT5</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:458</div></div>
+<div class="ttc" id="agroup__brlapi__keycodes_html_ga5e14b9902b2378c15dcf68d36895c491"><div class="ttname"><a href="group__brlapi__keycodes.html#ga5e14b9902b2378c15dcf68d36895c491">BRLAPI_DOT2</a></div><div class="ttdeci">#define BRLAPI_DOT2</div><div class="ttdef"><b>Definition:</b> brlapi_constants.h:452</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

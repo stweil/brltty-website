@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="Docutils 0.15.2: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
 <title>Key Table: FreedomScientific PAC Mate</title>
 <style type="text/css">
 
@@ -367,7 +367,7 @@ ul.auto-toc {
 <li><a class="reference external" href="brl-fs-pacmate.txt">Help Screen Version</a></li>
 </ul>
 <div class="contents topic" id="contents">
-<p class="topic-title first">Contents</p>
+<p class="topic-title">Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#id1" id="id2"></a><ul>
 <li><a class="reference internal" href="#notes" id="id3">Notes</a></li>
@@ -419,7 +419,11 @@ ul.auto-toc {
 <li>go to screen cursor: RightSelector</li>
 <li>go back after cursor tracking: LeftSelector</li>
 <li>bring screen cursor to character: RoutingKey</li>
-<li>bring screen cursor to current line: RightSelector+Hot8</li>
+<li>bring screen cursor to current line:<ul>
+<li>PanLeft+PanRight</li>
+<li>RightSelector+Hot8</li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="vertical-navigation">
@@ -429,8 +433,16 @@ ul.auto-toc {
 <li>go down one line: LeftWheelDown</li>
 <li>go to top line: RightSelector+PanLeft</li>
 <li>go to bottom line: RightSelector+PanRight</li>
-<li>go to beginning of top line: LeftSelector+PanLeft</li>
-<li>go to beginning of bottom line: LeftSelector+PanRight</li>
+<li>go to beginning of top line:<ul>
+<li>long LeftSelector</li>
+<li>LeftSelector+PanLeft</li>
+</ul>
+</li>
+<li>go to beginning of bottom line:<ul>
+<li>long RightSelector</li>
+<li>LeftSelector+PanRight</li>
+</ul>
+</li>
 <li>go up to nearest line with different content: LeftWheelPress+LeftWheelUp</li>
 <li>go down to nearest line with different content: LeftWheelPress+LeftWheelDown</li>
 <li>go up to nearest line with different highlighting: LeftSelector+LeftWheelUp</li>
