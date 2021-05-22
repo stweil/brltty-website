@@ -2,21 +2,27 @@
 BRLTTY on Android
 ~~~~~~~~~~~~~~~~~
 
-.. |SDK build tools version| replace:: 29.0.6
-.. |NDK version| replace:: r16b
-.. |JDK version| replace:: 1.8
+.. |SDK build tools version| replace:: 29.0.3
+.. |NDK version| replace:: r21e (21.4.7075529)
+.. |JDK version| replace:: 1.7
+
+.. _BRLTTY on Google Play: https://play.google.com/store/apps/details?id=org.a11y.brltty.android
 
 .. include:: prologue.rst
 
-Using BRLTTY
-============
+Installing BRLTTY
+=================
 
-System Requirements
--------------------
+BRLTTY has been designed to run on at least Android 4.1 (Jelly Bean).
+While it does run on Android 4.0 (Ice Cream Sandwich),
+many of its highly desirable features won't work.
 
-BRLTTY has been designed to run on at least Android 4.1 (Jelly Bean). While it
-does run on Android 4.0 (Ice Cream Sandwich), many of its highly desirable
-features won't work.
+BRLTTY can be installed via Google Play.
+You can either search for it by name
+or go directly to `BRLTTY on Google Play`_.
+
+Permissions
+-----------
 
 BRLTTY requires access to a number of privileged
 Android operating system capabilities.
@@ -24,18 +30,19 @@ The required permissions are as follows:
 
 .. include:: android-permissions.rst
 
-Quick Start
+The Old Way
 -----------
 
-If you'd just like to install BRLTTY onto your Android device and get going, 
-then here's what you need to do. These instructions are from the perspective of 
-a Firefox user on Windows, but the process should be much the same when using a 
-different web browser and/or operating system.
+Before it was on Google Play, BRLTTY had to be installed and updated manually.
+For now, this way still works.
+
+These instructions are from the perspective of a Firefox user on Windows,
+but the process should be much the same when using a different web browser and/or operating system.
 
 On Your Computer
 ~~~~~~~~~~~~~~~~
 
-1) Go to `BRLTTY's Web Site`_.
+1) Go to `BRLTTY's web site`_.
 
 2) Find the ``Download`` link and press Enter on it.
 
@@ -80,6 +87,9 @@ On Your Android Device
    twice - once to download it, and a second time to install it.
 
 4) Tap ``OK`` when installation is complete.
+
+Using BRLTTY
+============
 
 Activation and Configuration
 ----------------------------

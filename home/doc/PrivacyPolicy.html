@@ -444,6 +444,11 @@ It's still his/her own decision to enable the logging and to send the log to us.
 <li>For Android to accept input via BRLTTY from your braille device's keyboard.</li>
 </ul>
 </dd>
+<dt><tt class="docutils literal">FOREGROUND_SERVICE</tt></dt>
+<dd><ul class="first last simple">
+<li>For creating a foreground notification.</li>
+</ul>
+</dd>
 <dt><tt class="docutils literal">WAKE_LOCK</tt></dt>
 <dd><ul class="first last simple">
 <li>For resetting the Android device's lock timer
@@ -495,11 +500,17 @@ from your Android device's primary shared/external storage area.</li>
 <dt><tt class="docutils literal">ACCESS_FINE_LOCATION</tt></dt>
 <dd><ul class="first last simple">
 <li>For getting the Wi-Fi SSID (for the INDICATORS command).</li>
+<li>For getting cell information (for the INDICATORS command).</li>
 </ul>
 </dd>
 <dt><tt class="docutils literal">ACCESS_COARSE_UPDATES</tt></dt>
 <dd><ul class="first last simple">
 <li>For getting the cell signal strength (for the INDICATORS command).</li>
+</ul>
+</dd>
+<dt><tt class="docutils literal">READ_PHONE_STATE</tt></dt>
+<dd><ul class="first last simple">
+<li>For getting the cell data network type (for the INDICATORS command).</li>
 </ul>
 </dd>
 </dl>
