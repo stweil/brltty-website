@@ -24,6 +24,8 @@
    }
 ?>
 
+BRLTTY can be installed from <a href="https://play.google.com/store/apps/details?id=org.a11y.brltty.android">Google Play</a>.
+
 <dl>
    <?php
       list_android_file(
