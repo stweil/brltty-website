@@ -1,0 +1,36 @@
+<?php
+   function list_android_file($name, $description, $title=null) {
+      global $archive_directory;
+      $path = $archive_directory . "/Android/" . $name;
+      $time = filemtime($path);
+
+      if ($title == null) $title = $name;
+      echo("<dt>");
+         write_link($path, $title);
+      echo("</dt>");
+
+      echo("<dd>");
+         echo($description);
+         echo("<ul>");
+            echo("<li>");
+               echo("Last updated on ");
+               echo(date("Y-m-d", $time));
+               echo(" at ");
+               echo(date("H:i", $time));
+               echo(".");
+            echo("</li>");
+         echo("</ul>");
+      echo("</dd>\n");
+   }
+?>
+
+<?php
+   require "brltty.php";
+   require "brltty-files.php";
+   $brltty = new brltty_document("Android");
+   $brltty->add_subsection("BRLTTY on Google Play", "brltty-android-play.php", "play");
+   $brltty->add_subsection("Translators Are Welcome", "brltty-android-translators.php", "translators");
+   $brltty->add_subsection("BrlAPI for Android", "brltty-android-brlapi.php", "BrlAPI");
+   $brltty->add_subsection("Sideloading BRLTTY", "brltty-android-sideload.php", "sideload");
+   $brltty->end();
+?>
