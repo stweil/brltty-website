@@ -17,22 +17,6 @@ your project's <code>build.gradle</code> script:
 <li>Remember to change the dependency version as needed.</li>
 </ul>
 
-<pre>
-repositories {
-  maven {
-    url "https://brltty.app/archive/Maven2/"
-  }
-}
-
-dependencies {
-  implementation(
-    group: "org.a11y.brltty",
-    name: "brlapi-android",
-    version: "0.8.2"
-  )
-}
-</pre>
-
 You can also get BrlAPI's jar and libraries directly:
 
 <dl>
