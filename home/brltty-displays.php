@@ -19,10 +19,10 @@ then please <A HREF="contact.html">let us know</A>.
 
       array("Baum",
          "BrailleConnect 12/24/32/40/64/.80", "Brailliant 24/32/40/64/.80",
-         "Conny 12", "DM80 Plus", "EcoVario 24/32/40/64/.80", "Inka", "Orbit 20",
-         "PocketVario 24", "Pronto! V3 18/40", "Pronto! V4 18/40",
-         "RBT 40/80", "Refreshabraille 18", "SuperVario 24/32/40/64/.80",
-         "Vario 40/80", "VarioConnect 12/24/32/40/64/.80",
+         "Conny 12", "DM80 Plus", "EcoVario 24/32/40/64/.80", "Inka",
+         "NLS eReader Zoomax", "Orbit 20", "PocketVario 24",
+         "Pronto! V3 18/40", "Pronto! V4 18/40", "RBT 40/80", "Refreshabraille 18",
+         "SuperVario 24/32/40/64/.80", "Vario 40/80", "VarioConnect 12/24/32/40/64/.80",
          "VarioPro 40/64/80", "VarioUltra 20/32/40"
       ),
 
