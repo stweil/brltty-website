@@ -9,7 +9,7 @@ So far, we have translations for the following languages:
 
 <ul>
    <li>Czech</li>
-   <li>Chinese</li>
+   <li>Chinese (Taiwan)</li>
    <li>Danish</li>
    <li>Dutch</li>
    <li>Farsi (Persian)</li>
@@ -17,7 +17,7 @@ So far, we have translations for the following languages:
    <li>French</li>
    <li>German</li>
    <li>Italian</li>
-   <li>Norwegian</li>
+   <li>Norwegian (Bokmal)</li>
    <li>Russian</li>
    <li>Slovenian</li>
    <li>Spanish</li>
@@ -30,7 +30,13 @@ If you'd like to help us then this is what you need to do:
 <ol>
    <li>
       Download this file:
-      <a href="archive/Android/android-strings.txt">android-strings.txt</a>
+
+      <?php
+         list_android_file(
+            "android-strings.txt",
+            "The strings that we'd like to have translations for."
+         );
+      ?>
    </li>
 
    <li>
