@@ -112,6 +112,9 @@ Configuration Functions
 * set text style 6-dot/8-dot: ThumbLeft+ETouchRightFront
 * set text style 6-dot: Space+Dots235
 * set text style 8-dot: Space+Dots236
+* set contracted/computer braille: Space+Dots1245
+* set contracted braille: Space+Dots12458
+* set computer braille: Space+Dots12457
 * set skipping of lines with identical content on/off: Space+Dots24
 * set skipping of lines with identical content on: Space+Dots248
 * set skipping of lines with identical content off: Space+Dots247

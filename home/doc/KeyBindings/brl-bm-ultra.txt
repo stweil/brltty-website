@@ -6,6 +6,7 @@ Notes
   From top to bottom:
   + The three at the left are named Display1, Display2, and Display3.
   + The three at the right are named Display4, Display5, and Display6.
+* RoutingKey refers to any of the keys immediately behind the braille cells.
 * B9 and B10 are the keys immediately to the left and right of the joystick.
 * The five joystick motions are named Left, Right, Up, Down, and Press.
 
@@ -140,10 +141,7 @@ Clipboard Functions
 * rectangular copy to character:
   + Display5+RoutingKey
   + RoutingKey+Down
-* copy characters to clipboard: RoutingKey+RoutingKey
-* append characters to clipboard:
-  + Display2+RoutingKey+RoutingKey
-  + B10+RoutingKey+RoutingKey
+* append characters to clipboard: B10+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
   + Dot2+Down
   + Display1+Display2+Display3+Display4
@@ -168,6 +166,9 @@ Configuration Functions
 * set text style 8-dot:
   + Display2+Display3+Display6
   + B10+Dots236
+* set contracted/computer braille: B10+Dots1245
+* set contracted braille: B10+Dots12458
+* set computer braille: B10+Dots12457
 * set skipping of lines with identical content on/off:
   + B10+Dots24
   + Dots56+Left

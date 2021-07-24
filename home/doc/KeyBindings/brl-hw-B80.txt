@@ -8,6 +8,7 @@ Notes
   From top to bottom:
   + The three at the left are named Display1, Display2, and Display3.
   + The three at the right are named Display4, Display5, and Display6.
+* RoutingKey refers to any of the keys immediately behind the braille cells.
 
 Default Bindings
 ----------------
@@ -88,8 +89,6 @@ Clipboard Functions
 * rectangular copy to character:
   + Display5+RoutingKey
   + Advance+RoutingKey
-* copy characters to clipboard: RoutingKey+RoutingKey
-* append characters to clipboard: Display2+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
   + Previous+Next
   + Display1+Display2+Display3+Display4

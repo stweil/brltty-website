@@ -403,7 +403,8 @@ ul.auto-toc {
 <li>In navigation mode: Backward is F1, Forward is F4, Dots1-6 are display keys 1-6, Dot7 is F2, Dot8 is F3.</li>
 <li>Press Space while holding Forward to switch to keyboard mode.</li>
 <li>In keyboard mode: Backward is B9, Forward is B10, Space is B11.</li>
-<li>The five joystick motions are named Left, Right, Up, Down, and Press.</li>
+<li>RoutingKey refers to any of the keys immediately behind the braille cells.</li>
+<li>The five navigation pad keys are named Left, Right, Up, Down, and Center.</li>
 </ul>
 </div>
 </div>
@@ -413,26 +414,26 @@ ul.auto-toc {
 <h3><a class="toc-backref" href="#id8">Special Modes</a></h3>
 <ul class="simple">
 <li>enter/leave help display:<ul>
-<li>Dot4+Press</li>
+<li>Dot4+Center</li>
 <li>Display1+Display2+Display5</li>
 <li>B11+Dots125</li>
 </ul>
 </li>
 <li>enter/leave command learn mode:<ul>
-<li>Dot6+Press</li>
+<li>Dot6+Center</li>
 <li>Display1+Display4+Display5+Display6</li>
 <li>B11+Dots123</li>
 </ul>
 </li>
 <li>enter/leave preferences menu:<ul>
 <li>Display1+Display3+Display4</li>
-<li>Dots456+Press</li>
+<li>Dots456+Center</li>
 <li>B11+Dots1234</li>
 </ul>
 </li>
 <li>enter/leave status display:<ul>
 <li>Display2+Display5</li>
-<li>Dot5+Press</li>
+<li>Dot5+Center</li>
 <li>B11+Dots234</li>
 </ul>
 </li>
@@ -454,7 +455,7 @@ ul.auto-toc {
 <li>set screen image unfrozen: B11+Dots1247</li>
 <li>describe character:<ul>
 <li>Display3+RoutingKey</li>
-<li>RoutingKey+Press</li>
+<li>RoutingKey+Center</li>
 </ul>
 </li>
 <li>show current date and time:<ul>
@@ -469,10 +470,10 @@ ul.auto-toc {
 <ul class="simple">
 <li>go to screen cursor: Display2+Display4+Display6</li>
 <li>go back after cursor tracking: Display1+Display6</li>
-<li>go to screen cursor or go back after cursor tracking: Press</li>
+<li>go to screen cursor or go back after cursor tracking: Center</li>
 <li>bring screen cursor to character: RoutingKey</li>
 <li>bring screen cursor to current line:<ul>
-<li>Dots46+Press</li>
+<li>Dots46+Center</li>
 <li>Display1+Display3+Display4+Display6</li>
 <li>B11+Dots1236</li>
 </ul>
@@ -629,14 +630,9 @@ ul.auto-toc {
 <li>RoutingKey+Down</li>
 </ul>
 </li>
-<li>copy characters to clipboard: RoutingKey+RoutingKey</li>
-<li>append characters to clipboard:<ul>
-<li>Display2+RoutingKey+RoutingKey</li>
-<li>B11+RoutingKey+RoutingKey</li>
-</ul>
-</li>
+<li>append characters to clipboard: B11+RoutingKey+RoutingKey</li>
 <li>insert clipboard text after screen cursor:<ul>
-<li>B11+Press</li>
+<li>B11+Center</li>
 <li>Dot2+Down</li>
 <li>Display1+Display2+Display3+Display4</li>
 <li>B11+Dots1346</li>
@@ -662,7 +658,7 @@ ul.auto-toc {
 <li>set autorepeat on/off: B11+Dots1235</li>
 <li>set autorepeat on: B11+Dots12358</li>
 <li>set autorepeat off: B11+Dots12357</li>
-<li>set text style 6-dot/8-dot: Dots45+Press</li>
+<li>set text style 6-dot/8-dot: Dots45+Center</li>
 <li>set text style 6-dot:<ul>
 <li>Display2+Display3+Display5</li>
 <li>B11+Dots235</li>
@@ -673,6 +669,9 @@ ul.auto-toc {
 <li>B11+Dots236</li>
 </ul>
 </li>
+<li>set contracted/computer braille: B11+Dots1245</li>
+<li>set contracted braille: B11+Dots12458</li>
+<li>set computer braille: B11+Dots12457</li>
 <li>set skipping of lines with identical content on/off:<ul>
 <li>B11+Dots24</li>
 <li>Dots56+Left</li>
@@ -695,7 +694,7 @@ ul.auto-toc {
 <li>set sliding braille window on: B11+Dots24568</li>
 <li>set sliding braille window off: B11+Dots24567</li>
 <li>set track screen cursor on/off:<ul>
-<li>Dots56+Press</li>
+<li>Dots56+Center</li>
 <li>B11+Dots2345</li>
 </ul>
 </li>
@@ -762,7 +761,7 @@ ul.auto-toc {
 </ul>
 </li>
 <li>go to current speaking position:<ul>
-<li>B10+Press</li>
+<li>B10+Center</li>
 <li>Display1+Display3+Display5</li>
 </ul>
 </li>
@@ -771,7 +770,7 @@ ul.auto-toc {
 <li>decrease speaking rate: B9+Left</li>
 <li>increase speaking rate: B9+Right</li>
 <li>set autospeak on/off:<ul>
-<li>B9+Press</li>
+<li>B9+Center</li>
 <li>Display3+Display4+Display6</li>
 </ul>
 </li>
@@ -797,7 +796,7 @@ ul.auto-toc {
 </ul>
 </li>
 <li>escape key:<ul>
-<li>Dot3+Press</li>
+<li>Dot3+Center</li>
 <li>B11+Dots26</li>
 </ul>
 </li>
@@ -854,11 +853,11 @@ ul.auto-toc {
 <li>function key: B11+RoutingKey</li>
 <li>enter key:<ul>
 <li>Dot8</li>
-<li>Dot2+Press</li>
+<li>Dot2+Center</li>
 </ul>
 </li>
 <li>tab key:<ul>
-<li>Dot1+Press</li>
+<li>Dot1+Center</li>
 <li>B11+Dots45</li>
 </ul>
 </li>
@@ -908,7 +907,7 @@ ul.auto-toc {
 <ul class="simple">
 <li>enter/leave preferences menu:<ul>
 <li>Dot8</li>
-<li>Press</li>
+<li>Center</li>
 </ul>
 </li>
 </ul>
@@ -958,7 +957,7 @@ ul.auto-toc {
 <li>Dot7</li>
 </ul>
 </li>
-<li>save preferences to disk: B11+Press</li>
+<li>save preferences to disk: B11+Center</li>
 </ul>
 </div>
 </div>

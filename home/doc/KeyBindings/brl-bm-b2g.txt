@@ -6,27 +6,28 @@ Notes
 * In navigation mode: Backward is F1, Forward is F4, Dots1-6 are display keys 1-6, Dot7 is F2, Dot8 is F3.
 * Press Space while holding Forward to switch to keyboard mode.
 * In keyboard mode: Backward is B9, Forward is B10, Space is B11.
-* The five joystick motions are named Left, Right, Up, Down, and Press.
+* RoutingKey refers to any of the keys immediately behind the braille cells.
+* The five navigation pad keys are named Left, Right, Up, Down, and Center.
 
 Default Bindings
 ----------------
 
 Special Modes
 * enter/leave help display:
-  + Dot4+Press
+  + Dot4+Center
   + Display1+Display2+Display5
   + B11+Dots125
 * enter/leave command learn mode:
-  + Dot6+Press
+  + Dot6+Center
   + Display1+Display4+Display5+Display6
   + B11+Dots123
 * enter/leave preferences menu:
   + Display1+Display3+Display4
-  + Dots456+Press
+  + Dots456+Center
   + B11+Dots1234
 * enter/leave status display:
   + Display2+Display5
-  + Dot5+Press
+  + Dot5+Center
   + B11+Dots234
 * set display mode attributes/text:
   + Display1+Display4+Display5
@@ -42,7 +43,7 @@ Special Modes
 * set screen image unfrozen: B11+Dots1247
 * describe character:
   + Display3+RoutingKey
-  + RoutingKey+Press
+  + RoutingKey+Center
 * show current date and time:
   + Display1+Display5
   + Dots56+Up
@@ -50,10 +51,10 @@ Special Modes
 Cursor Functions
 * go to screen cursor: Display2+Display4+Display6
 * go back after cursor tracking: Display1+Display6
-* go to screen cursor or go back after cursor tracking: Press
+* go to screen cursor or go back after cursor tracking: Center
 * bring screen cursor to character: RoutingKey
 * bring screen cursor to current line:
-  + Dots46+Press
+  + Dots46+Center
   + Display1+Display3+Display4+Display6
   + B11+Dots1236
 
@@ -149,12 +150,9 @@ Clipboard Functions
 * rectangular copy to character:
   + Display5+RoutingKey
   + RoutingKey+Down
-* copy characters to clipboard: RoutingKey+RoutingKey
-* append characters to clipboard:
-  + Display2+RoutingKey+RoutingKey
-  + B11+RoutingKey+RoutingKey
+* append characters to clipboard: B11+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
-  + B11+Press
+  + B11+Center
   + Dot2+Down
   + Display1+Display2+Display3+Display4
   + B11+Dots1346
@@ -171,13 +169,16 @@ Configuration Functions
 * set autorepeat on/off: B11+Dots1235
 * set autorepeat on: B11+Dots12358
 * set autorepeat off: B11+Dots12357
-* set text style 6-dot/8-dot: Dots45+Press
+* set text style 6-dot/8-dot: Dots45+Center
 * set text style 6-dot:
   + Display2+Display3+Display5
   + B11+Dots235
 * set text style 8-dot:
   + Display2+Display3+Display6
   + B11+Dots236
+* set contracted/computer braille: B11+Dots1245
+* set contracted braille: B11+Dots12458
+* set computer braille: B11+Dots12457
 * set skipping of lines with identical content on/off:
   + B11+Dots24
   + Dots56+Left
@@ -194,7 +195,7 @@ Configuration Functions
 * set sliding braille window on: B11+Dots24568
 * set sliding braille window off: B11+Dots24567
 * set track screen cursor on/off:
-  + Dots56+Press
+  + Dots56+Center
   + B11+Dots2345
 * set track screen cursor on:
   + Display1
@@ -235,14 +236,14 @@ Speech Functions
   + B10+Down
   + Display3+Display5+Display6
 * go to current speaking position:
-  + B10+Press
+  + B10+Center
   + Display1+Display3+Display5
 * decrease speaking volume: B9+Down
 * increase speaking volume: B9+Up
 * decrease speaking rate: B9+Left
 * increase speaking rate: B9+Right
 * set autospeak on/off:
-  + B9+Press
+  + B9+Center
   + Display3+Display4+Display6
 
 Keyboard Input
@@ -261,7 +262,7 @@ Keyboard Input
   + Dot7
   + Dot2+Left
 * escape key:
-  + Dot3+Press
+  + Dot3+Center
   + B11+Dots26
 * cursor-left key:
   + B11+Dot3
@@ -296,9 +297,9 @@ Keyboard Input
 * function key: B11+RoutingKey
 * enter key:
   + Dot8
-  + Dot2+Press
+  + Dot2+Center
 * tab key:
-  + Dot1+Press
+  + Dot1+Center
   + B11+Dots45
 * clear all sticky input modifiers: B11+Dots78
 * cycle the Upper sticky input modifier (next, on, off): B11+Dots68
@@ -334,7 +335,7 @@ Menu Bindings
 Special Modes
 * enter/leave preferences menu:
   + Dot8
-  + Press
+  + Center
 
 Horizontal Navigation
 * go backward one braille window: B11+Left
@@ -362,5 +363,5 @@ Menu Operations
 * go to previous menu level:
   + B11
   + Dot7
-* save preferences to disk: B11+Press
+* save preferences to disk: B11+Center
 

@@ -87,6 +87,9 @@ Configuration Functions
 * set text style 6-dot/8-dot: LeftKeyRear+BarUp1
 * set text style 6-dot: Space+Dots235
 * set text style 8-dot: Space+Dots236
+* set contracted/computer braille: Space+Dots1245
+* set contracted braille: Space+Dots12458
+* set computer braille: Space+Dots12457
 * set skipping of lines with identical content on/off:
   + RightKeyFront+BarLeft1
   + Space+Dots24

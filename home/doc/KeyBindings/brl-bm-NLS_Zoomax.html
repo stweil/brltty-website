@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
-<title>Key Table: APH Refreshabraille</title>
+<title>Key Table: NLS eReader Zoomax</title>
 <style type="text/css">
 
 /*
@@ -360,11 +360,11 @@ ul.auto-toc {
 </style>
 </head>
 <body>
-<div class="document" id="key-table-aph-refreshabraille">
-<h1 class="title">Key Table: APH Refreshabraille</h1>
+<div class="document" id="key-table-nls-ereader-zoomax">
+<h1 class="title">Key Table: NLS eReader Zoomax</h1>
 
 <ul class="simple">
-<li><a class="reference external" href="brl-bm-rb.txt">Help Screen Version</a></li>
+<li><a class="reference external" href="brl-bm-NLS_Zoomax.txt">Help Screen Version</a></li>
 </ul>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
@@ -382,14 +382,15 @@ ul.auto-toc {
 <li><a class="reference internal" href="#configuration-functions" id="id13">Configuration Functions</a></li>
 <li><a class="reference internal" href="#menu-operations" id="id14">Menu Operations</a></li>
 <li><a class="reference internal" href="#speech-functions" id="id15">Speech Functions</a></li>
-<li><a class="reference internal" href="#keyboard-input" id="id16">Keyboard Input</a></li>
-<li><a class="reference internal" href="#special-functions" id="id17">Special Functions</a></li>
+<li><a class="reference internal" href="#speech-navigation" id="id16">Speech Navigation</a></li>
+<li><a class="reference internal" href="#keyboard-input" id="id17">Keyboard Input</a></li>
+<li><a class="reference internal" href="#special-functions" id="id18">Special Functions</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#menu-bindings" id="id18">Menu Bindings</a><ul>
-<li><a class="reference internal" href="#id2" id="id19">Special Modes</a></li>
-<li><a class="reference internal" href="#id3" id="id20">Horizontal Navigation</a></li>
-<li><a class="reference internal" href="#id4" id="id21">Menu Operations</a></li>
+<li><a class="reference internal" href="#menu-bindings" id="id19">Menu Bindings</a><ul>
+<li><a class="reference internal" href="#id2" id="id20">Special Modes</a></li>
+<li><a class="reference internal" href="#id3" id="id21">Horizontal Navigation</a></li>
+<li><a class="reference internal" href="#id4" id="id22">Menu Operations</a></li>
 </ul>
 </li>
 </ul>
@@ -399,13 +400,21 @@ ul.auto-toc {
 <div class="section" id="notes">
 <h3><a class="toc-backref" href="#id6">Notes</a></h3>
 <ul class="simple">
-<li>B9 is the long key in the middle, just in front of the joystick.</li>
-<li>Dot7 and Dot8 are the keys immediately to the left and right of B9.</li>
-<li>B10 is the narrow key between and just behind the six-dot keyboard.</li>
-<li>The six display keys are emulated by the corresponding six dot keys
-while the joystick is pressed (the joystick must be pressed first).</li>
+<li>An eight-dot standard braille keyboard is along the back edge of the top.
+From left to right, its keys are: Dot7, Dot3, Dot2, Dot1, Dot4, Dot5, Dot6, Dot8.
+The Space key is in between Dot1 and Dot4.</li>
+<li>The two round keys at each end of the front are system keys. From left to right:
+the two on the left are S1 and S2, and the two on the right are S3 and S4.</li>
+<li>The five navigation pad keys are named Left, Right, Up, Down, and Center.</li>
+<li>There's a rectangular key on either side of the navigation pad.
+The one to the left is named BL, and the one to the right is named BR.</li>
+<li>There are three display keys at each end of the braille cells.
+From top to bottom:<ul>
+<li>The three at the left are named Display1, Display2, and Display3.</li>
+<li>The three at the right are named Display4, Display5, and Display6.</li>
+</ul>
+</li>
 <li>RoutingKey refers to any of the keys immediately behind the braille cells.</li>
-<li>The five joystick motions are named Left, Right, Up, Down, and Press.</li>
 </ul>
 </div>
 </div>
@@ -415,51 +424,58 @@ while the joystick is pressed (the joystick must be pressed first).</li>
 <h3><a class="toc-backref" href="#id8">Special Modes</a></h3>
 <ul class="simple">
 <li>enter/leave help display:<ul>
-<li>Dot4+Press</li>
+<li>S1</li>
+<li>Dot4+Center</li>
 <li>Display1+Display2+Display5</li>
-<li>B9+Dots125</li>
+<li>Space+Dots125</li>
 </ul>
 </li>
 <li>enter/leave command learn mode:<ul>
-<li>Dot6+Press</li>
+<li>S4</li>
+<li>Dot6+Center</li>
 <li>Display1+Display4+Display5+Display6</li>
-<li>B9+Dots123</li>
+<li>Space+Dots123</li>
 </ul>
 </li>
 <li>enter/leave preferences menu:<ul>
+<li>BL+Center</li>
 <li>Display1+Display3+Display4</li>
-<li>Dots456+Press</li>
-<li>B9+Dots1234</li>
+<li>Dots456+Center</li>
+<li>Space+Dots1234</li>
 </ul>
 </li>
 <li>enter/leave status display:<ul>
+<li>S3</li>
 <li>Display2+Display5</li>
-<li>Dot5+Press</li>
-<li>B9+Dots234</li>
+<li>Dot5+Center</li>
+<li>Space+Dots234</li>
 </ul>
 </li>
 <li>set display mode attributes/text:<ul>
+<li>BL+S3</li>
 <li>Display1+Display4+Display5</li>
 <li>Dots45+Down</li>
-<li>B9+Dots145</li>
+<li>Space+Dots145</li>
 </ul>
 </li>
-<li>set display mode attributes: B9+Dots1458</li>
-<li>set display mode text: B9+Dots1457</li>
+<li>set display mode attributes: Space+Dots1458</li>
+<li>set display mode text: Space+Dots1457</li>
 <li>set screen image frozen/unfrozen:<ul>
+<li>BL+S4</li>
 <li>Display1+Display2+Display4</li>
 <li>Dots45+Up</li>
-<li>B9+Dots124</li>
+<li>Space+Dots124</li>
 </ul>
 </li>
-<li>set screen image frozen: B9+Dots1248</li>
-<li>set screen image unfrozen: B9+Dots1247</li>
+<li>set screen image frozen: Space+Dots1248</li>
+<li>set screen image unfrozen: Space+Dots1247</li>
 <li>describe character:<ul>
 <li>Display3+RoutingKey</li>
-<li>RoutingKey+Press</li>
+<li>RoutingKey+Center</li>
 </ul>
 </li>
 <li>show current date and time:<ul>
+<li>S2</li>
 <li>Display1+Display5</li>
 <li>Dots56+Up</li>
 </ul>
@@ -471,14 +487,16 @@ while the joystick is pressed (the joystick must be pressed first).</li>
 <ul class="simple">
 <li>go to screen cursor: Display2+Display4+Display6</li>
 <li>go back after cursor tracking: Display1+Display6</li>
-<li>go to screen cursor or go back after cursor tracking: Press</li>
+<li>go to screen cursor or go back after cursor tracking: Center</li>
 <li>bring screen cursor to character: RoutingKey</li>
 <li>bring screen cursor to current line:<ul>
-<li>Dots46+Press</li>
+<li>S2+S3</li>
+<li>Dots46+Center</li>
 <li>Display1+Display3+Display4+Display6</li>
-<li>B9+Dots1236</li>
+<li>Space+Dots1236</li>
 </ul>
 </li>
+<li>bring screen cursor to speech cursor: BL+Dot2</li>
 </ul>
 </div>
 <div class="section" id="vertical-navigation">
@@ -497,59 +515,93 @@ while the joystick is pressed (the joystick must be pressed first).</li>
 <li>go to top line:<ul>
 <li>Display1+Display4</li>
 <li>Dot4+Up</li>
+<li>Right+Up</li>
 </ul>
 </li>
 <li>go to bottom line:<ul>
 <li>Display3+Display6</li>
 <li>Dot4+Down</li>
+<li>Right+Down</li>
 </ul>
 </li>
-<li>go to beginning of top line: Display2+Display4</li>
-<li>go to beginning of bottom line: Display2+Display6</li>
+<li>go to beginning of top line:<ul>
+<li>Display2+Display4</li>
+<li>Left+Up</li>
+</ul>
+</li>
+<li>go to beginning of bottom line:<ul>
+<li>Display2+Display6</li>
+<li>Left+Down</li>
+</ul>
+</li>
 <li>go up to nearest line with different content:<ul>
 <li>Display5+Display4</li>
+<li>S2+Up</li>
 <li>Dot5+Up</li>
 </ul>
 </li>
 <li>go down to nearest line with different content:<ul>
 <li>Display5+Display6</li>
+<li>S2+Down</li>
 <li>Dot5+Down</li>
 </ul>
 </li>
 <li>go up to nearest line with different highlighting:<ul>
 <li>Display2+Display1</li>
+<li>S1+Up</li>
 <li>Dot6+Up</li>
 </ul>
 </li>
 <li>go down to nearest line with different highlighting:<ul>
 <li>Display2+Display3</li>
+<li>S1+Down</li>
 <li>Dot6+Down</li>
 </ul>
 </li>
 <li>go up to first line of paragraph:<ul>
+<li>S4+Up</li>
 <li>Display2+Display5+Display4</li>
 <li>Dots46+Up</li>
 </ul>
 </li>
 <li>go down to first line of next paragraph:<ul>
+<li>S4+Down</li>
 <li>Display2+Display5+Display6</li>
 <li>Dots46+Down</li>
 </ul>
 </li>
 <li>go up to previous command prompt:<ul>
+<li>S3+Up</li>
 <li>Dots46+Left</li>
 <li>Display2+Display5+Display1+Display4</li>
 </ul>
 </li>
 <li>go down to next command prompt:<ul>
+<li>S3+Down</li>
 <li>Dots46+Right</li>
 <li>Display2+Display5+Display3+Display6</li>
 </ul>
 </li>
-<li>go up to nearest line with less indent than character: Display2+Display1+RoutingKey</li>
-<li>go down to nearest line with less indent than character: Display2+Display3+RoutingKey</li>
-<li>go up to nearest line with different character: Display5+Display4+RoutingKey</li>
-<li>go down to nearest line with different character: Display5+Display6+RoutingKey</li>
+<li>go up to nearest line with less indent than character:<ul>
+<li>S3+RoutingKey</li>
+<li>Display2+Display1+RoutingKey</li>
+</ul>
+</li>
+<li>go down to nearest line with less indent than character:<ul>
+<li>S4+RoutingKey</li>
+<li>Display2+Display3+RoutingKey</li>
+</ul>
+</li>
+<li>go up to nearest line with different character:<ul>
+<li>S1+RoutingKey</li>
+<li>Display5+Display4+RoutingKey</li>
+</ul>
+</li>
+<li>go down to nearest line with different character:<ul>
+<li>S2+RoutingKey</li>
+<li>Display5+Display6+RoutingKey</li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="horizontal-navigation">
@@ -565,29 +617,49 @@ while the joystick is pressed (the joystick must be pressed first).</li>
 <li>Right</li>
 </ul>
 </li>
-<li>go backward skipping blank braille windows: Dot5+Left</li>
-<li>go forward skipping blank braille windows: Dot5+Right</li>
+<li>go backward skipping blank braille windows:<ul>
+<li>Dot5+Left</li>
+<li>Center+Left</li>
+</ul>
+</li>
+<li>go forward skipping blank braille windows:<ul>
+<li>Dot5+Right</li>
+<li>Center+Right</li>
+</ul>
+</li>
+<li>go backward to nearest non-blank braille window: BL+Left</li>
+<li>go forward to nearest non-blank braille window: BL+Right</li>
 <li>go to beginning of line:<ul>
+<li>S1+Left</li>
 <li>Dot4+Left</li>
 <li>Display1+Display2+Display3</li>
 </ul>
 </li>
 <li>go to end of line:<ul>
+<li>S1+Right</li>
 <li>Dot4+Right</li>
 <li>Display4+Display5+Display6</li>
 </ul>
 </li>
 <li>go left one character:<ul>
 <li>Display1+Display3</li>
+<li>S2+Left</li>
 <li>Dot6+Left</li>
 </ul>
 </li>
 <li>go right one character:<ul>
 <li>Display4+Display6</li>
+<li>S2+Right</li>
 <li>Dot6+Right</li>
 </ul>
 </li>
-<li>place left end of braille window at character: Display6+RoutingKey</li>
+<li>go left half a braille window: S3+Left</li>
+<li>go right half a braille window: S3+Right</li>
+<li>place left end of braille window at character:<ul>
+<li>Display6+RoutingKey</li>
+<li>BL+RoutingKey</li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="clipboard-functions">
@@ -613,108 +685,123 @@ while the joystick is pressed (the joystick must be pressed first).</li>
 <li>RoutingKey+Down</li>
 </ul>
 </li>
-<li>append characters to clipboard: B9+RoutingKey+RoutingKey</li>
+<li>append characters to clipboard: Space+RoutingKey+RoutingKey</li>
 <li>insert clipboard text after screen cursor:<ul>
 <li>Dot2+Down</li>
+<li>Left+Right</li>
 <li>Display1+Display2+Display3+Display4</li>
-<li>B9+Dots1346</li>
+<li>Space+Dots1346</li>
 </ul>
 </li>
 <li>search backward for clipboard text:<ul>
+<li>S4+Left</li>
 <li>Display2+Display4+Display6+Display1</li>
 <li>Dots456+Left</li>
 </ul>
 </li>
 <li>search forward for clipboard text:<ul>
+<li>S4+Right</li>
 <li>Display2+Display4+Display6+Display3</li>
 <li>Dots456+Right</li>
 </ul>
 </li>
-<li>save clipboard to disk: B9+Dots13468</li>
-<li>restore clipboard from disk: B9+Dots13467</li>
+<li>save clipboard to disk: Space+Dots13468</li>
+<li>restore clipboard from disk: Space+Dots13467</li>
 </ul>
 </div>
 <div class="section" id="configuration-functions">
 <h3><a class="toc-backref" href="#id13">Configuration Functions</a></h3>
 <ul class="simple">
-<li>set autorepeat on/off: B9+Dots1235</li>
-<li>set autorepeat on: B9+Dots12358</li>
-<li>set autorepeat off: B9+Dots12357</li>
-<li>set text style 6-dot/8-dot: Dots45+Press</li>
+<li>set autorepeat on/off: Space+Dots1235</li>
+<li>set autorepeat on: Space+Dots12358</li>
+<li>set autorepeat off: Space+Dots12357</li>
+<li>set text style 6-dot/8-dot:<ul>
+<li>Center+S4</li>
+<li>Dots45+Center</li>
+</ul>
+</li>
 <li>set text style 6-dot:<ul>
 <li>Display2+Display3+Display5</li>
-<li>B9+Dots235</li>
+<li>Space+Dots235</li>
 </ul>
 </li>
 <li>set text style 8-dot:<ul>
 <li>Display2+Display3+Display6</li>
-<li>B9+Dots236</li>
+<li>Space+Dots236</li>
 </ul>
 </li>
-<li>set contracted/computer braille: B9+Dots1245</li>
-<li>set contracted braille: B9+Dots12458</li>
-<li>set computer braille: B9+Dots12457</li>
+<li>set contracted/computer braille: Space+Dots1245</li>
+<li>set contracted braille: Space+Dots12458</li>
+<li>set computer braille: Space+Dots12457</li>
 <li>set skipping of lines with identical content on/off:<ul>
-<li>B9+Dots24</li>
+<li>Space+Dots24</li>
 <li>Dots56+Left</li>
 </ul>
 </li>
-<li>set skipping of lines with identical content on: B9+Dots248</li>
-<li>set skipping of lines with identical content off: B9+Dots247</li>
+<li>set skipping of lines with identical content on: Space+Dots248</li>
+<li>set skipping of lines with identical content off: Space+Dots247</li>
 <li>set skipping of blank braille windows on/off:<ul>
-<li>B9+Dots12</li>
+<li>Space+Dots12</li>
 <li>Dots56+Right</li>
 </ul>
 </li>
-<li>set skipping of blank braille windows on: B9+Dots128</li>
-<li>set skipping of blank braille windows off: B9+Dots127</li>
+<li>set skipping of blank braille windows on: Space+Dots128</li>
+<li>set skipping of blank braille windows off: Space+Dots127</li>
 <li>set sliding braille window on/off:<ul>
 <li>Dots56+Down</li>
-<li>B9+Dots2456</li>
+<li>Space+Dots2456</li>
 </ul>
 </li>
-<li>set sliding braille window on: B9+Dots24568</li>
-<li>set sliding braille window off: B9+Dots24567</li>
+<li>set sliding braille window on: Space+Dots24568</li>
+<li>set sliding braille window off: Space+Dots24567</li>
 <li>set track screen cursor on/off:<ul>
-<li>Dots56+Press</li>
-<li>B9+Dots2345</li>
+<li>Center+S3</li>
+<li>Dots56+Center</li>
+<li>Space+Dots2345</li>
 </ul>
 </li>
 <li>set track screen cursor on:<ul>
 <li>Display1</li>
-<li>B9+Dots23458</li>
+<li>Space+Dots23458</li>
 </ul>
 </li>
 <li>set track screen cursor off:<ul>
 <li>Display3</li>
-<li>B9+Dots23457</li>
+<li>Space+Dots23457</li>
 </ul>
 </li>
-<li>set screen cursor visibility on/off: B9+Dots14</li>
-<li>set screen cursor visibility on: B9+Dots148</li>
-<li>set screen cursor visibility off: B9+Dots147</li>
+<li>set screen cursor visibility on/off:<ul>
+<li>Center+S2</li>
+<li>Space+Dots14</li>
+</ul>
+</li>
+<li>set screen cursor visibility on: Space+Dots148</li>
+<li>set screen cursor visibility off: Space+Dots147</li>
 <li>set attribute underlining on/off:<ul>
+<li>Center+S1</li>
 <li>Display2+Display3+Display4+Display5</li>
-<li>B9+Dots136</li>
+<li>Space+Dots136</li>
 </ul>
 </li>
-<li>set attribute underlining on: B9+Dots1368</li>
-<li>set attribute underlining off: B9+Dots1367</li>
+<li>set attribute underlining on: Space+Dots1368</li>
+<li>set attribute underlining off: Space+Dots1367</li>
 </ul>
 </div>
 <div class="section" id="menu-operations">
 <h3><a class="toc-backref" href="#id14">Menu Operations</a></h3>
 <ul class="simple">
 <li>restore preferences from disk:<ul>
+<li>BL+Up</li>
 <li>Display1+Display2+Display3+Display5</li>
 <li>Dots456+Up</li>
-<li>B9+Dots12347</li>
+<li>Space+Dots12347</li>
 </ul>
 </li>
 <li>save preferences to disk:<ul>
+<li>BL+Down</li>
 <li>Display2+Display4+Display5+Display6</li>
 <li>Dots456+Down</li>
-<li>B9+Dots12348</li>
+<li>Space+Dots12348</li>
 </ul>
 </li>
 </ul>
@@ -724,44 +811,73 @@ while the joystick is pressed (the joystick must be pressed first).</li>
 <ul class="simple">
 <li>stop speaking:<ul>
 <li>Display3+Display4</li>
-<li>B10+Left</li>
+<li>BL+Space</li>
 </ul>
 </li>
 <li>speak current line:<ul>
 <li>Display3+Display5</li>
-<li>B10+Right</li>
+<li>BL+Dot5</li>
 </ul>
 </li>
+<li>speak from top of screen through bottom of screen: BL+Dot8</li>
 <li>speak from top of screen through current line:<ul>
-<li>B10+Up</li>
+<li>BL+Dot4</li>
 <li>Display3+Display5+Display4</li>
 </ul>
 </li>
 <li>speak from current line through bottom of screen:<ul>
-<li>B10+Down</li>
+<li>BL+Dot6</li>
 <li>Display3+Display5+Display6</li>
 </ul>
 </li>
 <li>go to current speaking position:<ul>
-<li>B10+Press</li>
+<li>BL+Dot3</li>
 <li>Display1+Display3+Display5</li>
 </ul>
 </li>
-<li>decrease speaking volume: B9+Down</li>
-<li>increase speaking volume: B9+Up</li>
-<li>decrease speaking rate: B9+Left</li>
-<li>increase speaking rate: B9+Right</li>
+<li>decrease speaking volume: BL+Space+Dot1</li>
+<li>increase speaking volume: BL+Space+Dot4</li>
+<li>decrease speaking rate: BL+Space+Dot2</li>
+<li>increase speaking rate: BL+Space+Dot5</li>
+<li>decrease speaking pitch: BL+Space+Dot3</li>
+<li>increase speaking pitch: BL+Space+Dot6</li>
 <li>set autospeak on/off:<ul>
-<li>B9+Press</li>
+<li>BL+Dot7</li>
 <li>Display3+Display4+Display6</li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section" id="keyboard-input">
-<h3><a class="toc-backref" href="#id16">Keyboard Input</a></h3>
+<div class="section" id="speech-navigation">
+<h3><a class="toc-backref" href="#id16">Speech Navigation</a></h3>
 <ul class="simple">
-<li>braille keyboard space: B9</li>
+<li>speak current character: BL+Dots35</li>
+<li>describe current character: BL+Dots38</li>
+<li>go to and speak previous character: BL+Dots34</li>
+<li>go to and speak next character: BL+Dots36</li>
+<li>go to and speak first non-blank character on line: BL+Dots75</li>
+<li>go to and speak last non-blank character on line: BL+Dots76</li>
+<li>speak current word: BL+Dots25</li>
+<li>spell current word: BL+Dots28</li>
+<li>go to and speak previous word: BL+Dots24</li>
+<li>go to and speak next word: BL+Dots26</li>
+<li>speak current line: BL+Dots15</li>
+<li>go to and speak previous line: BL+Dots14</li>
+<li>go to and speak next line: BL+Dots16</li>
+<li>go to and speak first non-blank line on screen: BL+Dots74</li>
+<li>go to and speak last non-blank line on screen: BL+Dots78</li>
+<li>speak indent of current line: BL+Dots18</li>
+<li>speak speech cursor location: BL+Dot1</li>
+</ul>
+</div>
+<div class="section" id="keyboard-input">
+<h3><a class="toc-backref" href="#id17">Keyboard Input</a></h3>
+<ul class="simple">
+<li>braille keyboard space: Space</li>
+<li>braille keyboard gui: S1</li>
+<li>braille keyboard control: S2</li>
+<li>braille keyboard meta: S3</li>
+<li>braille keyboard altgr: S4</li>
 <li>braille keyboard dot1: Dot1</li>
 <li>braille keyboard dot2: Dot2</li>
 <li>braille keyboard dot3: Dot3</li>
@@ -770,107 +886,108 @@ while the joystick is pressed (the joystick must be pressed first).</li>
 <li>braille keyboard dot6: Dot6</li>
 <li>braille keyboard dot7: Dot7</li>
 <li>braille keyboard dot8: Dot8</li>
-<li>type braille dots [7]: B9+Dot7</li>
-<li>type braille dots [8]: B9+Dot8</li>
+<li>type braille dots [7]: Space+Dot7</li>
+<li>type braille dots [8]: Space+Dot8</li>
 <li>backspace key:<ul>
+<li>BL</li>
 <li>Dot7</li>
 <li>Dot2+Left</li>
 </ul>
 </li>
 <li>escape key:<ul>
-<li>Dot3+Press</li>
-<li>B9+Dots26</li>
+<li>Dot3+Center</li>
+<li>Space+Dots26</li>
 </ul>
 </li>
 <li>cursor-left key:<ul>
-<li>B9+Dot3</li>
+<li>Space+Dot3</li>
 <li>Dot1+Left</li>
 </ul>
 </li>
 <li>cursor-right key:<ul>
-<li>B9+Dot6</li>
+<li>Space+Dot6</li>
 <li>Dot1+Right</li>
 </ul>
 </li>
 <li>cursor-up key:<ul>
-<li>B9+Dot1</li>
+<li>Space+Dot1</li>
 <li>Dot1+Up</li>
 </ul>
 </li>
 <li>cursor-down key:<ul>
-<li>B9+Dot4</li>
+<li>Space+Dot4</li>
 <li>Dot1+Down</li>
 </ul>
 </li>
 <li>page-up key:<ul>
 <li>Dot3+Up</li>
-<li>B9+Dots23</li>
+<li>Space+Dots23</li>
 </ul>
 </li>
 <li>page-down key:<ul>
 <li>Dot3+Down</li>
-<li>B9+Dots56</li>
+<li>Space+Dots56</li>
 </ul>
 </li>
 <li>home key:<ul>
-<li>B9+Dot2</li>
+<li>Space+Dot2</li>
 <li>Dot3+Left</li>
 </ul>
 </li>
 <li>end key:<ul>
-<li>B9+Dot5</li>
+<li>Space+Dot5</li>
 <li>Dot3+Right</li>
 </ul>
 </li>
 <li>insert key:<ul>
 <li>Dot2+Up</li>
-<li>B9+Dots35</li>
+<li>Space+Dots35</li>
 </ul>
 </li>
 <li>delete key:<ul>
 <li>Dot2+Right</li>
-<li>B9+Dots256</li>
+<li>Space+Dots256</li>
 </ul>
 </li>
-<li>function key: B9+RoutingKey</li>
+<li>function key: Space+RoutingKey</li>
 <li>enter key:<ul>
 <li>Dot8</li>
-<li>Dot2+Press</li>
+<li>Dot2+Center</li>
 </ul>
 </li>
 <li>tab key:<ul>
-<li>Dot1+Press</li>
-<li>B9+Dots45</li>
+<li>Dot1+Center</li>
+<li>Space+Dots45</li>
 </ul>
 </li>
-<li>clear all sticky input modifiers: B9+Dots78</li>
-<li>cycle the Upper sticky input modifier (next, on, off): B9+Dots68</li>
-<li>cycle the Shift sticky input modifier (next, on, off): B9+Dots48</li>
-<li>cycle the Control sticky input modifier (next, on, off): B9+Dots38</li>
-<li>cycle the Meta (Left Alt) sticky input modifier (next, on, off): B9+Dots28</li>
-<li>cycle the AltGr (Right Alt) sticky input modifier (next, on, off): B9+Dots58</li>
-<li>cycle the GUI (Windows) sticky input modifier (next, on, off): B9+Dots18</li>
+<li>clear all sticky input modifiers: Space+Dots78</li>
+<li>cycle the Upper sticky input modifier (next, on, off): Space+Dots68</li>
+<li>cycle the Shift sticky input modifier (next, on, off): Space+Dots48</li>
+<li>cycle the Control sticky input modifier (next, on, off): Space+Dots38</li>
+<li>cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dots28</li>
+<li>cycle the AltGr (Right Alt) sticky input modifier (next, on, off): Space+Dots58</li>
+<li>cycle the GUI (Windows) sticky input modifier (next, on, off): Space+Dots18</li>
 <li>switch to specific virtual terminal: Display4+Display5+Display6+RoutingKey</li>
 <li>switch to the previous virtual terminal:<ul>
 <li>Dots45+Left</li>
 <li>Display3+Display4+Display5+Display6</li>
-<li>B9+Dots12367</li>
+<li>Space+Dots12367</li>
 </ul>
 </li>
 <li>switch to the next virtual terminal:<ul>
 <li>Dots45+Right</li>
 <li>Display1+Display2+Display3+Display6</li>
-<li>B9+Dots12368</li>
+<li>Space+Dots12368</li>
 </ul>
 </li>
-<li>set braille keyboard enabled: B9+Dots138</li>
-<li>set braille keyboard disabled: B9+Dots137</li>
-<li>set braille typing mode dots: B9+Dots468</li>
-<li>set braille typing mode text: B9+Dots467</li>
+<li>set braille keyboard enabled: Space+Dots138</li>
+<li>set braille keyboard disabled: Space+Dots137</li>
+<li>set braille typing mode dots: Space+Dots468</li>
+<li>set braille typing mode text: Space+Dots467</li>
 </ul>
 </div>
 <div class="section" id="special-functions">
-<h3><a class="toc-backref" href="#id17">Special Functions</a></h3>
+<h3><a class="toc-backref" href="#id18">Special Functions</a></h3>
 <ul class="simple">
 <li>remember current braille window position: Display1+Display3+RoutingKey</li>
 <li>go to remembered braille window position: Display4+Display6+RoutingKey</li>
@@ -879,26 +996,26 @@ while the joystick is pressed (the joystick must be pressed first).</li>
 </div>
 </div>
 <div class="section" id="menu-bindings">
-<h2><a class="toc-backref" href="#id18">Menu Bindings</a></h2>
+<h2><a class="toc-backref" href="#id19">Menu Bindings</a></h2>
 <div class="section" id="id2">
-<h3><a class="toc-backref" href="#id19">Special Modes</a></h3>
+<h3><a class="toc-backref" href="#id20">Special Modes</a></h3>
 <ul class="simple">
 <li>enter/leave preferences menu:<ul>
 <li>Dot8</li>
-<li>Press</li>
+<li>Center</li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="id3">
-<h3><a class="toc-backref" href="#id20">Horizontal Navigation</a></h3>
+<h3><a class="toc-backref" href="#id21">Horizontal Navigation</a></h3>
 <ul class="simple">
-<li>go backward one braille window: B9+Left</li>
-<li>go forward one braille window: B9+Right</li>
+<li>go backward one braille window: Space+Left</li>
+<li>go forward one braille window: Space+Right</li>
 </ul>
 </div>
 <div class="section" id="id4">
-<h3><a class="toc-backref" href="#id21">Menu Operations</a></h3>
+<h3><a class="toc-backref" href="#id22">Menu Operations</a></h3>
 <ul class="simple">
 <li>go up to previous item:<ul>
 <li>Dot1</li>
@@ -912,12 +1029,12 @@ while the joystick is pressed (the joystick must be pressed first).</li>
 </li>
 <li>go up to first item:<ul>
 <li>Dot2</li>
-<li>B9+Up</li>
+<li>Space+Up</li>
 </ul>
 </li>
 <li>go down to last item:<ul>
 <li>Dot5</li>
-<li>B9+Down</li>
+<li>Space+Down</li>
 </ul>
 </li>
 <li>select previous choice:<ul>
@@ -931,11 +1048,11 @@ while the joystick is pressed (the joystick must be pressed first).</li>
 </ul>
 </li>
 <li>go to previous menu level:<ul>
-<li>B9</li>
+<li>Space</li>
 <li>Dot7</li>
 </ul>
 </li>
-<li>save preferences to disk: B9+Press</li>
+<li>save preferences to disk: Space+Center</li>
 </ul>
 </div>
 </div>

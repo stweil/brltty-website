@@ -1,6 +1,9 @@
 Key Table: Baum (variokeys=yes)
 ===============================
 
+Notes
+* RoutingKey refers to any of the keys immediately behind the braille cells.
+
 Default Bindings
 ----------------
 
@@ -36,8 +39,6 @@ Clipboard Functions
 * append to clipboard from character: Display2+RoutingKey
 * linear copy to character: Display4+RoutingKey
 * rectangular copy to character: Display5+RoutingKey
-* copy characters to clipboard: RoutingKey+RoutingKey
-* append characters to clipboard: Display2+RoutingKey+RoutingKey
 
 Configuration Functions
 * set track screen cursor on/off: Display2+Display3+Display4+Display5

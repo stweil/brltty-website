@@ -191,6 +191,9 @@ Configuration Functions
 * set autorepeat off: Dots12357
 * set text style 6-dot: Dots235
 * set text style 8-dot: Dots236
+* set contracted/computer braille: Dots1245
+* set contracted braille: Dots12458
+* set computer braille: Dots12457
 * set skipping of lines with identical content on/off: Dots24
 * set skipping of lines with identical content on: Dots248
 * set skipping of lines with identical content off: Dots247

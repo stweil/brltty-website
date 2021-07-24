@@ -4688,7 +4688,7 @@
           de          German
           de-g0       German (uncontracted)
           de-g1       German (basic contractions)
-          de-g2       German (contracted - 1998 standard)
+          de-g2       German (contracted)
           de-1998     German (contracted - 1998 standard)
           de-2015     German (contracted - 2015 standard)
           en          English
@@ -5700,6 +5700,7 @@
                               DM80 Plus
                               EcoVario 24/32/40/64/80
                               Inka
+                              NLS eReader Zoomax
                               Orbit 20
                               PocketVario 24
                               Pronto! V3 18/40
