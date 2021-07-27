@@ -8,9 +8,16 @@
 <a name="key-binding-lists"></a>
 <h1>Key Binding Lists</h1>
 <ul>
-<li><a href="#computer-keyboard-bindings">Computer Keyboard Bindings</a></li>
-<li><a href="#braille-device-bindings">Braille Device Bindings</a></li>
-<li><ul>
+<li><a href="#braille-device-key-bindings">Braille Device Key Bindings</a></li>
+<li><a href="#keyboard-key-tables">Keyboard Key Tables</a></li>
+</ul>
+<hr />
+<a name="braille-device-key-bindings"></a>
+<h2>Braille Device Key Bindings</h2>
+The driver automatically selects the appropriate key table for the device model being used.
+Click on the driver's name for general information about it.
+Click on the device model for its key bindings.
+<ul>
 <li><a href="#brl-at">Albatross</a></li>
 <li><a href="#brl-al">Alva</a></li>
 <li><a href="#brl-bg">B2G</a></li>
@@ -53,30 +60,7 @@
 <li><a href="#brl-vs">VisioBraille</a></li>
 <li><a href="#brl-vo">Voyager</a></li>
 <li><a href="#brl-xw">XWindow</a></li>
-</ul></li>
 </ul>
-<hr />
-<a name="computer-keyboard-bindings"></a>
-<h2>Computer Keyboard Bindings</h2>
-In order to use one of these keyboard tables,
-you need to explicitly specify it in one of the following ways:
-<ul>
-<li>Use BRLTTY's <tt>-k</tt> (or <tt>--keyboard-table=</tt>) command line option.</li>
-<li>Use the <tt>keyboard-table</tt> configuration file (<tt>brltty.conf</tt>) directive.</li>
-</ul>
-<ul>
-<li><a href="kbd-braille.html">Bindings for Braille Keyboards</a></li>
-<li><a href="kbd-desktop.html">Bindings for Full Keyboards</a></li>
-<li><a href="kbd-keypad.html">Bindings for Keypad-based Navigation</a></li>
-<li><a href="kbd-laptop.html">Bindings for Keyboards without a Keypad</a></li>
-<li><a href="kbd-sun_type6.html">Bindings for Sun Microsystems, Inc. Type 6 Keyboards</a></li>
-</ul>
-<hr />
-<a name="braille-device-bindings"></a>
-<h2>Braille Device Bindings</h2>
-The driver automatically selects the appropriate key table for the device model being used.
-Click on the driver's name for general information about it.
-Click on the device model for its key bindings.
 <dl>
 <dt>
 <a name="brl-at"></a>
@@ -515,6 +499,22 @@ TechniBraille
 </ul>
 </dd>
 </dl>
+<hr />
+<a name="keyboard-key-tables"></a>
+<h2>Keyboard Key Tables</h2>
+In order to use one of these keyboard tables,
+you need to explicitly specify it in one of the following ways:
+<ul>
+<li>Use BRLTTY's <tt>-k</tt> (or <tt>--keyboard-table=</tt>) command line option.</li>
+<li>Use the <tt>keyboard-table</tt> configuration file (<tt>brltty.conf</tt>) directive.</li>
+</ul>
+<ul>
+<li><a href="kbd-braille.html">Bindings for Braille Keyboards</a></li>
+<li><a href="kbd-desktop.html">Bindings for Full Keyboards</a></li>
+<li><a href="kbd-keypad.html">Bindings for Keypad-based Navigation</a></li>
+<li><a href="kbd-laptop.html">Bindings for Keyboards without a Keypad</a></li>
+<li><a href="kbd-sun_type6.html">Bindings for Sun Microsystems, Inc. Type 6 Keyboards</a></li>
+</ul>
 <hr />
 </body>
 </html>
