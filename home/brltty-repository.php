@@ -7,6 +7,15 @@ go to [<?php write_link('http://git-scm.com/'); ?>].
 </p>
 
 <p>
+If your distribution provides it (most do) then you should get it from them:
+</p>
+
+<ul>
+<li>For Fedora-based systems: <code>dnf install git</code></li>
+<li>For Debian-based systems: <code>apt install git</code></li>
+</ul>
+
+<p>
 The repository is at [<?php write_link('https://github.com/brltty/brltty'); ?>].
 Here are a few simple things that you can do:
 </p>
@@ -17,8 +26,8 @@ Here are a few simple things that you can do:
       <pre>git clone https://github.com/brltty/brltty.git</pre>
       If it doesn't work then try one of these alternate commands:
       <ul>
-      <li><pre>git clone http://github.com/brltty/brltty.git</pre></li>
-      <li><pre>git clone git://github.com/brltty/brltty.git</pre></li>
+      <li><code>git clone http://github.com/brltty/brltty.git</code></li>
+      <li><code>git clone git://github.com/brltty/brltty.git</code></li>
       </ul>
       This will create the directory <code>brltty</code> in your current working directory.
    </li>
@@ -28,6 +37,8 @@ Here are a few simple things that you can do:
       then specify the path (relative or absolute) to the desired directory
       as an additional command line argument.
       <pre>git clone https://github.com/brltty/brltty.git /path/to/directory</pre>
+      Note that this directory needn't already exist.
+      The best is for it either to be empty or for it to not already exist.
    </li>
 
    <li>
@@ -45,7 +56,7 @@ Here are a few simple things that you can do:
       To switch to a specific release, do:
       <pre>git checkout &lt;release-name&gt;</pre>
       For example:
-      <pre>git checkout BRLTTY-5.0</pre>
+      <pre>git checkout BRLTTY-6.3</pre>
    </li>
 
    <li>
@@ -55,8 +66,8 @@ Here are a few simple things that you can do:
 </ul>
 
 <p>
-No derived files, e.g. the <code>configure</code> script, are stored within the repository.
-If you would like to build BRLTTY, then,
+None of the derived files, e.g. the <code>configure</code> script, are stored within the repository.
+If you'd like to build BRLTTY, then,
 after obtaining the source tree,
 you must first create all of the initial derived files by running
 the <code>autogen</code> script
@@ -84,10 +95,11 @@ In order for <code>autogen</code> to run successfully, you need at least the fol
       </pre>
    </dd>
 
-   <dt>TclX (Extended Tcl) 8.3</dt>
+   <dt>tcl 8.5</dt>
    <dd>
-      The <b>Extended Tcl</b> shell is assumed to be in <code>/usr/bin/tcl</code>.
+      The <b>tcl</b> shell needs to be within your command search path (<code>$PATH</code>)
+      and must be named <code>tclsh</code>.
       If it's in a different place on your system
-      then adjust the path in the first line of the <code>gendeps</code> script.
+      then adjust the path in the first line of the <code>gendeps</code> script as needed.
    </dd>
 </dl>
