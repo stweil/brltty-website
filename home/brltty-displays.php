@@ -14,9 +14,6 @@ then please <A HREF="contact.html">let us know</A>.
          "Braille System 40", "Braille Controller 640/680"
       ),
 
-      array("B2G"
-      ),
-
       array("Baum",
          "BrailleConnect 12/24/32/40/64/.80", "Brailliant 24/32/40/64/.80",
          "Conny 12", "DM80 Plus", "EcoVario 24/32/40/64/.80", "Inka",
@@ -154,14 +151,8 @@ then please <A HREF="contact.html">let us know</A>.
          "Navigator 20/40/80", "PowerBraille 40/65/80"
       ),
 
-      array("TTY"
-      ),
-
       array("VideoBraille",
          "40"
-      ),
-
-      array("Virtual"
       ),
 
       array("VisioBraille",
@@ -170,9 +161,6 @@ then please <A HREF="contact.html">let us know</A>.
 
       array("Voyager",
          "44/70", "Part232 (serial adapter)", "BraillePen/EasyLink"
-      ),
-
-      array("XWindow"
       ),
    );
 
