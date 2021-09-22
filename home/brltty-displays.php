@@ -93,8 +93,9 @@ then please <A HREF="contact.html">let us know</A>.
       ),
 
       array("HumanWare",
-         "Brailliant BI 14/32/40", "Brailliant B 80", "BrailleNote Touch",
-         "BrailleOne", "APH Chameleon 20", "APH Mantis Q40", "NLS eReader"
+         "Brailliant BI 14/32/40", "Brailliant BI 20X/40X",
+         "Brailliant B 80", "BrailleNote Touch", "BrailleOne",
+         "APH Chameleon 20", "APH Mantis Q40", "NLS eReader"
       ),
 
       array("Inceptor",
