@@ -1,5 +1,5 @@
-Key Table: HumanWare Brailliant BI 40
-=====================================
+Key Table: HumanWare Brailliant BI 40X
+======================================
 
 Notes
 * There are four rectangular thumb keys on the front. From left to right:

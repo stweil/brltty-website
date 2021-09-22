@@ -152,7 +152,6 @@ The following braille displays are supported:
 -  Albatross [46/80]
 -  Alva [ABT(3nn), Delphi(4nn), Satellite(5nn), Braille System 40,
          Braille Controller 640/680, Easy Link 12]
--  B2G
 -  Baum [BrailleConnect 12/24/32/40/64/80, Brailliant 24/32/40/64/80, Conny 12,
          DM80 Plus, EcoVario 24/32/40/64/80, Inka, NLS eReader Zoomax,
          Orbit 20, PocketVario 24, Pronto! V3 18/40, Pronto! V4 18/40,
@@ -173,13 +172,14 @@ The following braille displays are supported:
 -  FreedomScientific [Focus 1 44/70/84, Focus 2 40/80, Focus Blue 14/40/80,
                       PAC Mate 20/40]
 -  HandyTech [Modular 20/40/80, Modular Evolution 64/88, Modular Connect 88,
-              Active Braille, Active Star 40, Actilino, Activator,
+              Active Braille, Active Braille S, Active Star 40,
+              Actilino, Activator,
               Basic Braille 16/20/32/40/48/64/80, Braillino,
               Braille Wave, Easy Braille, Braille Star 40/80,
               Connect Braille 40, Bookworm]
 -  Hedo [ProfiLine, MobilLine]
 -  HIMS [Braille Sense, SyncBraille, Braille Edge, Smart Beetle]
--  HumanWare [Brailliant BI 14/32/40, Brailliant B 80, BrailleNote Touch,
+-  HumanWare [Brailliant BI 14/32/40/20X/40X, Brailliant B 80, BrailleNote Touch,
               BrailleOne, APH Chameleon 20, APH Mantis Q40, NLS eReader]
 -  Inceptor [BrailleMe (20)]
 -  Iris
@@ -198,12 +198,9 @@ The following braille displays are supported:
 -  Seika [3/4/5 (40), 80, Mini (16)]
 -  TechniBraille
 -  TSI [Navigator 20/40/80, PowerBraille 40/65/80]
--  TTY [terminfo]
 -  VideoBraille [40]
--  Virtual [TCP/Unix, client/server]
 -  VisioBraille [20/40]
 -  Voyager [44/70, Part232 (serial adapter), BraillePen/EasyLink]
--  XWindow [X11, Windows]
 
 The following speech synthesizers are supported:
 

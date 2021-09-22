@@ -2,53 +2,55 @@ Key Table: APH Mantis Q40
 =========================
 
 Notes
-* There are four thumb keys on the front. From left to right, they are:
-  Previous, Back, Advance, Next.
+* There are four rectangular thumb keys on the front. From left to right:
+  The outer (shorter) ones are named ThumbUp and ThumbDown.
+  The inner (longer) ones are named ThumbLeft and ThumbRight.
+  Some models have a round key in the middle - it's the internal menu key.
 * RoutingKey refers to any of the keys immediately behind the braille cells.
 
 Default Bindings
 ----------------
 
 Cursor Functions
-* go to screen cursor: Back+Advance
+* go to screen cursor: ThumbLeft+ThumbRight
 * bring screen cursor to character: RoutingKey
 
 Vertical Navigation
-* go up one line: Back
-* go down one line: Advance
-* go to beginning of top line: Previous+Back
-* go to beginning of bottom line: Previous+Advance
-* go up to nearest line with different content: Next+Back
-* go down to nearest line with different content: Next+Advance
+* go up one line: ThumbPrevious
+* go down one line: ThumbNext
+* go to beginning of top line: ThumbPrevious+ThumbLeft
+* go to beginning of bottom line: ThumbPrevious+ThumbRight
+* go up to nearest line with different content: ThumbNext+ThumbLeft
+* go down to nearest line with different content: ThumbNext+ThumbRight
 
 Horizontal Navigation
-* go backward one braille window: Previous
-* go forward one braille window: Next
+* go backward one braille window: ThumbLeft
+* go forward one braille window: ThumbRight
 
 Clipboard Functions
-* start new clipboard at character: Previous+RoutingKey
-* append to clipboard from character: Back+RoutingKey
-* linear copy to character: Next+RoutingKey
-* rectangular copy to character: Advance+RoutingKey
-* insert clipboard text after screen cursor: Previous+Next
+* start new clipboard at character: ThumbPrevious+RoutingKey
+* append to clipboard from character: ThumbLeft+RoutingKey
+* linear copy to character: ThumbNext+RoutingKey
+* rectangular copy to character: ThumbRight+RoutingKey
+* insert clipboard text after screen cursor: ThumbPrevious+ThumbNext
 
 Menu Bindings
 -------------
 
 Special Modes
-* enter/leave preferences menu: Back+Advance
+* enter/leave preferences menu: ThumbLeft+ThumbRight
 
 Horizontal Navigation
-* go backward one braille window: Previous
-* go forward one braille window: Next
+* go backward one braille window: ThumbLeft
+* go forward one braille window: ThumbRight
 
 Menu Operations
-* go up to previous item: Back
-* go down to next item: Advance
-* go up to first item: Previous+Back
-* go down to last item: Previous+Advance
-* select previous choice: Next+Back
-* select next choice: Next+Advance
-* restore preferences from disk: Back+Advance+Previous
-* save preferences to disk: Back+Advance+Next
+* go up to previous item: ThumbPrevious
+* go down to next item: ThumbNext
+* go up to first item: ThumbPrevious+ThumbLeft
+* go down to last item: ThumbPrevious+ThumbRight
+* select previous choice: ThumbNext+ThumbLeft
+* select next choice: ThumbNext+ThumbRight
+* restore preferences from disk: ThumbLeft+ThumbRight+ThumbPrevious
+* save preferences to disk: ThumbLeft+ThumbRight+ThumbNext
 

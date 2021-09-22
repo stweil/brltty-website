@@ -151,7 +151,10 @@ Clipboard Functions
 * rectangular copy to character:
   + Display5+RoutingKey
   + RoutingKey+Down
-* append characters to clipboard: B11+RoutingKey+RoutingKey
+* copy characters to clipboard: RoutingKey+RoutingKey
+* append characters to clipboard:
+  + Display2+RoutingKey+RoutingKey
+  + B11+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
   + B11+Press
   + Dot2+Down

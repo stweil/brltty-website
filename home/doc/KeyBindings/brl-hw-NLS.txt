@@ -2,8 +2,10 @@ Key Table: NLS eReader
 ======================
 
 Notes
-* There are four thumb keys on the front. From left to right, they are:
-  Previous, Back, Advance, Next.
+* There are four rectangular thumb keys on the front. From left to right:
+  The outer (shorter) ones are named ThumbUp and ThumbDown.
+  The inner (longer) ones are named ThumbLeft and ThumbRight.
+  Some models have a round key in the middle - it's the internal menu key.
 * There's an eight-key braille keyboard near the back of the top.
   From left to right, its keys are: Dot7, Dot3, Dot2, Dot1, Dot4, Dot5, Dot6, Dot8.
 * RoutingKey refers to any of the keys immediately behind the braille cells.
@@ -24,29 +26,29 @@ Special Modes
 * set screen image unfrozen: Space+Dots1247
 
 Cursor Functions
-* go to screen cursor: Back+Advance
+* go to screen cursor: ThumbLeft+ThumbRight
 * bring screen cursor to character: RoutingKey
 * bring screen cursor to current line: Space+Dots1236
 
 Vertical Navigation
-* go up one line: Back
-* go down one line: Advance
-* go to beginning of top line: Previous+Back
-* go to beginning of bottom line: Previous+Advance
-* go up to nearest line with different content: Next+Back
-* go down to nearest line with different content: Next+Advance
+* go up one line: ThumbPrevious
+* go down one line: ThumbNext
+* go to beginning of top line: ThumbPrevious+ThumbLeft
+* go to beginning of bottom line: ThumbPrevious+ThumbRight
+* go up to nearest line with different content: ThumbNext+ThumbLeft
+* go down to nearest line with different content: ThumbNext+ThumbRight
 
 Horizontal Navigation
-* go backward one braille window: Previous
-* go forward one braille window: Next
+* go backward one braille window: ThumbLeft
+* go forward one braille window: ThumbRight
 
 Clipboard Functions
-* start new clipboard at character: Previous+RoutingKey
-* append to clipboard from character: Back+RoutingKey
-* linear copy to character: Next+RoutingKey
-* rectangular copy to character: Advance+RoutingKey
+* start new clipboard at character: ThumbPrevious+RoutingKey
+* append to clipboard from character: ThumbLeft+RoutingKey
+* linear copy to character: ThumbNext+RoutingKey
+* rectangular copy to character: ThumbRight+RoutingKey
 * insert clipboard text after screen cursor:
-  + Previous+Next
+  + ThumbPrevious+ThumbNext
   + Space+Dots1346
 * save clipboard to disk: Space+Dots13468
 * restore clipboard from disk: Space+Dots13467
@@ -93,8 +95,8 @@ Keyboard Input
 * braille keyboard dot7: Dot7
 * braille keyboard dot8: Dot8
 * braille keyboard space: Space
-* braille keyboard meta: Back
-* braille keyboard control: Advance
+* braille keyboard meta: ThumbLeft
+* braille keyboard control: ThumbRight
 * type braille dots [7]: Space+Dot7
 * type braille dots [8]: Space+Dot8
 * backspace key: Dot7
@@ -110,9 +112,9 @@ Keyboard Input
 * insert key: Space+Dots35
 * delete key: Space+Dots256
 * function key: Space+RoutingKey
-* function key: Advance+Space+RoutingKey
-* function key: Back+Space+RoutingKey
-* function key: Back+Advance+Space+RoutingKey
+* function key: ThumbRight+Space+RoutingKey
+* function key: ThumbLeft+Space+RoutingKey
+* function key: ThumbLeft+ThumbRight+Space+RoutingKey
 * enter key: Dot8
 * tab key: Space+Dots45
 * clear all sticky input modifiers: Space+Dots78
@@ -135,32 +137,32 @@ Menu Bindings
 Special Modes
 * enter/leave preferences menu:
   + Dot8
-  + Back+Advance
+  + ThumbLeft+ThumbRight
 
 Horizontal Navigation
-* go backward one braille window: Previous
-* go forward one braille window: Next
+* go backward one braille window: ThumbLeft
+* go forward one braille window: ThumbRight
 
 Menu Operations
 * go up to previous item:
   + Dot1
-  + Back
+  + ThumbPrevious
 * go down to next item:
   + Dot4
-  + Advance
+  + ThumbNext
 * go up to first item:
   + Dot2
-  + Previous+Back
+  + ThumbPrevious+ThumbLeft
 * go down to last item:
   + Dot5
-  + Previous+Advance
+  + ThumbPrevious+ThumbRight
 * select previous choice:
   + Dot3
-  + Next+Back
+  + ThumbNext+ThumbLeft
 * select next choice:
   + Dot6
-  + Next+Advance
+  + ThumbNext+ThumbRight
 * go to previous menu level: Dot7
-* restore preferences from disk: Back+Advance+Previous
-* save preferences to disk: Back+Advance+Next
+* restore preferences from disk: ThumbLeft+ThumbRight+ThumbPrevious
+* save preferences to disk: ThumbLeft+ThumbRight+ThumbNext
 

@@ -206,6 +206,7 @@ Menu Operations
 Speech Functions
 * stop speaking: PanRight+LeftShift
 * speak current line: PanRight+RightShift
+* speak from top of screen through bottom of screen: PanRight+LeftShift+RightShift+Space
 * speak from top of screen through current line: PanRight+LeftShift+Space
 * speak from current line through bottom of screen: PanRight+RightShift+Space
 * decrease speaking volume: Space+LeftNavDown
