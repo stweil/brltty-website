@@ -5757,7 +5757,8 @@
                               SyncBraille
                               Braille Edge
                               Smart Beetle
-          HumanWare           Brailliant BI 14/32/40/20X/40X
+          HumanWare           Brailliant BI 14/32/40
+                              Brailliant BI 20X/40X
                               Brailliant B 80
                               BrailleNote Touch
                               BrailleOne
@@ -5775,7 +5776,9 @@
                               Lilli Blu
           Metec               BD-40
           MiniBraille         20
-          MultiBraille        MB125CR/MB145CR/MB185CR
+          MultiBraille        MB125CR
+                              MB145CR
+                              MB185CR
           NinePoint           8
           Papenmeier          Compact 486
                               Compact/Tiny

@@ -108,9 +108,14 @@ do
 done
 
 cd "${sourceRoot}/${documentSubdirectory}"
-for file in "../README" "ChangeLog" "TODO"
+for file in ../README BUGS ChangeLog CONTRIBUTORS HISTORY TODO
 do
    updateFile "${file}" "${file##*/}.txt"
+done
+
+for file in *.csv
+do
+   updateFile "${file}" "${file##*/}"
 done
 
 for file in "README."*
