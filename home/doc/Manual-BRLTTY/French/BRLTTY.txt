@@ -14,7 +14,7 @@
   Jean-Philippe Mengual <texou@accelibreinfo.eu> pour
   Traduc.org
 
-  Version 6.3, Janvier 2021
+  Version 6.4, Septembre 2021
 
   Copyright © 1995-2021 by Les Développeurs de BRLTTY.  BRLTTY est un
   logiciel libre, et n'est fourni avec AUCUNE GARANTIE. Il est placé

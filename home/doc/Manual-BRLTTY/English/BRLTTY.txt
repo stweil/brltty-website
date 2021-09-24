@@ -9,7 +9,7 @@
 
   Dave Mielke <dave@mielke.cc>
 
-  Version 6.3, January 2021
+  Version 6.4, September 2021
 
   Copyright © 1995-2021 by The BRLTTY Developers.  BRLTTY is free soft-
   ware, and comes with ABSOLUTELY NO WARRANTY.  It is placed under the
