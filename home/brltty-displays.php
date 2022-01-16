@@ -89,7 +89,8 @@ then please <A HREF="contact.html">let us know</A>.
       ),
 
       array("HIMS",
-         "Braille Sense", "SyncBraille", "Braille Edge", "Smart Beetle"
+         "Braille Sense", "SyncBraille", "Braille Edge",
+         "Smart Beetle", "QBrailleXL"
       ),
 
       array("HumanWare",
