@@ -3,35 +3,32 @@ Key Table: Orbit Reader
 
 Notes
 * A six-dot standard braille keyboard is along the back edge of the top.
-  From left to right, its keys are: Dot3, Dot2, Dot1, Dot4, Dot5, Dot6.
-* There's a five-position joystick in between Dot1 and Dot4.
-* Space is the long key in the middle, just in front of the joystick.
+  From left to right, its keys are: Dot3, Dot2, Dot1 - Dot4, Dot5, Dot6.
+* There's a five-key navigation pad in between Dot1 and Dot4.
+* Space is the long key in the middle, just in front of the navigation pad.
 * Dot7 and Dot8 are the keys immediately to the left and right of Space.
+* The five navigation pad keys are named Left, Right, Up, Down, and Select.
+* Any display key combination can be emulated by holding Select
+  while typing the corresponding combination of dots 1-6.
 * The rocker to the left of the braille cells emulates the Display2 key,
   and the one to their right emulates the Display5 key.
-* Any display key combination can be emulated by pressing the joystick
-  while typing the corresponding combination of the eight dot keys.
-* The five joystick motions are named Left, Right, Up, Down, and Press.
 
 Default Bindings
 ----------------
 
 Special Modes
 * enter/leave help display:
-  + Dot4+Press
   + Display1+Display2+Display5
   + Space+Dots125
 * enter/leave command learn mode:
-  + Dot6+Press
   + Display1+Display4+Display5+Display6
   + Space+Dots123
 * enter/leave preferences menu:
   + Display1+Display3+Display4
-  + Dots456+Press
+  + Dots456+Up
   + Space+Dots1234
 * enter/leave status display:
   + Display2+Display5
-  + Dot5+Press
   + Space+Dots234
 * set display mode attributes/text:
   + Display1+Display4+Display5
@@ -47,14 +44,13 @@ Special Modes
 * set screen image unfrozen: Space+Dots1247
 * show current date and time:
   + Display1+Display5
-  + Dots56+Up
+  + Dots456+Down
 
 Cursor Functions
 * go to screen cursor: Display2+Display4+Display6
 * go back after cursor tracking: Display1+Display6
-* go to screen cursor or go back after cursor tracking: Press
+* go to screen cursor or go back after cursor tracking: Select
 * bring screen cursor to current line:
-  + Dots46+Press
   + Display1+Display3+Display4+Display6
   + Space+Dots1236
 
@@ -122,15 +118,14 @@ Horizontal Navigation
 
 Clipboard Functions
 * insert clipboard text after screen cursor:
-  + Dot2+Down
   + Display1+Display2+Display3+Display4
   + Space+Dots1346
 * search backward for clipboard text:
+  + Dots56+Up
   + Display2+Display4+Display6+Display1
-  + Dots456+Left
 * search forward for clipboard text:
+  + Dots56+Down
   + Display2+Display4+Display6+Display3
-  + Dots456+Right
 * save clipboard to disk: Space+Dots13468
 * restore clipboard from disk: Space+Dots13467
 
@@ -138,34 +133,26 @@ Configuration Functions
 * set autorepeat on/off: Space+Dots1235
 * set autorepeat on: Space+Dots12358
 * set autorepeat off: Space+Dots12357
-* set text style 6-dot/8-dot: Dots45+Press
-* set text style 6-dot:
-  + Display2+Display3+Display5
-  + Space+Dots235
-* set text style 8-dot:
-  + Display2+Display3+Display6
-  + Space+Dots236
-* set contracted/computer braille: Space+Dots1245
+* set text style 6-dot: Display2+Display3+Display5
+* set text style 8-dot: Display2+Display3+Display6
+* set contracted/computer braille:
+  + Dots45+Right
+  + Space+Dots1245
 * set contracted braille: Space+Dots12458
 * set computer braille: Space+Dots12457
-* set skipping of lines with identical content on/off:
-  + Space+Dots24
-  + Dots56+Left
+* set six/eight dot computer braille: Dots45+Left
+* set six dot computer braille: Space+Dots235
+* set eight dot computer braille: Space+Dots236
+* set skipping of lines with identical content on/off: Space+Dots24
 * set skipping of lines with identical content on: Space+Dots248
 * set skipping of lines with identical content off: Space+Dots247
-* set skipping of blank braille windows on/off:
-  + Space+Dots12
-  + Dots56+Right
+* set skipping of blank braille windows on/off: Space+Dots12
 * set skipping of blank braille windows on: Space+Dots128
 * set skipping of blank braille windows off: Space+Dots127
-* set sliding braille window on/off:
-  + Dots56+Down
-  + Space+Dots2456
+* set sliding braille window on/off: Space+Dots2456
 * set sliding braille window on: Space+Dots24568
 * set sliding braille window off: Space+Dots24567
-* set track screen cursor on/off:
-  + Dots56+Press
-  + Space+Dots2345
+* set track screen cursor on/off: Space+Dots2345
 * set track screen cursor on:
   + Display1
   + Space+Dots23458
@@ -184,20 +171,40 @@ Configuration Functions
 Menu Operations
 * restore preferences from disk:
   + Display1+Display2+Display3+Display5
-  + Dots456+Up
+  + Dots456+Left
   + Space+Dots12347
 * save preferences to disk:
   + Display2+Display4+Display5+Display6
-  + Dots456+Down
+  + Dots456+Right
   + Space+Dots12348
 
 Speech Functions
-* stop speaking: Display3+Display4
-* speak current line: Display3+Display5
-* speak from top of screen through current line: Display3+Display5+Display4
-* speak from current line through bottom of screen: Display3+Display5+Display6
-* go to current speaking position: Display1+Display3+Display5
-* set autospeak on/off: Display3+Display4+Display6
+* stop speaking:
+  + Display3+Display4
+  + Dots12+Left
+* speak current line:
+  + Display3+Display5
+  + Dots12+Right
+* speak from top of screen through bottom of screen: Dots13+Right
+* speak from top of screen through current line:
+  + Display3+Display5+Display4
+  + Dots12+Up
+* speak from current line through bottom of screen:
+  + Display3+Display5+Display6
+  + Dots12+Down
+* go to current speaking position:
+  + Display1+Display3+Display5
+  + Dots13+Down
+* decrease speaking volume: Dots23+Down
+* increase speaking volume: Dots23+Up
+* decrease speaking rate: Dots23+Left
+* increase speaking rate: Dots23+Right
+* set autospeak on/off:
+  + Display3+Display4+Display6
+  + Dots13+Up
+
+Speech Navigation
+* speak indent of current line: Dots13+Left
 
 Keyboard Input
 * braille keyboard space: Space
@@ -211,11 +218,9 @@ Keyboard Input
 * braille keyboard dot8: Dot8
 * type braille dots [7]: Space+Dot7
 * type braille dots [8]: Space+Dot8
-* backspace key:
-  + Dot7
-  + Dot2+Left
+* backspace key: Dot7
 * escape key:
-  + Dot3+Press
+  + Dot3+Up
   + Space+Dots26
 * cursor-left key:
   + Space+Dot3
@@ -230,28 +235,26 @@ Keyboard Input
   + Space+Dot4
   + Dot1+Down
 * page-up key:
-  + Dot3+Up
+  + Dot2+Up
   + Space+Dots23
 * page-down key:
-  + Dot3+Down
+  + Dot2+Down
   + Space+Dots56
 * home key:
   + Space+Dot2
-  + Dot3+Left
+  + Dot2+Left
 * end key:
   + Space+Dot5
-  + Dot3+Right
+  + Dot2+Right
 * insert key:
-  + Dot2+Up
+  + Dot3+Right
   + Space+Dots35
 * delete key:
-  + Dot2+Right
+  + Dot3+Left
   + Space+Dots256
-* enter key:
-  + Dot8
-  + Dot2+Press
+* enter key: Dot8
 * tab key:
-  + Dot1+Press
+  + Dot3+Down
   + Space+Dots45
 * clear all sticky input modifiers: Space+Dots78
 * cycle the Upper sticky input modifier (next, on, off): Space+Dots68
@@ -261,11 +264,11 @@ Keyboard Input
 * cycle the AltGr (Right Alt) sticky input modifier (next, on, off): Space+Dots58
 * cycle the GUI (Windows) sticky input modifier (next, on, off): Space+Dots18
 * switch to the previous virtual terminal:
-  + Dots45+Left
+  + Dots56+Left
   + Display3+Display4+Display5+Display6
   + Space+Dots12367
 * switch to the next virtual terminal:
-  + Dots45+Right
+  + Dots56+Right
   + Display1+Display2+Display3+Display6
   + Space+Dots12368
 * set braille keyboard enabled: Space+Dots138
@@ -282,7 +285,7 @@ Menu Bindings
 Special Modes
 * enter/leave preferences menu:
   + Dot8
-  + Press
+  + Select
 
 Horizontal Navigation
 * go backward one braille window: Space+Left
@@ -310,5 +313,5 @@ Menu Operations
 * go to previous menu level:
   + Space
   + Dot7
-* save preferences to disk: Space+Press
+* save preferences to disk: Space+Select
 

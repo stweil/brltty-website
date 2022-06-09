@@ -400,7 +400,7 @@ From left to right, its keys are: Dot7, Dot3, Dot2, Dot1, Dot4, Dot5, Dot6, Dot8
 The Space key is in between Dot1 and Dot4.</li>
 <li>The two round keys at each end of the front are system keys. From left to right:
 the two on the left are S1 and S2, and the two on the right are S3 and S4.</li>
-<li>The five navigation pad keys are named Left, Right, Up, Down, and Center.</li>
+<li>The five navigation pad keys are named Left, Right, Up, Down, and Select.</li>
 <li>There's a rectangular key on either side of the navigation pad.
 The one to the left is named BL, and the one to the right is named BR.</li>
 <li>There are three display keys at each end of the braille cells.
@@ -419,29 +419,26 @@ From top to bottom:<ul>
 <ul class="simple">
 <li>enter/leave help display:<ul>
 <li>S1</li>
-<li>Dot4+Center</li>
 <li>Display1+Display2+Display5</li>
 <li>Space+Dots125</li>
 </ul>
 </li>
 <li>enter/leave command learn mode:<ul>
 <li>S4</li>
-<li>Dot6+Center</li>
 <li>Display1+Display4+Display5+Display6</li>
 <li>Space+Dots123</li>
 </ul>
 </li>
 <li>enter/leave preferences menu:<ul>
-<li>BL+Center</li>
+<li>BL+Select</li>
 <li>Display1+Display3+Display4</li>
-<li>Dots456+Center</li>
+<li>Dots456+Up</li>
 <li>Space+Dots1234</li>
 </ul>
 </li>
 <li>enter/leave status display:<ul>
 <li>S3</li>
 <li>Display2+Display5</li>
-<li>Dot5+Center</li>
 <li>Space+Dots234</li>
 </ul>
 </li>
@@ -465,13 +462,13 @@ From top to bottom:<ul>
 <li>set screen image unfrozen: Space+Dots1247</li>
 <li>describe character:<ul>
 <li>Display3+RoutingKey</li>
-<li>RoutingKey+Center</li>
+<li>RoutingKey+Select</li>
 </ul>
 </li>
 <li>show current date and time:<ul>
 <li>S2</li>
 <li>Display1+Display5</li>
-<li>Dots56+Up</li>
+<li>Dots456+Down</li>
 </ul>
 </li>
 </ul>
@@ -481,11 +478,10 @@ From top to bottom:<ul>
 <ul class="simple">
 <li>go to screen cursor: Display2+Display4+Display6</li>
 <li>go back after cursor tracking: Display1+Display6</li>
-<li>go to screen cursor or go back after cursor tracking: Center</li>
+<li>go to screen cursor or go back after cursor tracking: Select</li>
 <li>bring screen cursor to character: RoutingKey</li>
 <li>bring screen cursor to current line:<ul>
 <li>S2+S3</li>
-<li>Dots46+Center</li>
 <li>Display1+Display3+Display4+Display6</li>
 <li>Space+Dots1236</li>
 </ul>
@@ -613,12 +609,12 @@ From top to bottom:<ul>
 </li>
 <li>go backward skipping blank braille windows:<ul>
 <li>Dot5+Left</li>
-<li>Center+Left</li>
+<li>Select+Left</li>
 </ul>
 </li>
 <li>go forward skipping blank braille windows:<ul>
 <li>Dot5+Right</li>
-<li>Center+Right</li>
+<li>Select+Right</li>
 </ul>
 </li>
 <li>go backward to nearest non-blank braille window: BL+Left</li>
@@ -686,7 +682,6 @@ From top to bottom:<ul>
 </ul>
 </li>
 <li>insert clipboard text after screen cursor:<ul>
-<li>Dot2+Down</li>
 <li>Left+Right</li>
 <li>Display1+Display2+Display3+Display4</li>
 <li>Space+Dots1346</li>
@@ -694,14 +689,14 @@ From top to bottom:<ul>
 </li>
 <li>search backward for clipboard text:<ul>
 <li>S4+Left</li>
+<li>Dots56+Up</li>
 <li>Display2+Display4+Display6+Display1</li>
-<li>Dots456+Left</li>
 </ul>
 </li>
 <li>search forward for clipboard text:<ul>
 <li>S4+Right</li>
+<li>Dots56+Down</li>
 <li>Display2+Display4+Display6+Display3</li>
-<li>Dots456+Right</li>
 </ul>
 </li>
 <li>save clipboard to disk: Space+Dots13468</li>
@@ -714,48 +709,30 @@ From top to bottom:<ul>
 <li>set autorepeat on/off: Space+Dots1235</li>
 <li>set autorepeat on: Space+Dots12358</li>
 <li>set autorepeat off: Space+Dots12357</li>
-<li>set text style 6-dot/8-dot:<ul>
-<li>Center+S4</li>
-<li>Dots45+Center</li>
+<li>set text style 6-dot/8-dot: Select+S4</li>
+<li>set text style 6-dot: Display2+Display3+Display5</li>
+<li>set text style 8-dot: Display2+Display3+Display6</li>
+<li>set contracted/computer braille:<ul>
+<li>Dots45+Right</li>
+<li>Space+Dots1245</li>
 </ul>
 </li>
-<li>set text style 6-dot:<ul>
-<li>Display2+Display3+Display5</li>
-<li>Space+Dots235</li>
-</ul>
-</li>
-<li>set text style 8-dot:<ul>
-<li>Display2+Display3+Display6</li>
-<li>Space+Dots236</li>
-</ul>
-</li>
-<li>set contracted/computer braille: Space+Dots1245</li>
 <li>set contracted braille: Space+Dots12458</li>
 <li>set computer braille: Space+Dots12457</li>
-<li>set skipping of lines with identical content on/off:<ul>
-<li>Space+Dots24</li>
-<li>Dots56+Left</li>
-</ul>
-</li>
+<li>set six/eight dot computer braille: Dots45+Left</li>
+<li>set six dot computer braille: Space+Dots235</li>
+<li>set eight dot computer braille: Space+Dots236</li>
+<li>set skipping of lines with identical content on/off: Space+Dots24</li>
 <li>set skipping of lines with identical content on: Space+Dots248</li>
 <li>set skipping of lines with identical content off: Space+Dots247</li>
-<li>set skipping of blank braille windows on/off:<ul>
-<li>Space+Dots12</li>
-<li>Dots56+Right</li>
-</ul>
-</li>
+<li>set skipping of blank braille windows on/off: Space+Dots12</li>
 <li>set skipping of blank braille windows on: Space+Dots128</li>
 <li>set skipping of blank braille windows off: Space+Dots127</li>
-<li>set sliding braille window on/off:<ul>
-<li>Dots56+Down</li>
-<li>Space+Dots2456</li>
-</ul>
-</li>
+<li>set sliding braille window on/off: Space+Dots2456</li>
 <li>set sliding braille window on: Space+Dots24568</li>
 <li>set sliding braille window off: Space+Dots24567</li>
 <li>set track screen cursor on/off:<ul>
-<li>Center+S3</li>
-<li>Dots56+Center</li>
+<li>Select+S3</li>
 <li>Space+Dots2345</li>
 </ul>
 </li>
@@ -770,14 +747,14 @@ From top to bottom:<ul>
 </ul>
 </li>
 <li>set screen cursor visibility on/off:<ul>
-<li>Center+S2</li>
+<li>Select+S2</li>
 <li>Space+Dots14</li>
 </ul>
 </li>
 <li>set screen cursor visibility on: Space+Dots148</li>
 <li>set screen cursor visibility off: Space+Dots147</li>
 <li>set attribute underlining on/off:<ul>
-<li>Center+S1</li>
+<li>Select+S1</li>
 <li>Display2+Display3+Display4+Display5</li>
 <li>Space+Dots136</li>
 </ul>
@@ -792,14 +769,14 @@ From top to bottom:<ul>
 <li>restore preferences from disk:<ul>
 <li>BL+Up</li>
 <li>Display1+Display2+Display3+Display5</li>
-<li>Dots456+Up</li>
+<li>Dots456+Left</li>
 <li>Space+Dots12347</li>
 </ul>
 </li>
 <li>save preferences to disk:<ul>
 <li>BL+Down</li>
 <li>Display2+Display4+Display5+Display6</li>
-<li>Dots456+Down</li>
+<li>Dots456+Right</li>
 <li>Space+Dots12348</li>
 </ul>
 </li>
@@ -811,38 +788,64 @@ From top to bottom:<ul>
 <li>stop speaking:<ul>
 <li>Display3+Display4</li>
 <li>BL+Space</li>
+<li>Dots12+Left</li>
 </ul>
 </li>
 <li>speak current line:<ul>
 <li>Display3+Display5</li>
 <li>BL+Dot5</li>
+<li>Dots12+Right</li>
 </ul>
 </li>
-<li>speak from top of screen through bottom of screen: BL+Dot8</li>
+<li>speak from top of screen through bottom of screen:<ul>
+<li>BL+Dot8</li>
+<li>Dots13+Right</li>
+</ul>
+</li>
 <li>speak from top of screen through current line:<ul>
 <li>BL+Dot4</li>
 <li>Display3+Display5+Display4</li>
+<li>Dots12+Up</li>
 </ul>
 </li>
 <li>speak from current line through bottom of screen:<ul>
 <li>BL+Dot6</li>
 <li>Display3+Display5+Display6</li>
+<li>Dots12+Down</li>
 </ul>
 </li>
 <li>go to current speaking position:<ul>
 <li>BL+Dot3</li>
 <li>Display1+Display3+Display5</li>
+<li>Dots13+Down</li>
 </ul>
 </li>
-<li>decrease speaking volume: BL+Space+Dot1</li>
-<li>increase speaking volume: BL+Space+Dot4</li>
-<li>decrease speaking rate: BL+Space+Dot2</li>
-<li>increase speaking rate: BL+Space+Dot5</li>
+<li>decrease speaking volume:<ul>
+<li>BL+Space+Dot1</li>
+<li>Dots23+Down</li>
+</ul>
+</li>
+<li>increase speaking volume:<ul>
+<li>BL+Space+Dot4</li>
+<li>Dots23+Up</li>
+</ul>
+</li>
+<li>decrease speaking rate:<ul>
+<li>BL+Space+Dot2</li>
+<li>Dots23+Left</li>
+</ul>
+</li>
+<li>increase speaking rate:<ul>
+<li>BL+Space+Dot5</li>
+<li>Dots23+Right</li>
+</ul>
+</li>
 <li>decrease speaking pitch: BL+Space+Dot3</li>
 <li>increase speaking pitch: BL+Space+Dot6</li>
 <li>set autospeak on/off:<ul>
 <li>BL+Dot7</li>
 <li>Display3+Display4+Display6</li>
+<li>Dots13+Up</li>
 </ul>
 </li>
 </ul>
@@ -865,7 +868,11 @@ From top to bottom:<ul>
 <li>go to and speak next line: BL+Dots16</li>
 <li>go to and speak first non-blank line on screen: BL+Dots74</li>
 <li>go to and speak last non-blank line on screen: BL+Dots78</li>
-<li>speak indent of current line: BL+Dots18</li>
+<li>speak indent of current line:<ul>
+<li>BL+Dots18</li>
+<li>Dots13+Left</li>
+</ul>
+</li>
 <li>speak speech cursor location: BL+Dot1</li>
 </ul>
 </div>
@@ -890,11 +897,10 @@ From top to bottom:<ul>
 <li>backspace key:<ul>
 <li>BL</li>
 <li>Dot7</li>
-<li>Dot2+Left</li>
 </ul>
 </li>
 <li>escape key:<ul>
-<li>Dot3+Center</li>
+<li>Dot3+Up</li>
 <li>Space+Dots26</li>
 </ul>
 </li>
@@ -919,43 +925,39 @@ From top to bottom:<ul>
 </ul>
 </li>
 <li>page-up key:<ul>
-<li>Dot3+Up</li>
+<li>Dot2+Up</li>
 <li>Space+Dots23</li>
 </ul>
 </li>
 <li>page-down key:<ul>
-<li>Dot3+Down</li>
+<li>Dot2+Down</li>
 <li>Space+Dots56</li>
 </ul>
 </li>
 <li>home key:<ul>
 <li>Space+Dot2</li>
-<li>Dot3+Left</li>
+<li>Dot2+Left</li>
 </ul>
 </li>
 <li>end key:<ul>
 <li>Space+Dot5</li>
-<li>Dot3+Right</li>
+<li>Dot2+Right</li>
 </ul>
 </li>
 <li>insert key:<ul>
-<li>Dot2+Up</li>
+<li>Dot3+Right</li>
 <li>Space+Dots35</li>
 </ul>
 </li>
 <li>delete key:<ul>
-<li>Dot2+Right</li>
+<li>Dot3+Left</li>
 <li>Space+Dots256</li>
 </ul>
 </li>
 <li>function key: Space+RoutingKey</li>
-<li>enter key:<ul>
-<li>Dot8</li>
-<li>Dot2+Center</li>
-</ul>
-</li>
+<li>enter key: Dot8</li>
 <li>tab key:<ul>
-<li>Dot1+Center</li>
+<li>Dot3+Down</li>
 <li>Space+Dots45</li>
 </ul>
 </li>
@@ -968,13 +970,13 @@ From top to bottom:<ul>
 <li>cycle the GUI (Windows) sticky input modifier (next, on, off): Space+Dots18</li>
 <li>switch to specific virtual terminal: Display4+Display5+Display6+RoutingKey</li>
 <li>switch to the previous virtual terminal:<ul>
-<li>Dots45+Left</li>
+<li>Dots56+Left</li>
 <li>Display3+Display4+Display5+Display6</li>
 <li>Space+Dots12367</li>
 </ul>
 </li>
 <li>switch to the next virtual terminal:<ul>
-<li>Dots45+Right</li>
+<li>Dots56+Right</li>
 <li>Display1+Display2+Display3+Display6</li>
 <li>Space+Dots12368</li>
 </ul>
@@ -1001,7 +1003,7 @@ From top to bottom:<ul>
 <ul class="simple">
 <li>enter/leave preferences menu:<ul>
 <li>Dot8</li>
-<li>Center</li>
+<li>Select</li>
 </ul>
 </li>
 </ul>
@@ -1051,7 +1053,7 @@ From top to bottom:<ul>
 <li>Dot7</li>
 </ul>
 </li>
-<li>save preferences to disk: Space+Center</li>
+<li>save preferences to disk: Space+Select</li>
 </ul>
 </div>
 </div>

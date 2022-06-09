@@ -78,11 +78,11 @@ Configuration Functions
 * set autorepeat on: Thumb2+Dots12358
 * set autorepeat off: Thumb2+Dots12357
 * set text style 6-dot/8-dot: Left+Down
-* set text style 6-dot: Thumb2+Dots235
-* set text style 8-dot: Thumb2+Dots236
 * set contracted/computer braille: Thumb2+Dots1245
 * set contracted braille: Thumb2+Dots12458
 * set computer braille: Thumb2+Dots12457
+* set six dot computer braille: Thumb2+Dots235
+* set eight dot computer braille: Thumb2+Dots236
 * set skipping of lines with identical content on/off: Thumb2+Dots24
 * set skipping of lines with identical content on: Thumb2+Dots248
 * set skipping of lines with identical content off: Thumb2+Dots247

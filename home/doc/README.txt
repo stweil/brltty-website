@@ -2,9 +2,9 @@ BRLTTY is a background process (daemon) providing access to the Linux/Unix
 console (when in text mode) for a blind person using a refreshable braille
 display.
 
-Version 6.4, Sep 2021
+Version 6.5, Jun 2022
 
-Copyright (C) 1995-2021 by The BRLTTY Developers.
+Copyright (C) 1995-2022 by The BRLTTY Developers.
 
 Web Page: http://brltty.app/
 
@@ -154,7 +154,7 @@ The following braille displays are supported:
          Braille Controller 640/680, Easy Link 12]
 -  Baum [BrailleConnect 12/24/32/40/64/80, Brailliant 24/32/40/64/80, Conny 12,
          DM80 Plus, EcoVario 24/32/40/64/80, Inka, NLS eReader Zoomax,
-         Orbit 20, PocketVario 24, Pronto! V3 18/40, Pronto! V4 18/40,
+         Orbit Reader 20/40, PocketVario 24, Pronto! V3 18/40, Pronto! V4 18/40,
          RBT 40/80, Refreshabraille 18, SuperVario 32/40/64/80, Vario 40/80,
          VarioConnect 12/24/32/40/64/80, VarioPro 40/64/80, VarioUltra 20/32/40]
 -  BrailComm [III]
@@ -178,7 +178,8 @@ The following braille displays are supported:
               Braille Wave, Easy Braille, Braille Star 40/80,
               Connect Braille 40, Bookworm]
 -  Hedo [ProfiLine, MobilLine]
--  HIMS [Braille Sense, SyncBraille, Braille Edge, Smart Beetle]
+-  HIMS [Braille Sense, SyncBraille, Braille Edge,
+         Smart Beetle, QBrailleXL]
 -  HumanWare [Brailliant BI 14/32/40, Brailliant BI 20X/40X,
               Brailliant B 80, BrailleNote Touch, BrailleOne,
               APH Chameleon 20, APH Mantis Q40, NLS eReader]

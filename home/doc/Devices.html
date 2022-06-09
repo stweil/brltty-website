@@ -367,9 +367,11 @@ ul.auto-toc {
 <p class="topic-title">Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#description" id="id2">Description</a><ul>
-<li><a class="reference internal" href="#serial-device-parameters" id="id3">Serial Device Parameters</a></li>
-<li><a class="reference internal" href="#usb-device-parameters" id="id4">USB Device Parameters</a></li>
-<li><a class="reference internal" href="#bluetooth-device-parameters" id="id5">Bluetooth Device Parameters</a></li>
+<li><a class="reference internal" href="#serial-device-identifiers" id="id3">Serial Device Identifiers</a></li>
+<li><a class="reference internal" href="#usb-device-identifiers" id="id4">USB Device Identifiers</a></li>
+<li><a class="reference internal" href="#bluetooth-device-identifiers" id="id5">Bluetooth Device Identifiers</a></li>
+<li><a class="reference internal" href="#hid-device-identifiers" id="id6">HID Device Identifiers</a></li>
+<li><a class="reference internal" href="#null-device-identifiers" id="id7">Null Device Identifiers</a></li>
 </ul>
 </li>
 </ul>
@@ -384,23 +386,9 @@ qualifier:parameter=value+...
 <pre class="literal-block">
 [qualifier:][parameter=]value[+parameter=value]...
 </pre>
-<p>The qualifier specifies which class of device is being identified. It is
-separated from the rest of the device identifier by a colon (<tt class="docutils literal">:</tt>). It may be
-<tt class="docutils literal">serial</tt>, <tt class="docutils literal">usb</tt>, or <tt class="docutils literal">bluetooth</tt>. The qualifier is case insensitive, and
-any abbreviation may be used. For backward compatibility (to when a device
-identifier was strictly interpreted as the full path to a serial device), the
-qualifier (along with its colon delimiter) is optional, and, if it isn't
-supplied, <tt class="docutils literal">serial</tt> is assumed.</p>
-<p>One or more parameters may be supplied after the qualifier. Each parameter is
-specified as its name and its value, in that order, separated by an equals
-(<tt class="docutils literal">=</tt>) sign. Parameters are separated from one another by a plus (<tt class="docutils literal">+</tt>) sign.
-Parameter names are case insensitive, and any abbreviation may be used.
-Supplying a zero-length value means to use the parameter's default value.</p>
-<p>For backward compatibility (to when device identifier parameters weren't
-supported), the first supplied parameter is special in that its name (along
-with its equals sign delimiter) is optional. If the name of the first parameter
-isn't supplied then the class-dependent parameter that most specifically
-identifies the device is assumed. These are as follows:</p>
+<p>The qualifier specifies which class of device is being identified.
+It is separated from the rest of the device identifier by a colon (<tt class="docutils literal">:</tt>).
+It may be one of:</p>
 <blockquote>
 <table border="1" class="docutils">
 <colgroup>
@@ -420,38 +408,65 @@ identifies the device is assumed. These are as follows:</p>
 <tr><td>bluetooth:</td>
 <td>address=</td>
 </tr>
+<tr><td>hid:</td>
+<td>address=</td>
+</tr>
+<tr><td>null:</td>
+<td>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </blockquote>
-<p>It isn't possible to supply no parameters at all. Specifying only the qualifier
-is equivalent to also specifying a zero-length value for the assumed first
-parameter for that class. For example, specifying <tt class="docutils literal">usb:</tt> is equivalent to
-specifying <tt class="docutils literal">usb:serialNumber=</tt>.</p>
-<p>An example to illustrate the optionality of both the qualifier and the name of
-the first supplied parameter: On Linux, the full path to the first serial
-device is <tt class="docutils literal">/dev/ttyS0</tt>. The following device identifiers, therefore, all
-refer to the same serial device:</p>
+<p>The qualifier is case insensitive, and any abbreviation may be used.
+For backward compatibility (to when a device identifier was
+strictly interpreted as the absolute path to a serial device),
+the qualifier (along with its colon delimiter) is optional,
+and, if it isn't supplied, <tt class="docutils literal">serial</tt> is assumed.</p>
+<p>One or more parameters may be supplied after the qualifier.
+Each parameter is specified as its name and its value,
+in that order, separated by an equals (<tt class="docutils literal">=</tt>) sign.
+Parameters are separated from one another by a plus (<tt class="docutils literal">+</tt>) sign.
+Parameter names are case insensitive, and any abbreviation may be used.
+Supplying a zero-length value means to use the parameter's default value.</p>
+<p>For backward compatibility
+(to when device identifier parameters weren't supported),
+the first supplied parameter is special
+in that its name (along with its equals sign delimiter) is optional.
+If the name of the first parameter isn't supplied then the
+class-dependent parameter that most specifically identifies the device is assumed.
+See the table above for which parameter is assumed for each class.</p>
+<p>It isn't possible to supply no parameters at all.
+Specifying only the qualifier is equivalent to also specifying
+a zero-length value for the assumed first parameter for that class.
+For example, specifying <tt class="docutils literal">usb:</tt> is equivalent to specifying <tt class="docutils literal">usb:serialNumber=</tt>.</p>
+<p>An example to illustrate the optionality of both the qualifier
+and the name of the first supplied parameter:</p>
+<ul>
+<li><p class="first">On Linux, the name of the first serial device is <tt class="docutils literal">ttyS0</tt>.
+All of the following device identifiers refer to the same serial device:</p>
 <pre class="literal-block">
 serial:name=ttyS0
 serial:ttyS0
 ttyS0
 name=ttyS0
 </pre>
-<div class="section" id="serial-device-parameters">
-<h3><a class="toc-backref" href="#id3">Serial Device Parameters</a></h3>
+</li>
+</ul>
+<div class="section" id="serial-device-identifiers">
+<h3><a class="toc-backref" href="#id3">Serial Device Identifiers</a></h3>
 <p>Serial device identifiers support the following parameters:</p>
 <blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="22%" />
-<col width="78%" />
+<col width="21%" />
+<col width="79%" />
 </colgroup>
 <tbody valign="top">
 <tr><td>Name</td>
 <td>Value</td>
 </tr>
 <tr><td><tt class="docutils literal">name</tt></td>
-<td>name of, relative path to, or full path to the device</td>
+<td>name of, relative path to, or absolute path to the device</td>
 </tr>
 <tr><td><tt class="docutils literal">baud</tt></td>
 <td>the data transmission/reception rate (bits per second)</td>
@@ -471,30 +486,31 @@ name=ttyS0
 </tbody>
 </table>
 </blockquote>
-<p>All of the parameters are optional, although the <tt class="docutils literal">name=</tt> parameter should be
-supplied. It shouldn't normally be necessary to supply any of the others,
-especially since, in most cases, the braille driver actually overrides them.</p>
+<p>All of the parameters are optional,
+although the <tt class="docutils literal">name=</tt> parameter should be supplied.
+It shouldn't normally be necessary to supply any of the others,
+especially since, in most cases, the braille driver overrides them.</p>
 <dl class="docutils">
 <dt><tt class="docutils literal">name=</tt></dt>
 <dd>Specify the host device to use. It must be the name of the device, the
-relative path to the device, or the full path to the device. If it's either
+relative path to the device, or the absolute path to the device. If it's either
 a name or a relative path then the host's device directory (usually <tt class="docutils literal">/dev</tt>
 on Unix-based platforms) is used. If this parameter isn't supplied then the
-first real serial device is assumed.</dd>
+primary (first) serial device is assumed.</dd>
 <dt><tt class="docutils literal">baud=</tt></dt>
 <dd>Specify the speed, in bits per second, at which to communicate with the
-device. It must be an integer. Typical values are: <tt class="docutils literal">9600</tt>, <tt class="docutils literal">19200</tt>,
+device. It must be a positive integer. Typical values are: <tt class="docutils literal">9600</tt>, <tt class="docutils literal">19200</tt>,
 <tt class="docutils literal">38400</tt>, <tt class="docutils literal">57600</tt>, <tt class="docutils literal">115200</tt>. If this parameter isn't supplied then
 <tt class="docutils literal">9600</tt> is assumed.</dd>
 <dt><tt class="docutils literal">dataBits=</tt></dt>
 <dd>Specify the number of bits to use to represent a character, not including
-any metadata (start bit, stop bit(s), parity, etc). It must be an integer,
+any metadata (start bit, stop bit(s), parity, etc). It must be a positive integer,
 and is usually within the range <tt class="docutils literal">5</tt>-<tt class="docutils literal">8</tt>. If this parameter isn't
 supplied then <tt class="docutils literal">8</tt> is assumed.</dd>
 <dt><tt class="docutils literal">stopBits=</tt></dt>
 <dd>Specify the number of stop bits to inject after a character has been
 transmitted and to expect after a character has been received. It must be
-an integer, and is usually either <tt class="docutils literal">1</tt> (for higher speeds) or <tt class="docutils literal">2</tt> (for
+a positive integer, and is usually either <tt class="docutils literal">1</tt> (for higher speeds) or <tt class="docutils literal">2</tt> (for
 lower speeds). If this parameter isn't supplied then <tt class="docutils literal">1</tt> is assumed.</dd>
 <dt><tt class="docutils literal">parity=</tt></dt>
 <dd>Specify the type of error detection to use. It must be one of: <tt class="docutils literal">none</tt>,
@@ -505,8 +521,8 @@ then <tt class="docutils literal">none</tt> is assumed.</dd>
 <tt class="docutils literal">hardware</tt>. If this parameter isn't supplied then <tt class="docutils literal">none</tt> is assumed.</dd>
 </dl>
 </div>
-<div class="section" id="usb-device-parameters">
-<h3><a class="toc-backref" href="#id4">USB Device Parameters</a></h3>
+<div class="section" id="usb-device-identifiers">
+<h3><a class="toc-backref" href="#id4">USB Device Identifiers</a></h3>
 <p>USB device identifiers support the following parameters:</p>
 <blockquote>
 <table border="1" class="docutils">
@@ -519,7 +535,7 @@ then <tt class="docutils literal">none</tt> is assumed.</dd>
 <td>Value</td>
 </tr>
 <tr><td><tt class="docutils literal">serialNumber=</tt></td>
-<td>an arbitrary sequence of characters (except <tt class="docutils literal">=</tt>)</td>
+<td>one or more arbitrary characters</td>
 </tr>
 <tr><td><tt class="docutils literal">vendorIdentifier=</tt></td>
 <td>an integer within the range 1-65535 (0X0001-0XFFFF)</td>
@@ -557,8 +573,8 @@ case insensitive, and any abbreviation may be used. If this parameter isn't
 supplied then <tt class="docutils literal">yes</tt> is assumed.</dd>
 </dl>
 </div>
-<div class="section" id="bluetooth-device-parameters">
-<h3><a class="toc-backref" href="#id5">Bluetooth Device Parameters</a></h3>
+<div class="section" id="bluetooth-device-identifiers">
+<h3><a class="toc-backref" href="#id5">Bluetooth Device Identifiers</a></h3>
 <p>Bluetooth device identifiers support the following parameters:</p>
 <blockquote>
 <table border="1" class="docutils">
@@ -600,11 +616,11 @@ It shouldn't normally be necessary to supply any of the others.</p>
 </ul>
 <dl class="docutils">
 <dt><tt class="docutils literal">address=</tt></dt>
-<dd>Specify the Bluetooth address of the device. It must be six two-digit
+<dd>Specify the MAC address of the device. It must be six two-digit
 hexadecimal numbers (the &quot;letter&quot; digits may be in either case) separated
 from one another by either a colon (<tt class="docutils literal">:</tt>) or a minus (<tt class="docutils literal">-</tt>) sign.</dd>
 <dt><tt class="docutils literal">name=</tt></dt>
-<dd>Specify the Bluetooth name of the device. It must be one or more
+<dd>Specify the name of the device. It must be one or more
 arbitrary characters. They need only match the beginning (so not
 necessarily all) of the name. Case is significant.
 Only the names of paired devices are considered.
@@ -624,7 +640,7 @@ according to the following sequence of tests:</p>
 <li>If the <tt class="docutils literal">channel=</tt> parameter has been supplied, then <strong>no</strong>.</li>
 <li>If the driver has requested service discovery, then <strong>yes</strong>.</li>
 <li>If the driver has specified a default channel number, then <strong>no</strong>.</li>
-<li>Otherwise, <strong>yes</strong>.</li>
+<li>Otherwise, <strong>no</strong>.</li>
 </ol>
 </dd>
 <dt><tt class="docutils literal">timeout=</tt></dt>
@@ -632,6 +648,89 @@ according to the following sequence of tests:</p>
 acquired. It must be an integer within the range <tt class="docutils literal">1</tt>-<tt class="docutils literal">59</tt>. If this
 parameter isn't supplied then a reasonable default is assumed.</dd>
 </dl>
+</div>
+<div class="section" id="hid-device-identifiers">
+<h3><a class="toc-backref" href="#id6">HID Device Identifiers</a></h3>
+<p>HID device identifiers support the following parameters:</p>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Name</td>
+<td>Value</td>
+</tr>
+<tr><td><tt class="docutils literal">address=</tt></td>
+<td>Bluetooth MAC address</td>
+</tr>
+<tr><td><tt class="docutils literal">name=</tt></td>
+<td>Bluetooth device name</td>
+</tr>
+<tr><td><tt class="docutils literal">manufacturer=</tt></td>
+<td>USB device manufacturer</td>
+</tr>
+<tr><td><tt class="docutils literal">description=</tt></td>
+<td>USB product description</td>
+</tr>
+<tr><td><tt class="docutils literal">serialNumber=</tt></td>
+<td>USB serial number</td>
+</tr>
+<tr><td><tt class="docutils literal">vendor=</tt></td>
+<td>four hexadecimal digits</td>
+</tr>
+<tr><td><tt class="docutils literal">product=</tt></td>
+<td>four hexadecimal digits</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>All of the parameters are optional, although, in most cases,
+either the <tt class="docutils literal">serialNumber=</tt> parameter (for a USB device)
+or the <tt class="docutils literal">address=</tt> parameter (for a Bluetooth device)
+should be supplied.
+USB-specific and Bluetooth-specific parameters may not be combined.</p>
+<dl class="docutils">
+<dt><tt class="docutils literal">address=</tt></dt>
+<dd>The MAC address of a Bluetooth device.
+It must be six two-digit hexadecimal numbers
+separated from one another by a colon (<tt class="docutils literal">:</tt>).
+The letter digits may be in either case.</dd>
+<dt><tt class="docutils literal">name=</tt></dt>
+<dd>The name of a Bluetooth device.
+Only the start of the name is matched.
+Matching is case insensitive.</dd>
+<dt><tt class="docutils literal">manufacturer=</tt></dt>
+<dd>The name of the manufacturer of a USB device.
+Only the start of the name is matched.
+Matching is case insensitive.</dd>
+<dt><tt class="docutils literal">description=</tt></dt>
+<dd>The product description of a USB device.
+Only the start of the description is matched.
+Matching is case insensitive.</dd>
+<dt><tt class="docutils literal">serialNumber=</tt></dt>
+<dd>The serial number of a USB device.
+Only the start of the serial number is matched.
+Matching is case insensitive.</dd>
+<dt><tt class="docutils literal">vendor=</tt></dt>
+<dd>The vendor identifier of the device.
+It must be four hexadecimal digits.
+The letter digits may be in either case.</dd>
+<dt><tt class="docutils literal">product=</tt></dt>
+<dd>The product identifier of the device.
+It must be four hexadecimal digits.
+The letter digits may be in either case.</dd>
+</dl>
+</div>
+<div class="section" id="null-device-identifiers">
+<h3><a class="toc-backref" href="#id7">Null Device Identifiers</a></h3>
+<p>A <tt class="docutils literal">null</tt> endpoint has the following properties:</p>
+<ul class="simple">
+<li>It always indicates that input is available.</li>
+<li>Reading from it always yields end-of-file.</li>
+<li>Writing to it is always successful but does nothing.</li>
+</ul>
 </div>
 </div>
 </div>

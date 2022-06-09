@@ -393,8 +393,8 @@ ul.auto-toc {
 <h2><a class="toc-backref" href="#id4">Notes</a></h2>
 <ul class="simple">
 <li>There are four rectangular thumb keys on the front. From left to right:
-The outer (shorter) ones are named ThumbUp and ThumbDown.
-The inner (longer) ones are named ThumbLeft and ThumbRight.
+The outer ones are named ThumbPrevious and ThumbNext.
+The inner ones are named ThumbLeft and ThumbRight.
 Some models have a round key in the middle - it's the internal menu key.</li>
 <li>There's an eight-key braille keyboard near the back of the top.
 From left to right, its keys are: Dot7, Dot3, Dot2, Dot1, Dot4, Dot5, Dot6, Dot8.</li>
@@ -431,10 +431,10 @@ From left to right, its keys are: Dot7, Dot3, Dot2, Dot1, Dot4, Dot5, Dot6, Dot8
 <ul class="simple">
 <li>go up one line: ThumbPrevious</li>
 <li>go down one line: ThumbNext</li>
-<li>go to beginning of top line: ThumbPrevious+ThumbLeft</li>
-<li>go to beginning of bottom line: ThumbPrevious+ThumbRight</li>
-<li>go up to nearest line with different content: ThumbNext+ThumbLeft</li>
-<li>go down to nearest line with different content: ThumbNext+ThumbRight</li>
+<li>go to beginning of top line: ThumbLeft+ThumbPrevious</li>
+<li>go to beginning of bottom line: ThumbLeft+ThumbNext</li>
+<li>go up to nearest line with different content: ThumbRight+ThumbPrevious</li>
+<li>go down to nearest line with different content: ThumbRight+ThumbNext</li>
 </ul>
 </div>
 <div class="section" id="horizontal-navigation">
@@ -449,8 +449,8 @@ From left to right, its keys are: Dot7, Dot3, Dot2, Dot1, Dot4, Dot5, Dot6, Dot8
 <ul class="simple">
 <li>start new clipboard at character: ThumbPrevious+RoutingKey</li>
 <li>append to clipboard from character: ThumbLeft+RoutingKey</li>
-<li>linear copy to character: ThumbNext+RoutingKey</li>
-<li>rectangular copy to character: ThumbRight+RoutingKey</li>
+<li>linear copy to character: ThumbRight+RoutingKey</li>
+<li>rectangular copy to character: ThumbNext+RoutingKey</li>
 <li>insert clipboard text after screen cursor:<ul>
 <li>ThumbPrevious+ThumbNext</li>
 <li>Space+Dots1346</li>
@@ -466,11 +466,11 @@ From left to right, its keys are: Dot7, Dot3, Dot2, Dot1, Dot4, Dot5, Dot6, Dot8
 <li>set autorepeat on/off: Space+Dots1235</li>
 <li>set autorepeat on: Space+Dots12358</li>
 <li>set autorepeat off: Space+Dots12357</li>
-<li>set text style 6-dot: Space+Dots235</li>
-<li>set text style 8-dot: Space+Dots236</li>
 <li>set contracted/computer braille: Space+Dots1245</li>
 <li>set contracted braille: Space+Dots12458</li>
 <li>set computer braille: Space+Dots12457</li>
+<li>set six dot computer braille: Space+Dots235</li>
+<li>set eight dot computer braille: Space+Dots236</li>
 <li>set skipping of lines with identical content on/off: Space+Dots24</li>
 <li>set skipping of lines with identical content on: Space+Dots248</li>
 <li>set skipping of lines with identical content off: Space+Dots247</li>
@@ -582,22 +582,22 @@ From left to right, its keys are: Dot7, Dot3, Dot2, Dot1, Dot4, Dot5, Dot6, Dot8
 </li>
 <li>go up to first item:<ul>
 <li>Dot2</li>
-<li>ThumbPrevious+ThumbLeft</li>
+<li>ThumbLeft+ThumbPrevious</li>
 </ul>
 </li>
 <li>go down to last item:<ul>
 <li>Dot5</li>
-<li>ThumbPrevious+ThumbRight</li>
+<li>ThumbLeft+ThumbNext</li>
 </ul>
 </li>
 <li>select previous choice:<ul>
 <li>Dot3</li>
-<li>ThumbNext+ThumbLeft</li>
+<li>ThumbRight+ThumbPrevious</li>
 </ul>
 </li>
 <li>select next choice:<ul>
 <li>Dot6</li>
-<li>ThumbNext+ThumbRight</li>
+<li>ThumbRight+ThumbNext</li>
 </ul>
 </li>
 <li>go to previous menu level: Dot7</li>

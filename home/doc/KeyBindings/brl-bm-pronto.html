@@ -379,14 +379,15 @@ ul.auto-toc {
 <li><a class="reference internal" href="#configuration-functions" id="id11">Configuration Functions</a></li>
 <li><a class="reference internal" href="#menu-operations" id="id12">Menu Operations</a></li>
 <li><a class="reference internal" href="#speech-functions" id="id13">Speech Functions</a></li>
-<li><a class="reference internal" href="#keyboard-input" id="id14">Keyboard Input</a></li>
-<li><a class="reference internal" href="#special-functions" id="id15">Special Functions</a></li>
+<li><a class="reference internal" href="#speech-navigation" id="id14">Speech Navigation</a></li>
+<li><a class="reference internal" href="#keyboard-input" id="id15">Keyboard Input</a></li>
+<li><a class="reference internal" href="#special-functions" id="id16">Special Functions</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#menu-bindings" id="id16">Menu Bindings</a><ul>
-<li><a class="reference internal" href="#id1" id="id17">Special Modes</a></li>
-<li><a class="reference internal" href="#id2" id="id18">Horizontal Navigation</a></li>
-<li><a class="reference internal" href="#id3" id="id19">Menu Operations</a></li>
+<li><a class="reference internal" href="#menu-bindings" id="id17">Menu Bindings</a><ul>
+<li><a class="reference internal" href="#id1" id="id18">Special Modes</a></li>
+<li><a class="reference internal" href="#id2" id="id19">Horizontal Navigation</a></li>
+<li><a class="reference internal" href="#id3" id="id20">Menu Operations</a></li>
 </ul>
 </li>
 </ul>
@@ -411,26 +412,23 @@ From top to bottom:<ul>
 <h3><a class="toc-backref" href="#id6">Special Modes</a></h3>
 <ul class="simple">
 <li>enter/leave help display:<ul>
-<li>Dot4+Press</li>
 <li>Display1+Display2+Display5</li>
 <li>B10+Dots125</li>
 </ul>
 </li>
 <li>enter/leave command learn mode:<ul>
-<li>Dot6+Press</li>
 <li>Display1+Display4+Display5+Display6</li>
 <li>B10+Dots123</li>
 </ul>
 </li>
 <li>enter/leave preferences menu:<ul>
 <li>Display1+Display3+Display4</li>
-<li>Dots456+Press</li>
+<li>Dots456+Up</li>
 <li>B10+Dots1234</li>
 </ul>
 </li>
 <li>enter/leave status display:<ul>
 <li>Display2+Display5</li>
-<li>Dot5+Press</li>
 <li>B10+Dots234</li>
 </ul>
 </li>
@@ -457,7 +455,7 @@ From top to bottom:<ul>
 </li>
 <li>show current date and time:<ul>
 <li>Display1+Display5</li>
-<li>Dots56+Up</li>
+<li>Dots456+Down</li>
 </ul>
 </li>
 </ul>
@@ -470,7 +468,6 @@ From top to bottom:<ul>
 <li>go to screen cursor or go back after cursor tracking: Press</li>
 <li>bring screen cursor to character: RoutingKey</li>
 <li>bring screen cursor to current line:<ul>
-<li>Dots46+Press</li>
 <li>Display1+Display3+Display4+Display6</li>
 <li>B10+Dots1236</li>
 </ul>
@@ -620,19 +617,18 @@ From top to bottom:<ul>
 </ul>
 </li>
 <li>insert clipboard text after screen cursor:<ul>
-<li>Dot2+Down</li>
 <li>Display1+Display2+Display3+Display4</li>
 <li>B10+Dots1346</li>
 </ul>
 </li>
 <li>search backward for clipboard text:<ul>
+<li>Dots56+Up</li>
 <li>Display2+Display4+Display6+Display1</li>
-<li>Dots456+Left</li>
 </ul>
 </li>
 <li>search forward for clipboard text:<ul>
+<li>Dots56+Down</li>
 <li>Display2+Display4+Display6+Display3</li>
-<li>Dots456+Right</li>
 </ul>
 </li>
 <li>save clipboard to disk: B10+Dots13468</li>
@@ -645,46 +641,28 @@ From top to bottom:<ul>
 <li>set autorepeat on/off: B10+Dots1235</li>
 <li>set autorepeat on: B10+Dots12358</li>
 <li>set autorepeat off: B10+Dots12357</li>
-<li>set text style 6-dot/8-dot: Dots45+Press</li>
-<li>set text style 6-dot:<ul>
-<li>Display2+Display3+Display5</li>
-<li>B10+Dots235</li>
+<li>set text style 6-dot: Display2+Display3+Display5</li>
+<li>set text style 8-dot: Display2+Display3+Display6</li>
+<li>set contracted/computer braille:<ul>
+<li>Dots45+Right</li>
+<li>B10+Dots1245</li>
 </ul>
 </li>
-<li>set text style 8-dot:<ul>
-<li>Display2+Display3+Display6</li>
-<li>B10+Dots236</li>
-</ul>
-</li>
-<li>set contracted/computer braille: B10+Dots1245</li>
 <li>set contracted braille: B10+Dots12458</li>
 <li>set computer braille: B10+Dots12457</li>
-<li>set skipping of lines with identical content on/off:<ul>
-<li>B10+Dots24</li>
-<li>Dots56+Left</li>
-</ul>
-</li>
+<li>set six/eight dot computer braille: Dots45+Left</li>
+<li>set six dot computer braille: B10+Dots235</li>
+<li>set eight dot computer braille: B10+Dots236</li>
+<li>set skipping of lines with identical content on/off: B10+Dots24</li>
 <li>set skipping of lines with identical content on: B10+Dots248</li>
 <li>set skipping of lines with identical content off: B10+Dots247</li>
-<li>set skipping of blank braille windows on/off:<ul>
-<li>B10+Dots12</li>
-<li>Dots56+Right</li>
-</ul>
-</li>
+<li>set skipping of blank braille windows on/off: B10+Dots12</li>
 <li>set skipping of blank braille windows on: B10+Dots128</li>
 <li>set skipping of blank braille windows off: B10+Dots127</li>
-<li>set sliding braille window on/off:<ul>
-<li>Dots56+Down</li>
-<li>B10+Dots2456</li>
-</ul>
-</li>
+<li>set sliding braille window on/off: B10+Dots2456</li>
 <li>set sliding braille window on: B10+Dots24568</li>
 <li>set sliding braille window off: B10+Dots24567</li>
-<li>set track screen cursor on/off:<ul>
-<li>Dots56+Press</li>
-<li>B10+Dots2345</li>
-</ul>
-</li>
+<li>set track screen cursor on/off: B10+Dots2345</li>
 <li>set track screen cursor on:<ul>
 <li>Display1</li>
 <li>B10+Dots23458</li>
@@ -712,13 +690,13 @@ From top to bottom:<ul>
 <ul class="simple">
 <li>restore preferences from disk:<ul>
 <li>Display1+Display2+Display3+Display5</li>
-<li>Dots456+Up</li>
+<li>Dots456+Left</li>
 <li>B10+Dots12347</li>
 </ul>
 </li>
 <li>save preferences to disk:<ul>
 <li>Display2+Display4+Display5+Display6</li>
-<li>Dots456+Down</li>
+<li>Dots456+Right</li>
 <li>B10+Dots12348</li>
 </ul>
 </li>
@@ -729,42 +707,49 @@ From top to bottom:<ul>
 <ul class="simple">
 <li>stop speaking:<ul>
 <li>Display3+Display4</li>
-<li>B10+Left</li>
+<li>Dots12+Left</li>
 </ul>
 </li>
 <li>speak current line:<ul>
 <li>Display3+Display5</li>
-<li>B10+Right</li>
+<li>Dots12+Right</li>
 </ul>
 </li>
+<li>speak from top of screen through bottom of screen: Dots13+Right</li>
 <li>speak from top of screen through current line:<ul>
-<li>B10+Up</li>
 <li>Display3+Display5+Display4</li>
+<li>Dots12+Up</li>
 </ul>
 </li>
 <li>speak from current line through bottom of screen:<ul>
-<li>B10+Down</li>
 <li>Display3+Display5+Display6</li>
+<li>Dots12+Down</li>
 </ul>
 </li>
 <li>go to current speaking position:<ul>
-<li>B10+Press</li>
 <li>Display1+Display3+Display5</li>
+<li>Dots13+Down</li>
 </ul>
 </li>
-<li>decrease speaking volume: B9+Down</li>
-<li>increase speaking volume: B9+Up</li>
-<li>decrease speaking rate: B9+Left</li>
-<li>increase speaking rate: B9+Right</li>
+<li>decrease speaking volume: Dots23+Down</li>
+<li>increase speaking volume: Dots23+Up</li>
+<li>decrease speaking rate: Dots23+Left</li>
+<li>increase speaking rate: Dots23+Right</li>
 <li>set autospeak on/off:<ul>
-<li>B9+Press</li>
 <li>Display3+Display4+Display6</li>
+<li>Dots13+Up</li>
 </ul>
 </li>
 </ul>
 </div>
+<div class="section" id="speech-navigation">
+<h3><a class="toc-backref" href="#id14">Speech Navigation</a></h3>
+<ul class="simple">
+<li>speak indent of current line: Dots13+Left</li>
+</ul>
+</div>
 <div class="section" id="keyboard-input">
-<h3><a class="toc-backref" href="#id14">Keyboard Input</a></h3>
+<h3><a class="toc-backref" href="#id15">Keyboard Input</a></h3>
 <ul class="simple">
 <li>braille keyboard space: B9</li>
 <li>braille keyboard space: B10</li>
@@ -778,13 +763,9 @@ From top to bottom:<ul>
 <li>braille keyboard dot8: Dot8</li>
 <li>type braille dots [7]: B10+Dot7</li>
 <li>type braille dots [8]: B10+Dot8</li>
-<li>backspace key:<ul>
-<li>Dot7</li>
-<li>Dot2+Left</li>
-</ul>
-</li>
+<li>backspace key: Dot7</li>
 <li>escape key:<ul>
-<li>Dot3+Press</li>
+<li>Dot3+Up</li>
 <li>B10+Dots26</li>
 </ul>
 </li>
@@ -809,43 +790,39 @@ From top to bottom:<ul>
 </ul>
 </li>
 <li>page-up key:<ul>
-<li>Dot3+Up</li>
+<li>Dot2+Up</li>
 <li>B10+Dots23</li>
 </ul>
 </li>
 <li>page-down key:<ul>
-<li>Dot3+Down</li>
+<li>Dot2+Down</li>
 <li>B10+Dots56</li>
 </ul>
 </li>
 <li>home key:<ul>
 <li>B10+Dot2</li>
-<li>Dot3+Left</li>
+<li>Dot2+Left</li>
 </ul>
 </li>
 <li>end key:<ul>
 <li>B10+Dot5</li>
-<li>Dot3+Right</li>
+<li>Dot2+Right</li>
 </ul>
 </li>
 <li>insert key:<ul>
-<li>Dot2+Up</li>
+<li>Dot3+Right</li>
 <li>B10+Dots35</li>
 </ul>
 </li>
 <li>delete key:<ul>
-<li>Dot2+Right</li>
+<li>Dot3+Left</li>
 <li>B10+Dots256</li>
 </ul>
 </li>
 <li>function key: B10+RoutingKey</li>
-<li>enter key:<ul>
-<li>Dot8</li>
-<li>Dot2+Press</li>
-</ul>
-</li>
+<li>enter key: Dot8</li>
 <li>tab key:<ul>
-<li>Dot1+Press</li>
+<li>Dot3+Down</li>
 <li>B10+Dots45</li>
 </ul>
 </li>
@@ -858,13 +835,13 @@ From top to bottom:<ul>
 <li>cycle the GUI (Windows) sticky input modifier (next, on, off): B10+Dots18</li>
 <li>switch to specific virtual terminal: Display4+Display5+Display6+RoutingKey</li>
 <li>switch to the previous virtual terminal:<ul>
-<li>Dots45+Left</li>
+<li>Dots56+Left</li>
 <li>Display3+Display4+Display5+Display6</li>
 <li>B10+Dots12367</li>
 </ul>
 </li>
 <li>switch to the next virtual terminal:<ul>
-<li>Dots45+Right</li>
+<li>Dots56+Right</li>
 <li>Display1+Display2+Display3+Display6</li>
 <li>B10+Dots12368</li>
 </ul>
@@ -876,7 +853,7 @@ From top to bottom:<ul>
 </ul>
 </div>
 <div class="section" id="special-functions">
-<h3><a class="toc-backref" href="#id15">Special Functions</a></h3>
+<h3><a class="toc-backref" href="#id16">Special Functions</a></h3>
 <ul class="simple">
 <li>remember current braille window position: Display1+Display3+RoutingKey</li>
 <li>go to remembered braille window position: Display4+Display6+RoutingKey</li>
@@ -885,9 +862,9 @@ From top to bottom:<ul>
 </div>
 </div>
 <div class="section" id="menu-bindings">
-<h2><a class="toc-backref" href="#id16">Menu Bindings</a></h2>
+<h2><a class="toc-backref" href="#id17">Menu Bindings</a></h2>
 <div class="section" id="id1">
-<h3><a class="toc-backref" href="#id17">Special Modes</a></h3>
+<h3><a class="toc-backref" href="#id18">Special Modes</a></h3>
 <ul class="simple">
 <li>enter/leave preferences menu:<ul>
 <li>Dot8</li>
@@ -897,14 +874,14 @@ From top to bottom:<ul>
 </ul>
 </div>
 <div class="section" id="id2">
-<h3><a class="toc-backref" href="#id18">Horizontal Navigation</a></h3>
+<h3><a class="toc-backref" href="#id19">Horizontal Navigation</a></h3>
 <ul class="simple">
 <li>go backward one braille window: B10+Left</li>
 <li>go forward one braille window: B10+Right</li>
 </ul>
 </div>
 <div class="section" id="id3">
-<h3><a class="toc-backref" href="#id19">Menu Operations</a></h3>
+<h3><a class="toc-backref" href="#id20">Menu Operations</a></h3>
 <ul class="simple">
 <li>go up to previous item:<ul>
 <li>Dot1</li>

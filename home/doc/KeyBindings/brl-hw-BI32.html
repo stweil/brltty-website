@@ -395,8 +395,8 @@ ul.auto-toc {
 <h2><a class="toc-backref" href="#id4">Notes</a></h2>
 <ul class="simple">
 <li>There are four rectangular thumb keys on the front. From left to right:
-The outer (shorter) ones are named ThumbUp and ThumbDown.
-The inner (longer) ones are named ThumbLeft and ThumbRight.
+The outer ones are named ThumbPrevious and ThumbNext.
+The inner ones are named ThumbLeft and ThumbRight.
 Some models have a round key in the middle - it's the internal menu key.</li>
 <li>There's an eight-key braille keyboard near the back of the top.
 From left to right, its keys are: Dot7, Dot3, Dot2, Dot1, Dot4, Dot5, Dot6, Dot8.</li>
@@ -486,22 +486,22 @@ From top to bottom:<ul>
 <li>go to bottom line: Display3+Display6</li>
 <li>go to beginning of top line:<ul>
 <li>Display2+Display4</li>
-<li>ThumbPrevious+ThumbLeft</li>
+<li>ThumbLeft+ThumbPrevious</li>
 </ul>
 </li>
 <li>go to beginning of bottom line:<ul>
 <li>Display2+Display6</li>
-<li>ThumbPrevious+ThumbRight</li>
+<li>ThumbLeft+ThumbNext</li>
 </ul>
 </li>
 <li>go up to nearest line with different content:<ul>
 <li>Display5+Display4</li>
-<li>ThumbNext+ThumbLeft</li>
+<li>ThumbRight+ThumbPrevious</li>
 </ul>
 </li>
 <li>go down to nearest line with different content:<ul>
 <li>Display5+Display6</li>
-<li>ThumbNext+ThumbRight</li>
+<li>ThumbRight+ThumbNext</li>
 </ul>
 </li>
 <li>go up to nearest line with different highlighting: Display2+Display1</li>
@@ -551,12 +551,12 @@ From top to bottom:<ul>
 </li>
 <li>linear copy to character:<ul>
 <li>Display4+RoutingKey</li>
-<li>ThumbNext+RoutingKey</li>
+<li>ThumbRight+RoutingKey</li>
 </ul>
 </li>
 <li>rectangular copy to character:<ul>
 <li>Display5+RoutingKey</li>
-<li>ThumbRight+RoutingKey</li>
+<li>ThumbNext+RoutingKey</li>
 </ul>
 </li>
 <li>copy characters to clipboard: RoutingKey+RoutingKey</li>
@@ -579,19 +579,13 @@ From top to bottom:<ul>
 <li>set autorepeat on/off: Space+Dots1235</li>
 <li>set autorepeat on: Space+Dots12358</li>
 <li>set autorepeat off: Space+Dots12357</li>
-<li>set text style 6-dot:<ul>
-<li>Display2+Display3+Display5</li>
-<li>Space+Dots235</li>
-</ul>
-</li>
-<li>set text style 8-dot:<ul>
-<li>Display2+Display3+Display6</li>
-<li>Space+Dots236</li>
-</ul>
-</li>
+<li>set text style 6-dot: Display2+Display3+Display5</li>
+<li>set text style 8-dot: Display2+Display3+Display6</li>
 <li>set contracted/computer braille: Space+Dots1245</li>
 <li>set contracted braille: Space+Dots12458</li>
 <li>set computer braille: Space+Dots12457</li>
+<li>set six dot computer braille: Space+Dots235</li>
+<li>set eight dot computer braille: Space+Dots236</li>
 <li>set skipping of lines with identical content on/off: Space+Dots24</li>
 <li>set skipping of lines with identical content on: Space+Dots248</li>
 <li>set skipping of lines with identical content off: Space+Dots247</li>
@@ -751,22 +745,22 @@ From top to bottom:<ul>
 </li>
 <li>go up to first item:<ul>
 <li>Dot2</li>
-<li>ThumbPrevious+ThumbLeft</li>
+<li>ThumbLeft+ThumbPrevious</li>
 </ul>
 </li>
 <li>go down to last item:<ul>
 <li>Dot5</li>
-<li>ThumbPrevious+ThumbRight</li>
+<li>ThumbLeft+ThumbNext</li>
 </ul>
 </li>
 <li>select previous choice:<ul>
 <li>Dot3</li>
-<li>ThumbNext+ThumbLeft</li>
+<li>ThumbRight+ThumbPrevious</li>
 </ul>
 </li>
 <li>select next choice:<ul>
 <li>Dot6</li>
-<li>ThumbNext+ThumbRight</li>
+<li>ThumbRight+ThumbNext</li>
 </ul>
 </li>
 <li>go to previous menu level: Dot7</li>

@@ -3,8 +3,8 @@ Key Table: APH Mantis Q40
 
 Notes
 * There are four rectangular thumb keys on the front. From left to right:
-  The outer (shorter) ones are named ThumbUp and ThumbDown.
-  The inner (longer) ones are named ThumbLeft and ThumbRight.
+  The outer ones are named ThumbPrevious and ThumbNext.
+  The inner ones are named ThumbLeft and ThumbRight.
   Some models have a round key in the middle - it's the internal menu key.
 * RoutingKey refers to any of the keys immediately behind the braille cells.
 
@@ -18,10 +18,10 @@ Cursor Functions
 Vertical Navigation
 * go up one line: ThumbPrevious
 * go down one line: ThumbNext
-* go to beginning of top line: ThumbPrevious+ThumbLeft
-* go to beginning of bottom line: ThumbPrevious+ThumbRight
-* go up to nearest line with different content: ThumbNext+ThumbLeft
-* go down to nearest line with different content: ThumbNext+ThumbRight
+* go to beginning of top line: ThumbLeft+ThumbPrevious
+* go to beginning of bottom line: ThumbLeft+ThumbNext
+* go up to nearest line with different content: ThumbRight+ThumbPrevious
+* go down to nearest line with different content: ThumbRight+ThumbNext
 
 Horizontal Navigation
 * go backward one braille window: ThumbLeft
@@ -30,8 +30,8 @@ Horizontal Navigation
 Clipboard Functions
 * start new clipboard at character: ThumbPrevious+RoutingKey
 * append to clipboard from character: ThumbLeft+RoutingKey
-* linear copy to character: ThumbNext+RoutingKey
-* rectangular copy to character: ThumbRight+RoutingKey
+* linear copy to character: ThumbRight+RoutingKey
+* rectangular copy to character: ThumbNext+RoutingKey
 * insert clipboard text after screen cursor: ThumbPrevious+ThumbNext
 
 Menu Bindings
@@ -47,10 +47,10 @@ Horizontal Navigation
 Menu Operations
 * go up to previous item: ThumbPrevious
 * go down to next item: ThumbNext
-* go up to first item: ThumbPrevious+ThumbLeft
-* go down to last item: ThumbPrevious+ThumbRight
-* select previous choice: ThumbNext+ThumbLeft
-* select next choice: ThumbNext+ThumbRight
+* go up to first item: ThumbLeft+ThumbPrevious
+* go down to last item: ThumbLeft+ThumbNext
+* select previous choice: ThumbRight+ThumbPrevious
+* select next choice: ThumbRight+ThumbNext
 * restore preferences from disk: ThumbLeft+ThumbRight+ThumbPrevious
 * save preferences to disk: ThumbLeft+ThumbRight+ThumbNext
 

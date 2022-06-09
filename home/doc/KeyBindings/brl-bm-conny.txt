@@ -19,20 +19,17 @@ Default Bindings
 
 Special Modes
 * enter/leave help display:
-  + Dot4+Press
   + Display1+Display2+Display5
   + B11+Dots125
 * enter/leave command learn mode:
-  + Dot6+Press
   + Display1+Display4+Display5+Display6
   + B11+Dots123
 * enter/leave preferences menu:
   + Display1+Display3+Display4
-  + Dots456+Press
+  + Dots456+Up
   + B11+Dots1234
 * enter/leave status display:
   + Display2+Display5
-  + Dot5+Press
   + B11+Dots234
 * set display mode attributes/text:
   + Display1+Display4+Display5
@@ -51,7 +48,7 @@ Special Modes
   + RoutingKey+Press
 * show current date and time:
   + Display1+Display5
-  + Dots56+Up
+  + Dots456+Down
 
 Cursor Functions
 * go to screen cursor: Display2+Display4+Display6
@@ -59,7 +56,6 @@ Cursor Functions
 * go to screen cursor or go back after cursor tracking: Press
 * bring screen cursor to character: RoutingKey
 * bring screen cursor to current line:
-  + Dots46+Press
   + Display1+Display3+Display4+Display6
   + B11+Dots1236
 
@@ -157,15 +153,14 @@ Clipboard Functions
   + B11+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
   + B11+Press
-  + Dot2+Down
   + Display1+Display2+Display3+Display4
   + B11+Dots1346
 * search backward for clipboard text:
+  + Dots56+Up
   + Display2+Display4+Display6+Display1
-  + Dots456+Left
 * search forward for clipboard text:
+  + Dots56+Down
   + Display2+Display4+Display6+Display3
-  + Dots456+Right
 * save clipboard to disk: B11+Dots13468
 * restore clipboard from disk: B11+Dots13467
 
@@ -173,34 +168,26 @@ Configuration Functions
 * set autorepeat on/off: B11+Dots1235
 * set autorepeat on: B11+Dots12358
 * set autorepeat off: B11+Dots12357
-* set text style 6-dot/8-dot: Dots45+Press
-* set text style 6-dot:
-  + Display2+Display3+Display5
-  + B11+Dots235
-* set text style 8-dot:
-  + Display2+Display3+Display6
-  + B11+Dots236
-* set contracted/computer braille: B11+Dots1245
+* set text style 6-dot: Display2+Display3+Display5
+* set text style 8-dot: Display2+Display3+Display6
+* set contracted/computer braille:
+  + Dots45+Right
+  + B11+Dots1245
 * set contracted braille: B11+Dots12458
 * set computer braille: B11+Dots12457
-* set skipping of lines with identical content on/off:
-  + B11+Dots24
-  + Dots56+Left
+* set six/eight dot computer braille: Dots45+Left
+* set six dot computer braille: B11+Dots235
+* set eight dot computer braille: B11+Dots236
+* set skipping of lines with identical content on/off: B11+Dots24
 * set skipping of lines with identical content on: B11+Dots248
 * set skipping of lines with identical content off: B11+Dots247
-* set skipping of blank braille windows on/off:
-  + B11+Dots12
-  + Dots56+Right
+* set skipping of blank braille windows on/off: B11+Dots12
 * set skipping of blank braille windows on: B11+Dots128
 * set skipping of blank braille windows off: B11+Dots127
-* set sliding braille window on/off:
-  + Dots56+Down
-  + B11+Dots2456
+* set sliding braille window on/off: B11+Dots2456
 * set sliding braille window on: B11+Dots24568
 * set sliding braille window off: B11+Dots24567
-* set track screen cursor on/off:
-  + Dots56+Press
-  + B11+Dots2345
+* set track screen cursor on/off: B11+Dots2345
 * set track screen cursor on:
   + Display1
   + B11+Dots23458
@@ -219,36 +206,40 @@ Configuration Functions
 Menu Operations
 * restore preferences from disk:
   + Display1+Display2+Display3+Display5
-  + Dots456+Up
+  + Dots456+Left
   + B11+Dots12347
 * save preferences to disk:
   + Display2+Display4+Display5+Display6
-  + Dots456+Down
+  + Dots456+Right
   + B11+Dots12348
 
 Speech Functions
 * stop speaking:
   + Display3+Display4
-  + B10+Left
+  + Dots12+Left
 * speak current line:
   + Display3+Display5
-  + B10+Right
+  + Dots12+Right
+* speak from top of screen through bottom of screen: Dots13+Right
 * speak from top of screen through current line:
-  + B10+Up
   + Display3+Display5+Display4
+  + Dots12+Up
 * speak from current line through bottom of screen:
-  + B10+Down
   + Display3+Display5+Display6
+  + Dots12+Down
 * go to current speaking position:
-  + B10+Press
   + Display1+Display3+Display5
-* decrease speaking volume: B9+Down
-* increase speaking volume: B9+Up
-* decrease speaking rate: B9+Left
-* increase speaking rate: B9+Right
+  + Dots13+Down
+* decrease speaking volume: Dots23+Down
+* increase speaking volume: Dots23+Up
+* decrease speaking rate: Dots23+Left
+* increase speaking rate: Dots23+Right
 * set autospeak on/off:
-  + B9+Press
   + Display3+Display4+Display6
+  + Dots13+Up
+
+Speech Navigation
+* speak indent of current line: Dots13+Left
 
 Keyboard Input
 * braille keyboard space: B11
@@ -265,9 +256,8 @@ Keyboard Input
 * backspace key:
   + B9
   + Dot7
-  + Dot2+Left
 * escape key:
-  + Dot3+Press
+  + Dot3+Up
   + B11+Dots26
 * cursor-left key:
   + B11+Dot3
@@ -282,30 +272,29 @@ Keyboard Input
   + B11+Dot4
   + Dot1+Down
 * page-up key:
-  + Dot3+Up
+  + Dot2+Up
   + B11+Dots23
 * page-down key:
-  + Dot3+Down
+  + Dot2+Down
   + B11+Dots56
 * home key:
   + B11+Dot2
-  + Dot3+Left
+  + Dot2+Left
 * end key:
   + B11+Dot5
-  + Dot3+Right
+  + Dot2+Right
 * insert key:
-  + Dot2+Up
+  + Dot3+Right
   + B11+Dots35
 * delete key:
-  + Dot2+Right
+  + Dot3+Left
   + B11+Dots256
 * function key: B11+RoutingKey
 * enter key:
   + B10
   + Dot8
-  + Dot2+Press
 * tab key:
-  + Dot1+Press
+  + Dot3+Down
   + B11+Dots45
 * clear all sticky input modifiers: B11+Dots78
 * cycle the Upper sticky input modifier (next, on, off): B11+Dots68
@@ -318,11 +307,11 @@ Keyboard Input
   + B10+RoutingKey
   + Display4+Display5+Display6+RoutingKey
 * switch to the previous virtual terminal:
-  + Dots45+Left
+  + Dots56+Left
   + Display3+Display4+Display5+Display6
   + B11+Dots12367
 * switch to the next virtual terminal:
-  + Dots45+Right
+  + Dots56+Right
   + Display1+Display2+Display3+Display6
   + B11+Dots12368
 * set braille keyboard enabled: B11+Dots138

@@ -103,11 +103,11 @@ Configuration Functions
 * set autorepeat on: Read+dots12358
 * set autorepeat off: Read+dots12357
 * set text style 6-dot/8-dot: ArrowDown+ArrowRight
-* set text style 6-dot: Read+dots235
-* set text style 8-dot: Read+dots236
 * set contracted/computer braille: Read+dots1245
 * set contracted braille: Read+dots12458
 * set computer braille: Read+dots12457
+* set six dot computer braille: Read+dots235
+* set eight dot computer braille: Read+dots236
 * set skipping of lines with identical content on/off: Read+dots24
 * set skipping of lines with identical content on: Read+dots248
 * set skipping of lines with identical content off: Read+dots247

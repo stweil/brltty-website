@@ -3,8 +3,8 @@ Key Table: HumanWare Brailliant B 80
 
 Notes
 * There are four rectangular thumb keys on the front. From left to right:
-  The outer (shorter) ones are named ThumbUp and ThumbDown.
-  The inner (longer) ones are named ThumbLeft and ThumbRight.
+  The outer ones are named ThumbPrevious and ThumbNext.
+  The inner ones are named ThumbLeft and ThumbRight.
   Some models have a round key in the middle - it's the internal menu key.
 * There are three display keys at each end of the braille cells.
   From top to bottom:
@@ -44,16 +44,16 @@ Vertical Navigation
 * go to bottom line: Display3+Display6
 * go to beginning of top line:
   + Display2+Display4
-  + ThumbPrevious+ThumbLeft
+  + ThumbLeft+ThumbPrevious
 * go to beginning of bottom line:
   + Display2+Display6
-  + ThumbPrevious+ThumbRight
+  + ThumbLeft+ThumbNext
 * go up to nearest line with different content:
   + Display5+Display4
-  + ThumbNext+ThumbLeft
+  + ThumbRight+ThumbPrevious
 * go down to nearest line with different content:
   + Display5+Display6
-  + ThumbNext+ThumbRight
+  + ThumbRight+ThumbNext
 * go up to nearest line with different highlighting: Display2+Display1
 * go down to nearest line with different highlighting: Display2+Display3
 * go up to first line of paragraph: Display2+Display5+Display4
@@ -87,10 +87,10 @@ Clipboard Functions
   + ThumbLeft+RoutingKey
 * linear copy to character:
   + Display4+RoutingKey
-  + ThumbNext+RoutingKey
+  + ThumbRight+RoutingKey
 * rectangular copy to character:
   + Display5+RoutingKey
-  + ThumbRight+RoutingKey
+  + ThumbNext+RoutingKey
 * copy characters to clipboard: RoutingKey+RoutingKey
 * append characters to clipboard: Display2+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
@@ -141,10 +141,10 @@ Horizontal Navigation
 Menu Operations
 * go up to previous item: ThumbPrevious
 * go down to next item: ThumbNext
-* go up to first item: ThumbPrevious+ThumbLeft
-* go down to last item: ThumbPrevious+ThumbRight
-* select previous choice: ThumbNext+ThumbLeft
-* select next choice: ThumbNext+ThumbRight
+* go up to first item: ThumbLeft+ThumbPrevious
+* go down to last item: ThumbLeft+ThumbNext
+* select previous choice: ThumbRight+ThumbPrevious
+* select next choice: ThumbRight+ThumbNext
 * restore preferences from disk: ThumbLeft+ThumbRight+ThumbPrevious
 * save preferences to disk: ThumbLeft+ThumbRight+ThumbNext
 

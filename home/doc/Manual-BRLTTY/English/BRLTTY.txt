@@ -9,9 +9,9 @@
 
   Dave Mielke <dave@mielke.cc>
 
-  Version 6.4, September 2021
+  Version 6.5, June 2022
 
-  Copyright © 1995-2021 by The BRLTTY Developers.  BRLTTY is free soft-
+  Copyright © 1995-2022 by The BRLTTY Developers.  BRLTTY is free soft-
   ware, and comes with ABSOLUTELY NO WARRANTY.  It is placed under the
   terms of version 2 or later of The GNU General Public License as pub-
   lished by The Free Software Foundation.
@@ -5700,7 +5700,7 @@
                               EcoVario 24/32/40/64/80
                               Inka
                               NLS eReader Zoomax
-                              Orbit 20
+                              Orbit Reader 20/40
                               PocketVario 24
                               Pronto! V3 18/40
                               Pronto! V4 18/40
@@ -5757,6 +5757,7 @@
                               SyncBraille
                               Braille Edge
                               Smart Beetle
+                              QBrailleXL
           HumanWare           Brailliant BI 14/32/40
                               Brailliant BI 20X/40X
                               Brailliant B 80

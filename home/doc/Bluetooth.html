@@ -402,16 +402,16 @@ possible), you need to make sure that the correct one is currently selected.
 Use the <tt class="docutils literal">list</tt> command to show all available controllers, and the
 <tt class="docutils literal">select <span class="pre">&lt;host-address&gt;</span></tt> command to select one:</p>
 <pre class="code console literal-block">
-<span class="generic prompt">#</span> bluetoothctl
-<span class="generic prompt">[bluetooth]#</span> list
+<span class="generic prompt"># </span>bluetoothctl
+<span class="generic prompt">[bluetooth]# </span>list
 <span class="generic output">Controller 01:23:45:67:89:AB fzidpc73
-</span><span class="generic prompt">[bluetooth]#</span> <span class="keyword">select</span> <span class="literal number">01</span>:23:45:67:89:AB
+</span><span class="generic prompt">[bluetooth]# </span><span class="keyword">select</span> <span class="literal number">01</span>:23:45:67:89:AB
 </pre>
 <p>It can happen that the selected controller is not powered on at the moment.
 Make sure it is, and, if it isn't, use the <tt class="docutils literal">power on</tt> command to enable the
 controller:</p>
 <pre class="code console literal-block">
-<span class="generic prompt">[bluetooth]#</span> show
+<span class="generic prompt">[bluetooth]# </span>show
 <span class="generic output">Controller 01:23:45:67:89:AB
         Name: fzidpc73
         Alias: fzidpc73-0
@@ -426,7 +426,7 @@ controller:</p>
         UUID: A/V Remote Control Target (0000110c-0000-1000-8000-00805f9b34fb)
         Modalias: usb:v1D6Bp0246d0517
         Discovering: no
-</span><span class="generic prompt">[bluetooth]#</span> power on
+</span><span class="generic prompt">[bluetooth]# </span>power on
 <span class="generic output">[CHG] Controller 01:23:45:67:89:AB Class: 0x000104
 Changing power on succeeded
 [CHG] Controller 01:23:45:67:89:AB Powered: yes</span>
@@ -434,23 +434,23 @@ Changing power on succeeded
 <p>To obtain the Bluetooth device address of the device you want to pair with,
 enable scan mode:</p>
 <pre class="code console literal-block">
-<span class="generic prompt">[bluetooth]#</span> scan on
+<span class="generic prompt">[bluetooth]# </span>scan on
 <span class="generic output">Discovery started
 [CHG] Controller 01:23:45:67:89:AB Discovering: yes
 [NEW] Device 12:34:56:78:9A:BC braillex live 0139
-</span><span class="generic prompt">[bluetooth]#</span> scan off
+</span><span class="generic prompt">[bluetooth]# </span>scan off
 <span class="generic output">Discovery stopped
 [CHG] Controller 01:23:45:67:89:AB Discovering: no</span>
 </pre>
 <p>To be able to receive PIN code requests directly on the console, you need to
 enable the <em>agent</em>:</p>
 <pre class="code console literal-block">
-<span class="generic prompt">[bluetooth]#</span> agent on
+<span class="generic prompt">[bluetooth]# </span>agent on
 <span class="generic output">Agent registered</span>
 </pre>
 <p>Now you are finally ready to initiate the pairing:</p>
 <pre class="code console literal-block">
-<span class="generic prompt">[bluetooth]#</span> pair <span class="literal number">12</span>:34:56:78:9A:BC
+<span class="generic prompt">[bluetooth]# </span>pair <span class="literal number">12</span>:34:56:78:9A:BC
 <span class="generic output">Attempting to pair with 12:34:56:78:9A:BC
 [CHG] Device 12:34:56:78:9A:BC Connected: yes
 Request PIN code

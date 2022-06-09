@@ -370,31 +370,32 @@ ul.auto-toc {
 <li><a class="reference internal" href="#directives" id="id3">Directives</a><ul>
 <li><a class="reference internal" href="#the-char-directive" id="id4">The Char Directive</a></li>
 <li><a class="reference internal" href="#the-glyph-directive" id="id5">The Glyph Directive</a></li>
-<li><a class="reference internal" href="#the-alias-directive" id="id6">The Alias Directive</a></li>
-<li><a class="reference internal" href="#the-byte-directive" id="id7">The Byte Directive</a></li>
-<li><a class="reference internal" href="#the-ifglyph-directive" id="id8">The IfGlyph Directive</a></li>
-<li><a class="reference internal" href="#the-ifnotglyph-directive" id="id9">The IfNotGlyph Directive</a></li>
-<li><a class="reference internal" href="#the-ifcell-directive" id="id10">The IfCell Directive</a></li>
-<li><a class="reference internal" href="#the-ifnotcell-directive" id="id11">The IfNotCell Directive</a></li>
-<li><a class="reference internal" href="#the-include-directive" id="id12">The Include Directive</a></li>
-<li><a class="reference internal" href="#the-assign-directive" id="id13">The Assign Directive</a></li>
-<li><a class="reference internal" href="#the-assigndefault-directive" id="id14">The AssignDefault Directive</a></li>
-<li><a class="reference internal" href="#the-ifvar-directive" id="id15">The IfVar Directive</a></li>
-<li><a class="reference internal" href="#the-ifnotvar-directive" id="id16">The IfNotVar Directive</a></li>
-<li><a class="reference internal" href="#the-beginvariables-directive" id="id17">The BeginVariables Directive</a></li>
-<li><a class="reference internal" href="#the-endvariables-directive" id="id18">The EndVariables Directive</a></li>
-<li><a class="reference internal" href="#the-listvariables-directive" id="id19">The ListVariables Directive</a></li>
-<li><a class="reference internal" href="#the-endif-directive" id="id20">The EndIf Directive</a></li>
-<li><a class="reference internal" href="#the-else-directive" id="id21">The Else Directive</a></li>
+<li><a class="reference internal" href="#the-input-directive" id="id6">The Input Directive</a></li>
+<li><a class="reference internal" href="#the-alias-directive" id="id7">The Alias Directive</a></li>
+<li><a class="reference internal" href="#the-byte-directive" id="id8">The Byte Directive</a></li>
+<li><a class="reference internal" href="#the-ifglyph-directive" id="id9">The IfGlyph Directive</a></li>
+<li><a class="reference internal" href="#the-ifnotglyph-directive" id="id10">The IfNotGlyph Directive</a></li>
+<li><a class="reference internal" href="#the-ifinput-directive" id="id11">The IfInput Directive</a></li>
+<li><a class="reference internal" href="#the-ifnotinput-directive" id="id12">The IfNotInput Directive</a></li>
+<li><a class="reference internal" href="#the-include-directive" id="id13">The Include Directive</a></li>
+<li><a class="reference internal" href="#the-assign-directive" id="id14">The Assign Directive</a></li>
+<li><a class="reference internal" href="#the-assigndefault-directive" id="id15">The AssignDefault Directive</a></li>
+<li><a class="reference internal" href="#the-ifvar-directive" id="id16">The IfVar Directive</a></li>
+<li><a class="reference internal" href="#the-ifnotvar-directive" id="id17">The IfNotVar Directive</a></li>
+<li><a class="reference internal" href="#the-beginvariables-directive" id="id18">The BeginVariables Directive</a></li>
+<li><a class="reference internal" href="#the-endvariables-directive" id="id19">The EndVariables Directive</a></li>
+<li><a class="reference internal" href="#the-listvariables-directive" id="id20">The ListVariables Directive</a></li>
+<li><a class="reference internal" href="#the-endif-directive" id="id21">The EndIf Directive</a></li>
+<li><a class="reference internal" href="#the-else-directive" id="id22">The Else Directive</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#operands" id="id22">Operands</a><ul>
-<li><a class="reference internal" href="#the-string-operand" id="id23">The String Operand</a></li>
-<li><a class="reference internal" href="#the-dots-operand" id="id24">The Dots Operand</a></li>
-<li><a class="reference internal" href="#the-cell-operand" id="id25">The Cell Operand</a></li>
+<li><a class="reference internal" href="#operands" id="id23">Operands</a><ul>
+<li><a class="reference internal" href="#the-string-operand" id="id24">The String Operand</a></li>
+<li><a class="reference internal" href="#the-dots-operand" id="id25">The Dots Operand</a></li>
+<li><a class="reference internal" href="#the-cell-operand" id="id26">The Cell Operand</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#text-table-list" id="id26">Text Table List</a></li>
+<li><a class="reference internal" href="#text-table-list" id="id27">Text Table List</a></li>
 </ul>
 </div>
 <div class="section" id="description">
@@ -496,7 +497,7 @@ then its low-order byte is:</p>
 char <em>character</em> <em>dots</em> # <em>comment</em>
 </pre>
 <p>Use this directive to specify how a Unicode character is to be represented in
-braille. Characters defined via this directive can also be entered from a
+braille. A character defined via this directive can also be entered from a
 braille keyboard. If several characters have the same braille representation
 then only one of them should be defined via this directive - the others should
 be defined via <a class="reference internal" href="#the-glyph-directive">The Glyph Directive</a> (which has the same syntax). If more than
@@ -528,7 +529,7 @@ char \&lt;LATIN_SMALL_LETTER_D&gt; 145
 glyph <em>character</em> <em>dots</em> # <em>comment</em>
 </pre>
 <p>Use this directive to specify how a Unicode character is to be represented in
-braille.  Characters defined via this directive are output-only - they cannot
+braille. A character defined via this directive is output-only - it can't
 be entered from a braille keyboard.</p>
 <dl class="docutils">
 <dt><em>character</em></dt>
@@ -540,8 +541,26 @@ See <a class="reference internal" href="#the-dots-operand">The Dots Operand</a> 
 </dl>
 <p>See <a class="reference internal" href="#the-char-directive">The Char Directive</a> for examples.</p>
 </div>
+<div class="section" id="the-input-directive">
+<h3><a class="toc-backref" href="#id6">The Input Directive</a></h3>
+<pre class="literal-block">
+input <em>character</em> <em>dots</em> # <em>comment</em>
+</pre>
+<p>Use this directive to specify how a Unicode character is to be entered from a
+braille keyboard. A character defined via this directive is input-only - its
+actual braille representation isn't defined.</p>
+<dl class="docutils">
+<dt><em>character</em></dt>
+<dd>The character being defined.
+See <a class="reference internal" href="#the-string-operand">The String Operand</a> for details.</dd>
+<dt><em>dots</em></dt>
+<dd>The braille representation for the character being defined.
+See <a class="reference internal" href="#the-dots-operand">The Dots Operand</a> for details.</dd>
+</dl>
+<p>See <a class="reference internal" href="#the-char-directive">The Char Directive</a> for examples.</p>
+</div>
 <div class="section" id="the-alias-directive">
-<h3><a class="toc-backref" href="#id6">The Alias Directive</a></h3>
+<h3><a class="toc-backref" href="#id7">The Alias Directive</a></h3>
 <pre class="literal-block">
 alias <em>from</em> <em>to</em> # <em>comment</em>
 </pre>
@@ -550,7 +569,7 @@ same braille representation as the <em>to</em> Unicode character. See
 <a class="reference internal" href="#the-string-operand">The String Operand</a> for details on how to specify both operands.</p>
 </div>
 <div class="section" id="the-byte-directive">
-<h3><a class="toc-backref" href="#id7">The Byte Directive</a></h3>
+<h3><a class="toc-backref" href="#id8">The Byte Directive</a></h3>
 <pre class="literal-block">
 byte <em>byte</em> <em>dots</em> # <em>comment</em>
 </pre>
@@ -570,7 +589,7 @@ See <a class="reference internal" href="#the-dots-operand">The Dots Operand</a> 
 </dl>
 </div>
 <div class="section" id="the-ifglyph-directive">
-<h3><a class="toc-backref" href="#id8">The IfGlyph Directive</a></h3>
+<h3><a class="toc-backref" href="#id9">The IfGlyph Directive</a></h3>
 <pre class="literal-block">
 ifGlyph <em>character</em> <em>directive</em>
 </pre>
@@ -594,7 +613,7 @@ ifGlyph C alias \u2103 C # degree Celsius
 </pre>
 </div>
 <div class="section" id="the-ifnotglyph-directive">
-<h3><a class="toc-backref" href="#id9">The IfNotGlyph Directive</a></h3>
+<h3><a class="toc-backref" href="#id10">The IfNotGlyph Directive</a></h3>
 <pre class="literal-block">
 ifNotGlyph <em>character</em> <em>directive</em>
 </pre>
@@ -617,10 +636,10 @@ that is at the same conditional nesting level.</dd>
 ifNotGlyph \s glyph \s 0
 </pre>
 </div>
-<div class="section" id="the-ifcell-directive">
-<h3><a class="toc-backref" href="#id10">The IfCell Directive</a></h3>
+<div class="section" id="the-ifinput-directive">
+<h3><a class="toc-backref" href="#id11">The IfInput Directive</a></h3>
 <pre class="literal-block">
-ifCell <em>cell</em> <em>directive</em>
+ifInput <em>cell</em> <em>directive</em>
 </pre>
 <p>Use this directive to only process one or more directives if a character can be
 entered from a braille keyboard.</p>
@@ -637,10 +656,10 @@ until <a class="reference internal" href="#the-endif-directive">The EndIf Direct
 that is at the same conditional nesting level.</dd>
 </dl>
 </div>
-<div class="section" id="the-ifnotcell-directive">
-<h3><a class="toc-backref" href="#id11">The IfNotCell Directive</a></h3>
+<div class="section" id="the-ifnotinput-directive">
+<h3><a class="toc-backref" href="#id12">The IfNotInput Directive</a></h3>
 <pre class="literal-block">
-ifNotCell <em>cell</em> <em>directive</em>
+ifNotInput <em>cell</em> <em>directive</em>
 </pre>
 <p>Use this directive to only process one or more directives if a character can't
 be entered from a braille keyboard.</p>
@@ -658,7 +677,7 @@ that is at the same conditional nesting level.</dd>
 </dl>
 </div>
 <div class="section" id="the-include-directive">
-<h3><a class="toc-backref" href="#id12">The Include Directive</a></h3>
+<h3><a class="toc-backref" href="#id13">The Include Directive</a></h3>
 <pre class="literal-block">
 include <em>file</em> # <em>comment</em>
 </pre>
@@ -672,7 +691,7 @@ relative, it is anchored at the directory containing the including file.</dd>
 </dl>
 </div>
 <div class="section" id="the-assign-directive">
-<h3><a class="toc-backref" href="#id13">The Assign Directive</a></h3>
+<h3><a class="toc-backref" href="#id14">The Assign Directive</a></h3>
 <pre class="literal-block">
 assign <em>variable</em> <em>value</em>
 </pre>
@@ -698,7 +717,7 @@ assign IndirectValue \{variableName}
 </pre>
 </div>
 <div class="section" id="the-assigndefault-directive">
-<h3><a class="toc-backref" href="#id14">The AssignDefault Directive</a></h3>
+<h3><a class="toc-backref" href="#id15">The AssignDefault Directive</a></h3>
 <pre class="literal-block">
 assignDefault <em>variable</em> <em>value</em>
 </pre>
@@ -725,7 +744,7 @@ assignDefault format plain\stext
 </pre>
 </div>
 <div class="section" id="the-ifvar-directive">
-<h3><a class="toc-backref" href="#id15">The IfVar Directive</a></h3>
+<h3><a class="toc-backref" href="#id16">The IfVar Directive</a></h3>
 <pre class="literal-block">
 ifVar <em>variable</em> <em>directive</em>
 </pre>
@@ -747,7 +766,7 @@ ifVar var1 ifVar var2 assign concatenation \{var1}\{var2}
 </pre>
 </div>
 <div class="section" id="the-ifnotvar-directive">
-<h3><a class="toc-backref" href="#id16">The IfNotVar Directive</a></h3>
+<h3><a class="toc-backref" href="#id17">The IfNotVar Directive</a></h3>
 <pre class="literal-block">
 ifNotVar <em>variable</em> <em>directive</em>
 </pre>
@@ -770,7 +789,7 @@ ifNotVar var1 assign var1 default\svalue
 </pre>
 </div>
 <div class="section" id="the-beginvariables-directive">
-<h3><a class="toc-backref" href="#id17">The BeginVariables Directive</a></h3>
+<h3><a class="toc-backref" href="#id18">The BeginVariables Directive</a></h3>
 <pre class="literal-block">
 beginVariables
 </pre>
@@ -792,7 +811,7 @@ endVariables
 </pre>
 </div>
 <div class="section" id="the-endvariables-directive">
-<h3><a class="toc-backref" href="#id18">The EndVariables Directive</a></h3>
+<h3><a class="toc-backref" href="#id19">The EndVariables Directive</a></h3>
 <pre class="literal-block">
 endVariables
 </pre>
@@ -800,7 +819,7 @@ endVariables
 See <a class="reference internal" href="#the-beginvariables-directive">The BeginVariables Directive</a> for details.</p>
 </div>
 <div class="section" id="the-listvariables-directive">
-<h3><a class="toc-backref" href="#id19">The ListVariables Directive</a></h3>
+<h3><a class="toc-backref" href="#id20">The ListVariables Directive</a></h3>
 <pre class="literal-block">
 listVariables
 </pre>
@@ -808,7 +827,7 @@ listVariables
 It can be helpful when debugging.</p>
 </div>
 <div class="section" id="the-endif-directive">
-<h3><a class="toc-backref" href="#id20">The EndIf Directive</a></h3>
+<h3><a class="toc-backref" href="#id21">The EndIf Directive</a></h3>
 <pre class="literal-block">
 endIf
 </pre>
@@ -821,7 +840,7 @@ endIf
 </pre>
 </div>
 <div class="section" id="the-else-directive">
-<h3><a class="toc-backref" href="#id21">The Else Directive</a></h3>
+<h3><a class="toc-backref" href="#id22">The Else Directive</a></h3>
 <pre class="literal-block">
 else
 </pre>
@@ -839,9 +858,9 @@ endIf
 </div>
 </div>
 <div class="section" id="operands">
-<h2><a class="toc-backref" href="#id22">Operands</a></h2>
+<h2><a class="toc-backref" href="#id23">Operands</a></h2>
 <div class="section" id="the-string-operand">
-<h3><a class="toc-backref" href="#id23">The String Operand</a></h3>
+<h3><a class="toc-backref" href="#id24">The String Operand</a></h3>
 <p>A <em>string</em> operand may be specified as a non-whitespace sequence of:</p>
 <ul>
 <li><p class="first">Any single character other than a backslash (\\) or a white-space
@@ -871,6 +890,9 @@ character.</p>
 </tr>
 <tr><td><tt class="docutils literal">\r</tt></td>
 <td>The carriage return character.</td>
+</tr>
+<tr><td><tt class="docutils literal">\R</tt></td>
+<td>The Unicode replacement character.</td>
 </tr>
 <tr><td><tt class="docutils literal">\s</tt></td>
 <td>The space character.</td>
@@ -911,7 +933,7 @@ character.</p>
 </ul>
 </div>
 <div class="section" id="the-dots-operand">
-<h3><a class="toc-backref" href="#id24">The Dots Operand</a></h3>
+<h3><a class="toc-backref" href="#id25">The Dots Operand</a></h3>
 <p>A <em>dots</em> operand is a sequence of one to eight dot numbers. If the dot numbers
 are enclosed within (parentheses) then they may be separated from one another
 by whitespace. A dot number is a digit within the range <tt class="docutils literal">1</tt>-<tt class="docutils literal">8</tt>
@@ -921,7 +943,7 @@ when not enclosed within (parentheses), and means no dots - it may not be used
 in conjunction with any other dot number.</p>
 </div>
 <div class="section" id="the-cell-operand">
-<h3><a class="toc-backref" href="#id25">The Cell Operand</a></h3>
+<h3><a class="toc-backref" href="#id26">The Cell Operand</a></h3>
 <p>A <em>cell</em> operand is a sequence of one to eight dot numbers. A dot number is
 a digit within the range <tt class="docutils literal">1</tt>-<tt class="docutils literal">8</tt> as defined by the standard braille dot
 numbering convention (see <a class="reference external" href="BrailleDots.html">Braille Dots</a> for details). The special dot
@@ -930,7 +952,7 @@ conjunction with any other dot number.</p>
 </div>
 </div>
 <div class="section" id="text-table-list">
-<h2><a class="toc-backref" href="#id26">Text Table List</a></h2>
+<h2><a class="toc-backref" href="#id27">Text Table List</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />
