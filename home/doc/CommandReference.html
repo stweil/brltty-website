@@ -366,556 +366,465 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#special-modes" id="id1">Special Modes</a><ul>
-<li><a class="reference internal" href="#help" id="id2">HELP</a></li>
-<li><a class="reference internal" href="#learn" id="id3">LEARN</a></li>
-<li><a class="reference internal" href="#prefmenu" id="id4">PREFMENU</a></li>
-<li><a class="reference internal" href="#info" id="id5">INFO</a></li>
-<li><a class="reference internal" href="#dispmd" id="id6">DISPMD</a></li>
-<li><a class="reference internal" href="#freeze" id="id7">FREEZE</a></li>
-<li><a class="reference internal" href="#descchar" id="id8">DESCCHAR</a></li>
-<li><a class="reference internal" href="#time" id="id9">TIME</a></li>
-<li><a class="reference internal" href="#indicators" id="id10">INDICATORS</a></li>
-<li><a class="reference internal" href="#context" id="id11">CONTEXT</a></li>
+<li><a class="reference internal" href="#alphabetical-command-index" id="id1">Alphabetical Command Index</a></li>
+<li><a class="reference internal" href="#special-modes" id="id2">Special Modes</a></li>
+<li><a class="reference internal" href="#cursor-functions" id="id3">Cursor Functions</a></li>
+<li><a class="reference internal" href="#vertical-navigation" id="id4">Vertical Navigation</a></li>
+<li><a class="reference internal" href="#horizontal-navigation" id="id5">Horizontal Navigation</a></li>
+<li><a class="reference internal" href="#window-navigation" id="id6">Window Navigation</a></li>
+<li><a class="reference internal" href="#clipboard-functions" id="id7">Clipboard Functions</a></li>
+<li><a class="reference internal" href="#text-selection-and-the-host-clipboard" id="id8">Text Selection and the Host Clipboard</a></li>
+<li><a class="reference internal" href="#configuration-functions" id="id9">Configuration Functions</a></li>
+<li><a class="reference internal" href="#menu-operations" id="id10">Menu Operations</a></li>
+<li><a class="reference internal" href="#speech-functions" id="id11">Speech Functions</a></li>
+<li><a class="reference internal" href="#speech-navigation" id="id12">Speech Navigation</a></li>
+<li><a class="reference internal" href="#keyboard-input" id="id13">Keyboard Input</a></li>
+<li><a class="reference internal" href="#special-functions" id="id14">Special Functions</a></li>
+<li><a class="reference internal" href="#internal-functions" id="id15">Internal Functions</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#cursor-functions" id="id12">Cursor Functions</a><ul>
-<li><a class="reference internal" href="#home" id="id13">HOME</a></li>
-<li><a class="reference internal" href="#back" id="id14">BACK</a></li>
-<li><a class="reference internal" href="#return" id="id15">RETURN</a></li>
-<li><a class="reference internal" href="#route" id="id16">ROUTE</a></li>
-<li><a class="reference internal" href="#route-line" id="id17">ROUTE_LINE</a></li>
-<li><a class="reference internal" href="#csrjmp-vert" id="id18">CSRJMP_VERT</a></li>
-<li><a class="reference internal" href="#route-curr-locn" id="id19">ROUTE_CURR_LOCN</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#vertical-navigation" id="id20">Vertical Navigation</a><ul>
-<li><a class="reference internal" href="#lnup" id="id21">LNUP</a></li>
-<li><a class="reference internal" href="#lndn" id="id22">LNDN</a></li>
-<li><a class="reference internal" href="#top" id="id23">TOP</a></li>
-<li><a class="reference internal" href="#bot" id="id24">BOT</a></li>
-<li><a class="reference internal" href="#top-left" id="id25">TOP_LEFT</a></li>
-<li><a class="reference internal" href="#bot-left" id="id26">BOT_LEFT</a></li>
-<li><a class="reference internal" href="#prdifln" id="id27">PRDIFLN</a></li>
-<li><a class="reference internal" href="#nxdifln" id="id28">NXDIFLN</a></li>
-<li><a class="reference internal" href="#attrup" id="id29">ATTRUP</a></li>
-<li><a class="reference internal" href="#attrdn" id="id30">ATTRDN</a></li>
-<li><a class="reference internal" href="#prpgrph" id="id31">PRPGRPH</a></li>
-<li><a class="reference internal" href="#nxpgrph" id="id32">NXPGRPH</a></li>
-<li><a class="reference internal" href="#prprompt" id="id33">PRPROMPT</a></li>
-<li><a class="reference internal" href="#nxprompt" id="id34">NXPROMPT</a></li>
-<li><a class="reference internal" href="#winup" id="id35">WINUP</a></li>
-<li><a class="reference internal" href="#windn" id="id36">WINDN</a></li>
-<li><a class="reference internal" href="#prindent" id="id37">PRINDENT</a></li>
-<li><a class="reference internal" href="#nxindent" id="id38">NXINDENT</a></li>
-<li><a class="reference internal" href="#prdifchar" id="id39">PRDIFCHAR</a></li>
-<li><a class="reference internal" href="#nxdifchar" id="id40">NXDIFCHAR</a></li>
-<li><a class="reference internal" href="#gotoline" id="id41">GOTOLINE</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#horizontal-navigation" id="id42">Horizontal Navigation</a><ul>
-<li><a class="reference internal" href="#fwinlt" id="id43">FWINLT</a></li>
-<li><a class="reference internal" href="#fwinrt" id="id44">FWINRT</a></li>
-<li><a class="reference internal" href="#fwinltskip" id="id45">FWINLTSKIP</a></li>
-<li><a class="reference internal" href="#fwinrtskip" id="id46">FWINRTSKIP</a></li>
-<li><a class="reference internal" href="#prnbwin" id="id47">PRNBWIN</a></li>
-<li><a class="reference internal" href="#nxnbwin" id="id48">NXNBWIN</a></li>
-<li><a class="reference internal" href="#lnbeg" id="id49">LNBEG</a></li>
-<li><a class="reference internal" href="#lnend" id="id50">LNEND</a></li>
-<li><a class="reference internal" href="#chrlt" id="id51">CHRLT</a></li>
-<li><a class="reference internal" href="#chrrt" id="id52">CHRRT</a></li>
-<li><a class="reference internal" href="#hwinlt" id="id53">HWINLT</a></li>
-<li><a class="reference internal" href="#hwinrt" id="id54">HWINRT</a></li>
-<li><a class="reference internal" href="#setleft" id="id55">SETLEFT</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#window-navigation" id="id56">Window Navigation</a><ul>
-<li><a class="reference internal" href="#gui-title" id="id57">GUI_TITLE</a></li>
-<li><a class="reference internal" href="#gui-brl-actions" id="id58">GUI_BRL_ACTIONS</a></li>
-<li><a class="reference internal" href="#gui-home" id="id59">GUI_HOME</a></li>
-<li><a class="reference internal" href="#gui-back" id="id60">GUI_BACK</a></li>
-<li><a class="reference internal" href="#gui-dev-settings" id="id61">GUI_DEV_SETTINGS</a></li>
-<li><a class="reference internal" href="#gui-dev-options" id="id62">GUI_DEV_OPTIONS</a></li>
-<li><a class="reference internal" href="#gui-app-list" id="id63">GUI_APP_LIST</a></li>
-<li><a class="reference internal" href="#gui-app-menu" id="id64">GUI_APP_MENU</a></li>
-<li><a class="reference internal" href="#gui-app-alerts" id="id65">GUI_APP_ALERTS</a></li>
-<li><a class="reference internal" href="#gui-area-actv" id="id66">GUI_AREA_ACTV</a></li>
-<li><a class="reference internal" href="#gui-area-prev" id="id67">GUI_AREA_PREV</a></li>
-<li><a class="reference internal" href="#gui-area-next" id="id68">GUI_AREA_NEXT</a></li>
-<li><a class="reference internal" href="#gui-item-frst" id="id69">GUI_ITEM_FRST</a></li>
-<li><a class="reference internal" href="#gui-item-prev" id="id70">GUI_ITEM_PREV</a></li>
-<li><a class="reference internal" href="#gui-item-next" id="id71">GUI_ITEM_NEXT</a></li>
-<li><a class="reference internal" href="#gui-item-last" id="id72">GUI_ITEM_LAST</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#clipboard-functions" id="id73">Clipboard Functions</a><ul>
-<li><a class="reference internal" href="#clip-new" id="id74">CLIP_NEW</a></li>
-<li><a class="reference internal" href="#clip-add" id="id75">CLIP_ADD</a></li>
-<li><a class="reference internal" href="#copy-line" id="id76">COPY_LINE</a></li>
-<li><a class="reference internal" href="#copy-rect" id="id77">COPY_RECT</a></li>
-<li><a class="reference internal" href="#clip-copy" id="id78">CLIP_COPY</a></li>
-<li><a class="reference internal" href="#clip-append" id="id79">CLIP_APPEND</a></li>
-<li><a class="reference internal" href="#paste" id="id80">PASTE</a></li>
-<li><a class="reference internal" href="#paste-history" id="id81">PASTE_HISTORY</a></li>
-<li><a class="reference internal" href="#prsearch" id="id82">PRSEARCH</a></li>
-<li><a class="reference internal" href="#nxsearch" id="id83">NXSEARCH</a></li>
-<li><a class="reference internal" href="#clip-save" id="id84">CLIP_SAVE</a></li>
-<li><a class="reference internal" href="#clip-restore" id="id85">CLIP_RESTORE</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#text-selection-and-the-host-clipboard" id="id86">Text Selection and the Host Clipboard</a><ul>
-<li><a class="reference internal" href="#txtsel-clear" id="id87">TXTSEL_CLEAR</a></li>
-<li><a class="reference internal" href="#txtsel-set" id="id88">TXTSEL_SET</a></li>
-<li><a class="reference internal" href="#txtsel-start" id="id89">TXTSEL_START</a></li>
-<li><a class="reference internal" href="#txtsel-all" id="id90">TXTSEL_ALL</a></li>
-<li><a class="reference internal" href="#host-copy" id="id91">HOST_COPY</a></li>
-<li><a class="reference internal" href="#host-cut" id="id92">HOST_CUT</a></li>
-<li><a class="reference internal" href="#host-paste" id="id93">HOST_PASTE</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#configuration-functions" id="id94">Configuration Functions</a><ul>
-<li><a class="reference internal" href="#touch-nav" id="id95">TOUCH_NAV</a></li>
-<li><a class="reference internal" href="#autorepeat" id="id96">AUTOREPEAT</a></li>
-<li><a class="reference internal" href="#sixdots" id="id97">SIXDOTS</a></li>
-<li><a class="reference internal" href="#contracted" id="id98">CONTRACTED</a></li>
-<li><a class="reference internal" href="#compbrl6" id="id99">COMPBRL6</a></li>
-<li><a class="reference internal" href="#skpidlns" id="id100">SKPIDLNS</a></li>
-<li><a class="reference internal" href="#skpblnkwins" id="id101">SKPBLNKWINS</a></li>
-<li><a class="reference internal" href="#slidewin" id="id102">SLIDEWIN</a></li>
-<li><a class="reference internal" href="#csrtrk" id="id103">CSRTRK</a></li>
-<li><a class="reference internal" href="#csrsize" id="id104">CSRSIZE</a></li>
-<li><a class="reference internal" href="#csrvis" id="id105">CSRVIS</a></li>
-<li><a class="reference internal" href="#csrhide" id="id106">CSRHIDE</a></li>
-<li><a class="reference internal" href="#csrblink" id="id107">CSRBLINK</a></li>
-<li><a class="reference internal" href="#attrvis" id="id108">ATTRVIS</a></li>
-<li><a class="reference internal" href="#attrblink" id="id109">ATTRBLINK</a></li>
-<li><a class="reference internal" href="#capblink" id="id110">CAPBLINK</a></li>
-<li><a class="reference internal" href="#tunes" id="id111">TUNES</a></li>
-<li><a class="reference internal" href="#set-text-table" id="id112">SET_TEXT_TABLE</a></li>
-<li><a class="reference internal" href="#set-attributes-table" id="id113">SET_ATTRIBUTES_TABLE</a></li>
-<li><a class="reference internal" href="#set-contraction-table" id="id114">SET_CONTRACTION_TABLE</a></li>
-<li><a class="reference internal" href="#set-keyboard-table" id="id115">SET_KEYBOARD_TABLE</a></li>
-<li><a class="reference internal" href="#set-language-profile" id="id116">SET_LANGUAGE_PROFILE</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#menu-operations" id="id117">Menu Operations</a><ul>
-<li><a class="reference internal" href="#menu-prev-item" id="id118">MENU_PREV_ITEM</a></li>
-<li><a class="reference internal" href="#menu-next-item" id="id119">MENU_NEXT_ITEM</a></li>
-<li><a class="reference internal" href="#menu-first-item" id="id120">MENU_FIRST_ITEM</a></li>
-<li><a class="reference internal" href="#menu-last-item" id="id121">MENU_LAST_ITEM</a></li>
-<li><a class="reference internal" href="#menu-prev-setting" id="id122">MENU_PREV_SETTING</a></li>
-<li><a class="reference internal" href="#menu-next-setting" id="id123">MENU_NEXT_SETTING</a></li>
-<li><a class="reference internal" href="#menu-prev-level" id="id124">MENU_PREV_LEVEL</a></li>
-<li><a class="reference internal" href="#prefload" id="id125">PREFLOAD</a></li>
-<li><a class="reference internal" href="#prefsave" id="id126">PREFSAVE</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#speech-functions" id="id127">Speech Functions</a><ul>
-<li><a class="reference internal" href="#mute" id="id128">MUTE</a></li>
-<li><a class="reference internal" href="#say-line" id="id129">SAY_LINE</a></li>
-<li><a class="reference internal" href="#say-all" id="id130">SAY_ALL</a></li>
-<li><a class="reference internal" href="#say-above" id="id131">SAY_ABOVE</a></li>
-<li><a class="reference internal" href="#say-below" id="id132">SAY_BELOW</a></li>
-<li><a class="reference internal" href="#spkhome" id="id133">SPKHOME</a></li>
-<li><a class="reference internal" href="#say-softer" id="id134">SAY_SOFTER</a></li>
-<li><a class="reference internal" href="#say-louder" id="id135">SAY_LOUDER</a></li>
-<li><a class="reference internal" href="#say-slower" id="id136">SAY_SLOWER</a></li>
-<li><a class="reference internal" href="#say-faster" id="id137">SAY_FASTER</a></li>
-<li><a class="reference internal" href="#say-lower" id="id138">SAY_LOWER</a></li>
-<li><a class="reference internal" href="#say-higher" id="id139">SAY_HIGHER</a></li>
-<li><a class="reference internal" href="#autospeak" id="id140">AUTOSPEAK</a></li>
-<li><a class="reference internal" href="#aspk-sel-line" id="id141">ASPK_SEL_LINE</a></li>
-<li><a class="reference internal" href="#aspk-sel-char" id="id142">ASPK_SEL_CHAR</a></li>
-<li><a class="reference internal" href="#aspk-ins-chars" id="id143">ASPK_INS_CHARS</a></li>
-<li><a class="reference internal" href="#aspk-del-chars" id="id144">ASPK_DEL_CHARS</a></li>
-<li><a class="reference internal" href="#aspk-rep-chars" id="id145">ASPK_REP_CHARS</a></li>
-<li><a class="reference internal" href="#aspk-cmp-words" id="id146">ASPK_CMP_WORDS</a></li>
-<li><a class="reference internal" href="#aspk-indent" id="id147">ASPK_INDENT</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#speech-navigation" id="id148">Speech Navigation</a><ul>
-<li><a class="reference internal" href="#speak-curr-char" id="id149">SPEAK_CURR_CHAR</a></li>
-<li><a class="reference internal" href="#desc-curr-char" id="id150">DESC_CURR_CHAR</a></li>
-<li><a class="reference internal" href="#speak-prev-char" id="id151">SPEAK_PREV_CHAR</a></li>
-<li><a class="reference internal" href="#speak-next-char" id="id152">SPEAK_NEXT_CHAR</a></li>
-<li><a class="reference internal" href="#speak-frst-char" id="id153">SPEAK_FRST_CHAR</a></li>
-<li><a class="reference internal" href="#speak-last-char" id="id154">SPEAK_LAST_CHAR</a></li>
-<li><a class="reference internal" href="#speak-curr-word" id="id155">SPEAK_CURR_WORD</a></li>
-<li><a class="reference internal" href="#spell-curr-word" id="id156">SPELL_CURR_WORD</a></li>
-<li><a class="reference internal" href="#speak-prev-word" id="id157">SPEAK_PREV_WORD</a></li>
-<li><a class="reference internal" href="#speak-next-word" id="id158">SPEAK_NEXT_WORD</a></li>
-<li><a class="reference internal" href="#speak-curr-line" id="id159">SPEAK_CURR_LINE</a></li>
-<li><a class="reference internal" href="#speak-prev-line" id="id160">SPEAK_PREV_LINE</a></li>
-<li><a class="reference internal" href="#speak-next-line" id="id161">SPEAK_NEXT_LINE</a></li>
-<li><a class="reference internal" href="#speak-frst-line" id="id162">SPEAK_FRST_LINE</a></li>
-<li><a class="reference internal" href="#speak-last-line" id="id163">SPEAK_LAST_LINE</a></li>
-<li><a class="reference internal" href="#speak-indent" id="id164">SPEAK_INDENT</a></li>
-<li><a class="reference internal" href="#speak-curr-locn" id="id165">SPEAK_CURR_LOCN</a></li>
-<li><a class="reference internal" href="#show-curr-locn" id="id166">SHOW_CURR_LOCN</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#keyboard-input" id="id167">Keyboard Input</a><ul>
-<li><a class="reference internal" href="#passdots" id="id168">PASSDOTS</a></li>
-<li><a class="reference internal" href="#passchar" id="id169">PASSCHAR</a></li>
-<li><a class="reference internal" href="#key-backspace" id="id170">KEY_BACKSPACE</a></li>
-<li><a class="reference internal" href="#key-enter" id="id171">KEY_ENTER</a></li>
-<li><a class="reference internal" href="#key-tab" id="id172">KEY_TAB</a></li>
-<li><a class="reference internal" href="#key-cursor-left" id="id173">KEY_CURSOR_LEFT</a></li>
-<li><a class="reference internal" href="#key-cursor-right" id="id174">KEY_CURSOR_RIGHT</a></li>
-<li><a class="reference internal" href="#key-cursor-up" id="id175">KEY_CURSOR_UP</a></li>
-<li><a class="reference internal" href="#key-cursor-down" id="id176">KEY_CURSOR_DOWN</a></li>
-<li><a class="reference internal" href="#key-page-up" id="id177">KEY_PAGE_UP</a></li>
-<li><a class="reference internal" href="#key-page-down" id="id178">KEY_PAGE_DOWN</a></li>
-<li><a class="reference internal" href="#key-home" id="id179">KEY_HOME</a></li>
-<li><a class="reference internal" href="#key-end" id="id180">KEY_END</a></li>
-<li><a class="reference internal" href="#key-insert" id="id181">KEY_INSERT</a></li>
-<li><a class="reference internal" href="#key-delete" id="id182">KEY_DELETE</a></li>
-<li><a class="reference internal" href="#unstick" id="id183">UNSTICK</a></li>
-<li><a class="reference internal" href="#upper" id="id184">UPPER</a></li>
-<li><a class="reference internal" href="#shift" id="id185">SHIFT</a></li>
-<li><a class="reference internal" href="#control" id="id186">CONTROL</a></li>
-<li><a class="reference internal" href="#meta" id="id187">META</a></li>
-<li><a class="reference internal" href="#altgr" id="id188">ALTGR</a></li>
-<li><a class="reference internal" href="#gui" id="id189">GUI</a></li>
-<li><a class="reference internal" href="#key-escape" id="id190">KEY_ESCAPE</a></li>
-<li><a class="reference internal" href="#key-function" id="id191">KEY_FUNCTION</a></li>
-<li><a class="reference internal" href="#switchvt" id="id192">SWITCHVT</a></li>
-<li><a class="reference internal" href="#switchvt-prev" id="id193">SWITCHVT_PREV</a></li>
-<li><a class="reference internal" href="#switchvt-next" id="id194">SWITCHVT_NEXT</a></li>
-<li><a class="reference internal" href="#selectvt" id="id195">SELECTVT</a></li>
-<li><a class="reference internal" href="#selectvt-prev" id="id196">SELECTVT_PREV</a></li>
-<li><a class="reference internal" href="#selectvt-next" id="id197">SELECTVT_NEXT</a></li>
-<li><a class="reference internal" href="#brlkbd" id="id198">BRLKBD</a></li>
-<li><a class="reference internal" href="#brlucdots" id="id199">BRLUCDOTS</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#special-functions" id="id200">Special Functions</a><ul>
-<li><a class="reference internal" href="#setmark" id="id201">SETMARK</a></li>
-<li><a class="reference internal" href="#gotomark" id="id202">GOTOMARK</a></li>
-<li><a class="reference internal" href="#refresh" id="id203">REFRESH</a></li>
-<li><a class="reference internal" href="#refresh-line" id="id204">REFRESH_LINE</a></li>
-<li><a class="reference internal" href="#restartbrl" id="id205">RESTARTBRL</a></li>
-<li><a class="reference internal" href="#brl-stop" id="id206">BRL_STOP</a></li>
-<li><a class="reference internal" href="#brl-start" id="id207">BRL_START</a></li>
-<li><a class="reference internal" href="#restartspeech" id="id208">RESTARTSPEECH</a></li>
-<li><a class="reference internal" href="#spk-stop" id="id209">SPK_STOP</a></li>
-<li><a class="reference internal" href="#spk-start" id="id210">SPK_START</a></li>
-<li><a class="reference internal" href="#scr-stop" id="id211">SCR_STOP</a></li>
-<li><a class="reference internal" href="#scr-start" id="id212">SCR_START</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#internal-functions" id="id213">Internal Functions</a><ul>
-<li><a class="reference internal" href="#noop" id="id214">NOOP</a></li>
-<li><a class="reference internal" href="#offline" id="id215">OFFLINE</a></li>
-<li><a class="reference internal" href="#alert" id="id216">ALERT</a></li>
-<li><a class="reference internal" href="#passxt" id="id217">PASSXT</a></li>
-<li><a class="reference internal" href="#passat" id="id218">PASSAT</a></li>
-<li><a class="reference internal" href="#passps2" id="id219">PASSPS2</a></li>
-<li><a class="reference internal" href="#touch-at" id="id220">TOUCH_AT</a></li>
-</ul>
-</li>
+</div>
+<div class="section" id="alphabetical-command-index">
+<h2><a class="toc-backref" href="#id1">Alphabetical Command Index</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#alert">ALERT</a></li>
+<li><a class="reference internal" href="#altgr">ALTGR</a></li>
+<li><a class="reference internal" href="#aspk-cmp-words">ASPK_CMP_WORDS</a></li>
+<li><a class="reference internal" href="#aspk-del-chars">ASPK_DEL_CHARS</a></li>
+<li><a class="reference internal" href="#aspk-indent">ASPK_INDENT</a></li>
+<li><a class="reference internal" href="#aspk-ins-chars">ASPK_INS_CHARS</a></li>
+<li><a class="reference internal" href="#aspk-rep-chars">ASPK_REP_CHARS</a></li>
+<li><a class="reference internal" href="#aspk-sel-char">ASPK_SEL_CHAR</a></li>
+<li><a class="reference internal" href="#aspk-sel-line">ASPK_SEL_LINE</a></li>
+<li><a class="reference internal" href="#attrblink">ATTRBLINK</a></li>
+<li><a class="reference internal" href="#attrdn">ATTRDN</a></li>
+<li><a class="reference internal" href="#attrup">ATTRUP</a></li>
+<li><a class="reference internal" href="#attrvis">ATTRVIS</a></li>
+<li><a class="reference internal" href="#autorepeat">AUTOREPEAT</a></li>
+<li><a class="reference internal" href="#autospeak">AUTOSPEAK</a></li>
+<li><a class="reference internal" href="#back">BACK</a></li>
+<li><a class="reference internal" href="#bot">BOT</a></li>
+<li><a class="reference internal" href="#bot-left">BOT_LEFT</a></li>
+<li><a class="reference internal" href="#brlkbd">BRLKBD</a></li>
+<li><a class="reference internal" href="#brlucdots">BRLUCDOTS</a></li>
+<li><a class="reference internal" href="#brl-start">BRL_START</a></li>
+<li><a class="reference internal" href="#brl-stop">BRL_STOP</a></li>
+<li><a class="reference internal" href="#capblink">CAPBLINK</a></li>
+<li><a class="reference internal" href="#chrlt">CHRLT</a></li>
+<li><a class="reference internal" href="#chrrt">CHRRT</a></li>
+<li><a class="reference internal" href="#clip-add">CLIP_ADD</a></li>
+<li><a class="reference internal" href="#clip-append">CLIP_APPEND</a></li>
+<li><a class="reference internal" href="#clip-copy">CLIP_COPY</a></li>
+<li><a class="reference internal" href="#clip-new">CLIP_NEW</a></li>
+<li><a class="reference internal" href="#clip-restore">CLIP_RESTORE</a></li>
+<li><a class="reference internal" href="#clip-save">CLIP_SAVE</a></li>
+<li><a class="reference internal" href="#compbrl6">COMPBRL6</a></li>
+<li><a class="reference internal" href="#context">CONTEXT</a></li>
+<li><a class="reference internal" href="#contracted">CONTRACTED</a></li>
+<li><a class="reference internal" href="#control">CONTROL</a></li>
+<li><a class="reference internal" href="#copy-line">COPY_LINE</a></li>
+<li><a class="reference internal" href="#copy-rect">COPY_RECT</a></li>
+<li><a class="reference internal" href="#csrblink">CSRBLINK</a></li>
+<li><a class="reference internal" href="#csrhide">CSRHIDE</a></li>
+<li><a class="reference internal" href="#csrjmp-vert">CSRJMP_VERT</a></li>
+<li><a class="reference internal" href="#csrsize">CSRSIZE</a></li>
+<li><a class="reference internal" href="#csrtrk">CSRTRK</a></li>
+<li><a class="reference internal" href="#csrvis">CSRVIS</a></li>
+<li><a class="reference internal" href="#descchar">DESCCHAR</a></li>
+<li><a class="reference internal" href="#desc-curr-char">DESC_CURR_CHAR</a></li>
+<li><a class="reference internal" href="#dispmd">DISPMD</a></li>
+<li><a class="reference internal" href="#freeze">FREEZE</a></li>
+<li><a class="reference internal" href="#fwinlt">FWINLT</a></li>
+<li><a class="reference internal" href="#fwinltskip">FWINLTSKIP</a></li>
+<li><a class="reference internal" href="#fwinrt">FWINRT</a></li>
+<li><a class="reference internal" href="#fwinrtskip">FWINRTSKIP</a></li>
+<li><a class="reference internal" href="#gotoline">GOTOLINE</a></li>
+<li><a class="reference internal" href="#gotomark">GOTOMARK</a></li>
+<li><a class="reference internal" href="#gui">GUI</a></li>
+<li><a class="reference internal" href="#gui-app-alerts">GUI_APP_ALERTS</a></li>
+<li><a class="reference internal" href="#gui-app-list">GUI_APP_LIST</a></li>
+<li><a class="reference internal" href="#gui-app-menu">GUI_APP_MENU</a></li>
+<li><a class="reference internal" href="#gui-area-actv">GUI_AREA_ACTV</a></li>
+<li><a class="reference internal" href="#gui-area-next">GUI_AREA_NEXT</a></li>
+<li><a class="reference internal" href="#gui-area-prev">GUI_AREA_PREV</a></li>
+<li><a class="reference internal" href="#gui-back">GUI_BACK</a></li>
+<li><a class="reference internal" href="#gui-brl-actions">GUI_BRL_ACTIONS</a></li>
+<li><a class="reference internal" href="#gui-dev-options">GUI_DEV_OPTIONS</a></li>
+<li><a class="reference internal" href="#gui-dev-settings">GUI_DEV_SETTINGS</a></li>
+<li><a class="reference internal" href="#gui-home">GUI_HOME</a></li>
+<li><a class="reference internal" href="#gui-item-frst">GUI_ITEM_FRST</a></li>
+<li><a class="reference internal" href="#gui-item-last">GUI_ITEM_LAST</a></li>
+<li><a class="reference internal" href="#gui-item-next">GUI_ITEM_NEXT</a></li>
+<li><a class="reference internal" href="#gui-item-prev">GUI_ITEM_PREV</a></li>
+<li><a class="reference internal" href="#gui-title">GUI_TITLE</a></li>
+<li><a class="reference internal" href="#help">HELP</a></li>
+<li><a class="reference internal" href="#home">HOME</a></li>
+<li><a class="reference internal" href="#host-copy">HOST_COPY</a></li>
+<li><a class="reference internal" href="#host-cut">HOST_CUT</a></li>
+<li><a class="reference internal" href="#host-paste">HOST_PASTE</a></li>
+<li><a class="reference internal" href="#hwinlt">HWINLT</a></li>
+<li><a class="reference internal" href="#hwinrt">HWINRT</a></li>
+<li><a class="reference internal" href="#indicators">INDICATORS</a></li>
+<li><a class="reference internal" href="#info">INFO</a></li>
+<li><a class="reference internal" href="#key-backspace">KEY_BACKSPACE</a></li>
+<li><a class="reference internal" href="#key-cursor-down">KEY_CURSOR_DOWN</a></li>
+<li><a class="reference internal" href="#key-cursor-left">KEY_CURSOR_LEFT</a></li>
+<li><a class="reference internal" href="#key-cursor-right">KEY_CURSOR_RIGHT</a></li>
+<li><a class="reference internal" href="#key-cursor-up">KEY_CURSOR_UP</a></li>
+<li><a class="reference internal" href="#key-delete">KEY_DELETE</a></li>
+<li><a class="reference internal" href="#key-end">KEY_END</a></li>
+<li><a class="reference internal" href="#key-enter">KEY_ENTER</a></li>
+<li><a class="reference internal" href="#key-escape">KEY_ESCAPE</a></li>
+<li><a class="reference internal" href="#key-function">KEY_FUNCTION</a></li>
+<li><a class="reference internal" href="#key-home">KEY_HOME</a></li>
+<li><a class="reference internal" href="#key-insert">KEY_INSERT</a></li>
+<li><a class="reference internal" href="#key-page-down">KEY_PAGE_DOWN</a></li>
+<li><a class="reference internal" href="#key-page-up">KEY_PAGE_UP</a></li>
+<li><a class="reference internal" href="#key-tab">KEY_TAB</a></li>
+<li><a class="reference internal" href="#learn">LEARN</a></li>
+<li><a class="reference internal" href="#lnbeg">LNBEG</a></li>
+<li><a class="reference internal" href="#lndn">LNDN</a></li>
+<li><a class="reference internal" href="#lnend">LNEND</a></li>
+<li><a class="reference internal" href="#lnup">LNUP</a></li>
+<li><a class="reference internal" href="#menu-first-item">MENU_FIRST_ITEM</a></li>
+<li><a class="reference internal" href="#menu-last-item">MENU_LAST_ITEM</a></li>
+<li><a class="reference internal" href="#menu-next-item">MENU_NEXT_ITEM</a></li>
+<li><a class="reference internal" href="#menu-next-setting">MENU_NEXT_SETTING</a></li>
+<li><a class="reference internal" href="#menu-prev-item">MENU_PREV_ITEM</a></li>
+<li><a class="reference internal" href="#menu-prev-level">MENU_PREV_LEVEL</a></li>
+<li><a class="reference internal" href="#menu-prev-setting">MENU_PREV_SETTING</a></li>
+<li><a class="reference internal" href="#meta">META</a></li>
+<li><a class="reference internal" href="#mute">MUTE</a></li>
+<li><a class="reference internal" href="#noop">NOOP</a></li>
+<li><a class="reference internal" href="#nxdifchar">NXDIFCHAR</a></li>
+<li><a class="reference internal" href="#nxdifln">NXDIFLN</a></li>
+<li><a class="reference internal" href="#nxindent">NXINDENT</a></li>
+<li><a class="reference internal" href="#nxnbwin">NXNBWIN</a></li>
+<li><a class="reference internal" href="#nxpgrph">NXPGRPH</a></li>
+<li><a class="reference internal" href="#nxprompt">NXPROMPT</a></li>
+<li><a class="reference internal" href="#nxsearch">NXSEARCH</a></li>
+<li><a class="reference internal" href="#offline">OFFLINE</a></li>
+<li><a class="reference internal" href="#passat">PASSAT</a></li>
+<li><a class="reference internal" href="#passchar">PASSCHAR</a></li>
+<li><a class="reference internal" href="#passdots">PASSDOTS</a></li>
+<li><a class="reference internal" href="#passps2">PASSPS2</a></li>
+<li><a class="reference internal" href="#passxt">PASSXT</a></li>
+<li><a class="reference internal" href="#paste">PASTE</a></li>
+<li><a class="reference internal" href="#paste-history">PASTE_HISTORY</a></li>
+<li><a class="reference internal" href="#prdifchar">PRDIFCHAR</a></li>
+<li><a class="reference internal" href="#prdifln">PRDIFLN</a></li>
+<li><a class="reference internal" href="#prefload">PREFLOAD</a></li>
+<li><a class="reference internal" href="#prefmenu">PREFMENU</a></li>
+<li><a class="reference internal" href="#prefsave">PREFSAVE</a></li>
+<li><a class="reference internal" href="#prindent">PRINDENT</a></li>
+<li><a class="reference internal" href="#prnbwin">PRNBWIN</a></li>
+<li><a class="reference internal" href="#prpgrph">PRPGRPH</a></li>
+<li><a class="reference internal" href="#prprompt">PRPROMPT</a></li>
+<li><a class="reference internal" href="#prsearch">PRSEARCH</a></li>
+<li><a class="reference internal" href="#refresh">REFRESH</a></li>
+<li><a class="reference internal" href="#refresh-line">REFRESH_LINE</a></li>
+<li><a class="reference internal" href="#restartbrl">RESTARTBRL</a></li>
+<li><a class="reference internal" href="#restartspeech">RESTARTSPEECH</a></li>
+<li><a class="reference internal" href="#return">RETURN</a></li>
+<li><a class="reference internal" href="#route">ROUTE</a></li>
+<li><a class="reference internal" href="#route-curr-locn">ROUTE_CURR_LOCN</a></li>
+<li><a class="reference internal" href="#route-line">ROUTE_LINE</a></li>
+<li><a class="reference internal" href="#say-above">SAY_ABOVE</a></li>
+<li><a class="reference internal" href="#say-all">SAY_ALL</a></li>
+<li><a class="reference internal" href="#say-below">SAY_BELOW</a></li>
+<li><a class="reference internal" href="#say-faster">SAY_FASTER</a></li>
+<li><a class="reference internal" href="#say-higher">SAY_HIGHER</a></li>
+<li><a class="reference internal" href="#say-line">SAY_LINE</a></li>
+<li><a class="reference internal" href="#say-louder">SAY_LOUDER</a></li>
+<li><a class="reference internal" href="#say-lower">SAY_LOWER</a></li>
+<li><a class="reference internal" href="#say-slower">SAY_SLOWER</a></li>
+<li><a class="reference internal" href="#say-softer">SAY_SOFTER</a></li>
+<li><a class="reference internal" href="#scr-start">SCR_START</a></li>
+<li><a class="reference internal" href="#scr-stop">SCR_STOP</a></li>
+<li><a class="reference internal" href="#selectvt">SELECTVT</a></li>
+<li><a class="reference internal" href="#selectvt-next">SELECTVT_NEXT</a></li>
+<li><a class="reference internal" href="#selectvt-prev">SELECTVT_PREV</a></li>
+<li><a class="reference internal" href="#setleft">SETLEFT</a></li>
+<li><a class="reference internal" href="#setmark">SETMARK</a></li>
+<li><a class="reference internal" href="#set-attributes-table">SET_ATTRIBUTES_TABLE</a></li>
+<li><a class="reference internal" href="#set-contraction-table">SET_CONTRACTION_TABLE</a></li>
+<li><a class="reference internal" href="#set-keyboard-table">SET_KEYBOARD_TABLE</a></li>
+<li><a class="reference internal" href="#set-language-profile">SET_LANGUAGE_PROFILE</a></li>
+<li><a class="reference internal" href="#set-text-table">SET_TEXT_TABLE</a></li>
+<li><a class="reference internal" href="#shift">SHIFT</a></li>
+<li><a class="reference internal" href="#show-curr-locn">SHOW_CURR_LOCN</a></li>
+<li><a class="reference internal" href="#sixdots">SIXDOTS</a></li>
+<li><a class="reference internal" href="#skpblnkwins">SKPBLNKWINS</a></li>
+<li><a class="reference internal" href="#skpidlns">SKPIDLNS</a></li>
+<li><a class="reference internal" href="#slidewin">SLIDEWIN</a></li>
+<li><a class="reference internal" href="#speak-curr-char">SPEAK_CURR_CHAR</a></li>
+<li><a class="reference internal" href="#speak-curr-line">SPEAK_CURR_LINE</a></li>
+<li><a class="reference internal" href="#speak-curr-locn">SPEAK_CURR_LOCN</a></li>
+<li><a class="reference internal" href="#speak-curr-word">SPEAK_CURR_WORD</a></li>
+<li><a class="reference internal" href="#speak-frst-char">SPEAK_FRST_CHAR</a></li>
+<li><a class="reference internal" href="#speak-frst-line">SPEAK_FRST_LINE</a></li>
+<li><a class="reference internal" href="#speak-indent">SPEAK_INDENT</a></li>
+<li><a class="reference internal" href="#speak-last-char">SPEAK_LAST_CHAR</a></li>
+<li><a class="reference internal" href="#speak-last-line">SPEAK_LAST_LINE</a></li>
+<li><a class="reference internal" href="#speak-next-char">SPEAK_NEXT_CHAR</a></li>
+<li><a class="reference internal" href="#speak-next-line">SPEAK_NEXT_LINE</a></li>
+<li><a class="reference internal" href="#speak-next-word">SPEAK_NEXT_WORD</a></li>
+<li><a class="reference internal" href="#speak-prev-char">SPEAK_PREV_CHAR</a></li>
+<li><a class="reference internal" href="#speak-prev-line">SPEAK_PREV_LINE</a></li>
+<li><a class="reference internal" href="#speak-prev-word">SPEAK_PREV_WORD</a></li>
+<li><a class="reference internal" href="#spell-curr-word">SPELL_CURR_WORD</a></li>
+<li><a class="reference internal" href="#spkhome">SPKHOME</a></li>
+<li><a class="reference internal" href="#spk-start">SPK_START</a></li>
+<li><a class="reference internal" href="#spk-stop">SPK_STOP</a></li>
+<li><a class="reference internal" href="#switchvt">SWITCHVT</a></li>
+<li><a class="reference internal" href="#switchvt-next">SWITCHVT_NEXT</a></li>
+<li><a class="reference internal" href="#switchvt-prev">SWITCHVT_PREV</a></li>
+<li><a class="reference internal" href="#time">TIME</a></li>
+<li><a class="reference internal" href="#top">TOP</a></li>
+<li><a class="reference internal" href="#top-left">TOP_LEFT</a></li>
+<li><a class="reference internal" href="#touch-at">TOUCH_AT</a></li>
+<li><a class="reference internal" href="#touch-nav">TOUCH_NAV</a></li>
+<li><a class="reference internal" href="#tunes">TUNES</a></li>
+<li><a class="reference internal" href="#txtsel-all">TXTSEL_ALL</a></li>
+<li><a class="reference internal" href="#txtsel-clear">TXTSEL_CLEAR</a></li>
+<li><a class="reference internal" href="#txtsel-set">TXTSEL_SET</a></li>
+<li><a class="reference internal" href="#txtsel-start">TXTSEL_START</a></li>
+<li><a class="reference internal" href="#unstick">UNSTICK</a></li>
+<li><a class="reference internal" href="#upper">UPPER</a></li>
+<li><a class="reference internal" href="#windn">WINDN</a></li>
+<li><a class="reference internal" href="#winup">WINUP</a></li>
 </ul>
 </div>
 <div class="section" id="special-modes">
-<h2><a class="toc-backref" href="#id1">Special Modes</a></h2>
-<div class="section" id="help">
-<h3><a class="toc-backref" href="#id2">HELP</a></h3>
-<p>Enter/leave help display.</p>
-</div>
-<div class="section" id="learn">
-<h3><a class="toc-backref" href="#id3">LEARN</a></h3>
-<p>Enter/leave command learn mode.</p>
-</div>
-<div class="section" id="prefmenu">
-<h3><a class="toc-backref" href="#id4">PREFMENU</a></h3>
-<p>Enter/leave preferences menu.</p>
-</div>
-<div class="section" id="info">
-<h3><a class="toc-backref" href="#id5">INFO</a></h3>
-<p>Enter/leave status display.</p>
-</div>
-<div class="section" id="dispmd">
-<h3><a class="toc-backref" href="#id6">DISPMD</a></h3>
-<p>Set display mode attributes/text.</p>
+<h2><a class="toc-backref" href="#id2">Special Modes</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#help">HELP</a></li>
+<li><a class="reference internal" href="#learn">LEARN</a></li>
+<li><a class="reference internal" href="#prefmenu">PREFMENU</a></li>
+<li><a class="reference internal" href="#info">INFO</a></li>
+<li><a class="reference internal" href="#dispmd">DISPMD</a></li>
+<li><a class="reference internal" href="#freeze">FREEZE</a></li>
+<li><a class="reference internal" href="#descchar">DESCCHAR</a></li>
+<li><a class="reference internal" href="#time">TIME</a></li>
+<li><a class="reference internal" href="#indicators">INDICATORS</a></li>
+<li><a class="reference internal" href="#context">CONTEXT</a></li>
+</ul>
+<p id="help"><strong>HELP</strong> - Enter/leave help display.</p>
+<p id="learn"><strong>LEARN</strong> - Enter/leave command learn mode.</p>
+<p id="prefmenu"><strong>PREFMENU</strong> - Enter/leave preferences menu.</p>
+<p id="info"><strong>INFO</strong> - Enter/leave status display.</p>
+<p id="dispmd"><strong>DISPMD</strong> - Set display mode attributes/text.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="freeze">
-<h3><a class="toc-backref" href="#id7">FREEZE</a></h3>
-<p>Set screen image frozen/unfrozen.</p>
+<p id="freeze"><strong>FREEZE</strong> - Set screen image frozen/unfrozen.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="descchar">
-<h3><a class="toc-backref" href="#id8">DESCCHAR</a></h3>
-<p>Describe character.</p>
+<p id="descchar"><strong>DESCCHAR</strong> - Describe character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>a column number</li>
 </ul>
-</div>
-<div class="section" id="time">
-<h3><a class="toc-backref" href="#id9">TIME</a></h3>
-<p>Show current date and time.</p>
-</div>
-<div class="section" id="indicators">
-<h3><a class="toc-backref" href="#id10">INDICATORS</a></h3>
-<p>Show various device status indicators.</p>
-</div>
-<div class="section" id="context">
-<h3><a class="toc-backref" href="#id11">CONTEXT</a></h3>
-<p>Switch to command context.</p>
+<p id="time"><strong>TIME</strong> - Show current date and time.</p>
+<p id="indicators"><strong>INDICATORS</strong> - Show various device status indicators.</p>
+<p id="context"><strong>CONTEXT</strong> - Switch to command context.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
 </div>
 <div class="section" id="cursor-functions">
-<h2><a class="toc-backref" href="#id12">Cursor Functions</a></h2>
-<div class="section" id="home">
-<h3><a class="toc-backref" href="#id13">HOME</a></h3>
-<p>Go to screen cursor.</p>
+<h2><a class="toc-backref" href="#id3">Cursor Functions</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#home">HOME</a></li>
+<li><a class="reference internal" href="#back">BACK</a></li>
+<li><a class="reference internal" href="#return">RETURN</a></li>
+<li><a class="reference internal" href="#route">ROUTE</a></li>
+<li><a class="reference internal" href="#route-line">ROUTE_LINE</a></li>
+<li><a class="reference internal" href="#csrjmp-vert">CSRJMP_VERT</a></li>
+<li><a class="reference internal" href="#route-curr-locn">ROUTE_CURR_LOCN</a></li>
+</ul>
+<p id="home"><strong>HOME</strong> - Go to screen cursor.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="back">
-<h3><a class="toc-backref" href="#id14">BACK</a></h3>
-<p>Go back after cursor tracking.</p>
+<p id="back"><strong>BACK</strong> - Go back after cursor tracking.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="return">
-<h3><a class="toc-backref" href="#id15">RETURN</a></h3>
-<p>Go to screen cursor or go back after cursor tracking.</p>
+<p id="return"><strong>RETURN</strong> - Go to screen cursor or go back after cursor tracking.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="route">
-<h3><a class="toc-backref" href="#id16">ROUTE</a></h3>
-<p>Bring screen cursor to character.</p>
+<p id="route"><strong>ROUTE</strong> - Bring screen cursor to character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>a column number</li>
 </ul>
-</div>
-<div class="section" id="route-line">
-<h3><a class="toc-backref" href="#id17">ROUTE_LINE</a></h3>
-<p>Bring screen cursor to line.</p>
+<p id="route-line"><strong>ROUTE_LINE</strong> - Bring screen cursor to line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Row: scaled</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="csrjmp-vert">
-<h3><a class="toc-backref" href="#id18">CSRJMP_VERT</a></h3>
-<p>Bring screen cursor to current line.</p>
-</div>
-<div class="section" id="route-curr-locn">
-<h3><a class="toc-backref" href="#id19">ROUTE_CURR_LOCN</a></h3>
-<p>Bring screen cursor to speech cursor.</p>
-</div>
+<p id="csrjmp-vert"><strong>CSRJMP_VERT</strong> - Bring screen cursor to current line.</p>
+<p id="route-curr-locn"><strong>ROUTE_CURR_LOCN</strong> - Bring screen cursor to speech cursor.</p>
 </div>
 <div class="section" id="vertical-navigation">
-<h2><a class="toc-backref" href="#id20">Vertical Navigation</a></h2>
-<div class="section" id="lnup">
-<h3><a class="toc-backref" href="#id21">LNUP</a></h3>
-<p>Go up one line.</p>
+<h2><a class="toc-backref" href="#id4">Vertical Navigation</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#lnup">LNUP</a></li>
+<li><a class="reference internal" href="#lndn">LNDN</a></li>
+<li><a class="reference internal" href="#top">TOP</a></li>
+<li><a class="reference internal" href="#bot">BOT</a></li>
+<li><a class="reference internal" href="#top-left">TOP_LEFT</a></li>
+<li><a class="reference internal" href="#bot-left">BOT_LEFT</a></li>
+<li><a class="reference internal" href="#prdifln">PRDIFLN</a></li>
+<li><a class="reference internal" href="#nxdifln">NXDIFLN</a></li>
+<li><a class="reference internal" href="#attrup">ATTRUP</a></li>
+<li><a class="reference internal" href="#attrdn">ATTRDN</a></li>
+<li><a class="reference internal" href="#prpgrph">PRPGRPH</a></li>
+<li><a class="reference internal" href="#nxpgrph">NXPGRPH</a></li>
+<li><a class="reference internal" href="#prprompt">PRPROMPT</a></li>
+<li><a class="reference internal" href="#nxprompt">NXPROMPT</a></li>
+<li><a class="reference internal" href="#winup">WINUP</a></li>
+<li><a class="reference internal" href="#windn">WINDN</a></li>
+<li><a class="reference internal" href="#prindent">PRINDENT</a></li>
+<li><a class="reference internal" href="#nxindent">NXINDENT</a></li>
+<li><a class="reference internal" href="#prdifchar">PRDIFCHAR</a></li>
+<li><a class="reference internal" href="#nxdifchar">NXDIFCHAR</a></li>
+<li><a class="reference internal" href="#gotoline">GOTOLINE</a></li>
+</ul>
+<p id="lnup"><strong>LNUP</strong> - Go up one line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="lndn">
-<h3><a class="toc-backref" href="#id22">LNDN</a></h3>
-<p>Go down one line.</p>
+<p id="lndn"><strong>LNDN</strong> - Go down one line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="top">
-<h3><a class="toc-backref" href="#id23">TOP</a></h3>
-<p>Go to top line.</p>
+<p id="top"><strong>TOP</strong> - Go to top line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="bot">
-<h3><a class="toc-backref" href="#id24">BOT</a></h3>
-<p>Go to bottom line.</p>
+<p id="bot"><strong>BOT</strong> - Go to bottom line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="top-left">
-<h3><a class="toc-backref" href="#id25">TOP_LEFT</a></h3>
-<p>Go to beginning of top line.</p>
+<p id="top-left"><strong>TOP_LEFT</strong> - Go to beginning of top line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="bot-left">
-<h3><a class="toc-backref" href="#id26">BOT_LEFT</a></h3>
-<p>Go to beginning of bottom line.</p>
+<p id="bot-left"><strong>BOT_LEFT</strong> - Go to beginning of bottom line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="prdifln">
-<h3><a class="toc-backref" href="#id27">PRDIFLN</a></h3>
-<p>Go up to nearest line with different content.</p>
+<p id="prdifln"><strong>PRDIFLN</strong> - Go up to nearest line with different content.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="nxdifln">
-<h3><a class="toc-backref" href="#id28">NXDIFLN</a></h3>
-<p>Go down to nearest line with different content.</p>
+<p id="nxdifln"><strong>NXDIFLN</strong> - Go down to nearest line with different content.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="attrup">
-<h3><a class="toc-backref" href="#id29">ATTRUP</a></h3>
-<p>Go up to nearest line with different highlighting.</p>
+<p id="attrup"><strong>ATTRUP</strong> - Go up to nearest line with different highlighting.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="attrdn">
-<h3><a class="toc-backref" href="#id30">ATTRDN</a></h3>
-<p>Go down to nearest line with different highlighting.</p>
+<p id="attrdn"><strong>ATTRDN</strong> - Go down to nearest line with different highlighting.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="prpgrph">
-<h3><a class="toc-backref" href="#id31">PRPGRPH</a></h3>
-<p>Go up to first line of paragraph.</p>
+<p id="prpgrph"><strong>PRPGRPH</strong> - Go up to first line of paragraph.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="nxpgrph">
-<h3><a class="toc-backref" href="#id32">NXPGRPH</a></h3>
-<p>Go down to first line of next paragraph.</p>
+<p id="nxpgrph"><strong>NXPGRPH</strong> - Go down to first line of next paragraph.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="prprompt">
-<h3><a class="toc-backref" href="#id33">PRPROMPT</a></h3>
-<p>Go up to previous command prompt.</p>
+<p id="prprompt"><strong>PRPROMPT</strong> - Go up to previous command prompt.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="nxprompt">
-<h3><a class="toc-backref" href="#id34">NXPROMPT</a></h3>
-<p>Go down to next command prompt.</p>
+<p id="nxprompt"><strong>NXPROMPT</strong> - Go down to next command prompt.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="winup">
-<h3><a class="toc-backref" href="#id35">WINUP</a></h3>
-<p>Go up several lines.</p>
+<p id="winup"><strong>WINUP</strong> - Go up several lines.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="windn">
-<h3><a class="toc-backref" href="#id36">WINDN</a></h3>
-<p>Go down several lines.</p>
+<p id="windn"><strong>WINDN</strong> - Go down several lines.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="prindent">
-<h3><a class="toc-backref" href="#id37">PRINDENT</a></h3>
-<p>Go up to nearest line with less indent than character.</p>
+<p id="prindent"><strong>PRINDENT</strong> - Go up to nearest line with less indent than character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>a column number</li>
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="nxindent">
-<h3><a class="toc-backref" href="#id38">NXINDENT</a></h3>
-<p>Go down to nearest line with less indent than character.</p>
+<p id="nxindent"><strong>NXINDENT</strong> - Go down to nearest line with less indent than character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>a column number</li>
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="prdifchar">
-<h3><a class="toc-backref" href="#id39">PRDIFCHAR</a></h3>
-<p>Go up to nearest line with different character.</p>
+<p id="prdifchar"><strong>PRDIFCHAR</strong> - Go up to nearest line with different character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>a column number</li>
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="nxdifchar">
-<h3><a class="toc-backref" href="#id40">NXDIFCHAR</a></h3>
-<p>Go down to nearest line with different character.</p>
+<p id="nxdifchar"><strong>NXDIFCHAR</strong> - Go down to nearest line with different character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>a column number</li>
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="gotoline">
-<h3><a class="toc-backref" href="#id41">GOTOLINE</a></h3>
-<p>Go to selected line.</p>
+<p id="gotoline"><strong>GOTOLINE</strong> - Go to selected line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
@@ -923,1114 +832,799 @@ ul.auto-toc {
 <li>Vertical: toleft</li>
 </ul>
 </div>
-</div>
 <div class="section" id="horizontal-navigation">
-<h2><a class="toc-backref" href="#id42">Horizontal Navigation</a></h2>
-<div class="section" id="fwinlt">
-<h3><a class="toc-backref" href="#id43">FWINLT</a></h3>
-<p>Go backward one braille window.</p>
+<h2><a class="toc-backref" href="#id5">Horizontal Navigation</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#fwinlt">FWINLT</a></li>
+<li><a class="reference internal" href="#fwinrt">FWINRT</a></li>
+<li><a class="reference internal" href="#fwinltskip">FWINLTSKIP</a></li>
+<li><a class="reference internal" href="#fwinrtskip">FWINRTSKIP</a></li>
+<li><a class="reference internal" href="#prnbwin">PRNBWIN</a></li>
+<li><a class="reference internal" href="#nxnbwin">NXNBWIN</a></li>
+<li><a class="reference internal" href="#lnbeg">LNBEG</a></li>
+<li><a class="reference internal" href="#lnend">LNEND</a></li>
+<li><a class="reference internal" href="#chrlt">CHRLT</a></li>
+<li><a class="reference internal" href="#chrrt">CHRRT</a></li>
+<li><a class="reference internal" href="#hwinlt">HWINLT</a></li>
+<li><a class="reference internal" href="#hwinrt">HWINRT</a></li>
+<li><a class="reference internal" href="#setleft">SETLEFT</a></li>
+</ul>
+<p id="fwinlt"><strong>FWINLT</strong> - Go backward one braille window.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="fwinrt">
-<h3><a class="toc-backref" href="#id44">FWINRT</a></h3>
-<p>Go forward one braille window.</p>
+<p id="fwinrt"><strong>FWINRT</strong> - Go forward one braille window.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="fwinltskip">
-<h3><a class="toc-backref" href="#id45">FWINLTSKIP</a></h3>
-<p>Go backward skipping blank braille windows.</p>
+<p id="fwinltskip"><strong>FWINLTSKIP</strong> - Go backward skipping blank braille windows.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="fwinrtskip">
-<h3><a class="toc-backref" href="#id46">FWINRTSKIP</a></h3>
-<p>Go forward skipping blank braille windows.</p>
+<p id="fwinrtskip"><strong>FWINRTSKIP</strong> - Go forward skipping blank braille windows.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="prnbwin">
-<h3><a class="toc-backref" href="#id47">PRNBWIN</a></h3>
-<p>Go backward to nearest non-blank braille window.</p>
+<p id="prnbwin"><strong>PRNBWIN</strong> - Go backward to nearest non-blank braille window.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="nxnbwin">
-<h3><a class="toc-backref" href="#id48">NXNBWIN</a></h3>
-<p>Go forward to nearest non-blank braille window.</p>
+<p id="nxnbwin"><strong>NXNBWIN</strong> - Go forward to nearest non-blank braille window.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="lnbeg">
-<h3><a class="toc-backref" href="#id49">LNBEG</a></h3>
-<p>Go to beginning of line.</p>
+<p id="lnbeg"><strong>LNBEG</strong> - Go to beginning of line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="lnend">
-<h3><a class="toc-backref" href="#id50">LNEND</a></h3>
-<p>Go to end of line.</p>
+<p id="lnend"><strong>LNEND</strong> - Go to end of line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="chrlt">
-<h3><a class="toc-backref" href="#id51">CHRLT</a></h3>
-<p>Go left one character.</p>
+<p id="chrlt"><strong>CHRLT</strong> - Go left one character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="chrrt">
-<h3><a class="toc-backref" href="#id52">CHRRT</a></h3>
-<p>Go right one character.</p>
+<p id="chrrt"><strong>CHRRT</strong> - Go right one character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="hwinlt">
-<h3><a class="toc-backref" href="#id53">HWINLT</a></h3>
-<p>Go left half a braille window.</p>
+<p id="hwinlt"><strong>HWINLT</strong> - Go left half a braille window.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="hwinrt">
-<h3><a class="toc-backref" href="#id54">HWINRT</a></h3>
-<p>Go right half a braille window.</p>
+<p id="hwinrt"><strong>HWINRT</strong> - Go right half a braille window.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="setleft">
-<h3><a class="toc-backref" href="#id55">SETLEFT</a></h3>
-<p>Place left end of braille window at character.</p>
+<p id="setleft"><strong>SETLEFT</strong> - Place left end of braille window at character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>a column number</li>
 </ul>
-</div>
 </div>
 <div class="section" id="window-navigation">
-<h2><a class="toc-backref" href="#id56">Window Navigation</a></h2>
-<div class="section" id="gui-title">
-<h3><a class="toc-backref" href="#id57">GUI_TITLE</a></h3>
-<p>Show the window title.</p>
-</div>
-<div class="section" id="gui-brl-actions">
-<h3><a class="toc-backref" href="#id58">GUI_BRL_ACTIONS</a></h3>
-<p>Open the braille actions window.</p>
-</div>
-<div class="section" id="gui-home">
-<h3><a class="toc-backref" href="#id59">GUI_HOME</a></h3>
-<p>Go to the home screen.</p>
+<h2><a class="toc-backref" href="#id6">Window Navigation</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#gui-title">GUI_TITLE</a></li>
+<li><a class="reference internal" href="#gui-brl-actions">GUI_BRL_ACTIONS</a></li>
+<li><a class="reference internal" href="#gui-home">GUI_HOME</a></li>
+<li><a class="reference internal" href="#gui-back">GUI_BACK</a></li>
+<li><a class="reference internal" href="#gui-dev-settings">GUI_DEV_SETTINGS</a></li>
+<li><a class="reference internal" href="#gui-dev-options">GUI_DEV_OPTIONS</a></li>
+<li><a class="reference internal" href="#gui-app-list">GUI_APP_LIST</a></li>
+<li><a class="reference internal" href="#gui-app-menu">GUI_APP_MENU</a></li>
+<li><a class="reference internal" href="#gui-app-alerts">GUI_APP_ALERTS</a></li>
+<li><a class="reference internal" href="#gui-area-actv">GUI_AREA_ACTV</a></li>
+<li><a class="reference internal" href="#gui-area-prev">GUI_AREA_PREV</a></li>
+<li><a class="reference internal" href="#gui-area-next">GUI_AREA_NEXT</a></li>
+<li><a class="reference internal" href="#gui-item-frst">GUI_ITEM_FRST</a></li>
+<li><a class="reference internal" href="#gui-item-prev">GUI_ITEM_PREV</a></li>
+<li><a class="reference internal" href="#gui-item-next">GUI_ITEM_NEXT</a></li>
+<li><a class="reference internal" href="#gui-item-last">GUI_ITEM_LAST</a></li>
+</ul>
+<p id="gui-title"><strong>GUI_TITLE</strong> - Show the window title.</p>
+<p id="gui-brl-actions"><strong>GUI_BRL_ACTIONS</strong> - Open the braille actions window.</p>
+<p id="gui-home"><strong>GUI_HOME</strong> - Go to the home screen.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="gui-back">
-<h3><a class="toc-backref" href="#id60">GUI_BACK</a></h3>
-<p>Go back to the previous screen.</p>
+<p id="gui-back"><strong>GUI_BACK</strong> - Go back to the previous screen.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="gui-dev-settings">
-<h3><a class="toc-backref" href="#id61">GUI_DEV_SETTINGS</a></h3>
-<p>Open the device settings window.</p>
-</div>
-<div class="section" id="gui-dev-options">
-<h3><a class="toc-backref" href="#id62">GUI_DEV_OPTIONS</a></h3>
-<p>Open the device options window.</p>
-</div>
-<div class="section" id="gui-app-list">
-<h3><a class="toc-backref" href="#id63">GUI_APP_LIST</a></h3>
-<p>Open the application list window.</p>
-</div>
-<div class="section" id="gui-app-menu">
-<h3><a class="toc-backref" href="#id64">GUI_APP_MENU</a></h3>
-<p>Open the application-specific menu.</p>
-</div>
-<div class="section" id="gui-app-alerts">
-<h3><a class="toc-backref" href="#id65">GUI_APP_ALERTS</a></h3>
-<p>Open the application alerts window.</p>
-</div>
-<div class="section" id="gui-area-actv">
-<h3><a class="toc-backref" href="#id66">GUI_AREA_ACTV</a></h3>
-<p>Return to the active screen area.</p>
-</div>
-<div class="section" id="gui-area-prev">
-<h3><a class="toc-backref" href="#id67">GUI_AREA_PREV</a></h3>
-<p>Switch to the previous screen area.</p>
-</div>
-<div class="section" id="gui-area-next">
-<h3><a class="toc-backref" href="#id68">GUI_AREA_NEXT</a></h3>
-<p>Switch to the next screen area.</p>
-</div>
-<div class="section" id="gui-item-frst">
-<h3><a class="toc-backref" href="#id69">GUI_ITEM_FRST</a></h3>
-<p>Move to the first item in the screen area.</p>
-</div>
-<div class="section" id="gui-item-prev">
-<h3><a class="toc-backref" href="#id70">GUI_ITEM_PREV</a></h3>
-<p>Move to the previous item in the screen area.</p>
-</div>
-<div class="section" id="gui-item-next">
-<h3><a class="toc-backref" href="#id71">GUI_ITEM_NEXT</a></h3>
-<p>Move to the next item in the screen area.</p>
-</div>
-<div class="section" id="gui-item-last">
-<h3><a class="toc-backref" href="#id72">GUI_ITEM_LAST</a></h3>
-<p>Move to the last item in the screen area.</p>
-</div>
+<p id="gui-dev-settings"><strong>GUI_DEV_SETTINGS</strong> - Open the device settings window.</p>
+<p id="gui-dev-options"><strong>GUI_DEV_OPTIONS</strong> - Open the device options window.</p>
+<p id="gui-app-list"><strong>GUI_APP_LIST</strong> - Open the application list window.</p>
+<p id="gui-app-menu"><strong>GUI_APP_MENU</strong> - Open the application-specific menu.</p>
+<p id="gui-app-alerts"><strong>GUI_APP_ALERTS</strong> - Open the application alerts window.</p>
+<p id="gui-area-actv"><strong>GUI_AREA_ACTV</strong> - Return to the active screen area.</p>
+<p id="gui-area-prev"><strong>GUI_AREA_PREV</strong> - Switch to the previous screen area.</p>
+<p id="gui-area-next"><strong>GUI_AREA_NEXT</strong> - Switch to the next screen area.</p>
+<p id="gui-item-frst"><strong>GUI_ITEM_FRST</strong> - Move to the first item in the screen area.</p>
+<p id="gui-item-prev"><strong>GUI_ITEM_PREV</strong> - Move to the previous item in the screen area.</p>
+<p id="gui-item-next"><strong>GUI_ITEM_NEXT</strong> - Move to the next item in the screen area.</p>
+<p id="gui-item-last"><strong>GUI_ITEM_LAST</strong> - Move to the last item in the screen area.</p>
 </div>
 <div class="section" id="clipboard-functions">
-<h2><a class="toc-backref" href="#id73">Clipboard Functions</a></h2>
-<div class="section" id="clip-new">
-<h3><a class="toc-backref" href="#id74">CLIP_NEW</a></h3>
-<p>Start new clipboard at character.</p>
+<h2><a class="toc-backref" href="#id7">Clipboard Functions</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#clip-new">CLIP_NEW</a></li>
+<li><a class="reference internal" href="#clip-add">CLIP_ADD</a></li>
+<li><a class="reference internal" href="#copy-line">COPY_LINE</a></li>
+<li><a class="reference internal" href="#copy-rect">COPY_RECT</a></li>
+<li><a class="reference internal" href="#clip-copy">CLIP_COPY</a></li>
+<li><a class="reference internal" href="#clip-append">CLIP_APPEND</a></li>
+<li><a class="reference internal" href="#paste">PASTE</a></li>
+<li><a class="reference internal" href="#paste-history">PASTE_HISTORY</a></li>
+<li><a class="reference internal" href="#prsearch">PRSEARCH</a></li>
+<li><a class="reference internal" href="#nxsearch">NXSEARCH</a></li>
+<li><a class="reference internal" href="#clip-save">CLIP_SAVE</a></li>
+<li><a class="reference internal" href="#clip-restore">CLIP_RESTORE</a></li>
+</ul>
+<p id="clip-new"><strong>CLIP_NEW</strong> - Start new clipboard at character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>a column number</li>
 </ul>
-</div>
-<div class="section" id="clip-add">
-<h3><a class="toc-backref" href="#id75">CLIP_ADD</a></h3>
-<p>Append to clipboard from character.</p>
+<p id="clip-add"><strong>CLIP_ADD</strong> - Append to clipboard from character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>a column number</li>
 </ul>
-</div>
-<div class="section" id="copy-line">
-<h3><a class="toc-backref" href="#id76">COPY_LINE</a></h3>
-<p>Linear copy to character.</p>
+<p id="copy-line"><strong>COPY_LINE</strong> - Linear copy to character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>a column number</li>
 </ul>
-</div>
-<div class="section" id="copy-rect">
-<h3><a class="toc-backref" href="#id77">COPY_RECT</a></h3>
-<p>Rectangular copy to character.</p>
+<p id="copy-rect"><strong>COPY_RECT</strong> - Rectangular copy to character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>a column number</li>
 </ul>
-</div>
-<div class="section" id="clip-copy">
-<h3><a class="toc-backref" href="#id78">CLIP_COPY</a></h3>
-<p>Copy characters to clipboard.</p>
-</div>
-<div class="section" id="clip-append">
-<h3><a class="toc-backref" href="#id79">CLIP_APPEND</a></h3>
-<p>Append characters to clipboard.</p>
-</div>
-<div class="section" id="paste">
-<h3><a class="toc-backref" href="#id80">PASTE</a></h3>
-<p>Insert clipboard text after screen cursor.</p>
-</div>
-<div class="section" id="paste-history">
-<h3><a class="toc-backref" href="#id81">PASTE_HISTORY</a></h3>
-<p>Insert clipboard history entry after screen cursor.</p>
+<p id="clip-copy"><strong>CLIP_COPY</strong> - Copy characters to clipboard.</p>
+<p id="clip-append"><strong>CLIP_APPEND</strong> - Append characters to clipboard.</p>
+<p id="paste"><strong>PASTE</strong> - Insert clipboard text after screen cursor.</p>
+<p id="paste-history"><strong>PASTE_HISTORY</strong> - Insert clipboard history entry after screen cursor.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
-<div class="section" id="prsearch">
-<h3><a class="toc-backref" href="#id82">PRSEARCH</a></h3>
-<p>Search backward for clipboard text.</p>
-</div>
-<div class="section" id="nxsearch">
-<h3><a class="toc-backref" href="#id83">NXSEARCH</a></h3>
-<p>Search forward for clipboard text.</p>
-</div>
-<div class="section" id="clip-save">
-<h3><a class="toc-backref" href="#id84">CLIP_SAVE</a></h3>
-<p>Save clipboard to disk.</p>
-</div>
-<div class="section" id="clip-restore">
-<h3><a class="toc-backref" href="#id85">CLIP_RESTORE</a></h3>
-<p>Restore clipboard from disk.</p>
-</div>
+<p id="prsearch"><strong>PRSEARCH</strong> - Search backward for clipboard text.</p>
+<p id="nxsearch"><strong>NXSEARCH</strong> - Search forward for clipboard text.</p>
+<p id="clip-save"><strong>CLIP_SAVE</strong> - Save clipboard to disk.</p>
+<p id="clip-restore"><strong>CLIP_RESTORE</strong> - Restore clipboard from disk.</p>
 </div>
 <div class="section" id="text-selection-and-the-host-clipboard">
-<h2><a class="toc-backref" href="#id86">Text Selection and the Host Clipboard</a></h2>
-<div class="section" id="txtsel-clear">
-<h3><a class="toc-backref" href="#id87">TXTSEL_CLEAR</a></h3>
-<p>Clear the text selection.</p>
-</div>
-<div class="section" id="txtsel-set">
-<h3><a class="toc-backref" href="#id88">TXTSEL_SET</a></h3>
-<p>Set text selection.</p>
+<h2><a class="toc-backref" href="#id8">Text Selection and the Host Clipboard</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#txtsel-clear">TXTSEL_CLEAR</a></li>
+<li><a class="reference internal" href="#txtsel-set">TXTSEL_SET</a></li>
+<li><a class="reference internal" href="#txtsel-start">TXTSEL_START</a></li>
+<li><a class="reference internal" href="#txtsel-all">TXTSEL_ALL</a></li>
+<li><a class="reference internal" href="#host-copy">HOST_COPY</a></li>
+<li><a class="reference internal" href="#host-cut">HOST_CUT</a></li>
+<li><a class="reference internal" href="#host-paste">HOST_PASTE</a></li>
+</ul>
+<p id="txtsel-clear"><strong>TXTSEL_CLEAR</strong> - Clear the text selection.</p>
+<p id="txtsel-set"><strong>TXTSEL_SET</strong> - Set text selection.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
-<div class="section" id="txtsel-start">
-<h3><a class="toc-backref" href="#id89">TXTSEL_START</a></h3>
-<p>Start text selection.</p>
+<p id="txtsel-start"><strong>TXTSEL_START</strong> - Start text selection.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
-<div class="section" id="txtsel-all">
-<h3><a class="toc-backref" href="#id90">TXTSEL_ALL</a></h3>
-<p>Select all of the text.</p>
-</div>
-<div class="section" id="host-copy">
-<h3><a class="toc-backref" href="#id91">HOST_COPY</a></h3>
-<p>Copy selected text to host clipboard.</p>
-</div>
-<div class="section" id="host-cut">
-<h3><a class="toc-backref" href="#id92">HOST_CUT</a></h3>
-<p>Cut selected text to host clipboard.</p>
-</div>
-<div class="section" id="host-paste">
-<h3><a class="toc-backref" href="#id93">HOST_PASTE</a></h3>
-<p>Insert host clipboard text after screen cursor.</p>
-</div>
+<p id="txtsel-all"><strong>TXTSEL_ALL</strong> - Select all of the text.</p>
+<p id="host-copy"><strong>HOST_COPY</strong> - Copy selected text to host clipboard.</p>
+<p id="host-cut"><strong>HOST_CUT</strong> - Cut selected text to host clipboard.</p>
+<p id="host-paste"><strong>HOST_PASTE</strong> - Insert host clipboard text after screen cursor.</p>
 </div>
 <div class="section" id="configuration-functions">
-<h2><a class="toc-backref" href="#id94">Configuration Functions</a></h2>
-<div class="section" id="touch-nav">
-<h3><a class="toc-backref" href="#id95">TOUCH_NAV</a></h3>
-<p>Set touch navigation on/off.</p>
+<h2><a class="toc-backref" href="#id9">Configuration Functions</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#touch-nav">TOUCH_NAV</a></li>
+<li><a class="reference internal" href="#autorepeat">AUTOREPEAT</a></li>
+<li><a class="reference internal" href="#sixdots">SIXDOTS</a></li>
+<li><a class="reference internal" href="#contracted">CONTRACTED</a></li>
+<li><a class="reference internal" href="#compbrl6">COMPBRL6</a></li>
+<li><a class="reference internal" href="#skpidlns">SKPIDLNS</a></li>
+<li><a class="reference internal" href="#skpblnkwins">SKPBLNKWINS</a></li>
+<li><a class="reference internal" href="#slidewin">SLIDEWIN</a></li>
+<li><a class="reference internal" href="#csrtrk">CSRTRK</a></li>
+<li><a class="reference internal" href="#csrsize">CSRSIZE</a></li>
+<li><a class="reference internal" href="#csrvis">CSRVIS</a></li>
+<li><a class="reference internal" href="#csrhide">CSRHIDE</a></li>
+<li><a class="reference internal" href="#csrblink">CSRBLINK</a></li>
+<li><a class="reference internal" href="#attrvis">ATTRVIS</a></li>
+<li><a class="reference internal" href="#attrblink">ATTRBLINK</a></li>
+<li><a class="reference internal" href="#capblink">CAPBLINK</a></li>
+<li><a class="reference internal" href="#tunes">TUNES</a></li>
+<li><a class="reference internal" href="#set-text-table">SET_TEXT_TABLE</a></li>
+<li><a class="reference internal" href="#set-attributes-table">SET_ATTRIBUTES_TABLE</a></li>
+<li><a class="reference internal" href="#set-contraction-table">SET_CONTRACTION_TABLE</a></li>
+<li><a class="reference internal" href="#set-keyboard-table">SET_KEYBOARD_TABLE</a></li>
+<li><a class="reference internal" href="#set-language-profile">SET_LANGUAGE_PROFILE</a></li>
+</ul>
+<p id="touch-nav"><strong>TOUCH_NAV</strong> - Set touch navigation on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="autorepeat">
-<h3><a class="toc-backref" href="#id96">AUTOREPEAT</a></h3>
-<p>Set autorepeat on/off.</p>
+<p id="autorepeat"><strong>AUTOREPEAT</strong> - Set autorepeat on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="sixdots">
-<h3><a class="toc-backref" href="#id97">SIXDOTS</a></h3>
-<p>Set text style 6-dot/8-dot.</p>
+<p id="sixdots"><strong>SIXDOTS</strong> - Set text style 6-dot/8-dot.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="contracted">
-<h3><a class="toc-backref" href="#id98">CONTRACTED</a></h3>
-<p>Set contracted/computer braille.</p>
+<p id="contracted"><strong>CONTRACTED</strong> - Set contracted/computer braille.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="compbrl6">
-<h3><a class="toc-backref" href="#id99">COMPBRL6</a></h3>
-<p>Set six/eight dot computer braille.</p>
+<p id="compbrl6"><strong>COMPBRL6</strong> - Set six/eight dot computer braille.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="skpidlns">
-<h3><a class="toc-backref" href="#id100">SKPIDLNS</a></h3>
-<p>Set skipping of lines with identical content on/off.</p>
+<p id="skpidlns"><strong>SKPIDLNS</strong> - Set skipping of lines with identical content on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="skpblnkwins">
-<h3><a class="toc-backref" href="#id101">SKPBLNKWINS</a></h3>
-<p>Set skipping of blank braille windows on/off.</p>
+<p id="skpblnkwins"><strong>SKPBLNKWINS</strong> - Set skipping of blank braille windows on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="slidewin">
-<h3><a class="toc-backref" href="#id102">SLIDEWIN</a></h3>
-<p>Set sliding braille window on/off.</p>
+<p id="slidewin"><strong>SLIDEWIN</strong> - Set sliding braille window on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="csrtrk">
-<h3><a class="toc-backref" href="#id103">CSRTRK</a></h3>
-<p>Set track screen cursor on/off.</p>
+<p id="csrtrk"><strong>CSRTRK</strong> - Set track screen cursor on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="csrsize">
-<h3><a class="toc-backref" href="#id104">CSRSIZE</a></h3>
-<p>Set screen cursor style block/underline.</p>
+<p id="csrsize"><strong>CSRSIZE</strong> - Set screen cursor style block/underline.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="csrvis">
-<h3><a class="toc-backref" href="#id105">CSRVIS</a></h3>
-<p>Set screen cursor visibility on/off.</p>
+<p id="csrvis"><strong>CSRVIS</strong> - Set screen cursor visibility on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="csrhide">
-<h3><a class="toc-backref" href="#id106">CSRHIDE</a></h3>
-<p>Set hidden screen cursor on/off.</p>
+<p id="csrhide"><strong>CSRHIDE</strong> - Set hidden screen cursor on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="csrblink">
-<h3><a class="toc-backref" href="#id107">CSRBLINK</a></h3>
-<p>Set screen cursor blinking on/off.</p>
+<p id="csrblink"><strong>CSRBLINK</strong> - Set screen cursor blinking on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="attrvis">
-<h3><a class="toc-backref" href="#id108">ATTRVIS</a></h3>
-<p>Set attribute underlining on/off.</p>
+<p id="attrvis"><strong>ATTRVIS</strong> - Set attribute underlining on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="attrblink">
-<h3><a class="toc-backref" href="#id109">ATTRBLINK</a></h3>
-<p>Set attribute blinking on/off.</p>
+<p id="attrblink"><strong>ATTRBLINK</strong> - Set attribute blinking on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="capblink">
-<h3><a class="toc-backref" href="#id110">CAPBLINK</a></h3>
-<p>Set capital letter blinking on/off.</p>
+<p id="capblink"><strong>CAPBLINK</strong> - Set capital letter blinking on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="tunes">
-<h3><a class="toc-backref" href="#id111">TUNES</a></h3>
-<p>Set alert tunes on/off.</p>
+<p id="tunes"><strong>TUNES</strong> - Set alert tunes on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="set-text-table">
-<h3><a class="toc-backref" href="#id112">SET_TEXT_TABLE</a></h3>
-<p>Set text table.</p>
+<p id="set-text-table"><strong>SET_TEXT_TABLE</strong> - Set text table.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
-<div class="section" id="set-attributes-table">
-<h3><a class="toc-backref" href="#id113">SET_ATTRIBUTES_TABLE</a></h3>
-<p>Set attributes table.</p>
+<p id="set-attributes-table"><strong>SET_ATTRIBUTES_TABLE</strong> - Set attributes table.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
-<div class="section" id="set-contraction-table">
-<h3><a class="toc-backref" href="#id114">SET_CONTRACTION_TABLE</a></h3>
-<p>Set contraction table.</p>
+<p id="set-contraction-table"><strong>SET_CONTRACTION_TABLE</strong> - Set contraction table.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
-<div class="section" id="set-keyboard-table">
-<h3><a class="toc-backref" href="#id115">SET_KEYBOARD_TABLE</a></h3>
-<p>Set keyboard table.</p>
+<p id="set-keyboard-table"><strong>SET_KEYBOARD_TABLE</strong> - Set keyboard table.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
-<div class="section" id="set-language-profile">
-<h3><a class="toc-backref" href="#id116">SET_LANGUAGE_PROFILE</a></h3>
-<p>Set language profile.</p>
+<p id="set-language-profile"><strong>SET_LANGUAGE_PROFILE</strong> - Set language profile.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
 </div>
 <div class="section" id="menu-operations">
-<h2><a class="toc-backref" href="#id117">Menu Operations</a></h2>
-<div class="section" id="menu-prev-item">
-<h3><a class="toc-backref" href="#id118">MENU_PREV_ITEM</a></h3>
-<p>Go up to previous item.</p>
+<h2><a class="toc-backref" href="#id10">Menu Operations</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#menu-prev-item">MENU_PREV_ITEM</a></li>
+<li><a class="reference internal" href="#menu-next-item">MENU_NEXT_ITEM</a></li>
+<li><a class="reference internal" href="#menu-first-item">MENU_FIRST_ITEM</a></li>
+<li><a class="reference internal" href="#menu-last-item">MENU_LAST_ITEM</a></li>
+<li><a class="reference internal" href="#menu-prev-setting">MENU_PREV_SETTING</a></li>
+<li><a class="reference internal" href="#menu-next-setting">MENU_NEXT_SETTING</a></li>
+<li><a class="reference internal" href="#menu-prev-level">MENU_PREV_LEVEL</a></li>
+<li><a class="reference internal" href="#prefload">PREFLOAD</a></li>
+<li><a class="reference internal" href="#prefsave">PREFSAVE</a></li>
+</ul>
+<p id="menu-prev-item"><strong>MENU_PREV_ITEM</strong> - Go up to previous item.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="menu-next-item">
-<h3><a class="toc-backref" href="#id119">MENU_NEXT_ITEM</a></h3>
-<p>Go down to next item.</p>
+<p id="menu-next-item"><strong>MENU_NEXT_ITEM</strong> - Go down to next item.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="menu-first-item">
-<h3><a class="toc-backref" href="#id120">MENU_FIRST_ITEM</a></h3>
-<p>Go up to first item.</p>
+<p id="menu-first-item"><strong>MENU_FIRST_ITEM</strong> - Go up to first item.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="menu-last-item">
-<h3><a class="toc-backref" href="#id121">MENU_LAST_ITEM</a></h3>
-<p>Go down to last item.</p>
+<p id="menu-last-item"><strong>MENU_LAST_ITEM</strong> - Go down to last item.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="menu-prev-setting">
-<h3><a class="toc-backref" href="#id122">MENU_PREV_SETTING</a></h3>
-<p>Select previous choice.</p>
-</div>
-<div class="section" id="menu-next-setting">
-<h3><a class="toc-backref" href="#id123">MENU_NEXT_SETTING</a></h3>
-<p>Select next choice.</p>
-</div>
-<div class="section" id="menu-prev-level">
-<h3><a class="toc-backref" href="#id124">MENU_PREV_LEVEL</a></h3>
-<p>Go to previous menu level.</p>
+<p id="menu-prev-setting"><strong>MENU_PREV_SETTING</strong> - Select previous choice.</p>
+<p id="menu-next-setting"><strong>MENU_NEXT_SETTING</strong> - Select next choice.</p>
+<p id="menu-prev-level"><strong>MENU_PREV_LEVEL</strong> - Go to previous menu level.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="prefload">
-<h3><a class="toc-backref" href="#id125">PREFLOAD</a></h3>
-<p>Restore preferences from disk.</p>
-</div>
-<div class="section" id="prefsave">
-<h3><a class="toc-backref" href="#id126">PREFSAVE</a></h3>
-<p>Save preferences to disk.</p>
-</div>
+<p id="prefload"><strong>PREFLOAD</strong> - Restore preferences from disk.</p>
+<p id="prefsave"><strong>PREFSAVE</strong> - Save preferences to disk.</p>
 </div>
 <div class="section" id="speech-functions">
-<h2><a class="toc-backref" href="#id127">Speech Functions</a></h2>
-<div class="section" id="mute">
-<h3><a class="toc-backref" href="#id128">MUTE</a></h3>
-<p>Stop speaking.</p>
-</div>
-<div class="section" id="say-line">
-<h3><a class="toc-backref" href="#id129">SAY_LINE</a></h3>
-<p>Speak current line.</p>
-</div>
-<div class="section" id="say-all">
-<h3><a class="toc-backref" href="#id130">SAY_ALL</a></h3>
-<p>Speak from top of screen through bottom of screen.</p>
-</div>
-<div class="section" id="say-above">
-<h3><a class="toc-backref" href="#id131">SAY_ABOVE</a></h3>
-<p>Speak from top of screen through current line.</p>
-</div>
-<div class="section" id="say-below">
-<h3><a class="toc-backref" href="#id132">SAY_BELOW</a></h3>
-<p>Speak from current line through bottom of screen.</p>
-</div>
-<div class="section" id="spkhome">
-<h3><a class="toc-backref" href="#id133">SPKHOME</a></h3>
-<p>Go to current speaking position.</p>
+<h2><a class="toc-backref" href="#id11">Speech Functions</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#mute">MUTE</a></li>
+<li><a class="reference internal" href="#say-line">SAY_LINE</a></li>
+<li><a class="reference internal" href="#say-all">SAY_ALL</a></li>
+<li><a class="reference internal" href="#say-above">SAY_ABOVE</a></li>
+<li><a class="reference internal" href="#say-below">SAY_BELOW</a></li>
+<li><a class="reference internal" href="#spkhome">SPKHOME</a></li>
+<li><a class="reference internal" href="#say-softer">SAY_SOFTER</a></li>
+<li><a class="reference internal" href="#say-louder">SAY_LOUDER</a></li>
+<li><a class="reference internal" href="#say-slower">SAY_SLOWER</a></li>
+<li><a class="reference internal" href="#say-faster">SAY_FASTER</a></li>
+<li><a class="reference internal" href="#say-lower">SAY_LOWER</a></li>
+<li><a class="reference internal" href="#say-higher">SAY_HIGHER</a></li>
+<li><a class="reference internal" href="#autospeak">AUTOSPEAK</a></li>
+<li><a class="reference internal" href="#aspk-sel-line">ASPK_SEL_LINE</a></li>
+<li><a class="reference internal" href="#aspk-sel-char">ASPK_SEL_CHAR</a></li>
+<li><a class="reference internal" href="#aspk-ins-chars">ASPK_INS_CHARS</a></li>
+<li><a class="reference internal" href="#aspk-del-chars">ASPK_DEL_CHARS</a></li>
+<li><a class="reference internal" href="#aspk-rep-chars">ASPK_REP_CHARS</a></li>
+<li><a class="reference internal" href="#aspk-cmp-words">ASPK_CMP_WORDS</a></li>
+<li><a class="reference internal" href="#aspk-indent">ASPK_INDENT</a></li>
+</ul>
+<p id="mute"><strong>MUTE</strong> - Stop speaking.</p>
+<p id="say-line"><strong>SAY_LINE</strong> - Speak current line.</p>
+<p id="say-all"><strong>SAY_ALL</strong> - Speak from top of screen through bottom of screen.</p>
+<p id="say-above"><strong>SAY_ABOVE</strong> - Speak from top of screen through current line.</p>
+<p id="say-below"><strong>SAY_BELOW</strong> - Speak from current line through bottom of screen.</p>
+<p id="spkhome"><strong>SPKHOME</strong> - Go to current speaking position.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="say-softer">
-<h3><a class="toc-backref" href="#id134">SAY_SOFTER</a></h3>
-<p>Decrease speaking volume.</p>
-</div>
-<div class="section" id="say-louder">
-<h3><a class="toc-backref" href="#id135">SAY_LOUDER</a></h3>
-<p>Increase speaking volume.</p>
-</div>
-<div class="section" id="say-slower">
-<h3><a class="toc-backref" href="#id136">SAY_SLOWER</a></h3>
-<p>Decrease speaking rate.</p>
-</div>
-<div class="section" id="say-faster">
-<h3><a class="toc-backref" href="#id137">SAY_FASTER</a></h3>
-<p>Increase speaking rate.</p>
-</div>
-<div class="section" id="say-lower">
-<h3><a class="toc-backref" href="#id138">SAY_LOWER</a></h3>
-<p>Decrease speaking pitch.</p>
-</div>
-<div class="section" id="say-higher">
-<h3><a class="toc-backref" href="#id139">SAY_HIGHER</a></h3>
-<p>Increase speaking pitch.</p>
-</div>
-<div class="section" id="autospeak">
-<h3><a class="toc-backref" href="#id140">AUTOSPEAK</a></h3>
-<p>Set autospeak on/off.</p>
+<p id="say-softer"><strong>SAY_SOFTER</strong> - Decrease speaking volume.</p>
+<p id="say-louder"><strong>SAY_LOUDER</strong> - Increase speaking volume.</p>
+<p id="say-slower"><strong>SAY_SLOWER</strong> - Decrease speaking rate.</p>
+<p id="say-faster"><strong>SAY_FASTER</strong> - Increase speaking rate.</p>
+<p id="say-lower"><strong>SAY_LOWER</strong> - Decrease speaking pitch.</p>
+<p id="say-higher"><strong>SAY_HIGHER</strong> - Increase speaking pitch.</p>
+<p id="autospeak"><strong>AUTOSPEAK</strong> - Set autospeak on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="aspk-sel-line">
-<h3><a class="toc-backref" href="#id141">ASPK_SEL_LINE</a></h3>
-<p>Set autospeak selected line on/off.</p>
+<p id="aspk-sel-line"><strong>ASPK_SEL_LINE</strong> - Set autospeak selected line on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="aspk-sel-char">
-<h3><a class="toc-backref" href="#id142">ASPK_SEL_CHAR</a></h3>
-<p>Set autospeak selected character on/off.</p>
+<p id="aspk-sel-char"><strong>ASPK_SEL_CHAR</strong> - Set autospeak selected character on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="aspk-ins-chars">
-<h3><a class="toc-backref" href="#id143">ASPK_INS_CHARS</a></h3>
-<p>Set autospeak inserted characters on/off.</p>
+<p id="aspk-ins-chars"><strong>ASPK_INS_CHARS</strong> - Set autospeak inserted characters on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="aspk-del-chars">
-<h3><a class="toc-backref" href="#id144">ASPK_DEL_CHARS</a></h3>
-<p>Set autospeak deleted characters on/off.</p>
+<p id="aspk-del-chars"><strong>ASPK_DEL_CHARS</strong> - Set autospeak deleted characters on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="aspk-rep-chars">
-<h3><a class="toc-backref" href="#id145">ASPK_REP_CHARS</a></h3>
-<p>Set autospeak replaced characters on/off.</p>
+<p id="aspk-rep-chars"><strong>ASPK_REP_CHARS</strong> - Set autospeak replaced characters on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="aspk-cmp-words">
-<h3><a class="toc-backref" href="#id146">ASPK_CMP_WORDS</a></h3>
-<p>Set autospeak completed words on/off.</p>
+<p id="aspk-cmp-words"><strong>ASPK_CMP_WORDS</strong> - Set autospeak completed words on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="aspk-indent">
-<h3><a class="toc-backref" href="#id147">ASPK_INDENT</a></h3>
-<p>Set autospeak indent of current line on/off.</p>
+<p id="aspk-indent"><strong>ASPK_INDENT</strong> - Set autospeak indent of current line on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
 </div>
 <div class="section" id="speech-navigation">
-<h2><a class="toc-backref" href="#id148">Speech Navigation</a></h2>
-<div class="section" id="speak-curr-char">
-<h3><a class="toc-backref" href="#id149">SPEAK_CURR_CHAR</a></h3>
-<p>Speak current character.</p>
-</div>
-<div class="section" id="desc-curr-char">
-<h3><a class="toc-backref" href="#id150">DESC_CURR_CHAR</a></h3>
-<p>Describe current character.</p>
-</div>
-<div class="section" id="speak-prev-char">
-<h3><a class="toc-backref" href="#id151">SPEAK_PREV_CHAR</a></h3>
-<p>Go to and speak previous character.</p>
+<h2><a class="toc-backref" href="#id12">Speech Navigation</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#speak-curr-char">SPEAK_CURR_CHAR</a></li>
+<li><a class="reference internal" href="#desc-curr-char">DESC_CURR_CHAR</a></li>
+<li><a class="reference internal" href="#speak-prev-char">SPEAK_PREV_CHAR</a></li>
+<li><a class="reference internal" href="#speak-next-char">SPEAK_NEXT_CHAR</a></li>
+<li><a class="reference internal" href="#speak-frst-char">SPEAK_FRST_CHAR</a></li>
+<li><a class="reference internal" href="#speak-last-char">SPEAK_LAST_CHAR</a></li>
+<li><a class="reference internal" href="#speak-curr-word">SPEAK_CURR_WORD</a></li>
+<li><a class="reference internal" href="#spell-curr-word">SPELL_CURR_WORD</a></li>
+<li><a class="reference internal" href="#speak-prev-word">SPEAK_PREV_WORD</a></li>
+<li><a class="reference internal" href="#speak-next-word">SPEAK_NEXT_WORD</a></li>
+<li><a class="reference internal" href="#speak-curr-line">SPEAK_CURR_LINE</a></li>
+<li><a class="reference internal" href="#speak-prev-line">SPEAK_PREV_LINE</a></li>
+<li><a class="reference internal" href="#speak-next-line">SPEAK_NEXT_LINE</a></li>
+<li><a class="reference internal" href="#speak-frst-line">SPEAK_FRST_LINE</a></li>
+<li><a class="reference internal" href="#speak-last-line">SPEAK_LAST_LINE</a></li>
+<li><a class="reference internal" href="#speak-indent">SPEAK_INDENT</a></li>
+<li><a class="reference internal" href="#speak-curr-locn">SPEAK_CURR_LOCN</a></li>
+<li><a class="reference internal" href="#show-curr-locn">SHOW_CURR_LOCN</a></li>
+</ul>
+<p id="speak-curr-char"><strong>SPEAK_CURR_CHAR</strong> - Speak current character.</p>
+<p id="desc-curr-char"><strong>DESC_CURR_CHAR</strong> - Describe current character.</p>
+<p id="speak-prev-char"><strong>SPEAK_PREV_CHAR</strong> - Go to and speak previous character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="speak-next-char">
-<h3><a class="toc-backref" href="#id152">SPEAK_NEXT_CHAR</a></h3>
-<p>Go to and speak next character.</p>
+<p id="speak-next-char"><strong>SPEAK_NEXT_CHAR</strong> - Go to and speak next character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="speak-frst-char">
-<h3><a class="toc-backref" href="#id153">SPEAK_FRST_CHAR</a></h3>
-<p>Go to and speak first non-blank character on line.</p>
+<p id="speak-frst-char"><strong>SPEAK_FRST_CHAR</strong> - Go to and speak first non-blank character on line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="speak-last-char">
-<h3><a class="toc-backref" href="#id154">SPEAK_LAST_CHAR</a></h3>
-<p>Go to and speak last non-blank character on line.</p>
+<p id="speak-last-char"><strong>SPEAK_LAST_CHAR</strong> - Go to and speak last non-blank character on line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="speak-curr-word">
-<h3><a class="toc-backref" href="#id155">SPEAK_CURR_WORD</a></h3>
-<p>Speak current word.</p>
-</div>
-<div class="section" id="spell-curr-word">
-<h3><a class="toc-backref" href="#id156">SPELL_CURR_WORD</a></h3>
-<p>Spell current word.</p>
-</div>
-<div class="section" id="speak-prev-word">
-<h3><a class="toc-backref" href="#id157">SPEAK_PREV_WORD</a></h3>
-<p>Go to and speak previous word.</p>
+<p id="speak-curr-word"><strong>SPEAK_CURR_WORD</strong> - Speak current word.</p>
+<p id="spell-curr-word"><strong>SPELL_CURR_WORD</strong> - Spell current word.</p>
+<p id="speak-prev-word"><strong>SPEAK_PREV_WORD</strong> - Go to and speak previous word.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="speak-next-word">
-<h3><a class="toc-backref" href="#id158">SPEAK_NEXT_WORD</a></h3>
-<p>Go to and speak next word.</p>
+<p id="speak-next-word"><strong>SPEAK_NEXT_WORD</strong> - Go to and speak next word.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="speak-curr-line">
-<h3><a class="toc-backref" href="#id159">SPEAK_CURR_LINE</a></h3>
-<p>Speak current line.</p>
-</div>
-<div class="section" id="speak-prev-line">
-<h3><a class="toc-backref" href="#id160">SPEAK_PREV_LINE</a></h3>
-<p>Go to and speak previous line.</p>
+<p id="speak-curr-line"><strong>SPEAK_CURR_LINE</strong> - Speak current line.</p>
+<p id="speak-prev-line"><strong>SPEAK_PREV_LINE</strong> - Go to and speak previous line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="speak-next-line">
-<h3><a class="toc-backref" href="#id161">SPEAK_NEXT_LINE</a></h3>
-<p>Go to and speak next line.</p>
+<p id="speak-next-line"><strong>SPEAK_NEXT_LINE</strong> - Go to and speak next line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="speak-frst-line">
-<h3><a class="toc-backref" href="#id162">SPEAK_FRST_LINE</a></h3>
-<p>Go to and speak first non-blank line on screen.</p>
+<p id="speak-frst-line"><strong>SPEAK_FRST_LINE</strong> - Go to and speak first non-blank line on screen.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="speak-last-line">
-<h3><a class="toc-backref" href="#id163">SPEAK_LAST_LINE</a></h3>
-<p>Go to and speak last non-blank line on screen.</p>
+<p id="speak-last-line"><strong>SPEAK_LAST_LINE</strong> - Go to and speak last non-blank line on screen.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="speak-indent">
-<h3><a class="toc-backref" href="#id164">SPEAK_INDENT</a></h3>
-<p>Speak indent of current line.</p>
-</div>
-<div class="section" id="speak-curr-locn">
-<h3><a class="toc-backref" href="#id165">SPEAK_CURR_LOCN</a></h3>
-<p>Speak speech cursor location.</p>
-</div>
-<div class="section" id="show-curr-locn">
-<h3><a class="toc-backref" href="#id166">SHOW_CURR_LOCN</a></h3>
-<p>Set speech cursor visibility on/off.</p>
+<p id="speak-indent"><strong>SPEAK_INDENT</strong> - Speak indent of current line.</p>
+<p id="speak-curr-locn"><strong>SPEAK_CURR_LOCN</strong> - Speak speech cursor location.</p>
+<p id="show-curr-locn"><strong>SHOW_CURR_LOCN</strong> - Set speech cursor visibility on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
 </div>
-</div>
 <div class="section" id="keyboard-input">
-<h2><a class="toc-backref" href="#id167">Keyboard Input</a></h2>
-<div class="section" id="passdots">
-<h3><a class="toc-backref" href="#id168">PASSDOTS</a></h3>
-<p>Type braille dots.</p>
+<h2><a class="toc-backref" href="#id13">Keyboard Input</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#passdots">PASSDOTS</a></li>
+<li><a class="reference internal" href="#passchar">PASSCHAR</a></li>
+<li><a class="reference internal" href="#key-backspace">KEY_BACKSPACE</a></li>
+<li><a class="reference internal" href="#key-enter">KEY_ENTER</a></li>
+<li><a class="reference internal" href="#key-tab">KEY_TAB</a></li>
+<li><a class="reference internal" href="#key-cursor-left">KEY_CURSOR_LEFT</a></li>
+<li><a class="reference internal" href="#key-cursor-right">KEY_CURSOR_RIGHT</a></li>
+<li><a class="reference internal" href="#key-cursor-up">KEY_CURSOR_UP</a></li>
+<li><a class="reference internal" href="#key-cursor-down">KEY_CURSOR_DOWN</a></li>
+<li><a class="reference internal" href="#key-page-up">KEY_PAGE_UP</a></li>
+<li><a class="reference internal" href="#key-page-down">KEY_PAGE_DOWN</a></li>
+<li><a class="reference internal" href="#key-home">KEY_HOME</a></li>
+<li><a class="reference internal" href="#key-end">KEY_END</a></li>
+<li><a class="reference internal" href="#key-insert">KEY_INSERT</a></li>
+<li><a class="reference internal" href="#key-delete">KEY_DELETE</a></li>
+<li><a class="reference internal" href="#unstick">UNSTICK</a></li>
+<li><a class="reference internal" href="#upper">UPPER</a></li>
+<li><a class="reference internal" href="#shift">SHIFT</a></li>
+<li><a class="reference internal" href="#control">CONTROL</a></li>
+<li><a class="reference internal" href="#meta">META</a></li>
+<li><a class="reference internal" href="#altgr">ALTGR</a></li>
+<li><a class="reference internal" href="#gui">GUI</a></li>
+<li><a class="reference internal" href="#key-escape">KEY_ESCAPE</a></li>
+<li><a class="reference internal" href="#key-function">KEY_FUNCTION</a></li>
+<li><a class="reference internal" href="#switchvt">SWITCHVT</a></li>
+<li><a class="reference internal" href="#switchvt-prev">SWITCHVT_PREV</a></li>
+<li><a class="reference internal" href="#switchvt-next">SWITCHVT_NEXT</a></li>
+<li><a class="reference internal" href="#selectvt">SELECTVT</a></li>
+<li><a class="reference internal" href="#selectvt-prev">SELECTVT_PREV</a></li>
+<li><a class="reference internal" href="#selectvt-next">SELECTVT_NEXT</a></li>
+<li><a class="reference internal" href="#brlkbd">BRLKBD</a></li>
+<li><a class="reference internal" href="#brlucdots">BRLUCDOTS</a></li>
+</ul>
+<p id="passdots"><strong>PASSDOTS</strong> - Type braille dots.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 <li>Character: upper, escaped</li>
 <li>Braille: dot1, dot2, dot3, dot4, dot5, dot6, dot7, dot8, space</li>
 </ul>
-</div>
-<div class="section" id="passchar">
-<h3><a class="toc-backref" href="#id169">PASSCHAR</a></h3>
-<p>Type unicode character.</p>
+<p id="passchar"><strong>PASSCHAR</strong> - Type unicode character.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>a single character</li>
 <li>Input: shift, control, meta, altgr, gui</li>
 <li>Character: upper, escaped</li>
 </ul>
-</div>
-<div class="section" id="key-backspace">
-<h3><a class="toc-backref" href="#id170">KEY_BACKSPACE</a></h3>
-<p>Backspace key.</p>
+<p id="key-backspace"><strong>KEY_BACKSPACE</strong> - Backspace key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="key-enter">
-<h3><a class="toc-backref" href="#id171">KEY_ENTER</a></h3>
-<p>Enter key.</p>
+<p id="key-enter"><strong>KEY_ENTER</strong> - Enter key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="key-tab">
-<h3><a class="toc-backref" href="#id172">KEY_TAB</a></h3>
-<p>Tab key.</p>
+<p id="key-tab"><strong>KEY_TAB</strong> - Tab key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="key-cursor-left">
-<h3><a class="toc-backref" href="#id173">KEY_CURSOR_LEFT</a></h3>
-<p>Cursor-left key.</p>
+<p id="key-cursor-left"><strong>KEY_CURSOR_LEFT</strong> - Cursor-left key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="key-cursor-right">
-<h3><a class="toc-backref" href="#id174">KEY_CURSOR_RIGHT</a></h3>
-<p>Cursor-right key.</p>
+<p id="key-cursor-right"><strong>KEY_CURSOR_RIGHT</strong> - Cursor-right key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="key-cursor-up">
-<h3><a class="toc-backref" href="#id175">KEY_CURSOR_UP</a></h3>
-<p>Cursor-up key.</p>
+<p id="key-cursor-up"><strong>KEY_CURSOR_UP</strong> - Cursor-up key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="key-cursor-down">
-<h3><a class="toc-backref" href="#id176">KEY_CURSOR_DOWN</a></h3>
-<p>Cursor-down key.</p>
+<p id="key-cursor-down"><strong>KEY_CURSOR_DOWN</strong> - Cursor-down key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="key-page-up">
-<h3><a class="toc-backref" href="#id177">KEY_PAGE_UP</a></h3>
-<p>Page-up key.</p>
+<p id="key-page-up"><strong>KEY_PAGE_UP</strong> - Page-up key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="key-page-down">
-<h3><a class="toc-backref" href="#id178">KEY_PAGE_DOWN</a></h3>
-<p>Page-down key.</p>
+<p id="key-page-down"><strong>KEY_PAGE_DOWN</strong> - Page-down key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="key-home">
-<h3><a class="toc-backref" href="#id179">KEY_HOME</a></h3>
-<p>Home key.</p>
+<p id="key-home"><strong>KEY_HOME</strong> - Home key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="key-end">
-<h3><a class="toc-backref" href="#id180">KEY_END</a></h3>
-<p>End key.</p>
+<p id="key-end"><strong>KEY_END</strong> - End key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="key-insert">
-<h3><a class="toc-backref" href="#id181">KEY_INSERT</a></h3>
-<p>Insert key.</p>
+<p id="key-insert"><strong>KEY_INSERT</strong> - Insert key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="key-delete">
-<h3><a class="toc-backref" href="#id182">KEY_DELETE</a></h3>
-<p>Delete key.</p>
+<p id="key-delete"><strong>KEY_DELETE</strong> - Delete key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="unstick">
-<h3><a class="toc-backref" href="#id183">UNSTICK</a></h3>
-<p>Clear all sticky input modifiers.</p>
-</div>
-<div class="section" id="upper">
-<h3><a class="toc-backref" href="#id184">UPPER</a></h3>
-<p>Cycle the Upper sticky input modifier (next, on, off).</p>
-</div>
-<div class="section" id="shift">
-<h3><a class="toc-backref" href="#id185">SHIFT</a></h3>
-<p>Cycle the Shift sticky input modifier (next, on, off).</p>
-</div>
-<div class="section" id="control">
-<h3><a class="toc-backref" href="#id186">CONTROL</a></h3>
-<p>Cycle the Control sticky input modifier (next, on, off).</p>
-</div>
-<div class="section" id="meta">
-<h3><a class="toc-backref" href="#id187">META</a></h3>
-<p>Cycle the Meta (Left Alt) sticky input modifier (next, on, off).</p>
-</div>
-<div class="section" id="altgr">
-<h3><a class="toc-backref" href="#id188">ALTGR</a></h3>
-<p>Cycle the AltGr (Right Alt) sticky input modifier (next, on, off).</p>
-</div>
-<div class="section" id="gui">
-<h3><a class="toc-backref" href="#id189">GUI</a></h3>
-<p>Cycle the GUI (Windows) sticky input modifier (next, on, off).</p>
-</div>
-<div class="section" id="key-escape">
-<h3><a class="toc-backref" href="#id190">KEY_ESCAPE</a></h3>
-<p>Escape key.</p>
+<p id="unstick"><strong>UNSTICK</strong> - Clear all sticky input modifiers.</p>
+<p id="upper"><strong>UPPER</strong> - Cycle the Upper sticky input modifier (next, on, off).</p>
+<p id="shift"><strong>SHIFT</strong> - Cycle the Shift sticky input modifier (next, on, off).</p>
+<p id="control"><strong>CONTROL</strong> - Cycle the Control sticky input modifier (next, on, off).</p>
+<p id="meta"><strong>META</strong> - Cycle the Meta (Left Alt) sticky input modifier (next, on, off).</p>
+<p id="altgr"><strong>ALTGR</strong> - Cycle the AltGr (Right Alt) sticky input modifier (next, on, off).</p>
+<p id="gui"><strong>GUI</strong> - Cycle the GUI (Windows) sticky input modifier (next, on, off).</p>
+<p id="key-escape"><strong>KEY_ESCAPE</strong> - Escape key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="key-function">
-<h3><a class="toc-backref" href="#id191">KEY_FUNCTION</a></h3>
-<p>Function key.</p>
+<p id="key-function"><strong>KEY_FUNCTION</strong> - Function key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 <li>Input: shift, control, meta, altgr, gui</li>
 </ul>
-</div>
-<div class="section" id="switchvt">
-<h3><a class="toc-backref" href="#id192">SWITCHVT</a></h3>
-<p>Switch to specific virtual terminal.</p>
+<p id="switchvt"><strong>SWITCHVT</strong> - Switch to specific virtual terminal.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
-<div class="section" id="switchvt-prev">
-<h3><a class="toc-backref" href="#id193">SWITCHVT_PREV</a></h3>
-<p>Switch to the previous virtual terminal.</p>
-</div>
-<div class="section" id="switchvt-next">
-<h3><a class="toc-backref" href="#id194">SWITCHVT_NEXT</a></h3>
-<p>Switch to the next virtual terminal.</p>
-</div>
-<div class="section" id="selectvt">
-<h3><a class="toc-backref" href="#id195">SELECTVT</a></h3>
-<p>Bind to specific virtual terminal.</p>
+<p id="switchvt-prev"><strong>SWITCHVT_PREV</strong> - Switch to the previous virtual terminal.</p>
+<p id="switchvt-next"><strong>SWITCHVT_NEXT</strong> - Switch to the next virtual terminal.</p>
+<p id="selectvt"><strong>SELECTVT</strong> - Bind to specific virtual terminal.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
-<div class="section" id="selectvt-prev">
-<h3><a class="toc-backref" href="#id196">SELECTVT_PREV</a></h3>
-<p>Bind to the previous virtual terminal.</p>
-</div>
-<div class="section" id="selectvt-next">
-<h3><a class="toc-backref" href="#id197">SELECTVT_NEXT</a></h3>
-<p>Bind to the next virtual terminal.</p>
-</div>
-<div class="section" id="brlkbd">
-<h3><a class="toc-backref" href="#id198">BRLKBD</a></h3>
-<p>Set braille keyboard enabled/disabled.</p>
+<p id="selectvt-prev"><strong>SELECTVT_PREV</strong> - Bind to the previous virtual terminal.</p>
+<p id="selectvt-next"><strong>SELECTVT_NEXT</strong> - Bind to the next virtual terminal.</p>
+<p id="brlkbd"><strong>BRLKBD</strong> - Set braille keyboard enabled/disabled.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
-<div class="section" id="brlucdots">
-<h3><a class="toc-backref" href="#id199">BRLUCDOTS</a></h3>
-<p>Set braille typing mode dots/text.</p>
+<p id="brlucdots"><strong>BRLUCDOTS</strong> - Set braille typing mode dots/text.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
 </ul>
-</div>
 </div>
 <div class="section" id="special-functions">
-<h2><a class="toc-backref" href="#id200">Special Functions</a></h2>
-<div class="section" id="setmark">
-<h3><a class="toc-backref" href="#id201">SETMARK</a></h3>
-<p>Remember current braille window position.</p>
+<h2><a class="toc-backref" href="#id14">Special Functions</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#setmark">SETMARK</a></li>
+<li><a class="reference internal" href="#gotomark">GOTOMARK</a></li>
+<li><a class="reference internal" href="#refresh">REFRESH</a></li>
+<li><a class="reference internal" href="#refresh-line">REFRESH_LINE</a></li>
+<li><a class="reference internal" href="#restartbrl">RESTARTBRL</a></li>
+<li><a class="reference internal" href="#brl-stop">BRL_STOP</a></li>
+<li><a class="reference internal" href="#brl-start">BRL_START</a></li>
+<li><a class="reference internal" href="#restartspeech">RESTARTSPEECH</a></li>
+<li><a class="reference internal" href="#spk-stop">SPK_STOP</a></li>
+<li><a class="reference internal" href="#spk-start">SPK_START</a></li>
+<li><a class="reference internal" href="#scr-stop">SCR_STOP</a></li>
+<li><a class="reference internal" href="#scr-start">SCR_START</a></li>
+</ul>
+<p id="setmark"><strong>SETMARK</strong> - Remember current braille window position.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
-<div class="section" id="gotomark">
-<h3><a class="toc-backref" href="#id202">GOTOMARK</a></h3>
-<p>Go to remembered braille window position.</p>
+<p id="gotomark"><strong>GOTOMARK</strong> - Go to remembered braille window position.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 <li>Motion: route</li>
 </ul>
-</div>
-<div class="section" id="refresh">
-<h3><a class="toc-backref" href="#id203">REFRESH</a></h3>
-<p>Refresh braille display.</p>
-</div>
-<div class="section" id="refresh-line">
-<h3><a class="toc-backref" href="#id204">REFRESH_LINE</a></h3>
-<p>Refresh braille line.</p>
+<p id="refresh"><strong>REFRESH</strong> - Refresh braille display.</p>
+<p id="refresh-line"><strong>REFRESH_LINE</strong> - Refresh braille line.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Row: scaled</li>
 <li>Vertical: toleft</li>
 </ul>
-</div>
-<div class="section" id="restartbrl">
-<h3><a class="toc-backref" href="#id205">RESTARTBRL</a></h3>
-<p>Restart braille driver.</p>
-</div>
-<div class="section" id="brl-stop">
-<h3><a class="toc-backref" href="#id206">BRL_STOP</a></h3>
-<p>Stop the braille driver.</p>
-</div>
-<div class="section" id="brl-start">
-<h3><a class="toc-backref" href="#id207">BRL_START</a></h3>
-<p>Start the braille driver.</p>
-</div>
-<div class="section" id="restartspeech">
-<h3><a class="toc-backref" href="#id208">RESTARTSPEECH</a></h3>
-<p>Restart speech driver.</p>
-</div>
-<div class="section" id="spk-stop">
-<h3><a class="toc-backref" href="#id209">SPK_STOP</a></h3>
-<p>Stop the speech driver.</p>
-</div>
-<div class="section" id="spk-start">
-<h3><a class="toc-backref" href="#id210">SPK_START</a></h3>
-<p>Start the speech driver.</p>
-</div>
-<div class="section" id="scr-stop">
-<h3><a class="toc-backref" href="#id211">SCR_STOP</a></h3>
-<p>Stop the screen driver.</p>
-</div>
-<div class="section" id="scr-start">
-<h3><a class="toc-backref" href="#id212">SCR_START</a></h3>
-<p>Start the screen driver.</p>
-</div>
+<p id="restartbrl"><strong>RESTARTBRL</strong> - Restart braille driver.</p>
+<p id="brl-stop"><strong>BRL_STOP</strong> - Stop the braille driver.</p>
+<p id="brl-start"><strong>BRL_START</strong> - Start the braille driver.</p>
+<p id="restartspeech"><strong>RESTARTSPEECH</strong> - Restart speech driver.</p>
+<p id="spk-stop"><strong>SPK_STOP</strong> - Stop the speech driver.</p>
+<p id="spk-start"><strong>SPK_START</strong> - Start the speech driver.</p>
+<p id="scr-stop"><strong>SCR_STOP</strong> - Stop the screen driver.</p>
+<p id="scr-start"><strong>SCR_START</strong> - Start the screen driver.</p>
 </div>
 <div class="section" id="internal-functions">
-<h2><a class="toc-backref" href="#id213">Internal Functions</a></h2>
-<div class="section" id="noop">
-<h3><a class="toc-backref" href="#id214">NOOP</a></h3>
-<p>Do nothing.</p>
-</div>
-<div class="section" id="offline">
-<h3><a class="toc-backref" href="#id215">OFFLINE</a></h3>
-<p>Braille display temporarily unavailable.</p>
-</div>
-<div class="section" id="alert">
-<h3><a class="toc-backref" href="#id216">ALERT</a></h3>
-<p>Render an alert.</p>
+<h2><a class="toc-backref" href="#id15">Internal Functions</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#noop">NOOP</a></li>
+<li><a class="reference internal" href="#offline">OFFLINE</a></li>
+<li><a class="reference internal" href="#alert">ALERT</a></li>
+<li><a class="reference internal" href="#passxt">PASSXT</a></li>
+<li><a class="reference internal" href="#passat">PASSAT</a></li>
+<li><a class="reference internal" href="#passps2">PASSPS2</a></li>
+<li><a class="reference internal" href="#touch-at">TOUCH_AT</a></li>
+</ul>
+<p id="noop"><strong>NOOP</strong> - Do nothing.</p>
+<p id="offline"><strong>OFFLINE</strong> - Braille display temporarily unavailable.</p>
+<p id="alert"><strong>ALERT</strong> - Render an alert.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
-<div class="section" id="passxt">
-<h3><a class="toc-backref" href="#id217">PASSXT</a></h3>
-<p>XT (set 1) keyboard scan code.</p>
+<p id="passxt"><strong>PASSXT</strong> - XT (set 1) keyboard scan code.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Keyboard: release, emul0, emul1</li>
 </ul>
-</div>
-<div class="section" id="passat">
-<h3><a class="toc-backref" href="#id218">PASSAT</a></h3>
-<p>AT (set 2) keyboard scan code.</p>
+<p id="passat"><strong>PASSAT</strong> - AT (set 2) keyboard scan code.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Keyboard: release, emul0, emul1</li>
 </ul>
-</div>
-<div class="section" id="passps2">
-<h3><a class="toc-backref" href="#id219">PASSPS2</a></h3>
-<p>PS/2 (set 3) keyboard scan code.</p>
+<p id="passps2"><strong>PASSPS2</strong> - PS/2 (set 3) keyboard scan code.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Keyboard: release, emul0, emul1</li>
 </ul>
-</div>
-<div class="section" id="touch-at">
-<h3><a class="toc-backref" href="#id220">TOUCH_AT</a></h3>
-<p>Current reading location.</p>
+<p id="touch-at"><strong>TOUCH_AT</strong> - Current reading location.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
 </ul>
-</div>
 </div>
 </div>
 </body>
