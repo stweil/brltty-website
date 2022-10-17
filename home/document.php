@@ -46,8 +46,7 @@
       }
    }
    function write_attributes (&$attributes) {
-      reset($attributes);
-      while (list($name, $value) = each($attributes)) {
+      foreach ($attributes as $name => $value) {
          write_attribute($name, $value);
       }
    }
@@ -70,10 +69,8 @@
 	 $this->document_relations[$type][$name] = $url;
       }
       function write_relations () {
-         reset($this->document_relations);
-	 while (list($type, $names) = each($this->document_relations)) {
-	    reset($names);
-	    while (list($name, $url) = each($names)) {
+	 foreach ($this->document_relations as $type => $names) {
+	    foreach ($names as $name => $url) {
 	       echo("<link $type=$name href=\"$url\" />\n");
 	    }
 	 }
@@ -118,9 +115,8 @@
       function write_contents () {
          if (count($this->document_subsections) > 1) {
             echo("<ul>\n");
-            reset($this->document_subsections);
 
-            while (list($key, $subsection) = each($this->document_subsections)) {
+            foreach ($this->document_subsections as $key => $subsection) {
                echo("<li><a href=\"");
                $anchor = $subsection['anchor'];
 
@@ -138,8 +134,7 @@
          }
       }
       function write_subsections () {
-         reset($this->document_subsections);
-         while (list($key, $subsection) = each($this->document_subsections)) {
+         foreach ($this->document_subsections as $key => $subsection) {
             $anchor = $subsection['anchor'];
             if ($anchor == null) continue;
 
@@ -153,7 +148,7 @@
       }
 
       var $document_name;
-      function document ($name) {
+      function __construct ($name) {
          $this->document_name = $name;
          $this->document_relations = array();
          $this->document_owners = array();
@@ -216,15 +211,14 @@
          $this->selector_default = $name;
       }
 
-      function selector () {
+      function __construct () {
          $this->selector_items = array();
       }
 
       function write () {
          echo($this->before());
-	 reset($this->selector_items);
 	 $first = true;
-	 while (list($name, $url) = each($this->selector_items)) {
+	 foreach ($this->selector_items as $name => $url) {
 	    if ($first) {
 	       $first = false;
 	    } else {
@@ -255,8 +249,8 @@
    }
 
    class toolbar extends selector {
-      function toolbar () {
-         $this->selector();
+      function __construct () {
+         parent::__construct();
       }
       function before () {
          return "<center><small>\n";

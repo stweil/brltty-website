@@ -54,11 +54,9 @@
             }
             $components = explode('-', $release);
             $version = $components[0];
-            reset($components);
-            while (list($component_index, $component) = each($components)) {
+            foreach ($components as $component_index => $component) {
                $numbers = explode('.', $component);
-               reset($numbers);
-               while (list($number_index, $number) = each($numbers)) {
+               foreach ($numbers as $number_index => $number) {
                   $integer = true;
                   while (strlen($number)) {
                      $function = $integer? 'strspn': 'strcspn';
@@ -95,40 +93,70 @@
       return $files;
    }
    function compare_files_by_release ($file1, $file2) {
-      $components1 = $file1['components'];
-      $components2 = $file2['components'];
-      reset($components1);
-      reset($components2);
+      $components1 = new ArrayObject($file1['components'])->getIterator();
+      $components2 = new ArrayObject($file2['components'])->getIterator();
+
       while (true) {
-         $more1 = is_array(list($key, $numbers1) = each($components1));
-         $more2 = is_array(list($key, $numbers2) = each($components2));
-         if ($more1 != $more2) return $more1? 1: -1;
-         if (!$more1) break;
-         reset($numbers1);
-         reset($numbers2);
+         $haveComponent1 = components1->valid();
+         $haveComponent2 = components2->valid();
+
+         if ($haveComponent1 != $haveComponent2) return $haveComponent1? 1: -1;
+         if (!$haveComponent1) break;
+
+         $numbers1 = new ArrayObject($components1->current())->getIterator();
+         $components1->next();
+
+         $numbers2 = new ArrayObject($components2->current())->getIterator();
+         $components2->next();
+
          while (true) {
-            $more1 = is_array(list($key, $elements1) = each($numbers1));
-            $more2 = is_array(list($key, $elements2) = each($numbers2));
-            if ($more1 != $more2) return $more1? 1: -1;
-            if (!$more1) break;
-            $integer = true;
-            reset($elements1);
-            reset($elements2);
+            $haveNumber1 = $numbers1->valid();
+            $haveNumber2 = $numbers2->valid();
+
+            if ($haveNumber1 != $haveNumber2) return $haveNumber1? 1: -1;
+            if (!$haveNumber1) break;
+
+            $elements1 = new ArrayObject($numbers1)->getIterator());
+            $numbers1->next();
+
+            $elements2 = new ArrayObject($numbers2)->getIterator());
+            $numbers2->next();
+
+            $isInteger = true;
             while (true) {
-               $more1 = is_array(list($key, $element1) = each($elements1));
-               $more2 = is_array(list($key, $element2) = each($elements2));
-               if ($more1 != $more2) return ($more1 == $integer)? 1: -1;
-               if (!$more1) break;
-               if ($integer) {
-                  if ($element1 < $element2) return -1;
-                  if ($element1 > $element2) return 1;
+               $haveElement1 = $elements1->valid();
+               $haveElement2 = $elements2->valid();
+
+               if ($haveElement1 != $haveElement2) return $haveElement1? 1: -1;
+               if (!$haveElement1) break;
+
+               $element1 = $elements1->current();
+               $elements1->next();
+
+               $element2 = $elements2->current();
+               $elements2->next();
+
+               if ($isInteger) {
+                 $isEmpty1 = strlen($element1) == 0;
+                 $isEmpty2 = strlen($element2) == 0;
+
+                 if ($isEmpty1 != $isEmpty2) return $isEmpty2? 1: -1;
+                 if (!$isEmpty1) break;
+
+                  $integer1 = intval($element1);
+                  $integer2 = intval($element2);
+
+                  if ($integer1 < $integer2) return -1;
+                  if ($integer1 > $integer2) return 1;
                } else {
                   if (($relation = strcmp($element1, $element2))) return $relation;
                }
-               $integer = !$integer;
+
+               $isInteger = !$isInteger;
             }
          }
       }
+
       return strcmp($file1['name'], $file2['name']);
    }
 
@@ -137,8 +165,7 @@
    $GLOBALS['brlapi_files'] = get_released_files('(?:(?:java|ocaml|python|tcl)-)?brlapi');
 
    function get_version_files (&$package_files, $version) {
-      reset($package_files);
-      while (list($key, $file) = each($package_files)) {
+      foreach ($package_files as $key => $file) {
          if (strcmp($version, $file['version']) == 0) {
             $files[] = $file;
          }
@@ -165,7 +192,7 @@
    function put_file_rows (&$files) {
       $all_files = array_reverse($files);
 
-      while (list($key, $file) = each($all_files)) {
+      foreach ($all_files as $key => $file) {
          put_file_row($file);
       }
    }
@@ -183,7 +210,7 @@
       $release_files = array();
       $previous_release = "";
 
-      while (list($key, $file) = each($all_files)) {
+      foreach ($all_files as $key => $file) {
          $next_release = $file['release'];
          if (strcmp($next_release, $previous_release) != 0) {
             put_file_rows($release_files);

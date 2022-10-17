@@ -6,8 +6,8 @@
    require "document.php";
 
    class brltty_document extends document {
-      function brltty_document ($name, $title=null) {
-         $this->document("BRLTTY");
+      function __construct ($name, $title=null) {
+         parent::__construct("BRLTTY");
          $this->set_image("brltty.jpg", 160, 500);
 
          $this->add_owner("dave@mielke.cc");
