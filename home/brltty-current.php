@@ -11,20 +11,23 @@ After downloading the package, install it as follows:
 </p>
 
 <dl>
-   <dt><code>.tar.gz</code></dt>
+   <dt><code>.tar.*</code></dt>
    <dd>
       This flavour of the package contains the source and documentation
       in a form which can be built on any system.
-      To unpack, configure, compile, and install it, do:
-      <pre>
-      tar -xzf brltty-<i>release</i>.tar.gz
-      cd brltty-<i>release</i>
-      ./configure
-      make
-      make install
-      </pre>
-      The <code>./configure</code> script is only provided with version 3.1 and beyond;
-      for earlier releases, carefully edit the top-level <code>Makefile</code>.
+      To unpack the archive, do:
+      <dl>
+        <dt>bzip2</dt>
+        <dd><pre>tar -xjf brltty-<i>release</i>.tar.bz2</pre></dd>
+
+        <dt>gzip</dt>
+        <dd><pre>tar -xzf brltty-<i>release</i>.tar.gz</pre></dd>
+
+        <dt>xz</dt>
+        <dd><pre>tar -xJf brltty-<i>release</i>.tar.xz</pre></dd>
+      </dl>
+      To configure, compile, and install it, see
+      <?php write_link("#build", "Building BRLTTY"); echo(".\n"); ?>
    </dd>
 
    <dt><code>.<i>arch</i>.rpm</code></dt>
