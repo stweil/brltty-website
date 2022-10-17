@@ -36,7 +36,7 @@ Here are a few simple things that you can do:
       If you'd prefer for your local copy to be placed somewhere else
       then specify the path (relative or absolute) to the desired directory
       as an additional command line argument.
-      <pre>git clone https://github.com/brltty/brltty.git /path/to/directory</pre>
+      <pre>git clone https://github.com/brltty/brltty.git path-to-location</pre>
       Note that this directory needn't already exist.
       The best is for it either to be empty or for it to not already exist.
    </li>
@@ -44,7 +44,7 @@ Here are a few simple things that you can do:
    <li>
       To pick up the latest changes from that point on,
       go to the top-level directory of your local copy and do:
-      <pre>git pull</pre>
+      <pre>git pull origin</pre>
    </li>
 
    <li>
@@ -60,7 +60,7 @@ Here are a few simple things that you can do:
    </li>
 
    <li>
-      To switch to the latest development code, do:
+      To switch back to the latest development code, do:
       <pre>git checkout master</pre>
    </li>
 </ul>
@@ -85,17 +85,17 @@ In order for <code>autogen</code> to run successfully, you need at least the fol
 </p>
 
 <dl>
-   <dt>Autoconf 2.53</dt>
+   <dt>Autoconf 2.65</dt>
    <dd>
       If the default <b>autoconf</b> on your system is too old
       then assign whatever command will invoke a sufficiently new <code>autoconf</code>
       to the environment variable <code>BRLTTY_AUTOCONF</code>.
       <pre>
-      export BRLTTY_AUTOCONF=autoconf-2.53
+      export BRLTTY_AUTOCONF=autoconf-2.65
       </pre>
    </dd>
 
-   <dt>tcl 8.5</dt>
+   <dt>tcl 8.6</dt>
    <dd>
       The <b>tcl</b> shell needs to be within your command search path (<code>$PATH</code>)
       and must be named <code>tclsh</code>.
