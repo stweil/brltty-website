@@ -117,10 +117,10 @@ You can get the same effect by setting this environment variable:
     </p>
 
     <ul>
-    <li><p>The <code>brltty<//code> program.</p></li>
+    <li><p>The <code>brltty<//code> binary.</p></li>
     <li><p>The braille, speech, and screen drivers.</p></li>
-    <li><p>The <code>brltty-*<//code> commands.</p></li>
-    <li><p>The <code>xbrlapi</code> program.</p></li>
+    <li><p>The <code>brltty-*<//code> binaries.</p></li>
+    <li><p>The <code>xbrlapi</code> binary.</p></li>
     <li><p>The <b>BrlAPI</b> client library and configured bindings.</p></li>
     </ul>
   </dd>
@@ -132,14 +132,14 @@ You can get the same effect by setting this environment variable:
     </p>
 
     <ul>
-    <li><p>The <code>brltty<//code> program, configuration file, man page, and headers.</p></li>
+    <li><p>The <code>brltty<//code> binary, configuration file, man page, and headers.</p></li>
     <li><p>The braille, speech, and screen drivers.</p></li>
     <li><p>The text, contraction, and attributes tables.</p></li>
     <li><p>The braille device (input) and keyboard key tables.</p></li>
     <li><p>The <code>brltty-*<//code> commands.</p></li>
     <li><p>The message catalogs.</p></li>
     <li><p>The package configuration file.</p></li>
-    <li><p>The <code>xbrlapi</code> program and man page.</p></li>
+    <li><p>The <code>xbrlapi</code> binary and man page.</p></li>
     <li><p>The <b>X11</b> and <b>gdm</b> startup scripts.</p></li>
     <li><p>The <b>BrlAPI</b> client library, configured bindings, headers, man pages, and access key.</p></li>
     </ul>
