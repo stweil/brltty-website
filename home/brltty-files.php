@@ -128,18 +128,20 @@
                if (!$haveElement1) break;
 
                if ($isInteger) {
-                 $isEmpty1 = strlen($element1) == 0;
-                 $isEmpty2 = strlen($element2) == 0;
+                  $isEmpty1 = strlen($element1) == 0;
+                  $isEmpty2 = strlen($element2) == 0;
+                  if ($isEmpty1 != $isEmpty2) return $isEmpty2? 1: -1;
 
-                 if ($isEmpty1 != $isEmpty2) return $isEmpty2? 1: -1;
-                 if ($isEmpty1) break;
+                  if (!$isEmpty1) {
+                     $integer1 = intval($element1);
+                     $integer2 = intval($element2);
 
-                  $integer1 = intval($element1);
-                  $integer2 = intval($element2);
-                  if ($integer1 < $integer2) return -1;
-                  if ($integer1 > $integer2) return 1;
+                     if ($integer1 < $integer2) return -1;
+                     if ($integer1 > $integer2) return 1;
+                  }
                } else {
-                  if (($relation = strcmp($element1, $element2))) return $relation;
+                  $relation = strcmp($element1, $element2);
+                  if ($relation != 0) return $relation;
                }
 
                $isInteger = !$isInteger;
