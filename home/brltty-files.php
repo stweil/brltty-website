@@ -93,59 +93,49 @@
       return $files;
    }
    function compare_files_by_release ($file1, $file2) {
-      $components1 = new ArrayObject($file1['components'])->getIterator();
-      $components2 = new ArrayObject($file2['components'])->getIterator();
+      $components1 = $file1['components'];
+      $components2 = $file2['components'];
+
+      reset($components1);
+      reset($components2);
 
       while (true) {
-         $haveComponent1 = components1->valid();
-         $haveComponent2 = components2->valid();
+         $haveNumbers1 = is_array($numbers1 = current($components1));
+         $haveNumbers2 = is_array($numbers2 = current($components2));
 
-         if ($haveComponent1 != $haveComponent2) return $haveComponent1? 1: -1;
-         if (!$haveComponent1) break;
+         if ($haveNumbers1 != $haveNumbers2) return $haveNumbers1? 1: -1;
+         if (!$haveNumbers1) break;
 
-         $numbers1 = new ArrayObject($components1->current())->getIterator();
-         $components1->next();
-
-         $numbers2 = new ArrayObject($components2->current())->getIterator();
-         $components2->next();
+         reset($numbers1);
+         reset($numbers2);
 
          while (true) {
-            $haveNumber1 = $numbers1->valid();
-            $haveNumber2 = $numbers2->valid();
+            $haveElements1 = is_array($elements1 = current($numbers1));
+            $haveElements2 = is_array($elements2 = current($numbers2));
 
-            if ($haveNumber1 != $haveNumber2) return $haveNumber1? 1: -1;
-            if (!$haveNumber1) break;
+            if ($haveElements1 != $haveElements2) return $haveElements1? 1: -1;
+            if (!$haveElements1) break;
 
-            $elements1 = new ArrayObject($numbers1)->getIterator());
-            $numbers1->next();
-
-            $elements2 = new ArrayObject($numbers2)->getIterator());
-            $numbers2->next();
-
+            reset($elements1);
+            reset($elements2);
             $isInteger = true;
+
             while (true) {
-               $haveElement1 = $elements1->valid();
-               $haveElement2 = $elements2->valid();
+               $haveElement1 = is_string($element1 = current($elements1));
+               $haveElement2 = is_string($element2 = current($elements2));
 
                if ($haveElement1 != $haveElement2) return $haveElement1? 1: -1;
                if (!$haveElement1) break;
-
-               $element1 = $elements1->current();
-               $elements1->next();
-
-               $element2 = $elements2->current();
-               $elements2->next();
 
                if ($isInteger) {
                  $isEmpty1 = strlen($element1) == 0;
                  $isEmpty2 = strlen($element2) == 0;
 
                  if ($isEmpty1 != $isEmpty2) return $isEmpty2? 1: -1;
-                 if (!$isEmpty1) break;
+                 if ($isEmpty1) break;
 
                   $integer1 = intval($element1);
                   $integer2 = intval($element2);
-
                   if ($integer1 < $integer2) return -1;
                   if ($integer1 > $integer2) return 1;
                } else {
@@ -153,8 +143,16 @@
                }
 
                $isInteger = !$isInteger;
+              next($elements1);
+              next($elements2);
             }
+
+            next($numbers1);
+            next($numbers2);
          }
+
+         next($components1);
+         next($components2);
       }
 
       return strcmp($file1['name'], $file2['name']);
