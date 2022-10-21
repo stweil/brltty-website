@@ -70,9 +70,10 @@ You can get the same effect by setting this environment variable:
   <dt>Tools/reqpkgs -i</dt>
   <dd>
   <p>
-  This is an optional step which installs all the additional packages (that we know about) that are required for a successful build of <b>BRLTTY</b>.
+  This optional step installs all of the additional packages (that we know about) that are required for a successful build of <b>BRLTTY</b>.
   It needs to be run as root (or via <code>sudo</code>) on most platforms.
-  The <code>-i</code> option means <q>install</q>.
+  The command's name - <code>reqpkgs</code> means <q>required packages</q>,
+  and its <code>-i</code> option means <q>install the missing packages</q>.
   Alternatively, you can:
   </p>
 
