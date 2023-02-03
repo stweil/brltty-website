@@ -1,0 +1,22 @@
+<?php
+   require "brltty.php";
+
+   $queryString = $_SERVER["QUERY_STRING"];
+   parse_str($queryString, $queryParameters);
+   $languageName = $queryParameters["language"];
+   $languageCode = $queryParameters["code"];
+
+   $title = "Android Translations for the $languageName Language";
+   $brltty = new brltty_document($title);
+?>
+
+<table>
+   <tr>
+      <th>Label</th>
+      <th>English</th>
+      <th><?php echo($languageName); ?></th>
+   </tr>
+</table>
+
+<hr />
+<?php $brltty->end(); ?>

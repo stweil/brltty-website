@@ -7,20 +7,34 @@ then we'd sure appreciate your help.
 So far, we have translations for the following languages:
 </p>
 
+<?php
+   function listTranslations ($language, $code) {
+      $url = "android-translations.html?language=$language&code=$code";
+
+      echo("<li>");
+         write_link($url, $language);
+      echo("</li>\n");
+   }
+?>
+
 <ul>
-   <li>Czech</li>
-   <li>Chinese (Taiwan)</li>
-   <li>Danish</li>
-   <li>Dutch</li>
-   <li>Farsi (Persian)</li>
-   <li>Finnish</li>
-   <li>French</li>
-   <li>German</li>
-   <li>Italian</li>
-   <li>Norwegian (Bokmal)</li>
-   <li>Russian</li>
-   <li>Slovenian</li>
-   <li>Spanish</li>
+   <?php
+      listTranslations("Arabic", "ar");
+      listTranslations("Czech", "cs");
+      listTranslations("Chinese (Taiwan)", "zh-rTW");
+      listTranslations("Danish", "da");
+      listTranslations("Dutch", "nl");
+      listTranslations("Farsi (Persian)", "fa");
+      listTranslations("Finnish", "fi");
+      listTranslations("French", "fr");
+      listTranslations("German", "de");
+      listTranslations("Italian", "it");
+      listTranslations("Norwegian (Bokmal)", "nb");
+      listTranslations("Russian", "ru");
+      listTranslations("Slovenian", "sl");
+      listTranslations("Spanish", "es");
+      listTranslations("Turkish", "tr");
+   ?>
 </ul>
 
 <p>
