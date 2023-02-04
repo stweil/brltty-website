@@ -1,4 +1,10 @@
 <?php
+   function get_query () {
+      $string = $_SERVER["QUERY_STRING"];
+      parse_str($string, $parameters);
+      return $parameters;
+   }
+
    function write_meta ($header, $value) {
       write_element(
          "meta",

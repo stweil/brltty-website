@@ -2,10 +2,9 @@
    require "brltty.php";
    require "brltty-files.php";
 
-   $queryString = $_SERVER["QUERY_STRING"];
-   parse_str($queryString, $queryParameters);
-   $languageName = $queryParameters["language"];
-   $languageCode = $queryParameters["code"];
+   $query = get_query();
+   $languageName = $query["language"];
+   $languageCode = $query["code"];
 
    $title = "Android Translations for the $languageName Language";
    $brltty = new brltty_document($title);
@@ -69,9 +68,15 @@
          echo("<tr>");
             write_table_cell($label);
             write_table_cell($strings["text"][$label]);
-
             $text = $translations["text"];
-            if (isset($text[$label])) write_table_cell($text[$label]);
+
+            if (isset($text[$label])) {
+               $translation = $text[$label];
+            } else {
+               $translation = "<strong>*** translation still needed ***</strong>";
+            }
+
+            write_table_cell($translation);
          echo("</tr>\n");
       }
    echo("</table>\n");
