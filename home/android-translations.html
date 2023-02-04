@@ -1,5 +1,6 @@
 <?php
    require "brltty.php";
+   require "brltty-files.php";
 
    $queryString = $_SERVER["QUERY_STRING"];
    parse_str($queryString, $queryParameters);
@@ -8,15 +9,73 @@
 
    $title = "Android Translations for the $languageName Language";
    $brltty = new brltty_document($title);
+
+   function load_strings ($language=null) {
+      global $android_directory;
+      $name = "$android_directory/android-strings";
+      if ($language != null) $name .= "-$language";
+      $name .= ".txt";
+
+      $labels = array();
+      $text = array();
+      $file = fopen($name, "r");
+
+      if ($file != null) {
+         while (!feof($file)) {
+            $line = fgets($file);
+            $position = strpos($line, " ");
+
+            if ($position > 0) {
+               $label = substr($line, 0, $position);
+               $labels[] = $label;
+               $text[$label] = substr($line, $position+1);
+            }
+         }
+
+         fclose($file);
+      }
+
+      return array(
+         "labels" => $labels,
+         "text"   => $text
+      );
+   }
+
+   $strings = load_strings();
+   $translations = load_strings($languageCode);
+
+   function write_table_header ($text) {
+      echo("<th>");
+         echo($text);
+      echo("</th>");
+   }
+
+   function write_table_cell ($text) {
+      echo("<td>");
+         echo($text);
+      echo("</td>");
+   }
 ?>
 
-<table>
-   <tr>
-      <th>Label</th>
-      <th>English</th>
-      <th><?php echo($languageName); ?></th>
-   </tr>
-</table>
+<?php
+   echo("<table>\n");
+      echo("<tr>");
+         write_table_header("Label");
+         write_table_header("English");
+         write_table_header($languageName);
+      echo("</tr>\n");
+
+      foreach ($strings["labels"] as $index => $label) {
+         echo("<tr>");
+            write_table_cell($label);
+            write_table_cell($strings["text"][$label]);
+
+            $text = $translations["text"];
+            if (isset($text[$label])) write_table_cell($text[$label]);
+         echo("</tr>\n");
+      }
+   echo("</table>\n");
+?>
 
 <hr />
 <?php $brltty->end(); ?>

@@ -161,6 +161,8 @@
    }
 
    $GLOBALS['archive_directory'] = 'archive';
+   $GLOBALS['android_directory'] = "$archive_directory/Android";
+
    $GLOBALS['brltty_files'] = get_released_files('brltty');
    $GLOBALS['brlapi_files'] = get_released_files('(?:(?:java|ocaml|python|tcl)-)?brlapi');
 
