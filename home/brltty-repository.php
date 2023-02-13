@@ -1,5 +1,5 @@
 <p>
-<b>BRLTTY</b> is developed within a <b>git</b> repository.
+<b>BRLTTY</b> is developed within a source repository on <b>GitHub</b>.
 You can access the repository yourself
 if you have the <b>git</b> client.
 To download and/or learn how to use the <b>git</b> client,
