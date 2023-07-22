@@ -138,10 +138,10 @@ Menu Operations
 * go down to last item: Three
 * select previous choice: Four
 * select next choice: Six
-* restore preferences from disk: B7+B2
 * save preferences to disk:
   + Five
   + B7+B3
+* restore preferences from disk: B7+B2
 
 Speech Functions
 * stop speaking:

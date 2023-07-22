@@ -75,8 +75,8 @@ Configuration Functions
 * set capital letter blinking on/off: Backward+Forward+LeftRockerDown+Convex
 
 Menu Operations
-* restore preferences from disk: Backward+Forward+Convex+Concave
 * save preferences to disk: Backward+Forward+Concave
+* restore preferences from disk: Backward+Forward+Convex+Concave
 
 Speech Functions
 * stop speaking: Forward+RightRockerUp

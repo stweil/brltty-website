@@ -10,6 +10,7 @@ Notes
 * The five navigation pad keys are named Left, Right, Up, Down, and Select.
 * Any display key combination can be emulated by holding Select
   while typing the corresponding combination of dots 1-6.
+* RoutingKey refers to any of the keys immediately behind the braille cells.
 * The rocker to the left of the braille cells emulates the Display2 key,
   and the one to their right emulates the Display5 key.
 
@@ -42,6 +43,7 @@ Special Modes
   + Space+Dots124
 * set screen image frozen: Space+Dots1248
 * set screen image unfrozen: Space+Dots1247
+* describe character: RoutingKey+Select
 * show current date and time:
   + Display1+Display5
   + Dots456+Down
@@ -50,6 +52,7 @@ Cursor Functions
 * go to screen cursor: Display2+Display4+Display6
 * go back after cursor tracking: Display1+Display6
 * go to screen cursor or go back after cursor tracking: Select
+* bring screen cursor to character: RoutingKey
 * bring screen cursor to current line:
   + Display1+Display3+Display4+Display6
   + Space+Dots1236
@@ -117,6 +120,11 @@ Horizontal Navigation
   + Dot6+Right
 
 Clipboard Functions
+* start new clipboard at character: RoutingKey+Left
+* append to clipboard from character: RoutingKey+Up
+* linear copy to character: RoutingKey+Right
+* rectangular copy to character: RoutingKey+Down
+* append characters to clipboard: Space+RoutingKey+RoutingKey
 * insert clipboard text after screen cursor:
   + Display1+Display2+Display3+Display4
   + Space+Dots1346
@@ -169,14 +177,15 @@ Configuration Functions
 * set attribute underlining off: Space+Dots1367
 
 Menu Operations
-* restore preferences from disk:
-  + Display1+Display2+Display3+Display5
-  + Dots456+Left
-  + Space+Dots12347
 * save preferences to disk:
   + Display2+Display4+Display5+Display6
   + Dots456+Right
   + Space+Dots12348
+* restore preferences from disk:
+  + Display1+Display2+Display3+Display5
+  + Dots456+Left
+  + Space+Dots12347
+* reset preferences to defaults: Space+Dots123478
 
 Speech Functions
 * stop speaking:
@@ -252,6 +261,7 @@ Keyboard Input
 * delete key:
   + Dot3+Left
   + Space+Dots256
+* function key: Space+RoutingKey
 * enter key: Dot8
 * tab key:
   + Dot3+Down

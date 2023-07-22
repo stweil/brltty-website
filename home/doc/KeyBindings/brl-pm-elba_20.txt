@@ -86,8 +86,8 @@ Configuration Functions
 * set alert tunes on/off: RightKeyFront+BarDown1
 
 Menu Operations
-* restore preferences from disk: LeftKeyFront+BarLeft2
 * save preferences to disk: LeftKeyFront+BarRight2
+* restore preferences from disk: LeftKeyFront+BarLeft2
 
 Speech Functions
 * stop speaking: RightKeyRear+BarLeft1
@@ -115,8 +115,8 @@ Menu Operations
 * go down to last item: BarDown2
 * select previous choice: BarLeft1
 * select next choice: BarRight1
-* restore preferences from disk: BarLeft2
 * save preferences to disk: BarRight2
+* restore preferences from disk: BarLeft2
 
 Advanced Vertical Navigation (left switch rear)
 -----------------------------------------------

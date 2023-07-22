@@ -369,6 +369,7 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
+<li><a class="reference internal" href="#notes" id="id3">Notes</a></li>
 <li><a class="reference internal" href="#default-bindings" id="id4">Default Bindings</a><ul>
 <li><a class="reference internal" href="#special-modes" id="id5">Special Modes</a></li>
 <li><a class="reference internal" href="#cursor-functions" id="id6">Cursor Functions</a></li>
@@ -382,15 +383,23 @@ ul.auto-toc {
 <li><a class="reference internal" href="#special-functions" id="id14">Special Functions</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#menu-bindings" id="id15">Menu Bindings</a><ul>
-<li><a class="reference internal" href="#id1" id="id16">Menu Operations</a></li>
+<li><a class="reference internal" href="#braille-input-mode" id="id15">Braille Input Mode</a><ul>
+<li><a class="reference internal" href="#id1" id="id16">Special Modes</a></li>
+<li><a class="reference internal" href="#id2" id="id17">Keyboard Input</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#braille-input-mode" id="id17">Braille Input Mode</a><ul>
-<li><a class="reference internal" href="#id2" id="id18">Special Modes</a></li>
-<li><a class="reference internal" href="#id3" id="id19">Keyboard Input</a></li>
+</ul>
+</div>
+<div class="section" id="notes">
+<h2><a class="toc-backref" href="#id3">Notes</a></h2>
+<ul class="simple">
+<li>There are three display keys at each end of the braille cells.
+From top to bottom:<ul>
+<li>The three at the left are named Display1, Display2, and Display3.</li>
+<li>The three at the right are named Display4, Display5, and Display6.</li>
 </ul>
 </li>
+<li>RoutingKey refers to any of the keys immediately behind the braille cells.</li>
 </ul>
 </div>
 <div class="section" id="default-bindings">
@@ -398,14 +407,46 @@ ul.auto-toc {
 <div class="section" id="special-modes">
 <h3><a class="toc-backref" href="#id5">Special Modes</a></h3>
 <ul class="simple">
-<li>enter/leave help display: B8</li>
-<li>enter/leave command learn mode: B4+B5</li>
-<li>enter/leave preferences menu: B7+B1</li>
-<li>enter/leave status display: B7+B6</li>
-<li>set display mode attributes/text: B6</li>
-<li>set screen image frozen/unfrozen: B8+B6</li>
-<li>describe character: B2+RoutingKey</li>
-<li>show current date and time: B2+B3+B5+B6</li>
+<li>enter/leave help display:<ul>
+<li>B8</li>
+<li>Display1+Display2+Display5</li>
+</ul>
+</li>
+<li>enter/leave command learn mode:<ul>
+<li>B4+B5</li>
+<li>Display1+Display4+Display5+Display6</li>
+</ul>
+</li>
+<li>enter/leave preferences menu:<ul>
+<li>B7+B1</li>
+<li>Display1+Display3+Display4</li>
+</ul>
+</li>
+<li>enter/leave status display:<ul>
+<li>B7+B6</li>
+<li>Display2+Display5</li>
+</ul>
+</li>
+<li>set display mode attributes/text:<ul>
+<li>B6</li>
+<li>Display1+Display4+Display5</li>
+</ul>
+</li>
+<li>set screen image frozen/unfrozen:<ul>
+<li>B8+B6</li>
+<li>Display1+Display2+Display4</li>
+</ul>
+</li>
+<li>describe character:<ul>
+<li>B2+RoutingKey</li>
+<li>Display3+RoutingKey</li>
+</ul>
+</li>
+<li>show current date and time:<ul>
+<li>Display1+Display5</li>
+<li>B2+B3+B5+B6</li>
+</ul>
+</li>
 <li>switch to Default Bindings: B1+B8+SpaceLeft</li>
 <li>switch to Braille Input Mode: B1+B8+SpaceRight</li>
 </ul>
@@ -415,91 +456,101 @@ ul.auto-toc {
 <ul class="simple">
 <li>go to screen cursor:<ul>
 <li>B1</li>
-<li>RightRockerTop+RightRockerBottom+B6</li>
-<li>LeftRockerTop+LeftRockerBottom+B3</li>
-<li>LeftRockerTop+LeftRockerBottom+RightRockerTop+RightRockerBottom</li>
+<li>Display2+Display4+Display6</li>
 </ul>
 </li>
-<li>go back after cursor tracking: B3</li>
+<li>go back after cursor tracking:<ul>
+<li>B3</li>
+<li>Display1+Display6</li>
+</ul>
+</li>
 <li>bring screen cursor to character: RoutingKey</li>
+<li>bring screen cursor to current line: Display1+Display3+Display4+Display6</li>
 </ul>
 </div>
 <div class="section" id="vertical-navigation">
 <h3><a class="toc-backref" href="#id7">Vertical Navigation</a></h3>
 <ul class="simple">
 <li>go up one line:<ul>
-<li>RightRockerTop</li>
+<li>Display4</li>
 <li>B4</li>
 </ul>
 </li>
 <li>go down one line:<ul>
-<li>RightRockerBottom</li>
+<li>Display6</li>
 <li>B5</li>
 </ul>
 </li>
 <li>go to top line:<ul>
-<li>RightRockerTop+B6</li>
+<li>Display1+Display4</li>
 <li>B2+SpaceLeft</li>
-<li>LeftRockerTop+LeftRockerBottom+RightRockerTop</li>
-<li>LeftRockerTop+LeftRockerBottom+B4</li>
 </ul>
 </li>
 <li>go to bottom line:<ul>
 <li>B2+SpaceRight</li>
-<li>RightRockerBottom+B6</li>
-<li>LeftRockerTop+LeftRockerBottom+B2</li>
-<li>LeftRockerTop+LeftRockerBottom+RightRockerBottom</li>
+<li>Display3+Display6</li>
 </ul>
 </li>
 <li>go to beginning of top line:<ul>
 <li>B2</li>
-<li>LeftRockerTop+B3</li>
-<li>RightRockerTop+RightRockerBottom+LeftRockerTop</li>
-<li>RightRockerTop+RightRockerBottom+B5</li>
+<li>Display2+Display4</li>
 </ul>
 </li>
-<li>go to beginning of bottom line:<ul>
-<li>LeftRockerBottom+B3</li>
-<li>RightRockerTop+RightRockerBottom+LeftRockerBottom</li>
-<li>RightRockerTop+RightRockerBottom+B7</li>
-</ul>
-</li>
+<li>go to beginning of bottom line: Display2+Display6</li>
 <li>go up to nearest line with different content:<ul>
-<li>LeftRockerTop+RightRockerTop</li>
-<li>RightRockerTop+B5</li>
-<li>LeftRockerTop+B4</li>
+<li>Display5+Display4</li>
 <li>B8+B4</li>
 </ul>
 </li>
 <li>go down to nearest line with different content:<ul>
-<li>LeftRockerTop+B2</li>
-<li>LeftRockerTop+RightRockerBottom</li>
-<li>RightRockerBottom+B5</li>
+<li>Display5+Display6</li>
 <li>B8+B5</li>
 </ul>
 </li>
 <li>go up to nearest line with different highlighting:<ul>
-<li>LeftRockerBottom+RightRockerTop</li>
-<li>RightRockerTop+B7</li>
-<li>LeftRockerBottom+B4</li>
+<li>Display2+Display1</li>
 <li>B6+B4</li>
 </ul>
 </li>
 <li>go down to nearest line with different highlighting:<ul>
-<li>LeftRockerBottom+B2</li>
-<li>LeftRockerBottom+RightRockerBottom</li>
-<li>RightRockerBottom+B7</li>
 <li>B6+B5</li>
+<li>Display2+Display3</li>
 </ul>
 </li>
-<li>go up to first line of paragraph: B1+B4</li>
-<li>go down to first line of next paragraph: B1+B5</li>
-<li>go up to previous command prompt: B2+B4</li>
-<li>go down to next command prompt: B2+B5</li>
+<li>go up to first line of paragraph:<ul>
+<li>B1+B4</li>
+<li>Display2+Display5+Display4</li>
+</ul>
+</li>
+<li>go down to first line of next paragraph:<ul>
+<li>B1+B5</li>
+<li>Display2+Display5+Display6</li>
+</ul>
+</li>
+<li>go up to previous command prompt:<ul>
+<li>B2+B4</li>
+<li>Display2+Display5+Display1+Display4</li>
+</ul>
+</li>
+<li>go down to next command prompt:<ul>
+<li>B2+B5</li>
+<li>Display2+Display5+Display3+Display6</li>
+</ul>
+</li>
 <li>go up several lines: B7+B4</li>
 <li>go down several lines: B7+B5</li>
-<li>go up to nearest line with less indent than character: SpaceLeft+RoutingKey</li>
-<li>go down to nearest line with less indent than character: SpaceRight+RoutingKey</li>
+<li>go up to nearest line with less indent than character:<ul>
+<li>SpaceLeft+RoutingKey</li>
+<li>Display2+Display1+RoutingKey</li>
+</ul>
+</li>
+<li>go down to nearest line with less indent than character:<ul>
+<li>SpaceRight+RoutingKey</li>
+<li>Display2+Display3+RoutingKey</li>
+</ul>
+</li>
+<li>go up to nearest line with different character: Display5+Display4+RoutingKey</li>
+<li>go down to nearest line with different character: Display5+Display6+RoutingKey</li>
 </ul>
 </div>
 <div class="section" id="horizontal-navigation">
@@ -507,50 +558,83 @@ ul.auto-toc {
 <ul class="simple">
 <li>go backward one braille window:<ul>
 <li>SpaceLeft</li>
-<li>LeftRockerTop+LeftRockerBottom</li>
+<li>Display2</li>
 </ul>
 </li>
 <li>go forward one braille window:<ul>
 <li>SpaceRight</li>
-<li>RightRockerTop+RightRockerBottom</li>
+<li>Display5</li>
 </ul>
 </li>
-<li>go to beginning of line: B1+SpaceLeft</li>
-<li>go to end of line: B1+SpaceRight</li>
-<li>go left one character: B6+SpaceLeft</li>
-<li>go right one character: B6+SpaceRight</li>
+<li>go to beginning of line:<ul>
+<li>B1+SpaceLeft</li>
+<li>Display1+Display2+Display3</li>
+</ul>
+</li>
+<li>go to end of line:<ul>
+<li>B1+SpaceRight</li>
+<li>Display4+Display5+Display6</li>
+</ul>
+</li>
+<li>go left one character:<ul>
+<li>Display1+Display3</li>
+<li>B6+SpaceLeft</li>
+</ul>
+</li>
+<li>go right one character:<ul>
+<li>Display4+Display6</li>
+<li>B6+SpaceRight</li>
+</ul>
+</li>
 <li>go left half a braille window: B3+SpaceLeft</li>
 <li>go right half a braille window: B3+SpaceRight</li>
-<li>place left end of braille window at character: B1+RoutingKey</li>
+<li>place left end of braille window at character:<ul>
+<li>B1+RoutingKey</li>
+<li>Display6+RoutingKey</li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="clipboard-functions">
 <h3><a class="toc-backref" href="#id9">Clipboard Functions</a></h3>
 <ul class="simple">
 <li>start new clipboard at character:<ul>
-<li>LeftRockerTop+RoutingKey</li>
+<li>Display1+RoutingKey</li>
 <li>B4+RoutingKey</li>
 </ul>
 </li>
 <li>append to clipboard from character:<ul>
 <li>B3+RoutingKey</li>
-<li>LeftRockerBottom+RoutingKey</li>
+<li>Display2+RoutingKey</li>
 </ul>
 </li>
 <li>linear copy to character:<ul>
-<li>RightRockerTop+RoutingKey</li>
+<li>Display4+RoutingKey</li>
 <li>B6+RoutingKey</li>
 </ul>
 </li>
 <li>rectangular copy to character:<ul>
-<li>RightRockerBottom+RoutingKey</li>
 <li>B5+RoutingKey</li>
+<li>Display5+RoutingKey</li>
 </ul>
 </li>
 <li>copy characters to clipboard: RoutingKey+RoutingKey</li>
-<li>insert clipboard text after screen cursor: SpaceLeft+SpaceRight</li>
-<li>search backward for clipboard text: B3+B4</li>
-<li>search forward for clipboard text: B3+B5</li>
+<li>append characters to clipboard: Display2+RoutingKey+RoutingKey</li>
+<li>insert clipboard text after screen cursor:<ul>
+<li>SpaceLeft+SpaceRight</li>
+<li>Display1+Display2+Display3+Display4</li>
+</ul>
+</li>
+<li>search backward for clipboard text:<ul>
+<li>B3+B4</li>
+<li>Display2+Display4+Display6+Display1</li>
+</ul>
+</li>
+<li>search forward for clipboard text:<ul>
+<li>B3+B5</li>
+<li>Display2+Display4+Display6+Display3</li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="configuration-functions">
@@ -558,27 +642,55 @@ ul.auto-toc {
 <ul class="simple">
 <li>set touch navigation on/off: B1+B4+SpaceLeft</li>
 <li>set text style 6-dot/8-dot: B7</li>
+<li>set text style 6-dot: Display2+Display3+Display5</li>
+<li>set text style 8-dot: Display2+Display3+Display6</li>
 <li>set skipping of lines with identical content on/off: B6+B1</li>
 <li>set skipping of blank braille windows on/off: B6+B2</li>
 <li>set sliding braille window on/off: B6+B3</li>
 <li>set track screen cursor on/off: B8+B1</li>
+<li>set track screen cursor on: Display1</li>
+<li>set track screen cursor off: Display3</li>
 <li>set screen cursor visibility on/off: B8+B2</li>
-<li>set attribute underlining on/off: B8+B3</li>
+<li>set attribute underlining on/off:<ul>
+<li>B8+B3</li>
+<li>Display2+Display3+Display4+Display5</li>
+</ul>
+</li>
 <li>set alert tunes on/off: B8+B7</li>
 </ul>
 </div>
 <div class="section" id="menu-operations">
 <h3><a class="toc-backref" href="#id11">Menu Operations</a></h3>
 <ul class="simple">
-<li>restore preferences from disk: B7+B2</li>
-<li>save preferences to disk: B7+B3</li>
+<li>save preferences to disk:<ul>
+<li>B7+B3</li>
+<li>Display2+Display4+Display5+Display6</li>
+</ul>
+</li>
+<li>restore preferences from disk:<ul>
+<li>B7+B2</li>
+<li>Display1+Display2+Display3+Display5</li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="speech-functions">
 <h3><a class="toc-backref" href="#id12">Speech Functions</a></h3>
 <ul class="simple">
-<li>stop speaking: B2+B3+SpaceLeft</li>
-<li>speak current line: B2+B3+SpaceRight</li>
+<li>stop speaking:<ul>
+<li>Display3+Display4</li>
+<li>B2+B3+SpaceLeft</li>
+</ul>
+</li>
+<li>speak current line:<ul>
+<li>Display3+Display5</li>
+<li>B2+B3+SpaceRight</li>
+</ul>
+</li>
+<li>speak from top of screen through current line: Display3+Display5+Display4</li>
+<li>speak from current line through bottom of screen: Display3+Display5+Display6</li>
+<li>go to current speaking position: Display1+Display3+Display5</li>
+<li>set autospeak on/off: Display3+Display4+Display6</li>
 </ul>
 </div>
 <div class="section" id="keyboard-input">
@@ -586,51 +698,41 @@ ul.auto-toc {
 <ul class="simple">
 <li>cursor-left key: Left</li>
 <li>cursor-right key: Right</li>
-<li>cursor-up key:<ul>
-<li>LeftRockerTop</li>
-<li>Up</li>
-</ul>
-</li>
-<li>cursor-down key:<ul>
-<li>LeftRockerBottom</li>
-<li>Down</li>
-</ul>
-</li>
-<li>function key: LeftRockerTop+LeftRockerBottom+RoutingKey</li>
+<li>cursor-up key: Up</li>
+<li>cursor-down key: Down</li>
 <li>enter key: Action</li>
-<li>switch to specific virtual terminal: RightRockerTop+RightRockerBottom+RoutingKey</li>
+<li>switch to specific virtual terminal: Display4+Display5+Display6+RoutingKey</li>
+<li>switch to the previous virtual terminal: Display3+Display4+Display5+Display6</li>
+<li>switch to the next virtual terminal: Display1+Display2+Display3+Display6</li>
 </ul>
 </div>
 <div class="section" id="special-functions">
 <h3><a class="toc-backref" href="#id14">Special Functions</a></h3>
 <ul class="simple">
-<li>remember current braille window position: B7+RoutingKey</li>
-<li>go to remembered braille window position: B8+RoutingKey</li>
+<li>remember current braille window position:<ul>
+<li>B7+RoutingKey</li>
+<li>Display1+Display3+RoutingKey</li>
 </ul>
-</div>
-</div>
-<div class="section" id="menu-bindings">
-<h2><a class="toc-backref" href="#id15">Menu Bindings</a></h2>
-<div class="section" id="id1">
-<h3><a class="toc-backref" href="#id16">Menu Operations</a></h3>
-<ul class="simple">
-<li>go up to previous item: RightRockerTop</li>
-<li>go down to next item: RightRockerBottom</li>
-<li>select previous choice: LeftRockerTop</li>
-<li>select next choice: LeftRockerBottom</li>
+</li>
+<li>go to remembered braille window position:<ul>
+<li>B8+RoutingKey</li>
+<li>Display4+Display6+RoutingKey</li>
+</ul>
+</li>
+<li>restart speech driver: Display2+Display3+Display4</li>
 </ul>
 </div>
 </div>
 <div class="section" id="braille-input-mode">
-<h2><a class="toc-backref" href="#id17">Braille Input Mode</a></h2>
-<div class="section" id="id2">
-<h3><a class="toc-backref" href="#id18">Special Modes</a></h3>
+<h2><a class="toc-backref" href="#id15">Braille Input Mode</a></h2>
+<div class="section" id="id1">
+<h3><a class="toc-backref" href="#id16">Special Modes</a></h3>
 <ul class="simple">
 <li>switch to Default Bindings: B1+B8+SpaceLeft</li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h3><a class="toc-backref" href="#id19">Keyboard Input</a></h3>
+<div class="section" id="id2">
+<h3><a class="toc-backref" href="#id17">Keyboard Input</a></h3>
 <ul class="simple">
 <li>braille keyboard dot7: B1</li>
 <li>braille keyboard dot3: B2</li>

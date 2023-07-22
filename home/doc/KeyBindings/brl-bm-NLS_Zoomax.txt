@@ -62,13 +62,15 @@ Special Modes
 Cursor Functions
 * go to screen cursor: Display2+Display4+Display6
 * go back after cursor tracking: Display1+Display6
-* go to screen cursor or go back after cursor tracking: Select
+* go to screen cursor or go back after cursor tracking:
+  + Select
+  + BL+Space+Dot8
 * bring screen cursor to character: RoutingKey
 * bring screen cursor to current line:
   + S2+S3
   + Display1+Display3+Display4+Display6
   + Space+Dots1236
-* bring screen cursor to speech cursor: BL+Dot2
+* bring screen cursor to speech cursor: BL+Space+Dot7
 
 Vertical Navigation
 * go up one line:
@@ -251,21 +253,22 @@ Configuration Functions
 * set attribute underlining off: Space+Dots1367
 
 Menu Operations
-* restore preferences from disk:
-  + BL+Up
-  + Display1+Display2+Display3+Display5
-  + Dots456+Left
-  + Space+Dots12347
 * save preferences to disk:
   + BL+Down
   + Display2+Display4+Display5+Display6
   + Dots456+Right
   + Space+Dots12348
+* restore preferences from disk:
+  + BL+Up
+  + Display1+Display2+Display3+Display5
+  + Dots456+Left
+  + Space+Dots12347
+* reset preferences to defaults: Space+Dots123478
 
 Speech Functions
 * stop speaking:
   + Display3+Display4
-  + BL+Space
+  + BL+Dot2
   + Dots12+Left
 * speak current line:
   + Display3+Display5
@@ -283,7 +286,6 @@ Speech Functions
   + Display3+Display5+Display6
   + Dots12+Down
 * go to current speaking position:
-  + BL+Dot3
   + Display1+Display3+Display5
   + Dots13+Down
 * decrease speaking volume:
@@ -301,9 +303,10 @@ Speech Functions
 * decrease speaking pitch: BL+Space+Dot3
 * increase speaking pitch: BL+Space+Dot6
 * set autospeak on/off:
-  + BL+Dot7
   + Display3+Display4+Display6
   + Dots13+Up
+* set autospeak on: BL+Dot1
+* set autospeak off: BL+Dot3
 
 Speech Navigation
 * speak current character: BL+Dots35
@@ -324,7 +327,7 @@ Speech Navigation
 * speak indent of current line:
   + BL+Dots18
   + Dots13+Left
-* speak speech cursor location: BL+Dot1
+* speak speech cursor location: BL+Dot7
 
 Keyboard Input
 * braille keyboard space: Space

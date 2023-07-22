@@ -87,8 +87,8 @@ Configuration Functions
 * set attribute underlining on/off: F5+F4
 
 Menu Operations
-* restore preferences from disk: F2+F1
 * save preferences to disk: F2+F3
+* restore preferences from disk: F2+F1
 
 Speech Functions
 * stop speaking: long K8

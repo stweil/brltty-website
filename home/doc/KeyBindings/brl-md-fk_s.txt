@@ -73,8 +73,8 @@ Configuration Functions
 * set capital letter blinking on/off: Long+F5
 
 Menu Operations
-* restore preferences from disk: Long+F10
 * save preferences to disk: Shift+Long+F10
+* restore preferences from disk: Long+F10
 
 Keyboard Input
 * cursor-left key: Shift+Left

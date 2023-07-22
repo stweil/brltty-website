@@ -61,8 +61,8 @@ Configuration Functions
 * set capital letter blinking on/off: LeftKeyRear+BarUp2
 
 Menu Operations
-* restore preferences from disk: LeftKeyFront+BarLeft2
 * save preferences to disk: LeftKeyFront+BarRight2
+* restore preferences from disk: LeftKeyFront+BarLeft2
 
 Speech Functions
 * set autospeak on/off: LeftKeyFront+BarUp1
@@ -80,8 +80,8 @@ Menu Operations
 * go down to last item: BarDown2
 * select previous choice: BarLeft1
 * select next choice: BarRight1
-* restore preferences from disk: BarLeft2
 * save preferences to disk: BarRight2
+* restore preferences from disk: BarLeft2
 
 Advanced Vertical Navigation (left switch rear)
 -----------------------------------------------

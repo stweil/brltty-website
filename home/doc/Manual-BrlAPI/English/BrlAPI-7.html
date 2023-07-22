@@ -104,7 +104,7 @@ or raw mode. The client can send either of these types of packet:
 <UL>
 <LI><CODE>BRLAPI_PACKET_GETDRIVERNAME</CODE>
 or <CODE>BRLAPI_PACKET_GETDISPLAYSIZE</CODE> to get pieces of information from the server,</LI>
-<LI><CODE>BRLAPI_PACKET_ENTERTTY</CODE>MODE to enter tty handling mode,</LI>
+<LI><CODE>BRLAPI_PACKET_ENTERTTYMODE</CODE> to enter tty handling mode,</LI>
 <LI><CODE>BRLAPI_PACKET_ENTERRAWMODE</CODE> to enter raw mode,</LI>
 </UL>
 
@@ -279,9 +279,12 @@ flag weight):</P>
 display has several. If not given, usual display is used.</LI>
 <LI> A region must be given as two integers indicating the beginning and the
 number of characters of the part of the braille display which is to be updated,
-the first cell of the display being numbered 1. If the number is negative, its
-absolute value is taken into account, and the update is padded or truncated to
-fill the rest of the display.</LI>
+the first cell of the display being numbered 1. For braille displays that have
+several lines, the first cell of the second line of the display is numbered the
+length of lines plus one, etc., in other words the display is handled as the
+concatenation of the lines of the display.
+If the number is negative, its absolute value is taken into account, and the
+update is padded or truncated to fill the rest of the display.</LI>
 <LI> The text to display can then be given, preceded by its size in bytes
 expressed as an integer. It will erase the corresponding region in the AND and
 OR fields. If the region size is positive, the text's length in characters must exactly match the region

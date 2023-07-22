@@ -87,8 +87,8 @@ Configuration Functions
 * set attribute underlining off: Dots136+JoystickLeft
 
 Menu Operations
-* restore preferences from disk: Dots1234+JoystickLeft
 * save preferences to disk: Dots1234+JoystickRight
+* restore preferences from disk: Dots1234+JoystickLeft
 
 Keyboard Input
 * braille keyboard dot1: Dot1

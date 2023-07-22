@@ -377,24 +377,27 @@ ul.auto-toc {
 <li><a class="reference internal" href="#the-ifplatform-directive" id="id10">The IfPlatform Directive</a></li>
 <li><a class="reference internal" href="#the-ifnotplatform-directive" id="id11">The IfNotPlatform Directive</a></li>
 <li><a class="reference internal" href="#the-ignore-directive" id="id12">The Ignore Directive</a></li>
-<li><a class="reference internal" href="#the-map-directive" id="id13">The Map Directive</a></li>
-<li><a class="reference internal" href="#the-note-directive" id="id14">The Note Directive</a></li>
-<li><a class="reference internal" href="#the-superimpose-directive" id="id15">The Superimpose Directive</a></li>
-<li><a class="reference internal" href="#the-title-directive" id="id16">The Title Directive</a></li>
-<li><a class="reference internal" href="#the-include-directive" id="id17">The Include Directive</a></li>
-<li><a class="reference internal" href="#the-assign-directive" id="id18">The Assign Directive</a></li>
-<li><a class="reference internal" href="#the-assigndefault-directive" id="id19">The AssignDefault Directive</a></li>
-<li><a class="reference internal" href="#the-ifvar-directive" id="id20">The IfVar Directive</a></li>
-<li><a class="reference internal" href="#the-ifnotvar-directive" id="id21">The IfNotVar Directive</a></li>
-<li><a class="reference internal" href="#the-beginvariables-directive" id="id22">The BeginVariables Directive</a></li>
-<li><a class="reference internal" href="#the-endvariables-directive" id="id23">The EndVariables Directive</a></li>
-<li><a class="reference internal" href="#the-listvariables-directive" id="id24">The ListVariables Directive</a></li>
-<li><a class="reference internal" href="#the-endif-directive" id="id25">The EndIf Directive</a></li>
-<li><a class="reference internal" href="#the-else-directive" id="id26">The Else Directive</a></li>
+<li><a class="reference internal" href="#the-isolated-directive" id="id13">The Isolated Directive</a></li>
+<li><a class="reference internal" href="#the-macro-directive" id="id14">The Macro Directive</a></li>
+<li><a class="reference internal" href="#the-map-directive" id="id15">The Map Directive</a></li>
+<li><a class="reference internal" href="#the-note-directive" id="id16">The Note Directive</a></li>
+<li><a class="reference internal" href="#the-run-directive" id="id17">The Run Directive</a></li>
+<li><a class="reference internal" href="#the-superimpose-directive" id="id18">The Superimpose Directive</a></li>
+<li><a class="reference internal" href="#the-title-directive" id="id19">The Title Directive</a></li>
+<li><a class="reference internal" href="#the-include-directive" id="id20">The Include Directive</a></li>
+<li><a class="reference internal" href="#the-assign-directive" id="id21">The Assign Directive</a></li>
+<li><a class="reference internal" href="#the-assigndefault-directive" id="id22">The AssignDefault Directive</a></li>
+<li><a class="reference internal" href="#the-ifvar-directive" id="id23">The IfVar Directive</a></li>
+<li><a class="reference internal" href="#the-ifnotvar-directive" id="id24">The IfNotVar Directive</a></li>
+<li><a class="reference internal" href="#the-beginvariables-directive" id="id25">The BeginVariables Directive</a></li>
+<li><a class="reference internal" href="#the-endvariables-directive" id="id26">The EndVariables Directive</a></li>
+<li><a class="reference internal" href="#the-listvariables-directive" id="id27">The ListVariables Directive</a></li>
+<li><a class="reference internal" href="#the-endif-directive" id="id28">The EndIf Directive</a></li>
+<li><a class="reference internal" href="#the-else-directive" id="id29">The Else Directive</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#keyboard-table-list" id="id27">Keyboard Table List</a></li>
-<li><a class="reference internal" href="#braille-driver-list" id="id28">Braille Driver List</a></li>
+<li><a class="reference internal" href="#keyboard-table-list" id="id30">Keyboard Table List</a></li>
+<li><a class="reference internal" href="#braille-driver-list" id="id31">Braille Driver List</a></li>
 </ul>
 </div>
 <div class="section" id="description">
@@ -559,20 +562,24 @@ bind Key6 CONTEXT+context1
 context <em>name</em> <em>title</em>
 </pre>
 <p>Use this directive to define alternate ways to interpret certain key events
-and/or combinations. A context contains definitions created by any of:</p>
+and/or combinations.
+Switching to another context is done via the BRLTTY command CONTEXT+name.</p>
+<p>A context contains definitions created by any of:</p>
 <ul class="simple">
 <li><a class="reference internal" href="#the-bind-directive">The Bind Directive</a></li>
 <li><a class="reference internal" href="#the-hotkey-directive">The Hotkey Directive</a></li>
 <li><a class="reference internal" href="#the-ignore-directive">The Ignore Directive</a></li>
+<li><a class="reference internal" href="#the-macro-directive">The Macro Directive</a></li>
 <li><a class="reference internal" href="#the-map-directive">The Map Directive</a></li>
+<li><a class="reference internal" href="#the-run-directive">The Run Directive</a></li>
 <li><a class="reference internal" href="#the-superimpose-directive">The Superimpose Directive</a></li>
 </ul>
 <dl class="docutils">
 <dt><em>name</em></dt>
 <dd>Which context subsequent definitions are to be created within.</dd>
 <dt><em>title</em></dt>
-<dd>A person-readable description of the context. It may contain spaces, and
-standard capitalization conventions should be used. This operand is
+<dd>A person-readable description of the context. It may contain spaces.
+Standard capitalization conventions should be used. This operand is
 optional. If supplied when selecting a context which already has a title
 then the two must match. Special contexts already have internally-assigned
 titles.</dd>
@@ -581,9 +588,15 @@ titles.</dd>
 number of times thereafter. These special contexts are predefined:</p>
 <dl class="docutils">
 <dt><tt class="docutils literal">default</tt></dt>
-<dd>The default context. If a definition can't be found within the current
+<dd><p class="first">The default context. If a definition can't be found within the current
 context then it's looked up within the default context. This only applies
-to definitions created by <a class="reference internal" href="#the-bind-directive">The Bind Directive</a>.</dd>
+to definitions created by:</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#the-bind-directive">The Bind Directive</a>.</li>
+<li><a class="reference internal" href="#the-macro-directive">The Macro Directive</a>.</li>
+<li><a class="reference internal" href="#the-run-directive">The Run Directive</a>.</li>
+</ul>
+</dd>
 <dt><tt class="docutils literal">menu</tt></dt>
 <dd>This context is used when within BRLTTY's Preferences Menu.</dd>
 </dl>
@@ -786,8 +799,38 @@ ignore <em>key</em>
 ignore Key1
 </pre>
 </div>
+<div class="section" id="the-isolated-directive">
+<h3><a class="toc-backref" href="#id13">The Isolated Directive</a></h3>
+<pre class="literal-block">
+isolated
+</pre>
+<p>Use this directive to isolate the current context.
+If a key binding can't be found within an isolated context
+then it won't be looked up within the default context.</p>
+<p>Examples:</p>
+<pre class="literal-block">
+isolated
+</pre>
+</div>
+<div class="section" id="the-macro-directive">
+<h3><a class="toc-backref" href="#id14">The Macro Directive</a></h3>
+<pre class="literal-block">
+macro <em>keys</em> <em>command</em> ...
+</pre>
+<p>Use this directive to bind a sequence of BRLTY commands to a key combination.</p>
+<dl class="docutils">
+<dt><em>keys</em></dt>
+<dd>The key combination being defined.</dd>
+<dt><em>command</em> ...</dt>
+<dd>The BRLTTY commands that are to be executed.</dd>
+</dl>
+<p>Examples:</p>
+<pre class="literal-block">
+macro Key1+Key2 TOP LNEND
+</pre>
+</div>
 <div class="section" id="the-map-directive">
-<h3><a class="toc-backref" href="#id13">The Map Directive</a></h3>
+<h3><a class="toc-backref" href="#id15">The Map Directive</a></h3>
 <pre class="literal-block">
 map <em>key</em> <em>function</em>
 </pre>
@@ -851,7 +894,7 @@ map Key1 DOT1
 </pre>
 </div>
 <div class="section" id="the-note-directive">
-<h3><a class="toc-backref" href="#id14">The Note Directive</a></h3>
+<h3><a class="toc-backref" href="#id16">The Note Directive</a></h3>
 <pre class="literal-block">
 note <em>text</em>
 </pre>
@@ -899,8 +942,27 @@ Continue the second outer list element.</p>
 </li>
 </ul>
 </div>
+<div class="section" id="the-run-directive">
+<h3><a class="toc-backref" href="#id17">The Run Directive</a></h3>
+<pre class="literal-block">
+run <em>keys</em> <em>name</em> [<em>argument</em> ...]
+</pre>
+<p>Use this directive to bind a host command to a key combination.</p>
+<dl class="docutils">
+<dt><em>keys</em></dt>
+<dd>The key combination being defined.</dd>
+<dt>&lt;name*</dt>
+<dd>The name of the host command. It may also be the path.</dd>
+<dt><em>argument</em> ...</dt>
+<dd>The arguments to be passed to the host command.</dd>
+</dl>
+<p>Examples:</p>
+<pre class="literal-block">
+run Key1+Key2 pkill --exact brltty
+</pre>
+</div>
 <div class="section" id="the-superimpose-directive">
-<h3><a class="toc-backref" href="#id15">The Superimpose Directive</a></h3>
+<h3><a class="toc-backref" href="#id18">The Superimpose Directive</a></h3>
 <pre class="literal-block">
 superimpose <em>function</em>
 </pre>
@@ -919,7 +981,7 @@ superimpose DOT7
 </pre>
 </div>
 <div class="section" id="the-title-directive">
-<h3><a class="toc-backref" href="#id16">The Title Directive</a></h3>
+<h3><a class="toc-backref" href="#id19">The Title Directive</a></h3>
 <pre class="literal-block">
 title &lt;text&gt;
 </pre>
@@ -937,7 +999,7 @@ title Bindings for Keypad-based Navigation
 </pre>
 </div>
 <div class="section" id="the-include-directive">
-<h3><a class="toc-backref" href="#id17">The Include Directive</a></h3>
+<h3><a class="toc-backref" href="#id20">The Include Directive</a></h3>
 <pre class="literal-block">
 include <em>file</em> # <em>comment</em>
 </pre>
@@ -951,7 +1013,7 @@ relative, it is anchored at the directory containing the including file.</dd>
 </dl>
 </div>
 <div class="section" id="the-assign-directive">
-<h3><a class="toc-backref" href="#id18">The Assign Directive</a></h3>
+<h3><a class="toc-backref" href="#id21">The Assign Directive</a></h3>
 <pre class="literal-block">
 assign <em>variable</em> <em>value</em>
 </pre>
@@ -977,7 +1039,7 @@ assign IndirectValue \{variableName}
 </pre>
 </div>
 <div class="section" id="the-assigndefault-directive">
-<h3><a class="toc-backref" href="#id19">The AssignDefault Directive</a></h3>
+<h3><a class="toc-backref" href="#id22">The AssignDefault Directive</a></h3>
 <pre class="literal-block">
 assignDefault <em>variable</em> <em>value</em>
 </pre>
@@ -1004,7 +1066,7 @@ assignDefault format plain\stext
 </pre>
 </div>
 <div class="section" id="the-ifvar-directive">
-<h3><a class="toc-backref" href="#id20">The IfVar Directive</a></h3>
+<h3><a class="toc-backref" href="#id23">The IfVar Directive</a></h3>
 <pre class="literal-block">
 ifVar <em>variable</em> <em>directive</em>
 </pre>
@@ -1026,7 +1088,7 @@ ifVar var1 ifVar var2 assign concatenation \{var1}\{var2}
 </pre>
 </div>
 <div class="section" id="the-ifnotvar-directive">
-<h3><a class="toc-backref" href="#id21">The IfNotVar Directive</a></h3>
+<h3><a class="toc-backref" href="#id24">The IfNotVar Directive</a></h3>
 <pre class="literal-block">
 ifNotVar <em>variable</em> <em>directive</em>
 </pre>
@@ -1049,7 +1111,7 @@ ifNotVar var1 assign var1 default\svalue
 </pre>
 </div>
 <div class="section" id="the-beginvariables-directive">
-<h3><a class="toc-backref" href="#id22">The BeginVariables Directive</a></h3>
+<h3><a class="toc-backref" href="#id25">The BeginVariables Directive</a></h3>
 <pre class="literal-block">
 beginVariables
 </pre>
@@ -1071,7 +1133,7 @@ endVariables
 </pre>
 </div>
 <div class="section" id="the-endvariables-directive">
-<h3><a class="toc-backref" href="#id23">The EndVariables Directive</a></h3>
+<h3><a class="toc-backref" href="#id26">The EndVariables Directive</a></h3>
 <pre class="literal-block">
 endVariables
 </pre>
@@ -1079,7 +1141,7 @@ endVariables
 See <a class="reference internal" href="#the-beginvariables-directive">The BeginVariables Directive</a> for details.</p>
 </div>
 <div class="section" id="the-listvariables-directive">
-<h3><a class="toc-backref" href="#id24">The ListVariables Directive</a></h3>
+<h3><a class="toc-backref" href="#id27">The ListVariables Directive</a></h3>
 <pre class="literal-block">
 listVariables
 </pre>
@@ -1087,7 +1149,7 @@ listVariables
 It can be helpful when debugging.</p>
 </div>
 <div class="section" id="the-endif-directive">
-<h3><a class="toc-backref" href="#id25">The EndIf Directive</a></h3>
+<h3><a class="toc-backref" href="#id28">The EndIf Directive</a></h3>
 <pre class="literal-block">
 endIf
 </pre>
@@ -1100,7 +1162,7 @@ endIf
 </pre>
 </div>
 <div class="section" id="the-else-directive">
-<h3><a class="toc-backref" href="#id26">The Else Directive</a></h3>
+<h3><a class="toc-backref" href="#id29">The Else Directive</a></h3>
 <pre class="literal-block">
 else
 </pre>
@@ -1118,7 +1180,7 @@ endIf
 </div>
 </div>
 <div class="section" id="keyboard-table-list">
-<h2><a class="toc-backref" href="#id27">Keyboard Table List</a></h2>
+<h2><a class="toc-backref" href="#id30">Keyboard Table List</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />
@@ -1152,7 +1214,7 @@ endIf
 </table>
 </div>
 <div class="section" id="braille-driver-list">
-<h2><a class="toc-backref" href="#id28">Braille Driver List</a></h2>
+<h2><a class="toc-backref" href="#id31">Braille Driver List</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="20%" />
@@ -1241,6 +1303,12 @@ endIf
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>360 (40x9)</td>
+</tr>
+<tr><td>dp</td>
+<td>DotPad</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
 <tr><td>ec</td>
 <td>EcoBraille</td>

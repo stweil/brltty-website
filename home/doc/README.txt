@@ -2,9 +2,9 @@ BRLTTY is a background process (daemon) providing access to the Linux/Unix
 console (when in text mode) for a blind person using a refreshable braille
 display.
 
-Version 6.5, Jun 2022
+Version 6.6, Jul 2023
 
-Copyright (C) 1995-2022 by The BRLTTY Developers.
+Copyright (C) 1995-2023 by The BRLTTY Developers.
 
 Web Page: http://brltty.app/
 
@@ -166,6 +166,7 @@ The following braille displays are supported:
 -  Canute [360 (40x9)]
 -  Cebra [20/40/60/80/100/120/140]
 -  CombiBraille [25/45/85]
+-  DotPad
 -  EcoBraille [20/40/80]
 -  EuroBraille [AzerBraille, Clio, Esys, Iris, NoteBraille, Scriba]
 -  FrankAudiodata [B2K84]

@@ -64,6 +64,6 @@ Menu Operations
 * select previous choice: RightScrollUp
 * select next choice: RightScrollDown
 * go to previous menu level: RightScrollUp+RightScrollDown+LeftScrollUp
-* restore preferences from disk: LeftScrollUp+LeftScrollDown+RightScrollUp
 * save preferences to disk: LeftScrollUp+LeftScrollDown+RightScrollDown
+* restore preferences from disk: LeftScrollUp+LeftScrollDown+RightScrollUp
 

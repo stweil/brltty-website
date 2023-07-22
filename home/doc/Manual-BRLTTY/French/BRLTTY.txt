@@ -14,9 +14,9 @@
   Jean-Philippe Mengual <texou@accelibreinfo.eu> pour
   Traduc.org
 
-  Version 6.4, juin 2022
+  Version 6.6, juillet 2023
 
-  Copyright © 1995-2022 by Les Développeurs de BRLTTY.  BRLTTY est un
+  Copyright © 1995-2023 by Les Développeurs de BRLTTY.  BRLTTY est un
   logiciel libre, et n'est fourni avec AUCUNE GARANTIE. Il est placé
   sous les termes de la version 2 ou ultérieure de la GNU General Public
   License publiée par The Free Software Foundation.
@@ -5067,6 +5067,7 @@
          de-2015     Allemand (abrégé - standard 2015)
          en          Anglais
          en_US       Anglais (USA)
+         en-ueb-g1   Anglais (Braille anglais unifié, 1er degré)
          en-ueb-g2   Anglais (Braille anglais unifié, 2ème degré)
          en-us-g2    Anglais (USA, 2ème degré)
          es          Espagnol (2ème degré)
@@ -6168,6 +6169,7 @@
           Canute              360 (40x9)
           Cebra               20/40/60/80/100/120/140
           CombiBraille        25/45/85
+          DotPad
           EcoBraille          20/40/80
           EuroBraille         AzerBraille
                               Clio
@@ -6293,6 +6295,7 @@
                     cb     CombiBraille
                     ce     Cebra
                     cn     Canute
+                    dp     DotPad
                     ec     EcoBraille
                     en     eSpeak-NG
                     es     eSpeak

@@ -159,12 +159,13 @@ Configuration Functions
 * set attribute underlining off: Space+Dots1367
 
 Menu Operations
-* restore preferences from disk:
-  + Display1+Display2+Display3+Display5
-  + Space+Dots12347
 * save preferences to disk:
   + Display2+Display4+Display5+Display6
   + Space+Dots12348
+* restore preferences from disk:
+  + Display1+Display2+Display3+Display5
+  + Space+Dots12347
+* reset preferences to defaults: Space+Dots123478
 
 Speech Functions
 * stop speaking: Display3+Display4
@@ -262,6 +263,6 @@ Menu Operations
   + Dot6
   + ThumbRight+ThumbNext
 * go to previous menu level: Dot7
-* restore preferences from disk: ThumbLeft+ThumbRight+ThumbPrevious
 * save preferences to disk: ThumbLeft+ThumbRight+ThumbNext
+* restore preferences from disk: ThumbLeft+ThumbRight+ThumbPrevious
 

@@ -45,6 +45,6 @@ Menu Operations
 * go down to last item: Escape+Enter+Forward
 * select previous choice: Escape+Backward
 * select next choice: Escape+Forward
-* restore preferences from disk: Escape
 * save preferences to disk: Escape+Enter
+* restore preferences from disk: Escape
 

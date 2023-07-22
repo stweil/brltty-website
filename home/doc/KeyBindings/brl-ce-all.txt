@@ -67,8 +67,8 @@ Configuration Functions
 * set attribute underlining on/off: RightUpper1+PadLeft1
 
 Menu Operations
-* restore preferences from disk: RightLower1+PadLeft1
 * save preferences to disk: RightLower1+PadRight1
+* restore preferences from disk: RightLower1+PadLeft1
 
 Speech Functions
 * set autospeak on/off: RightLower1+PadUp1
@@ -90,6 +90,6 @@ Menu Operations
 * go down to last item: LeftLower1
 * select previous choice: PadLeft1
 * select next choice: PadRight1
-* restore preferences from disk: RightUpper1
 * save preferences to disk: RightLower1
+* restore preferences from disk: RightUpper1
 

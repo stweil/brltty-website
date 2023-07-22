@@ -458,6 +458,7 @@ ul.auto-toc {
 <li><a class="reference internal" href="#gui-title">GUI_TITLE</a></li>
 <li><a class="reference internal" href="#help">HELP</a></li>
 <li><a class="reference internal" href="#home">HOME</a></li>
+<li><a class="reference internal" href="#hostcmd">HOSTCMD</a></li>
 <li><a class="reference internal" href="#host-copy">HOST_COPY</a></li>
 <li><a class="reference internal" href="#host-cut">HOST_CUT</a></li>
 <li><a class="reference internal" href="#host-paste">HOST_PASTE</a></li>
@@ -485,6 +486,7 @@ ul.auto-toc {
 <li><a class="reference internal" href="#lndn">LNDN</a></li>
 <li><a class="reference internal" href="#lnend">LNEND</a></li>
 <li><a class="reference internal" href="#lnup">LNUP</a></li>
+<li><a class="reference internal" href="#macro">MACRO</a></li>
 <li><a class="reference internal" href="#menu-first-item">MENU_FIRST_ITEM</a></li>
 <li><a class="reference internal" href="#menu-last-item">MENU_LAST_ITEM</a></li>
 <li><a class="reference internal" href="#menu-next-item">MENU_NEXT_ITEM</a></li>
@@ -514,6 +516,7 @@ ul.auto-toc {
 <li><a class="reference internal" href="#prdifln">PRDIFLN</a></li>
 <li><a class="reference internal" href="#prefload">PREFLOAD</a></li>
 <li><a class="reference internal" href="#prefmenu">PREFMENU</a></li>
+<li><a class="reference internal" href="#prefreset">PREFRESET</a></li>
 <li><a class="reference internal" href="#prefsave">PREFSAVE</a></li>
 <li><a class="reference internal" href="#prindent">PRINDENT</a></li>
 <li><a class="reference internal" href="#prnbwin">PRNBWIN</a></li>
@@ -528,6 +531,7 @@ ul.auto-toc {
 <li><a class="reference internal" href="#route">ROUTE</a></li>
 <li><a class="reference internal" href="#route-curr-locn">ROUTE_CURR_LOCN</a></li>
 <li><a class="reference internal" href="#route-line">ROUTE_LINE</a></li>
+<li><a class="reference internal" href="#route-speech">ROUTE_SPEECH</a></li>
 <li><a class="reference internal" href="#say-above">SAY_ABOVE</a></li>
 <li><a class="reference internal" href="#say-all">SAY_ALL</a></li>
 <li><a class="reference internal" href="#say-below">SAY_BELOW</a></li>
@@ -1183,8 +1187,9 @@ ul.auto-toc {
 <li><a class="reference internal" href="#menu-prev-setting">MENU_PREV_SETTING</a></li>
 <li><a class="reference internal" href="#menu-next-setting">MENU_NEXT_SETTING</a></li>
 <li><a class="reference internal" href="#menu-prev-level">MENU_PREV_LEVEL</a></li>
-<li><a class="reference internal" href="#prefload">PREFLOAD</a></li>
 <li><a class="reference internal" href="#prefsave">PREFSAVE</a></li>
+<li><a class="reference internal" href="#prefload">PREFLOAD</a></li>
+<li><a class="reference internal" href="#prefreset">PREFRESET</a></li>
 </ul>
 <p id="menu-prev-item"><strong>MENU_PREV_ITEM</strong> - Go up to previous item.</p>
 <p>The following modifiers may be specified:</p>
@@ -1217,8 +1222,9 @@ ul.auto-toc {
 <ul class="simple">
 <li>Motion: route</li>
 </ul>
-<p id="prefload"><strong>PREFLOAD</strong> - Restore preferences from disk.</p>
 <p id="prefsave"><strong>PREFSAVE</strong> - Save preferences to disk.</p>
+<p id="prefload"><strong>PREFLOAD</strong> - Restore preferences from disk.</p>
+<p id="prefreset"><strong>PREFRESET</strong> - Reset preferences to defaults.</p>
 </div>
 <div class="section" id="speech-functions">
 <h2><a class="toc-backref" href="#id11">Speech Functions</a></h2>
@@ -1304,6 +1310,7 @@ ul.auto-toc {
 <div class="section" id="speech-navigation">
 <h2><a class="toc-backref" href="#id12">Speech Navigation</a></h2>
 <ul class="simple">
+<li><a class="reference internal" href="#route-speech">ROUTE_SPEECH</a></li>
 <li><a class="reference internal" href="#speak-curr-char">SPEAK_CURR_CHAR</a></li>
 <li><a class="reference internal" href="#desc-curr-char">DESC_CURR_CHAR</a></li>
 <li><a class="reference internal" href="#speak-prev-char">SPEAK_PREV_CHAR</a></li>
@@ -1322,6 +1329,11 @@ ul.auto-toc {
 <li><a class="reference internal" href="#speak-indent">SPEAK_INDENT</a></li>
 <li><a class="reference internal" href="#speak-curr-locn">SPEAK_CURR_LOCN</a></li>
 <li><a class="reference internal" href="#show-curr-locn">SHOW_CURR_LOCN</a></li>
+</ul>
+<p id="route-speech"><strong>ROUTE_SPEECH</strong> - Bring speech cursor to character.</p>
+<p>The following modifiers may be specified:</p>
+<ul class="simple">
+<li>a column number</li>
 </ul>
 <p id="speak-curr-char"><strong>SPEAK_CURR_CHAR</strong> - Speak current character.</p>
 <p id="desc-curr-char"><strong>DESC_CURR_CHAR</strong> - Describe current character.</p>
@@ -1597,6 +1609,8 @@ ul.auto-toc {
 <li><a class="reference internal" href="#passat">PASSAT</a></li>
 <li><a class="reference internal" href="#passps2">PASSPS2</a></li>
 <li><a class="reference internal" href="#touch-at">TOUCH_AT</a></li>
+<li><a class="reference internal" href="#macro">MACRO</a></li>
+<li><a class="reference internal" href="#hostcmd">HOSTCMD</a></li>
 </ul>
 <p id="noop"><strong>NOOP</strong> - Do nothing.</p>
 <p id="offline"><strong>OFFLINE</strong> - Braille display temporarily unavailable.</p>
@@ -1621,6 +1635,16 @@ ul.auto-toc {
 <li>Keyboard: release, emul0, emul1</li>
 </ul>
 <p id="touch-at"><strong>TOUCH_AT</strong> - Current reading location.</p>
+<p>The following modifiers may be specified:</p>
+<ul class="simple">
+<li>an offset</li>
+</ul>
+<p id="macro"><strong>MACRO</strong> - Execute command macro.</p>
+<p>The following modifiers may be specified:</p>
+<ul class="simple">
+<li>an offset</li>
+</ul>
+<p id="hostcmd"><strong>HOSTCMD</strong> - Run host command.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>

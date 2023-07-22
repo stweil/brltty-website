@@ -193,14 +193,15 @@ Configuration Functions
 * set attribute underlining off: B10+Dots1367
 
 Menu Operations
-* restore preferences from disk:
-  + Display1+Display2+Display3+Display5
-  + Dots456+Left
-  + B10+Dots12347
 * save preferences to disk:
   + Display2+Display4+Display5+Display6
   + Dots456+Right
   + B10+Dots12348
+* restore preferences from disk:
+  + Display1+Display2+Display3+Display5
+  + Dots456+Left
+  + B10+Dots12347
+* reset preferences to defaults: B10+Dots123478
 
 Speech Functions
 * stop speaking:

@@ -79,8 +79,9 @@ Configuration Functions
 * set attribute underlining off: Dot0+Dots1367
 
 Menu Operations
-* restore preferences from disk: Dot0+Dots12347
 * save preferences to disk: Dot0+Dots12348
+* restore preferences from disk: Dot0+Dots12347
+* reset preferences to defaults: Dot0+Dots123478
 
 Keyboard Input
 * braille keyboard space: Dot0

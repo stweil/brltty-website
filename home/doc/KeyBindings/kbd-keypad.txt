@@ -68,8 +68,8 @@ Configuration Functions
 * set attribute underlining on/off: KPPeriod+KPMultiply
 
 Menu Operations
-* restore preferences from disk: KPMinus+KP4
 * save preferences to disk: KPMinus+KP6
+* restore preferences from disk: KPMinus+KP4
 
 Speech Functions
 * stop speaking: KPEnter+KP4
@@ -136,6 +136,6 @@ Menu Operations
 * select previous choice: KP0+KP9
 * select next choice: KP0+KP3
 * go to previous menu level: KP0+KP5
-* restore preferences from disk: KP0+KPMinus
 * save preferences to disk: KP0+KPPlus
+* restore preferences from disk: KP0+KPMinus
 

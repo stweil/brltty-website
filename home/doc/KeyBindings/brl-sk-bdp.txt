@@ -65,8 +65,8 @@ Configuration Functions
 * set track screen cursor on/off: K4
 
 Menu Operations
-* restore preferences from disk: K1+K4
 * save preferences to disk: K1+K5
+* restore preferences from disk: K1+K4
 
 Menu Bindings
 -------------

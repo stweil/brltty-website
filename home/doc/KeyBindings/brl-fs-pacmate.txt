@@ -82,6 +82,6 @@ Configuration Functions
 * set attribute underlining on/off: RightSelector+Hot2
 
 Menu Operations
-* restore preferences from disk: RightSelector+Hot6
 * save preferences to disk: RightSelector+Hot7
+* restore preferences from disk: RightSelector+Hot6
 

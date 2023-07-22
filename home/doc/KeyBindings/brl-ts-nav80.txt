@@ -94,8 +94,8 @@ Configuration Functions
 * set alert tunes on/off: LeftOuter+RightOuter+CursorLeft+LeftThumb
 
 Menu Operations
-* restore preferences from disk: LeftOuter+RightOuter+LeftThumb+RightThumb
 * save preferences to disk: LeftOuter+RightOuter+RightThumb
+* restore preferences from disk: LeftOuter+RightOuter+LeftThumb+RightThumb
 
 Speech Functions
 * stop speaking:

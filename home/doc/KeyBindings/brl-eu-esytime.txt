@@ -93,8 +93,8 @@ Configuration Functions
 * set attribute underlining on/off: LeftJoystickUp+RightJoystickRight
 
 Menu Operations
-* restore preferences from disk: L1+RightJoystickLeft
 * save preferences to disk: L1+RightJoystickRight
+* restore preferences from disk: L1+RightJoystickLeft
 
 Keyboard Input
 * braille keyboard dot1: Dot1

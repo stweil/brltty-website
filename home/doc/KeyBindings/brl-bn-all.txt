@@ -97,8 +97,8 @@ Configuration Functions
 * set track screen cursor on/off: Back+Next
 
 Menu Operations
-* restore preferences from disk: Space+Dots145
 * save preferences to disk: Space+Dots2456
+* restore preferences from disk: Space+Dots145
 
 Speech Functions
 * stop speaking: Space+Dots134

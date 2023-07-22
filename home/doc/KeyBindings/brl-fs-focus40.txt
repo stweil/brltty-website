@@ -85,6 +85,8 @@ Vertical Navigation
 * go down to next command prompt: PanLeft+LeftNavDown
 * go up to nearest line with less indent than character: PanLeft+NavrowKey
 * go down to nearest line with less indent than character: PanRight+NavrowKey
+* go up to nearest line with different character: LeftSelector+NavrowKey
+* go down to nearest line with different character: RightSelector+NavrowKey
 
 Horizontal Navigation
 * go backward one braille window:
@@ -103,7 +105,7 @@ Horizontal Navigation
 * go right one character: RightNavPress+RightNavDown
 * place left end of braille window at character:
   + LeftNavPress+RoutingKey
-  + LeftSelector+NavrowKey
+  + LeftShift+RoutingKey
 
 Clipboard Functions
 * start new clipboard at character: PanLeft+RoutingKey
@@ -159,8 +161,9 @@ Configuration Functions
 * set attribute underlining off: Space+Dots1367
 
 Menu Operations
-* restore preferences from disk: Space+Dots12347
 * save preferences to disk: Space+Dots12348
+* restore preferences from disk: Space+Dots12347
+* reset preferences to defaults: Space+Dots123478
 
 Speech Functions
 * stop speaking: PanRight+LeftShift
@@ -246,7 +249,7 @@ Keyboard Input
 * cycle the Meta (Left Alt) sticky input modifier (next, on, off): Space+Dots28
 * cycle the AltGr (Right Alt) sticky input modifier (next, on, off): Space+Dots58
 * cycle the GUI (Windows) sticky input modifier (next, on, off): Space+Dots18
-* switch to specific virtual terminal: RightSelector+NavrowKey
+* switch to specific virtual terminal: RightShift+RoutingKey
 * switch to the previous virtual terminal: Space+Dots12367
 * switch to the next virtual terminal: Space+Dots12368
 * set braille keyboard enabled: Space+Dots138

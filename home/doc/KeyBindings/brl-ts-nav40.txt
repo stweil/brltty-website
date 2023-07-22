@@ -63,8 +63,8 @@ Configuration Functions
 * set alert tunes on/off: NavLeft+NavRight+CursorLeft+ThumbLeft
 
 Menu Operations
-* restore preferences from disk: NavLeft+NavRight+ThumbLeft+ThumbRight
 * save preferences to disk: NavLeft+NavRight+ThumbRight
+* restore preferences from disk: NavLeft+NavRight+ThumbLeft+ThumbRight
 
 Speech Functions
 * stop speaking:

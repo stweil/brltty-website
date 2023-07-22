@@ -97,8 +97,9 @@ Configuration Functions
 * set attribute underlining off: Space+Dots1367
 
 Menu Operations
-* restore preferences from disk: Space+Dots12347
 * save preferences to disk: Space+Dots12348
+* restore preferences from disk: Space+Dots12347
+* reset preferences to defaults: Space+Dots123478
 
 Keyboard Input
 * braille keyboard dot1: Dot1
@@ -177,6 +178,6 @@ Menu Operations
 * go to previous menu level:
   + Dot7
   + RightScrollUp+RightScrollDown+LeftScrollUp
-* restore preferences from disk: LeftScrollUp+LeftScrollDown+RightScrollUp
 * save preferences to disk: LeftScrollUp+LeftScrollDown+RightScrollDown
+* restore preferences from disk: LeftScrollUp+LeftScrollDown+RightScrollUp
 

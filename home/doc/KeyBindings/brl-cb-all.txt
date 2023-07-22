@@ -76,8 +76,8 @@ Configuration Functions
 * set alert tunes on/off: Dots234
 
 Menu Operations
-* restore preferences from disk: Dots1235
 * save preferences to disk: Dots123456
+* restore preferences from disk: Dots1235
 
 Speech Functions
 * stop speaking:

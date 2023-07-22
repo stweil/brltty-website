@@ -151,6 +151,6 @@ Menu Operations
 * select previous choice: CapsLock+ArrowLeft
 * select next choice: CapsLock+ArrowRight
 * go to previous menu level: CapsLock+ShiftLeft+ArrowUp
-* restore preferences from disk: CapsLock+ShiftLeft+ArrowLeft
 * save preferences to disk: CapsLock+ShiftLeft+ArrowRight
+* restore preferences from disk: CapsLock+ShiftLeft+ArrowLeft
 

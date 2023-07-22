@@ -387,26 +387,27 @@ ul.auto-toc {
 <li><a class="reference internal" href="#windows-scripts-for-managing-brltty" id="id17">Windows Scripts for Managing BRLTTY</a><ul>
 <li><a class="reference internal" href="#run-brltty-bat" id="id18"><tt class="docutils literal"><span class="pre">run-brltty.bat</span></tt></a></li>
 <li><a class="reference internal" href="#debug-brltty-bat" id="id19"><tt class="docutils literal"><span class="pre">debug-brltty.bat</span></tt></a></li>
-<li><a class="reference internal" href="#enable-brlapi-bat" id="id20"><tt class="docutils literal"><span class="pre">enable-brlapi.bat</span></tt></a></li>
-<li><a class="reference internal" href="#disable-brlapi-bat" id="id21"><tt class="docutils literal"><span class="pre">disable-brlapi.bat</span></tt></a></li>
+<li><a class="reference internal" href="#kill-brltty-bat" id="id20"><tt class="docutils literal"><span class="pre">kill-brltty.bat</span></tt></a></li>
+<li><a class="reference internal" href="#enable-brlapi-bat" id="id21"><tt class="docutils literal"><span class="pre">enable-brlapi.bat</span></tt></a></li>
+<li><a class="reference internal" href="#disable-brlapi-bat" id="id22"><tt class="docutils literal"><span class="pre">disable-brlapi.bat</span></tt></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#sticking-to-a-console" id="id22">Sticking to a Console</a></li>
-<li><a class="reference internal" href="#sharing-the-braille-device-with-other-screen-readers" id="id23">Sharing the Braille Device with Other Screen Readers</a><ul>
-<li><a class="reference internal" href="#sharing-with-jaws" id="id24">Sharing with JAWS</a></li>
+<li><a class="reference internal" href="#sticking-to-a-console" id="id23">Sticking to a Console</a></li>
+<li><a class="reference internal" href="#sharing-the-braille-device-with-other-screen-readers" id="id24">Sharing the Braille Device with Other Screen Readers</a><ul>
+<li><a class="reference internal" href="#sharing-with-jaws" id="id25">Sharing with JAWS</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#mingw-scripts-for-building-brltty" id="id25">MinGW Scripts for Building BRLTTY</a><ul>
-<li><a class="reference internal" href="#the-mkwin-script" id="id26">The <tt class="docutils literal">mkwin</tt> Script</a><ul>
-<li><a class="reference internal" href="#software-components-required-by-mkwin" id="id27">Software Components Required by <tt class="docutils literal">mkwin</tt></a></li>
-<li><a class="reference internal" href="#more-mkwin-options" id="id28">More <tt class="docutils literal">mkwin</tt> Options</a></li>
-<li><a class="reference internal" href="#mkwin-parameters" id="id29"><tt class="docutils literal">mkwin</tt> Parameters</a></li>
+<li><a class="reference internal" href="#mingw-scripts-for-building-brltty" id="id26">MinGW Scripts for Building BRLTTY</a><ul>
+<li><a class="reference internal" href="#the-mkwin-script" id="id27">The <tt class="docutils literal">mkwin</tt> Script</a><ul>
+<li><a class="reference internal" href="#software-components-required-by-mkwin" id="id28">Software Components Required by <tt class="docutils literal">mkwin</tt></a></li>
+<li><a class="reference internal" href="#more-mkwin-options" id="id29">More <tt class="docutils literal">mkwin</tt> Options</a></li>
+<li><a class="reference internal" href="#mkwin-parameters" id="id30"><tt class="docutils literal">mkwin</tt> Parameters</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#the-winsetup-script" id="id30">The <tt class="docutils literal">winsetup</tt> Script</a><ul>
-<li><a class="reference internal" href="#winsetup-options" id="id31"><tt class="docutils literal">winsetup</tt> Options</a></li>
+<li><a class="reference internal" href="#the-winsetup-script" id="id31">The <tt class="docutils literal">winsetup</tt> Script</a><ul>
+<li><a class="reference internal" href="#winsetup-options" id="id32"><tt class="docutils literal">winsetup</tt> Options</a></li>
 </ul>
 </li>
 </ul>
@@ -671,17 +672,21 @@ All arguments are passed through to BRLTTY.</p>
 set the log level to <tt class="docutils literal">debug</tt> and enable several useful log categories.
 All arguments are passed through to the <tt class="docutils literal"><span class="pre">run-brltty.bat</span></tt> script.</p>
 </div>
+<div class="section" id="kill-brltty-bat">
+<h4><a class="toc-backref" href="#id20"><tt class="docutils literal"><span class="pre">kill-brltty.bat</span></tt></a></h4>
+<p>Forceably terminate the manually-run BRLTTY process.</p>
+</div>
 <div class="section" id="enable-brlapi-bat">
-<h4><a class="toc-backref" href="#id20"><tt class="docutils literal"><span class="pre">enable-brlapi.bat</span></tt></a></h4>
+<h4><a class="toc-backref" href="#id21"><tt class="docutils literal"><span class="pre">enable-brlapi.bat</span></tt></a></h4>
 <p>Install the BrlAPI service and start it.</p>
 </div>
 <div class="section" id="disable-brlapi-bat">
-<h4><a class="toc-backref" href="#id21"><tt class="docutils literal"><span class="pre">disable-brlapi.bat</span></tt></a></h4>
+<h4><a class="toc-backref" href="#id22"><tt class="docutils literal"><span class="pre">disable-brlapi.bat</span></tt></a></h4>
 <p>Stop the BrlAPI service and uninstall it.</p>
 </div>
 </div>
 <div class="section" id="sticking-to-a-console">
-<h3><a class="toc-backref" href="#id22">Sticking to a Console</a></h3>
+<h3><a class="toc-backref" href="#id23">Sticking to a Console</a></h3>
 <p>It may be useful to have BRLTTY only review the console that it's started in,
 i.e.  for it not to follow the keyboard focus. To achieve this, set the
 <tt class="docutils literal">FollowFocus</tt> parameter of BRLTTY's <tt class="docutils literal">Windows</tt> screen driver to <tt class="docutils literal">no</tt>. This
@@ -694,7 +699,7 @@ can be done:</p>
 </dl>
 </div>
 <div class="section" id="sharing-the-braille-device-with-other-screen-readers">
-<h3><a class="toc-backref" href="#id23">Sharing the Braille Device with Other Screen Readers</a></h3>
+<h3><a class="toc-backref" href="#id24">Sharing the Braille Device with Other Screen Readers</a></h3>
 <p>When you're not on a window that BRLTTY can handle, its default action is to
 retain control of the braille device and to present a short message explaining
 the problem. If you have another braille-capable screen reader and would like
@@ -708,7 +713,7 @@ device when you move onto a window that it can handle. Note that these actions
 take a noticeable amount of time so you should only use this option if it's
 actually needed.</p>
 <div class="section" id="sharing-with-jaws">
-<h4><a class="toc-backref" href="#id24">Sharing with JAWS</a></h4>
+<h4><a class="toc-backref" href="#id25">Sharing with JAWS</a></h4>
 <p>A common case wherein a JAWS user might want BRLTTY to be in control of the
 braille device when on a console window is when using Cygwin.</p>
 <p>There are two phases to configuring JAWS to run in the background while BRLTTY
@@ -816,14 +821,14 @@ may need to exit BRLTTY before going to Windows.</p>
 </div>
 </div>
 <div class="section" id="mingw-scripts-for-building-brltty">
-<h2><a class="toc-backref" href="#id25">MinGW Scripts for Building BRLTTY</a></h2>
+<h2><a class="toc-backref" href="#id26">MinGW Scripts for Building BRLTTY</a></h2>
 <div class="section" id="the-mkwin-script">
-<h3><a class="toc-backref" href="#id26">The <tt class="docutils literal">mkwin</tt> Script</a></h3>
+<h3><a class="toc-backref" href="#id27">The <tt class="docutils literal">mkwin</tt> Script</a></h3>
 <p>The <tt class="docutils literal">mkwin</tt> script,
 which can be found in the <tt class="docutils literal">Windows/</tt> subdirectory of BRLTTY's source tree,
 builds the Windows archive and installer for BRLTTY.</p>
 <div class="section" id="software-components-required-by-mkwin">
-<h4><a class="toc-backref" href="#id27">Software Components Required by <tt class="docutils literal">mkwin</tt></a></h4>
+<h4><a class="toc-backref" href="#id28">Software Components Required by <tt class="docutils literal">mkwin</tt></a></h4>
 <p>Links to the pages where we found these
 installers, components, and files are listed.
 In case any of these links becomes out-of-date, however,
@@ -992,7 +997,7 @@ Copies of them are at <a class="reference external" href="http://BRLTTY.app/arch
 </ul>
 </div>
 <div class="section" id="more-mkwin-options">
-<h4><a class="toc-backref" href="#id28">More <tt class="docutils literal">mkwin</tt> Options</a></h4>
+<h4><a class="toc-backref" href="#id29">More <tt class="docutils literal">mkwin</tt> Options</a></h4>
 <dl class="docutils">
 <dt><tt class="docutils literal"><span class="pre">-u</span></tt> (USB)</dt>
 <dd><p class="first">Specify which USB package is to be used. The following USB packages are
@@ -1034,7 +1039,7 @@ be specified multiple times.</dd>
 </dl>
 </div>
 <div class="section" id="mkwin-parameters">
-<h4><a class="toc-backref" href="#id29"><tt class="docutils literal">mkwin</tt> Parameters</a></h4>
+<h4><a class="toc-backref" href="#id30"><tt class="docutils literal">mkwin</tt> Parameters</a></h4>
 <p>The <tt class="docutils literal">mkwin</tt> script accepts two parameters:</p>
 <ol class="arabic simple">
 <li>The path to the top-level directory of BRLTTY's source tree.
@@ -1076,13 +1081,13 @@ BRLTTY's source tree,</li>
 </div>
 </div>
 <div class="section" id="the-winsetup-script">
-<h3><a class="toc-backref" href="#id30">The <tt class="docutils literal">winsetup</tt> Script</a></h3>
+<h3><a class="toc-backref" href="#id31">The <tt class="docutils literal">winsetup</tt> Script</a></h3>
 <p>The <tt class="docutils literal">winsetup</tt> script,
 which can be found in the <tt class="docutils literal">Windows/</tt> subdirectory of BRLTTY's source tree,
 ensures that all needed components are installed on your system
 so that <a class="reference internal" href="#the-mkwin-script">the mkwin script</a> can successfully build BRLTTY.</p>
 <div class="section" id="winsetup-options">
-<h4><a class="toc-backref" href="#id31"><tt class="docutils literal">winsetup</tt> Options</a></h4>
+<h4><a class="toc-backref" href="#id32"><tt class="docutils literal">winsetup</tt> Options</a></h4>
 <dl class="docutils">
 <dt><tt class="docutils literal"><span class="pre">-a</span></tt> (archive URL)</dt>
 <dd>Specify the location for BRLTTY's Windows archive.</dd>

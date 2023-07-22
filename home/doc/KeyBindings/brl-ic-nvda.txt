@@ -114,8 +114,8 @@ Configuration Functions
 * set capital letter blinking on/off: Dot8+RoutingKey.17
 
 Menu Operations
-* restore preferences from disk: Space+Dots12, Dot7, Dots1234
 * save preferences to disk: Space+Dots12, Dot8, Dots1234
+* restore preferences from disk: Space+Dots12, Dot7, Dots1234
 
 Keyboard Input
 * braille keyboard dot1: Dot1

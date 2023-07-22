@@ -135,8 +135,9 @@ Configuration Functions
 * set attribute underlining off: Read+dots1367
 
 Menu Operations
-* restore preferences from disk: Read+dots12347
 * save preferences to disk: Read+dots12348
+* restore preferences from disk: Read+dots12347
+* reset preferences to defaults: Read+dots123478
 
 Keyboard Input
 * braille keyboard control: Control

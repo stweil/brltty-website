@@ -39,8 +39,8 @@ Horizontal Navigation
 * go to beginning of line: Refresh+Menu
 
 Menu Operations
-* restore preferences from disk: Help+Back
 * save preferences to disk: Help+Forward
+* restore preferences from disk: Help+Back
 
 Special Functions
 * refresh braille display: Refresh+Help

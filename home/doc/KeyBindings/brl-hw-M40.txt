@@ -51,6 +51,6 @@ Menu Operations
 * go down to last item: ThumbLeft+ThumbNext
 * select previous choice: ThumbRight+ThumbPrevious
 * select next choice: ThumbRight+ThumbNext
-* restore preferences from disk: ThumbLeft+ThumbRight+ThumbPrevious
 * save preferences to disk: ThumbLeft+ThumbRight+ThumbNext
+* restore preferences from disk: ThumbLeft+ThumbRight+ThumbPrevious
 

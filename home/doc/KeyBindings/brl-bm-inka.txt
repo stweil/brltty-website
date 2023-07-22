@@ -81,8 +81,8 @@ Configuration Functions
 * set attribute underlining on/off: Display2+Display3+Display4+Display5
 
 Menu Operations
-* restore preferences from disk: Display1+Display2+Display3+Display5
 * save preferences to disk: Display2+Display4+Display5+Display6
+* restore preferences from disk: Display1+Display2+Display3+Display5
 
 Speech Functions
 * stop speaking: Display3+Display4

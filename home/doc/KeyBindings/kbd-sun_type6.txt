@@ -56,8 +56,8 @@ Configuration Functions
 * set alert tunes on/off: ControlLeft+MEDIA_Mute
 
 Menu Operations
-* restore preferences from disk: ControlLeft+ShiftLeft+KP0+KP4
 * save preferences to disk: ControlLeft+ShiftLeft+KP0+KP6
+* restore preferences from disk: ControlLeft+ShiftLeft+KP0+KP4
 
 Speech Functions
 * stop speaking:

@@ -92,7 +92,9 @@ Functions</h2></td></tr>
 <dd>
 Dots are coded as described in ISO/TR 11548-1: a dot pattern is coded by a byte in which bit 0 is set iff dot 1 is up, bit 1 is set iff dot 2 is up, ... bit 7 is set iff dot 8 is up. This also corresponds to the low-order byte of the coding of unicode's braille row U+2800.</dd>
 <dd>
-Text is translated by the server one to one, by just using a simple wchar_t to pattern table, i.e. no contraction/expansion is performed, because the client would then have no way to know how wide the output would be and thus the quantity of text to feed. If contraction/expansion is desired, the client should perform it itself (e.g. thanks to liblouis or gnome-braille) and send the resulting dot patterns. This is actually exactly the same problem as font rendering on a graphical display: for better control, nowadays all font rasterization is performed on the client side, and mere pixmaps are sent to the X server. </dd></dl>
+Text is translated by the server one to one, by just using a simple wchar_t to pattern table, i.e. no contraction/expansion is performed, because the client would then have no way to know how wide the output would be and thus the quantity of text to feed. If contraction/expansion is desired, the client should perform it itself (e.g. thanks to liblouis or gnome-braille) and send the resulting dot patterns. This is actually exactly the same problem as font rendering on a graphical display: for better control, nowadays all font rasterization is performed on the client side, and mere pixmaps are sent to the X server.</dd>
+<dd>
+For braille displays with multiple lines, text will be wrapped over the lines. </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="gab0f523a333efcd272ac591785747f8ce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gab0f523a333efcd272ac591785747f8ce">&#9670;&nbsp;</a></span>BRLAPI_CURSOR_LEAVE</h2>
@@ -164,8 +166,8 @@ Text is translated by the server one to one, by just using a simple wchar_t to p
 <div class="line">  .cursor = <a class="code" href="group__brlapi__write.html#gab0f523a333efcd272ac591785747f8ce">BRLAPI_CURSOR_LEAVE</a>, \</div>
 <div class="line">  .charset = NULL \</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__brlapi__write_html_gab0f523a333efcd272ac591785747f8ce"><div class="ttname"><a href="group__brlapi__write.html#gab0f523a333efcd272ac591785747f8ce">BRLAPI_CURSOR_LEAVE</a></div><div class="ttdeci">#define BRLAPI_CURSOR_LEAVE</div><div class="ttdef"><b>Definition:</b> brlapi.h:618</div></div>
-<div class="ttc" id="agroup__brlapi__write_html_gab1a71f82cac5d0b7ea1170697fe0dfc2"><div class="ttname"><a href="group__brlapi__write.html#gab1a71f82cac5d0b7ea1170697fe0dfc2">BRLAPI_DISPLAY_DEFAULT</a></div><div class="ttdeci">#define BRLAPI_DISPLAY_DEFAULT</div><div class="ttdef"><b>Definition:</b> brlapi.h:612</div></div>
+<div class="ttc" id="agroup__brlapi__write_html_gab0f523a333efcd272ac591785747f8ce"><div class="ttname"><a href="group__brlapi__write.html#gab0f523a333efcd272ac591785747f8ce">BRLAPI_CURSOR_LEAVE</a></div><div class="ttdeci">#define BRLAPI_CURSOR_LEAVE</div><div class="ttdef"><b>Definition:</b> brlapi.h:621</div></div>
+<div class="ttc" id="agroup__brlapi__write_html_gab1a71f82cac5d0b7ea1170697fe0dfc2"><div class="ttname"><a href="group__brlapi__write.html#gab1a71f82cac5d0b7ea1170697fe0dfc2">BRLAPI_DISPLAY_DEFAULT</a></div><div class="ttdeci">#define BRLAPI_DISPLAY_DEFAULT</div><div class="ttdef"><b>Definition:</b> brlapi.h:615</div></div>
 </div><!-- fragment --><p>Allows to initialize a structure of type <em><a class="el" href="structbrlapi__writeArguments__t.html">brlapi_writeArguments_t</a></em> * with default values: displayNumber = <a class="el" href="group__brlapi__write.html#gab1a71f82cac5d0b7ea1170697fe0dfc2">BRLAPI_DISPLAY_DEFAULT</a>; (unspecified) regionBegin = regionSize = 0; (update the whole display, DEPRECATED and will be forbidden in next release. You must always express the region you wish to update) text = andMask = orMask = NULL; (no text, no attribute) cursor = <a class="el" href="group__brlapi__write.html#gab0f523a333efcd272ac591785747f8ce">BRLAPI_CURSOR_LEAVE</a>; (don't touch cursor) </p>
 
 </div>

@@ -105,8 +105,8 @@ Configuration Functions
 * set alert tunes on/off: Bar1+Bar2+Button2
 
 Menu Operations
-* restore preferences from disk: Bar1+Bar2+Convex+Concave
 * save preferences to disk: Bar1+Bar2+Concave
+* restore preferences from disk: Bar1+Bar2+Convex+Concave
 
 Speech Functions
 * stop speaking: Bar2+RightRockerUp

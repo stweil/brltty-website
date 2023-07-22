@@ -124,8 +124,8 @@ Configuration Functions
 * set alert tunes on/off: B8+B7
 
 Menu Operations
-* restore preferences from disk: B7+B2
 * save preferences to disk: B7+B3
+* restore preferences from disk: B7+B2
 
 Speech Functions
 * stop speaking: B2+B3+SpaceLeft

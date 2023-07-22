@@ -102,8 +102,8 @@ Configuration Functions
 * set attribute underlining off: Status.13+Dot7
 
 Menu Operations
-* restore preferences from disk: Status.9
 * save preferences to disk: Status.11
+* restore preferences from disk: Status.9
 
 Speech Functions
 * stop speaking: Dot7+Up
@@ -214,8 +214,9 @@ Configuration Functions
 * set attribute underlining off: Dots1367
 
 Menu Operations
-* restore preferences from disk: Dots12347
 * save preferences to disk: Dots12348
+* restore preferences from disk: Dots12347
+* reset preferences to defaults: Dots123478
 
 Keyboard Input
 * escape key: Dots26

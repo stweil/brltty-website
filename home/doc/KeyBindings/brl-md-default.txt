@@ -124,12 +124,13 @@ Configuration Functions
 * set capital letter blinking on/off: Long+F5
 
 Menu Operations
-* restore preferences from disk:
-  + Long+F10
-  + Space+Dots12347
 * save preferences to disk:
   + Shift+Long+F10
   + Space+Dots12348
+* restore preferences from disk:
+  + Long+F10
+  + Space+Dots12347
+* reset preferences to defaults: Space+Dots123478
 
 Keyboard Input
 * braille keyboard dot1: Dot1

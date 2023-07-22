@@ -85,6 +85,6 @@ Configuration Functions
 * set attribute underlining off: B8+K2+K1
 
 Menu Operations
-* restore preferences from disk: K1+K3+B2
 * save preferences to disk: K1+K3+B5
+* restore preferences from disk: K1+K3+B2
 

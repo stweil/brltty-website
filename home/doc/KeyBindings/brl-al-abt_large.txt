@@ -84,6 +84,6 @@ Menu Operations
 * go down to last item: Home+Down
 * select previous choice: Home
 * select next choice: Cursor
-* restore preferences from disk: Home+Left
 * save preferences to disk: Home+Right
+* restore preferences from disk: Home+Left
 
