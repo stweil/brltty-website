@@ -58,6 +58,9 @@ then please <A HREF="contact.html">let us know</A>.
          "25/45/85"
       ),
 
+      array("DotPad"
+      ),
+
       array("EcoBraille",
          "20/40/80"
       ),
