@@ -475,6 +475,10 @@ perform a model-specific action on it in order to make it visible
 tap <tt class="docutils literal">Search for Devices</tt> again. Tap on your braille device to begin the
 Bluetooth Pairing Request, enter its PIN (see its manual for details), and tap
 <tt class="docutils literal">OK</tt>.</p>
+<p>There's an additional step that became mandatory in Android 12 (API level 31).
+You need to explicitly tell Android that BRLTTY is allowed to connect to Bluetooth devices.
+To do this, go to BRLTTY's <a class="reference internal" href="#actions-screen">Actions Screen</a> and tap <strong>Allow Bluetooth Connections</strong>.
+If you don't see this button then this step has already been performed.</p>
 </div>
 <div class="section" id="connecting-via-usb">
 <h5><a class="toc-backref" href="#id7">Connecting Via USB</a></h5>
@@ -561,6 +565,7 @@ input method to BRLTTY's input method.</li>
 <p>BRLTTY's Actions screen presents several common actions that you may wish to perform:</p>
 <ul class="simple">
 <li>Switch Input Method</li>
+<li>Allow Bluetooth Connections</li>
 <li>BRLTTY Settings</li>
 <li>View User Guide</li>
 <li>Browse Web Site</li>
@@ -1343,7 +1348,17 @@ each time you interact with a control on your braille device.</li>
 </dd>
 <dt><tt class="docutils literal">BLUETOOTH</tt></dt>
 <dd><ul class="first last simple">
-<li>For communicating with a braille device via Bluetooth.</li>
+<li>For communicating with a braille device via Bluetooth (API level &lt;= 30).</li>
+</ul>
+</dd>
+<dt><tt class="docutils literal">BLUETOOTH_CONNECT</tt></dt>
+<dd><ul class="first last simple">
+<li>For connecting to an already-paried Bluetooth device (API level &gt; 30).</li>
+</ul>
+</dd>
+<dt><tt class="docutils literal">BLUETOOTH_SCAN</tt></dt>
+<dd><ul class="first last simple">
+<li>For checking if Bluetotoh device discovery is currently active (API level &gt; 30).</li>
 </ul>
 </dd>
 <dt><tt class="docutils literal">INTERNET</tt></dt>
