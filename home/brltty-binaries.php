@@ -7,5 +7,5 @@ subsections of this page.
 
 <p>
 Debian packages for <b>BRLTTY</b> can be found at
-<?php write_link('ftp://ftp.debian.org/debian/pool/main/b/brltty/') ?>.
+<?php write_link('http://deb.debian.org/debian/pool/main/b/brltty/') ?>.
 </p>
