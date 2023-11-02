@@ -215,11 +215,11 @@
   Questions, comments, suggestions, criticisms, and contributions are
   all welcome.  Even though our e-mail addresses are listed above, the
   best way to contact us is via BRLTTY's mailing list.  You can post to
-  the list by sending e-mail to <BRLTTY@mielke.cc>.  If you aren't
+  the list by sending e-mail to <BRLTTY@brltty.app>.  If you aren't
   subscribed to the list then your posts will be held for moderator
   approval.  To subscribe, unsubscribe, change settings, view archives,
   etc, go to the list's information page at
-  http://mielke.cc/mailman/listinfo/brltty.
+  http://brltty.app/mailman/listinfo/brltty.
 
   2.  Introduction
 
