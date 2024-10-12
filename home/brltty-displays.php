@@ -32,7 +32,7 @@ then please <A HREF="contact.html">let us know</A>.
       ),
 
       array("BrailleMemo",
-         "Pocket (16)", "Smart (16)", "32", "40"
+         "Pocket", "Smart", "Next Touch"
       ),
 
       array("BrailleNote",
@@ -81,8 +81,10 @@ then please <A HREF="contact.html">let us know</A>.
       array("HandyTech",
          "Modular 20/40/80", "Modular Connect 88", "Modular Evolution 64/88",
          "Active Braille", "Active Braille S", "Active Star 40",
-         "Actilino", "Activator",
-         "Basic Braille 16/20/32/40/48/64/80", "Braillino", "Braille Wave",
+         "Actilino", "Activator", "Activator Pro 64/80",
+         "Basic Braille 16/20/32/40/48/64/80",
+         "Basic Braille Plus 20/32/40/48/64/80/84",
+         "Braillino", "Braille Wave",
          "Easy Braille", "Braille Star 40/80", "Connect Braille 40",
          "Bookworm"
       ),
@@ -92,8 +94,8 @@ then please <A HREF="contact.html">let us know</A>.
       ),
 
       array("HIMS",
-         "Braille Sense", "SyncBraille", "Braille Edge",
-         "Smart Beetle", "QBrailleXL"
+         "Braille Sense", "BrailleSense 6", "SyncBraille", "Braille Edge",
+         "Smart Beetle", "QBrailleXL", "eMotion"
       ),
 
       array("HumanWare",
