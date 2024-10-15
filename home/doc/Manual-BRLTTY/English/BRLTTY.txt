@@ -9,9 +9,9 @@
 
   Dave Mielke <dave@mielke.cc>
 
-  Version 6.6, July 2023
+  Version 6.7, October 2024
 
-  Copyright © 1995-2023 by The BRLTTY Developers.  BRLTTY is free soft-
+  Copyright © 1995-2024 by The BRLTTY Developers.  BRLTTY is free soft-
   ware, and comes with ABSOLUTELY NO WARRANTY.  It is placed under the
   terms of version 2 or later of The GNU General Public License as pub-
   lished by The Free Software Foundation.
@@ -1490,9 +1490,8 @@
   changing the file permissions associated with the devices.  Merely
   having access to the console, however, isn't enough because activating
   the internal beeper and simulating key strokes still require root
-  privilege.  So, if you're willing to give up cursor routing,
-  cut&paste, beeps, and all that, you can run BRLTTY without root
-  priviledge.
+  privilege.  So, if you're willing to give up Cursor Routing, Copy and
+  Paste, beeps, and all that, you can run BRLTTY without root privilege.
 
   3.6.  Build and Run-Time Restrictions
 
@@ -2565,7 +2564,7 @@
   command line option.  It doesn't need to exist.  A template for it can
   be found within the Documents subdirectory.
 
-  Blank lines are ignored.  A comment begin with a number sign (#), and
+  Blank lines are ignored.  A comment begins with a number sign (#), and
   continues to the end of the line.  The following directives are
   recognized:
 
@@ -2761,7 +2760,7 @@
         The .ctb extension is optional.  The contraction table is used
         when the 6-dot braille feature is activated (see the ``SIXDOTS''
         command and the ``Text Style'' preference).  See the
-        ``contraction-table'' configureation file directive for the
+        ``contraction-table'' configuration file directive for the
         default run-time setting.  This setting can be changed with the
         ``Contraction Table'' preference.  This option isn't available
         if the ``--disable-contracted-braille'' build option was
@@ -2799,10 +2798,9 @@
         details).  If a relative path is supplied, then it's anchored at
         /etc/brltty (see the ``--with-data-directory'' and the ``--with-
         execute-root'' build options for more details).  The .ktb
-        extension is optional.  See the ``keyboard-table''
-        configureation file directive for the default run-time setting.
-        This setting can be changed with the ``Keyboard Table''
-        preference.
+        extension is optional.  See the ``keyboard-table'' configuration
+        file directive for the default run-time setting.  This setting
+        can be changed with the ``Keyboard Table'' preference.
 
      -llevel --log-level=level
         Specify the severity threshold for diagnostic message
@@ -2871,7 +2869,7 @@
         details).  If a relative path is supplied, then it's anchored at
         /etc/brltty (see the ``--with-data-directory'' and the ``--with-
         execute-root'' build options for more details).  The .ttb
-        extension is optional.  See the ``text-table'' configureation
+        extension is optional.  See the ``text-table'' configuration
         file directive for the default run-time setting.  This setting
         can be changed with the ``Text Table'' preference.
 
@@ -5685,131 +5683,134 @@
 
   BRLTTY supports the following braille displays:
 
-          Name                Models
-          ______________________________________________________________
-          Albatross           46/80
-          Alva                ABT (3nn)
-                              Delphi (4nn)
-                              Satellite (5nn)
-                              Braille System 40
-                              Braille Controller 640/680
-                              Easy Link 12
-          Baum                BrailleConnect 12/24/32/40/64/80
-                              Brailliant 24/32/40/64/80
-                              Conny 12
-                              DM80 Plus
-                              EcoVario 24/32/40/64/80
-                              Inka
-                              NLS eReader Zoomax
-                              Orbit Reader 20/40
-                              PocketVario 24
-                              Pronto! V3 18/40
-                              Pronto! V4 18/40
-                              RBT 40/80
-                              Refreshabraille 18
-                              SuperVario 32/40/64/80
-                              Vario 40/80
-                              VarioConnect 12/24/32/40/64/80
-                              VarioPro 40/64/80
-                              VarioUltra 20/32/40
-          BrailComm           III
-          BrailleLite         18/40/M20/M40
-          BrailleMemo         Pocket (16)
-                              Smart (16)
-                              32
-                              40
-          BrailleNote         18/32
-                              Apex
-          Braudi
-          BrlAPI
-          Canute              360 (40x9)
-          Cebra               20/40/60/80/100/120/140
-          CombiBraille        25/45/85
-          DotPad
-          EcoBraille          20/40/80
-          EuroBraille         AzerBraille
-                              Clio
-                              Esys
-                              Iris
-                              NoteBraille
-                              Scriba
-          FrankAudiodata      B2K84
-          FreedomScientific   Focus 1 44/70/84
-                              Focus 2 40/80
-                              Focus Blue 14/40/80
-                              PAC Mate 20/40
-          HandyTech           Modular 20/40/80
-                              Modular Evolution 64/88
-                              Modular Connect 88
-                              Active Braille
-                              Active Braille S
-                              Active Star 40
-                              Actilino
-                              Activator
-                              Basic Braille 16/20/32/40/48/64/80
-                              Braillino
-                              Braille Wave
-                              Easy Braille
-                              Braille Star 40/80
-                              Connect Braille 40
-                              Bookworm
-          Hedo                ProfiLine
-                              MobilLine
-          HIMS                Braille Sense
-                              SyncBraille
-                              Braille Edge
-                              Smart Beetle
-                              QBrailleXL
-          HumanWare           Brailliant BI 14/32/40
-                              Brailliant BI 20X/40X
-                              Brailliant B 80
-                              BrailleNote Touch
-                              BrailleOne
-                              APH Chameleon 20
-                              APH Mantis Q40
-                              NLS eReader
-          Inceptor            BrailleMe (20)
-          Iris
-          Libbraille
-          LogText             32
-          MDV                 MB208
-                              MB248
-                              MB408L
-                              MB408L+
-                              Lilli Blu
-          Metec               BD-40
-          MiniBraille         20
-          MultiBraille        MB125CR
-                              MB145CR
-                              MB185CR
-          NinePoint           8
-          Papenmeier          Compact 486
-                              Compact/Tiny
-                              IB 80 CR Soft
-                              2D Lite (plus)
-                              2D Screen Soft
-                              EL 80
-                              EL 2D 40/66/80
-                              EL 40/66/70/80 S
-                              EL 40/60/80 C
-                              EL 2D 80 S
-                              EL 40 P
-                              EL 80 II
-                              Elba 20/32
-                              Trio 40/Elba20/Elba32
-                              Live 20/40
-          Pegasus             20/27/40/80
-          Seika               3/4/5 (40)
-                              80
-                              Mini (16)
-          TechniBraille
-          TSI                 Navigator 20/40/80
-                              PowerBraille 40/65/80
-          VideoBraille        40
-          VisioBraille        20/40
-          Voyager             44/70
-                              Part232 (serial adapter)
-                              BraillePen/EasyLink
+       Name                Models
+       _________________________________________________________________
+       Albatross           46/80
+       Alva                ABT (3nn)
+                           Delphi (4nn)
+                           Satellite (5nn)
+                           Braille System 40
+                           Braille Controller 640/680
+                           Easy Link 12
+       Baum                BrailleConnect 12/24/32/40/64/80
+                           Brailliant 24/32/40/64/80
+                           Conny 12
+                           DM80 Plus
+                           EcoVario 24/32/40/64/80
+                           Inka
+                           NLS eReader Zoomax
+                           Orbit Reader 20/40
+                           PocketVario 24
+                           Pronto! V3 18/40
+                           Pronto! V4 18/40
+                           RBT 40/80
+                           Refreshabraille 18
+                           SuperVario 32/40/64/80
+                           Vario 40/80
+                           VarioConnect 12/24/32/40/64/80
+                           VarioPro 40/64/80
+                           VarioUltra 20/32/40
+       BrailComm           III
+       BrailleLite         18/40/M20/M40
+       BrailleMemo         Pocket
+                           Smart
+                           Next Touch
+       BrailleNote         18/32
+                           Apex
+       Braudi
+       BrlAPI
+       Canute              360 (40x9)
+       Cebra               20/40/60/80/100/120/140
+       CombiBraille        25/45/85
+       DotPad
+       EcoBraille          20/40/80
+       EuroBraille         AzerBraille
+                           Clio
+                           Esys
+                           Iris
+                           NoteBraille
+                           Scriba
+       FrankAudiodata      B2K84
+       FreedomScientific   Focus 1 44/70/84
+                           Focus 2 40/80
+                           Focus Blue 14/40/80
+                           PAC Mate 20/40
+       HandyTech           Modular 20/40/80
+                           Modular Evolution 64/88
+                           Modular Connect 88
+                           Active Braille
+                           Active Braille S
+                           Active Star 40
+                           Actilino
+                           Activator
+                           Activator Pro 64/80
+                           Basic Braille 16/20/32/40/48/64/80
+                           Basic Braille Plus 20/32/40/48/64/80/84
+                           Braille Wave
+                           Braillino
+                           Easy Braille
+                           Braille Star 40/80
+                           Connect Braille 40
+                           Bookworm
+       Hedo                ProfiLine
+                           MobilLine
+       HIMS                Braille Sense
+                           BrailleSense 6
+                           SyncBraille
+                           Braille Edge
+                           Smart Beetle
+                           QBrailleXL
+                           eMotion
+       HumanWare           Brailliant BI 14/32/40
+                           Brailliant BI 20X/40X
+                           Brailliant B 80
+                           BrailleNote Touch
+                           BrailleOne
+                           APH Chameleon 20
+                           APH Mantis Q40
+                           NLS eReader
+       Inceptor            BrailleMe (20)
+       Iris
+       Libbraille
+       LogText             32
+       MDV                 MB208
+                           MB248
+                           MB408L
+                           MB408L+
+                           Lilli Blu
+       Metec               BD-40
+       MiniBraille         20
+       MultiBraille        MB125CR
+                           MB145CR
+                           MB185CR
+       NinePoint           8
+       Papenmeier          Compact 486
+                           Compact/Tiny
+                           IB 80 CR Soft
+                           2D Lite (plus)
+                           2D Screen Soft
+                           EL 80
+                           EL 2D 40/66/80
+                           EL 40/66/70/80 S
+                           EL 40/60/80 C
+                           EL 2D 80 S
+                           EL 40 P
+                           EL 80 II
+                           Elba 20/32
+                           Trio 40/Elba20/Elba32
+                           Live 20/40
+       Pegasus             20/27/40/80
+       Seika               3/4/5 (40)
+                           80
+                           Mini (16)
+       TechniBraille
+       TSI                 Navigator 20/40/80
+                           PowerBraille 40/65/80
+       VideoBraille        40
+       VisioBraille        20/40
+       Voyager             44/70
+                           Part232 (serial adapter)
+                           BraillePen/EasyLink
 
 
   B.  Supported Speech Synthesizers
@@ -6108,7 +6109,7 @@
        |  38  26  [ 3214 6 ]  ampersand                                  |
        |  39  27  [ 3      ]  acute accent                               |
        |  40  28  [ 321 56 ]  left parenthesis                           |
-       |   4  291  [ 32 456 ) right parenthesis                          |
+       |  41  29  [ 32 456 ) right parenthesis                          |
        |  42  2A  [   1  6 ]  asterisk                                   |
        |  43  2B  [ 3  4 6 ]  plus sign                                  |
        |  44  2C  [      6 ]  comma                                      |

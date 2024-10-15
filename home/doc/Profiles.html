@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <title>Profiles</title>
 <style type="text/css">
 
@@ -366,31 +366,32 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#description" id="id2">Description</a><ul>
-<li><a class="reference internal" href="#supported-profile-types" id="id3">Supported Profile Types</a><ul>
-<li><a class="reference internal" href="#language-profiles" id="id4">Language Profiles</a></li>
+<li><a class="reference internal" href="#description" id="toc-entry-1">Description</a><ul>
+<li><a class="reference internal" href="#supported-profile-types" id="toc-entry-2">Supported Profile Types</a><ul>
+<li><a class="reference internal" href="#language-profiles" id="toc-entry-3">Language Profiles</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#profile-selection" id="id5">Profile Selection</a></li>
+<li><a class="reference internal" href="#profile-selection" id="toc-entry-4">Profile Selection</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#standard-directives" id="id6">Standard Directives</a><ul>
-<li><a class="reference internal" href="#the-include-directive" id="id7">The Include Directive</a></li>
-<li><a class="reference internal" href="#the-assign-directive" id="id8">The Assign Directive</a></li>
-<li><a class="reference internal" href="#the-assigndefault-directive" id="id9">The AssignDefault Directive</a></li>
-<li><a class="reference internal" href="#the-ifvar-directive" id="id10">The IfVar Directive</a></li>
-<li><a class="reference internal" href="#the-ifnotvar-directive" id="id11">The IfNotVar Directive</a></li>
-<li><a class="reference internal" href="#the-beginvariables-directive" id="id12">The BeginVariables Directive</a></li>
-<li><a class="reference internal" href="#the-endvariables-directive" id="id13">The EndVariables Directive</a></li>
-<li><a class="reference internal" href="#the-listvariables-directive" id="id14">The ListVariables Directive</a></li>
-<li><a class="reference internal" href="#the-endif-directive" id="id15">The EndIf Directive</a></li>
-<li><a class="reference internal" href="#the-else-directive" id="id16">The Else Directive</a></li>
+<li><a class="reference internal" href="#standard-directives" id="toc-entry-5">Standard Directives</a><ul>
+<li><a class="reference internal" href="#the-include-directive" id="toc-entry-6">The Include Directive</a></li>
+<li><a class="reference internal" href="#the-assign-directive" id="toc-entry-7">The Assign Directive</a></li>
+<li><a class="reference internal" href="#the-assigndefault-directive" id="toc-entry-8">The AssignDefault Directive</a></li>
+<li><a class="reference internal" href="#the-assignglobal-directive" id="toc-entry-9">The AssignGlobal Directive</a></li>
+<li><a class="reference internal" href="#the-ifvar-directive" id="toc-entry-10">The IfVar Directive</a></li>
+<li><a class="reference internal" href="#the-ifnotvar-directive" id="toc-entry-11">The IfNotVar Directive</a></li>
+<li><a class="reference internal" href="#the-beginvariables-directive" id="toc-entry-12">The BeginVariables Directive</a></li>
+<li><a class="reference internal" href="#the-endvariables-directive" id="toc-entry-13">The EndVariables Directive</a></li>
+<li><a class="reference internal" href="#the-listvariables-directive" id="toc-entry-14">The ListVariables Directive</a></li>
+<li><a class="reference internal" href="#the-endif-directive" id="toc-entry-15">The EndIf Directive</a></li>
+<li><a class="reference internal" href="#the-else-directive" id="toc-entry-16">The Else Directive</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="description">
-<h2><a class="toc-backref" href="#id2">Description</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-1">Description</a></h2>
 <p>A profile is an activatable group of settings which explicitly override the
 ones that were established via command line options, the configuration file
 (<tt class="docutils literal">brltty.conf</tt>), the preferences file (<tt class="docutils literal">brltty.prefs</tt>), etc when BRLTTY
@@ -412,9 +413,9 @@ settings that are to be overridden, and must be in the form:</p>
 <a class="reference internal" href="#profile-selection">Profile Selection</a>).</li>
 </ul>
 <div class="section" id="supported-profile-types">
-<h3><a class="toc-backref" href="#id3">Supported Profile Types</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-2">Supported Profile Types</a></h3>
 <div class="section" id="language-profiles">
-<h4><a class="toc-backref" href="#id4">Language Profiles</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-3">Language Profiles</a></h4>
 <p>A language profile must have the <tt class="docutils literal">.lpf</tt> file extension. It can override the
 following settings:</p>
 <ul class="simple">
@@ -437,7 +438,7 @@ separated from one another by a comma (<tt class="docutils literal">,</tt>).</p>
 </div>
 </div>
 <div class="section" id="profile-selection">
-<h3><a class="toc-backref" href="#id5">Profile Selection</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-4">Profile Selection</a></h3>
 <p>Each type of profile has a selector within BRLTTY's Profiles submenu. The
 selector for a given profile type allows for setting that type of profile
 either to <tt class="docutils literal">off</tt> (which means &quot;no profile&quot;) or to any of the files in the
@@ -516,9 +517,9 @@ bind Key1+Key2+RoutingKey SET_LANGUAGE_PROFILE
 </div>
 </div>
 <div class="section" id="standard-directives">
-<h2><a class="toc-backref" href="#id6">Standard Directives</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-5">Standard Directives</a></h2>
 <div class="section" id="the-include-directive">
-<h3><a class="toc-backref" href="#id7">The Include Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-6">The Include Directive</a></h3>
 <pre class="literal-block">
 include <em>file</em> # <em>comment</em>
 </pre>
@@ -532,7 +533,7 @@ relative, it is anchored at the directory containing the including file.</dd>
 </dl>
 </div>
 <div class="section" id="the-assign-directive">
-<h3><a class="toc-backref" href="#id8">The Assign Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-7">The Assign Directive</a></h3>
 <pre class="literal-block">
 assign <em>variable</em> <em>value</em>
 </pre>
@@ -558,7 +559,7 @@ assign IndirectValue \{variableName}
 </pre>
 </div>
 <div class="section" id="the-assigndefault-directive">
-<h3><a class="toc-backref" href="#id9">The AssignDefault Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-8">The AssignDefault Directive</a></h3>
 <pre class="literal-block">
 assignDefault <em>variable</em> <em>value</em>
 </pre>
@@ -584,8 +585,29 @@ exist. If it's not supplied then a zero-length (null) value is assigned.</dd>
 assignDefault format plain\stext
 </pre>
 </div>
+<div class="section" id="the-assignglobal-directive">
+<h3><a class="toc-backref" href="#toc-entry-9">The AssignGlobal Directive</a></h3>
+<pre class="literal-block">
+assignGlobal <em>variable</em> <em>value</em>
+</pre>
+<p>Use this directive to create or update a variable associated with
+the global level. The variable is visible to all include levels.
+See <a class="reference internal" href="#the-assign-directive">The Assign Directive</a> for more details.</p>
+<dl class="docutils">
+<dt><em>variable</em></dt>
+<dd>The name of the variable. If the variable doesn't already exist at the
+global level then it is created.</dd>
+<dt><em>value</em></dt>
+<dd>The value that is to be assigned to the variable. If it's not supplied then
+a zero-length (null) value is assigned.</dd>
+</dl>
+<p>Examples:</p>
+<pre class="literal-block">
+assignGlobal packageName BRLTTY
+</pre>
+</div>
 <div class="section" id="the-ifvar-directive">
-<h3><a class="toc-backref" href="#id10">The IfVar Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-10">The IfVar Directive</a></h3>
 <pre class="literal-block">
 ifVar <em>variable</em> <em>directive</em>
 </pre>
@@ -607,7 +629,7 @@ ifVar var1 ifVar var2 assign concatenation \{var1}\{var2}
 </pre>
 </div>
 <div class="section" id="the-ifnotvar-directive">
-<h3><a class="toc-backref" href="#id11">The IfNotVar Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-11">The IfNotVar Directive</a></h3>
 <pre class="literal-block">
 ifNotVar <em>variable</em> <em>directive</em>
 </pre>
@@ -630,7 +652,7 @@ ifNotVar var1 assign var1 default\svalue
 </pre>
 </div>
 <div class="section" id="the-beginvariables-directive">
-<h3><a class="toc-backref" href="#id12">The BeginVariables Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-12">The BeginVariables Directive</a></h3>
 <pre class="literal-block">
 beginVariables
 </pre>
@@ -652,7 +674,7 @@ endVariables
 </pre>
 </div>
 <div class="section" id="the-endvariables-directive">
-<h3><a class="toc-backref" href="#id13">The EndVariables Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-13">The EndVariables Directive</a></h3>
 <pre class="literal-block">
 endVariables
 </pre>
@@ -660,7 +682,7 @@ endVariables
 See <a class="reference internal" href="#the-beginvariables-directive">The BeginVariables Directive</a> for details.</p>
 </div>
 <div class="section" id="the-listvariables-directive">
-<h3><a class="toc-backref" href="#id14">The ListVariables Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-14">The ListVariables Directive</a></h3>
 <pre class="literal-block">
 listVariables
 </pre>
@@ -668,7 +690,7 @@ listVariables
 It can be helpful when debugging.</p>
 </div>
 <div class="section" id="the-endif-directive">
-<h3><a class="toc-backref" href="#id15">The EndIf Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-15">The EndIf Directive</a></h3>
 <pre class="literal-block">
 endIf
 </pre>
@@ -681,7 +703,7 @@ endIf
 </pre>
 </div>
 <div class="section" id="the-else-directive">
-<h3><a class="toc-backref" href="#id16">The Else Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-16">The Else Directive</a></h3>
 <pre class="literal-block">
 else
 </pre>

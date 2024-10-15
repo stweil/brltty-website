@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <title>BRLTTY on DOS</title>
 <style type="text/css">
 
@@ -366,36 +366,36 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#using-brltty" id="id3">Using BRLTTY</a><ul>
-<li><a class="reference internal" href="#serial-support" id="id4">Serial Support</a></li>
-<li><a class="reference internal" href="#usb-support" id="id5">USB Support</a></li>
-<li><a class="reference internal" href="#bluetooth-support" id="id6">Bluetooth Support</a></li>
-<li><a class="reference internal" href="#unpacking-the-archive" id="id7">Unpacking the Archive</a><ul>
-<li><a class="reference internal" href="#a-simple-but-dangerous-way" id="id8">A Simple but Dangerous Way</a></li>
-<li><a class="reference internal" href="#using-kpatrx" id="id9">Using <tt class="docutils literal">kpatrx</tt></a></li>
+<li><a class="reference internal" href="#using-brltty" id="toc-entry-1">Using BRLTTY</a><ul>
+<li><a class="reference internal" href="#serial-support" id="toc-entry-2">Serial Support</a></li>
+<li><a class="reference internal" href="#usb-support" id="toc-entry-3">USB Support</a></li>
+<li><a class="reference internal" href="#bluetooth-support" id="toc-entry-4">Bluetooth Support</a></li>
+<li><a class="reference internal" href="#unpacking-the-archive" id="toc-entry-5">Unpacking the Archive</a><ul>
+<li><a class="reference internal" href="#a-simple-but-dangerous-way" id="toc-entry-6">A Simple but Dangerous Way</a></li>
+<li><a class="reference internal" href="#using-kpatrx" id="toc-entry-7">Using <tt class="docutils literal">kpatrx</tt></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#dosidle" id="id10"><tt class="docutils literal">DOSIDLE</tt></a></li>
-<li><a class="reference internal" href="#using-dosemu-on-linux" id="id11">Using <tt class="docutils literal">dosemu</tt> on Linux</a></li>
+<li><a class="reference internal" href="#dosidle" id="toc-entry-8"><tt class="docutils literal">DOSIDLE</tt></a></li>
+<li><a class="reference internal" href="#using-dosemu-on-linux" id="toc-entry-9">Using <tt class="docutils literal">dosemu</tt> on Linux</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#making-the-cross-compiler" id="id12">Making the Cross Compiler</a><ul>
-<li><a class="reference internal" href="#the-mkdostools-script" id="id13">The <tt class="docutils literal">mkdostools</tt> Script</a><ul>
-<li><a class="reference internal" href="#basic-options" id="id14">Basic Options</a></li>
-<li><a class="reference internal" href="#build-directories" id="id15">Build Directories</a></li>
-<li><a class="reference internal" href="#required-archives" id="id16">Required Archives</a></li>
+<li><a class="reference internal" href="#making-the-cross-compiler" id="toc-entry-10">Making the Cross Compiler</a><ul>
+<li><a class="reference internal" href="#the-mkdostools-script" id="toc-entry-11">The <tt class="docutils literal">mkdostools</tt> Script</a><ul>
+<li><a class="reference internal" href="#basic-options" id="toc-entry-12">Basic Options</a></li>
+<li><a class="reference internal" href="#build-directories" id="toc-entry-13">Build Directories</a></li>
+<li><a class="reference internal" href="#required-archives" id="toc-entry-14">Required Archives</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#building-brltty" id="id17">Building BRLTTY</a><ul>
-<li><a class="reference internal" href="#configuring-the-build" id="id18">Configuring the Build</a><ul>
-<li><a class="reference internal" href="#the-cfg-dos-script" id="id19">The <tt class="docutils literal"><span class="pre">cfg-dos</span></tt> Script</a></li>
+<li><a class="reference internal" href="#building-brltty" id="toc-entry-15">Building BRLTTY</a><ul>
+<li><a class="reference internal" href="#configuring-the-build" id="toc-entry-16">Configuring the Build</a><ul>
+<li><a class="reference internal" href="#the-cfg-dos-script" id="toc-entry-17">The <tt class="docutils literal"><span class="pre">cfg-dos</span></tt> Script</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#the-mkdosarc-script" id="id20">The <tt class="docutils literal">mkdosarc</tt> Script</a><ul>
-<li><a class="reference internal" href="#parameters" id="id21">Parameters</a></li>
-<li><a class="reference internal" href="#options" id="id22">Options</a></li>
+<li><a class="reference internal" href="#the-mkdosarc-script" id="toc-entry-18">The <tt class="docutils literal">mkdosarc</tt> Script</a><ul>
+<li><a class="reference internal" href="#parameters" id="toc-entry-19">Parameters</a></li>
+<li><a class="reference internal" href="#options" id="toc-entry-20">Options</a></li>
 </ul>
 </li>
 </ul>
@@ -403,22 +403,22 @@ ul.auto-toc {
 </ul>
 </div>
 <div class="section" id="using-brltty">
-<h2><a class="toc-backref" href="#id3">Using BRLTTY</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-1">Using BRLTTY</a></h2>
 <div class="section" id="serial-support">
-<h3><a class="toc-backref" href="#id4">Serial Support</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-2">Serial Support</a></h3>
 <p>The default DOS serial driver does not support speeds above 9600 baud. For
 higher speeds, a more capable serial driver (like ADF) must be used.</p>
 </div>
 <div class="section" id="usb-support">
-<h3><a class="toc-backref" href="#id5">USB Support</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-3">USB Support</a></h3>
 <p>USB isn't supported.</p>
 </div>
 <div class="section" id="bluetooth-support">
-<h3><a class="toc-backref" href="#id6">Bluetooth Support</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-4">Bluetooth Support</a></h3>
 <p>Bluetooth isn't supported.</p>
 </div>
 <div class="section" id="unpacking-the-archive">
-<h3><a class="toc-backref" href="#id7">Unpacking the Archive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-5">Unpacking the Archive</a></h3>
 <p>If you'd like to unpack the archive on your DOS system but don't have an
 unzip command on it, you can get one from
 <a class="reference external" href="ftp://ftp.delorie.com/pub/djgpp/current/v2/unzip32.exe">ftp://ftp.delorie.com/pub/djgpp/current/v2/unzip32.exe</a>.</p>
@@ -441,7 +441,7 @@ partition within the hard disk image. We'll describe some of them here. For our
 examples, we'll assume that the DOS partition is the first primary partition of
 a hard disk whose image is in the file <tt class="docutils literal">disk.img</tt>.</p>
 <div class="section" id="a-simple-but-dangerous-way">
-<h4><a class="toc-backref" href="#id8">A Simple but Dangerous Way</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-6">A Simple but Dangerous Way</a></h4>
 <p>The simplest, but also the most dangerous, way is to do some simple math and to
 use an obscure mount option. First, use the <tt class="docutils literal">fdisk</tt> command to find out where
 the DOS partition starts within the hard disk image. To do this, use the
@@ -482,7 +482,7 @@ umount /mnt/dos
 </pre>
 </div>
 <div class="section" id="using-kpatrx">
-<h4><a class="toc-backref" href="#id9">Using <tt class="docutils literal">kpatrx</tt></a></h4>
+<h4><a class="toc-backref" href="#toc-entry-7">Using <tt class="docutils literal">kpatrx</tt></a></h4>
 <p>Another way to mount the DOS partition, which is much safer, is to use the
 <tt class="docutils literal">kpartx</tt> command to create a loop device for the desired partition within the
 hard disk image. Use a command like this:</p>
@@ -514,7 +514,7 @@ kpartx -d disk.img
 </div>
 </div>
 <div class="section" id="dosidle">
-<h3><a class="toc-backref" href="#id10"><tt class="docutils literal">DOSIDLE</tt></a></h3>
+<h3><a class="toc-backref" href="#toc-entry-8"><tt class="docutils literal">DOSIDLE</tt></a></h3>
 <p><tt class="docutils literal">DOSIDLE</tt> is a DOS application that many users run in order to stop their
 computer or virtual machine from needlessly consuming CPU time when DOS has
 nothing meaningful to do. If you use it, don't use a &quot;cooling strategy&quot; more
@@ -524,7 +524,7 @@ deduce that the system is idle when BRLTTY has nothing to do, but that will
 cause BRLTTY to stop running, too, which isn't what you want.</p>
 </div>
 <div class="section" id="using-dosemu-on-linux">
-<h3><a class="toc-backref" href="#id11">Using <tt class="docutils literal">dosemu</tt> on Linux</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-9">Using <tt class="docutils literal">dosemu</tt> on Linux</a></h3>
 <p>If you're using <tt class="docutils literal">dosemu</tt> on Linux, and the Linux kernel is 3.15, then you'll
 need to explicitly enable 16-bit segment support. This can be done with the
 following command:</p>
@@ -540,7 +540,7 @@ abi.ldt16 = 1
 </div>
 </div>
 <div class="section" id="making-the-cross-compiler">
-<h2><a class="toc-backref" href="#id12">Making the Cross Compiler</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-10">Making the Cross Compiler</a></h2>
 <p>The DOS version of BRLTTY can be compiled on Linux by using a cross-compiler.
 To create it, get the following archives:</p>
 <ul class="simple">
@@ -564,12 +564,12 @@ of <tt class="docutils literal">automake</tt> (1.9.6) is used.</p>
 <p>We've written a script that builds the cross-compiler, and that also takes care
 of all of the idiosyncracies that we encountered when doing so.</p>
 <div class="section" id="the-mkdostools-script">
-<h3><a class="toc-backref" href="#id13">The <tt class="docutils literal">mkdostools</tt> Script</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-11">The <tt class="docutils literal">mkdostools</tt> Script</a></h3>
 <p>The <tt class="docutils literal">mkdostools</tt> script builds the cross-compiler that's needed in order to
 build BRLTTY for DOS on Linux. It resides in the <tt class="docutils literal">DOS/</tt> subdirectory of
 BRLTTY's source tree.</p>
 <div class="section" id="basic-options">
-<h4><a class="toc-backref" href="#id14">Basic Options</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-12">Basic Options</a></h4>
 <dl class="docutils">
 <dt><tt class="docutils literal"><span class="pre">-v</span></tt> (verbose)</dt>
 <dd>Increase output verbosity. This option complements the <tt class="docutils literal"><span class="pre">-q</span></tt> option. It may
@@ -582,7 +582,7 @@ be specified multiple times.</dd>
 </dl>
 </div>
 <div class="section" id="build-directories">
-<h4><a class="toc-backref" href="#id15">Build Directories</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-13">Build Directories</a></h4>
 <p>A number of directories are used during the build process. Each of them can be
 explicitly specified via an option, and also has a default subdirectory within
 the directory that contains the script itself. Each of the default
@@ -629,7 +629,7 @@ installed. It's created if it doesn't already exist. If it does already exist
 then it's emptied at the start of the build process.</p>
 </div>
 <div class="section" id="required-archives">
-<h4><a class="toc-backref" href="#id16">Required Archives</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-14">Required Archives</a></h4>
 <p>You'll need the following DJGPP archives:</p>
 <blockquote>
 <table border="1" class="docutils">
@@ -694,9 +694,9 @@ that is to be built.</p>
 </div>
 </div>
 <div class="section" id="building-brltty">
-<h2><a class="toc-backref" href="#id17">Building BRLTTY</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-15">Building BRLTTY</a></h2>
 <div class="section" id="configuring-the-build">
-<h3><a class="toc-backref" href="#id18">Configuring the Build</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-16">Configuring the Build</a></h3>
 <p>Before configuring BRLTTY, you must add the <tt class="docutils literal">bin/</tt> subdirectory of the
 cross-compiler tools to your command search path. If, for example, the
 cross-compiler is installed in <tt class="docutils literal">/usr/local/dostools</tt>, then add its tools to
@@ -724,7 +724,7 @@ export CFLAGS=&quot;-fgnu89-inline&quot;
    --with-screen-driver=pb,-all
 </pre>
 <div class="section" id="the-cfg-dos-script">
-<h4><a class="toc-backref" href="#id19">The <tt class="docutils literal"><span class="pre">cfg-dos</span></tt> Script</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-17">The <tt class="docutils literal"><span class="pre">cfg-dos</span></tt> Script</a></h4>
 <p>We provide a script named <tt class="docutils literal"><span class="pre">cfg-dos</span></tt>, which resides in the top-level directory
 of BRLTTY's source tree, that should make configuring BRLTTY for DOS a bit
 easier. It runs the <tt class="docutils literal">configure</tt> script for you, giving it all of the options
@@ -739,7 +739,7 @@ export DOS_TOOLS_ROOT=/usr/local/dostools
 </div>
 </div>
 <div class="section" id="the-mkdosarc-script">
-<h3><a class="toc-backref" href="#id20">The <tt class="docutils literal">mkdosarc</tt> Script</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-18">The <tt class="docutils literal">mkdosarc</tt> Script</a></h3>
 <p>The <tt class="docutils literal">mkdosarc</tt> script, which resides in the <tt class="docutils literal">DOS/</tt> subdirectory of BRLTTY's
 source tree, creates a DOS archive (a <tt class="docutils literal">.zip</tt> file) of BRLTTY. It does
 everything (<tt class="docutils literal">configure</tt>, <tt class="docutils literal">make</tt>, ..., <tt class="docutils literal">zip</tt>) except for building the
@@ -758,21 +758,21 @@ top-level directory of the cross-compiler tools. For example:</p>
 export DOS_TOOLS_ROOT=/usr/local/dostools
 </pre>
 <div class="section" id="parameters">
-<h4><a class="toc-backref" href="#id21">Parameters</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-19">Parameters</a></h4>
 <p>The script requires only one parameter - the path to the top-level directory of
 BRLTTY's source tree. If, for example, you're in the <tt class="docutils literal">DOS/</tt> subdirectory of
 BRLTTY's source tree (where the script resides), then invoke it like this:</p>
 <pre class="literal-block">
 ./mkdosarc ..
 </pre>
-<p>If you're in the top-level directory of BRLTTY's soruce tree then invoke it
+<p>If you're in the top-level directory of BRLTTY's source tree then invoke it
 like this:</p>
 <pre class="literal-block">
 DOS/mkdosarc .
 </pre>
 </div>
 <div class="section" id="options">
-<h4><a class="toc-backref" href="#id22">Options</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-20">Options</a></h4>
 <dl class="docutils">
 <dt><tt class="docutils literal"><span class="pre">-a</span></tt> (archive)</dt>
 <dd>Specify the name of the archive (<tt class="docutils literal">.zip</tt>) file that will be created. The

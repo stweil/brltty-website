@@ -1,0 +1,46 @@
+Key Table: Braille Memo Next Touch
+==================================
+
+Default Bindings
+----------------
+
+Special Modes
+* enter/leave preferences menu: PanLeft+PanRight+Control+Select
+* enter/leave status display: PanLeft+PanRight+Select
+
+Cursor Functions
+* go to screen cursor or go back after cursor tracking: PanLeft+PanRight
+* bring screen cursor to character: RoutingKey
+
+Vertical Navigation
+* go up one line: ArrowUp
+* go down one line: ArrowDown
+* go to top line: Backward
+* go to bottom line: Forward
+
+Horizontal Navigation
+* go backward one braille window: PanLeft
+* go forward one braille window: PanRight
+* go to beginning of line: PanLeft+PanRight+Control
+* place left end of braille window at character: PanLeft+RoutingKey
+
+Keyboard Input
+* switch to specific virtual terminal: PanRight+RoutingKey
+
+Menu Bindings
+-------------
+
+Special Modes
+* enter/leave preferences menu: PanLeft+PanRight+Control+Select
+
+Menu Operations
+* go up to previous item: ArrowUp
+* go down to next item: ArrowDown
+* go up to first item: Backward
+* go down to last item: Forward
+* select previous choice: PanLeft
+* select next choice: PanRight
+* go to previous menu level: PanLeft+PanRight
+* save preferences to disk: PanLeft+PanRight+Select
+* restore preferences from disk: PanLeft+PanRight+Control
+

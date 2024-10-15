@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <title>BRLTTY on OpenBSD</title>
 <meta name="author" content="Mario Lang &lt;mlang&#64;delysid.org&gt;" />
 <style type="text/css">
@@ -374,20 +374,20 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#setting-up-brltty" id="id2">Setting up BRLTTY</a><ul>
-<li><a class="reference internal" href="#patching-screen" id="id3">Patching <tt class="docutils literal">screen</tt></a></li>
+<li><a class="reference internal" href="#setting-up-brltty" id="toc-entry-1">Setting up BRLTTY</a><ul>
+<li><a class="reference internal" href="#patching-screen" id="toc-entry-2">Patching <tt class="docutils literal">screen</tt></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#compiling-brltty" id="id4">Compiling BRLTTY</a></li>
-<li><a class="reference internal" href="#running-brltty" id="id5">Running BRLTTY</a></li>
+<li><a class="reference internal" href="#compiling-brltty" id="toc-entry-3">Compiling BRLTTY</a></li>
+<li><a class="reference internal" href="#running-brltty" id="toc-entry-4">Running BRLTTY</a></li>
 </ul>
 </div>
 <p>This document describes how to get BRLTTY working on a recent OpenBSD system.
 It assumes that you're working with a recent OpenBSD installation (e.g. 3.4).</p>
 <div class="section" id="setting-up-brltty">
-<h2><a class="toc-backref" href="#id2">Setting up BRLTTY</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-1">Setting up BRLTTY</a></h2>
 <div class="section" id="patching-screen">
-<h3><a class="toc-backref" href="#id3">Patching <tt class="docutils literal">screen</tt></a></h3>
+<h3><a class="toc-backref" href="#toc-entry-2">Patching <tt class="docutils literal">screen</tt></a></h3>
 <p>Since OpenBSD doesn't have a way for user-space applications to access the
 contents of the virtual consoles, we have to use <tt class="docutils literal">screen</tt> to make this
 information available to BRLTTY. This also means that you can't use BRLTTY with
@@ -436,7 +436,7 @@ patch from BRLTTY's source tree.</p>
 </div>
 </div>
 <div class="section" id="compiling-brltty">
-<h2><a class="toc-backref" href="#id4">Compiling BRLTTY</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-3">Compiling BRLTTY</a></h2>
 <p>To compile BRLTTY, do the following:</p>
 <pre class="literal-block">
 ./configure
@@ -447,7 +447,7 @@ sudo gmake install
 and GNU Make incompatibilities.</p>
 </div>
 <div class="section" id="running-brltty">
-<h2><a class="toc-backref" href="#id5">Running BRLTTY</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-4">Running BRLTTY</a></h2>
 <p>You need to have <tt class="docutils literal">screen</tt> started before you try to run BRLTTY. Inside
 <tt class="docutils literal">screen</tt>, simply invoke BRLTTY as you would on other systems. Note that the
 first serial port is <tt class="docutils literal">/dev/cua00</tt>.</p>

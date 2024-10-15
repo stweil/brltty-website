@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <title>Managing BRLTTY with Stow</title>
 <meta name="author" content="B Daix" />
 <meta name="date" content="2003-09-10" />
@@ -377,24 +377,24 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#purpose" id="id1">Purpose</a></li>
-<li><a class="reference internal" href="#why-stow-can-help" id="id2">Why Stow can help</a></li>
-<li><a class="reference internal" href="#the-procedure" id="id3">The procedure</a><ul>
-<li><a class="reference internal" href="#compiling-installing-brltty-for-stow-file-management" id="id4">Compiling/installing BRLTTY for Stow file management</a></li>
-<li><a class="reference internal" href="#managing-safely-kept-versions-with-stow" id="id5">Managing safely kept versions with Stow</a></li>
+<li><a class="reference internal" href="#purpose" id="toc-entry-1">Purpose</a></li>
+<li><a class="reference internal" href="#why-stow-can-help" id="toc-entry-2">Why Stow can help</a></li>
+<li><a class="reference internal" href="#the-procedure" id="toc-entry-3">The procedure</a><ul>
+<li><a class="reference internal" href="#compiling-installing-brltty-for-stow-file-management" id="toc-entry-4">Compiling/installing BRLTTY for Stow file management</a></li>
+<li><a class="reference internal" href="#managing-safely-kept-versions-with-stow" id="toc-entry-5">Managing safely kept versions with Stow</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="purpose">
-<h2><a class="toc-backref" href="#id1">Purpose</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-1">Purpose</a></h2>
 <p>BRLTTY is a critical software for those who rely on it to access their box.
 Upgrading such a tool can't be done without paying some special attention.</p>
 <p>What will be explained here is how to keep <tt class="docutils literal">/usr/local/bin/brltty</tt> up to date
 without removing old versions.  We decide to put BRLTTY in <tt class="docutils literal">/usr/local</tt> as
 we don't want to break filesystem root distribution (i.e. <tt class="docutils literal">/bin/brltty</tt>
 should only come from a packaged version of BRLTTY for your distribution. If
-you install software in respect with this rule, you'd install it in
+you install software that adheres to this rule, you'd install it in
 <tt class="docutils literal">/usr/local</tt>). Also, we want not to have to keep source files to be able to
 remove things cleanly. After installing a software, you shouldn't have to rely
 on a by-software uninstallation suite.</p>
@@ -408,19 +408,19 @@ It's a common utility:</p>
 </dl>
 </div>
 <div class="section" id="why-stow-can-help">
-<h2><a class="toc-backref" href="#id2">Why Stow can help</a></h2>
-<p>Stow allows to manage files like if they were packaged, by creating symlinks
-from by-directory grouped sets of files instead of copying them directly.</p>
+<h2><a class="toc-backref" href="#toc-entry-2">Why Stow can help</a></h2>
+<p>Stow manages files as if they were packaged by creating symlinks
+to sets of files, each of which in its own directory, instead of directly copying them.</p>
 <p>We recommend to attentively read Stow Info files, to realize what it can do,
 how, and specially why it is so useful when you have to manage personally
 compiled software you rely on.</p>
 </div>
 <div class="section" id="the-procedure">
-<h2><a class="toc-backref" href="#id3">The procedure</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-3">The procedure</a></h2>
 <p>So we want to run a BRLTTY version, taken from a set of personally compiled
-ones, and safely keep all of them around. Current working release will be run
-from <tt class="docutils literal">/usr/local</tt> root, while all releases files will be kept in the &quot;safe
-place&quot;, the <strong>Stow directory</strong> <tt class="docutils literal">/usr/local/stow/</tt>. For example, releases
+ones, and safely keep all of them around. The current working release will be run
+from the <tt class="docutils literal">/usr/local</tt> root, while the files for all releases will be kept in a &quot;safe
+place&quot; - the <strong>Stow directory</strong> (<tt class="docutils literal">/usr/local/stow/</tt>). For example, releases
 (bins/configs/libs/mans, not source trees) will be stored there like this:</p>
 <ul class="simple">
 <li><tt class="docutils literal"><span class="pre">/usr/local/stow/brltty-3.2/</span></tt></li>
@@ -429,7 +429,7 @@ place&quot;, the <strong>Stow directory</strong> <tt class="docutils literal">/u
 <li>and so on</li>
 </ul>
 <div class="section" id="compiling-installing-brltty-for-stow-file-management">
-<h3><a class="toc-backref" href="#id4">Compiling/installing BRLTTY for Stow file management</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-4">Compiling/installing BRLTTY for Stow file management</a></h3>
 <p>We have to use <tt class="docutils literal">configure</tt> flags to indicate we want BRLTTY to be run
 From <tt class="docutils literal">/usr/local</tt> root, and installed in <tt class="docutils literal"><span class="pre">/usr/local/stow/brltty-3.2/</span></tt>
 root. Stow will do symlinks for us then. The distinction between execution root
@@ -459,7 +459,7 @@ see, we cleanly separate things - one directory per version on one hand,
 building vs. using on the other. Testing is now far lighter.</p>
 </div>
 <div class="section" id="managing-safely-kept-versions-with-stow">
-<h3><a class="toc-backref" href="#id5">Managing safely kept versions with Stow</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-5">Managing safely kept versions with Stow</a></h3>
 <p>Before asking for Stow to create symlinks, we have to be sure we won't get any
 conflicts, i.e. we haven't already asked for Stow to create symlinks on the
 same software without removing them first, or we don't forget we have already

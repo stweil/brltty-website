@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <title>Bluetooth Connections</title>
 <style type="text/css">
 
@@ -366,27 +366,27 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#pairing-a-bluetooth-device" id="id2">Pairing a Bluetooth Device</a><ul>
-<li><a class="reference internal" href="#on-linux" id="id3">On Linux</a><ul>
-<li><a class="reference internal" href="#for-bluetooth-version-5" id="id4">For Bluetooth Version 5</a></li>
-<li><a class="reference internal" href="#for-bluetooth-version-4" id="id5">For Bluetooth Version 4</a></li>
+<li><a class="reference internal" href="#pairing-a-bluetooth-device" id="toc-entry-1">Pairing a Bluetooth Device</a><ul>
+<li><a class="reference internal" href="#on-linux" id="toc-entry-2">On Linux</a><ul>
+<li><a class="reference internal" href="#for-bluetooth-version-5" id="toc-entry-3">For Bluetooth Version 5</a></li>
+<li><a class="reference internal" href="#for-bluetooth-version-4" id="toc-entry-4">For Bluetooth Version 4</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#using-a-bluetooth-device-with-brltty" id="id6">Using a Bluetooth Device with BRLTTY</a><ul>
-<li><a class="reference internal" href="#identifying-the-device" id="id7">Identifying the Device</a></li>
+<li><a class="reference internal" href="#using-a-bluetooth-device-with-brltty" id="toc-entry-5">Using a Bluetooth Device with BRLTTY</a><ul>
+<li><a class="reference internal" href="#identifying-the-device" id="toc-entry-6">Identifying the Device</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="pairing-a-bluetooth-device">
-<h2><a class="toc-backref" href="#id2">Pairing a Bluetooth Device</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-1">Pairing a Bluetooth Device</a></h2>
 <p>You need to &quot;pair&quot; your device with the host on which you wish to use it. You
 can pair a device with more than one host, but you can usually only use it with
 one host at a time.</p>
 <div class="section" id="on-linux">
-<h3><a class="toc-backref" href="#id3">On Linux</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-2">On Linux</a></h3>
 <p>Pairing a Bluetooth device on Linux is relatively easy if you're comfortable
 working within the graphical (X) environment. All you need to do is to run
 <tt class="docutils literal"><span class="pre">bluetooth-applet</span></tt> and follow the steps it presents to you. It's a little
@@ -394,7 +394,7 @@ trickier to pair a Bluetooth device via the command line, but it can be done.
 How to do it depends on the version of the Bluetooth software stack that you're
 using.</p>
 <div class="section" id="for-bluetooth-version-5">
-<h4><a class="toc-backref" href="#id4">For Bluetooth Version 5</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-3">For Bluetooth Version 5</a></h4>
 <p>As of Bluetooth version 5, all required actions for pairing a device via the
 command-line can be performed with a single tool called <tt class="docutils literal">bluetoothctl</tt>.</p>
 <p>First, in case you have several Bluetooth controllers in use (uncommon, but
@@ -463,7 +463,7 @@ Pairing successful
 </pre>
 </div>
 <div class="section" id="for-bluetooth-version-4">
-<h4><a class="toc-backref" href="#id5">For Bluetooth Version 4</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-4">For Bluetooth Version 4</a></h4>
 <p>You need to find out your host's Bluetooth Device Address (referred to later in
 this document as <em>host-address</em>). To do this, run the command:</p>
 <pre class="literal-block">
@@ -509,11 +509,11 @@ cat /var/lib/bluetooth/01:23:45:67:89:AB/pincodes
 </div>
 </div>
 <div class="section" id="using-a-bluetooth-device-with-brltty">
-<h2><a class="toc-backref" href="#id6">Using a Bluetooth Device with BRLTTY</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-5">Using a Bluetooth Device with BRLTTY</a></h2>
 <p>After your device has been paired with your host, it's ready to be used by
 BRLTTY.</p>
 <div class="section" id="identifying-the-device">
-<h3><a class="toc-backref" href="#id7">Identifying the Device</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-6">Identifying the Device</a></h3>
 <p>You can tell BRLTTY to use your Bluetooth device either via the <tt class="docutils literal"><span class="pre">-d</span></tt>
 (or <tt class="docutils literal"><span class="pre">--braille-device=</span></tt>) command line option, or via the <tt class="docutils literal"><span class="pre">braille-device</span></tt>
 line in the file <tt class="docutils literal">/etc/brltty.conf</tt>. The device should be specified as the

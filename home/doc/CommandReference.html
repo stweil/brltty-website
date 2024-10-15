@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <title>The BRLTTY Command Reference</title>
 <style type="text/css">
 
@@ -366,30 +366,31 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#alphabetical-command-index" id="id1">Alphabetical Command Index</a></li>
-<li><a class="reference internal" href="#special-modes" id="id2">Special Modes</a></li>
-<li><a class="reference internal" href="#cursor-functions" id="id3">Cursor Functions</a></li>
-<li><a class="reference internal" href="#vertical-navigation" id="id4">Vertical Navigation</a></li>
-<li><a class="reference internal" href="#horizontal-navigation" id="id5">Horizontal Navigation</a></li>
-<li><a class="reference internal" href="#window-navigation" id="id6">Window Navigation</a></li>
-<li><a class="reference internal" href="#clipboard-functions" id="id7">Clipboard Functions</a></li>
-<li><a class="reference internal" href="#text-selection-and-the-host-clipboard" id="id8">Text Selection and the Host Clipboard</a></li>
-<li><a class="reference internal" href="#configuration-functions" id="id9">Configuration Functions</a></li>
-<li><a class="reference internal" href="#menu-operations" id="id10">Menu Operations</a></li>
-<li><a class="reference internal" href="#speech-functions" id="id11">Speech Functions</a></li>
-<li><a class="reference internal" href="#speech-navigation" id="id12">Speech Navigation</a></li>
-<li><a class="reference internal" href="#keyboard-input" id="id13">Keyboard Input</a></li>
-<li><a class="reference internal" href="#special-functions" id="id14">Special Functions</a></li>
-<li><a class="reference internal" href="#internal-functions" id="id15">Internal Functions</a></li>
+<li><a class="reference internal" href="#alphabetical-command-index" id="toc-entry-1">Alphabetical Command Index</a></li>
+<li><a class="reference internal" href="#special-modes" id="toc-entry-2">Special Modes</a></li>
+<li><a class="reference internal" href="#cursor-functions" id="toc-entry-3">Cursor Functions</a></li>
+<li><a class="reference internal" href="#vertical-navigation" id="toc-entry-4">Vertical Navigation</a></li>
+<li><a class="reference internal" href="#horizontal-navigation" id="toc-entry-5">Horizontal Navigation</a></li>
+<li><a class="reference internal" href="#window-navigation" id="toc-entry-6">Window Navigation</a></li>
+<li><a class="reference internal" href="#clipboard-functions" id="toc-entry-7">Clipboard Functions</a></li>
+<li><a class="reference internal" href="#text-selection-and-the-host-clipboard" id="toc-entry-8">Text Selection and the Host Clipboard</a></li>
+<li><a class="reference internal" href="#configuration-functions" id="toc-entry-9">Configuration Functions</a></li>
+<li><a class="reference internal" href="#menu-operations" id="toc-entry-10">Menu Operations</a></li>
+<li><a class="reference internal" href="#speech-functions" id="toc-entry-11">Speech Functions</a></li>
+<li><a class="reference internal" href="#speech-navigation" id="toc-entry-12">Speech Navigation</a></li>
+<li><a class="reference internal" href="#keyboard-input" id="toc-entry-13">Keyboard Input</a></li>
+<li><a class="reference internal" href="#special-functions" id="toc-entry-14">Special Functions</a></li>
+<li><a class="reference internal" href="#internal-functions" id="toc-entry-15">Internal Functions</a></li>
 </ul>
 </div>
 <div class="section" id="alphabetical-command-index">
-<h2><a class="toc-backref" href="#id1">Alphabetical Command Index</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-1">Alphabetical Command Index</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#alert">ALERT</a></li>
 <li><a class="reference internal" href="#altgr">ALTGR</a></li>
 <li><a class="reference internal" href="#aspk-cmp-words">ASPK_CMP_WORDS</a></li>
 <li><a class="reference internal" href="#aspk-del-chars">ASPK_DEL_CHARS</a></li>
+<li><a class="reference internal" href="#aspk-emp-line">ASPK_EMP_LINE</a></li>
 <li><a class="reference internal" href="#aspk-indent">ASPK_INDENT</a></li>
 <li><a class="reference internal" href="#aspk-ins-chars">ASPK_INS_CHARS</a></li>
 <li><a class="reference internal" href="#aspk-rep-chars">ASPK_REP_CHARS</a></li>
@@ -599,7 +600,7 @@ ul.auto-toc {
 </ul>
 </div>
 <div class="section" id="special-modes">
-<h2><a class="toc-backref" href="#id2">Special Modes</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-2">Special Modes</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#help">HELP</a></li>
 <li><a class="reference internal" href="#learn">LEARN</a></li>
@@ -640,7 +641,7 @@ ul.auto-toc {
 </ul>
 </div>
 <div class="section" id="cursor-functions">
-<h2><a class="toc-backref" href="#id3">Cursor Functions</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-3">Cursor Functions</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#home">HOME</a></li>
 <li><a class="reference internal" href="#back">BACK</a></li>
@@ -680,7 +681,7 @@ ul.auto-toc {
 <p id="route-curr-locn"><strong>ROUTE_CURR_LOCN</strong> - Bring screen cursor to speech cursor.</p>
 </div>
 <div class="section" id="vertical-navigation">
-<h2><a class="toc-backref" href="#id4">Vertical Navigation</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-4">Vertical Navigation</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#lnup">LNUP</a></li>
 <li><a class="reference internal" href="#lndn">LNDN</a></li>
@@ -837,7 +838,7 @@ ul.auto-toc {
 </ul>
 </div>
 <div class="section" id="horizontal-navigation">
-<h2><a class="toc-backref" href="#id5">Horizontal Navigation</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-5">Horizontal Navigation</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#fwinlt">FWINLT</a></li>
 <li><a class="reference internal" href="#fwinrt">FWINRT</a></li>
@@ -920,7 +921,7 @@ ul.auto-toc {
 </ul>
 </div>
 <div class="section" id="window-navigation">
-<h2><a class="toc-backref" href="#id6">Window Navigation</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-6">Window Navigation</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#gui-title">GUI_TITLE</a></li>
 <li><a class="reference internal" href="#gui-brl-actions">GUI_BRL_ACTIONS</a></li>
@@ -965,7 +966,7 @@ ul.auto-toc {
 <p id="gui-item-last"><strong>GUI_ITEM_LAST</strong> - Move to the last item in the screen area.</p>
 </div>
 <div class="section" id="clipboard-functions">
-<h2><a class="toc-backref" href="#id7">Clipboard Functions</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-7">Clipboard Functions</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#clip-new">CLIP_NEW</a></li>
 <li><a class="reference internal" href="#clip-add">CLIP_ADD</a></li>
@@ -1014,7 +1015,7 @@ ul.auto-toc {
 <p id="clip-restore"><strong>CLIP_RESTORE</strong> - Restore clipboard from disk.</p>
 </div>
 <div class="section" id="text-selection-and-the-host-clipboard">
-<h2><a class="toc-backref" href="#id8">Text Selection and the Host Clipboard</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-8">Text Selection and the Host Clipboard</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#txtsel-clear">TXTSEL_CLEAR</a></li>
 <li><a class="reference internal" href="#txtsel-set">TXTSEL_SET</a></li>
@@ -1041,7 +1042,7 @@ ul.auto-toc {
 <p id="host-paste"><strong>HOST_PASTE</strong> - Insert host clipboard text after screen cursor.</p>
 </div>
 <div class="section" id="configuration-functions">
-<h2><a class="toc-backref" href="#id9">Configuration Functions</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-9">Configuration Functions</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#touch-nav">TOUCH_NAV</a></li>
 <li><a class="reference internal" href="#autorepeat">AUTOREPEAT</a></li>
@@ -1178,7 +1179,7 @@ ul.auto-toc {
 </ul>
 </div>
 <div class="section" id="menu-operations">
-<h2><a class="toc-backref" href="#id10">Menu Operations</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-10">Menu Operations</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#menu-prev-item">MENU_PREV_ITEM</a></li>
 <li><a class="reference internal" href="#menu-next-item">MENU_NEXT_ITEM</a></li>
@@ -1227,7 +1228,7 @@ ul.auto-toc {
 <p id="prefreset"><strong>PREFRESET</strong> - Reset preferences to defaults.</p>
 </div>
 <div class="section" id="speech-functions">
-<h2><a class="toc-backref" href="#id11">Speech Functions</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-11">Speech Functions</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#mute">MUTE</a></li>
 <li><a class="reference internal" href="#say-line">SAY_LINE</a></li>
@@ -1243,6 +1244,7 @@ ul.auto-toc {
 <li><a class="reference internal" href="#say-higher">SAY_HIGHER</a></li>
 <li><a class="reference internal" href="#autospeak">AUTOSPEAK</a></li>
 <li><a class="reference internal" href="#aspk-sel-line">ASPK_SEL_LINE</a></li>
+<li><a class="reference internal" href="#aspk-emp-line">ASPK_EMP_LINE</a></li>
 <li><a class="reference internal" href="#aspk-sel-char">ASPK_SEL_CHAR</a></li>
 <li><a class="reference internal" href="#aspk-ins-chars">ASPK_INS_CHARS</a></li>
 <li><a class="reference internal" href="#aspk-del-chars">ASPK_DEL_CHARS</a></li>
@@ -1272,6 +1274,11 @@ ul.auto-toc {
 <li>Toggle: on, off</li>
 </ul>
 <p id="aspk-sel-line"><strong>ASPK_SEL_LINE</strong> - Set autospeak selected line on/off.</p>
+<p>The following modifiers may be specified:</p>
+<ul class="simple">
+<li>Toggle: on, off</li>
+</ul>
+<p id="aspk-emp-line"><strong>ASPK_EMP_LINE</strong> - Set autospeak empty line on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>Toggle: on, off</li>
@@ -1308,7 +1315,7 @@ ul.auto-toc {
 </ul>
 </div>
 <div class="section" id="speech-navigation">
-<h2><a class="toc-backref" href="#id12">Speech Navigation</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-12">Speech Navigation</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#route-speech">ROUTE_SPEECH</a></li>
 <li><a class="reference internal" href="#speak-curr-char">SPEAK_CURR_CHAR</a></li>
@@ -1399,7 +1406,7 @@ ul.auto-toc {
 </ul>
 </div>
 <div class="section" id="keyboard-input">
-<h2><a class="toc-backref" href="#id13">Keyboard Input</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-13">Keyboard Input</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#passdots">PASSDOTS</a></li>
 <li><a class="reference internal" href="#passchar">PASSCHAR</a></li>
@@ -1437,7 +1444,7 @@ ul.auto-toc {
 <p id="passdots"><strong>PASSDOTS</strong> - Type braille dots.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 <li>Character: upper, escaped</li>
 <li>Braille: dot1, dot2, dot3, dot4, dot5, dot6, dot7, dot8, space</li>
 </ul>
@@ -1445,73 +1452,73 @@ ul.auto-toc {
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>a single character</li>
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 <li>Character: upper, escaped</li>
 </ul>
 <p id="key-backspace"><strong>KEY_BACKSPACE</strong> - Backspace key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="key-enter"><strong>KEY_ENTER</strong> - Enter key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="key-tab"><strong>KEY_TAB</strong> - Tab key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="key-cursor-left"><strong>KEY_CURSOR_LEFT</strong> - Cursor-left key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="key-cursor-right"><strong>KEY_CURSOR_RIGHT</strong> - Cursor-right key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="key-cursor-up"><strong>KEY_CURSOR_UP</strong> - Cursor-up key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="key-cursor-down"><strong>KEY_CURSOR_DOWN</strong> - Cursor-down key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="key-page-up"><strong>KEY_PAGE_UP</strong> - Page-up key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="key-page-down"><strong>KEY_PAGE_DOWN</strong> - Page-down key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="key-home"><strong>KEY_HOME</strong> - Home key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="key-end"><strong>KEY_END</strong> - End key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="key-insert"><strong>KEY_INSERT</strong> - Insert key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="key-delete"><strong>KEY_DELETE</strong> - Delete key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="unstick"><strong>UNSTICK</strong> - Clear all sticky input modifiers.</p>
 <p id="upper"><strong>UPPER</strong> - Cycle the Upper sticky input modifier (next, on, off).</p>
@@ -1523,13 +1530,13 @@ ul.auto-toc {
 <p id="key-escape"><strong>KEY_ESCAPE</strong> - Escape key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="key-function"><strong>KEY_FUNCTION</strong> - Function key.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
-<li>Input: shift, control, meta, altgr, gui</li>
+<li>Input: shift, control, meta, altgr, gui, capslock</li>
 </ul>
 <p id="switchvt"><strong>SWITCHVT</strong> - Switch to specific virtual terminal.</p>
 <p>The following modifiers may be specified:</p>
@@ -1557,7 +1564,7 @@ ul.auto-toc {
 </ul>
 </div>
 <div class="section" id="special-functions">
-<h2><a class="toc-backref" href="#id14">Special Functions</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-14">Special Functions</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#setmark">SETMARK</a></li>
 <li><a class="reference internal" href="#gotomark">GOTOMARK</a></li>
@@ -1600,7 +1607,7 @@ ul.auto-toc {
 <p id="scr-start"><strong>SCR_START</strong> - Start the screen driver.</p>
 </div>
 <div class="section" id="internal-functions">
-<h2><a class="toc-backref" href="#id15">Internal Functions</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-15">Internal Functions</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="#noop">NOOP</a></li>
 <li><a class="reference internal" href="#offline">OFFLINE</a></li>

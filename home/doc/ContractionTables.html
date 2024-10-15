@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <title>Contraction Tables</title>
 <style type="text/css">
 
@@ -366,64 +366,64 @@ ul.auto-toc {
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#description" id="id2">Description</a></li>
-<li><a class="reference internal" href="#contraction-directives" id="id3">Contraction Directives</a><ul>
-<li><a class="reference internal" href="#the-literal-directive" id="id4">The Literal Directive</a></li>
-<li><a class="reference internal" href="#the-always-directive" id="id5">The Always Directive</a></li>
-<li><a class="reference internal" href="#the-repeatable-directive" id="id6">The Repeatable Directive</a></li>
-<li><a class="reference internal" href="#the-largesign-directive" id="id7">The LargeSign Directive</a></li>
-<li><a class="reference internal" href="#the-lastlargesign-directive" id="id8">The LastLargeSign Directive</a></li>
-<li><a class="reference internal" href="#the-word-directive" id="id9">The Word Directive</a></li>
-<li><a class="reference internal" href="#the-joinword-directive" id="id10">The JoinWord Directive</a></li>
-<li><a class="reference internal" href="#the-lowword-directive" id="id11">The LowWord Directive</a></li>
-<li><a class="reference internal" href="#the-contraction-directive" id="id12">The Contraction Directive</a></li>
-<li><a class="reference internal" href="#the-sufword-directive" id="id13">The SufWord Directive</a></li>
-<li><a class="reference internal" href="#the-prfword-directive" id="id14">The PrfWord Directive</a></li>
-<li><a class="reference internal" href="#the-begword-directive" id="id15">The BegWord Directive</a></li>
-<li><a class="reference internal" href="#the-begmidword-directive" id="id16">The BegMidWord Directive</a></li>
-<li><a class="reference internal" href="#the-midword-directive" id="id17">The MidWord Directive</a></li>
-<li><a class="reference internal" href="#the-midendword-directive" id="id18">The MidEndWord Directive</a></li>
-<li><a class="reference internal" href="#the-endword-directive" id="id19">The EndWord Directive</a></li>
-<li><a class="reference internal" href="#the-prepunc-directive" id="id20">The PrePunc Directive</a></li>
-<li><a class="reference internal" href="#the-postpunc-directive" id="id21">The PostPunc Directive</a></li>
-<li><a class="reference internal" href="#the-begnum-directive" id="id22">The BegNum Directive</a></li>
-<li><a class="reference internal" href="#the-midnum-directive" id="id23">The MidNum Directive</a></li>
-<li><a class="reference internal" href="#the-endnum-directive" id="id24">The EndNum Directive</a></li>
+<li><a class="reference internal" href="#description" id="toc-entry-1">Description</a></li>
+<li><a class="reference internal" href="#contraction-directives" id="toc-entry-2">Contraction Directives</a><ul>
+<li><a class="reference internal" href="#the-literal-directive" id="toc-entry-3">The Literal Directive</a></li>
+<li><a class="reference internal" href="#the-always-directive" id="toc-entry-4">The Always Directive</a></li>
+<li><a class="reference internal" href="#the-repeatable-directive" id="toc-entry-5">The Repeatable Directive</a></li>
+<li><a class="reference internal" href="#the-largesign-directive" id="toc-entry-6">The LargeSign Directive</a></li>
+<li><a class="reference internal" href="#the-lastlargesign-directive" id="toc-entry-7">The LastLargeSign Directive</a></li>
+<li><a class="reference internal" href="#the-word-directive" id="toc-entry-8">The Word Directive</a></li>
+<li><a class="reference internal" href="#the-joinword-directive" id="toc-entry-9">The JoinWord Directive</a></li>
+<li><a class="reference internal" href="#the-lowword-directive" id="toc-entry-10">The LowWord Directive</a></li>
+<li><a class="reference internal" href="#the-contraction-directive" id="toc-entry-11">The Contraction Directive</a></li>
+<li><a class="reference internal" href="#the-sufword-directive" id="toc-entry-12">The SufWord Directive</a></li>
+<li><a class="reference internal" href="#the-prfword-directive" id="toc-entry-13">The PrfWord Directive</a></li>
+<li><a class="reference internal" href="#the-begword-directive" id="toc-entry-14">The BegWord Directive</a></li>
+<li><a class="reference internal" href="#the-begmidword-directive" id="toc-entry-15">The BegMidWord Directive</a></li>
+<li><a class="reference internal" href="#the-midword-directive" id="toc-entry-16">The MidWord Directive</a></li>
+<li><a class="reference internal" href="#the-midendword-directive" id="toc-entry-17">The MidEndWord Directive</a></li>
+<li><a class="reference internal" href="#the-endword-directive" id="toc-entry-18">The EndWord Directive</a></li>
+<li><a class="reference internal" href="#the-prepunc-directive" id="toc-entry-19">The PrePunc Directive</a></li>
+<li><a class="reference internal" href="#the-postpunc-directive" id="toc-entry-20">The PostPunc Directive</a></li>
+<li><a class="reference internal" href="#the-begnum-directive" id="toc-entry-21">The BegNum Directive</a></li>
+<li><a class="reference internal" href="#the-midnum-directive" id="toc-entry-22">The MidNum Directive</a></li>
+<li><a class="reference internal" href="#the-endnum-directive" id="toc-entry-23">The EndNum Directive</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#character-classes" id="id25">Character Classes</a><ul>
-<li><a class="reference internal" href="#the-class-directive" id="id26">The Class Directive</a></li>
-<li><a class="reference internal" href="#the-after-directive" id="id27">The After Directive</a></li>
-<li><a class="reference internal" href="#the-before-directive" id="id28">The Before Directive</a></li>
+<li><a class="reference internal" href="#character-classes" id="toc-entry-24">Character Classes</a><ul>
+<li><a class="reference internal" href="#the-class-directive" id="toc-entry-25">The Class Directive</a></li>
+<li><a class="reference internal" href="#the-after-directive" id="toc-entry-26">The After Directive</a></li>
+<li><a class="reference internal" href="#the-before-directive" id="toc-entry-27">The Before Directive</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#indicator-specification" id="id29">Indicator Specification</a><ul>
-<li><a class="reference internal" href="#the-capsign-directive" id="id30">The CapSign Directive</a></li>
-<li><a class="reference internal" href="#the-begcaps-directive" id="id31">The BegCaps Directive</a></li>
-<li><a class="reference internal" href="#the-endcaps-directive" id="id32">The EndCaps Directive</a></li>
-<li><a class="reference internal" href="#the-letsign-directive" id="id33">The LetSign Directive</a></li>
-<li><a class="reference internal" href="#the-numsign-directive" id="id34">The NumSign Directive</a></li>
+<li><a class="reference internal" href="#indicator-specification" id="toc-entry-28">Indicator Specification</a><ul>
+<li><a class="reference internal" href="#the-capsign-directive" id="toc-entry-29">The CapSign Directive</a></li>
+<li><a class="reference internal" href="#the-begcaps-directive" id="toc-entry-30">The BegCaps Directive</a></li>
+<li><a class="reference internal" href="#the-endcaps-directive" id="toc-entry-31">The EndCaps Directive</a></li>
+<li><a class="reference internal" href="#the-letsign-directive" id="toc-entry-32">The LetSign Directive</a></li>
+<li><a class="reference internal" href="#the-numsign-directive" id="toc-entry-33">The NumSign Directive</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#special-directives" id="id35">Special Directives</a><ul>
-<li><a class="reference internal" href="#the-replace-directive" id="id36">The Replace Directive</a></li>
-<li><a class="reference internal" href="#the-emoji-directive" id="id37">The Emoji Directive</a></li>
+<li><a class="reference internal" href="#special-directives" id="toc-entry-34">Special Directives</a><ul>
+<li><a class="reference internal" href="#the-replace-directive" id="toc-entry-35">The Replace Directive</a></li>
+<li><a class="reference internal" href="#the-emoji-directive" id="toc-entry-36">The Emoji Directive</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#standard-directives" id="id38">Standard Directives</a><ul>
-<li><a class="reference internal" href="#the-include-directive" id="id39">The Include Directive</a></li>
+<li><a class="reference internal" href="#standard-directives" id="toc-entry-37">Standard Directives</a><ul>
+<li><a class="reference internal" href="#the-include-directive" id="toc-entry-38">The Include Directive</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#operands" id="id40">Operands</a><ul>
-<li><a class="reference internal" href="#the-string-operand" id="id41">The String Operand</a></li>
-<li><a class="reference internal" href="#the-representation-operand" id="id42">The Representation Operand</a></li>
+<li><a class="reference internal" href="#operands" id="toc-entry-39">Operands</a><ul>
+<li><a class="reference internal" href="#the-string-operand" id="toc-entry-40">The String Operand</a></li>
+<li><a class="reference internal" href="#the-representation-operand" id="toc-entry-41">The Representation Operand</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#contraction-table-list" id="id43">Contraction Table List</a></li>
+<li><a class="reference internal" href="#contraction-table-list" id="toc-entry-42">Contraction Table List</a></li>
 </ul>
 </div>
 <div class="section" id="description">
-<h2><a class="toc-backref" href="#id2">Description</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-1">Description</a></h2>
 <p>Files with names of the form <tt class="docutils literal">*.ctb</tt> are contraction tables, and with names
 of the form <tt class="docutils literal">*.cti</tt> are contraction subtables. They are used by BRLTTY to
 translate character sequences on the screen into their corresponding contracted
@@ -439,7 +439,7 @@ Lines containing only whitespace are ignored. If the first non-whitespace
 character of a line is <tt class="docutils literal">#</tt> then that line is a comment and is ignored.</p>
 </div>
 <div class="section" id="contraction-directives">
-<h2><a class="toc-backref" href="#id3">Contraction Directives</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-2">Contraction Directives</a></h2>
 <p>The format of a contraction directive is:</p>
 <pre class="literal-block">
 <em>directive</em> <em>operand</em> ... <em>comment</em>
@@ -460,7 +460,7 @@ explicitly defined via <a class="reference internal" href="#the-always-directive
 hasn't been defined then the Unicode Replacement Character (U+FFFD) is used -
 if it's representation hasn't been defined then all eight dots are used.</p>
 <div class="section" id="the-literal-directive">
-<h3><a class="toc-backref" href="#id4">The Literal Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-3">The Literal Directive</a></h3>
 <pre class="literal-block">
 literal <em>characters</em>
 </pre>
@@ -468,7 +468,7 @@ literal <em>characters</em>
 into computer braille.</p>
 </div>
 <div class="section" id="the-always-directive">
-<h3><a class="toc-backref" href="#id5">The Always Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-4">The Always Directive</a></h3>
 <pre class="literal-block">
 always <em>characters</em> <em>representation</em>
 </pre>
@@ -477,7 +477,7 @@ there's only one character, then, in addition, define the default
 representation for that character.</p>
 </div>
 <div class="section" id="the-repeatable-directive">
-<h3><a class="toc-backref" href="#id6">The Repeatable Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-5">The Repeatable Directive</a></h3>
 <pre class="literal-block">
 repeatable <em>characters</em> <em>representation</em>
 </pre>
@@ -485,7 +485,7 @@ repeatable <em>characters</em> <em>representation</em>
 any consecutive repetitions of the same sequence.</p>
 </div>
 <div class="section" id="the-largesign-directive">
-<h3><a class="toc-backref" href="#id7">The LargeSign Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-6">The LargeSign Directive</a></h3>
 <pre class="literal-block">
 largeSign <em>characters</em> <em>representation</em>
 </pre>
@@ -493,7 +493,7 @@ largeSign <em>characters</em> <em>representation</em>
 whitespace between consecutive words matched by this directive.</p>
 </div>
 <div class="section" id="the-lastlargesign-directive">
-<h3><a class="toc-backref" href="#id8">The LastLargeSign Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-7">The LastLargeSign Directive</a></h3>
 <pre class="literal-block">
 lastLargeSign <em>characters</em> <em>representation</em>
 </pre>
@@ -502,14 +502,14 @@ preceding whitespace if the previous word was matched by
 <a class="reference internal" href="#the-largesign-directive">The LargeSign Directive</a>.</p>
 </div>
 <div class="section" id="the-word-directive">
-<h3><a class="toc-backref" href="#id9">The Word Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-8">The Word Directive</a></h3>
 <pre class="literal-block">
 word <em>characters</em> <em>representation</em>
 </pre>
 <p>Translate the characters if they're a word.</p>
 </div>
 <div class="section" id="the-joinword-directive">
-<h3><a class="toc-backref" href="#id10">The JoinWord Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-9">The JoinWord Directive</a></h3>
 <pre class="literal-block">
 joinWord <em>characters</em> <em>representation</em>
 </pre>
@@ -517,14 +517,14 @@ joinWord <em>characters</em> <em>representation</em>
 the first character after it is a letter.</p>
 </div>
 <div class="section" id="the-lowword-directive">
-<h3><a class="toc-backref" href="#id11">The LowWord Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-10">The LowWord Directive</a></h3>
 <pre class="literal-block">
 lowWord <em>characters</em> <em>representation</em>
 </pre>
 <p>Translate the characters if they're a whitespace-bounded word.</p>
 </div>
 <div class="section" id="the-contraction-directive">
-<h3><a class="toc-backref" href="#id12">The Contraction Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-11">The Contraction Directive</a></h3>
 <pre class="literal-block">
 contraction <em>characters</em>
 </pre>
@@ -532,7 +532,7 @@ contraction <em>characters</em>
 <a class="reference internal" href="#the-letsign-directive">The LetSign Directive</a>) if they're a word.</p>
 </div>
 <div class="section" id="the-sufword-directive">
-<h3><a class="toc-backref" href="#id13">The SufWord Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-12">The SufWord Directive</a></h3>
 <pre class="literal-block">
 sufWord <em>characters</em> <em>representation</em>
 </pre>
@@ -540,21 +540,21 @@ sufWord <em>characters</em> <em>representation</em>
 word.</p>
 </div>
 <div class="section" id="the-prfword-directive">
-<h3><a class="toc-backref" href="#id14">The PrfWord Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-13">The PrfWord Directive</a></h3>
 <pre class="literal-block">
 prfWord <em>characters</em> <em>representation</em>
 </pre>
 <p>Translate the characters if they're either a word or at the end of a word.</p>
 </div>
 <div class="section" id="the-begword-directive">
-<h3><a class="toc-backref" href="#id15">The BegWord Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-14">The BegWord Directive</a></h3>
 <pre class="literal-block">
 begWord <em>characters</em> <em>representation</em>
 </pre>
 <p>Translate the characters if they're at the beginning of a word.</p>
 </div>
 <div class="section" id="the-begmidword-directive">
-<h3><a class="toc-backref" href="#id16">The BegMidWord Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-15">The BegMidWord Directive</a></h3>
 <pre class="literal-block">
 begMidWord <em>characters</em> <em>representation</em>
 </pre>
@@ -562,14 +562,14 @@ begMidWord <em>characters</em> <em>representation</em>
 a word.</p>
 </div>
 <div class="section" id="the-midword-directive">
-<h3><a class="toc-backref" href="#id17">The MidWord Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-16">The MidWord Directive</a></h3>
 <pre class="literal-block">
 midWord <em>characters</em> <em>representation</em>
 </pre>
 <p>Translate the characters if they're in the middle of a word.</p>
 </div>
 <div class="section" id="the-midendword-directive">
-<h3><a class="toc-backref" href="#id18">The MidEndWord Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-17">The MidEndWord Directive</a></h3>
 <pre class="literal-block">
 midEndWord <em>characters</em> <em>representation</em>
 </pre>
@@ -577,14 +577,14 @@ midEndWord <em>characters</em> <em>representation</em>
 word.</p>
 </div>
 <div class="section" id="the-endword-directive">
-<h3><a class="toc-backref" href="#id19">The EndWord Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-18">The EndWord Directive</a></h3>
 <pre class="literal-block">
 endWord <em>characters</em> <em>representation</em>
 </pre>
 <p>Translate the characters if they're at the end of a word.</p>
 </div>
 <div class="section" id="the-prepunc-directive">
-<h3><a class="toc-backref" href="#id20">The PrePunc Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-19">The PrePunc Directive</a></h3>
 <pre class="literal-block">
 prePunc <em>characters</em> <em>representation</em>
 </pre>
@@ -592,28 +592,28 @@ prePunc <em>characters</em> <em>representation</em>
 word.</p>
 </div>
 <div class="section" id="the-postpunc-directive">
-<h3><a class="toc-backref" href="#id21">The PostPunc Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-20">The PostPunc Directive</a></h3>
 <pre class="literal-block">
 postPunc <em>characters</em> <em>representation</em>
 </pre>
 <p>Translate the characters if they're part of punctuation at the end of a word.</p>
 </div>
 <div class="section" id="the-begnum-directive">
-<h3><a class="toc-backref" href="#id22">The BegNum Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-21">The BegNum Directive</a></h3>
 <pre class="literal-block">
 begNum <em>characters</em> <em>representation</em>
 </pre>
 <p>Translate the characters if they're at the beginning of a number.</p>
 </div>
 <div class="section" id="the-midnum-directive">
-<h3><a class="toc-backref" href="#id23">The MidNum Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-22">The MidNum Directive</a></h3>
 <pre class="literal-block">
 midNum <em>characters</em> <em>representation</em>
 </pre>
 <p>Translate the characters if they're in the middle of a number.</p>
 </div>
 <div class="section" id="the-endnum-directive">
-<h3><a class="toc-backref" href="#id24">The EndNum Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-23">The EndNum Directive</a></h3>
 <pre class="literal-block">
 endNum <em>characters</em> <em>representation</em>
 </pre>
@@ -621,9 +621,9 @@ endNum <em>characters</em> <em>representation</em>
 </div>
 </div>
 <div class="section" id="character-classes">
-<h2><a class="toc-backref" href="#id25">Character Classes</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-24">Character Classes</a></h2>
 <div class="section" id="the-class-directive">
-<h3><a class="toc-backref" href="#id26">The Class Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-25">The Class Directive</a></h3>
 <pre class="literal-block">
 class <em>name</em> <em>characters</em>
 </pre>
@@ -631,7 +631,7 @@ class <em>name</em> <em>characters</em>
 been defined.</p>
 </div>
 <div class="section" id="the-after-directive">
-<h3><a class="toc-backref" href="#id27">The After Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-26">The After Directive</a></h3>
 <pre class="literal-block">
 after <em>class</em> <em>directive</em>
 </pre>
@@ -641,7 +641,7 @@ class. If this directive is used more than once on the same line then the union
 of the characters in all the classes is used.</p>
 </div>
 <div class="section" id="the-before-directive">
-<h3><a class="toc-backref" href="#id28">The Before Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-27">The Before Directive</a></h3>
 <pre class="literal-block">
 before <em>class</em> <em>directive</em>
 </pre>
@@ -652,37 +652,37 @@ of the characters in all the classes is used.</p>
 </div>
 </div>
 <div class="section" id="indicator-specification">
-<h2><a class="toc-backref" href="#id29">Indicator Specification</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-28">Indicator Specification</a></h2>
 <div class="section" id="the-capsign-directive">
-<h3><a class="toc-backref" href="#id30">The CapSign Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-29">The CapSign Directive</a></h3>
 <pre class="literal-block">
 capSign <em>representation</em>
 </pre>
 <p>Define the symbol which capitalizes a single letter.</p>
 </div>
 <div class="section" id="the-begcaps-directive">
-<h3><a class="toc-backref" href="#id31">The BegCaps Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-30">The BegCaps Directive</a></h3>
 <pre class="literal-block">
 begCaps <em>representation</em>
 </pre>
 <p>Define the symbol which begins a block of capital letters within a word.</p>
 </div>
 <div class="section" id="the-endcaps-directive">
-<h3><a class="toc-backref" href="#id32">The EndCaps Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-31">The EndCaps Directive</a></h3>
 <pre class="literal-block">
 endCaps <em>representation</em>
 </pre>
 <p>Define the symbol which ends a block of capital letters within a word.</p>
 </div>
 <div class="section" id="the-letsign-directive">
-<h3><a class="toc-backref" href="#id33">The LetSign Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-32">The LetSign Directive</a></h3>
 <pre class="literal-block">
 letSign <em>representation</em>
 </pre>
 <p>Define the symbol which marks a letter which isn't part of a word.</p>
 </div>
 <div class="section" id="the-numsign-directive">
-<h3><a class="toc-backref" href="#id34">The NumSign Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-33">The NumSign Directive</a></h3>
 <pre class="literal-block">
 numSign <em>representation</em>
 </pre>
@@ -690,9 +690,9 @@ numSign <em>representation</em>
 </div>
 </div>
 <div class="section" id="special-directives">
-<h2><a class="toc-backref" href="#id35">Special Directives</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-34">Special Directives</a></h2>
 <div class="section" id="the-replace-directive">
-<h3><a class="toc-backref" href="#id36">The Replace Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-35">The Replace Directive</a></h3>
 <pre class="literal-block">
 replace <em>characters</em> <em>characters</em>
 </pre>
@@ -700,7 +700,7 @@ replace <em>characters</em> <em>characters</em>
 The replacement characters are then recontracted.</p>
 </div>
 <div class="section" id="the-emoji-directive">
-<h3><a class="toc-backref" href="#id37">The Emoji Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-36">The Emoji Directive</a></h3>
 <pre class="literal-block">
 emoji <em>language</em>
 </pre>
@@ -719,9 +719,9 @@ Knoqwn names for this package include:</p>
 </div>
 </div>
 <div class="section" id="standard-directives">
-<h2><a class="toc-backref" href="#id38">Standard Directives</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-37">Standard Directives</a></h2>
 <div class="section" id="the-include-directive">
-<h3><a class="toc-backref" href="#id39">The Include Directive</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-38">The Include Directive</a></h3>
 <pre class="literal-block">
 include <em>file</em> # <em>comment</em>
 </pre>
@@ -736,9 +736,9 @@ relative, it is anchored at the directory containing the including file.</dd>
 </div>
 </div>
 <div class="section" id="operands">
-<h2><a class="toc-backref" href="#id40">Operands</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-39">Operands</a></h2>
 <div class="section" id="the-string-operand">
-<h3><a class="toc-backref" href="#id41">The String Operand</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-40">The String Operand</a></h3>
 <p>A <em>string</em> operand may be specified as a non-whitespace sequence of:</p>
 <ul>
 <li><p class="first">Any single character other than a backslash (\\) or a white-space
@@ -811,7 +811,7 @@ character.</p>
 </ul>
 </div>
 <div class="section" id="the-representation-operand">
-<h3><a class="toc-backref" href="#id42">The Representation Operand</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-41">The Representation Operand</a></h3>
 <p>The contracted braille representation of a character sequence. Braille cells
 are separated from one another by a minus (<tt class="docutils literal">-</tt>) sign. Each braille cell is
 specified as a sequence of one to eight dot numbers. A dot number is a digit
@@ -824,7 +824,7 @@ operand of the contraction directive is to be written without any translation.</
 </div>
 </div>
 <div class="section" id="contraction-table-list">
-<h2><a class="toc-backref" href="#id43">Contraction Table List</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-42">Contraction Table List</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />
