@@ -34,6 +34,7 @@ So far, we have translations for the following languages:
       listTranslations("Slovenian", "sl");
       listTranslations("Spanish", "es");
       listTranslations("Turkish", "tr");
+      listTranslations("Ukrainian", "uk");
    ?>
 </ul>
 
