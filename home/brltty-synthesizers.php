@@ -5,20 +5,20 @@ then please <A HREF="contact.html">let us know</A>.
 
 <?php
    $speech_synthesizers = array(
-      array("Alva", "Delphi (4nn)"),
+      array("Alva", "Delphi (4nn) models"),
       array("BrailleLite"),
       array("CombiBraille"),
-      array("eSpeak", "text to speech engine"),
-      array("eSpeak-NG", "text to speech engine"),
-      array("ExternalSpeech", "text to speech engine"),
-      array("Festival", "text to speech engine"),
-      array("FestivalLite", "text to speech engine"),
-      array("GenericSay", "text to speech engine"),
-      array("Mikropuhe", "text to speech engine"),
-      array("SpeechDispatcher", "text to speech server"),
-      array("Swift", "text to speech engine"),
-      array("Theta", "text to speech engine"),
-      array("ViaVoice", "text to speech engine"),
+      array("eSpeak"),
+      array("eSpeak NG"),
+      array("External Speech", "needs user-provided server"),
+      array("Festival"),
+      array("Festival Lite"),
+      array("Generic Say", "needs user-provided script"),
+      array("Mikropuhe", "commercial product"),
+      array("Speech Dispatcher"),
+      array("Swift", "commercial product"),
+      array("Theta", "commercial product"),
+      array("ViaVoice", "commercial product"),
    );
 
    list_drivers($speech_synthesizers);
