@@ -48,7 +48,8 @@ Horizontal Navigation
 Clipboard Functions
 * start new clipboard at character: Prog+RoutingKey1
 * rectangular copy to character: Home+RoutingKey1
-* insert clipboard text after screen cursor: Prog+Home+Down
+* insert the clipboard content before the screen cursor: Prog+Home+Down
+* insert the clipboard content before the screen cursor using the alternate paste mode: long Prog+Home+Down
 
 Configuration Functions
 * set text style 6-dot/8-dot: Cursor+Status1A

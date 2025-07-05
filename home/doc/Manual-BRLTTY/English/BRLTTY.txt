@@ -1,6 +1,6 @@
   BRLTTY Reference Manual
-  Access to the Console Screen for Blind Persons using
-  Refreshable Braille Displays
+  Access to the Console Screen for Blind Persons using Refreshable
+  Braille Displays
   Nikhil Nair <nn201@cus.cam.ac.uk>
 
   Nicolas Pitre <nico@fluxnic.net>
@@ -9,9 +9,9 @@
 
   Dave Mielke <dave@mielke.cc>
 
-  Version 6.7, October 2024
+  Version 6.8, July 2025
 
-  Copyright © 1995-2024 by The BRLTTY Developers.  BRLTTY is free soft-
+  Copyright © 1995-2025 by The BRLTTY Developers.  BRLTTY is free soft-
   ware, and comes with ABSOLUTELY NO WARRANTY.  It is placed under the
   terms of version 2 or later of The GNU General Public License as pub-
   lished by The Free Software Foundation.
@@ -136,7 +136,6 @@
   F. Standard Braille Dot Numbering Convention
   G. North American Braille Computer Code
   H. MIDI Instrument Table
-
 
   ______________________________________________________________________
 
@@ -1361,14 +1360,10 @@
           /bin/brltty
        fi
 
-
-
   This can usually be abbreviated to the somewhat less readable form:
 
 
        [ -x /bin/brltty -a -f /etc/brltty.conf ] && /bin/brltty
-
-
 
   Don't add these lines before the first line (which usually looks like
   #!/bin/sh).
@@ -1407,9 +1402,8 @@
               fi
 
 
-
-     Starting BRLTTY before this reinvocation results in two BRLTTY pro-
-     cesses running at the same time, and that'll give you no end of
+     Starting BRLTTY before this reinvocation results in two BRLTTY
+     processes running at the same time, and that'll give you no end of
      problems.  If your version of this script has this feature, then
      make sure you start BRLTTY after the lines which implement it.
 
@@ -2899,8 +2893,8 @@
         reference manual.  See the ``api-parameters'' configuration file
         directive for the default run-time settings.
 
-     -B[driver:]name=value,... --braille-parame-
-        ters=[driver:]name=value,...
+     -B[driver:]name=value,... --braille-parameters=[dri-
+        ver:]name=value,...
         Specify parameters for the braille display drivers.  If the same
         parameter is specified more than once, then its rightmost
         assignment is used.  If a parameter name is qualified by a
@@ -3048,8 +3042,8 @@
 
         This option is only supported on the Windows platform.
 
-     -S[driver:]name=value,... --speech-parame-
-        ters=[driver:]name=value,...
+     -S[driver:]name=value,... --speech-parameters=[dri-
+        ver:]name=value,...
         Specify parameters for the speech synthesizer drivers.  If the
         same parameter is specified more than once, then its rightmost
         assignment is used.  If a parameter name is qualified by a
@@ -3067,8 +3061,8 @@
         If the ``-q'' option isn't specified, then also display
         copyright information.
 
-     -X[driver:]name=value,... --screen-parame-
-        ters=[driver:]name=value,...
+     -X[driver:]name=value,... --screen-parameters=[dri-
+        ver:]name=value,...
         Specify parameters for the screen drivers.  If the same
         parameter is specified more than once, then its rightmost
         assignment is used.  If a parameter name is qualified by a
@@ -3676,9 +3670,9 @@
         tracking, etc.), other than when it moves in response to pointer
         (mouse) motion (see the ``Window Follows Pointer'' preference),
         causes the area of the screen corresponding to the new location
-        of the braille window to be highlighted.  If the ``Show At-
-        tributes'' preference is enabled then only the character corre-
-        sponding to the upper-left corner of the braille window is high-
+        of the braille window to be highlighted.  If the ``Show Attrib-
+        utes'' preference is enabled then only the character correspond-
+        ing to the upper-left corner of the braille window is high-
         lighted.
 
      Alert Tunes
@@ -4266,6 +4260,7 @@
     gon          Gondi
     gu           Gujarati
     he           Hebrew
+    he_IL        Hebrew (Israel)
     hi           Hindi
     hr           Croatian
     hu           Hungarian
@@ -5537,8 +5532,6 @@
        ./configure --with-execute-root=/brltty-3.1
        make install
 
-
-
   You can then run it like this:
 
        /brltty-3.1/bin/brltty
@@ -5551,8 +5544,6 @@
        ./configure --with-execute-root=/brltty-3.2
        make install
        /brltty-3.2/bin/brltty
-
-
 
   So far, this paradigm is somewhat awkward for at least two reasons.
   One is that these long path names are too hard to type, and the other
@@ -5580,8 +5571,6 @@
        ln -s /brltty/bin/brltty /bin/brltty
        ln -s /brltty/etc/brltty /etc/brltty
        ln -s /brltty/lib/brltty /lib/brltty
-
-
 
   Then all you need to do is to point /brltty to the desired version.
 
@@ -5612,8 +5601,6 @@
        mknod /dev/vcsa c 7 128
        chmod 660 /dev/vcsa
        chown root.tty /dev/vcsa
-
-
 
   One problem often encountered when trying to use BRLTTY in an
   uncertain environment like a root disk or an incomplete system is that
@@ -6060,8 +6047,6 @@
        3 o o 6
        7 o o 8
 
-
-
   G.  North American Braille Computer Code
 
 
@@ -6325,8 +6310,6 @@
        | 254  FE  [ 3    68]  small thorn                                |
        | 255  FF  [ 3  4568]  small y diaeresis                          |
        +-----------------------------------------------------------------+
-
-
 
   H.  MIDI Instrument Table
 

@@ -57,7 +57,8 @@ Clipboard Functions
 * append to clipboard from character: K1+K8+K2+K7, RoutingKey
 * linear copy to character: K1+K8+K3+K6, RoutingKey
 * rectangular copy to character: K1+K8+K3+K7, RoutingKey
-* insert clipboard text after screen cursor: K6+K7
+* insert the clipboard content before the screen cursor: K6+K7
+* insert the clipboard content before the screen cursor using the alternate paste mode: long K6+K7
 
 Configuration Functions
 * set text style 6-dot/8-dot: K8+K6

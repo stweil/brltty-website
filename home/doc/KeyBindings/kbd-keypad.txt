@@ -56,7 +56,8 @@ Clipboard Functions
 * append to clipboard from character at cursor: KPMultiply+KP1
 * linear copy to character at cursor: KPMultiply+KP9
 * rectangular copy to character at cursor: KPMultiply+KP3
-* insert clipboard text after screen cursor: KPMultiply+KP5
+* insert the clipboard content before the screen cursor: KPMultiply+KP5
+* insert the clipboard content before the screen cursor using the alternate paste mode: long KPMultiply+KP5
 * search backward for clipboard text: KPMultiply+KPMinus
 * search forward for clipboard text: KPMultiply+KPPlus
 

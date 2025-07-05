@@ -73,7 +73,7 @@ Clipboard Functions
 * linear copy to character: RoutingKey+CursorRight
 * rectangular copy to character: RoutingKey+RightOuter
 * copy characters to clipboard: RoutingKey+RoutingKey
-* insert clipboard text after screen cursor: RoutingKey.2+RoutingKey.3
+* insert the clipboard content before the screen cursor: RoutingKey.2+RoutingKey.3
 * search backward for clipboard text: RoutingKey.1+RoutingKey.3+LeftInner
 * search forward for clipboard text: RoutingKey.1+RoutingKey.3+RightInner
 

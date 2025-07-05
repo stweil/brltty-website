@@ -78,7 +78,7 @@ Clipboard Functions
 * append to clipboard from character: RightJoystickUp+RoutingKey1
 * linear copy to character: RightJoystickRight+RoutingKey1
 * rectangular copy to character: RightJoystickDown+RoutingKey1
-* insert clipboard text after screen cursor: L8+RightJoystickPress
+* insert the clipboard content before the screen cursor: L8+RightJoystickPress
 * search backward for clipboard text: L1+LeftJoystickUp
 * search forward for clipboard text: L1+LeftJoystickDown
 * save clipboard to disk: L8+RightJoystickRight

@@ -70,7 +70,7 @@ Clipboard Functions
 * append to clipboard from character: Attribute1+RoutingKey1
 * linear copy to character: Attribute4+RoutingKey1
 * rectangular copy to character: Attribute3+RoutingKey1
-* insert clipboard text after screen cursor: F3
+* insert the clipboard content before the screen cursor: F3
 
 Configuration Functions
 * set text style 6-dot/8-dot: F12

@@ -42,7 +42,7 @@ Clipboard Functions
 * append to clipboard from character: RightShift+Enter, RoutingKey
 * linear copy to character: RightShift+End, RoutingKey
 * rectangular copy to character: RightShift+Escape, RoutingKey
-* insert clipboard text after screen cursor: RightShift+Right
+* insert the clipboard content before the screen cursor: RightShift+Right
 
 Configuration Functions
 * set text style 6-dot/8-dot: LeftShift+Right

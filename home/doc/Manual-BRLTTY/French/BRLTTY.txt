@@ -1,6 +1,6 @@
   Manuel de référence de BRLTTY
-  Accès à l'écran d'une console pour les personnes non-
-  voyantes utilisant des afficheurs braille
+  Accès à l'écran d'une console pour les personnes non-voyantes
+  utilisant des afficheurs braille
   Nikhil Nair <nn201@cus.cam.ac.uk>
 
   Nicolas Pitre <nico@fluxnic.net>
@@ -11,12 +11,11 @@
 
   Traduction française
 
-  Jean-Philippe Mengual <texou@accelibreinfo.eu> pour
-  Traduc.org
+  Jean-Philippe Mengual <texou@accelibreinfo.eu> pour Traduc.org
 
-  Version 6.7, octobre 2024
+  Version 6.8, juillet 2025
 
-  Copyright © 1995-2024 by Les Développeurs de BRLTTY.  BRLTTY est un
+  Copyright © 1995-2025 by Les Développeurs de BRLTTY.  BRLTTY est un
   logiciel libre, et n'est fourni avec AUCUNE GARANTIE. Il est placé
   sous les termes de la version 2 ou ultérieure de la GNU General Public
   License publiée par The Free Software Foundation.
@@ -141,7 +140,6 @@
   14. Code informatique braille Nord Américain
   15. Table française unifiée
   16. Table d'instruments MIDI
-
 
   ______________________________________________________________________
 
@@ -1465,16 +1463,12 @@
           /bin/brltty
        fi
 
-
-
   Normalement, cela peut s'abréger en une forme un peu moins lisible du
   type:
 
 
 
        [ -x /bin/brltty -a -f /etc/brltty.conf ] && /bin/brltty
-
-
 
   N'ajoutez pas ces lignes avant la première ligne (qui ressemble
   généralement à #!/bin/sh).
@@ -1515,7 +1509,6 @@
               if [ -z "$IN_INITLOG" ]; then
                 [ -f /sbin/initlog ] && exec /sbin/initlog $INITLOG_ARGS -r /etc/rc.sysinit
               fi
-
 
 
      Démarrer BRLTTY avant ce rappel donne deux processus BRLTTY en même
@@ -4628,6 +4621,7 @@
   gon          Gondi
   gu           Gujrati
   he           Hébreux
+  he_IL        Hébreux (Israël)
   hi           Hindi
   hr           Croate
   hu           Hongrois
@@ -5974,8 +5968,6 @@
        ./configure --with-execute-root=/brltty-3.1
        make install
 
-
-
   Vous pouvez alors l'exécuter ainsi:
 
        /brltty-3.1/bin/brltty
@@ -5988,8 +5980,6 @@
        ./configure --with-execute-root=/brltty-3.2
        make install
        /brltty-3.2/bin/brltty
-
-
 
   Jusque-là, tout cela est quelque peu maladroit pour au moins deux
   raisons.  La première est que ces longs chemins sont trop difficiles à
@@ -6018,8 +6008,6 @@
        ln -s /brltty/bin/brltty /bin/brltty
        ln -s /brltty/etc/brltty /etc/brltty
        ln -s /brltty/lib/brltty /lib/brltty
-
-
 
   Ensuite, tout ce que vous devez faire est de pointer /brltty vers la
   version désirée.
@@ -6054,8 +6042,6 @@
        mknod /dev/vcsa c 7 128
        chmod 660 /dev/vcsa
        chown root.tty /dev/vcsa
-
-
 
   Un problème souvent rencontré lorsqu'on essaie d'utiliser BRLTTY dans
   un environnement instable, comme un disque racine ou un système
@@ -6515,8 +6501,6 @@
        3 o o 6
        7 o o 8
 
-
-
   14.  Code informatique braille Nord Américain
 
 
@@ -6781,8 +6765,6 @@
        | 255  FF  [ 3  4568]  small y diaeresis                          |
        +-----------------------------------------------------------------+
 
-
-
   15.  Table française unifiée
 
 
@@ -7041,8 +7023,6 @@
        | 254 FE   [  2 45 8] thorn minuscule                                     |
        | 255 FF   [  2  568] y tréma minuscule                                   |
        +-------------------------------------------------------------------------+
-
-
 
   16.  Table d'instruments MIDI
 

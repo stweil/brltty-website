@@ -43,9 +43,10 @@ Clipboard Functions
 * append to clipboard from character at cursor: ControlLeft+KP0+KPPlus
 * linear copy to character at cursor: KP0+KPMultiply
 * rectangular copy to character at cursor: KP0+KPMinus
-* insert clipboard text after screen cursor:
+* insert the clipboard content before the screen cursor:
   + ACTION_Paste
   + KP0+KPPlus
+* insert the clipboard content before the screen cursor using the alternate paste mode: long KP0+KPPlus
 * search backward for clipboard text: ControlLeft+ACTION_Find
 * search forward for clipboard text: ACTION_Find
 * save clipboard to disk: ShiftLeft+ACTION_Paste

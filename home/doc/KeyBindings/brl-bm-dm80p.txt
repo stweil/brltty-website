@@ -53,7 +53,8 @@ Clipboard Functions
 * append to clipboard from character: Display4+RoutingKey
 * linear copy to character: Display6+RoutingKey
 * rectangular copy to character: Display7+RoutingKey
-* insert clipboard text after screen cursor: Display5+Display4+Display7
+* insert the clipboard content before the screen cursor: Display5+Display4+Display7
+* insert the clipboard content before the screen cursor using the alternate paste mode: long Display5+Display4+Display7
 
 Configuration Functions
 * set text style 6-dot/8-dot: Display1+Display4

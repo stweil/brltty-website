@@ -54,7 +54,7 @@ Clipboard Functions
 * append to clipboard from character: Down+Right, L2, RoutingKey1
 * linear copy to character: Down+Right, L8, RoutingKey1
 * rectangular copy to character: Down+Right, L6, RoutingKey1
-* insert clipboard text after screen cursor: Down+Right, L7
+* insert the clipboard content before the screen cursor: Down+Right, L7
 * search backward for clipboard text: Down+Left, L3
 * search forward for clipboard text: Down+Left, L6
 

@@ -78,7 +78,8 @@ Horizontal Navigation
   + long NavRight
 
 Clipboard Functions
-* insert clipboard text after screen cursor: Space+Dots1346
+* insert the clipboard content before the screen cursor: Space+Dots1346
+* insert the clipboard content before the screen cursor using the alternate paste mode: long Space+Dots1346
 * save clipboard to disk: Space+Dots13468
 * restore clipboard from disk: Space+Dots13467
 

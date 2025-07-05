@@ -73,8 +73,9 @@ Clipboard Functions
 * rectangular copy to character: Dot8+RoutingKey
 * copy characters to clipboard: RoutingKey+RoutingKey
 * append characters to clipboard: RoutingKey+RoutingKey+Space
-* insert clipboard text after screen cursor: Space+Dots1346
-* insert clipboard history entry after screen cursor: Center+RoutingKey
+* insert the clipboard content before the screen cursor: Space+Dots1346
+* insert the clipboard content before the screen cursor using the alternate paste mode: long Space+Dots1346
+* insert a clipboard history entry before the screen cursor: Center+RoutingKey
 * search backward for clipboard text: Backward+Center
 * search forward for clipboard text: Forward+Center
 * save clipboard to disk: Space+Dots13468

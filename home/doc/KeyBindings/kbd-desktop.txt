@@ -34,7 +34,8 @@ Clipboard Functions
 * append to clipboard from character at cursor: ControlLeft+KP0+KPPlus
 * linear copy to character at cursor: KP0+KPMultiply
 * rectangular copy to character at cursor: KP0+KPMinus
-* insert clipboard text after screen cursor: KP0+KPPlus
+* insert the clipboard content before the screen cursor: KP0+KPPlus
+* insert the clipboard content before the screen cursor using the alternate paste mode: long KP0+KPPlus
 
 Configuration Functions
 * set track screen cursor on/off: KP0+KPPeriod

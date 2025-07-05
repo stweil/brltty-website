@@ -62,7 +62,7 @@ Clipboard Functions
 * append to clipboard from character at cursor: Control+JoystickUp
 * linear copy to character at cursor: Control+JoystickRight
 * rectangular copy to character at cursor: Control+JoystickDown
-* insert clipboard text after screen cursor: Control+JoystickEnter
+* insert the clipboard content before the screen cursor: Control+JoystickEnter
 
 Configuration Functions
 * set text style 6-dot: Dots235+JoystickEnter

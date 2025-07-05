@@ -1,7 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <HTML>
 <HEAD>
- <META NAME="GENERATOR" CONTENT="LinuxDoc-Tools 0.9.72">
+ <META NAME="GENERATOR" CONTENT="LinuxDoc-Tools 0.9.82">
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
  <TITLE>BrlAPI Reference manual: General description of BrlAPI</TITLE>
  <LINK HREF="BrlAPI-3.html" REL=next>
  <LINK HREF="BrlAPI-1.html" REL=previous>
@@ -140,7 +141,16 @@ or reading braille keys any more, it has to leave the tty, so
 that either <EM>brltty</EM> can continue its job, or another client can
 take control of it.</P>
 
-<H3>Parameter handling The server exposes some parameters to the client. Some parameters are global to all clients (e.g. the braille display size), while others are local per client (e.g. retaindots, i.e. whether to send Perkins presses as dot patterns or as letters). Some parameters are read-only (e.g. the braille display size), while others are read-write (e.g. retaindots). Some parameters may change during execution, while others change only when a client set it. Clients can either request the current value of a parameter, or set its value (if it is read-write), or request the server to notify on value change.</H3>
+<H3>Parameter handling.</H3>
+
+<P>The server exposes some parameters to the client. Some parameters are global to
+all clients (e.g. the braille display size), while others are local per client
+(e.g. retaindots, i.e. whether to send Perkins presses as dot patterns or as
+letters). Some parameters are read-only (e.g. the braille display size), while
+others are read-write (e.g. retaindots). Some parameters may change during
+execution, while others change only when a client set it.</P>
+<P>Clients can either request the current value of a parameter, or set its value
+(if it is read-write), or request the server to notify on value change.</P>
 
 <H3>Raw mode.</H3>
 

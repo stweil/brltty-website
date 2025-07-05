@@ -96,10 +96,14 @@ Clipboard Functions
 * linear copy to character: ETouchRightRear+RoutingKey1
 * rectangular copy to character: ETouchRightFront+RoutingKey1
 * copy characters to clipboard: RoutingKey1+RoutingKey1
-* insert clipboard text after screen cursor:
+* insert the clipboard content before the screen cursor:
   + SmartpadEnter
   + ETouchRightRear+ETouchRightFront
   + Space+Dots1346
+* insert the clipboard content before the screen cursor using the alternate paste mode:
+  + long SmartpadEnter
+  + long ETouchRightRear+ETouchRightFront
+  + long Space+Dots1346
 * search backward for clipboard text: ETouchRightRear+ThumbUp
 * search forward for clipboard text: ETouchRightRear+ThumbDown
 * save clipboard to disk: Space+Dots13468

@@ -50,7 +50,8 @@ Clipboard Functions
 * append to clipboard from character: BarLeft1+RoutingKey1
 * linear copy to character: BarRight1+RoutingKey1
 * rectangular copy to character: BarRight2+RoutingKey1
-* insert clipboard text after screen cursor: LeftKeyRear+BarDown1
+* insert the clipboard content before the screen cursor: LeftKeyRear+BarDown1
+* insert the clipboard content before the screen cursor using the alternate paste mode: long LeftKeyRear+BarDown1
 
 Configuration Functions
 * set autorepeat on/off: LeftKeyFront+BarDown1

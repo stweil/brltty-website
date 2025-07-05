@@ -82,9 +82,12 @@ Clipboard Functions
 * rectangular copy to character:
   + BarRight2+RoutingKey1
   + RightKeyFront+RoutingKey1
-* insert clipboard text after screen cursor:
+* insert the clipboard content before the screen cursor:
   + Status.20
   + LeftKeyRear+BarDown1
+* insert the clipboard content before the screen cursor using the alternate paste mode:
+  + long Status.20
+  + long LeftKeyRear+BarDown1
 
 Configuration Functions
 * set autorepeat on/off:

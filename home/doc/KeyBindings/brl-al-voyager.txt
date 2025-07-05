@@ -63,9 +63,12 @@ Clipboard Functions
 * linear copy to character: Thumb3+RoutingKey
 * rectangular copy to character: Thumb4+RoutingKey
 * copy characters to clipboard: RoutingKey+RoutingKey
-* insert clipboard text after screen cursor:
+* insert the clipboard content before the screen cursor:
   + Thumb2+Thumb3
   + Thumb2+Dots1346
+* insert the clipboard content before the screen cursor using the alternate paste mode:
+  + long Thumb2+Thumb3
+  + long Thumb2+Dots1346
 * search backward for clipboard text: Thumb1+Left
 * search forward for clipboard text: Thumb1+Right
 * save clipboard to disk: Thumb2+Dots13468

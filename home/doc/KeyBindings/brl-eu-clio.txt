@@ -56,7 +56,7 @@ Clipboard Functions
 * append to clipboard from character: Star, F, RoutingKey
 * linear copy to character: Star, M, RoutingKey
 * rectangular copy to character: Star, K, RoutingKey
-* insert clipboard text after screen cursor: Star, L
+* insert the clipboard content before the screen cursor: Star, L
 * search backward for clipboard text: Sharp, G
 * search forward for clipboard text: Sharp, K
 

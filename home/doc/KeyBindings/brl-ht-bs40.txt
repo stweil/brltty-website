@@ -109,7 +109,8 @@ Clipboard Functions
   + RightRockerBottom+RoutingKey
   + B5+RoutingKey
 * copy characters to clipboard: RoutingKey+RoutingKey
-* insert clipboard text after screen cursor: SpaceLeft+SpaceRight
+* insert the clipboard content before the screen cursor: SpaceLeft+SpaceRight
+* insert the clipboard content before the screen cursor using the alternate paste mode: long SpaceLeft+SpaceRight
 * search backward for clipboard text: B3+B4
 * search forward for clipboard text: B3+B5
 

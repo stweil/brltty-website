@@ -72,9 +72,12 @@ Clipboard Functions
 * rectangular copy to character:
   + BarRight2+RoutingKey1
   + RightKeyFront+RoutingKey1
-* insert clipboard text after screen cursor:
+* insert the clipboard content before the screen cursor:
   + LeftKeyRear+BarDown1
   + Space+Dots1346
+* insert the clipboard content before the screen cursor using the alternate paste mode:
+  + long LeftKeyRear+BarDown1
+  + long Space+Dots1346
 * save clipboard to disk: Space+Dots13468
 * restore clipboard from disk: Space+Dots13467
 

@@ -53,7 +53,7 @@ Clipboard Functions
 * append to clipboard from character: LeftJoystickDown+RightJoystickUp, RoutingKey1
 * linear copy to character: LeftJoystickDown+RightJoystickRight, RoutingKey1
 * rectangular copy to character: LeftJoystickDown+RightJoystickDown, RoutingKey1
-* insert clipboard text after screen cursor: LeftJoystickDown+RightJoystickPress
+* insert the clipboard content before the screen cursor: LeftJoystickDown+RightJoystickPress
 
 Configuration Functions
 * set track screen cursor on/off: LeftJoystickRight+Switch2Left+Switch2Right

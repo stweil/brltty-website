@@ -59,9 +59,10 @@ Clipboard Functions
 * append to clipboard from character: F2+F3+F4, RoutingKey
 * linear copy to character: F1+F2+F3, RoutingKey
 * rectangular copy to character: F1+F2+F4, RoutingKey
-* insert clipboard text after screen cursor:
+* insert the clipboard content before the screen cursor:
   + F1+F2+F3+F4
   + Space+Dots1346
+* insert the clipboard content before the screen cursor using the alternate paste mode: long Space+Dots1346
 * save clipboard to disk: Space+Dots13468
 * restore clipboard from disk: Space+Dots13467
 

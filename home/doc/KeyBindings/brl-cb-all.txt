@@ -63,7 +63,7 @@ Clipboard Functions
 * append to clipboard from character: Status2, RoutingKey
 * linear copy to character: Status3, RoutingKey
 * rectangular copy to character: Status4, RoutingKey
-* insert clipboard text after screen cursor: Dots1234
+* insert the clipboard content before the screen cursor: Dots1234
 
 Configuration Functions
 * set text style 6-dot/8-dot: Dots235

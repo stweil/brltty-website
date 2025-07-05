@@ -77,7 +77,8 @@ Clipboard Functions
 * append to clipboard from character: Dot3+RoutingKey1
 * linear copy to character: Dot6+RoutingKey1
 * rectangular copy to character: Dot8+RoutingKey1
-* insert clipboard text after screen cursor: Status.22
+* insert the clipboard content before the screen cursor: Status.22
+* insert the clipboard content before the screen cursor using the alternate paste mode: long Status.22
 * search backward for clipboard text: Dots37
 * search forward for clipboard text: Dots68
 
@@ -181,7 +182,8 @@ Cursor Functions
 * bring screen cursor to current line: Dots1236
 
 Clipboard Functions
-* insert clipboard text after screen cursor: Dots1346
+* insert the clipboard content before the screen cursor: Dots1346
+* insert the clipboard content before the screen cursor using the alternate paste mode: long Dots1346
 * save clipboard to disk: Dots13468
 * restore clipboard from disk: Dots13467
 

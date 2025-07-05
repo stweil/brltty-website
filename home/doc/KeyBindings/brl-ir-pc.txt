@@ -40,8 +40,8 @@ Clipboard Functions
 * append to clipboard from character: L2+RoutingKey
 * linear copy to character: L8+RoutingKey
 * rectangular copy to character: L7+RoutingKey
-* insert clipboard text after screen cursor: L2+L3
-* insert clipboard history entry after screen cursor: L2+L3+L4, RoutingKey
+* insert the clipboard content before the screen cursor: L2+L3
+* insert a clipboard history entry before the screen cursor: L2+L3+L4, RoutingKey
 
 Configuration Functions
 * set text style 6-dot/8-dot: L4+L5

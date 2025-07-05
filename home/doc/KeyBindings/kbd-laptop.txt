@@ -39,7 +39,8 @@ Clipboard Functions
 * append to clipboard from character at cursor: CapsLock+ShiftLeft+X
 * linear copy to character at cursor: CapsLock+ShiftLeft+C
 * rectangular copy to character at cursor: CapsLock+C
-* insert clipboard text after screen cursor: CapsLock+V
+* insert the clipboard content before the screen cursor: CapsLock+V
+* insert the clipboard content before the screen cursor using the alternate paste mode: long CapsLock+V
 
 Configuration Functions
 * set track screen cursor on/off: CapsLock+Enter

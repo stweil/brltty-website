@@ -90,9 +90,10 @@ Clipboard Functions
 * append to clipboard from character: Alt+RoutingKey
 * linear copy to character: Select+RoutingKey
 * rectangular copy to character: Read+RoutingKey
-* insert clipboard text after screen cursor:
+* insert the clipboard content before the screen cursor:
   + Control+Alt
   + Read+dots1346
+* insert the clipboard content before the screen cursor using the alternate paste mode: long Read+dots1346
 * search backward for clipboard text: Control+PanLeft
 * search forward for clipboard text: Control+PanRight
 * save clipboard to disk: Read+dots13468

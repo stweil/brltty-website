@@ -21,18 +21,7 @@
         2.3.2 Authorization.
         2.3.3 Real use of the braille terminal.
            2.3.3.1 Braille display and braille key presses processing.
-           2.3.3.2 Parameter handling The server exposes some parameters
-                   to the client. Some parameters are global to all
-                   clients (e.g. the braille display size), while others
-                   are local per client (e.g. retaindots, i.e. whether to
-                   send Perkins presses as dot patterns or as letters).
-                   Some parameters are read-only (e.g. the braille
-                   display size), while others are read-write (e.g.
-                   retaindots). Some parameters may change during
-                   execution, while others change only when a client set
-                   it. Clients can either request the current value of a
-                   parameter, or set its value (if it is read-write), or
-                   request the server to notify on value change.
+           2.3.3.2 Parameter handling.
            2.3.3.3 Raw mode.
            2.3.3.4 Suspend Mode.
            2.3.3.5 Remarks.
@@ -111,7 +100,6 @@
                client and just acknowledged by the server. This allows
                the client to perform a round-try with the server, thus
                collecting any pending exception notification.
-
 
   ______________________________________________________________________
 
@@ -396,13 +384,16 @@
   braille keys any more, it has to leave the tty, so that either brltty
   can continue its job, or another client can take control of it.
 
-  2.3.3.2.  Parameter handling The server exposes some parameters to the
-  client. Some parameters are global to all clients (e.g. the braille
-  display size), while others are local per client (e.g. retaindots,
-  i.e. whether to send Perkins presses as dot patterns or as letters).
-  Some parameters are read-only (e.g. the braille display size), while
-  others are read-write (e.g. retaindots). Some parameters may change
-  during execution, while others change only when a client set it.
+  2.3.3.2.  Parameter handling.
+
+  The server exposes some parameters to the client. Some parameters are
+  global to all clients (e.g. the braille display size), while others
+  are local per client (e.g. retaindots, i.e. whether to send Perkins
+  presses as dot patterns or as letters). Some parameters are read-only
+  (e.g. the braille display size), while others are read-write (e.g.
+  retaindots). Some parameters may change during execution, while others
+  change only when a client set it.
+
   Clients can either request the current value of a parameter, or set
   its value (if it is read-write), or request the server to notify on
   value change.
@@ -647,8 +638,6 @@
        ...
        ______________________________________________________________________
 
-
-
   5.  Library description
 
   Let's now see how one can write dedicated applications. Basic notions
@@ -698,8 +687,6 @@
         }
        ______________________________________________________________________
 
-
-
   The connection might fail, so testing is needed.
 
   5.2.  Getting driver name
@@ -715,8 +702,6 @@
         else
         fprintf(stderr, "Driver name: %s\n", name);
        ______________________________________________________________________
-
-
 
   This is particularly useful before entering raw mode to achieve file
   transfers for instance, just to check that the device is really the
@@ -737,8 +722,6 @@
         y, y>1?"s":"", x, x>1?"s":"");
        ______________________________________________________________________
 
-
-
   5.4.  Entering raw mode, immediately leaving raw mode.
 
   Entering raw mode is very simple:
@@ -754,8 +737,6 @@
         brlapi_leaveRawMode();
         }
        ______________________________________________________________________
-
-
 
   Not every driver supports raw mode, so testing is needed.
 
@@ -776,8 +757,6 @@
         {
         fprintf(stderr, "Ok\n");
        ______________________________________________________________________
-
-
 
   The first parameter tells the server the number of the tty to take
   control of. Setting BRLAPI_TTY_DEFAULT lets the library determine it
@@ -805,8 +784,6 @@
         fprintf(stderr, "Ok\n");
        ______________________________________________________________________
 
-
-
   The cursor is also asked not to be shown: its position is set to 0.
 
   "Writing to braille display... Ok" is now displayed on the screen, and
@@ -824,8 +801,6 @@
         if (brlapi_readKey(1, &key) > 0)
         fprintf(stderr, "got it! (code=%"BRLAPI_PRIxKEYCODE")\n", key);
        ______________________________________________________________________
-
-
 
   The command is returned, as described in <brlapi_constants.h> and
   <brlapi_keycodes.h>.  It is not transmitted to brltty: it is up to the
@@ -860,8 +835,6 @@
         }
        ______________________________________________________________________
 
-
-
   Another way is to ask BrlAPI to expand the keycode into separate
   information parts:
 
@@ -873,8 +846,6 @@
         fprintf(stderr, "type %u, command %u, argument %u, flags %u\n",
         ekey.type, ekey.command, ekey.argument, ekey.flags);
        ______________________________________________________________________
-
-
 
   Eventually, named equivalents are provided:
 
@@ -892,8 +863,6 @@
         fprintf(stderr, "\n");
        ______________________________________________________________________
 
-
-
   5.9.  Leaving tty control
 
   Let's now leave the tty:
@@ -905,8 +874,6 @@
         if (brlapi_leaveTtyMode() >= 0)
         fprintf(stderr, "Ok\n");
        ______________________________________________________________________
-
-
 
   But control of another tty can still be get for instance, by calling
   brlapi_enterTtyMode() again...
@@ -920,8 +887,6 @@
        ______________________________________________________________________
         brlapi_closeConnection();
        ______________________________________________________________________
-
-
 
   The application can as well still need to connect to another server on
   another computer for instance, by calling brlapi_openConnection()
@@ -1020,8 +985,6 @@
        }
        ______________________________________________________________________
 
-
-
   This should compile well thanks to gcc apiclient.c -o apiclient
   -lbrlapi
 
@@ -1080,8 +1043,6 @@
 
       static int brl_readCommand(BrailleDisplay *brl, DriverCommandContext context) { ... }
 
-
-
   Before giving a detailed description of what each function is supposed
   to do, we define the BrailleDisplay structure, since each function has
   an argument of type BrailleDisplay *. The BrailleDisplay structure is
@@ -1105,8 +1066,6 @@
         void (*bufferResized)(int rows, int columns);
 
       } BrailleDisplay;
-
-
 
   We now describe each function's semantics and calling convention.
 
@@ -1224,16 +1183,12 @@
 
   #define BRL_HAVE_PACKET_IO
 
-
-
   The prototypes of the functions the driver should define are:
 
 
   static int brl_writePacket(BrailleDisplay *brl, const unsigned char *packet, int size);
   static int brl_readPacket(BrailleDisplay *brl, unsigned char *p, int size);
   static void brl_rescue(BrailleDisplay *brl)
-
-
 
   brl_writePacket() sends a packet of size bytes, stored at packet, to
   the braille terminal. If the communication protocol allows to

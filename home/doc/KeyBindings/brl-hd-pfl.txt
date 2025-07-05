@@ -64,7 +64,8 @@ Clipboard Functions
 * append to clipboard from character: B3+RoutingKey
 * linear copy to character: B8+RoutingKey
 * rectangular copy to character: B6+RoutingKey
-* insert clipboard text after screen cursor: B5+K1
+* insert the clipboard content before the screen cursor: B5+K1
+* insert the clipboard content before the screen cursor using the alternate paste mode: long B5+K1
 * search backward for clipboard text: B2+B3+B7
 * search forward for clipboard text: B5+B6+B8
 * save clipboard to disk: B8+K3

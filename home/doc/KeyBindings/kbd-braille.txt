@@ -44,9 +44,12 @@ Clipboard Functions
 * linear copy to character: ArrowRight+RoutingKey
 * rectangular copy to character: ArrowDown+RoutingKey
 * copy characters to clipboard: RoutingKey+RoutingKey
-* insert clipboard text after screen cursor:
+* insert the clipboard content before the screen cursor:
   + Backward+Forward
   + Dot0+Dots1346
+* insert the clipboard content before the screen cursor using the alternate paste mode:
+  + long Backward+Forward
+  + long Dot0+Dots1346
 * save clipboard to disk: Dot0+Dots13468
 * restore clipboard from disk: Dot0+Dots13467
 

@@ -192,10 +192,14 @@ Clipboard Functions
 * append characters to clipboard:
   + Display2+RoutingKey+RoutingKey
   + Space+RoutingKey+RoutingKey
-* insert clipboard text after screen cursor:
+* insert the clipboard content before the screen cursor:
   + Left+Right
   + Display1+Display2+Display3+Display4
   + Space+Dots1346
+* insert the clipboard content before the screen cursor using the alternate paste mode:
+  + long Left+Right
+  + long Display1+Display2+Display3+Display4
+  + long Space+Dots1346
 * search backward for clipboard text:
   + S4+Left
   + Dots56+Up
