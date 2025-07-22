@@ -7,16 +7,12 @@
 
    $query = get_query();
    if (!isset($query["language"])) {
-      http_response_code(404);
-      echo("Language not specified.\n");
-      die();
+      document_not_found("language not specified");
    }
    $languageCode = $query["language"];
 
    if (!isset($android_languages[$languageCode])) {
-      http_response_code(404);
-      echo("`$languageCode' is an unsupported language code.\n");
-      die();
+      document_not_found("unsupported language code `$languageCode'");
    }
    $languageName = $android_languages[$languageCode];
 

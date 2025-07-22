@@ -1,4 +1,10 @@
 <?php
+   function document_not_found ($message) {
+      http_response_code(404);
+      echo("$message\n");
+      die();
+   }
+
    function get_query () {
       $string = $_SERVER["QUERY_STRING"];
       parse_str($string, $parameters);
