@@ -2,9 +2,23 @@
    require "brltty.php";
    require "brltty-files.php";
 
+   require "android-languages.php";
+   global $android_languages;
+
    $query = get_query();
-   $languageName = $query["language"];
-   $languageCode = $query["code"];
+   if (!isset($query["language"])) {
+      http_response_code(404);
+      echo("Language not specified.\n");
+      die();
+   }
+   $languageCode = $query["language"];
+
+   if (!isset($android_languages[$languageCode])) {
+      http_response_code(404);
+      echo("`$languageCode' is an unsupported language code.\n");
+      die();
+   }
+   $languageName = $android_languages[$languageCode];
 
    $title = "Android Translations for the $languageName Language";
    $brltty = new brltty_document($title);
