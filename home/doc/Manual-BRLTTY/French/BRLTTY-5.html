@@ -2,201 +2,201 @@
 <HTML>
 <HEAD>
  <META NAME="GENERATOR" CONTENT="LinuxDoc-Tools 0.9.82">
- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
- <TITLE>Manuel de référence de BRLTTY: Description des possibilités</TITLE>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <TITLE>Manuel de rÃ©fÃ©rence de BRLTTY: Description des possibilitÃ©s</TITLE>
  <LINK HREF="BRLTTY-6.html" REL=next>
  <LINK HREF="BRLTTY-4.html" REL=previous>
  <LINK HREF="BRLTTY.html#toc5" REL=contents>
 </HEAD>
 <BODY>
 <A HREF="BRLTTY-6.html">Page suivante</A>
-<A HREF="BRLTTY-4.html">Page précédente</A>
-<A HREF="BRLTTY.html#toc5">Table des matières</A>
+<A HREF="BRLTTY-4.html">Page prÃ©cÃ©dente</A>
+<A HREF="BRLTTY.html#toc5">Table des matiÃ¨res</A>
 <HR>
-<H2><A NAME="s5">5.</A> <A HREF="BRLTTY.html#toc5">Description des possibilités</A></H2>
+<H2><A NAME="s5">5.</A> <A HREF="BRLTTY.html#toc5">Description des possibilitÃ©s</A></H2>
 
 
 
 <H2><A NAME="routing"></A> <A NAME="ss5.1">5.1</A> <A HREF="BRLTTY.html#toc5.1">Routine curseur</A>
 </H2>
 
-<P>Lorsque vous déplacez la plage braille sur l'écran en examinant le texte dans 
-un éditeur, vous avez souvent besoin d'amener le curseur à un caractère en 
-particulier à l'intérieur de la plage braille.
-Vous trouverez que c'est une tâche plutôt difficile pour un certain nombre de
-raisons. L'une d'entre elles est qu'il se peut que vous ne sachiez pas où se
-trouve le curseur, et vous avez peut-être perdu votre position en essayant de le
+<P>Lorsque vous dÃ©placez la plage braille sur l'Ã©cran en examinant le texte dans 
+un Ã©diteur, vous avez souvent besoin d'amener le curseur Ã  un caractÃ¨re en 
+particulier Ã  l'intÃ©rieur de la plage braille.
+Vous trouverez que c'est une tÃ¢che plutÃ´t difficile pour un certain nombre de
+raisons. L'une d'entre elles est qu'il se peut que vous ne sachiez pas oÃ¹ se
+trouve le curseur, et vous avez peut-Ãªtre perdu votre position en essayant de le
 trouver. 
-Une autre est que le curseur peut se déplacer de façon imprévisible lorsque
-vous appuyez sur les flèches de direction (certains éditeurs, par exemple,
-n'autorisent pas le curseur à aller plus à droite que la fin de la ligne où il
+Une autre est que le curseur peut se dÃ©placer de faÃ§on imprÃ©visible lorsque
+vous appuyez sur les flÃ¨ches de direction (certains Ã©diteurs, par exemple,
+n'autorisent pas le curseur Ã  aller plus Ã  droite que la fin de la ligne oÃ¹ il
 se trouve).
-La routine-curseur fournit cette possibilité en sachant où se trouve le curseur,
-en simulant les appuis sur les flèches de direction que vous devriez
-entrer manuellement, et en affichant l'évolution du curseur pendant qu'il se
-déplace.</P>
-<P>Certains afficheurs braille ont un bouton, appelé routine-curseur, au-dessus de
+La routine-curseur fournit cette possibilitÃ© en sachant oÃ¹ se trouve le curseur,
+en simulant les appuis sur les flÃ¨ches de direction que vous devriez
+entrer manuellement, et en affichant l'Ã©volution du curseur pendant qu'il se
+dÃ©place.</P>
+<P>Certains afficheurs braille ont un bouton, appelÃ© routine-curseur, au-dessus de
 chaque cellule. Ces touches utilisent la commande
-<A HREF="BRLTTY-4.html#command-ROUTE">ROUTE</A> pour amener le curseur précisément à 
-l'emplacement désiré.</P>
-<P>La routine-curseur, bien que très pratique et très efficace, n'est pas,
-à proprement parler, totalement fiable. Une des raisons de cela est que sa
-conception actuelle utilise des séquences d'échappement de touches du curseur
+<A HREF="BRLTTY-4.html#command-ROUTE">ROUTE</A> pour amener le curseur prÃ©cisÃ©ment Ã  
+l'emplacement dÃ©sirÃ©.</P>
+<P>La routine-curseur, bien que trÃ¨s pratique et trÃ¨s efficace, n'est pas,
+Ã  proprement parler, totalement fiable. Une des raisons de cela est que sa
+conception actuelle utilise des sÃ©quences d'Ã©chappement de touches du curseur
 VT100.</P>
 <P>Une autre est que certaines applications font des choses non standards pour
-réagir lorsqu'elles détectent l'appui sur les touches du curseur.
-Un problème mineur trouvé à l'intérieur de certains éditeurs (comme <CODE>vi</CODE>),
-comme mentionné ci-dessus, est qu'ils se précipitent dans un déplacement
-vertical imprévisible lorsque vous demandez un déplacement vertical, car elles
-n'autorisent pas le curseur à se placer à droite de la fin d'une ligne.
-Un problème majeur trouvé dans certains navigateurs web (comme
-<CODE>lynx</CODE>), est que les flèches haut et bas sont utilisées pour se déplacer
-parmi les liens (ce qui peut sauter des lignes et/ou déplacer horizontalement
-le curseur mais rarement déplacer le curseur d'une ligne dans la direction
-désirée), et que les flèches gauche et droite sont utilisées pour sélectionner
-les liens (ce qui n'a absolument rien à voir avec une quelconque forme de
-déplacement de curseur, et qui change même totalement le contenu de l'écran).</P>
-<P>Il se peut que la routine curseur ne fonctionne pas très bien sur les systèmes
-lourds à se charger, et elle ne fonctionnera certainement pas très bien
-lorsqu'elle tournera sous un vieux système ayant des liaisons lentes. Il en est
-ainsi car tous les tests qui doivent être faits pendant le processus de façon à
-traiter les mouvements imprévisibles du curseur et afin de s'assurer
-qu'une erreur a au moins une chance d'être corrigée.
-Bien que BRLTTY s'efforce d'être assez intelligent, il doit attendre encore
-de voir ce qu'il se passe après chaque appui simulé sur une flèche de direction. </P>
-<P>Une fois qu'une demande de routine-curseur a été faite, BRLTTY essaie d'amener
-le curseur à la position désirée durant un certain délai avant
-que le curseur n'atteigne cette position, le curseur semblant se déplacer dans la
-mauvaise direction, ou vous passez à un terminal différent.
-En premier, un effort est fait pour utiliser le déplacement vertical pour
-amener le curseur à la bonne ligne, puis, uniquement si cela réussit, un effort
-est fait pour utiliser le déplacement horizontal pour amener le curseur à la
+rÃ©agir lorsqu'elles dÃ©tectent l'appui sur les touches du curseur.
+Un problÃ¨me mineur trouvÃ© Ã  l'intÃ©rieur de certains Ã©diteurs (comme <CODE>vi</CODE>),
+comme mentionnÃ© ci-dessus, est qu'ils se prÃ©cipitent dans un dÃ©placement
+vertical imprÃ©visible lorsque vous demandez un dÃ©placement vertical, car elles
+n'autorisent pas le curseur Ã  se placer Ã  droite de la fin d'une ligne.
+Un problÃ¨me majeur trouvÃ© dans certains navigateurs web (comme
+<CODE>lynx</CODE>), est que les flÃ¨ches haut et bas sont utilisÃ©es pour se dÃ©placer
+parmi les liens (ce qui peut sauter des lignes et/ou dÃ©placer horizontalement
+le curseur mais rarement dÃ©placer le curseur d'une ligne dans la direction
+dÃ©sirÃ©e), et que les flÃ¨ches gauche et droite sont utilisÃ©es pour sÃ©lectionner
+les liens (ce qui n'a absolument rien Ã  voir avec une quelconque forme de
+dÃ©placement de curseur, et qui change mÃªme totalement le contenu de l'Ã©cran).</P>
+<P>Il se peut que la routine curseur ne fonctionne pas trÃ¨s bien sur les systÃ¨mes
+lourds Ã  se charger, et elle ne fonctionnera certainement pas trÃ¨s bien
+lorsqu'elle tournera sous un vieux systÃ¨me ayant des liaisons lentes. Il en est
+ainsi car tous les tests qui doivent Ãªtre faits pendant le processus de faÃ§on Ã 
+traiter les mouvements imprÃ©visibles du curseur et afin de s'assurer
+qu'une erreur a au moins une chance d'Ãªtre corrigÃ©e.
+Bien que BRLTTY s'efforce d'Ãªtre assez intelligent, il doit attendre encore
+de voir ce qu'il se passe aprÃ¨s chaque appui simulÃ© sur une flÃ¨che de direction. </P>
+<P>Une fois qu'une demande de routine-curseur a Ã©tÃ© faite, BRLTTY essaie d'amener
+le curseur Ã  la position dÃ©sirÃ©e durant un certain dÃ©lai avant
+que le curseur n'atteigne cette position, le curseur semblant se dÃ©placer dans la
+mauvaise direction, ou vous passez Ã  un terminal diffÃ©rent.
+En premier, un effort est fait pour utiliser le dÃ©placement vertical pour
+amener le curseur Ã  la bonne ligne, puis, uniquement si cela rÃ©ussit, un effort
+est fait pour utiliser le dÃ©placement horizontal pour amener le curseur Ã  la
 bonne colonne. Si vous faites une autre demande alors qu'une routine est en train de
-s'effectuer, la première est annulée et la deuxième est démarrée. </P>
-<P>Une commande de routine curseur plus sûre mais moins puissante, 
-<A HREF="BRLTTY-4.html#command-CSRJMP_VERT">CSRJMP_VERT</A>, utilise le déplacement
-vertical pour amener le curseur n'importe où sur la première ligne de la
-plage braille. Elle est surtout utile, jointe à certaines applications
-(comme <CODE>lynx</CODE>), dans lesquelles le déplacement du curseur à l'horizontal
-ne doit jamais être tenté.</P>
+s'effectuer, la premiÃ¨re est annulÃ©e et la deuxiÃ¨me est dÃ©marrÃ©e. </P>
+<P>Une commande de routine curseur plus sÃ»re mais moins puissante, 
+<A HREF="BRLTTY-4.html#command-CSRJMP_VERT">CSRJMP_VERT</A>, utilise le dÃ©placement
+vertical pour amener le curseur n'importe oÃ¹ sur la premiÃ¨re ligne de la
+plage braille. Elle est surtout utile, jointe Ã  certaines applications
+(comme <CODE>lynx</CODE>), dans lesquelles le dÃ©placement du curseur Ã  l'horizontal
+ne doit jamais Ãªtre tentÃ©.</P>
 
 <H2><A NAME="cut"></A> <A NAME="ss5.2">5.2</A> <A HREF="BRLTTY.html#toc5.2">Copier-coller</A>
 </H2>
 
-<P>Cette possibilité vous permet d'extraire un texte qui est déjà sur l'écran
-et de le réentrer à la position courante du curseur. Son utilisation vous fait
-gagner du temps et permet d'éviter les erreurs lorsque vous avez besoin de copier un
-texte long et/ou compliqué, et même quand vous avez besoin de copier plusieurs
-fois le même texte court et simple. Elle est particulièrement utile pour des
-choses telles que les noms de fichier longs, les lignes de commande compliquées,
+<P>Cette possibilitÃ© vous permet d'extraire un texte qui est dÃ©jÃ  sur l'Ã©cran
+et de le rÃ©entrer Ã  la position courante du curseur. Son utilisation vous fait
+gagner du temps et permet d'Ã©viter les erreurs lorsque vous avez besoin de copier un
+texte long et/ou compliquÃ©, et mÃªme quand vous avez besoin de copier plusieurs
+fois le mÃªme texte court et simple. Elle est particuliÃ¨rement utile pour des
+choses telles que les noms de fichier longs, les lignes de commande compliquÃ©es,
 les adresses mail, et les URLS. Copier et coller du texte passe par trois
-étapes simples:
+Ã©tapes simples:
 <OL>
-<LI>Marquer le coin en haut à gauche de la zone rectangulaire ou le début de la
-zone linéaire sur l'écran, qui sera extraite (copiée). Si votre afficheur a
-des routines-curseur, déplacez la plage braille de façon à ce que le
-premier caractère à copier apparaisse quelque part à l'intérieur, puis:
+<LI>Marquer le coin en haut Ã  gauche de la zone rectangulaire ou le dÃ©but de la
+zone linÃ©aire sur l'Ã©cran, qui sera extraite (copiÃ©e). Si votre afficheur a
+des routines-curseur, dÃ©placez la plage braille de faÃ§on Ã  ce que le
+premier caractÃ¨re Ã  copier apparaisse quelque part Ã  l'intÃ©rieur, puis:
 <UL>
 <LI>appelez la commande 
 <A HREF="BRLTTY-4.html#command-CUTBEGIN">CUTBEGIN</A> pour
-démarrer un nouveau tampon</LI>
+dÃ©marrer un nouveau tampon</LI>
 <LI>appelez la commande 
 <A HREF="BRLTTY-4.html#command-CUTAPPEND">CUTAPPEND</A> pour
-marquer le tampon copié existant.</LI>
+marquer le tampon copiÃ© existant.</LI>
 </UL>
 
-en pressant la/les touche(s) qui y sont associée(s), puis en appuyant sur la
-routine-curseur associée au caractère</LI>
-<LI>Marquer le coin en bas à droite de la zone rectangulaire ou la fin de
-la zone linéaire sur l'écran qui doit être extraite (copiée).
-Si votre afficheur a des routines-curseur, déplacez la plage braille
-de telle sorte que le dernier caractère à copier apparaisse quelque part
-à l'intérieur, puis
+en pressant la/les touche(s) qui y sont associÃ©e(s), puis en appuyant sur la
+routine-curseur associÃ©e au caractÃ¨re</LI>
+<LI>Marquer le coin en bas Ã  droite de la zone rectangulaire ou la fin de
+la zone linÃ©aire sur l'Ã©cran qui doit Ãªtre extraite (copiÃ©e).
+Si votre afficheur a des routines-curseur, dÃ©placez la plage braille
+de telle sorte que le dernier caractÃ¨re Ã  copier apparaisse quelque part
+Ã  l'intÃ©rieur, puis
 <UL>
 <LI>appelez la commande 
 <A HREF="BRLTTY-4.html#command-CUTRECT">CUTRECT</A> pour
 copier une zone rectangulaire.</LI>
 <LI>appelez la commande 
 <A HREF="BRLTTY-4.html#command-CUTLINE">CUTLINE</A> pour
-copier une zone linéaire.</LI>
+copier une zone linÃ©aire.</LI>
 </UL>
 
-en pressant les/la touche(s) associée(s) puis en pressant la routine-curseur
-associée au caractère. Le marquage
-de la fin de la région copiée dépose le contenu d'un écran copié dans le
+en pressant les/la touche(s) associÃ©e(s) puis en pressant la routine-curseur
+associÃ©e au caractÃ¨re. Le marquage
+de la fin de la rÃ©gion copiÃ©e dÃ©pose le contenu d'un Ã©cran copiÃ© dans le
 presse-papier.
-Les espaces superflus sont supprimés en fin de chaque ligne dans le
-presse-papier de façon à ce que les espaces non désirés qui en découlent ne
-soient pas collés.
-Les caractères de contrôle sont remplacés par des espaces.</LI>
-<LI>Insérez (coller) le texte là où vous avez besoin. Placez le curseur après le
-caractère où le texte doit être inséré, et appelez la commande
-<A HREF="BRLTTY-4.html#command-PASTE">PASTE</A>. Vous pouvez copier le même texte
-autant de fois que vous le voulez sans le copier à nouveau.
-Cette description suppose que vous êtes déjà dans un mode d'entrée. Si vous
-collez alors que vous êtes dans un autre type de mode (comme le
-mode commande de <CODE>vi</CODE>), vous devez alors bien être conscient de ce que
-les caractères du presse-papier pourront faire.</LI>
+Les espaces superflus sont supprimÃ©s en fin de chaque ligne dans le
+presse-papier de faÃ§on Ã  ce que les espaces non dÃ©sirÃ©s qui en dÃ©coulent ne
+soient pas collÃ©s.
+Les caractÃ¨res de contrÃ´le sont remplacÃ©s par des espaces.</LI>
+<LI>InsÃ©rez (coller) le texte lÃ  oÃ¹ vous avez besoin. Placez le curseur aprÃ¨s le
+caractÃ¨re oÃ¹ le texte doit Ãªtre insÃ©rÃ©, et appelez la commande
+<A HREF="BRLTTY-4.html#command-PASTE">PASTE</A>. Vous pouvez copier le mÃªme texte
+autant de fois que vous le voulez sans le copier Ã  nouveau.
+Cette description suppose que vous Ãªtes dÃ©jÃ  dans un mode d'entrÃ©e. Si vous
+collez alors que vous Ãªtes dans un autre type de mode (comme le
+mode commande de <CODE>vi</CODE>), vous devez alors bien Ãªtre conscient de ce que
+les caractÃ¨res du presse-papier pourront faire.</LI>
 </OL>
 </P>
-<P>Le tampon copié est utilisé aussi par les commandes
+<P>Le tampon copiÃ© est utilisÃ© aussi par les commandes
 <A HREF="BRLTTY-4.html#command-PRSEARCH-NXSEARCH">PRSEARCH/NXSEARCH</A>.</P>
 
 <H2><A NAME="gpm"></A> <A NAME="ss5.3">5.3</A> <A HREF="BRLTTY.html#toc5.3">Support du pointeur (souris) via GPM</A>
 </H2>
 
-<P>Si BRLTTY est configuré avec l'option de compilation
-<A HREF="#gpm">--enable-gpm</A> sur un système où l'application
-<CODE>gpm</CODE> a été installée, il réagira au pointeur (souris).</P>
-<P>Le fait de bouger la plage braille déplace le pointeur (voir la préférence
-<A HREF="#preference-pointer-follows-window">Le pointeur suit la fenêtre</A>).
-Le déplacement de la plage braille (manuel, par recherche du curseur etc.),
-est appliqué non seulement quand il se déplace en réponse à un mouvement du pointeur, mais il
-déplace aussi le pointeur au caractère à l'écran qui correspond au coin en haut à
-gauche de la plage braille. Cela permet à une personne voyante de voir où se
+<P>Si BRLTTY est configurÃ© avec l'option de compilation
+<A HREF="#gpm">--enable-gpm</A> sur un systÃ¨me oÃ¹ l'application
+<CODE>gpm</CODE> a Ã©tÃ© installÃ©e, il rÃ©agira au pointeur (souris).</P>
+<P>Le fait de bouger la plage braille dÃ©place le pointeur (voir la prÃ©fÃ©rence
+<A HREF="#preference-pointer-follows-window">Le pointeur suit la fenÃªtre</A>).
+Le dÃ©placement de la plage braille (manuel, par recherche du curseur etc.),
+est appliquÃ© non seulement quand il se dÃ©place en rÃ©ponse Ã  un mouvement du pointeur, mais il
+dÃ©place aussi le pointeur au caractÃ¨re Ã  l'Ã©cran qui correspond au coin en haut Ã 
+gauche de la plage braille. Cela permet Ã  une personne voyante de voir oÃ¹ se
 trouve la plage braille et donc, de savoir ce que l'utilisateur brailliste
-est en train de lire. Cela récupère aussi le pointeur dans la plage
+est en train de lire. Cela rÃ©cupÃ¨re aussi le pointeur dans la plage
 braille de sorte que vous pouvez le
-trouver facilement et que le périphérique du pointeur peut toujours être
-utilisé comme un autre moyen de déplacer la plage braille. </P>
-<P>Le déplacement du pointeur emmène la plage braille (voir la préférence
-<A HREF="#preference-window-follows-pointer">La fenêtre suit le pointeur</A>).
-Chaque fois que vous déplacez le pointeur au-delà du bord de la plage
-braille, la plage braille est emmenée tout au long du déplacement (un
-caractère à la fois).
-Cela donne à l'utilisateur braille une autre manière en deux dimensions
-d'inspecter le contenu de l'écran ou de déplacer rapidement la plage braille
-à un endroit désiré. Cela donne aussi à l'utilisateur voyant une façon
-simple de déplacer la plage braille sur quelque chose qu'il aimerait que
+trouver facilement et que le pÃ©riphÃ©rique du pointeur peut toujours Ãªtre
+utilisÃ© comme un autre moyen de dÃ©placer la plage braille. </P>
+<P>Le dÃ©placement du pointeur emmÃ¨ne la plage braille (voir la prÃ©fÃ©rence
+<A HREF="#preference-window-follows-pointer">La fenÃªtre suit le pointeur</A>).
+Chaque fois que vous dÃ©placez le pointeur au-delÃ  du bord de la plage
+braille, la plage braille est emmenÃ©e tout au long du dÃ©placement (un
+caractÃ¨re Ã  la fois).
+Cela donne Ã  l'utilisateur braille une autre maniÃ¨re en deux dimensions
+d'inspecter le contenu de l'Ã©cran ou de dÃ©placer rapidement la plage braille
+Ã  un endroit dÃ©sirÃ©. Cela donne aussi Ã  l'utilisateur voyant une faÃ§on
+simple de dÃ©placer la plage braille sur quelque chose qu'il aimerait que
 l'utilisateur brailliste lise.</P>
-<P><CODE>gpm</CODE> utilise la vidéo inversée pour montrer où se trouve le pointeur.
-Le soulignement des caractères en surbrillance devrait donc être activé (voir
+<P><CODE>gpm</CODE> utilise la vidÃ©o inversÃ©e pour montrer oÃ¹ se trouve le pointeur.
+Le soulignement des caractÃ¨res en surbrillance devrait donc Ãªtre activÃ© (voir
 la commande 
-<A HREF="BRLTTY-4.html#command-ATTRVIS">ATTRVIS</A> pour des  détails) que 
+<A HREF="BRLTTY-4.html#command-ATTRVIS">ATTRVIS</A> pour des  dÃ©tails) que 
 quand l'utilisateur brailliste veut utiliser le pointeur.</P>
-<P>Cette fonctionnalité donne aussi à l'utilisateur brailliste accès à la
+<P>Cette fonctionnalitÃ© donne aussi Ã  l'utilisateur brailliste accÃ¨s Ã  la
 fonction copier-coller de <CODE>gpm</CODE>. Bien que vous devriez lire la documentation
-spécifique de <CODE>gpm</CODE>, voici quelques remarques sur son fonctionnement.
+spÃ©cifique de <CODE>gpm</CODE>, voici quelques remarques sur son fonctionnement.
 <UL>
-<LI>Copiez le caractère courant dans le presse-papier par un simple clic sur le
+<LI>Copiez le caractÃ¨re courant dans le presse-papier par un simple clic sur le
 bouton gauche.</LI>
-<LI>Copiez le mot courant (délimité par un espace) dans le presse-papier en
+<LI>Copiez le mot courant (dÃ©limitÃ© par un espace) dans le presse-papier en
 cliquant deux fois sur le bouton gauche.</LI>
 <LI>Copiez la ligne courante dans le presse papier en cliquant trois fois sur
 le bouton gauche.</LI>
-<LI>Copiez une région linéaire vers le presse-papier comme suit:
+<LI>Copiez une rÃ©gion linÃ©aire vers le presse-papier comme suit:
 <OL>
-<LI>Placez le curseur sur le premier caractère de la région.</LI>
+<LI>Placez le curseur sur le premier caractÃ¨re de la rÃ©gion.</LI>
 <LI>Pressez (et maintenez) le bouton gauche.</LI>
-<LI>Déplacez le curseur au dernier caractère de la région (tous les
-caractères sélectionnés sont maintenant en surbrillance).</LI>
-<LI>Lâchez le bouton gauche.</LI>
+<LI>DÃ©placez le curseur au dernier caractÃ¨re de la rÃ©gion (tous les
+caractÃ¨res sÃ©lectionnÃ©s sont maintenant en surbrillance).</LI>
+<LI>LÃ¢chez le bouton gauche.</LI>
 </OL>
 </LI>
-<LI>Collez (insérez) le contenu courant du presse papier en cliquant sur le
-bouton central d'une souris à trois boutons, ou en cliquant sur le bouton
-droit d'une souris à deux boutons.</LI>
-<LI>Marquez le presse-papier en utilisant le bouton droit d'une souris à trois
+<LI>Collez (insÃ©rez) le contenu courant du presse papier en cliquant sur le
+bouton central d'une souris Ã  trois boutons, ou en cliquant sur le bouton
+droit d'une souris Ã  deux boutons.</LI>
+<LI>Marquez le presse-papier en utilisant le bouton droit d'une souris Ã  trois
 boutons.</LI>
 </UL>
 </P>
@@ -204,245 +204,245 @@ boutons.</LI>
 <H2><A NAME="tunes"></A> <A NAME="ss5.4">5.4</A> <A HREF="BRLTTY.html#toc5.4">Sons d'avertissement</A>
 </H2>
 
-<P>BRLTTY vous avertit de l'exécution d'événements significatifs en jouant un son
-bref prédéfini. Cette fonctionalité peut être activée et désactivée avec la
+<P>BRLTTY vous avertit de l'exÃ©cution d'Ã©vÃ©nements significatifs en jouant un son
+bref prÃ©dÃ©fini. Cette fonctionalitÃ© peut Ãªtre activÃ©e et dÃ©sactivÃ©e avec la
 commande
-<A HREF="BRLTTY-4.html#command-TUNES">TUNES</A> ou la préférence
+<A HREF="BRLTTY-4.html#command-TUNES">TUNES</A> ou la prÃ©fÃ©rence
 <A HREF="#preference-alert-tunes">Sons d'avertissement</A>.
-Les sons sont joués par le synthétiseur interne par défaut, mais vous pouvez
-sélectionner d'autres alternatives avec la préférence
-<A HREF="#preference-tune-device">Périphérique pour les sons</A>.</P>
-<P>Chaque événement significatif est associé, de la priorité la plus haute à la
-plus faible, à un ou plusieurs des éléments suivants:
+Les sons sont jouÃ©s par le synthÃ©tiseur interne par dÃ©faut, mais vous pouvez
+sÃ©lectionner d'autres alternatives avec la prÃ©fÃ©rence
+<A HREF="#preference-tune-device">PÃ©riphÃ©rique pour les sons</A>.</P>
+<P>Chaque Ã©vÃ©nement significatif est associÃ©, de la prioritÃ© la plus haute Ã  la
+plus faible, Ã  un ou plusieurs des Ã©lÃ©ments suivants:
 <DL>
 <DT><B>un son</B><DD>
-<P>Si vous avez associé un nom à l'événement, si la préférence
+<P>Si vous avez associÃ© un nom Ã  l'Ã©vÃ©nement, si la prÃ©fÃ©rence
 <A HREF="#preference-alert-tunes">Sons d'avertissement</A> (voir aussi la
 commande 
 <A HREF="BRLTTY-4.html#command-TUNES">TUNES</A>) est active, et si le
-périphérique de son sélectionné (voir la préférence 
-<A HREF="#preference-tune-device">Périphérique de son</A>)
-peut être ouvert, le son est joué.</P>
-<DT><B>un schéma de points</B><DD>
-<P>Si un type de signe a été associé à un événement, et si la préférence
+pÃ©riphÃ©rique de son sÃ©lectionnÃ© (voir la prÃ©fÃ©rence 
+<A HREF="#preference-tune-device">PÃ©riphÃ©rique de son</A>)
+peut Ãªtre ouvert, le son est jouÃ©.</P>
+<DT><B>un schÃ©ma de points</B><DD>
+<P>Si un type de signe a Ã©tÃ© associÃ© Ã  un Ã©vÃ©nement, et si la prÃ©fÃ©rence
 <A HREF="#preference-alert-dots">Points d'avertissement</A> est active, le signe
-est brièvement affiché sur chaque cellule braille.
-Certains afficheurs braille ne réagissent pas assez vite pour que ce
-système fonctionne efficacement.</P>
+est briÃ¨vement affichÃ© sur chaque cellule braille.
+Certains afficheurs braille ne rÃ©agissent pas assez vite pour que ce
+systÃ¨me fonctionne efficacement.</P>
 <DT><B>un message</B><DD>
-<P>Si un message a été associé à l'événement, et si la préférence
+<P>Si un message a Ã©tÃ© associÃ© Ã  l'Ã©vÃ©nement, et si la prÃ©fÃ©rence
 <A HREF="#preference-alert-messages">Messages d'avertissement</A> est active,
-il est affiché pendant quelques secondes (voir l'option 
+il est affichÃ© pendant quelques secondes (voir l'option 
 <A HREF="BRLTTY-4.html#options-message-timeout">-M</A>
 en ligne de commande.</P>
 </DL>
 </P>
-<P>Ces événements incluent:
+<P>Ces Ã©vÃ©nements incluent:
 <UL>
-<LI>Le moment où le pilote de l'afficheur braille démarre ou s'arrête.</LI>
-<LI>Le moment où une commande longue est terminée.</LI>
-<LI>Le moment où une commande peut être exécutée.</LI>
-<LI>Le moment où un repère est posé.</LI>
-<LI>Le moment où le début ou la fin du presse-papier est posé.</LI>
-<LI>Le moment où une caractéristique est activée ou désactivée.</LI>
-<LI>Le moment où la poursuite du curseur est activé ou désactivé.</LI>
-<LI>Le moment où l'image de l'écran est gelée ou rafraîchie.</LI>
-<LI>Le moment où la plage braille entraîne la plage braille en bas au début de la
-ligne suivante, ou en haut à la fin de la ligne précédente.</LI>
-<LI>Le moment où des lignes identiques sont sautées.</LI>
-<LI>Le moment où un déplacement demandé ne peut pas être effectué.</LI>
-<LI>Le moment où la routine-curseur commence, s'achève ou échoue.</LI>
+<LI>Le moment oÃ¹ le pilote de l'afficheur braille dÃ©marre ou s'arrÃªte.</LI>
+<LI>Le moment oÃ¹ une commande longue est terminÃ©e.</LI>
+<LI>Le moment oÃ¹ une commande peut Ãªtre exÃ©cutÃ©e.</LI>
+<LI>Le moment oÃ¹ un repÃ¨re est posÃ©.</LI>
+<LI>Le moment oÃ¹ le dÃ©but ou la fin du presse-papier est posÃ©.</LI>
+<LI>Le moment oÃ¹ une caractÃ©ristique est activÃ©e ou dÃ©sactivÃ©e.</LI>
+<LI>Le moment oÃ¹ la poursuite du curseur est activÃ© ou dÃ©sactivÃ©.</LI>
+<LI>Le moment oÃ¹ l'image de l'Ã©cran est gelÃ©e ou rafraÃ®chie.</LI>
+<LI>Le moment oÃ¹ la plage braille entraÃ®ne la plage braille en bas au dÃ©but de la
+ligne suivante, ou en haut Ã  la fin de la ligne prÃ©cÃ©dente.</LI>
+<LI>Le moment oÃ¹ des lignes identiques sont sautÃ©es.</LI>
+<LI>Le moment oÃ¹ un dÃ©placement demandÃ© ne peut pas Ãªtre effectuÃ©.</LI>
+<LI>Le moment oÃ¹ la routine-curseur commence, s'achÃ¨ve ou Ã©choue.</LI>
 </UL>
 </P>
 
-<H2><A NAME="preferences"></A> <A NAME="ss5.5">5.5</A> <A HREF="BRLTTY.html#toc5.5">Paramètres de préférence</A>
+<H2><A NAME="preferences"></A> <A NAME="ss5.5">5.5</A> <A HREF="BRLTTY.html#toc5.5">ParamÃ¨tres de prÃ©fÃ©rence</A>
 </H2>
 
-<P>Quand BRLTTY démarre, il charge un fichier qui contient vos paramètres de
-préférence. Il n'est pas indispensable que le fichier existe, et il est créé la
-première fois que les paramètres sont sauvegardés avec la commande
+<P>Quand BRLTTY dÃ©marre, il charge un fichier qui contient vos paramÃ¨tres de
+prÃ©fÃ©rence. Il n'est pas indispensable que le fichier existe, et il est crÃ©Ã© la
+premiÃ¨re fois que les paramÃ¨tres sont sauvegardÃ©s avec la commande
 <A HREF="BRLTTY-4.html#command-PREFSAVE">PREFSAVE</A>.
-Les paramètres sauvegardés le plus récemment peuvent être restaurés n'importe
+Les paramÃ¨tres sauvegardÃ©s le plus rÃ©cemment peuvent Ãªtre restaurÃ©s n'importe
 quand par la commande 
 <A HREF="BRLTTY-4.html#command-PREFLOAD">PREFLOAD</A>.</P>
 <P>Le nom de ce fichier est <CODE>/etc/brltty-</CODE><EM>pilote</EM><CODE>.prefs</CODE>.
-où <EM>pilote</EM> correspond aux deux lettres du
+oÃ¹ <EM>pilote</EM> correspond aux deux lettres du
 <A HREF="BRLTTY-10.html#drivers">code d'identification de pilote</A>.</P>
 
-<H3><A NAME="preferences-menu"></A> Le menu préférences</H3>
+<H3><A NAME="preferences-menu"></A> Le menu prÃ©fÃ©rences</H3>
 
-<P>Les paramètres de préférence sont sauvegardés sous forme de données binaires
-que vous ne pouvez donc pas éditer à la main.
-Cependant, BRLTTY a un menu simple à partir duquel vous pouvez facilement les
+<P>Les paramÃ¨tres de prÃ©fÃ©rence sont sauvegardÃ©s sous forme de donnÃ©es binaires
+que vous ne pouvez donc pas Ã©diter Ã  la main.
+Cependant, BRLTTY a un menu simple Ã  partir duquel vous pouvez facilement les
 changer.</P>
-<P>le menu est activé par la commande 
+<P>le menu est activÃ© par la commande 
 <A HREF="BRLTTY-4.html#command-PREFMENU">PREFMENU</A>.
-L'afficheur braille affiche brièvement (voir l'option
+L'afficheur braille affiche briÃ¨vement (voir l'option
 <A HREF="BRLTTY-4.html#options-message-timeout">-M</A> en ligne de commande) le titre du
-menu, puis présente l'item du paramètre actuel.</P>
+menu, puis prÃ©sente l'item du paramÃ¨tre actuel.</P>
 
 <H3>Navigation dans le menu</H3>
 
 <P>Voir 
 <A HREF="BRLTTY-4.html#menu-navigation">Commandes de navigation dans le menu</A> pour la
-liste des commandes qui vous permettent de sélectionner l'élément, et de changer
+liste des commandes qui vous permettent de sÃ©lectionner l'Ã©lÃ©ment, et de changer
 la valeur dans le menu.
-Par souci de compatibilité avec les vieux pilotes, les commandes
-de déplacement dans la fenêtre, qui ont changé de sens dans ce contexte,
-peuvent être aussi utilisées.
+Par souci de compatibilitÃ© avec les vieux pilotes, les commandes
+de dÃ©placement dans la fenÃªtre, qui ont changÃ© de sens dans ce contexte,
+peuvent Ãªtre aussi utilisÃ©es.
 <DL>
-<DT><B><CODE>Début</CODE>/<CODE>Fin</CODE>, <CODE>Haut-Gauche</CODE>/<CODE>Bas-Gauche</CODE>, <CODE>PAGE_PRECEDENTE</CODE>/<CODE>PAGE_SUIVANTE</CODE></B><DD>
-<P>Va au premier/dernier élément du menu (comme 
+<DT><B><CODE>DÃ©but</CODE>/<CODE>Fin</CODE>, <CODE>Haut-Gauche</CODE>/<CODE>Bas-Gauche</CODE>, <CODE>PAGE_PRECEDENTE</CODE>/<CODE>PAGE_SUIVANTE</CODE></B><DD>
+<P>Va au premier/dernier Ã©lÃ©ment du menu (comme 
 <A HREF="BRLTTY-4.html#command-MENU_FIRST_ITEM-MENU_LAST_ITEM">MENU_FIRST_ITEM/MENU_LAST_ITEM</A>).</P>
 <DT><B><CODE>FH</CODE>/<CODE>FB</CODE>, <CODE>LIGNPRECEDENTE</CODE>/<CODE>LNSUIV</CODE>, <CODE>CURSEUR_HAUT</CODE>/<CODE>CURSEUR_BAS</CODE></B><DD>
-<P>Va à l'élément précédent/suivant du menu (comme
+<P>Va Ã  l'Ã©lÃ©ment prÃ©cÃ©dent/suivant du menu (comme
 <A HREF="BRLTTY-4.html#command-MENU_PREV_ITEM-MENU_NEXT_ITEM">MENU_PREV_ITEM/MENU_NEXT_ITEM</A>).</P>
 <DT><B><CODE>FENETRE_PRECEDENTE</CODE>/<CODE>FENSUIV</CODE>, <CODE>CARGAUCH</CODE>/<CODE>CADROITE</CODE>, <CODE>CURSEUR_GAUCHE</CODE>/<CODE>CURSEUR_DROITE</CODE>, <CODE>DEBUT</CODE>/<CODE>HOME</CODE></B><DD>
-<P>Déroule ou "enroule" la valeur de l'élément actuel dans le menu (comme
+<P>DÃ©roule ou "enroule" la valeur de l'Ã©lÃ©ment actuel dans le menu (comme
 <A HREF="BRLTTY-4.html#command-MENU_PREV_SETTING-MENU_NEXT_SETTING">MENU_PREV_SETTING/MENU_NEXT_SETTING</A>).</P>
 </DL>
 </P>
 <P>Remarques:
 <UL>
-<LI>Vous pouvez aussi utiliser les routine-curseur pour sélectionner une valeur
-pour l'élément actuel. Si un élément a des valeurs numériques, toute la ligne
-de routines-curseur agit comme une barre de défilement qui couvre toute la
-gamme des valeurs valides. Si un élément a une valeur nominale,
+<LI>Vous pouvez aussi utiliser les routine-curseur pour sÃ©lectionner une valeur
+pour l'Ã©lÃ©ment actuel. Si un Ã©lÃ©ment a des valeurs numÃ©riques, toute la ligne
+de routines-curseur agit comme une barre de dÃ©filement qui couvre toute la
+gamme des valeurs valides. Si un Ã©lÃ©ment a une valeur nominale,
 les routines-curseur correspondent normalement aux valeurs.</LI>
 <LI>Utilisez la commande <CODE>PREFLOAD</CODE> pour annuler tous les changements
-qui ont été faits depuis que vous êtes dans le menu.</LI>
+qui ont Ã©tÃ© faits depuis que vous Ãªtes dans le menu.</LI>
 <LI>Utilisez la commande <CODE>PREFMENU</CODE> (encore) pour donner effet
 aux nouvelles valeurs, sortir du menu et faire des
-opérations normales. De plus, si vous avez sélectionné l'option <CODE>Enregistrer en quittant</CODE>, les
-nouvelles valeurs sont sauvegardées dans le fichier des préférences.
-Toute commande non reconnue par le système du menu fait la même chose.</LI>
+opÃ©rations normales. De plus, si vous avez sÃ©lectionnÃ© l'option <CODE>Enregistrer en quittant</CODE>, les
+nouvelles valeurs sont sauvegardÃ©es dans le fichier des prÃ©fÃ©rences.
+Toute commande non reconnue par le systÃ¨me du menu fait la mÃªme chose.</LI>
 </UL>
 </P>
 
-<H3>Les éléments du menu</H3>
+<H3>Les Ã©lÃ©ments du menu</H3>
 
 <P>
 <DL>
 <DT><B>Enregistrer en quittant
 <A NAME="preference-save-on-exit"></A> </B><DD>
-<P>Lors de la sortie du menu de préférences:
+<P>Lors de la sortie du menu de prÃ©fÃ©rences:
 <DL>
 <DT><B>Non</B><DD>
-<P>Ne sauvegarde pas automatiquement les paramètres de préférence.</P>
+<P>Ne sauvegarde pas automatiquement les paramÃ¨tres de prÃ©fÃ©rence.</P>
 <DT><B>Oui</B><DD>
-<P>Sauvegarde automatiquement les paramètres de préférence.</P>
+<P>Sauvegarde automatiquement les paramÃ¨tres de prÃ©fÃ©rence.</P>
 </DL>
 
-Le paramètre par défaut est <CODE>Non</CODE>.</P>
+Le paramÃ¨tre par dÃ©faut est <CODE>Non</CODE>.</P>
 <DT><B>Apparence du texte
 <A NAME="preference-text-style"></A> </B><DD>
-<P>Lors de l'affichage du contenu de l'écran (voir la commande
-<A HREF="BRLTTY-4.html#command-DISPMD">DISPMD</A>), montre les caractères:
+<P>Lors de l'affichage du contenu de l'Ã©cran (voir la commande
+<A HREF="BRLTTY-4.html#command-DISPMD">DISPMD</A>), montre les caractÃ¨res:
 <DL>
 <DT><B>8 points</B><DD>
 <P>Avec les huit points.</P>
 <DT><B>6 points</B><DD>
 <P>Avec 6 points seulement.
-Si vous avez sélectionné une table de braille abrégé (voir l'option
+Si vous avez sÃ©lectionnÃ© une table de braille abrÃ©gÃ© (voir l'option
 <A HREF="BRLTTY-4.html#options-contraction-table">-c</A> en ligne de commande et
 la ligne 
 <A HREF="BRLTTY-4.html#configure-contraction-table">contraction-table</A>
-du fichier de configuration), elle est utilisée.</P>
+du fichier de configuration), elle est utilisÃ©e.</P>
 </DL>
 
-Vous pouvez aussi changer ce paramètre par la commande
+Vous pouvez aussi changer ce paramÃ¨tre par la commande
 <A HREF="BRLTTY-4.html#command-SIXDOTS">SIXDOTS</A>.</P>
 <DT><B>Passer les lignes identiques
 <A NAME="preference-skip-identical-lines"></A> </B><DD>
-<P>Quand vous vous déplacez de ligne en ligne en haut ou en bas avec les
+<P>Quand vous vous dÃ©placez de ligne en ligne en haut ou en bas avec les
 commandes 
 <A HREF="BRLTTY-4.html#command-LNUP-LNDN">LNUP/LNDN</A>,
-et lors de la fonction de défilement de lignes des commandes 
+et lors de la fonction de dÃ©filement de lignes des commandes 
 <A HREF="BRLTTY-4.html#command-FWINLT-FWINRT">FWINLT/FWINRT</A> et
 <A HREF="BRLTTY-4.html#command-FWINLTSKIP-FWINRTSKIP">FWINLTSKIP/FWINRTSKIP</A>:
 <DL>
 <DT><B>Non</B><DD>
-<P>Ne passe pas les lignes qui ont le même contenu que la ligne actuelle.</P>
+<P>Ne passe pas les lignes qui ont le mÃªme contenu que la ligne actuelle.</P>
 <DT><B>Oui</B><DD>
-<P>Passe les lignes déjà vues qui ont le même contenu que la ligne actuelle.</P>
+<P>Passe les lignes dÃ©jÃ  vues qui ont le mÃªme contenu que la ligne actuelle.</P>
 </DL>
 
-Vous pouvez aussi changer ce paramètre avec la commande
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-SKPIDLNS">SKPIDLNS</A>.</P>
 <DT><B>Passer les lignes vierges
 <A NAME="preference-skip-blank-windows"></A> </B><DD>
-<P>Lors d'un déplacement à gauche ou à droite avec les commandes
+<P>Lors d'un dÃ©placement Ã  gauche ou Ã  droite avec les commandes
 <A HREF="BRLTTY-4.html#command-FWINLT-FWINRT">FWINLT/FWINRT</A>:
 <DL>
 <DT><B>Non</B><DD>
-<P>Ne passe pas les fenêtres vides déjà lues.</P>
+<P>Ne passe pas les fenÃªtres vides dÃ©jÃ  lues.</P>
 <DT><B>Oui</B><DD>
-<P>Passe les fenêtres vides.</P>
+<P>Passe les fenÃªtres vides.</P>
 </DL>
 
-Vous pouvez aussi changer ce paramètre avec la commande
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-SKPBLNKWINS">SKPBLNKWINS</A>.</P>
-<DT><B>Quelles fenêtres vierges
+<DT><B>Quelles fenÃªtres vierges
 <A NAME="preference-which-blank-windows"></A> </B><DD>
-<P>Si les fenêtres vides doivent être sautées:
+<P>Si les fenÃªtres vides doivent Ãªtre sautÃ©es:
 <DL>
 <DT><B>Toutes</B><DD>
 <P>Les passe toutes.</P>
 <DT><B>Fin de ligne</B><DD>
-<P>Ne passe que celles qui sont à la fin (sur le côté droit) de l'écran.</P>
+<P>Ne passe que celles qui sont Ã  la fin (sur le cÃ´tÃ© droit) de l'Ã©cran.</P>
 <DT><B>Reste de la ligne</B><DD>
-<P>Ne passe que celles qui sont à la fin (sur le côté droit) d'une ligne lors d'une lecture
-vers l'avant, et au début (sur le côté gauche) d'une ligne lors d'une
-lecture à reculons.</P>
+<P>Ne passe que celles qui sont Ã  la fin (sur le cÃ´tÃ© droit) d'une ligne lors d'une lecture
+vers l'avant, et au dÃ©but (sur le cÃ´tÃ© gauche) d'une ligne lors d'une
+lecture Ã  reculons.</P>
 </DL>
 </P>
-<DT><B>Faire défiler la fenêtre
+<DT><B>Faire dÃ©filer la fenÃªtre
 <A NAME="preference-sliding-window"></A> </B><DD>
 <P>Si le curseur est poursuivi (voir la commande
 <A HREF="BRLTTY-4.html#command-CSRTRK">CSRTRK</A>)
-et que le curseur est trop enfermé (ou trop à l'extérieur) à la fin d'une plage braille:
+et que le curseur est trop enfermÃ© (ou trop Ã  l'extÃ©rieur) Ã  la fin d'une plage braille:
 <DL>
 <DT><B>Non</B><DD>
 <P>Repositionne la plage horizontalement de sorte que son bord gauche
-soit un multiple de sa largeur à partir du bord gauche de l'écran.</P>
+soit un multiple de sa largeur Ã  partir du bord gauche de l'Ã©cran.</P>
 <DT><B>Oui</B><DD>
-<P>Repositionne la plage horizontalement de façon à ce que le curseur,
-tout en restant sur ce côté de la plage, soit plus proche du centre.    </P>
+<P>Repositionne la plage horizontalement de faÃ§on Ã  ce que le curseur,
+tout en restant sur ce cÃ´tÃ© de la plage, soit plus proche du centre.  </P>
 </DL>
 
-Vous pouvez aussi changer ce paramètre avec la commande
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-SLIDEWIN">SLIDEWIN</A>.</P>
 <DT><B>Eager Sliding Window
 <A NAME="preference-eager-sliding-window"></A> </B><DD>
 <P>Si la plage braille doit glisser:
 <DL>
 <DT><B>Non</B><DD>
-<P>La repositionne chaque fois que le curseur va au-delà de la fin.</P>
+<P>La repositionne chaque fois que le curseur va au-delÃ  de la fin.</P>
 <DT><B>Oui</B><DD>
-<P>La repositionne chaque fois que le curseur va trop à l'intérieur près
+<P>La repositionne chaque fois que le curseur va trop Ã  l'intÃ©rieur prÃ¨s
 de la fin.</P>
 </DL>
 
-Le paramètre initial est à <CODE>non</CODE>.</P>
-<DT><B>Chevauchement de fenêtre
+Le paramÃ¨tre initial est Ã  <CODE>non</CODE>.</P>
+<DT><B>Chevauchement de fenÃªtre
 <A NAME="preference-window-overlap"></A> </B><DD>
-<P>Lors d'un déplacement à gauche ou à droite avec les commandes
-<A HREF="BRLTTY-4.html#command-FWINLT-FWINRT">FWINLT/FWINRT</A>, ce paramètre
-spécifie de combien de caractères adjacents horizontalement doit
+<P>Lors d'un dÃ©placement Ã  gauche ou Ã  droite avec les commandes
+<A HREF="BRLTTY-4.html#command-FWINLT-FWINRT">FWINLT/FWINRT</A>, ce paramÃ¨tre
+spÃ©cifie de combien de caractÃ¨res adjacents horizontalement doit
 se couvrir la plage braille.
-Le paramètre initial est <CODE>0</CODE>.</P>
-<DT><B>Répétition automatique
+Le paramÃ¨tre initial est <CODE>0</CODE>.</P>
+<DT><B>RÃ©pÃ©tition automatique
 <A NAME="preference-autorepeat"></A> </B><DD>
-<P>Tandis que la touche (la combinaison) d'une commande reste appuyée:
+<P>Tandis que la touche (la combinaison) d'une commande reste appuyÃ©e:
 <DL>
 <DT><B>Non</B><DD>
-<P>Ne répète pas automatiquement la commande.</P>
+<P>Ne rÃ©pÃ¨te pas automatiquement la commande.</P>
 <DT><B>Oui</B><DD>
-<P>Répète automatiquement la commande selon un intervalle régulier après
-un délai initial.</P>
+<P>RÃ©pÃ¨te automatiquement la commande selon un intervalle rÃ©gulier aprÃ¨s
+un dÃ©lai initial.</P>
 </DL>
 
-Les commandes suivantes peuvent être répétées automatiquement:
+Les commandes suivantes peuvent Ãªtre rÃ©pÃ©tÃ©es automatiquement:
 <UL>
 <LI>Les commandes 
 <A HREF="BRLTTY-4.html#command-LNUP-LNDN">LNUP/LNDN</A>.</LI>
@@ -450,55 +450,55 @@ Les commandes suivantes peuvent être répétées automatiquement:
 <A HREF="BRLTTY-4.html#command-PRDIFLN-NXDIFLN">PRDIFLN/NXDIFLN</A>.</LI>
 <LI>Les commandes 
 <A HREF="BRLTTY-4.html#command-CHRLT-CHRRT">CHRLT/CHRRT</A>.</LI>
-<LI>Opérations de défilement automatique de la plage braille (voir
-la préférence "Répétition automatique du défilement").</LI>
-<LI>Les opérations Page Précédente Page suivante.</LI>
-<LI>Les opérations curseur sur ligne précédente et ligne suivante.</LI>
-<LI>Les opérations curseur à gauche et curseur à droite.</LI>
-<LI>Les opérations Effacer et Supprimer.</LI>
-<LI>L'entrée d'un caractère.</LI>
+<LI>OpÃ©rations de dÃ©filement automatique de la plage braille (voir
+la prÃ©fÃ©rence "RÃ©pÃ©tition automatique du dÃ©filement").</LI>
+<LI>Les opÃ©rations Page PrÃ©cÃ©dente Page suivante.</LI>
+<LI>Les opÃ©rations curseur sur ligne prÃ©cÃ©dente et ligne suivante.</LI>
+<LI>Les opÃ©rations curseur Ã  gauche et curseur Ã  droite.</LI>
+<LI>Les opÃ©rations Effacer et Supprimer.</LI>
+<LI>L'entrÃ©e d'un caractÃ¨re.</LI>
 </UL>
 
-Seuls certains pilotes supportent cette fonctionnalité, la première
-limite étant que beaucoup d'afficheurs braille ne signalent pas
+Seuls certains pilotes supportent cette fonctionnalitÃ©, la premiÃ¨re
+limite Ã©tant que beaucoup d'afficheurs braille ne signalent pas
 les appuis sur une touche et les fonctions d'une touche comme des
-événements distinctement séparés.
-Vous pouvez aussi changer ce paramètre avec la commande
+Ã©vÃ©nements distinctement sÃ©parÃ©s.
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-AUTOREPEAT">AUTOREPEAT</A>.
-Le paramètre initial est <CODE>oui</CODE>.</P>
-<DT><B>Répétition automatique du défilement
+Le paramÃ¨tre initial est <CODE>oui</CODE>.</P>
+<DT><B>RÃ©pÃ©tition automatique du dÃ©filement
 <A NAME="preference-autorepeat-delay"></A> </B><DD>
-<P>Quand la préférence "Répétition automatique" est activée:</P>
+<P>Quand la prÃ©fÃ©rence "RÃ©pÃ©tition automatique" est activÃ©e:</P>
 <P>
 <DL>
 <DT><B>Non</B><DD>
-<P>Ne répète pas automatiquement les opérations de défilement  de la
+<P>Ne rÃ©pÃ¨te pas automatiquement les opÃ©rations de dÃ©filement  de la
 plage braille.</P>
 <DT><B>Oui</B><DD>
-<P>Répète automatiquement les opérations de défilement de la plage 
+<P>RÃ©pÃ¨te automatiquement les opÃ©rations de dÃ©filement de la plage 
 braille.</P>
 </DL>
 </P>
-<P>Ce paramètre modifie le comportement des commandes "FWINLT/FWINRT". Le
-paramètre initial est <CODE>non</CODE>.</P>
+<P>Ce paramÃ¨tre modifie le comportement des commandes "FWINLT/FWINRT". Le
+paramÃ¨tre initial est <CODE>non</CODE>.</P>
 
-<DT><B>Délai de la répétition automatique
+<DT><B>DÃ©lai de la rÃ©pÃ©tition automatique
 <A NAME="preference-autorepeat-delay"></A> </B><DD>
-<P>Lorsqu'un caractère doit être répété automatiquement, ce paramètre spécifie la valeur
-de le délai (voir la remarque sur 
-<A HREF="#time-settings">paramètres de temps</A> ci-dessous)
-qui doit s'écouler avant de commencer la répétition automatique.
-Le paramètre initial est <CODE>50</CODE>.</P>
-<DT><B>Intervalle de la répétition automatique
+<P>Lorsqu'un caractÃ¨re doit Ãªtre rÃ©pÃ©tÃ© automatiquement, ce paramÃ¨tre spÃ©cifie la valeur
+de le dÃ©lai (voir la remarque sur 
+<A HREF="#time-settings">paramÃ¨tres de temps</A> ci-dessous)
+qui doit s'Ã©couler avant de commencer la rÃ©pÃ©tition automatique.
+Le paramÃ¨tre initial est <CODE>50</CODE>.</P>
+<DT><B>Intervalle de la rÃ©pÃ©tition automatique
 <A NAME="preference-autorepeat-interval"></A> </B><DD>
-<P>Lorsqu'un caractère doit être répété automatiquement, ce paramètre spécifie la valeur
-de temps (voir la remarque à propos de 
-<A HREF="#time-settings">paramètres de temps</A> ci-dessous)
-entre chaque réexécution.
+<P>Lorsqu'un caractÃ¨re doit Ãªtre rÃ©pÃ©tÃ© automatiquement, ce paramÃ¨tre spÃ©cifie la valeur
+de temps (voir la remarque Ã  propos de 
+<A HREF="#time-settings">paramÃ¨tres de temps</A> ci-dessous)
+entre chaque rÃ©exÃ©cution.
 La valeur initiale est <CODE>10</CODE>.</P>
 <DT><B>Afficher le curseur
 <A NAME="preference-show-cursor"></A> </B><DD>
-<P>Lors de l'affichage du contenu de l'écran (voir la commande
+<P>Lors de l'affichage du contenu de l'Ã©cran (voir la commande
 <A HREF="BRLTTY-4.html#command-DISPMD">DISPMD</A>):
 <DL>
 <DT><B>Non</B><DD>
@@ -507,120 +507,120 @@ La valeur initiale est <CODE>10</CODE>.</P>
 <P>Affiche le curseur.</P>
 </DL>
 
-Vous pouvez aussi changer ce paramètre avec la commande
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-CSRVIS">CSRVIS</A>.
 La valeur initiale est <CODE>Oui</CODE>.</P>
 <DT><B>Apparence du curseur
 <A NAME="preference-cursor-style"></A> </B><DD>
-<P>Lorsque le curseur est affiché, il faut le représenter:
+<P>Lorsque le curseur est affichÃ©, il faut le reprÃ©senter:
 <DL>
-<DT><B>Souligné</B><DD>
-<P>(souligné) Avec les points 7 et 8.</P>
-<DT><B>Pavé</B><DD>
-<P>(un pavé) Avec les huit points.</P>
+<DT><B>SoulignÃ©</B><DD>
+<P>(soulignÃ©) Avec les points 7 et 8.</P>
+<DT><B>PavÃ©</B><DD>
+<P>(un pavÃ©) Avec les huit points.</P>
 </DL>
 
-Vous pouvez aussi changer ce paramètre avec la commande
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-CSRSIZE">CSRSIZE</A>.</P>
 <DT><B>Clignotement du curseur
 <A NAME="preference-blinking-cursor"></A> </B><DD>
-<P>Lorsque le curseur doit être affiché:
+<P>Lorsque le curseur doit Ãªtre affichÃ©:
 <DL>
 <DT><B>Non</B><DD>
 <P>Le rend visible tout le temps.</P>
 <DT><B>YOui</B><DD>
 <P>Le rend alternativement visible et invisible selon un intervalle
-prédéfini.</P>
+prÃ©dÃ©fini.</P>
 </DL>
 
-Vous pouvez aussi changer ce paramètre avec la commande
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-CSRBLINK">CSRBLINK</A>.</P>
-<DT><B>Durée de visibilité du curseur
+<DT><B>DurÃ©e de visibilitÃ© du curseur
 <A NAME="preference-cursor-visible-time"></A> </B><DD>
-<P>Quand le curseur doit clignoter, ce paramètre spécifie la durée (voir
-la remarque à propos des 
-<A HREF="#time-settings">paramètres de temps</A>
+<P>Quand le curseur doit clignoter, ce paramÃ¨tre spÃ©cifie la durÃ©e (voir
+la remarque Ã  propos des 
+<A HREF="#time-settings">paramÃ¨tres de temps</A>
 ci-dessous) pendant laquelle il est visibile pendant chaque cycle.
-La valeur par défaut est <CODE>40</CODE>.</P>
-<DT><B>Durée d'invisibilité du curseur
+La valeur par dÃ©faut est <CODE>40</CODE>.</P>
+<DT><B>DurÃ©e d'invisibilitÃ© du curseur
 <A NAME="preference-cursor-invisible-time"></A> </B><DD>
-<P>Lorsque le curseur doit clignoter, ce paramètre spécifie la durée (voir
-la remarque à propos des 
-<A HREF="#time-settings">paramètres de temps</A>
+<P>Lorsque le curseur doit clignoter, ce paramÃ¨tre spÃ©cifie la durÃ©e (voir
+la remarque Ã  propos des 
+<A HREF="#time-settings">paramÃ¨tres de temps</A>
 ci-dessous) pendant laquelle il est invisibile pendant chaque cycle.
 La valeur initiale est <CODE>40</CODE>.</P>
 <DT><B>Afficher les attributs
 <A NAME="preference-show-attributes"></A> </B><DD>
-<P>Lors de l'affichage du contenu de l'écran (voir la commande
+<P>Lors de l'affichage du contenu de l'Ã©cran (voir la commande
 <A HREF="BRLTTY-4.html#command-DISPMD">DISPMD</A>):
 <DL>
 <DT><B>Non</B><DD>
-<P>Ne souligne pas les caractères en surbrillance.</P>
+<P>Ne souligne pas les caractÃ¨res en surbrillance.</P>
 <DT><B>Oui</B><DD>
-<P>Souligne les caractères en surbrillance.</P>
+<P>Souligne les caractÃ¨res en surbrillance.</P>
 </DL>
 
-Vous pouvez aussi changer ce paramètre avec la commande
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-ATTRVIS">ATTRVIS</A>.</P>
 <DT><B>Clignottement des attributs
 <A NAME="preference-blinking-attributes"></A> </B><DD>
-<P>Lorsque les caractères en surbrillance doivent clignoter:
+<P>Lorsque les caractÃ¨res en surbrillance doivent clignoter:
 <DL>
 <DT><B>Non</B><DD>
 <P>Laisse l'indicateur visible tout le temps.</P>
 <DT><B>Oui</B><DD>
 <P>Rend l'indicateur alternativement visible et invisible selon un
-intervalle prédéfini.</P>
+intervalle prÃ©dÃ©fini.</P>
 </DL>
 
-Vous pouvez aussi changer ce paramètre avec la commande
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-ATTRBLINK">ATTRBLINK</A>.</P>
-<DT><B>Durée de visibilité des attributs
+<DT><B>DurÃ©e de visibilitÃ© des attributs
 <A NAME="preference-attributes-visible-time"></A> </B><DD>
-<P>Quand le soulignement des caractères en surbrillance doit clignoter,
-ce paramètre spécifie la durée (voir la remarque à propos des
-<A HREF="#time-settings">paramètres de temps</A> ci-dessous) pendant 
+<P>Quand le soulignement des caractÃ¨res en surbrillance doit clignoter,
+ce paramÃ¨tre spÃ©cifie la durÃ©e (voir la remarque Ã  propos des
+<A HREF="#time-settings">paramÃ¨tres de temps</A> ci-dessous) pendant 
 laquelle il est visibile pendant chaque cycle.
 La valeur initiale est <CODE>20</CODE>.</P>
-<DT><B>Durée d'invisibilité des attributs
+<DT><B>DurÃ©e d'invisibilitÃ© des attributs
 <A NAME="preference-attributes-invisible-time"></A> </B><DD>
-<P>Quand le soulignement des caractères en surbrillance doit clignoter,
-ce paramètre spécifie la durée (voir la remarque à propos des
-<A HREF="#time-settings">paramètres de temps</A> ci-dessous) pendant 
+<P>Quand le soulignement des caractÃ¨res en surbrillance doit clignoter,
+ce paramÃ¨tre spÃ©cifie la durÃ©e (voir la remarque Ã  propos des
+<A HREF="#time-settings">paramÃ¨tres de temps</A> ci-dessous) pendant 
 laquelle il est invisibile pendant chaque cycle.
 La valeur initiale est <CODE>60</CODE>.</P>
 <DT><B>Clignottement des majuscules
 <A NAME="preference-blinking-capitals"></A> </B><DD>
-<P>Lors de l'affichage du contenu de l'écran (voir la commande
+<P>Lors de l'affichage du contenu de l'Ã©cran (voir la commande
 <A HREF="BRLTTY-4.html#command-DISPMD">DISPMD</A>):
 <DL>
 <DT><B>Non</B><DD>
 <P>Laisse les lettres en majuscule visibles tout le temps.</P>
 <DT><B>Oui</B><DD>
 <P>Rend les lettres en majuscule alternativement visibles et invisibles
-selon un intervalle prédéfini.</P>
+selon un intervalle prÃ©dÃ©fini.</P>
 </DL>
 
-Vous pouvez aussi changer ce paramètre avec la commande
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-CAPBLINK">CAPBLINK</A>.</P>
-<DT><B>Durée de visibilité des majuscules
+<DT><B>DurÃ©e de visibilitÃ© des majuscules
 <A NAME="preference-capitals-visible-time"></A> </B><DD>
-<P>Lorsque les lettres en majuscule doivent clignoter, ce paramètre
-spécifie la durée (voir la remarque à propos des
-<A HREF="#time-settings">paramètres de temps</A> ci-dessous) pendant 
+<P>Lorsque les lettres en majuscule doivent clignoter, ce paramÃ¨tre
+spÃ©cifie la durÃ©e (voir la remarque Ã  propos des
+<A HREF="#time-settings">paramÃ¨tres de temps</A> ci-dessous) pendant 
 laquelle elles sont visibile pendant chaque cycle.
-La valeur par défaut est <CODE>60</CODE>.</P>
-<DT><B>Durée d'invisibilité des majuscules
+La valeur par dÃ©faut est <CODE>60</CODE>.</P>
+<DT><B>DurÃ©e d'invisibilitÃ© des majuscules
 <A NAME="preference-capitals-invisible-time"></A> </B><DD>
-<P>Lorsque les lettres en majuscule doivent clignoter, ce paramètre
-spécifie la durée (voir la remarque à propos des 
-<A HREF="#time-settings">paramètres de temps</A> ci-dessous) pendant 
+<P>Lorsque les lettres en majuscule doivent clignoter, ce paramÃ¨tre
+spÃ©cifie la durÃ©e (voir la remarque Ã  propos des 
+<A HREF="#time-settings">paramÃ¨tres de temps</A> ci-dessous) pendant 
 laquelle elles sont invisibiles pendant chaque cycle.
-La valeur par défaut est <CODE>20</CODE>.</P>
-<DT><B>Rugosité du braille
+La valeur par dÃ©faut est <CODE>20</CODE>.</P>
+<DT><B>RugositÃ© du braille
 <A NAME="preference-braille-firmness"></A> </B><DD>
-<P>Règle la rugosité (ou la rigidité) des points braille.
-Elle peut être réglée à:
+<P>RÃ¨gle la rugositÃ© (ou la rigiditÃ©) des points braille.
+Elle peut Ãªtre rÃ©glÃ©e Ã :
 <UL>
 <LI>Maximum</LI>
 <LI>Forte</LI>
@@ -629,12 +629,12 @@ Elle peut être réglée à:
 <LI>Minimum</LI>
 </UL>
 
-Cette préférence n'est disponible que si vous utilisez un pilote qui
+Cette prÃ©fÃ©rence n'est disponible que si vous utilisez un pilote qui
 la supporte. La valeur initiale est <CODE>Moyenne</CODE>.</P>
-<DT><B>Sensibilité du braille
+<DT><B>SensibilitÃ© du braille
 <A NAME="preference-braille-firmness"></A> </B><DD>
-<P>Règle la sensibilité des points braille au teucher.
-Elle peut être réglée à:
+<P>RÃ¨gle la sensibilitÃ© des points braille au teucher.
+Elle peut Ãªtre rÃ©glÃ©e Ã :
 <UL>
 <LI>Maximum</LI>
 <LI>Haute</LI>
@@ -643,46 +643,46 @@ Elle peut être réglée à:
 <LI>Minimum</LI>
 </UL>
 
-Cette préférence n'est disponible que si vous utilisez un pilote qui
+Cette prÃ©fÃ©rence n'est disponible que si vous utilisez un pilote qui
 la supporte. La valeur initiale est <CODE>Moyenne</CODE>.</P>
 
-<DT><B>La fenêtre suit le pointeur
+<DT><B>La fenÃªtre suit le pointeur
 <A NAME="preference-window-follows-pointer"></A> </B><DD>
-<P>Lors du déplacement du pointeur (souris):
+<P>Lors du dÃ©placement du pointeur (souris):
 <DL>
 <DT><B>Non</B><DD>
-<P>N'emmène pas la plage braille.</P>
+<P>N'emmÃ¨ne pas la plage braille.</P>
 <DT><B>Oui</B><DD>
-<P>Emmène la plage braille.</P>
+<P>EmmÃ¨ne la plage braille.</P>
 </DL>
 
-Cette préférence n'est présentée que si l'option de compilation
-<A HREF="#gpm">--enable-gpm</A> a été spécifiée.</P>
-<DT><B>Surlignement de la fenêtre
+Cette prÃ©fÃ©rence n'est prÃ©sentÃ©e que si l'option de compilation
+<A HREF="#gpm">--enable-gpm</A> a Ã©tÃ© spÃ©cifiÃ©e.</P>
+<DT><B>Surlignement de la fenÃªtre
 <A NAME="preference-pointer-follows-window"></A> </B><DD>
-<P>Lors du déplacement de la plage braille:
+<P>Lors du dÃ©placement de la plage braille:
 <DL>
 <DT><B>Non</B><DD>
-<P>Ne met pas en surbrillance la nouvelle zone de l'ùcran.</P>
+<P>Ne met pas en surbrillance la nouvelle zone de l'Ã¹cran.</P>
 <DT><B>Oui</B><DD>
-<P>Cette option active un marqueur visible montrant où se situe la
-plage braille, et, par conséquent, permettant de savoir ce que
+<P>Cette option active un marqueur visible montrant oÃ¹ se situe la
+plage braille, et, par consÃ©quent, permettant de savoir ce que
 l'utilisateur brailliste est en train de lire. Tout mouvement de la
 plage braille (manuel, poursuite du curseur, etc.) autre que ceux
-répondant au mouvement du pointeur (voir la préférence 
-<A HREF="#preference-window-follows-pointer">La fenêtre suit le pointeur</A>)
-a pour conséquence que la zone de l'écran correspondant
-au nouvel endroit où se trouve la  plage braille est mise en
-surbrillance. Si la préférence "Afficher les attributs" est activée, seul le
-caractère correspondant au coin en haut à gauche de la plage braille
+rÃ©pondant au mouvement du pointeur (voir la prÃ©fÃ©rence 
+<A HREF="#preference-window-follows-pointer">La fenÃªtre suit le pointeur</A>)
+a pour consÃ©quence que la zone de l'Ã©cran correspondant
+au nouvel endroit oÃ¹ se trouve la  plage braille est mise en
+surbrillance. Si la prÃ©fÃ©rence "Afficher les attributs" est activÃ©e, seul le
+caractÃ¨re correspondant au coin en haut Ã  gauche de la plage braille
 est mis en surbrillance.</P>
 </DL>
 
-Cette préférence n'est présentée que si l'option de compilation 
-<A HREF="#gpm">--enable-gpm</A> a été spécifiée.</P>
+Cette prÃ©fÃ©rence n'est prÃ©sentÃ©e que si l'option de compilation 
+<A HREF="#gpm">--enable-gpm</A> a Ã©tÃ© spÃ©cifiÃ©e.</P>
 <DT><B>Sons d'avertissement
 <A NAME="preference-alert-tunes"></A> </B><DD>
-<P>Chaque fois qu'un événement significatif avec un son associé se produit,
+<P>Chaque fois qu'un Ã©vÃ©nement significatif avec un son associÃ© se produit,
 (voir 
 <A HREF="#tunes">Sons d'avertissement</A>):
 <DL>
@@ -692,46 +692,46 @@ Cette préférence n'est présentée que si l'option de compilation
 <P>Joue le son.</P>
 </DL>
 
-Vous pouvez aussi changer ce paramètre avec la commande
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-TUNES">TUNES</A>.
 La valeur initiale est <CODE>oui</CODE>.</P>
-<DT><B>Périphérique de son
+<DT><B>PÃ©riphÃ©rique de son
 <A NAME="preference-tune-device"></A> </B><DD>
 <P>Joue les son d'avertissement via:
 <DL>
 <DT><B>Beeper</B><DD>
-<P>Le beeper interne (générateur de sons de la console).
-Cette valeur est supportée sur Linux, OpenBSD, FreeBSD, et
-NetBSD. Elle est toujours sûre dans son utilisation, bien qu'elle
-soit peut-être quelque peu rustique. Ce périphérique n'est pas
-disponible si vous avez spécifié l'option de compilation
+<P>Le beeper interne (gÃ©nÃ©rateur de sons de la console).
+Cette valeur est supportÃ©e sur Linux, OpenBSD, FreeBSD, et
+NetBSD. Elle est toujours sÃ»re dans son utilisation, bien qu'elle
+soit peut-Ãªtre quelque peu rustique. Ce pÃ©riphÃ©rique n'est pas
+disponible si vous avez spÃ©cifiÃ© l'option de compilation
 <A HREF="BRLTTY-3.html#build-beeper-support">--disable-beeper-support</A>.</P>
 <DT><B>PCM</B><DD>
 <P>L'interface audio de la carte son.
-Cette valeur est supportée sous Linux (via  <CODE>/dev/dsp</CODE>),
+Cette valeur est supportÃ©e sous Linux (via  <CODE>/dev/dsp</CODE>),
 Solaris (via <CODE>/dev/audio</CODE>), OpenBSD (via <CODE>/dev/audio0</CODE>),
 FreeBSD (via <CODE>/dev/dsp</CODE>), et NetBSD
 (via <CODE>/dev/audio0</CODE>).
-Ne fonctionne pas quand ce périphérique doit déjà être utilisé par
+Ne fonctionne pas quand ce pÃ©riphÃ©rique doit dÃ©jÃ  Ãªtre utilisÃ© par
 une autre application.
-Ce périphérique n'est pas disponible si vous avez spécifié l'option de
+Ce pÃ©riphÃ©rique n'est pas disponible si vous avez spÃ©cifiÃ© l'option de
 compilation 
 <A HREF="BRLTTY-3.html#build-pcm-support">--disable-pcm-support</A>.</P>
 <DT><B>MIDI</B><DD>
 <P>L'interface MIDI de la carte son. Cette valeur
-est supportée sous Linux (via <CODE>/dev/sequencer</CODE>).
-Ne fonctionne pas quand ce périphérique est déjà utilisé par une
+est supportÃ©e sous Linux (via <CODE>/dev/sequencer</CODE>).
+Ne fonctionne pas quand ce pÃ©riphÃ©rique est dÃ©jÃ  utilisÃ© par une
 autre application.
-Ce périphérique n'est pas disponible si vous avez spécifié l'option de
+Ce pÃ©riphÃ©rique n'est pas disponible si vous avez spÃ©cifiÃ© l'option de
 compilation 
 <A HREF="BRLTTY-3.html#build-midi-support">--disable-midi-support</A>.</P>
 <DT><B>FM</B><DD>
-<P>La synthèse FM sur une carte son AdLib, OPL3, Sound Blaster, ou
-équivalente. Cette valeur est supportée sous Linux. Elle fonctionne
-même si une synthèse FM est déjà utilisée par une autre application.
-Les résultats sont imprévisibles, et peuvent ne pas être bons, si elle
-est utilisée avec une carte son ne supportant pas cette caractéristique.
-Ce périphérique n'est pas disponible si vous avez spécifié l'option de
+<P>La synthÃ¨se FM sur une carte son AdLib, OPL3, Sound Blaster, ou
+Ã©quivalente. Cette valeur est supportÃ©e sous Linux. Elle fonctionne
+mÃªme si une synthÃ¨se FM est dÃ©jÃ  utilisÃ©e par une autre application.
+Les rÃ©sultats sont imprÃ©visibles, et peuvent ne pas Ãªtre bons, si elle
+est utilisÃ©e avec une carte son ne supportant pas cette caractÃ©ristique.
+Ce pÃ©riphÃ©rique n'est pas disponible si vous avez spÃ©cifiÃ© l'option de
 compilation 
 <A HREF="BRLTTY-3.html#build-fm-support">--disable-fm-support</A>.</P>
 </DL>
@@ -740,47 +740,47 @@ La valeur initiale est <CODE>Beeper</CODE> sur les plateformes supportant cela,
 et <CODE>PCM</CODE> sur les autres.</P>
 <DT><B>Volume PCM
 <A NAME="preference-pcm-instrument"></A> </B><DD>
-<P>Si vous utilisez l'interface audio numérique de votre carte son pour
-jouer les sons d'avertissement, ce paramètre spécifie le volume (sous la forme d'un
-pourcentage du maximum) auquel ils sont joués.</P>
+<P>Si vous utilisez l'interface audio numÃ©rique de votre carte son pour
+jouer les sons d'avertissement, ce paramÃ¨tre spÃ©cifie le volume (sous la forme d'un
+pourcentage du maximum) auquel ils sont jouÃ©s.</P>
 <DT><B>Volume MIDI
 <A NAME="preference-pcm-instrument"></A> </B><DD>
 <P>Si vous utilisez la Musical Instrument Digital Interface (MIDI, interface
-numérique d'instruments de musique) de votre carte son 
-pour jouer les sons d'avertissement, ce paramètre spécifie le volume (sous la
-forme d'un pourcentage du maximum) auquel ils sont joués.
-Le paramètre initial est 70.</P>
+numÃ©rique d'instruments de musique) de votre carte son 
+pour jouer les sons d'avertissement, ce paramÃ¨tre spÃ©cifie le volume (sous la
+forme d'un pourcentage du maximum) auquel ils sont jouÃ©s.
+Le paramÃ¨tre initial est 70.</P>
 <DT><B>Instrument MIDI
 <A NAME="preference-midi-instrument"></A> </B><DD>
 <P>Si l'interface MIDI de la carte son est
-utilisée pour jouer les sons d'avertissement, ce paramètre spécifie l'instrument 
-qui doit être utilisé (voir 
+utilisÃ©e pour jouer les sons d'avertissement, ce paramÃ¨tre spÃ©cifie l'instrument 
+qui doit Ãªtre utilisÃ© (voir 
 <A HREF="BRLTTY-12.html#operand-midi-device">Table d'instruments MIDI</A>).
 La valeur initiale est <CODE>Grand piano acoustique</CODE>.</P>
 <DT><B>Volume FM
 <A NAME="preference-alert-dots"></A> </B><DD>
-<P>Si vous utilisez le synthétiseur FM de votre carte son 
-pour jouer les sons d'avertissement, ce paramètre spécifie le volume (sous la
-forme d'un pourcentage du maximum) auquel ils sont joués.</P>
+<P>Si vous utilisez le synthÃ©tiseur FM de votre carte son 
+pour jouer les sons d'avertissement, ce paramÃ¨tre spÃ©cifie le volume (sous la
+forme d'un pourcentage du maximum) auquel ils sont jouÃ©s.</P>
 <DT><B>Points d'avertissement
 <A NAME="preference-alert-dots"></A> </B><DD>
-<P>Chaque fois qu'un événement avec un type de point associé se produit (voir
+<P>Chaque fois qu'un Ã©vÃ©nement avec un type de point associÃ© se produit (voir
 <A HREF="#tunes">Sons d'avertissement</A>):
 <DL>
 <DT><B>Non</B><DD>
 <P>N'affiche pas les points.</P>
 <DT><B>Oui</B><DD>
-<P>Affiche brièvement les points.</P>
+<P>Affiche briÃ¨vement les points.</P>
 </DL>
 
-Si les sons d'avertissement doivent être joués (voir la commande
-<A HREF="BRLTTY-4.html#command-TUNES">TUNES</A> et la préférence
-<A HREF="#preference-alert-tunes">Sons d'avertissement</A>), si un son a été
-associé à l'événement, et si le périphérique de son sélectionné peut être
-ouvert, alors sans s'occuper de la valeur de cette préférence, les points ne sont pas affichés.</P>
+Si les sons d'avertissement doivent Ãªtre jouÃ©s (voir la commande
+<A HREF="BRLTTY-4.html#command-TUNES">TUNES</A> et la prÃ©fÃ©rence
+<A HREF="#preference-alert-tunes">Sons d'avertissement</A>), si un son a Ã©tÃ©
+associÃ© Ã  l'Ã©vÃ©nement, et si le pÃ©riphÃ©rique de son sÃ©lectionnÃ© peut Ãªtre
+ouvert, alors sans s'occuper de la valeur de cette prÃ©fÃ©rence, les points ne sont pas affichÃ©s.</P>
 <DT><B>Messages d'avertissement
 <A NAME="preference-alert-messages"></A> </B><DD>
-<P>Chaque fois qu'un événement significatif avec un message associé se produit
+<P>Chaque fois qu'un Ã©vÃ©nement significatif avec un message associÃ© se produit
 (voir 
 <A HREF="#tunes">Sons d'avertissement</A>):
 <DL>
@@ -790,26 +790,26 @@ ouvert, alors sans s'occuper de la valeur de cette préférence, les points ne son
 <P>Affiche le message.</P>
 </DL>
 
-Si des sons d'avertissement doivent être joués (voir la commande
-<A HREF="BRLTTY-4.html#command-TUNES">TUNES</A>, et la préférence
-<A HREF="#preference-alert-tunes">Sons d'avertissement</A>), si un son a été
-associé à l'événement, et si le périphérique de son sélectionné peut être
-ouvert, ou si des points d'avertissement doivent être affichés (voir la préférence
+Si des sons d'avertissement doivent Ãªtre jouÃ©s (voir la commande
+<A HREF="BRLTTY-4.html#command-TUNES">TUNES</A>, et la prÃ©fÃ©rence
+<A HREF="#preference-alert-tunes">Sons d'avertissement</A>), si un son a Ã©tÃ©
+associÃ© Ã  l'Ã©vÃ©nement, et si le pÃ©riphÃ©rique de son sÃ©lectionnÃ© peut Ãªtre
+ouvert, ou si des points d'avertissement doivent Ãªtre affichÃ©s (voir la prÃ©fÃ©rence
 <A HREF="#preference-alert-dots">Points d'avertissement</A>) et si des points ont
-été associés à l'événement, sans se soucier de la valeur de cette préférence,
-le message n'est pas affiché.</P>
+Ã©tÃ© associÃ©s Ã  l'Ã©vÃ©nement, sans se soucier de la valeur de cette prÃ©fÃ©rence,
+le message n'est pas affichÃ©.</P>
 <DT><B>Mode Dire la ligne
 <A NAME="preference-sayline-mode"></A> </B><DD>
 <P>Lors de l'utilisation de la commande 
 <A HREF="BRLTTY-4.html#command-SAY_LINE">SAY_LINE</A>:
 <DL>
-<DT><B>Immédiat</B><DD>
+<DT><B>ImmÃ©diat</B><DD>
 <P>Suspend la parole.</P>
 <DT><B>En file</B><DD>
 <P>Ne suspend pas la parole.</P>
 </DL>
 
-La valeur initiale est <CODE>Immédiat</CODE>.</P>
+La valeur initiale est <CODE>ImmÃ©diat</CODE>.</P>
 <DT><B>Parole automatique
 <A NAME="preference-autospeak"></A> </B><DD>
 <P>
@@ -819,172 +819,172 @@ La valeur initiale est <CODE>Immédiat</CODE>.</P>
 <DT><B>Actif</B><DD>
 <P>Dit automatiquement:
 <UL>
-<LI>la nouvelle ligne lorsque vous déplacez la plage braille
+<LI>la nouvelle ligne lorsque vous dÃ©placez la plage braille
 verticalement.</LI>
-<LI>les caractères qui sont entrés ou effacés.</LI>
-<LI>le caractère sur lequel vous déplacez le curseur.</LI>
+<LI>les caractÃ¨res qui sont entrÃ©s ou effacÃ©s.</LI>
+<LI>le caractÃ¨re sur lequel vous dÃ©placez le curseur.</LI>
 </UL>
 </P>
 </DL>
 
-Vous pouvez aussi changer ce paramètre avec la commande
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-AUTOSPEAK">AUTOSPEAK</A>.
 La valeur initiale est <CODE>inactif</CODE>.</P>
-<DT><B>Vitesse de la synthèse
+<DT><B>Vitesse de la synthÃ¨se
 <A NAME="preference-speech-rate"></A> </B><DD>
-<P>Ajuste le débit de parole (<CODE>0</CODE> est le plus lent, <CODE>20</CODE> est le plus
-rapide). Cette préférence n'est disponible que si vous utilisez un pilote
+<P>Ajuste le dÃ©bit de parole (<CODE>0</CODE> est le plus lent, <CODE>20</CODE> est le plus
+rapide). Cette prÃ©fÃ©rence n'est disponible que si vous utilisez un pilote
 qui la supporte.
-Vous pouvez aussi changer ce paramètre avec la commande
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-SAY_SLOWER-SAY_FASTER">SAY_SLOWER/SAY_FASTER</A>.
 La valeur initiale est <CODE>10</CODE>.</P>
-<DT><B>Volume de la synthèse
+<DT><B>Volume de la synthÃ¨se
 <A NAME="preference-speech-volume"></A> </B><DD>
-<P>Ajuste le volume de la synthèse (<CODE>0</CODE> est le plus bas, <CODE>20</CODE> le plus
-fort). Cette préférence n'est disponible que si vous utilisez un pilote
+<P>Ajuste le volume de la synthÃ¨se (<CODE>0</CODE> est le plus bas, <CODE>20</CODE> le plus
+fort). Cette prÃ©fÃ©rence n'est disponible que si vous utilisez un pilote
 qui la supporte.
-Vous pouvez aussi changer ce paramètre avec la commande
+Vous pouvez aussi changer ce paramÃ¨tre avec la commande
 <A HREF="BRLTTY-4.html#command-SAY_SOFTER-SAY_LOUDER">SAY_SOFTER/SAY_LOUDER</A>.
 La valeur initiale est <CODE>10</CODE>.</P>
 <DT><B>Ton de la voix
 <A NAME="preference-speech-pitch"></A> </B><DD>
-<P>Ajuste le volume de la synthèse ((<CODE>0</CODE> est le plus bas, <CODE>20</CODE> est
-le plus élevé). Cette préférence n'est disponible que si vous utilisez
-un pilote qui la supporte. Le réglage initial est <CODE>10</CODE>.</P>
-<DT><B>Ponctuation pour la synthèse
+<P>Ajuste le volume de la synthÃ¨se ((<CODE>0</CODE> est le plus bas, <CODE>20</CODE> est
+le plus Ã©levÃ©). Cette prÃ©fÃ©rence n'est disponible que si vous utilisez
+un pilote qui la supporte. Le rÃ©glage initial est <CODE>10</CODE>.</P>
+<DT><B>Ponctuation pour la synthÃ¨se
 <A NAME="preference-speech-punctuation"></A> </B><DD>
-<P>Ajuste la quantité de ponctuation parlée. Elle peut être initialisée à:
+<P>Ajuste la quantitÃ© de ponctuation parlÃ©e. Elle peut Ãªtre initialisÃ©e Ã :
 <UL>
 <LI>Aucune</LI>
 <LI>Quelques</LI>
 <LI>Toutes</LI>
 </UL>
 </P>
-<P>Cette préférence n'est disponible que si vous utilisez
-un pilote qui la supporte. Le réglage initial est <CODE>Quelques</CODE>.</P>
-<DT><B>Apparence de l'état
+<P>Cette prÃ©fÃ©rence n'est disponible que si vous utilisez
+un pilote qui la supporte. Le rÃ©glage initial est <CODE>Quelques</CODE>.</P>
+<DT><B>Apparence de l'Ã©tat
 <A NAME="preference-status-style"></A> </B><DD>
-<P>Ce paramètre spécifie la façon dont les cellules d'état doivent être
-utilisées. Normalement, vous ne devriez pas avoir besoin de jouer avec ça.
-Cela permet aux développeurs de BRLTTY de tester les configurations des
-cellules d'état pour les afficheurs braille qu'ils n'ont pas avec eux.
+<P>Ce paramÃ¨tre spÃ©cifie la faÃ§on dont les cellules d'Ã©tat doivent Ãªtre
+utilisÃ©es. Normalement, vous ne devriez pas avoir besoin de jouer avec Ã§a.
+Cela permet aux dÃ©veloppeurs de BRLTTY de tester les configurations des
+cellules d'Ã©tat pour les afficheurs braille qu'ils n'ont pas avec eux.
 <DL>
 <DT><B>Aucune</B><DD>
 <P>N'utilise pas les cellules de statut.
-Cette valeur est toujours sûre, mais elle est aussi totalement inutile.</P>
+Cette valeur est toujours sÃ»re, mais elle est aussi totalement inutile.</P>
 <DT><B>Alva</B><DD>
-<P>Les cellules d'état contiennent:
+<P>Les cellules d'Ã©tat contiennent:
 <DL>
 <DT><B>1</B><DD>
 <P>La place du curseur (voir ci-dessous).</P>
 <DT><B>2</B><DD>
-<P>La place du coin en haut à gauche de la plage braille (voir
+<P>La place du coin en haut Ã  gauche de la plage braille (voir
 ci-dessous).</P>
 <DT><B>3</B><DD>
-<P>Une lettre indiquant l'état de BRLTTY.
+<P>Une lettre indiquant l'Ã©tat de BRLTTY.
 Dans l'ordre de rangement:
 <DL>
 <DT><B>a</B><DD>
-<P>Les attributs de l'écran sont affichés (voir la commande
+<P>Les attributs de l'Ã©cran sont affichÃ©s (voir la commande
 <A HREF="BRLTTY-4.html#command-DISPMD">DISPMD</A>).</P>
 <DT><B>f</B><DD>
-<P>L'image de l'écran est gelée (voir la commande
+<P>L'image de l'Ã©cran est gelÃ©e (voir la commande
 <A HREF="BRLTTY-4.html#command-FREEZE">FREEZE</A>).</P>
 <DT><B>f</B><DD>
 <P>Le curseur est poursuivi (voir la commande
 <A HREF="BRLTTY-4.html#command-CSRTRK">CSRTRK</A>).</P>
 <DT><B><EM>vierge</EM></B><DD>
-<P>Rien de spécial.</P>
+<P>Rien de spÃ©cial.</P>
 </DL>
 </P>
 </DL>
 
-Les emplacements du curseur et de la plage braille sont présentés de
-façon intéressante. Les points 1 à 6 représentent le numéro de la ligne
-avec une lettre de <CODE>a</CODE> (pour 1) à <CODE>y</CODE> (pour 25).
-Les points 7 et 8 (les deux points supplémentaires tout en bas)
-représentent le numéro de la plage braille horrizontale comme suit:
+Les emplacements du curseur et de la plage braille sont prÃ©sentÃ©s de
+faÃ§on intÃ©ressante. Les points 1 Ã  6 reprÃ©sentent le numÃ©ro de la ligne
+avec une lettre de <CODE>a</CODE> (pour 1) Ã  <CODE>y</CODE> (pour 25).
+Les points 7 et 8 (les deux points supplÃ©mentaires tout en bas)
+reprÃ©sentent le numÃ©ro de la plage braille horrizontale comme suit:
 <DL>
 <DT><B>Aucun points</B><DD>
-<P>La première fenêtre (la plus à gauche).</P>
+<P>La premiÃ¨re fenÃªtre (la plus Ã  gauche).</P>
 <DT><B>Point 7</B><DD>
-<P>La seconde fenêtre.</P>
+<P>La seconde fenÃªtre.</P>
 <DT><B>Point 8</B><DD>
-<P>La troisième fenêtre.</P>
+<P>La troisiÃ¨me fenÃªtre.</P>
 <DT><B>Points 7 et 8</B><DD>
-<P>La quatrième fenêtre.</P>
+<P>La quatriÃ¨me fenÃªtre.</P>
 </DL>
 
 Dans les deux cas, les indicateurs incluent:
-la ligne 26 est représentée par la lettre <CODE>a</CODE>, et la cinquième
-plage braille horizontale est représentée avec aucun point tout en bas.</P>
+la ligne 26 est reprÃ©sentÃ©e par la lettre <CODE>a</CODE>, et la cinquiÃ¨me
+plage braille horizontale est reprÃ©sentÃ©e avec aucun point tout en bas.</P>
 <DT><B>Tieman</B><DD>
-<P>Les cellules d'état contiennent:
+<P>Les cellules d'Ã©tat contiennent:
 <DL>
 <DT><B>1-2</B><DD>
-<P>Les colonnes (en partant de un) du curseur (montrées dans la
-moitié supérieure des cellules et du coin haut à gauche de la
-plage braille (affiché dans la partie en bas des cellules).</P>
+<P>Les colonnes (en partant de un) du curseur (montrÃ©es dans la
+moitiÃ© supÃ©rieure des cellules et du coin haut Ã  gauche de la
+plage braille (affichÃ© dans la partie en bas des cellules).</P>
 <DT><B>3-4</B><DD>
-<P>Les lignes (en partant de un) du curseur affichées dans la
-moitié supérieure des cellules et du coin haut à gauche de la
-plage braille (affiché dans la partie basse des cellules).</P>
+<P>Les lignes (en partant de un) du curseur affichÃ©es dans la
+moitiÃ© supÃ©rieure des cellules et du coin haut Ã  gauche de la
+plage braille (affichÃ© dans la partie basse des cellules).</P>
 <DT><B>5</B><DD>
-<P>Chaque point indique si une caractéristique est active comme suit:
+<P>Chaque point indique si une caractÃ©ristique est active comme suit:
 <DL>
 <DT><B>point 1</B><DD>
-<P>L'image de l'écran est gelée (voir la commande
+<P>L'image de l'Ã©cran est gelÃ©e (voir la commande
 <A HREF="BRLTTY-4.html#command-FREEZE">FREEZE</A>).</P>
 <DT><B>Point 2</B><DD>
-<P>Les attributs de l'écran sont affichés (voir la commande
+<P>Les attributs de l'Ã©cran sont affichÃ©s (voir la commande
 <A HREF="BRLTTY-4.html#command-DISPMD">DISPMD</A>).</P>
 <DT><B>Point 3</B><DD>
-<P>Les sons d'avertissement sont joués (voir la commande
+<P>Les sons d'avertissement sont jouÃ©s (voir la commande
 <A HREF="BRLTTY-4.html#command-TUNES">TUNES</A>).</P>
 <DT><B>Point 4</B><DD>
-<P>Le curseur est affiché (voir la commande
+<P>Le curseur est affichÃ© (voir la commande
 <A HREF="BRLTTY-4.html#command-CSRVIS">CSRVIS</A>).</P>
 <DT><B>Point 5</B><DD>
-<P>Le curseur est un pavé (voir la commande
+<P>Le curseur est un pavÃ© (voir la commande
 <A HREF="BRLTTY-4.html#command-CSRSIZE">CSRSIZE</A>).</P>
 <DT><B>Point 6</B><DD>
-<P>Le curseur est masqué (voir la commande
+<P>Le curseur est masquÃ© (voir la commande
 <A HREF="BRLTTY-4.html#command-CSRBLINK">CSRBLINK</A>).</P>
 <DT><B>Point 7</B><DD>
 <P>Le curseur est poursuivi (voir la commande
 <A HREF="BRLTTY-4.html#command-CSRTRK">CSRTRK</A>).</P>
 <DT><B>Point 8</B><DD>
-<P>La plage braille défilera (voir la commande
+<P>La plage braille dÃ©filera (voir la commande
 <A HREF="BRLTTY-4.html#command-SLIDEWIN">SLIDEWIN</A>).</P>
 </DL>
 </P>
 </DL>
 </P>
 <DT><B>PowerBraille 80</B><DD>
-<P>Les cellules d'état contiennent:
+<P>Les cellules d'Ã©tat contiennent:
 <DL>
 <DT><B>1</B><DD>
 <P>La ligne (en partant de 1) correspondant au haut de la plage
-braille. La partie des dizaines est montrée dans la moitié supérieure
-de la cellule, et celle des unités est montrée dans la moitié
-inférieure de la cellule.</P>
+braille. La partie des dizaines est montrÃ©e dans la moitiÃ© supÃ©rieure
+de la cellule, et celle des unitÃ©s est montrÃ©e dans la moitiÃ©
+infÃ©rieure de la cellule.</P>
 </DL>
 </P>
-<DT><B>Générique</B><DD>
-<P>Ce paramètre transmet beaucoup d'informations au pilote braille, et le
-pilote lui-même décide comment les présenter.</P>
+<DT><B>GÃ©nÃ©rique</B><DD>
+<P>Ce paramÃ¨tre transmet beaucoup d'informations au pilote braille, et le
+pilote lui-mÃªme dÃ©cide comment les prÃ©senter.</P>
 <DT><B>MDV</B><DD>
 <P>Les cellules de statut contiennent:
 <DL>
 <DT><B>1-2</B><DD>
-<P>L'emplacement du coin en haut à gauche de la plage braille.
-La ligne (en partant de 1) est affichée dans la moitié supérieure
-des cellules, et la colonne (en partant de 1) est montrée dans la
-moitié inférieure des cellules.</P>
+<P>L'emplacement du coin en haut Ã  gauche de la plage braille.
+La ligne (en partant de 1) est affichÃ©e dans la moitiÃ© supÃ©rieure
+des cellules, et la colonne (en partant de 1) est montrÃ©e dans la
+moitiÃ© infÃ©rieure des cellules.</P>
 </DL>
 </P>
 <DT><B>Voyager</B><DD>
-<P>Les cellules d'état contiennent:
+<P>Les cellules d'Ã©tat contiennent:
 <DL>
 <DT><B>1</B><DD>
 <P>La ligne (en partant de 0) correspondant au haut de la plage
@@ -993,98 +993,98 @@ braille (voir ci-dessous).</P>
 <P>La ligne (en partant de 1) sur laquelle se trouve le curseur (voir
 ci-dessous).</P>
 <DT><B>3</B><DD>
-<P>Si l'écran est gelé (voir la commande
+<P>Si l'Ã©cran est gelÃ© (voir la commande
 <A HREF="BRLTTY-4.html#command-FREEZE">FREEZE</A>), la lettre <CODE>F</CODE>.
 Sinon, la colonne (en partant de 1) dans laquelle se trouve le
 curseur (voir ci-dessous).</P>
 </DL>
 
-Les numéros de ligne et de colonne sont montrés comme deux cases dans
-une seule cellule. Les dizaine sont affichées dans la moitié haute de la
-cellule, et les unités sont affichées dans la moitié inférieure de la
+Les numÃ©ros de ligne et de colonne sont montrÃ©s comme deux cases dans
+une seule cellule. Les dizaine sont affichÃ©es dans la moitiÃ© haute de la
+cellule, et les unitÃ©s sont affichÃ©es dans la moitiÃ© infÃ©rieure de la
 cellule.</P>
 </DL>
 
-La valeur initiale dépend du pilote de l'afficheur braille.</P>
+La valeur initiale dÃ©pend du pilote de l'afficheur braille.</P>
 <DT><B>Table de texte
 <A NAME="preference-text-table"></A> </B><DD>
-<P>Sélectionne la table de texte. Voir la section
-<A HREF="BRLTTY-6.html#table-text">Table de texte</A> pour des détails.
+<P>SÃ©lectionne la table de texte. Voir la section
+<A HREF="BRLTTY-6.html#table-text">Table de texte</A> pour des dÃ©tails.
 Voir l'option 
 <A HREF="BRLTTY-4.html#options-text-table">-t</A> en ligne de
 commande pour la valeur initiale.
-Cette préférence n'est pas sauvegardée.</P>
+Cette prÃ©fÃ©rence n'est pas sauvegardÃ©e.</P>
 <DT><B>Table d'attributs
 <A NAME="preference-attributes-table"></A> </B><DD>
-<P>Sélectionne la table d'attributs. Voir la section
+<P>SÃ©lectionne la table d'attributs. Voir la section
 <A HREF="BRLTTY-6.html#table-attributes">Tables d'attributs</A> pour
-des détails. Voir l'option 
+des dÃ©tails. Voir l'option 
 <A HREF="BRLTTY-4.html#options-attributes-table">-a</A>
 en ligne de commande pour la valeur initiale.
-Cette préférence n'est pas sauvegardée.</P>
-<DT><B>Table de braille abrégé
+Cette prÃ©fÃ©rence n'est pas sauvegardÃ©e.</P>
+<DT><B>Table de braille abrÃ©gÃ©
 <A NAME="preference-contraction-table"></A> </B><DD>
-<P>Sélectionne la table de braille abrégé. Voir la section
-<A HREF="BRLTTY-6.html#table-contraction">Tables d'abrégé</A> pour des détails. Voir l'option
+<P>SÃ©lectionne la table de braille abrÃ©gÃ©. Voir la section
+<A HREF="BRLTTY-6.html#table-contraction">Tables d'abrÃ©gÃ©</A> pour des dÃ©tails. Voir l'option
 <A HREF="BRLTTY-4.html#options-contraction-table">-c</A> en ligne de commande
 pour la valeur initiale.
-Cette préférence n'est pas sauvegardée.</P>
+Cette prÃ©fÃ©rence n'est pas sauvegardÃ©e.</P>
 <DT><B> Tabe de touches
 <A NAME="preference-key-table"></A> </B><DD>
-<P>Sélection de la table de touches.
+<P>SÃ©lection de la table de touches.
 Voir la section 
-<A HREF="BRLTTY-6.html#table-key">Tables de touches</A> pour plus de détails.
+<A HREF="BRLTTY-6.html#table-key">Tables de touches</A> pour plus de dÃ©tails.
 Voir l'option 
 <A HREF="BRLTTY-4.html#options-key-table">-k</A> en ligne de commande 
-pour le réglage initial.
-Cette préférence n'est pas sauvegardée.</P>
+pour le rÃ©glage initial.
+Cette prÃ©fÃ©rence n'est pas sauvegardÃ©e.</P>
 </DL>
 </P>
 <P>Remarques:
 <UL>
 <LI>
 <A NAME="time-settings"></A> 
-Tous les paramètres de temps sont en centièmes de seconde. Ce sont des
+Tous les paramÃ¨tres de temps sont en centiÃ¨mes de seconde. Ce sont des
 multiples de 4 compris entre 1 et 100.</LI>
 </UL>
 </P>
 
-<H2><A NAME="status"></A> <A NAME="ss5.6">5.6</A> <A HREF="BRLTTY.html#toc5.6">L'affichage des états</A>
+<H2><A NAME="status"></A> <A NAME="ss5.6">5.6</A> <A HREF="BRLTTY.html#toc5.6">L'affichage des Ã©tats</A>
 </H2>
 
-<P>L'affichage des états est un résumé de l'état courant de BRLTTY qui s'adapte
-totalement à l'intérieur de la plage braille. Certains afficheurs braille ont
-un type de cellules d'état qui sont utilisées pour afficher en permanence
-certaines de ces informations de la même façon (voir la documentation du
+<P>L'affichage des Ã©tats est un rÃ©sumÃ© de l'Ã©tat courant de BRLTTY qui s'adapte
+totalement Ã  l'intÃ©rieur de la plage braille. Certains afficheurs braille ont
+un type de cellules d'Ã©tat qui sont utilisÃ©es pour afficher en permanence
+certaines de ces informations de la mÃªme faÃ§on (voir la documentation du
 pilote de votre afficheur).
-Les données présentées par cet affichage ne sont pas statiques et peuvent changer
-à n'importe quel moment, en réaction aux mises à jour de l'écran et/ou aux
+Les donnÃ©es prÃ©sentÃ©es par cet affichage ne sont pas statiques et peuvent changer
+Ã  n'importe quel moment, en rÃ©action aux mises Ã  jour de l'Ã©cran et/ou aux
 commandes BRLTTY.</P>
 <P>Utilisez la commande 
-<A HREF="BRLTTY-4.html#command-INFO">INFO</A> pour aller à
-l'affichage des états, et utilisez-la de nouveau pour revenir à l'écran.
-La présentation des informations qu'il contient dépend de la taille de
+<A HREF="BRLTTY-4.html#command-INFO">INFO</A> pour aller Ã 
+l'affichage des Ã©tats, et utilisez-la de nouveau pour revenir Ã  l'Ã©cran.
+La prÃ©sentation des informations qu'il contient dÃ©pend de la taille de
 la plage braille.</P>
 
 <H3>Afficheurs de 21 cellules ou plus</H3>
 
-<P>De courtes symboliques ont été utilisées, bien qu'elles s'apparentent à un code
-chiffré, de façon à afficher la présentation en colonne précise.
+<P>De courtes symboliques ont Ã©tÃ© utilisÃ©es, bien qu'elles s'apparentent Ã  un code
+chiffrÃ©, de faÃ§on Ã  afficher la prÃ©sentation en colonne prÃ©cise.
 <BLOCKQUOTE><CODE>
 <EM>wx</EM>:<EM>wy</EM> <EM>cx</EM>:<EM>cy</EM> <EM>vt</EM> <EM>tcmfdu</EM>
 </CODE></BLOCKQUOTE>
 
 <DL>
 <DT><B><EM>wx</EM><CODE>:</CODE><EM>wy</EM></B><DD>
-<P>La colonne et la ligne (en partant de 1) sur l'écran correspondant au
-coin en haut à gauche de la plage braille.</P>
+<P>La colonne et la ligne (en partant de 1) sur l'Ã©cran correspondant au
+coin en haut Ã  gauche de la plage braille.</P>
 <DT><B><EM>cx</EM><CODE>:</CODE><EM>cy</EM></B><DD>
-<P>La colonne et la ligne (en partant de 1) sur l'écran correspondant à la
+<P>La colonne et la ligne (en partant de 1) sur l'Ã©cran correspondant Ã  la
 position du curseur.</P>
 <DT><B><EM>vt</EM></B><DD>
-<P>Le numéro (en partant de 1) de la console virtuelle courante.</P>
+<P>Le numÃ©ro (en partant de 1) de la console virtuelle courante.</P>
 <DT><B><EM>t</EM></B><DD>
-<P>L'état de la fonction de poursuite du curseur (voir la commande
+<P>L'Ã©tat de la fonction de poursuite du curseur (voir la commande
 <A HREF="BRLTTY-4.html#command-CSRTRK">CSRTRK</A> command).
 <DL>
 <DT><B>vide</B><DD>
@@ -1094,7 +1094,7 @@ position du curseur.</P>
 </DL>
 </P>
 <DT><B><EM>c</EM></B><DD>
-<P>L'état des caractéristiques de visibilité du curseur (voir les commandes
+<P>L'Ã©tat des caractÃ©ristiques de visibilitÃ© du curseur (voir les commandes
 <A HREF="BRLTTY-4.html#command-CSRVIS">CSRVIS</A> et
 <A HREF="BRLTTY-4.html#command-CSRBLINK">CSRBLINK</A>).
 <DL>
@@ -1115,34 +1115,34 @@ sera visible.</P>
 <A HREF="BRLTTY-4.html#command-DISPMD">DISPMD</A>).
 <DL>
 <DT><B><CODE>t</CODE></B><DD>
-<P>Le contenu de l'écran (texte) est affiché.</P>
+<P>Le contenu de l'Ã©cran (texte) est affichÃ©.</P>
 <DT><B><CODE>a</CODE></B><DD>
-<P>La surbrillance à l'écran (les attributs) est affichée.</P>
+<P>La surbrillance Ã  l'Ã©cran (les attributs) est affichÃ©e.</P>
 </DL>
 </P>
 <DT><B><EM>f</EM></B><DD>
-<P>L'état de la fonction de gel de l'écran (voir la commande
+<P>L'Ã©tat de la fonction de gel de l'Ã©cran (voir la commande
 <A HREF="BRLTTY-4.html#command-FREEZE">FREEZE</A>).
 <DL>
 <DT><B>vide</B><DD>
-<P>L'écran n'est pas gelé.</P>
+<P>L'Ã©cran n'est pas gelÃ©.</P>
 <DT><B><CODE>f</CODE></B><DD>
-<P>L'écran est gelé.</P>
+<P>L'Ã©cran est gelÃ©.</P>
 </DL>
 </P>
 <DT><B><EM>d</EM></B><DD>
-<P>Le nombre de points braille utilisés pour afficher chaque caractère (voir
+<P>Le nombre de points braille utilisÃ©s pour afficher chaque caractÃ¨re (voir
 la commande 
 <A HREF="BRLTTY-4.html#command-SIXDOTS">SIXDOTS</A>).
 <DL>
 <DT><B><CODE>8</CODE></B><DD>
-<P>Les huit points sont utilisés.</P>
+<P>Les huit points sont utilisÃ©s.</P>
 <DT><B><CODE>6</CODE></B><DD>
-<P>Seuls 6 points sont utilisés.</P>
+<P>Seuls 6 points sont utilisÃ©s.</P>
 </DL>
 </P>
 <DT><B><EM>u</EM></B><DD>
-<P>L'état des fonctions d'affichage des lettres majuscules (voir la
+<P>L'Ã©tat des fonctions d'affichage des lettres majuscules (voir la
 commande 
 <A HREF="BRLTTY-4.html#command-CAPBLINK">CAPBLINK</A>).
 <DL>
@@ -1155,30 +1155,30 @@ commande
 </DL>
 </P>
 
-<H3>Afficheurs à 20 cellules ou moins</H3>
+<H3>Afficheurs Ã  20 cellules ou moins</H3>
 
-<P>De courtes symboliques ont été utilisées, bien qu'elles s'apparentent à un code
-chiffré, de façon à montrer la présentation en colonne précise.
+<P>De courtes symboliques ont Ã©tÃ© utilisÃ©es, bien qu'elles s'apparentent Ã  un code
+chiffrÃ©, de faÃ§on Ã  montrer la prÃ©sentation en colonne prÃ©cise.
 <BLOCKQUOTE><CODE>
 <EM>xx</EM><EM>yy</EM><EM>s</EM> <EM>vt</EM> <EM>tcmfdu</EM>
 </CODE></BLOCKQUOTE>
 
 <DL>
 <DT><B><EM>xx</EM></B><DD>
-<P>Les colonnes (en partant de 1) sur l'écran correspondant à la position du
-curseur (affiché dans la moitié supérieure des cellules) et au coin en
-haut à gauche de l'afficheur braille (affiché dans la moitié inférieure des
+<P>Les colonnes (en partant de 1) sur l'Ã©cran correspondant Ã  la position du
+curseur (affichÃ© dans la moitiÃ© supÃ©rieure des cellules) et au coin en
+haut Ã  gauche de l'afficheur braille (affichÃ© dans la moitiÃ© infÃ©rieure des
 cellules).</P>
 <DT><B><EM>yy</EM></B><DD>
-<P>Les lignes (en partant de 1) sur l'écran correspondant à la position du
-curseur (affichée dans la moitié supérieure des cellules) et au coin en    haut à gauche de l'afficheur braille (montré dans la moitié inférieure des
+<P>Les lignes (en partant de 1) sur l'Ã©cran correspondant Ã  la position du
+curseur (affichÃ©e dans la moitiÃ© supÃ©rieure des cellules) et au coin en    haut Ã  gauche de l'afficheur braille (montrÃ© dans la moitiÃ© infÃ©rieure des
 cellules).</P>
 <DT><B><EM>s</EM></B><DD>
 <P>Les valeurs de certaines fonctions de BRLTTY.
-Une fonctionalité est active si le point lui correspondant est élevé.
+Une fonctionalitÃ© est active si le point lui correspondant est Ã©levÃ©.
 <DL>
 <DT><B>Point 1</B><DD>
-<P>L'image de l'écran gelée (voir la commande
+<P>L'image de l'Ã©cran gelÃ©e (voir la commande
 <A HREF="BRLTTY-4.html#command-FREEZE">FREEZE</A>).</P>
 <DT><B>Point 2</B><DD>
 <P>Affichage des attributs (voir la commande
@@ -1190,7 +1190,7 @@ Une fonctionalité est active si le point lui correspondant est élevé.
 <P>Curseur visible (voir la commande
 <A HREF="BRLTTY-4.html#command-CSRVIS">CSRVIS</A>).</P>
 <DT><B>Point 5</B><DD>
-<P>Curseur en pavé (voir la commande
+<P>Curseur en pavÃ© (voir la commande
 <A HREF="BRLTTY-4.html#command-CSRSIZE">CSRSIZE</A>).</P>
 <DT><B>Point 6</B><DD>
 <P>Clignotement du curseur (voir la commande
@@ -1204,9 +1204,9 @@ Une fonctionalité est active si le point lui correspondant est élevé.
 </DL>
 </P>
 <DT><B><EM>vt</EM></B><DD>
-<P>Le numéro (en partant de 1) de la console virtuelle actuelle.</P>
+<P>Le numÃ©ro (en partant de 1) de la console virtuelle actuelle.</P>
 <DT><B><EM>t</EM></B><DD>
-<P>L'état de la fonction de poursuite du curseur (voir la commande
+<P>L'Ã©tat de la fonction de poursuite du curseur (voir la commande
 <A HREF="BRLTTY-4.html#command-CSRTRK">CSRTRK</A> command).
 <DL>
 <DT><B>vide</B><DD>
@@ -1216,7 +1216,7 @@ Une fonctionalité est active si le point lui correspondant est élevé.
 </DL>
 </P>
 <DT><B><EM>c</EM></B><DD>
-<P>L'état des fonctions de visibilité du curseur (voir les commandes
+<P>L'Ã©tat des fonctions de visibilitÃ© du curseur (voir les commandes
 <A HREF="BRLTTY-4.html#command-CSRVIS">CSRVIS</A> et
 <A HREF="BRLTTY-4.html#command-CSRBLINK">CSRBLINK</A>).
 <DL>
@@ -1237,34 +1237,34 @@ sera visible.</P>
 <A HREF="BRLTTY-4.html#command-DISPMD">DISPMD</A>).
 <DL>
 <DT><B><CODE>t</CODE></B><DD>
-<P>Le contenu de l'écran (texte) est affiché.</P>
+<P>Le contenu de l'Ã©cran (texte) est affichÃ©.</P>
 <DT><B><CODE>a</CODE></B><DD>
-<P>La surbrillance à l'écran (les attributs) est affichée.</P>
+<P>La surbrillance Ã  l'Ã©cran (les attributs) est affichÃ©e.</P>
 </DL>
 </P>
 <DT><B><EM>f</EM></B><DD>
-<P>L'état de la fonction de gel de l'écran (voir la commande
+<P>L'Ã©tat de la fonction de gel de l'Ã©cran (voir la commande
 <A HREF="BRLTTY-4.html#command-FREEZE">FREEZE</A>).
 <DL>
 <DT><B>vide</B><DD>
-<P>L'écran n'est pas gelé.</P>
+<P>L'Ã©cran n'est pas gelÃ©.</P>
 <DT><B><CODE>f</CODE></B><DD>
-<P>L'écran est gelé.</P>
+<P>L'Ã©cran est gelÃ©.</P>
 </DL>
 </P>
 <DT><B><EM>d</EM></B><DD>
-<P>Le nombre de points braille utilisés pour afficher chaque caractère (voir
+<P>Le nombre de points braille utilisÃ©s pour afficher chaque caractÃ¨re (voir
 la commande 
 <A HREF="BRLTTY-4.html#command-SIXDOTS">SIXDOTS</A>).
 <DL>
 <DT><B><CODE>8</CODE></B><DD>
-<P>Les huit points sont utilisés.</P>
+<P>Les huit points sont utilisÃ©s.</P>
 <DT><B><CODE>6</CODE></B><DD>
-<P>Seuls 6 points sont utilisés.</P>
+<P>Seuls 6 points sont utilisÃ©s.</P>
 </DL>
 </P>
 <DT><B><EM>u</EM></B><DD>
-<P>L'état des fonctions d'affichage des lettres majuscules (voir la
+<P>L'Ã©tat des fonctions d'affichage des lettres majuscules (voir la
 commande 
 <A HREF="BRLTTY-4.html#command-CAPBLINK">CAPBLINK</A>).
 <DL>
@@ -1280,38 +1280,38 @@ commande
 <H2><A NAME="learn"></A> <A NAME="ss5.7">5.7</A> <A HREF="BRLTTY.html#toc5.7">Mode Apprentissage des commandes</A>
 </H2>
 
-<P>Le Mode Apprentissage des commandes est une façon interactive d'apprendre
-ce que les touches de l'afficheur braille font. Vous pouvez y accéder soit
+<P>Le Mode Apprentissage des commandes est une faÃ§on interactive d'apprendre
+ce que les touches de l'afficheur braille font. Vous pouvez y accÃ©der soit
 par la commande 
 <A HREF="BRLTTY-4.html#command-LEARN">LEARN</A> ou via l'utilitaire
 <A HREF="BRLTTY-3.html#utility-brltest">brltest</A>.
-Cette caractéristique n'est pas disponible si vous avez spécifié l'option de
+Cette caractÃ©ristique n'est pas disponible si vous avez spÃ©cifiÃ© l'option de
 compilation 
 <A HREF="BRLTTY-3.html#build-learn-mode">--disable-learn-mode</A>.</P>
-<P>Lorsque vous êtes entré dans ce mode, le message <CODE>Mode apprentissage des commandes</CODE>
-est écrit sur l'afficheur braille.
-Alors, dès que vous pressez une touche (ou une combinaison de touches) de
-l'afficheur, un court message décrivant sa fonction dans BRLTTY est écrit.
-Vous quitterez immédiatement ce mode si vous pressez la touche (ou la
+<P>Lorsque vous Ãªtes entrÃ© dans ce mode, le message <CODE>Mode apprentissage des commandes</CODE>
+est Ã©crit sur l'afficheur braille.
+Alors, dÃ¨s que vous pressez une touche (ou une combinaison de touches) de
+l'afficheur, un court message dÃ©crivant sa fonction dans BRLTTY est Ã©crit.
+Vous quitterez immÃ©diatement ce mode si vous pressez la touche (ou la
 combinaison de touches) pour la commande 
 <A HREF="BRLTTY-4.html#command-LEARN">LEARN</A>.
 Vous sortez automatiquement, et le message <CODE>done</CODE> s'inscrit, si un
-de temps de 10 secondes s'écoule sans qu'une touche de l'afficheur ne soit
-pressée.
+de temps de 10 secondes s'Ã©coule sans qu'une touche de l'afficheur ne soit
+pressÃ©e.
 Remarquez que certains afficheurs ne se signalent pas au pilote et/ou certains
-afficheurs ne se signalent pas à BRLTTY jusqu'à ce que toutes les touches soient
+afficheurs ne se signalent pas Ã  BRLTTY jusqu'Ã  ce que toutes les touches soient
 faites.</P>
 <P>Si un message est plus long que la largeur de l'afficheur braille, il est
-affiché en segments. La longueur d'un segment est de un soustrait à
-la largeur de l'afficheur braillle, avec le caractère le plus à droite sur
+affichÃ© en segments. La longueur d'un segment est de un soustrait Ã 
+la largeur de l'afficheur braillle, avec le caractÃ¨re le plus Ã  droite sur
 l'afficheur qui affiche le signe moins.
 Chaque segment reste sur l'afficheur, soit pendant quelques secondes (voir
 l'option 
 <A HREF="BRLTTY-4.html#options-message-timeout">-M</A> en ligne de commande)
-soit jusqu'à ce qu'une touche de l'afficheur soit pressée.</P>
+soit jusqu'Ã  ce qu'une touche de l'afficheur soit pressÃ©e.</P>
 <HR>
 <A HREF="BRLTTY-6.html">Page suivante</A>
-<A HREF="BRLTTY-4.html">Page précédente</A>
-<A HREF="BRLTTY.html#toc5">Table des matières</A>
+<A HREF="BRLTTY-4.html">Page prÃ©cÃ©dente</A>
+<A HREF="BRLTTY.html#toc5">Table des matiÃ¨res</A>
 </BODY>
 </HTML>

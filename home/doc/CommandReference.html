@@ -512,7 +512,9 @@ ul.auto-toc {
 <li><a class="reference internal" href="#passps2">PASSPS2</a></li>
 <li><a class="reference internal" href="#passxt">PASSXT</a></li>
 <li><a class="reference internal" href="#paste">PASTE</a></li>
+<li><a class="reference internal" href="#paste-altmode">PASTE_ALTMODE</a></li>
 <li><a class="reference internal" href="#paste-history">PASTE_HISTORY</a></li>
+<li><a class="reference internal" href="#paste-history-altmode">PASTE_HISTORY_ALTMODE</a></li>
 <li><a class="reference internal" href="#prdifchar">PRDIFCHAR</a></li>
 <li><a class="reference internal" href="#prdifln">PRDIFLN</a></li>
 <li><a class="reference internal" href="#prefload">PREFLOAD</a></li>
@@ -578,6 +580,7 @@ ul.auto-toc {
 <li><a class="reference internal" href="#speak-prev-word">SPEAK_PREV_WORD</a></li>
 <li><a class="reference internal" href="#spell-curr-word">SPELL_CURR_WORD</a></li>
 <li><a class="reference internal" href="#spkhome">SPKHOME</a></li>
+<li><a class="reference internal" href="#spk-punct-level">SPK_PUNCT_LEVEL</a></li>
 <li><a class="reference internal" href="#spk-start">SPK_START</a></li>
 <li><a class="reference internal" href="#spk-stop">SPK_STOP</a></li>
 <li><a class="reference internal" href="#switchvt">SWITCHVT</a></li>
@@ -975,7 +978,9 @@ ul.auto-toc {
 <li><a class="reference internal" href="#clip-copy">CLIP_COPY</a></li>
 <li><a class="reference internal" href="#clip-append">CLIP_APPEND</a></li>
 <li><a class="reference internal" href="#paste">PASTE</a></li>
+<li><a class="reference internal" href="#paste-altmode">PASTE_ALTMODE</a></li>
 <li><a class="reference internal" href="#paste-history">PASTE_HISTORY</a></li>
+<li><a class="reference internal" href="#paste-history-altmode">PASTE_HISTORY_ALTMODE</a></li>
 <li><a class="reference internal" href="#prsearch">PRSEARCH</a></li>
 <li><a class="reference internal" href="#nxsearch">NXSEARCH</a></li>
 <li><a class="reference internal" href="#clip-save">CLIP_SAVE</a></li>
@@ -1003,8 +1008,14 @@ ul.auto-toc {
 </ul>
 <p id="clip-copy"><strong>CLIP_COPY</strong> - Copy characters to clipboard.</p>
 <p id="clip-append"><strong>CLIP_APPEND</strong> - Append characters to clipboard.</p>
-<p id="paste"><strong>PASTE</strong> - Insert clipboard text after screen cursor.</p>
-<p id="paste-history"><strong>PASTE_HISTORY</strong> - Insert clipboard history entry after screen cursor.</p>
+<p id="paste"><strong>PASTE</strong> - Insert the clipboard content before the screen cursor.</p>
+<p id="paste-altmode"><strong>PASTE_ALTMODE</strong> - Insert the clipboard content before the screen cursor using the alternate paste mode.</p>
+<p id="paste-history"><strong>PASTE_HISTORY</strong> - Insert a clipboard history entry before the screen cursor.</p>
+<p>The following modifiers may be specified:</p>
+<ul class="simple">
+<li>an offset</li>
+</ul>
+<p id="paste-history-altmode"><strong>PASTE_HISTORY_ALTMODE</strong> - Insert a clipboard history entry before the screen cursor using the alternate paste mode.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">
 <li>an offset</li>
@@ -1039,7 +1050,7 @@ ul.auto-toc {
 <p id="txtsel-all"><strong>TXTSEL_ALL</strong> - Select all of the text.</p>
 <p id="host-copy"><strong>HOST_COPY</strong> - Copy selected text to host clipboard.</p>
 <p id="host-cut"><strong>HOST_CUT</strong> - Cut selected text to host clipboard.</p>
-<p id="host-paste"><strong>HOST_PASTE</strong> - Insert host clipboard text after screen cursor.</p>
+<p id="host-paste"><strong>HOST_PASTE</strong> - Insert the host clipboard text before the screen cursor.</p>
 </div>
 <div class="section" id="configuration-functions">
 <h2><a class="toc-backref" href="#toc-entry-9">Configuration Functions</a></h2>
@@ -1242,6 +1253,7 @@ ul.auto-toc {
 <li><a class="reference internal" href="#say-faster">SAY_FASTER</a></li>
 <li><a class="reference internal" href="#say-lower">SAY_LOWER</a></li>
 <li><a class="reference internal" href="#say-higher">SAY_HIGHER</a></li>
+<li><a class="reference internal" href="#spk-punct-level">SPK_PUNCT_LEVEL</a></li>
 <li><a class="reference internal" href="#autospeak">AUTOSPEAK</a></li>
 <li><a class="reference internal" href="#aspk-sel-line">ASPK_SEL_LINE</a></li>
 <li><a class="reference internal" href="#aspk-emp-line">ASPK_EMP_LINE</a></li>
@@ -1268,6 +1280,7 @@ ul.auto-toc {
 <p id="say-faster"><strong>SAY_FASTER</strong> - Increase speaking rate.</p>
 <p id="say-lower"><strong>SAY_LOWER</strong> - Decrease speaking pitch.</p>
 <p id="say-higher"><strong>SAY_HIGHER</strong> - Increase speaking pitch.</p>
+<p id="spk-punct-level"><strong>SPK_PUNCT_LEVEL</strong> - Cycle speech punctuation level.</p>
 <p id="autospeak"><strong>AUTOSPEAK</strong> - Set autospeak on/off.</p>
 <p>The following modifiers may be specified:</p>
 <ul class="simple">

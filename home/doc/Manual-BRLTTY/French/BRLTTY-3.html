@@ -2,34 +2,34 @@
 <HTML>
 <HEAD>
  <META NAME="GENERATOR" CONTENT="LinuxDoc-Tools 0.9.82">
- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
- <TITLE>Manuel de référence de BRLTTY: La procédure de compilation</TITLE>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <TITLE>Manuel de rÃ©fÃ©rence de BRLTTY: La procÃ©dure de compilation</TITLE>
  <LINK HREF="BRLTTY-4.html" REL=next>
  <LINK HREF="BRLTTY-2.html" REL=previous>
  <LINK HREF="BRLTTY.html#toc3" REL=contents>
 </HEAD>
 <BODY>
 <A HREF="BRLTTY-4.html">Page suivante</A>
-<A HREF="BRLTTY-2.html">Page précédente</A>
-<A HREF="BRLTTY.html#toc3">Table des matières</A>
+<A HREF="BRLTTY-2.html">Page prÃ©cÃ©dente</A>
+<A HREF="BRLTTY.html#toc3">Table des matiÃ¨res</A>
 <HR>
-<H2><A NAME="s3">3.</A> <A HREF="BRLTTY.html#toc3">La procédure de compilation</A></H2>
+<H2><A NAME="s3">3.</A> <A HREF="BRLTTY.html#toc3">La procÃ©dure de compilation</A></H2>
 
-<P>On peut télécharger BRLTTY depuis son site Web (voir la section 
+<P>On peut tÃ©lÃ©charger BRLTTY depuis son site Web (voir la section 
 <A HREF="BRLTTY-1.html#contact">Contacts</A> pour son adresse).  Toutes les versions
 sont fournies en 
-<A HREF="#tar">archives tar</A> compressés. Les
-versions récentes sont aussi fournies en fichiers 
+<A HREF="#tar">archives tar</A> compressÃ©s. Les
+versions rÃ©centes sont aussi fournies en fichiers 
 <A HREF="#rpm">RPM</A> (RedHat paquet Manager).</P>
-<P>Ces information éparses ont probablement piqué votre
-curiosité et vous êtes impatient de démarrer.
+<P>Ces information Ã©parses ont probablement piquÃ© votre
+curiositÃ© et vous Ãªtes impatient de dÃ©marrer.
 Cependant, nous vous recommandons de vous familiariser d'abord
-avec les fichiers qui seront finalement installés.</P>
+avec les fichiers qui seront finalement installÃ©s.</P>
 
-<H2><A NAME="hierachy"></A> <A NAME="ss3.1">3.1</A> <A HREF="BRLTTY.html#toc3.1">Hiérarchie des fichiers installés</A>
+<H2><A NAME="hierachy"></A> <A NAME="ss3.1">3.1</A> <A HREF="BRLTTY.html#toc3.1">HiÃ©rarchie des fichiers installÃ©s</A>
 </H2>
 
-<P>La procédure de compilation devrait aboutir à l'installation des
+<P>La procÃ©dure de compilation devrait aboutir Ã  l'installation des
 fichiers suivants:
 <DL>
 <DT><B>/bin/</B><DD>
@@ -40,129 +40,129 @@ fichiers suivants:
 <DT><B>
 <A HREF="#utility-brltty-install">brltty-install</A></B><DD>
 <P>Un outil pour la copie de la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A> de BRLTTY d'un emplacement à
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A> de BRLTTY d'un emplacement Ã 
 un autre...</P>
 <DT><B>
 <A HREF="#utility-brltty-config">brltty-config</A></B><DD>
 <P>Un outil qui assigne un certain nombre de variables
-d'environnement à des valeurs reflétant l'installation
+d'environnement Ã  des valeurs reflÃ©tant l'installation
 courante de BRLTTY.</P>
 </DL>
 </P>
 <DT><B>/lib/brltty/rw/</B><DD>
-<P>Fichiers créés lors de l'exécution, comme ceux nécessaires mais absents
-du système.</P>
+<P>Fichiers crÃ©Ã©s lors de l'exÃ©cution, comme ceux nÃ©cessaires mais absents
+du systÃ¨me.</P>
 <DT><B>/etc/</B><DD>
 <P>
 <DL>
 <DT><B>brltty.conf</B><DD>
-<P>Paramètres système par défaut pour BRLTTY.</P>
+<P>ParamÃ¨tres systÃ¨me par dÃ©faut pour BRLTTY.</P>
 <DT><B>brlapi.key</B><DD>
-<P>Clés d'accès pour BrlAPI.</P>
+<P>ClÃ©s d'accÃ¨s pour BrlAPI.</P>
 </DL>
 </P>
 <DT><B>/etc/brltty/</B><DD>
 <P>Il se peut que votre installation de BRLTTY n'ait pas tous les
-types de fichiers suivants. Ils ne sont créés qu'en fonction des
-besoins déduits des options de compilation que vous sélectionnez
+types de fichiers suivants. Ils ne sont crÃ©Ã©s qu'en fonction des
+besoins dÃ©duits des options de compilation que vous sÃ©lectionnez
 (voir 
 <A HREF="#build">Options de compilation</A>).
 <DL>
 <DT><B>*.conf</B><DD>
-<P>Base de configuration spécifique au pilote. Leur nom ressemble
-plus ou moins à <CODE>brltty-</CODE><EM>pilote</EM><CODE>.conf</CODE>, où
+<P>Base de configuration spÃ©cifique au pilote. Leur nom ressemble
+plus ou moins Ã  <CODE>brltty-</CODE><EM>pilote</EM><CODE>.conf</CODE>, oÃ¹
 <EM>pilote</EM> correspond aux deux lettres du 
 <A HREF="BRLTTY-10.html#drivers">code d'identification du pilote</A>.</P>
 <DT><B>*.atb</B><DD>
 <P>Tables d'attributs
 (voir la section 
-<A HREF="BRLTTY-6.html#table-attributes">Tables d'attributs</A> pour plus de détails).
-Leur nom ressemble à <EM>name</EM><CODE>.atb</CODE>.</P>
+<A HREF="BRLTTY-6.html#table-attributes">Tables d'attributs</A> pour plus de dÃ©tails).
+Leur nom ressemble Ã  <EM>name</EM><CODE>.atb</CODE>.</P>
 <DT><B>*.ati</B><DD>
 <P>Fichiers include pour les tables d'attributs.</P>
 
 <DT><B>*.ctb</B><DD>
-<P>Tables de braille abrégé (voir 
-<A HREF="BRLTTY-6.html#table-contraction">Tables         de braille abrégé</A> pour plus de détails).  Leur nom ressemble plus ou
-moins à
+<P>Tables de braille abrÃ©gÃ© (voir 
+<A HREF="BRLTTY-6.html#table-contraction">Tables         de braille abrÃ©gÃ©</A> pour plus de dÃ©tails).  Leur nom ressemble plus ou
+moins Ã 
 <EM>langue</EM><CODE>-</CODE><EM>pays</EM><CODE>-</CODE><EM>niveau</EM><CODE>.ctb</CODE>.</P>
 <DT><B>*.cti</B><DD>
 <P>Fichiers include pour les tables de traduction.</P>
 <DT><B>*.ktb</B><DD>
 <P>Tables de touches
 (voir la section 
-<A HREF="BRLTTY-6.html#table-key">Tables de touches</A> pour plus de détails).
-Leurs noms ressemble à <EM>name</EM><CODE>.ktb</CODE>.</P>
+<A HREF="BRLTTY-6.html#table-key">Tables de touches</A> pour plus de dÃ©tails).
+Leurs noms ressemble Ã  <EM>name</EM><CODE>.ktb</CODE>.</P>
 <DT><B>*.kti</B><DD>
 <P>Fichiers Include pour les tables de touches.</P>
 <DT><B>*.ttb</B><DD>
 <P>Tables de texte
 (voir la section 
-<A HREF="BRLTTY-6.html#table-text">Tables de texte</A> pour plus de détails).
-Leurs noms ressemble à <EM>language</EM><CODE>.ttb</CODE>.</P>
+<A HREF="BRLTTY-6.html#table-text">Tables de texte</A> pour plus de dÃ©tails).
+Leurs noms ressemble Ã  <EM>language</EM><CODE>.ttb</CODE>.</P>
 <DT><B>*.tti</B><DD>
 <P>Fichiers Include pour les tables de texte.</P>
 <DT><B>*.hlp</B><DD>
-<P>Pages d'aide spécifiques à chaque pilote. Leur nom ressemble
-plus ou moins à <CODE>brltty-</CODE><EM>pilote</EM><CODE>.hlp</CODE>, où
+<P>Pages d'aide spÃ©cifiques Ã  chaque pilote. Leur nom ressemble
+plus ou moins Ã  <CODE>brltty-</CODE><EM>pilote</EM><CODE>.hlp</CODE>, oÃ¹
 <EM>pilote</EM> correspond aux deux lettres du 
 <A HREF="BRLTTY-10.html#drivers">code d'identification du pilote</A>.</P>
 </DL>
 </P>
 <DT><B>/var/lib/</B><DD>
-<P>Sockets locaux pour la connexion à l'interface de programmation de
+<P>Sockets locaux pour la connexion Ã  l'interface de programmation de
 l'application.</P>
 <DT><B>/include/</B><DD>
-<P>Les fichiers d'en-tête C pour l'interface de programmation de
-l'application. Leurs noms ressemblent à <EM>brlapi-fonction</EM><CODE>.h</CODE>.
-L'en-tête principale est brlapi.h.</P>
+<P>Les fichiers d'en-tÃªte C pour l'interface de programmation de
+l'application. Leurs noms ressemblent Ã  <EM>brlapi-fonction</EM><CODE>.h</CODE>.
+L'en-tÃªte principale est brlapi.h.</P>
 <DT><B>/include/brltty/</B><DD>
-<P>Les fichiers d'en-tête C pour l'interface de programmation de
-l'application. Leurs noms ressemblent à <EM>brldefs-pilote</EM><CODE>.h</CODE> où
-<EM>pilote</EM><CODE>-</CODE><EM>pilote</EM><CODE>.h</CODE> (où <EM>pilote</EM> correspond
+<P>Les fichiers d'en-tÃªte C pour l'interface de programmation de
+l'application. Leurs noms ressemblent Ã  <EM>brldefs-pilote</EM><CODE>.h</CODE> oÃ¹
+<EM>pilote</EM><CODE>-</CODE><EM>pilote</EM><CODE>.h</CODE> (oÃ¹ <EM>pilote</EM> correspond
 aux deux lettres du 
-<A HREF="BRLTTY-10.html#drivers">Code d'identification      du pilote</A>). Les en-têtes brldefs.h et api.h sont fournies pour une
-compatibilité avec des version précédentes et ne devraient pas être
-utilisées.</P>
+<A HREF="BRLTTY-10.html#drivers">Code d'identification      du pilote</A>). Les en-tÃªtes brldefs.h et api.h sont fournies pour une
+compatibilitÃ© avec des version prÃ©cÃ©dentes et ne devraient pas Ãªtre
+utilisÃ©es.</P>
 
 <DT><B>/lib/</B><DD>
 <P>
 <DL>
 <DT><B>libbrlapi.a</B><DD>
-<P>bibliothèque statique de l'interface de programmation de
+<P>bibliothÃ¨que statique de l'interface de programmation de
 l'application (Application Programming Interface).</P>
 <DT><B>libbrlapi.so</B><DD>
-<P>bibliothèque dynamique pour l'interface de programmation de
+<P>bibliothÃ¨que dynamique pour l'interface de programmation de
 l'application.</P>
 </DL>
 </P>
 <DT><B>/lib/brltty/</B><DD>
 <P>Il se peut que votre installation de BRLTTY n'ait pas tous les
-types de fichiers suivants. Ils ne sont créés qu'en fonction des
-besoins déduits des options de compilation que vous sélectionnez
+types de fichiers suivants. Ils ne sont crÃ©Ã©s qu'en fonction des
+besoins dÃ©duits des options de compilation que vous sÃ©lectionnez
 (voir 
 <A HREF="#build">Options de compilation</A>).
 <DL>
 <DT><B>brltty-brl.lst</B><DD>
-<P>Une liste des pilotes des afficheurs braille qui ont été
-compilés en tant qu'objets dynamiques et, ainsi, qui peuvent
-être utilisés. Chaque ligne contient les deux lettres
+<P>Une liste des pilotes des afficheurs braille qui ont Ã©tÃ©
+compilÃ©s en tant qu'objets dynamiques et, ainsi, qui peuvent
+Ãªtre utilisÃ©s. Chaque ligne contient les deux lettres
 du code d'identification pour un pilote, une tabulation, et
 une description de l'afficheur braille pour lequel ce pilote
 existe.</P>
 <DT><B>libbrlttyb<EM>pilote</EM>.so.1</B><DD>
-<P>Le pilote dynamique pour un afficheur braille, où <EM>pilote</EM>
+<P>Le pilote dynamique pour un afficheur braille, oÃ¹ <EM>pilote</EM>
 correspond aux deux lettres du 
 <A HREF="BRLTTY-10.html#drivers">code         d'identification du pilote</A>.</P>
 <DT><B>brltty-spk.lst</B><DD>
-<P>Une liste des pilotes de synthèse vocale qui ont été
-compilés en tant qu'objets dynamiques, et, ainsi, qui peuvent
-être utilisés. Chaque ligne contient les deux lettres
+<P>Une liste des pilotes de synthÃ¨se vocale qui ont Ã©tÃ©
+compilÃ©s en tant qu'objets dynamiques, et, ainsi, qui peuvent
+Ãªtre utilisÃ©s. Chaque ligne contient les deux lettres
 du code d'identification pour un pilote, une tabulation, et
-une description de la synthèse vocale pour laquelle ce pilote
+une description de la synthÃ¨se vocale pour laquelle ce pilote
 existe.</P>
 <DT><B>libbrlttys<EM>pilote</EM>.so.1</B><DD>
-<P>Le pilote dynamique pour une synthèse vocale, où <EM>pilote</EM>
+<P>Le pilote dynamique pour une synthÃ¨se vocale, oÃ¹ <EM>pilote</EM>
 correspond aux deux lettres du 
 <A HREF="BRLTTY-10.html#drivers">Code         d'identification du pilote</A>.</P>
 </DL>
@@ -172,49 +172,49 @@ correspond aux deux lettres du
 <P>Pages de manuel.
 <DL>
 <DT><B>man1/<EM>nom</EM>.1</B><DD>
-<P>Pages de manuel pour les commandes utilisateur liées à
+<P>Pages de manuel pour les commandes utilisateur liÃ©es Ã 
 BRLTTY.</P>
 <DT><B>man3/<EM>nom</EM>.3</B><DD>
-<P>Pages de manuel pour la bibliothèque de
+<P>Pages de manuel pour la bibliothÃ¨que de
 l'interface de programmation de l'application.</P>
 </DL>
 </P>
 </DL>
 </P>
-<P>D'autres fichiers optionnels que vous devriez connaître, bien qu'ils ne
-fassent pas partie de la hiérarchie des fichiers installés, sont :
+<P>D'autres fichiers optionnels que vous devriez connaÃ®tre, bien qu'ils ne
+fassent pas partie de la hiÃ©rarchie des fichiers installÃ©s, sont :
 <DL>
 <DT><B>/etc/brltty.conf</B><DD>
-<P>Le fichier des paramètres système par défaut. Il est créé par
-l'administrateur système. Voir 
-<A HREF="BRLTTY-4.html#configure">Le     fichier de configuration</A> pour plus de détails.</P>
+<P>Le fichier des paramÃ¨tres systÃ¨me par dÃ©faut. Il est crÃ©Ã© par
+l'administrateur systÃ¨me. Voir 
+<A HREF="BRLTTY-4.html#configure">Le     fichier de configuration</A> pour plus de dÃ©tails.</P>
 <DT><B>/etc/brltty-<EM>pilote</EM>.prefs</B><DD>
-<P>Le fichier de sauvegarde des paramètres de préférence (<EM>pilote</EM>
+<P>Le fichier de sauvegarde des paramÃ¨tres de prÃ©fÃ©rence (<EM>pilote</EM>
 correspond aux deux lettres du 
-<A HREF="BRLTTY-10.html#drivers">code     d'identification de pilote</A>). Il est créé par la commande 
+<A HREF="BRLTTY-10.html#drivers">code     d'identification de pilote</A>). Il est crÃ©Ã© par la commande 
 <A HREF="BRLTTY-4.html#command-PREFSAVE">PREFSAVE</A>.  Voir 
-<A HREF="BRLTTY-5.html#preferences">Paramètres de Préférences</A> pour plus de
-détails.</P>
+<A HREF="BRLTTY-5.html#preferences">ParamÃ¨tres de PrÃ©fÃ©rences</A> pour plus de
+dÃ©tails.</P>
 </DL>
 </P>
 
-<H2><A NAME="tar"></A> <A NAME="ss3.2">3.2</A> <A HREF="BRLTTY.html#toc3.2">Installation à partir d'un TAR Ball</A>
+<H2><A NAME="tar"></A> <A NAME="ss3.2">3.2</A> <A HREF="BRLTTY.html#toc3.2">Installation Ã  partir d'un TAR Ball</A>
 </H2>
 
-<P>Voici ce que vous avez à faire si vous voulez seulement installer
-BRLTTY à toute vitesse, en espérant que tous
-nos paramètres par défaut soient corrects.
+<P>Voici ce que vous avez Ã  faire si vous voulez seulement installer
+BRLTTY Ã  toute vitesse, en espÃ©rant que tous
+nos paramÃ¨tres par dÃ©faut soient corrects.
 <OL>
-<LI>Téléchargez les sources. Il s'agira d'un fichier nommé
+<LI>TÃ©lÃ©chargez les sources. Il s'agira d'un fichier nommÃ©
 <CODE>brltty-</CODE><EM>version</EM><CODE>.tar.gz</CODE>, par exemple
 <CODE>brltty-3.0.tar.gz</CODE>.</LI>
-<LI>Décompressez les sources dans une structure hiérarchique native.
+<LI>DÃ©compressez les sources dans une structure hiÃ©rarchique native.
 <BLOCKQUOTE><CODE>
 tar xzf brltty-<EM>version</EM>.tar.gz
 </CODE></BLOCKQUOTE>
 
-Cela devrait créer le répertoire <CODE>brltty-</CODE><EM>version</EM>.</LI>
-<LI>Allez dans le répertoire des sources, configurez, compilez et installez BRLTTY.
+Cela devrait crÃ©er le rÃ©pertoire <CODE>brltty-</CODE><EM>version</EM>.</LI>
+<LI>Allez dans le rÃ©pertoire des sources, configurez, compilez et installez BRLTTY.
 <BLOCKQUOTE><CODE>
 cd brltty-<EM>version</EM><BR>
 ./configure<BR>
@@ -222,692 +222,692 @@ make<BR>
 make install
 </CODE></BLOCKQUOTE>
 
-Vous devez effectuer cette dernière commande en tant que <B>root</B>.</LI>
+Vous devez effectuer cette derniÃ¨re commande en tant que <B>root</B>.</LI>
 </OL>
 </P>
-<P>Pour désinstaller BRLTTY, faites :
+<P>Pour dÃ©sinstaller BRLTTY, faites :
 <BLOCKQUOTE><CODE>
 cd brltty-<EM>version</EM><BR>
 make uninstall
 </CODE></BLOCKQUOTE>
 </P>
-<P>C'est tout ce que vous avez à faire.
+<P>C'est tout ce que vous avez Ã  faire.
 Pour ceux qui veulent vraiment savoir ce qui se passe, voici
-maintenant les détails.</P>
+maintenant les dÃ©tails.</P>
 
 <H3><A NAME="build"></A> Options de compilation</H3>
 
-<P>La première étape dans la compilation de BRLTTY est de le configurer
-en fonction de votre système et/ou de vos besoins personnels. Cela se
-fait par l'exécution du script de <CODE>configuration</CODE> dans le
-répertoire racine de BRLTTY. Nous avons tenté de faire correspondre les paramètres
-par défaut suffisants à la plupart des cas communs, donc, en
+<P>La premiÃ¨re Ã©tape dans la compilation de BRLTTY est de le configurer
+en fonction de votre systÃ¨me et/ou de vos besoins personnels. Cela se
+fait par l'exÃ©cution du script de <CODE>configuration</CODE> dans le
+rÃ©pertoire racine de BRLTTY. Nous avons tentÃ© de faire correspondre les paramÃ¨tres
+par dÃ©faut suffisants Ã  la plupart des cas communs, donc, en
 supposant que vous ne tentez pas de faire quelque chose sortant de
 l'ordinaire, il se peut que vous n'ayez rien besoin d'autre
-que d'appeler ce script sans spécifier d'options.
+que d'appeler ce script sans spÃ©cifier d'options.
 <BLOCKQUOTE><CODE>
 ./configure
 </CODE></BLOCKQUOTE>
 
 Si toutefois vous avez des besoins particuliers, ou si vous
-êtes simplement un aventurier, vous devriez trouver plus loin quels sont
+Ãªtes simplement un aventurier, vous devriez trouver plus loin quels sont
 vos choix.
 <BLOCKQUOTE><CODE>
 ./configure --help
 </CODE></BLOCKQUOTE>
 
-Vous devriez aussi lire le fichier README dans le sous-répertoire
+Vous devriez aussi lire le fichier README dans le sous-rÃ©pertoire
 contenant le pilote pour votre afficheur braille pour toutes les
-instructions supplémentaires spécifiques.</P>
+instructions supplÃ©mentaires spÃ©cifiques.</P>
 
-<H3><A NAME="build-defaults"></A> Paramètres système par défaut</H3>
+<H3><A NAME="build-defaults"></A> ParamÃ¨tres systÃ¨me par dÃ©faut</H3>
 
 <P>
 <DL>
 <DT><B><CODE>--with-braille-driver=</CODE><EM>pilote</EM>
 <A NAME="build-braille-driver"></A> </B><DD>
-<P>Spécifie les pilotes des terminaux braille que vous voulez lier à
-l'exécutable de BRLTTY. Les pilotes qui ne figureront pas dans la
-liste de cette option seront compilés en tant qu'objets dynamiques
-et pourront toujours être sélectionnés au moment de l'exécution. Chaque
-pilote doit être identifié soit par les 2 lettres de son 
+<P>SpÃ©cifie les pilotes des terminaux braille que vous voulez lier Ã 
+l'exÃ©cutable de BRLTTY. Les pilotes qui ne figureront pas dans la
+liste de cette option seront compilÃ©s en tant qu'objets dynamiques
+et pourront toujours Ãªtre sÃ©lectionnÃ©s au moment de l'exÃ©cution. Chaque
+pilote doit Ãªtre identifiÃ© soit par les 2 lettres de son 
 <A HREF="BRLTTY-10.html#drivers">code     d'identification de pilote</A> ou par son vrai nom (complet ou
-abrégé). Ces noms et/ou identifiants de pilotes doivent être séparés les uns des
+abrÃ©gÃ©). Ces noms et/ou identifiants de pilotes doivent Ãªtre sÃ©parÃ©s les uns des
 autres par une simple virgule. Si un identifiant de pilote est
-précédé du signe moins (<CODE>-</CODE>), ce pilote est alors exclu de la
+prÃ©cÃ©dÃ© du signe moins (<CODE>-</CODE>), ce pilote est alors exclu de la
 compilation. Le premier pilote non-exclu devient le pilote par
-défaut. Il n'y a pas de pilote par défaut si vous n'utilisez pas
-cette option. Un des mots suivants peut être aussi utilisé comme
-opérateur pour l'option:</P>
+dÃ©faut. Il n'y a pas de pilote par dÃ©faut si vous n'utilisez pas
+cette option. Un des mots suivants peut Ãªtre aussi utilisÃ© comme
+opÃ©rateur pour l'option:</P>
 <P>(<CODE>-</CODE>),
 <DL>
 <DT><B>all</B><DD>
-<P>Lie tous les pilotes à l'exécutable. Ne les compile pas en
-tant qu'objets dynamiques. Vous pouvez spécifier ce mot comme
-élément terminant une liste de pilotes. C'est une façon de
-spécifier un pilote par défaut quand tous les pilotes seront
-compilés.</P>
+<P>Lie tous les pilotes Ã  l'exÃ©cutable. Ne les compile pas en
+tant qu'objets dynamiques. Vous pouvez spÃ©cifier ce mot comme
+Ã©lÃ©ment terminant une liste de pilotes. C'est une faÃ§on de
+spÃ©cifier un pilote par dÃ©faut quand tous les pilotes seront
+compilÃ©s.</P>
 <DT><B>-all</B><DD>
-<P>Ne compile que les pilotes qui ont été explicitement inclus
+<P>Ne compile que les pilotes qui ont Ã©tÃ© explicitement inclus
 par cette option.</P>
 <DT><B>no</B><DD>
-<P>Ne compile aucun pilote. Cela revient à spécifier
+<P>Ne compile aucun pilote. Cela revient Ã  spÃ©cifier
 <CODE>--without-braille-driver</CODE>.</P>
 <DT><B>yes</B><DD>
 <P>Compile tous les pilotes en tant qu'objets dynamiques. Ne les
-lie pas à l'exécutable. Cela revient à spécifier
+lie pas Ã  l'exÃ©cutable. Cela revient Ã  spÃ©cifier
 <CODE>--with-braille-driver</CODE>.</P>
 </DL>
 
 Voir la ligne 
 <A HREF="BRLTTY-4.html#configure-braille-driver">braille-driver</A> du fichier de configuration
 et l'option 
-<A HREF="BRLTTY-4.html#options-braille-driver">-b</A> de la ligne de commande pour une sélection à l'exécution.</P>
+<A HREF="BRLTTY-4.html#options-braille-driver">-b</A> de la ligne de commande pour une sÃ©lection Ã  l'exÃ©cution.</P>
 <DT><B><CODE>--with-braille-parameters=</CODE>[<EM>pilote</EM><CODE>:</CODE>]<EM>nom</EM><CODE>=</CODE><EM>valeur</EM><CODE>,</CODE>...
 <A NAME="build-braille-parameters"></A> </B><DD>
-<P>Spécifie les paramètres par défaut pour les pilotes des afficheurs
-braille. Si un même paramètre est spécifié plus d'une fois, sa
-valeur la plus à droite est prise en compte. Si le nom d'un
-paramètre est spécifique à un pilote, (voir la section
+<P>SpÃ©cifie les paramÃ¨tres par dÃ©faut pour les pilotes des afficheurs
+braille. Si un mÃªme paramÃ¨tre est spÃ©cifiÃ© plus d'une fois, sa
+valeur la plus Ã  droite est prise en compte. Si le nom d'un
+paramÃ¨tre est spÃ©cifique Ã  un pilote, (voir la section
 <A HREF="BRLTTY-10.html#drivers">Codes d'identification de pilotes</A>) cette
-valeur ne s'applique qu'à ce pilote; sinon, il
-s'applique à tous les pilotes. Pour une description des paramètres
-acceptés par un pilote particulier, reportez-vous à la
+valeur ne s'applique qu'Ã  ce pilote; sinon, il
+s'applique Ã  tous les pilotes. Pour une description des paramÃ¨tres
+acceptÃ©s par un pilote particulier, reportez-vous Ã  la
 documentation de ce pilote. Voir la ligne 
 <A HREF="BRLTTY-4.html#configure-braille-parameters">braille-parameters</A> du
 fichier de configuration et l'option 
 <A HREF="BRLTTY-4.html#options-braille-parameters">-B</A> de la ligne de commande
-pour la sélection à l'exécution.</P>
+pour la sÃ©lection Ã  l'exÃ©cution.</P>
 <DT><B><CODE>--with-braille-device=</CODE><EM>pilote</EM><CODE>,</CODE>...
 <A NAME="build-braille-device"></A> </B><DD>
-<P>Spécifie le port par défaut auquel l'afficheur braille est relié
+<P>SpÃ©cifie le port par dÃ©faut auquel l'afficheur braille est reliÃ©
 (voir la section 
-<A HREF="BRLTTY-12.html#operand-braille-device">Spécification du port braille</A>). Si vous ne spécifiez pas
-cette option, usb: est supposé si le support USB est disponible,
-bluetooth: est supposé si le support Bluetooth est disponible, et
-usb:,bluetooth: est supposé si les deux sont disponibles. Si ni le support
+<A HREF="BRLTTY-12.html#operand-braille-device">SpÃ©cification du port braille</A>). Si vous ne spÃ©cifiez pas
+cette option, usb: est supposÃ© si le support USB est disponible,
+bluetooth: est supposÃ© si le support Bluetooth est disponible, et
+usb:,bluetooth: est supposÃ© si les deux sont disponibles. Si ni le support
 USB ni le support Bluetooth ne sont disponibles, un
-chemin approprié pour le périphérique du port série primaire correspondant au système
-d'exploitation est supposé. Voir la ligne
+chemin appropriÃ© pour le pÃ©riphÃ©rique du port sÃ©rie primaire correspondant au systÃ¨me
+d'exploitation est supposÃ©. Voir la ligne
 <A HREF="BRLTTY-4.html#configure-braille-device">braille-device</A> du
 fichier de configuration et l'option 
 <A HREF="BRLTTY-4.html#options-braille-device">-d</A> de la ligne de commande
-pour la sélection à l'exécution.</P>
-<DT><B><CODE>--with-libbraille=</CODE><EM>répertoire</EM>
-Spécifie l'endroit où se trouve le paquet libbraille, et compile le pilote
+pour la sÃ©lection Ã  l'exÃ©cution.</P>
+<DT><B><CODE>--with-libbraille=</CODE><EM>rÃ©pertoire</EM>
+SpÃ©cifie l'endroit oÃ¹ se trouve le paquet libbraille, et compile le pilote
 pour l'afficheur braille libbraille (voir
 <A HREF="#restrictions-flite">Restrictions dans la compilation</A>).
-Un des mots suivants peut être aussi utilisé comme
-opérateur pour l'option:</B><DD>
+Un des mots suivants peut Ãªtre aussi utilisÃ© comme
+opÃ©rateur pour l'option:</B><DD>
 <P>(<CODE>-</CODE>),
 <DL>
 <DT><B>no</B><DD>
-<P>Ne compile pas le pilote. Cela revient à spécifier
+<P>Ne compile pas le pilote. Cela revient Ã  spÃ©cifier
 <CODE>--without-libbraille</CODE>.</P>
 
 <DT><B>yes</B><DD>
-<P>Compile le pilote si le paquet est présent dans <CODE>/usr</CODE>, 
+<P>Compile le pilote si le paquet est prÃ©sent dans <CODE>/usr</CODE>, 
 <CODE>/usr/local</CODE>, <CODE>/usr/local/Libbraille</CODE>,
 <CODE>/usr/local/libbraille</CODE>, <CODE>/opt/Libbraille</CODE>, ou
-<CODE>/opt/libbraille</CODE>. Cela revient à à spécifier <CODE>--with-libbraille</CODE>.</P>
+<CODE>/opt/libbraille</CODE>. Cela revient Ã  Ã  spÃ©cifier <CODE>--with-libbraille</CODE>.</P>
 </DL>
 </P>
 <DT><B><CODE>--with-text-table=</CODE><EM>fichier</EM>
 <A NAME="build-text-table"></A> </B><DD>
-<P>Spécifie la table de traduction de texte compilée en dur (celle par défaut) (voir la section 
+<P>SpÃ©cifie la table de traduction de texte compilÃ©e en dur (celle par dÃ©faut) (voir la section 
 <A HREF="BRLTTY-6.html#table-text">Tables de texte</A> pour plus de
-détails). La table spécifiée est liée au binaire BRLTTY et elle est utilisée
-au cas où la sélection automatique à partir de la locale échoue ou si la table
-demandée ne peut pas être chargée.
+dÃ©tails). La table spÃ©cifiÃ©e est liÃ©e au binaire BRLTTY et elle est utilisÃ©e
+au cas oÃ¹ la sÃ©lection automatique Ã  partir de la locale Ã©choue ou si la table
+demandÃ©e ne peut pas Ãªtre chargÃ©e.
 Vous pouvez fournir le chemin absolu d'une table hors de
 l'arborescence source. L'extension <CODE>.ttb</CODE> est facultative. Pour un
-nom de fichier simple, le préfixe <CODE>text.</CODE> est facultatif. Si
-vous ne spécifiez pas cette option, <CODE>en-nabcc</CODE>, une table commune (en
-Amérique du Nord) utilisant la variante 8 points du 
+nom de fichier simple, le prÃ©fixe <CODE>text.</CODE> est facultatif. Si
+vous ne spÃ©cifiez pas cette option, <CODE>en-nabcc</CODE>, une table commune (en
+AmÃ©rique du Nord) utilisant la variante 8 points du 
 <A HREF="BRLTTY-15.html#nabcc">North American Braille Computer Code</A>, est
-utilisée. Voir la ligne 
+utilisÃ©e. Voir la ligne 
 <A HREF="BRLTTY-4.html#configure-text-table">text-table</A> du fichier de configuration et l'option 
 <A HREF="BRLTTY-4.html#options-text-table">-t</A> en ligne de commande pour la
-sélection à l'exécution. Ce paramètre peut être modifié par la
-préférence 
+sÃ©lection Ã  l'exÃ©cution. Ce paramÃ¨tre peut Ãªtre modifiÃ© par la
+prÃ©fÃ©rence 
 <A HREF="BRLTTY-5.html#preference-text-table">Text Table</A>.</P>
 <DT><B><CODE>--with-attributes-table=</CODE><EM>fichier</EM>
 <A NAME="build-attributes-table"></A> </B><DD>
-<P>Spécifie la table des attributs compilée en dur (celle par défaut) (voir la section
+<P>SpÃ©cifie la table des attributs compilÃ©e en dur (celle par dÃ©faut) (voir la section
 <A HREF="BRLTTY-6.html#table-attributes">Tables d'attributs</A>
-pour plus de détails). La table spécifiée est liée au binaire BRLTTY et elle est utilisée
-au cas où la sélection automatique à partir de la locale échoue ou si la table
-demandée ne peut pas être chargée.
+pour plus de dÃ©tails). La table spÃ©cifiÃ©e est liÃ©e au binaire BRLTTY et elle est utilisÃ©e
+au cas oÃ¹ la sÃ©lection automatique Ã  partir de la locale Ã©choue ou si la table
+demandÃ©e ne peut pas Ãªtre chargÃ©e.
 Vous pouvez fournir le chemin absolu d'une
 table hors de l'arborescence source.  L'extension <CODE>.atb</CODE> est
-facultative. Si vous ne spécifiez pas cette option,
-<CODE>attributes</CODE> est alors utilisé. Changez cette option en
+facultative. Si vous ne spÃ©cifiez pas cette option,
+<CODE>attributes</CODE> est alors utilisÃ©. Changez cette option en
 <CODE>attrib</CODE> pour maintenir l'ancienne forme. Voir la ligne
 <A HREF="BRLTTY-4.html#configure-attributes-table">attributes-table</A> du
 fichier de configuration et l'option 
 <A HREF="BRLTTY-4.html#options-attributes-table">-a</A> en ligne de commande pour
-la sélection à l'exécution. Ce paramètre peut être modifié par la
-préférence 
+la sÃ©lection Ã  l'exÃ©cution. Ce paramÃ¨tre peut Ãªtre modifiÃ© par la
+prÃ©fÃ©rence 
 <A HREF="BRLTTY-5.html#preference-attributes-table">Attributes     Table</A>.</P>
 <DT><B><CODE>--with-speech-driver=</CODE><EM>pilote</EM>
 <A NAME="build-speech-driver"></A> </B><DD>
-<P>Spécifie les pilotes de synthèse vocale que vous voulez lier à
-l'exécutable de BRLTTY. Les pilotes qui ne figureront pas dans la
-liste de cette option seront compilés en tant qu'objets dynamiques
-et pourront toujours être sélectionnés à l'exécution. Chaque
-pilote doit être identifié soit par les 2 lettres de son 
+<P>SpÃ©cifie les pilotes de synthÃ¨se vocale que vous voulez lier Ã 
+l'exÃ©cutable de BRLTTY. Les pilotes qui ne figureront pas dans la
+liste de cette option seront compilÃ©s en tant qu'objets dynamiques
+et pourront toujours Ãªtre sÃ©lectionnÃ©s Ã  l'exÃ©cution. Chaque
+pilote doit Ãªtre identifiÃ© soit par les 2 lettres de son 
 <A HREF="BRLTTY-10.html#drivers">code d'identification de pilote</A> ou par son
-vrai nom (complet ou abrégé). Ces noms et/ou les identifiants de pilotes doivent être
-séparés les uns des autres par une simple virgule. Si un
-identifiant de pilote est précédé du signe moins (<CODE>-</CODE>), ce
+vrai nom (complet ou abrÃ©gÃ©). Ces noms et/ou les identifiants de pilotes doivent Ãªtre
+sÃ©parÃ©s les uns des autres par une simple virgule. Si un
+identifiant de pilote est prÃ©cÃ©dÃ© du signe moins (<CODE>-</CODE>), ce
 pilote est alors exclu de la compilation. Un des mots
-suivants peut aussi être utilisé comme opérateur pour l'option:
+suivants peut aussi Ãªtre utilisÃ© comme opÃ©rateur pour l'option:
 <DL>
 <DT><B>all</B><DD>
-<P>Lie tous les pilotes à l'exécutable. Ne les compile pas en
-tant qu'objets dynamiques. Vous pouvez spécifier ce mot comme
-élément terminant une liste de pilotes. C'est une façon de
-spécifier un pilote par défaut quand tous les pilotes seront
-compilés.</P>
+<P>Lie tous les pilotes Ã  l'exÃ©cutable. Ne les compile pas en
+tant qu'objets dynamiques. Vous pouvez spÃ©cifier ce mot comme
+Ã©lÃ©ment terminant une liste de pilotes. C'est une faÃ§on de
+spÃ©cifier un pilote par dÃ©faut quand tous les pilotes seront
+compilÃ©s.</P>
 <DT><B>-all</B><DD>
-<P>Ne compile que les pilotes qui ont été explicitement inclus
+<P>Ne compile que les pilotes qui ont Ã©tÃ© explicitement inclus
 par cette option.</P>
 <DT><B>no</B><DD>
-<P>Ne compile aucun pilote. Cela revient à spécifier
+<P>Ne compile aucun pilote. Cela revient Ã  spÃ©cifier
 <CODE>--without-speech-driver</CODE>.</P>
 <DT><B>yes</B><DD>
 <P>Compile tous les pilotes en tant qu'objets dynamiques. Ne les
-lie pas à l'exécutable. Cela revient à spécifier
+lie pas Ã  l'exÃ©cutable. Cela revient Ã  spÃ©cifier
 <CODE>--with-speech-driver</CODE>.</P>
 </DL>
 
 Voir la ligne 
 <A HREF="BRLTTY-4.html#configure-speech-driver">speech-driver</A> du fichier de configuration et
 l'option 
-<A HREF="BRLTTY-4.html#options-speech-driver">-s</A> de la ligne de commande pour une sélection à l'exécution.</P>
+<A HREF="BRLTTY-4.html#options-speech-driver">-s</A> de la ligne de commande pour une sÃ©lection Ã  l'exÃ©cution.</P>
 <DT><B><CODE>--with-speech-parameters=</CODE>[<EM>pilote</EM><CODE>:</CODE>]<EM>nom</EM><CODE>=</CODE><EM>valeur</EM><CODE>,</CODE>...
 <A NAME="build-speech-parameters"></A> </B><DD>
-<P>Spécifie les paramètres par défaut pour les pilotes de synthèse
-vocale. Si un même paramètre est spécifié plus d'une fois, sa
-valeur la plus à droite est prise en compte. Si le nom d'un
-paramètre est spécifique à un pilote, (voir la section
+<P>SpÃ©cifie les paramÃ¨tres par dÃ©faut pour les pilotes de synthÃ¨se
+vocale. Si un mÃªme paramÃ¨tre est spÃ©cifiÃ© plus d'une fois, sa
+valeur la plus Ã  droite est prise en compte. Si le nom d'un
+paramÃ¨tre est spÃ©cifique Ã  un pilote, (voir la section
 <A HREF="BRLTTY-10.html#drivers">Codes d'identification de pilotes</A>) cette valeur ne s'applique
-qu'à ce pilote; sinon, il s'applique à tous les
-pilotes. Pour une description des paramètres acceptés par un
-pilote spécifique, reportez-vous à la documentation de ce
+qu'Ã  ce pilote; sinon, il s'applique Ã  tous les
+pilotes. Pour une description des paramÃ¨tres acceptÃ©s par un
+pilote spÃ©cifique, reportez-vous Ã  la documentation de ce
 pilote. Voir la ligne 
 <A HREF="BRLTTY-4.html#configure-speech-parameters">speech-parameters</A> du fichier de
 configuration et l'option 
 <A HREF="BRLTTY-4.html#options-speech-parameters">-S</A> de la ligne de commande pour la
-sélection à l'exécution.</P>
+sÃ©lection Ã  l'exÃ©cution.</P>
 <DT><B><CODE>--with-flite=</CODE><EM>directory</EM>
 <A NAME="build-flite"></A> </B><DD>
-<P>Spécifie l'emplacement d'installation de FestivalLite
-et compile le pilote pour cette synthèse vocale
+<P>SpÃ©cifie l'emplacement d'installation de FestivalLite
+et compile le pilote pour cette synthÃ¨se vocale
 (voir 
 <A HREF="#restrictions-flite">Restrictions dans la compilation</A> L'un des
-mots suivants peut aussi être utilisé comme opérateur de cette
+mots suivants peut aussi Ãªtre utilisÃ© comme opÃ©rateur de cette
 option:
 <DL>
 <DT><B>no</B><DD>
 <P>Ne compile pas le pilote.
-Cela revient à spécifier <CODE>--without-flite</CODE>.</P>
+Cela revient Ã  spÃ©cifier <CODE>--without-flite</CODE>.</P>
 <DT><B>yes</B><DD>
 <P>Compile le pilote si le paquet existe dans <CODE>/usr</CODE>,
 <CODE>/usr/local</CODE>, <CODE>/usr/local/FestivalLite</CODE>,
 <CODE>/usr/local/flite</CODE>, <CODE>/opt/FestivalLite</CODE> ou
-<CODE>/opt/flite</CODE>. Cela revient à
-spécifier<CODE>--with-flite</CODE>.</P>
+<CODE>/opt/flite</CODE>. Cela revient Ã 
+spÃ©cifier<CODE>--with-flite</CODE>.</P>
 </DL>
 </P>
 
 <DT><B><CODE>--with-flite-language=</CODE><EM>language</EM>
 <A NAME="build-flite-language"></A> </B><DD>
-<P>Spécifie la langue qu'utilisera le moteur de FestivalLite.
-La langue utilisée par défaut est <CODE>l'anglais</CODE>.</P>
+<P>SpÃ©cifie la langue qu'utilisera le moteur de FestivalLite.
+La langue utilisÃ©e par dÃ©faut est <CODE>l'anglais</CODE>.</P>
 <DT><B><CODE>--with-flite-lexicon=</CODE><EM>lexicon</EM>
 <A NAME="build-flite-lexicon"></A> </B><DD>
-<P>Spécifie le dictionnaire que le moteur de FestivalLite
-utilisera. Le dictionnaire par défaut est <CODE>cmulex</CODE>.</P>
+<P>SpÃ©cifie le dictionnaire que le moteur de FestivalLite
+utilisera. Le dictionnaire par dÃ©faut est <CODE>cmulex</CODE>.</P>
 <DT><B><CODE>--with-flite-voice=</CODE><EM>voice</EM>
 <A NAME="build-flite-voice"></A> </B><DD>
-<P>Spécifie la personne que le moteur de FestivalLite doit utiliser.
-La voix par défaut est <CODE>cmu_us_kal16</CODE>.</P>
+<P>SpÃ©cifie la personne que le moteur de FestivalLite doit utiliser.
+La voix par dÃ©faut est <CODE>cmu_us_kal16</CODE>.</P>
 <DT><B><CODE>--with-mikropuhe=</CODE><EM>directory</EM>
 <A NAME="build-mikropuhe"></A> </B><DD>
-<P>Spécifie l'emplacement d'installation du paquet
-Mickropuhe et compile le pilote pour la synthèse
+<P>SpÃ©cifie l'emplacement d'installation du paquet
+Mickropuhe et compile le pilote pour la synthÃ¨se
 vocale Mikropuhe (voir 
 <A HREF="#restrictions-mikropuhe">Restrictions dans la compilation</A>). L'un
-des mots suivants peut aussi être utilisé comme opérateur de cette
+des mots suivants peut aussi Ãªtre utilisÃ© comme opÃ©rateur de cette
 option:
 <DL>
 <DT><B>no</B><DD>
 <P>Ne compile pas le pilote.
-Cela revient à spécifier <CODE>--without-mikropuhe</CODE>.</P>
+Cela revient Ã  spÃ©cifier <CODE>--without-mikropuhe</CODE>.</P>
 <DT><B>yes</B><DD>
 <P>Compile le pilote si le paquet existe dans <CODE>/usr</CODE>, 
 <CODE>/usr/local</CODE>, <CODE>/usr/local</CODE>, <CODE>/usr/local/Mikropuhe</CODE>,
 <CODE>/usr/local/mikropuhe</CODE>, <CODE>/opt/Mikropuhe</CODE> 
-ou <CODE>/opt/mikropuhe</CODE>. Cela revient à spécifier 
+ou <CODE>/opt/mikropuhe</CODE>. Cela revient Ã  spÃ©cifier 
 <CODE>--with-mikropuhe</CODE>.</P>
 </DL>
 </P>
 <DT><B><CODE>--with-speechd=</CODE><EM>repertoire</EM>
 <A NAME="build-theta"></A> </B><DD>
-<P>Spécifie l'endroit où est installé le paquet de la synthèse vocale speech-dispatcher
-(multiplexeur de synthèse vocale) et compile le pilote pour speech-dispatcher.
-L'un des mots suivants peut aussi être utilisé comme opérateur de cette 
+<P>SpÃ©cifie l'endroit oÃ¹ est installÃ© le paquet de la synthÃ¨se vocale speech-dispatcher
+(multiplexeur de synthÃ¨se vocale) et compile le pilote pour speech-dispatcher.
+L'un des mots suivants peut aussi Ãªtre utilisÃ© comme opÃ©rateur de cette 
 option:
 <DL>
 <DT><B>no</B><DD>
 <P>Ne compile pas le pilote.
-Cela revient à spécifier <CODE>--without-speechd</CODE>.</P>
+Cela revient Ã  spÃ©cifier <CODE>--without-speechd</CODE>.</P>
 <DT><B>yes</B><DD>
 <P>Compile le pilote si le paquet existe dans <CODE>/usr</CODE>, <CODE>/usr/local</CODE>,
 <CODE>/usr/local/speech-dispatcher</CODE>, <CODE>/usr/local/speechd</CODE>,
 <CODE>/opt/speech-dispatcher</CODE>, ou <CODE>/opt/speechd</CODE>. Cela revient
-à spécifier <CODE>--with-speechd</CODE>.</P>
+Ã  spÃ©cifier <CODE>--with-speechd</CODE>.</P>
 </DL>
     </P>
 <DT><B><CODE>--with-swift=</CODE><EM>repertoire</EM>
 <A NAME="build-theta"></A> </B><DD>
-<P>Spécifie l'endroit où est installé le paquet de la synthèse vocale, et
-compile le pilote pour la synthèse vocale Swift.
-L'un des mots suivants peut aussi être utilisé comme opérateur de cette 
+<P>SpÃ©cifie l'endroit oÃ¹ est installÃ© le paquet de la synthÃ¨se vocale, et
+compile le pilote pour la synthÃ¨se vocale Swift.
+L'un des mots suivants peut aussi Ãªtre utilisÃ© comme opÃ©rateur de cette 
 option:
 <DL>
 <DT><B>no</B><DD>
 <P>Ne compile pas le pilote.
-Cela revient à spécifier <CODE>--without-swift</CODE>.</P>
+Cela revient Ã  spÃ©cifier <CODE>--without-swift</CODE>.</P>
 <DT><B>yes</B><DD>
 <P>Compile le pilote si le paquet existe dans <CODE>/usr</CODE>, <CODE>/usr/local</CODE>,
 <CODE>/usr/local/Swift</CODE>, <CODE>/usr/local/swift</CODE>,
 <CODE>/opt/Swift</CODE>, ou <CODE>/opt/swift</CODE>. Cela revient
-à spécifier <CODE>--with-swift</CODE>.</P>
+Ã  spÃ©cifier <CODE>--with-swift</CODE>.</P>
 </DL>
     </P>
 <DT><B><CODE>--with-theta=</CODE><EM>repertoire</EM>
 <A NAME="build-theta"></A> </B><DD>
-<P>Spécifie l'emplacement d'installation du paquet Theta
-et compile le pilote pour la synthèse vocale Theta
+<P>SpÃ©cifie l'emplacement d'installation du paquet Theta
+et compile le pilote pour la synthÃ¨se vocale Theta
 (voir 
 <A HREF="#restrictions-theta">Restrictions dans la compilation</A>). L'un des mots
-suivants peut aussi être utilisé comme opérateur de cette option:
+suivants peut aussi Ãªtre utilisÃ© comme opÃ©rateur de cette option:
 <DL>
 <DT><B>no</B><DD>
 <P>Ne compile pas le pilote.
-Cela revient à spécifier <CODE>--without-theta</CODE>.</P>
+Cela revient Ã  spÃ©cifier <CODE>--without-theta</CODE>.</P>
 <DT><B>yes</B><DD>
 <P>Compile le pilote si le paquet existe dans <CODE>/usr</CODE>, <CODE>/usr/local</CODE>,
 <CODE>/usr/local/Theta</CODE>, <CODE>/usr/local/theta</CODE>,
 <CODE>/opt/Theta</CODE>, ou <CODE>/opt/theta</CODE>.
-Cela revient à spécifier <CODE>--with-theta</CODE>.</P>
+Cela revient Ã  spÃ©cifier <CODE>--with-theta</CODE>.</P>
 </DL>
 </P>
 <DT><B><CODE>--with-screen-driver=</CODE><EM>pilote</EM>
 <A NAME="build-screen-driver"></A> </B><DD>
-<P>Spécifie les pilotes pour l'écran qui seront liés à l'exécutable BRLTTY. 
-Ceux qui ne sont pas mentionnés dans cette option sont compilés en tant
-qu'objets dynamiques et peuvent être choisis lors de
-l'exécution. Chaque pilote doit être identifié soit par les deux lettres de
-son code d'identification (voir la section Ecrans supportés) soit par
-son nom  (complet ou abrégé). Vous devez séparer les identifiants des
+<P>SpÃ©cifie les pilotes pour l'Ã©cran qui seront liÃ©s Ã  l'exÃ©cutable BRLTTY. 
+Ceux qui ne sont pas mentionnÃ©s dans cette option sont compilÃ©s en tant
+qu'objets dynamiques et peuvent Ãªtre choisis lors de
+l'exÃ©cution. Chaque pilote doit Ãªtre identifiÃ© soit par les deux lettres de
+son code d'identification (voir la section Ecrans supportÃ©s) soit par
+son nom  (complet ou abrÃ©gÃ©). Vous devez sÃ©parer les identifiants des
 pilotes les uns des autres par une virgule. Si l'identifiant d'un pilote
-est précédé du signe moins (<CODE>-</CODE>), il est exclu de la compilation.
-Un des mots suivants peut être aussi utilisé comme
-opérateur pour l'option:</P>
+est prÃ©cÃ©dÃ© du signe moins (<CODE>-</CODE>), il est exclu de la compilation.
+Un des mots suivants peut Ãªtre aussi utilisÃ© comme
+opÃ©rateur pour l'option:</P>
 <P>(<CODE>-</CODE>),
 <DL>
 <DT><B>all</B><DD>
-<P>Lie tous les pilotes à l'exécutable. Ne les compile pas en
-tant qu'objets dynamiques. Vous pouvez spécifier ce mot comme
-élément terminant une liste de pilotes. C'est la façon de
-spécifier un pilote par défaut quand tous les pilotes seront
-compilés.</P>
+<P>Lie tous les pilotes Ã  l'exÃ©cutable. Ne les compile pas en
+tant qu'objets dynamiques. Vous pouvez spÃ©cifier ce mot comme
+Ã©lÃ©ment terminant une liste de pilotes. C'est la faÃ§on de
+spÃ©cifier un pilote par dÃ©faut quand tous les pilotes seront
+compilÃ©s.</P>
 <DT><B>-all</B><DD>
-<P>Ne compile que les pilotes qui ont été explicitement inclus
+<P>Ne compile que les pilotes qui ont Ã©tÃ© explicitement inclus
 par cette option.</P>
 <DT><B>no</B><DD>
-<P>Ne compile aucun pilote. Cela revient à spécifier
+<P>Ne compile aucun pilote. Cela revient Ã  spÃ©cifier
 <CODE>--without-screen-driver</CODE>.</P>
 <DT><B>yes</B><DD>
 <P>Compile tous les pilotes en tant qu'objets dynamiques. Ne les
-lie pas à l'exécutable. Cela revient à spécifier
+lie pas Ã  l'exÃ©cutable. Cela revient Ã  spÃ©cifier
 <CODE>--with-braille-driver</CODE>.</P>
 </DL>
 </P>
-<P>Le premier pilote non exclu devient celui par défaut. 
-Si cette option n'est pas spécifiée, une sélection adaptée au
-système d'exploitation est faite. Si un pilote spécifique au
-système d'exploitation en cours est fiable, il est utilisé. Sinon,
-<CODE>sc</CODE> est utilisé.</P>
+<P>Le premier pilote non exclu devient celui par dÃ©faut. 
+Si cette option n'est pas spÃ©cifiÃ©e, une sÃ©lection adaptÃ©e au
+systÃ¨me d'exploitation est faite. Si un pilote spÃ©cifique au
+systÃ¨me d'exploitation en cours est fiable, il est utilisÃ©. Sinon,
+<CODE>sc</CODE> est utilisÃ©.</P>
 <P>Voir la ligne 
 <A HREF="BRLTTY-4.html#configure-screen-driver">screen-driver</A> du fichier de configuration
 et l'option 
-<A HREF="BRLTTY-4.html#options-screen-driver">-x</A> de la ligne de commande pour une sélection à l'exécution.</P>
+<A HREF="BRLTTY-4.html#options-screen-driver">-x</A> de la ligne de commande pour une sÃ©lection Ã  l'exÃ©cution.</P>
 <DT><B><CODE>--with-screen-parameters=</CODE><EM>name</EM><CODE>=</CODE><EM>valeur</EM><CODE>,</CODE>...
 <A NAME="build-screen-parameters"></A> </B><DD>
-<P>Spécifie les paramètres par défaut pour le pilote d'écran. Si le
-même paramètre est spécifié plus d'une fois, c'est sa valeur la
-plus à droite qui est retenue. Si le nom d'un paramètre est affecté à un
-pilote (voir section Pilotes d'écran supportés) alors ce paramètre ne
-s'applique qu'au pilote; sinon il s'applique à tous les pilotes.
-Pour une description des paramètres
-acceptés par un pilote spécifique, reportez-vous à la
+<P>SpÃ©cifie les paramÃ¨tres par dÃ©faut pour le pilote d'Ã©cran. Si le
+mÃªme paramÃ¨tre est spÃ©cifiÃ© plus d'une fois, c'est sa valeur la
+plus Ã  droite qui est retenue. Si le nom d'un paramÃ¨tre est affectÃ© Ã  un
+pilote (voir section Pilotes d'Ã©cran supportÃ©s) alors ce paramÃ¨tre ne
+s'applique qu'au pilote; sinon il s'applique Ã  tous les pilotes.
+Pour une description des paramÃ¨tres
+acceptÃ©s par un pilote spÃ©cifique, reportez-vous Ã  la
 documentation de celui-ci. Voir la ligne 
 <A HREF="BRLTTY-4.html#configure-screen-parameters">screen-parameters</A> du
 fichier de configuration et l'option 
 <A HREF="BRLTTY-4.html#options-screen-parameters">-X</A> en ligne de commande
-pour la sélection à l'exécution.</P>
+pour la sÃ©lection Ã  l'exÃ©cution.</P>
 
 <DT><B><CODE>--with-usb-paquet=</CODE><EM>paquet</EM><CODE>,</CODE>...
 <A NAME="build-usb-paquet"></A> </B><DD>
-<P>Spécifie le paquet qui sera utilisé pour l'E/S USB.
-Vous devez spéarer les noms de paquets les uns des
-autres par une virgule, ils sont traités de la gauche vers la droite.
-Le premier installé sur le système est sélectionné.
-Les paquets suivants sont supportés:
+<P>SpÃ©cifie le paquet qui sera utilisÃ© pour l'E/S USB.
+Vous devez spÃ©arer les noms de paquets les uns des
+autres par une virgule, ils sont traitÃ©s de la gauche vers la droite.
+Le premier installÃ© sur le systÃ¨me est sÃ©lectionnÃ©.
+Les paquets suivants sont supportÃ©s:
 <OL>
 <LI>libusb</LI>
 <LI>libusb-1.0</LI>
 </OL>
 
-Un des mots suivants peut être aussi utilisé comme opérande pour cette
+Un des mots suivants peut Ãªtre aussi utilisÃ© comme opÃ©rande pour cette
 option:
 <DL>
 <DT><B>no</B><DD>
 <P>Ne supporte pas l'E/S USB.
-Cela revient à spécifier <CODE>--without-usb-paquet</CODE>.</P>
+Cela revient Ã  spÃ©cifier <CODE>--without-usb-paquet</CODE>.</P>
 <DT><B>yes</B><DD>
 <P>Utiliser le support natif pour l'E/S USB.
 Si un support natif n'est pas disponible pour la
-plateforme actuelle, utiliser alors le premier paquet supporté
-disponible (comme pour l'ordre spécifié ci-dessus).
-Cela revient à spécifier <CODE>--with-usb-paquet</CODE>.</P>
+plateforme actuelle, utiliser alors le premier paquet supportÃ©
+disponible (comme pour l'ordre spÃ©cifiÃ© ci-dessus).
+Cela revient Ã  spÃ©cifier <CODE>--with-usb-paquet</CODE>.</P>
 </DL>
 </P>
 <DT><B><CODE>--with-bluetooth-paquet=</CODE><EM>paquet</EM><CODE>,</CODE>...
 <A NAME="build-bluetooth-paquet"></A> </B><DD>
-<P>Spécifie le paquet qui sera utilisé pour l'E/S Bluetooth.
-Vous devez spéarer les noms de paquets les uns des
-autres par une virgule, ils sont traités de la gauche vers la droite.
-Le premier installé sur le système est sélectionné.
-Les paquets suivants sont supportés:
+<P>SpÃ©cifie le paquet qui sera utilisÃ© pour l'E/S Bluetooth.
+Vous devez spÃ©arer les noms de paquets les uns des
+autres par une virgule, ils sont traitÃ©s de la gauche vers la droite.
+Le premier installÃ© sur le systÃ¨me est sÃ©lectionnÃ©.
+Les paquets suivants sont supportÃ©s:
 <OL>
-<LI>(aucun paquet n'est actuellement supporté)</LI>
+<LI>(aucun paquet n'est actuellement supportÃ©)</LI>
 </OL>
 
-Un des mots suivants peut être aussi utilisé comme opérande pour cette
+Un des mots suivants peut Ãªtre aussi utilisÃ© comme opÃ©rande pour cette
 option:
 <DL>
 <DT><B>no</B><DD>
 <P>Ne supporte pas l'E/S Bluetooth.
-Cela revient à spécifier <CODE>--without-bluetooth-paquet</CODE>.</P>
+Cela revient Ã  spÃ©cifier <CODE>--without-bluetooth-paquet</CODE>.</P>
 <DT><B>yes</B><DD>
 <P>Utiliser le support natif pour l'E/S Bluetooth.
 Si un support natif n'est pas disponible pour la
-plateforme actuelle, utiliser alors le premier paquet supporté
-disponible (comme pour l'ordre spécifié ci-dessus).
-Cela revient à spécifier <CODE>--with-bluetooth-paquet</CODE>.</P>
+plateforme actuelle, utiliser alors le premier paquet supportÃ©
+disponible (comme pour l'ordre spÃ©cifiÃ© ci-dessus).
+Cela revient Ã  spÃ©cifier <CODE>--with-bluetooth-paquet</CODE>.</P>
 </DL>
 </P>
 
 </DL>
 </P>
 
-<H3><A NAME="hierarchy"></A> Spécification du répertoire</H3>
+<H3><A NAME="hierarchy"></A> SpÃ©cification du rÃ©pertoire</H3>
 
 <P>
 <DL>
 <DT><B><CODE>--with-execute-root=</CODE><EM>repertoire</EM>
 <A NAME="build-execute-root"></A> </B><DD>
-<P>Spécifie le répertoire dans lequel la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A> aura sa racine lors de
-l'exécution. Vous devriez fournir un chemin absolu. Si cette
-option n'est pas spécifiée, le répertoire racine du système est
-utilisé. Utilisez cette option si vous avez besoin d'installer les
-exécutables de BRLTTY dans un emplacement non standard. Par
+<P>SpÃ©cifie le rÃ©pertoire dans lequel la 
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A> aura sa racine lors de
+l'exÃ©cution. Vous devriez fournir un chemin absolu. Si cette
+option n'est pas spÃ©cifiÃ©e, le rÃ©pertoire racine du systÃ¨me est
+utilisÃ©. Utilisez cette option si vous avez besoin d'installer les
+exÃ©cutables de BRLTTY dans un emplacement non standard. Par
 exemple, vous devez utiliser cette option si vous voulez avoir
-plusieurs versions de BRLTTY installées en même temps (voir la
+plusieurs versions de BRLTTY installÃ©es en mÃªme temps (voir la
 section 
-<A HREF="BRLTTY-7.html#multiple">Installiation de plusieurs     versions</A> pour un exemple de cette opération).</P>
+<A HREF="BRLTTY-7.html#multiple">Installiation de plusieurs     versions</A> pour un exemple de cette opÃ©ration).</P>
 <DT><B><CODE>--with-install-root=</CODE><EM>repertoire</EM>
 <A NAME="build-install-root"></A> </B><DD>
-<P>Spécifie le répertoire où la 
-<A HREF="#hierarchy">hiérarchie     des fichiers installés</A> sera installée. Vous devriez
-fournir un chemin absolu. Si cette option n'est pas spécifiée, la racine
-d'exécution du paquet (voir l'option de compilation 
+<P>SpÃ©cifie le rÃ©pertoire oÃ¹ la 
+<A HREF="#hierarchy">hiÃ©rarchie     des fichiers installÃ©s</A> sera installÃ©e. Vous devriez
+fournir un chemin absolu. Si cette option n'est pas spÃ©cifiÃ©e, la racine
+d'exÃ©cution du paquet (voir l'option de compilation 
 <A HREF="#build-execute-root">--with-execute-root</A>) est
-utilisée. Ce répertoire n'est utilisé que par 
+utilisÃ©e. Ce rÃ©pertoire n'est utilisÃ© que par 
 <A HREF="#make-install">make-install</A> et 
 <A HREF="#make-uninstall">make-uninstall</A>.
 Utilisez cette option si vous avez besoin d'installer
-BRLTTY dans un répertoire différent de celui où il sera exécuté en
-définitive. Par exemple, vous avez besoin d'utiliser cette
-caractéristique si vous compilez BRLTTY sur un système pour
+BRLTTY dans un rÃ©pertoire diffÃ©rent de celui oÃ¹ il sera exÃ©cutÃ© en
+dÃ©finitive. Par exemple, vous avez besoin d'utiliser cette
+caractÃ©ristique si vous compilez BRLTTY sur un systÃ¨me pour
 l'utiliser sur un autre.</P>
 <DT><B><CODE>--prefix=</CODE><EM>repertoire</EM>
 <A NAME="build-portable-root"></A> </B><DD>
-<P>Indique le répertoire dans lequel la 
-<A HREF="#hierarchy">hiérarchie des fichiers     installés</A> constitue le répertoire par défaut, indépendant de
-l'architecture, et qui sera utilisé comme répertoire
-racine. Ces sous-répertoires comprennent les dossiers:
+<P>Indique le rÃ©pertoire dans lequel la 
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers     installÃ©s</A> constitue le rÃ©pertoire par dÃ©faut, indÃ©pendant de
+l'architecture, et qui sera utilisÃ© comme rÃ©pertoire
+racine. Ces sous-rÃ©pertoires comprennent les dossiers:
 <UL>
 <LI>le 
-<A HREF="#build-data-directory">répertoire writable</A></LI>
+<A HREF="#build-data-directory">rÃ©pertoire writable</A></LI>
 <LI>le 
-<A HREF="#build-data-directory">répertoire data</A></LI>
+<A HREF="#build-data-directory">rÃ©pertoire data</A></LI>
 <LI>le 
-<A HREF="#build-configuration-directory">répertoire configuration</A></LI>
+<A HREF="#build-configuration-directory">rÃ©pertoire configuration</A></LI>
 <LI>le 
-<A HREF="#build-manpage-directory">répertoire manpage</A></LI>
+<A HREF="#build-manpage-directory">rÃ©pertoire manpage</A></LI>
 <LI>le 
-<A HREF="#build-include-directory">répertoire include</A></LI>
+<A HREF="#build-include-directory">rÃ©pertoire include</A></LI>
 </UL>
 
-Vous devriez fournir un chemin absolu. Si vous ne spécifiez pas
-cette option, c'est le répertoire racine du système qui est
-utilisé. Ce répertoire est lié à celui précisé par l'option de
+Vous devriez fournir un chemin absolu. Si vous ne spÃ©cifiez pas
+cette option, c'est le rÃ©pertoire racine du systÃ¨me qui est
+utilisÃ©. Ce rÃ©pertoire est liÃ© Ã  celui prÃ©cisÃ© par l'option de
 compilation 
 <A HREF="#build-execute-root">--with-execute-root</A>.</P>
-<DT><B><CODE>--with-writable-directory=</CODE><EM>répertoire</EM>
+<DT><B><CODE>--with-writable-directory=</CODE><EM>rÃ©pertoire</EM>
 <A NAME="build-architecture-root"></A> </B><DD>
-<P>Spécifie le répertoire dans lequel la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A>
-pourra être écrite. Vous devriez fournir un chemin absolu. Un des mots
-suivants peut être utilisé comme opérateur pour cette option.</P>
+<P>SpÃ©cifie le rÃ©pertoire dans lequel la 
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A>
+pourra Ãªtre Ã©crite. Vous devriez fournir un chemin absolu. Un des mots
+suivants peut Ãªtre utilisÃ© comme opÃ©rateur pour cette option.</P>
 <P>(<CODE>-</CODE>),
 <DL>
 <DT><B>no</B><DD>
-<P>Ne définit pas de répertoire inscriptible (writable). Cela revient à
-spécifier
+<P>Ne dÃ©finit pas de rÃ©pertoire inscriptible (writable). Cela revient Ã 
+spÃ©cifier
 <CODE>--without-writable-directory</CODE>.</P>
 <DT><B>yes</B><DD>
-<P>Utilise l'endroit par défaut. Cela revient à spécifier
+<P>Utilise l'endroit par dÃ©faut. Cela revient Ã  spÃ©cifier
 <CODE>--with-writable-directory</CODE>.</P>
 </DL>
 
-Si vous ne spécifiez pas cette option, le sous-répertoire autorisé en rw
-(lecture/écriture) dans le dossier spécifié par l'option --with-library-directory
-est supposé. Le répertoire est créé s'il n'existe pas.</P>
+Si vous ne spÃ©cifiez pas cette option, le sous-rÃ©pertoire autorisÃ© en rw
+(lecture/Ã©criture) dans le dossier spÃ©cifiÃ© par l'option --with-library-directory
+est supposÃ©. Le rÃ©pertoire est crÃ©Ã© s'il n'existe pas.</P>
 
-<DT><B><CODE>--exec-prefix=</CODE><EM>répertoire</EM>
+<DT><B><CODE>--exec-prefix=</CODE><EM>rÃ©pertoire</EM>
 <A NAME="build-architecture-root"></A> </B><DD>
-<P>Spécifie le répertoire de la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A>
-où les répertoires par défaut pour les
-fichiers dépendant de l'architecture doivent être placés.
-Ces répertoires incluent:
+<P>SpÃ©cifie le rÃ©pertoire de la 
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A>
+oÃ¹ les rÃ©pertoires par dÃ©faut pour les
+fichiers dÃ©pendant de l'architecture doivent Ãªtre placÃ©s.
+Ces rÃ©pertoires incluent:
 <UL>
 <LI>le 
-<A HREF="#build-program-directory">répertoire programme</A></LI>
+<A HREF="#build-program-directory">rÃ©pertoire programme</A></LI>
 <LI>le 
-<A HREF="#build-library-directory">répertoire des bibliothèques compilées</A></LI>
+<A HREF="#build-library-directory">rÃ©pertoire des bibliothÃ¨ques compilÃ©es</A></LI>
 <LI>le 
-<A HREF="#build-api-directory">répertoire d'API compilé</A></LI>
+<A HREF="#build-api-directory">rÃ©pertoire d'API compilÃ©</A></LI>
 </UL>
 
-Vous devriez fournir un chemin absolu. Si vous ne spécifiez pas
-cette option, c'est le répertoire spécifié par l'option de
+Vous devriez fournir un chemin absolu. Si vous ne spÃ©cifiez pas
+cette option, c'est le rÃ©pertoire spÃ©cifiÃ© par l'option de
 compilation 
-<A HREF="#build-portable-root">--prefix</A> qui est utilisé.
-Ce répertoire est lié à celui
-spécifié par l'option de compilation 
+<A HREF="#build-portable-root">--prefix</A> qui est utilisÃ©.
+Ce rÃ©pertoire est liÃ© Ã  celui
+spÃ©cifiÃ© par l'option de compilation 
 <A HREF="#build-execute-root">--with-execute-root</A>.</P>
 <DT><B><CODE>--libdir=</CODE><EM>repertoire</EM>
 <A NAME="build-api-directory"></A> </B><DD>
-<P>Spécifie le répertoire situé dans la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A>
-où les modules statiques et les objets chargeables
-dynamiquement pour l'Interface Programmatique de l'Application sont à copier. Le chemin absolu doit être
-indiqué. Si cette option est absente le répertoire indiqué dans
-l'option <CODE>--libdir</CODE> (qui, par défaut, est le répertoire racine <CODE>/lib</CODE>
-du répertoire spécifié par l'option de construction
-<A HREF="#build-architecture-root">--exec-prefix</A>) est utilisé. Le répertoire est créé s'il n'existe
+<P>SpÃ©cifie le rÃ©pertoire situÃ© dans la 
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A>
+oÃ¹ les modules statiques et les objets chargeables
+dynamiquement pour l'Interface Programmatique de l'Application sont Ã  copier. Le chemin absolu doit Ãªtre
+indiquÃ©. Si cette option est absente le rÃ©pertoire indiquÃ© dans
+l'option <CODE>--libdir</CODE> (qui, par dÃ©faut, est le rÃ©pertoire racine <CODE>/lib</CODE>
+du rÃ©pertoire spÃ©cifiÃ© par l'option de construction
+<A HREF="#build-architecture-root">--exec-prefix</A>) est utilisÃ©. Le rÃ©pertoire est crÃ©Ã© s'il n'existe
 pas.</P>
 <DT><B><CODE>--sysconfdir=</CODE><EM>directory</EM>
 <A NAME="build-configuration-directory"></A> </B><DD>
-<P>Spécifie le répertoire situé dans la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A>
-où les fichiers de configuration sont à installer. Vous devez
-fournir un chemin absolu. Si vous ne spécifiez pas cette option,
-c'est le répertoire spécifié par l'option de configuration standard <CODE>--sysconfdir</CODE>
-(qui, par défaut, est le répertoire racine de <CODE>/etc</CODE> spécifié
+<P>SpÃ©cifie le rÃ©pertoire situÃ© dans la 
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A>
+oÃ¹ les fichiers de configuration sont Ã  installer. Vous devez
+fournir un chemin absolu. Si vous ne spÃ©cifiez pas cette option,
+c'est le rÃ©pertoire spÃ©cifiÃ© par l'option de configuration standard <CODE>--sysconfdir</CODE>
+(qui, par dÃ©faut, est le rÃ©pertoire racine de <CODE>/etc</CODE> spÃ©cifiÃ©
 par l'option de compilation  
-<A HREF="#build-portable-root">--prefix</A>) qui est utilisé.
-Le répertoire est créé s'il n'existe pas.</P>
+<A HREF="#build-portable-root">--prefix</A>) qui est utilisÃ©.
+Le rÃ©pertoire est crÃ©Ã© s'il n'existe pas.</P>
 <DT><B><CODE>--with-program-directory=</CODE><EM>directory</EM>
 <A NAME="build-program-directory"></A> </B><DD>
-<P>Spécifie le répertoire situé dans la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A> où les exécutables
-(binaires, exécutables), doivent être installés. Vous devez
-fournir un chemin absolu. Si cette option n'est pas utilisée,
-c'est le répertoire spécifié par l'option de configuration
-standard <CODE>--bindir</CODE> (qui, par défaut, est le répertoire-racine
-spécifié par l'option de compilation 
-<A HREF="#build-architecture-root">--exec-prefix</A>) qui est utilisé.
-Le répertoire est créé s'il n'existe pas.</P>
+<P>SpÃ©cifie le rÃ©pertoire situÃ© dans la 
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A> oÃ¹ les exÃ©cutables
+(binaires, exÃ©cutables), doivent Ãªtre installÃ©s. Vous devez
+fournir un chemin absolu. Si cette option n'est pas utilisÃ©e,
+c'est le rÃ©pertoire spÃ©cifiÃ© par l'option de configuration
+standard <CODE>--bindir</CODE> (qui, par dÃ©faut, est le rÃ©pertoire-racine
+spÃ©cifiÃ© par l'option de compilation 
+<A HREF="#build-architecture-root">--exec-prefix</A>) qui est utilisÃ©.
+Le rÃ©pertoire est crÃ©Ã© s'il n'existe pas.</P>
 <DT><B><CODE>--with-library-directory=</CODE><EM>directory</EM>
 <A NAME="build-library-directory"></A> </B><DD>
-<P>Spécifie le répertoire situé dans la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A> où les pilotes et
-d'autres fichiers indépendants de l'architecture doivent être installés. Vous devez
-fournir un chemin absolu. Si cette option n'est pas spécifiée,
-c'est le sous-répertoire du répertoire <CODE>brltty</CODE>
-spécifié par l'option de configuration standard <CODE>--libdir</CODE>
-(qui par défaut est le répertoire racine spécifié par l'option de
+<P>SpÃ©cifie le rÃ©pertoire situÃ© dans la 
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A> oÃ¹ les pilotes et
+d'autres fichiers indÃ©pendants de l'architecture doivent Ãªtre installÃ©s. Vous devez
+fournir un chemin absolu. Si cette option n'est pas spÃ©cifiÃ©e,
+c'est le sous-rÃ©pertoire du rÃ©pertoire <CODE>brltty</CODE>
+spÃ©cifiÃ© par l'option de configuration standard <CODE>--libdir</CODE>
+(qui par dÃ©faut est le rÃ©pertoire racine spÃ©cifiÃ© par l'option de
 compilation 
-<A HREF="#build-architecture-root">--exec-prefix</A>) qui est utilisé.
-Le répertoire est créé s'il n'existe pas.</P>
+<A HREF="#build-architecture-root">--exec-prefix</A>) qui est utilisÃ©.
+Le rÃ©pertoire est crÃ©Ã© s'il n'existe pas.</P>
 <DT><B><CODE>--with-data-directory=</CODE><EM>directory</EM>
 <A NAME="build-data-directory"></A> </B><DD>
-<P>Spécifie le répertoire situé dans la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A> où les tables, les pages
-d'aide et d'autres fichiers indépendants de l'architecture doivent être
-installés. Vous devez fournir un chemin absolu. Si cette option
-n'est pas spécifiée, c'est le sous-répertoire du
-répertoire <CODE>brltty</CODE> spécifié par l'option de configuration
-standard <CODE>--sysconfdir</CODE> (qui par défaut est le répertoire
-racine <CODE>/etc</CODE> spécifié par
+<P>SpÃ©cifie le rÃ©pertoire situÃ© dans la 
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A> oÃ¹ les tables, les pages
+d'aide et d'autres fichiers indÃ©pendants de l'architecture doivent Ãªtre
+installÃ©s. Vous devez fournir un chemin absolu. Si cette option
+n'est pas spÃ©cifiÃ©e, c'est le sous-rÃ©pertoire du
+rÃ©pertoire <CODE>brltty</CODE> spÃ©cifiÃ© par l'option de configuration
+standard <CODE>--sysconfdir</CODE> (qui par dÃ©faut est le rÃ©pertoire
+racine <CODE>/etc</CODE> spÃ©cifiÃ© par
 l'option de compilation 
-<A HREF="#build-portable-root">--prefix</A>) qui est utilisé.  Le répertoire est créé
+<A HREF="#build-portable-root">--prefix</A>) qui est utilisÃ©.  Le rÃ©pertoire est crÃ©Ã©
 s'il n'existe pas.</P>
 <DT><B><CODE>--with-manpage-directory=</CODE><EM>directory</EM>
 <A NAME="build-manpage-directory"></A> </B><DD>
-<P>Spécifie le répertoire situé dans la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A> où les tables et les
-pages de manuel doivent être installées. Vous devez fournir un
-chemin absolu. Si cette option n'est pas spécifiée, c'est le
-sous-répertoire du répertoire <CODE>brltty</CODE> spécifié
+<P>SpÃ©cifie le rÃ©pertoire situÃ© dans la 
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A> oÃ¹ les tables et les
+pages de manuel doivent Ãªtre installÃ©es. Vous devez fournir un
+chemin absolu. Si cette option n'est pas spÃ©cifiÃ©e, c'est le
+sous-rÃ©pertoire du rÃ©pertoire <CODE>brltty</CODE> spÃ©cifiÃ©
 par l'option de configuration standard <CODE>--mandir</CODE> (qui par
-défaut est le répertoire racine <CODE>/man</CODE> spécifié par l'option
+dÃ©faut est le rÃ©pertoire racine <CODE>/man</CODE> spÃ©cifiÃ© par l'option
 de compilation 
 <A HREF="#build-portable-root">--prefix</A>) qui
-est utilisé. Le répertoire est créé s'il n'existe pas.</P>
+est utilisÃ©. Le rÃ©pertoire est crÃ©Ã© s'il n'existe pas.</P>
 <DT><B><CODE>--with-include-directory=</CODE><EM>directory</EM>
 <A NAME="build-include-directory"></A> </B><DD>
-<P>Spécifie le répertoire situé dans la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A> où les fichiers d'en-tête
-C pour l'Interface Programmatique de l'Application doivent être
-installés. Vous devez fournir un chemin absolu. Si cette option
-n'est pas spécifiée, c'est le sous-répertoire du répertoire <CODE>brltty</CODE> spécifié par
+<P>SpÃ©cifie le rÃ©pertoire situÃ© dans la 
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A> oÃ¹ les fichiers d'en-tÃªte
+C pour l'Interface Programmatique de l'Application doivent Ãªtre
+installÃ©s. Vous devez fournir un chemin absolu. Si cette option
+n'est pas spÃ©cifiÃ©e, c'est le sous-rÃ©pertoire du rÃ©pertoire <CODE>brltty</CODE> spÃ©cifiÃ© par
 l'option de configuration standard <CODE>--includedir</CODE> (qui par
-défaut est le répertoire racine <CODE>/include</CODE> spécifié par l'option
+dÃ©faut est le rÃ©pertoire racine <CODE>/include</CODE> spÃ©cifiÃ© par l'option
 de compilation 
 <A HREF="#build-portable-root">--prefix</A> qui
-est utilisé. Le répertoire est créé s'il n'existe pas.</P>
+est utilisÃ©. Le rÃ©pertoire est crÃ©Ã© s'il n'existe pas.</P>
 </DL>
 </P>
 
-<H3><A NAME="build-features"></A> Caractéristiques de la compilation</H3>
+<H3><A NAME="build-features"></A> CaractÃ©ristiques de la compilation</H3>
 
 <P>Ces options sont surtout utiles quand vous compilez BRLTTY pour une
-disquette de démarrage. Elles visent à réduire la taille des programmes en supprimant
+disquette de dÃ©marrage. Elles visent Ã  rÃ©duire la taille des programmes en supprimant
 les fonctions inutiles.
 <DL>
 <DT><B><CODE>--enable-standalone-programs</CODE>
 <A NAME="build-standalone-programs"></A> </B><DD>
-<P>Crée des programmes liés de façon statique plutôt que de façon
-dynamique. Cette option supprime toutes les dépendances sur les
-objets partagés à l'exécution. Seuls les pilotes par défaut (voir
+<P>CrÃ©e des programmes liÃ©s de faÃ§on statique plutÃ´t que de faÃ§on
+dynamique. Cette option supprime toutes les dÃ©pendances sur les
+objets partagÃ©s Ã  l'exÃ©cution. Seuls les pilotes par dÃ©faut (voir
 les options de compilation 
 <A HREF="#build-braille-driver">--with-braille-driver</A>,
 <A HREF="#build-speech-driver">--with-speech-driver</A> et
-<A HREF="#build-screen-driver">--with-screen-driver</A>) sont compilés.</P>
+<A HREF="#build-screen-driver">--with-screen-driver</A>) sont compilÃ©s.</P>
 <DT><B><CODE>--disable-stripping</CODE>
 <A NAME="build-stripping"></A> </B><DD>
-<P>Ne supprime pas les symboles des tables des exécutables et des objets
-partagés lors de leur installation.</P>
+<P>Ne supprime pas les symboles des tables des exÃ©cutables et des objets
+partagÃ©s lors de leur installation.</P>
 
 <DT><B><CODE>--enable-relocatable-install</CODE>
 <A NAME="build-table-selection"></A> </B><DD>
-<P>Si cette fonctionnalité est activée, tous les chemins internes sont
-recalculés afin d'englober le répertoire du programme. Si elle n'est pas
-utilisée, tous les chemins internes sont absolus. Cette fonctionnalité
-vise à ce que toute la
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A> soit
-copiée ou déplacée proprement d'un endroit à l'autre, tout particulièrement
+<P>Si cette fonctionnalitÃ© est activÃ©e, tous les chemins internes sont
+recalculÃ©s afin d'englober le rÃ©pertoire du programme. Si elle n'est pas
+utilisÃ©e, tous les chemins internes sont absolus. Cette fonctionnalitÃ©
+vise Ã  ce que toute la
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A> soit
+copiÃ©e ou dÃ©placÃ©e proprement d'un endroit Ã  l'autre, tout particuliÃ¨rement
 pour un usage sur des plateformes Windows.</P>
 <DT><B><CODE>--disable-strippingl</CODE>
 <A NAME="build-strippingl"></A> </B><DD>
-<P>Ne supprime pas les tables de symboles des exécutables et des objets
-partagés lors de leur installation.</P>
+<P>Ne supprime pas les tables de symboles des exÃ©cutables et des objets
+partagÃ©s lors de leur installation.</P>
 <DT><B><CODE>--disable-learn-mode</CODE>
 <A NAME="build-learn-mode"></A> </B><DD>
-<P>Réduit la taille du programme en excluant le mode apprentissage
+<P>RÃ©duit la taille du programme en excluant le mode apprentissage
 des commandes (voir la section 
 <A HREF="BRLTTY-5.html#learn">Mode apprentissage     des commandes</A>).</P>
 <DT><B><CODE>--disable-contracted-braille</CODE>
 <A NAME="build-contracted-braille"></A> </B><DD>
-<P>Réduit la taille du programme en excluant le support pour le
-braille abrégé (voir la section 
-<A HREF="BRLTTY-6.html#table-contraction">Braille abrégé</A>).</P>
+<P>RÃ©duit la taille du programme en excluant le support pour le
+braille abrÃ©gÃ© (voir la section 
+<A HREF="BRLTTY-6.html#table-contraction">Braille abrÃ©gÃ©</A>).</P>
 <DT><B><CODE>--disable-speech-support</CODE>
 <A NAME="build-speech-support"></A> </B><DD>
-<P>Réduit la taille du programme en excluant le support des synthëses vocales.</P>
+<P>RÃ©duit la taille du programme en excluant le support des synthÃ«ses vocales.</P>
 <DT><B><CODE>--disable-iconv</CODE>
 <A NAME="build-table-selection"></A> </B><DD>
-<P>Réduit la taille du programme en excluant le support pour la conversion
+<P>RÃ©duit la taille du programme en excluant le support pour la conversion
 des codages.</P>
 <DT><B><CODE>--disable-icu</CODE>
 <A NAME="build-icu"></A> </B><DD>
-<P>Réduit la taille du programme en excluant le support pour 
-l'internationalisation basée sur l'Unicode.</P>
+<P>RÃ©duit la taille du programme en excluant le support pour 
+l'internationalisation basÃ©e sur l'Unicode.</P>
 <DT><B><CODE>--disable-x</CODE>
 <A NAME="build-x"></A> </B><DD>
-<P>Réduit la taille du programme en excluant le support pour X11.</P>
+<P>RÃ©duit la taille du programme en excluant le support pour X11.</P>
 <DT><B><CODE>--disable-beeper-support</CODE>
 <A NAME="build-beeper-support"></A> </B><DD>
-<P>Réduit la taille du programme en excluant le support pour le
-générateur des "none" en console.</P>
+<P>RÃ©duit la taille du programme en excluant le support pour le
+gÃ©nÃ©rateur des "none" en console.</P>
 <DT><B><CODE>--disable-pcm-support</CODE>
 <A NAME="build-pcm-support"></A> </B><DD>
-<P>Réduit la taille du programme en excluant le support pour
+<P>RÃ©duit la taille du programme en excluant le support pour
 l'interface Digital Audio sur la carte son.</P>
 <DT><B><CODE>--enable-pcm-support=</CODE><EM>interface</EM></B><DD>
 <P>Si une plateforme propose plus d'une interface Digital Audio,
-celle qui sera utilisée peut être spécifiée.
+celle qui sera utilisÃ©e peut Ãªtre spÃ©cifiÃ©e.
 <BR><CENTER>
 <TABLE BORDER><TR><TD>
 Plateforme</TD><TD>Interface</TD><TD>Description</TD></TR><TR><TD>
@@ -918,11 +918,11 @@ Linux</TD><TD>oss</TD><TD>Open Sound System</TD></TR><TR><TD>
 </P>
 <DT><B><CODE>--disable-midi-support</CODE>
 <A NAME="build-midi-support"></A> </B><DD>
-<P>Réduit la taille du programme en excluant le support pour
-l'interface numérique d'instruments de musique sur la carte son.</P>
+<P>RÃ©duit la taille du programme en excluant le support pour
+l'interface numÃ©rique d'instruments de musique sur la carte son.</P>
 <DT><B><CODE>--enable-midi-support=</CODE><EM>interface</EM></B><DD>
-<P>Si une plateforme propose plus d'une interface numérique d'instrument de 
-musique, vous pouvez spécifier celle qui sera utilisée.
+<P>Si une plateforme propose plus d'une interface numÃ©rique d'instrument de 
+musique, vous pouvez spÃ©cifier celle qui sera utilisÃ©e.
 <BR><CENTER>
 <TABLE BORDER><TR><TD>
 Platte-forme</TD><TD>Interface</TD><TD>Description</TD></TR><TR><TD>
@@ -933,34 +933,34 @@ Linux</TD><TD>oss</TD><TD>Open Sound System</TD></TR><TR><TD>
 </P>
 <DT><B><CODE>--disable-fm-support</CODE>
 <A NAME="build-fm-support"></A> </B><DD>
-<P>Réduit la taille du programme en excluant le support pour le
-synthétiseur FM sur une carte son AdLib, OPL3, Sound Blaster, ou
-équivalent.</P>
+<P>RÃ©duit la taille du programme en excluant le support pour le
+synthÃ©tiseur FM sur une carte son AdLib, OPL3, Sound Blaster, ou
+Ã©quivalent.</P>
 <DT><B><CODE>--disable-pm-configfile</CODE>
 <A NAME="build-pm-configfile"></A> </B><DD>
 <P>Inclut une interface avec l'application <CODE>gpm</CODE> de telle sorte que,
-sur les systèmes qui le supportent, BRLTTY interagisse avec le
+sur les systÃ¨mes qui le supportent, BRLTTY interagisse avec le
 pilote du pointeur (souris) (voir la section 
 <A HREF="BRLTTY-5.html#gpm">Support du pointeur (souris) via GPM</A>).</P>
 <DT><B><CODE>--disable-gpm</CODE>
 <A NAME="build-api"></A> </B><DD>
-<P>Réduit la taille du programme en excluant l'interface avec l'application gpm
-qui permet à BRLTTY d'interagir avec le périphérique du pointeur (la souris)
+<P>RÃ©duit la taille du programme en excluant l'interface avec l'application gpm
+qui permet Ã  BRLTTY d'interagir avec le pÃ©riphÃ©rique du pointeur (la souris)
 (voir Support du pointeur (souris)  par GPM).</P>
 <DT><B><CODE>--disable-api</CODE>
 <A NAME="build-api"></A> </B><DD>
-<P>Réduit la taille du programme en excluant l'interface de programmation de l'application.</P>
+<P>RÃ©duit la taille du programme en excluant l'interface de programmation de l'application.</P>
 <DT><B><CODE>--with-api-parameters=</CODE><EM>name</EM><CODE>=</CODE><EM>valeur</EM><CODE>,</CODE>...
 <A NAME="build-api-parameters"></A> </B><DD>
-<P>Spécifie les paramètres par défaut pour l'interface de programmation
-de l'application. Si le même paramètre est spécifié plus d'une
-fois, sa valeur la plus à droite est utilisée. Pour une
-description des paramètres acceptés par l'interface, voir le
-manuel de référence de <B>BrlAPI</B>. Voir la ligne
+<P>SpÃ©cifie les paramÃ¨tres par dÃ©faut pour l'interface de programmation
+de l'application. Si le mÃªme paramÃ¨tre est spÃ©cifiÃ© plus d'une
+fois, sa valeur la plus Ã  droite est utilisÃ©e. Pour une
+description des paramÃ¨tres acceptÃ©s par l'interface, voir le
+manuel de rÃ©fÃ©rence de <B>BrlAPI</B>. Voir la ligne
 <A HREF="BRLTTY-4.html#configure-api-parameters">api-parameters</A> du
 fichier de configuration et l'option 
 <A HREF="BRLTTY-4.html#options-api-parameters">-A</A>
-en ligne de commande pour la sélection à l'exécution.</P>
+en ligne de commande pour la sÃ©lection Ã  l'exÃ©cution.</P>
 <DT><B><CODE>--disable-caml-bindings=</CODE><EM>nom</EM><CODE>=</CODE><EM>valeur</EM><CODE>,</CODE>...
 <A NAME="build-api-parameters"></A> </B><DD>
 <P>Ne compile pas les bindings Caml (interfaces de programmation) pour l'interface de programmation de l'application.</P>
@@ -977,19 +977,19 @@ en ligne de commande pour la sélection à l'exécution.</P>
 <A NAME="build-api-parameters"></A> </B><DD>
 <P>Ne compile pas les bindings Tcl (interfaces de programmation) pour l'interface de programmation de l'application.</P>
 <DT><B><CODE>--with-tcl-config=</CODE><EM>chemin</EM>
-Spécifie l'endroit où se trouve le script de configuration Tcl 
-(tclConfig.sh). Vous pouvez fournir le chemin, soit vers le script lui-même,
-soit vers le répertoire où il se trouve. Un des mots suivants peut être 
-aussi utilisé comme opérateur pour l'option:</B><DD>
+SpÃ©cifie l'endroit oÃ¹ se trouve le script de configuration Tcl 
+(tclConfig.sh). Vous pouvez fournir le chemin, soit vers le script lui-mÃªme,
+soit vers le rÃ©pertoire oÃ¹ il se trouve. Un des mots suivants peut Ãªtre 
+aussi utilisÃ© comme opÃ©rateur pour l'option:</B><DD>
 <P>(<CODE>-</CODE>),
 <DL>
 <DT><B>no</B><DD>
 <P>Utilise d'autres moyens pour savoir si Tcl est disponible et, s'il
-l'est, où il a été installé. Cela revient à spécifier
+l'est, oÃ¹ il a Ã©tÃ© installÃ©. Cela revient Ã  spÃ©cifier
 <CODE>--without-tcl-config.</CODE>.</P>
 <DT><B>yes</B><DD>
-<P>Cherche le script dans quelques répertoires couramment utilisés. 
-Cela revient à spécifier
+<P>Cherche le script dans quelques rÃ©pertoires couramment utilisÃ©s. 
+Cela revient Ã  spÃ©cifier
 <CODE>--with-tcl-config</CODE>.</P>
 </DL>
 </P>
@@ -1003,87 +1003,87 @@ Cela revient à spécifier
 <DL>
 <DT><B><CODE>--with-init-path=</CODE><EM>path</EM>
 <A NAME="build-init-path"></A> </B><DD>
-<P>Spécifie le chemin du programme réel de démarrage pour le
-système. Vous devriez fournir le chemin absolu. Si vous ne
-spécifiez pas cette option:
+<P>SpÃ©cifie le chemin du programme rÃ©el de dÃ©marrage pour le
+systÃ¨me. Vous devriez fournir le chemin absolu. Si vous ne
+spÃ©cifiez pas cette option:
 <OL>
-<LI>Vous devriez déplacer le programme <CODE>init</CODE> dans un nouvel
+<LI>Vous devriez dÃ©placer le programme <CODE>init</CODE> dans un nouvel
 emplacement.</LI>
-<LI>Vous devriez déplacer <CODE>brltty</CODE> dans l'emplacement original
+<LI>Vous devriez dÃ©placer <CODE>brltty</CODE> dans l'emplacement original
 du programme.</LI>
-<LI>Finalement, quand le système exécute <CODE>init</CODE> au démarrage,
-<CODE>brltty</CODE> est exécuté. Il se met automatiquement en
-arrière-plan
-et exécute le <CODE>init</CODE> réel au premier plan. C'est
-l'une des manières quelque peu tordue d'avoir droit au braille dès le
-début. C'est surtout utile pour certains disques
+<LI>Finalement, quand le systÃ¨me exÃ©cute <CODE>init</CODE> au dÃ©marrage,
+<CODE>brltty</CODE> est exÃ©cutÃ©. Il se met automatiquement en
+arriÃ¨re-plan
+et exÃ©cute le <CODE>init</CODE> rÃ©el au premier plan. C'est
+l'une des maniÃ¨res quelque peu tordue d'avoir droit au braille dÃ¨s le
+dÃ©but. C'est surtout utile pour certains disques
 d'installation/sauvegarde.</LI>
 </OL>
 
-Si vous ne spécifiez pas cette option, cette possibilité n'est pas
-activée. Elle vise tout particulièrement la compilation d'une image pour
+Si vous ne spÃ©cifiez pas cette option, cette possibilitÃ© n'est pas
+activÃ©e. Elle vise tout particuliÃ¨rement la compilation d'une image pour
 un installeur en braille.</P>
 <DT><B><CODE>--with-stderr-path==</CODE><EM>chemin</EM>
 <A NAME="build-init-path"></A> </B><DD>
-<P>Spécifie le chemin du fichier ou du périphérique où la sortie standard
-des erreurs sera écrite. Vous devriez fournir un chemin absolu. Si vous
-ne spécifiez pas cette option, cette possibilité n'est pas activée.
-Cette option vise tout particulièrement la compilation d'une image pour
+<P>SpÃ©cifie le chemin du fichier ou du pÃ©riphÃ©rique oÃ¹ la sortie standard
+des erreurs sera Ã©crite. Vous devriez fournir un chemin absolu. Si vous
+ne spÃ©cifiez pas cette option, cette possibilitÃ© n'est pas activÃ©e.
+Cette option vise tout particuliÃ¨rement la compilation d'une image pour
 un installeur en braille.</P>
 </DL>
 </P>
 
-<H3><A NAME="make"></A> Préparer les cibles de fichier</H3>
+<H3><A NAME="make"></A> PrÃ©parer les cibles de fichier</H3>
 
-<P>Une fois que BRLTTY a été configuré, les étapes suivantes consistent
+<P>Une fois que BRLTTY a Ã©tÃ© configurÃ©, les Ã©tapes suivantes consistent
 en la compilation et l'installation de ce dernier. Elles sont
-effectuées en entrant la commande make du système dans le fichier make
-principal de BRLTTY (<CODE>Makefile</CODE> dans le répertoire principal). Le
+effectuÃ©es en entrant la commande make du systÃ¨me dans le fichier make
+principal de BRLTTY (<CODE>Makefile</CODE> dans le rÃ©pertoire principal). Le
 fichier make de BRLTTY supporte la plupart des cibles de maintenance
 d'application courants. Ils incluent:
 <DL>
 <DT><B>make</B><DD>
-<P>Un raccourci pour tout préparer.</P>
+<P>Un raccourci pour tout prÃ©parer.</P>
 <DT><B>make all
 <A NAME="make-all"></A> </B><DD>
-<P>Compile et fait l'édition de liens pour l'exécutable BRLTTY, ses pilotes et leurs pages
+<P>Compile et fait l'Ã©dition de liens pour l'exÃ©cutable BRLTTY, ses pilotes et leurs pages
 de manuel, ses programmes de texte, et quelques autres petits
 outils.</P>
 <DT><B>make install
 <A NAME="make-install"></A> </B><DD>
-<P>Complète la compilation et la phase d'édition de liens (voir 
+<P>ComplÃ¨te la compilation et la phase d'Ã©dition de liens (voir 
 <A HREF="#make-all">make all</A>), et
-installe alors l'exécutable BRLTTY, ses fichiers de données
+installe alors l'exÃ©cutable BRLTTY, ses fichiers de donnÃ©es
 (data), pilotes et pages d'aide, aux emplacements corrects et avec
 les bonnes permissions.</P>
 <DT><B>make uninstall
 <A NAME="make-uninstall"></A> </B><DD>
-<P>Enlève du système l'exécutable BRLTTY, ses fichiers de données,
+<P>EnlÃ¨ve du systÃ¨me l'exÃ©cutable BRLTTY, ses fichiers de donnÃ©es,
 pilotes et pages de manuel.</P>
 <DT><B>make clean
 <A NAME="make-clean"></A> </B><DD>
-<P>Garantit que la compilation à venir et l'édition de liens (voir see 
+<P>Garantit que la compilation Ã  venir et l'Ã©dition de liens (voir see 
 <A HREF="#make-all">make all</A>)
-se feront à vide en enlevant les résultats de la
-compilation précédente, en liant et en testant depuis la structure du
-répertoire source. Cela comprend la suppression des fichiers
-objets, des exécutables, des objets dynamiques, des listes de
-pilote, des pages de manuel, des fichiers d'en-tête temporaires,
-et des fichiers liés.</P>
+se feront Ã  vide en enlevant les rÃ©sultats de la
+compilation prÃ©cÃ©dente, en liant et en testant depuis la structure du
+rÃ©pertoire source. Cela comprend la suppression des fichiers
+objets, des exÃ©cutables, des objets dynamiques, des listes de
+pilote, des pages de manuel, des fichiers d'en-tÃªte temporaires,
+et des fichiers liÃ©s.</P>
 <DT><B>make distclean
 <A NAME="make-distclean"></A> </B><DD>
-<P>Au-delà de la suppression des résultats de la compilation précédente et de
+<P>Au-delÃ  de la suppression des rÃ©sultats de la compilation prÃ©cÃ©dente et de
 l'edition de liens (voir 
 <A HREF="#make-clean">make clean</A>):
 <UL>
 <LI>
-Supprime les résultats de la configuration de BRLTTY (voir
+Supprime les rÃ©sultats de la configuration de BRLTTY (voir
 <A HREF="#build">Options de compilation</A>).  Cela inclut la suppression de
 <CODE>config.mk</CODE>, <CODE>config.h</CODE>,
 <CODE>config.cache</CODE>, <CODE>config.status</CODE>, et <CODE>config.log</CODE>.</LI>
-<LI>Supprime les autres fichiers de la structure du répertoire
+<LI>Supprime les autres fichiers de la structure du rÃ©pertoire
 source, qui prennent beaucoup de place mais qui ne leur
-appartient pas. Cela inclut la suppression de fichiers éditeur de sauvegarde (backup), résultats de test, les reliquats du patch, et copies de fichiers source originaux.</LI>
+appartient pas. Cela inclut la suppression de fichiers Ã©diteur de sauvegarde (backup), rÃ©sultats de test, les reliquats du patch, et copies de fichiers source originaux.</LI>
 </UL>
 </P>
 </DL>
@@ -1092,22 +1092,22 @@ appartient pas. Cela inclut la suppression de fichiers éditeur de sauvegarde (ba
 <H2><A NAME="ss3.3">3.3</A> <A HREF="BRLTTY.html#toc3.3">Tester BRLTTY</A>
 </H2>
 
-<P>Après la compilation, l'édition de liens, et l'installation de BRLTTY,
-c'est peut-être une bonne idée de faire un petit test avant de
+<P>AprÃ¨s la compilation, l'Ã©dition de liens, et l'installation de BRLTTY,
+c'est peut-Ãªtre une bonne idÃ©e de faire un petit test avant de
 l'activer en permanence. Pour cela, appelez-le avec:</P>
 <P>
 <BLOCKQUOTE><CODE>
-brltty -b<EM>pilote</EM> -d<EM>périphérique</EM>
+brltty -b<EM>pilote</EM> -d<EM>pÃ©riphÃ©rique</EM>
 </CODE></BLOCKQUOTE>
 
-Pour <EM>pilote</EM>, spécifiez les deux lettres du 
-<A HREF="BRLTTY-10.html#drivers">code d'identification de pilote</A> correspondant à votre
-afficheur braille. Pour <EM>périphérique</EM>, spécifiez le chemin complet
-du périphérique auquel votre afficheur braille est connecté.</P>
+Pour <EM>pilote</EM>, spÃ©cifiez les deux lettres du 
+<A HREF="BRLTTY-10.html#drivers">code d'identification de pilote</A> correspondant Ã  votre
+afficheur braille. Pour <EM>pÃ©riphÃ©rique</EM>, spÃ©cifiez le chemin complet
+du pÃ©riphÃ©rique auquel votre afficheur braille est connectÃ©.</P>
 <P>Si vous ne voulez pas identifier explicitement le pilote et le
-périphérique à chaque fois que vous démarrez BRLTTY, vous pouvez
-procéder de deux façons. Vous pouvez établir des paramètres système
-par défaut via les lignes 
+pÃ©riphÃ©rique Ã  chaque fois que vous dÃ©marrez BRLTTY, vous pouvez
+procÃ©der de deux faÃ§ons. Vous pouvez Ã©tablir des paramÃ¨tres systÃ¨me
+par dÃ©faut via les lignes 
 <A HREF="BRLTTY-4.html#configure-braille-driver">braille-driver</A> et 
 <A HREF="BRLTTY-4.html#configure-braille-device">braille-device</A> du
 fichier de configuration, et/ou compiler tout ce dont vous avez besoin
@@ -1116,24 +1116,24 @@ dans BRLTTY via les options de compilation
 et 
 <A HREF="#build-braille-device">--with-braille-device</A>.</P>
 <P>Si tout va bien, le message d'identification de BRLTTY devrait
-apparaître sur l'afficheur braille pendant quelques secondes (voir
+apparaÃ®tre sur l'afficheur braille pendant quelques secondes (voir
 l'option 
-<A HREF="BRLTTY-4.html#options-message-timeout">-M</A> de la ligne de commande). Après qu'il ait disparu, (ce
-que vous pouvez accélérer en appuyant sur n'importe quelle touche de
-l'afficheur), la zone de l'écran où le curseur se situe devrait
-apparaître. Cela signifie que vous devriez vous attendre à voir
-s'afficher les commande du shell. Alors, comme vous avez entré votre
-commande précédente, chaque caractère devrait apparaître sur
-l'afficheur dès qu'il est tapé sur le clavier.</P>
-<P>Si les choses se passent ainsi, arrêtez l'exécution de BRLTTY, et
-réjouissez-vous. Sinon, il peut être nécessaire de tester chaque pilote
-séparément de façon à isoler la source du problème. Vous pouvez tester
-le pilote de l'écran par 
+<A HREF="BRLTTY-4.html#options-message-timeout">-M</A> de la ligne de commande). AprÃ¨s qu'il ait disparu, (ce
+que vous pouvez accÃ©lÃ©rer en appuyant sur n'importe quelle touche de
+l'afficheur), la zone de l'Ã©cran oÃ¹ le curseur se situe devrait
+apparaÃ®tre. Cela signifie que vous devriez vous attendre Ã  voir
+s'afficher les commande du shell. Alors, comme vous avez entrÃ© votre
+commande prÃ©cÃ©dente, chaque caractÃ¨re devrait apparaÃ®tre sur
+l'afficheur dÃ¨s qu'il est tapÃ© sur le clavier.</P>
+<P>Si les choses se passent ainsi, arrÃªtez l'exÃ©cution de BRLTTY, et
+rÃ©jouissez-vous. Sinon, il peut Ãªtre nÃ©cessaire de tester chaque pilote
+sÃ©parÃ©ment de faÃ§on Ã  isoler la source du problÃ¨me. Vous pouvez tester
+le pilote de l'Ã©cran par 
 <A HREF="#utility-scrtest">scrtest</A>, et celui de l'afficheur braille
 par 
 <A HREF="#utility-brltest">brltest</A>.</P>
-<P>Si vous rencontrez un problème qui nécessite de farfouiller,
-vous voudrez peut-être exécuter les options suivantes de la ligne de commande de
+<P>Si vous rencontrez un problÃ¨me qui nÃ©cessite de farfouiller,
+vous voudrez peut-Ãªtre exÃ©cuter les options suivantes de la ligne de commande de
 <CODE>brltty</CODE>:
 <UL>
 <LI>...
@@ -1145,49 +1145,49 @@ pour mettre BRLTTY au premier plan.</LI>
 <LI>
 <A HREF="BRLTTY-4.html#options-standard-error">-e</A>
 pour diriger les messages de diagnostique vers l'erreur standard et
-non dans le journal système.</LI>
+non dans le journal systÃ¨me.</LI>
 </UL>
 </P>
 
-<H2><A NAME="ss3.4">3.4</A> <A HREF="BRLTTY.html#toc3.4">Démarrer BRLTTY</A>
+<H2><A NAME="ss3.4">3.4</A> <A HREF="BRLTTY.html#toc3.4">DÃ©marrer BRLTTY</A>
 </H2>
 
 
-<P>Quand BRLTTY est correctement installé, on l'appelle par la simple
-commande <CODE>brltty</CODE>. Vous pouvez créer un fichier de configuration
+<P>Quand BRLTTY est correctement installÃ©, on l'appelle par la simple
+commande <CODE>brltty</CODE>. Vous pouvez crÃ©er un fichier de configuration
 (voir la section 
-<A HREF="BRLTTY-4.html#configure">le fichier de configuration</A> pour plus de détails)
-afin de d'établir des paramètres système par défaut pour des choses
-telles que l'emplacement du fichier de préférences, le pilote
-d'afficheur braille à utiliser, le périphérique auquel l'afficheur
-braille est connecté, et la table de texte à utiliser.
+<A HREF="BRLTTY-4.html#configure">le fichier de configuration</A> pour plus de dÃ©tails)
+afin de d'Ã©tablir des paramÃ¨tres systÃ¨me par dÃ©faut pour des choses
+telles que l'emplacement du fichier de prÃ©fÃ©rences, le pilote
+d'afficheur braille Ã  utiliser, le pÃ©riphÃ©rique auquel l'afficheur
+braille est connectÃ©, et la table de texte Ã  utiliser.
 Beaucoup d'options (voir la section 
 <A HREF="BRLTTY-4.html#options">Options en ligne de commande</A>
-pour plus de détails) permettent de spécifier lors de l'exécution des
-choses telles que le fichier de configuration, les paramètres par
-défaut fixés dans le fichier de configuration, et quelques
-caractéristiques qui ont des paramètres par défaut raisonnables mais
+pour plus de dÃ©tails) permettent de spÃ©cifier lors de l'exÃ©cution des
+choses telles que le fichier de configuration, les paramÃ¨tres par
+dÃ©faut fixÃ©s dans le fichier de configuration, et quelques
+caractÃ©ristiques qui ont des paramÃ¨tres par dÃ©faut raisonnables mais
 avec lesquelles seuls ceux qui pensent savoir ce qu'ils font peuvent
 souhaiter modifier. L'option 
-<A HREF="BRLTTY-4.html#options-help">-h</A> affiche un résumé de toutes les
+<A HREF="BRLTTY-4.html#options-help">-h</A> affiche un rÃ©sumÃ© de toutes les
 options. L'option 
 <A HREF="BRLTTY-4.html#options-version">-V</A> affiche la version courante du programme,
-de l'API et des pilotes sélectionnés. L'option ``-v'' affiche les valeurs
-des options après que toutes les sources aient été examinées.</P>
-<P>C'est probablement mieux d'avoir BRLTTY démarré automatiquement par le
-système, dès la séquence d'amorçage, de façon à ce
-que l'afficheur braille soit déjà prêt à fonctionner quand l'invite du
-logging apparaît. La plupart (probablement toutes) des distributions
+de l'API et des pilotes sÃ©lectionnÃ©s. L'option ``-v'' affiche les valeurs
+des options aprÃ¨s que toutes les sources aient Ã©tÃ© examinÃ©es.</P>
+<P>C'est probablement mieux d'avoir BRLTTY dÃ©marrÃ© automatiquement par le
+systÃ¨me, dÃ¨s la sÃ©quence d'amorÃ§age, de faÃ§on Ã  ce
+que l'afficheur braille soit dÃ©jÃ  prÃªt Ã  fonctionner quand l'invite du
+logging apparaÃ®t. La plupart (probablement toutes) des distributions
 fournissent un script dans lequel les applications fournies par
-l'utilisateur peuvent être démarrées en sécurité, presqu'à la fin de
-la séquence de boot. Le nom de ce script dépend de votre
+l'utilisateur peuvent Ãªtre dÃ©marrÃ©es en sÃ©curitÃ©, presqu'Ã  la fin de
+la sÃ©quence de boot. Le nom de ce script dÃ©pend de votre
 distribution. Voici celles que nous connaissons:
 <DL>
 <DT><B>Red Hat</B><DD>
 <P><CODE>/etc/rc.d/rc.local</CODE></P>
 </DL>
 </P>
-<P>C'est une bonne idée que de démarrer BRLTTY depuis ce script (surtout
+<P>C'est une bonne idÃ©e que de dÃ©marrer BRLTTY depuis ce script (surtout
 pour les nouveaux utilisateurs). Ajustez simplement des lignes du
 type:
 <BLOCKQUOTE><CODE>
@@ -1199,7 +1199,7 @@ fi
 </PRE>
 </CODE></BLOCKQUOTE>
 
-Normalement, cela peut s'abréger en une forme un peu moins
+Normalement, cela peut s'abrÃ©ger en une forme un peu moins
 lisible du type:
 <BLOCKQUOTE><CODE>
 <PRE>
@@ -1208,36 +1208,36 @@ lisible du type:
 </PRE>
 </CODE></BLOCKQUOTE>
 
-N'ajoutez pas ces lignes avant la première ligne (qui ressemble
-généralement à <CODE>#!/bin/sh</CODE>).</P>
-<P>Si l'afficheur braille doit être utilisé par un administrateur système, il
-devrait probablement être démarré le plus tôt possible, pendant la
-séquence de boot (comme par exemple avant que les systèmes de fichier
-ne soient vérifiés) afin que l'afficheur soit utilisable si quelque
-chose ne va pas dans ces tests et que le système bascule en mode
-mono-utilisateur. De nouveau, là où il est l'idéal de faire cela
-dépend de la distribution. Voici les emplacements que nous connaissons:
+N'ajoutez pas ces lignes avant la premiÃ¨re ligne (qui ressemble
+gÃ©nÃ©ralement Ã  <CODE>#!/bin/sh</CODE>).</P>
+<P>Si l'afficheur braille doit Ãªtre utilisÃ© par un administrateur systÃ¨me, il
+devrait probablement Ãªtre dÃ©marrÃ© le plus tÃ´t possible, pendant la
+sÃ©quence de boot (comme par exemple avant que les systÃ¨mes de fichier
+ne soient vÃ©rifiÃ©s) afin que l'afficheur soit utilisable si quelque
+chose ne va pas dans ces tests et que le systÃ¨me bascule en mode
+mono-utilisateur. De nouveau, lÃ  oÃ¹ il est l'idÃ©al de faire cela
+dÃ©pend de la distribution. Voici les emplacements que nous connaissons:
 <DL>
 <DT><B>Debian</B><DD>
 <P><CODE>/etc/init.d/boot</CODE> (pour les vieilles versions)<BR>
-<CODE>/etc/init.d/</CODE> (pour les versions récentes)<BR>
+<CODE>/etc/init.d/</CODE> (pour les versions rÃ©centes)<BR>
 Un paquet <CODE>brltty</CODE> est fourni
 (voir [
 <A HREF="http://paquets.debian.org/brltty">http://paquets.debian.org/brltty</A>])
 en tant que version <CODE>3.0</CODE> (<CODE>Woody</CODE>).
-Comme ce paquet prend soin du démarrage de BRLTTY, il n'y a pas
+Comme ce paquet prend soin du dÃ©marrage de BRLTTY, il n'y a pas
 besoin pour l'utilisateur de fournir quoique ce soit, s'il est
-installé. Si vous avez besoin que le démon se lance avec des options en ligne
+installÃ©. Si vous avez besoin que le dÃ©mon se lance avec des options en ligne
 de commande, vous pouvez modifier le contenu entre guillemets du fichier
-<CODE>/etc/default/brltty</CODE>. Si vous avez besoin que le démon se lance avec 
+<CODE>/etc/default/brltty</CODE>. Si vous avez besoin que le dÃ©mon se lance avec 
 des options en ligne de commande, vous pouvez modifier le contenu entre 
 guillemets de la ligne <CODE>ARGUMENTS</CODE> du fichier <CODE>/etc/default/brltty</CODE>.</P>
 <DT><B>RedHat</B><DD>
 <P><CODE>/etc/rc.d/rc.sysinit</CODE><BR>
-Sachez que les versions récentes, afin de supporter une procédure
-d'initialisation du système plus orientée vers les utilisateurs,
-font rappeler ce script par lui-même de telle sorte qu'il soit
-sous le contrôle de <CODE>initlog</CODE>. Recherchez des lignes comme celles-ci:
+Sachez que les versions rÃ©centes, afin de supporter une procÃ©dure
+d'initialisation du systÃ¨me plus orientÃ©e vers les utilisateurs,
+font rappeler ce script par lui-mÃªme de telle sorte qu'il soit
+sous le contrÃ´le de <CODE>initlog</CODE>. Recherchez des lignes comme celles-ci:
 <BLOCKQUOTE><CODE>
 <PRE>
     # Rerun ourselves through initlog
@@ -1248,113 +1248,113 @@ sous le contrôle de <CODE>initlog</CODE>. Recherchez des lignes comme celles-ci:
 </PRE>
 </CODE></BLOCKQUOTE>
 
-Démarrer BRLTTY avant ce rappel donne deux processus BRLTTY en
-même temps, et cela vous causera des foules de problèmes. Si votre
-version de ce script a cette caractéristique, assurez-vous de
-démarrer BRLTTY après les lignes qui le mettent en action.</P>
+DÃ©marrer BRLTTY avant ce rappel donne deux processus BRLTTY en
+mÃªme temps, et cela vous causera des foules de problÃ¨mes. Si votre
+version de ce script a cette caractÃ©ristique, assurez-vous de
+dÃ©marrer BRLTTY aprÃ¨s les lignes qui le mettent en action.</P>
 <DT><B>Slackware</B><DD>
 <P><CODE>/etc/rc.d/rc.S</CODE></P>
 <DT><B>SuSE</B><DD>
 <P><CODE>/sbin/init.d/boot</CODE></P>
 </DL>
 </P>
-<P>Une autre solution est de démarrer BRLTTY depuis /etc/inittab. Si vous
-choisissez cette solution, vous avez deux possibilités.
+<P>Une autre solution est de dÃ©marrer BRLTTY depuis /etc/inittab. Si vous
+choisissez cette solution, vous avez deux possibilitÃ©s.
 <UL>
-<LI>Si vous voulez qu'il démarre vraiment très tôt, mais que vous
-n'avez pas besoin qu'il soit redémarré automatiquement s'il
-échoue, ajoutez une ligne comme la suivante avant la première
-ligne <CODE>:sysinit:</CODE> qui est déjà dans le fichier.</LI>
-<LI>Une autre solution est de démarrer BRLTTY depuis /etc/inittab. Si
-vous choisissez cette solution, vous avez deux possibilités. Si
-vous voulez qu'il démarre vraiment très tôt, mais que vous n'avez
-pas besoin qu'il soit redémarré automatiquement en cas d'échec,
-ajoutez une ligne comme la suivante avant la première ligne
-:sysinit: qui est déjà dans le fichier.
+<LI>Si vous voulez qu'il dÃ©marre vraiment trÃ¨s tÃ´t, mais que vous
+n'avez pas besoin qu'il soit redÃ©marrÃ© automatiquement s'il
+Ã©choue, ajoutez une ligne comme la suivante avant la premiÃ¨re
+ligne <CODE>:sysinit:</CODE> qui est dÃ©jÃ  dans le fichier.</LI>
+<LI>Une autre solution est de dÃ©marrer BRLTTY depuis /etc/inittab. Si
+vous choisissez cette solution, vous avez deux possibilitÃ©s. Si
+vous voulez qu'il dÃ©marre vraiment trÃ¨s tÃ´t, mais que vous n'avez
+pas besoin qu'il soit redÃ©marrÃ© automatiquement en cas d'Ã©chec,
+ajoutez une ligne comme la suivante avant la premiÃ¨re ligne
+:sysinit: qui est dÃ©jÃ  dans le fichier.
 <BLOCKQUOTE><CODE>
 brl:12345:respawn:/bin/brltty -n
 </CODE></BLOCKQUOTE>
 
 
 L'option 
-<A HREF="BRLTTY-4.html#options-no-daemon">-n</A> (--nodaemon) quand BRLTTY est exécuté avec la
-facilité respawn de l'inittab. Si vous oubliez de la
-spécifier, vous allez vous retrouver avec des centaines de
-processus BRLTTY, tous exécutés en même temps.</LI>
+<A HREF="BRLTTY-4.html#options-no-daemon">-n</A> (--nodaemon) quand BRLTTY est exÃ©cutÃ© avec la
+facilitÃ© respawn de l'inittab. Si vous oubliez de la
+spÃ©cifier, vous allez vous retrouver avec des centaines de
+processus BRLTTY, tous exÃ©cutÃ©s en mÃªme temps.</LI>
 </UL>
 
-Vérifiez que l'identificateur (<CODE>brl</CODE> dans ces exemples) n'est pas déjà
-utilisé par une autre entrée, et, si c'est le cas, choisissez-en un
+VÃ©rifiez que l'identificateur (<CODE>brl</CODE> dans ces exemples) n'est pas dÃ©jÃ 
+utilisÃ© par une autre entrÃ©e, et, si c'est le cas, choisissez-en un
 autre.</P>
-<P>Remarquez qu'une commande telle que <CODE>kill -TERM</CODE> suffit pour arrêter
-BRLTTY dans ses opérations. Si, par exemple, il meurt lors de
-l'entrée en mode mono-utilisateur, il se pourrait bien que cela vienne
-d'un problème de cette nature.</P>
-<P>Certains systèmes rencontrent des problèmes si une application tente
-d'utiliser le sous-système son du noyau avant qu'il ait été
-initialisé. Si votre système en fait partie, vous aurez peut-être
-besoin de désactiver le démarrage automatique du pilote de la synthèse
+<P>Remarquez qu'une commande telle que <CODE>kill -TERM</CODE> suffit pour arrÃªter
+BRLTTY dans ses opÃ©rations. Si, par exemple, il meurt lors de
+l'entrÃ©e en mode mono-utilisateur, il se pourrait bien que cela vienne
+d'un problÃ¨me de cette nature.</P>
+<P>Certains systÃ¨mes rencontrent des problÃ¨mes si une application tente
+d'utiliser le sous-systÃ¨me son du noyau avant qu'il ait Ã©tÃ©
+initialisÃ©. Si votre systÃ¨me en fait partie, vous aurez peut-Ãªtre
+besoin de dÃ©sactiver le dÃ©marrage automatique du pilote de la synthÃ¨se
 vocale avec l'option 
 <A HREF="BRLTTY-4.html#options-no-speech">-N</A>.</P>
-<P>Certains systèmes, dans une étape de leur séquence de boot, testent
-(probe) les ports série (normalement afin de détecter automatiquement
-la souris et déduire son type). Si votre afficheur braille utilise un
-port série, ce genre de détection peut suffir à le gêner. Si cela vous
-arrive, essayez de redémarrer le pilote braille (voir la commande
-<A HREF="BRLTTY-4.html#command-RESTARTBRL">RESTARTBRL</A>). Ou mieux, désactiver le test du port série. Voici ce
-que nous savons sur la manière de réaliser cela:
+<P>Certains systÃ¨mes, dans une Ã©tape de leur sÃ©quence de boot, testent
+(probe) les ports sÃ©rie (normalement afin de dÃ©tecter automatiquement
+la souris et dÃ©duire son type). Si votre afficheur braille utilise un
+port sÃ©rie, ce genre de dÃ©tection peut suffir Ã  le gÃªner. Si cela vous
+arrive, essayez de redÃ©marrer le pilote braille (voir la commande
+<A HREF="BRLTTY-4.html#command-RESTARTBRL">RESTARTBRL</A>). Ou mieux, dÃ©sactiver le test du port sÃ©rie. Voici ce
+que nous savons sur la maniÃ¨re de rÃ©aliser cela:
 <DL>
 <DT><B>Red Hat</B><DD>
-<P>Le test se fait par un service appelé <CODE>kudzu</CODE>. Utilisez la commande
+<P>Le test se fait par un service appelÃ© <CODE>kudzu</CODE>. Utilisez la commande
 <BLOCKQUOTE><CODE>
 chkconfig --list kudzu
 </CODE></BLOCKQUOTE>
- pour voir s'il a été activé.
+ pour voir s'il a Ã©tÃ© activÃ©.
 Utilisez la commande 
 <BLOCKQUOTE><CODE>
 chkconfig kudzu off
 </CODE></BLOCKQUOTE>
- pour le désactiver.
-Les dernières versions permettent de laisser <CODE>kudzu</CODE> s'exécuter sans
-tester les ports série.
-Pour cela, éditez le fichier <CODE>/etc/sysconfig/kudzu</CODE>,, et réglez <CODE>SAFE</CODE> à <CODE>yes</CODE>.</P>
+ pour le dÃ©sactiver.
+Les derniÃ¨res versions permettent de laisser <CODE>kudzu</CODE> s'exÃ©cuter sans
+tester les ports sÃ©rie.
+Pour cela, Ã©ditez le fichier <CODE>/etc/sysconfig/kudzu</CODE>,, et rÃ©glez <CODE>SAFE</CODE> Ã  <CODE>yes</CODE>.</P>
 </DL>
 </P>
-<P>Si vous voulez démarrer BRLTTY avant que les systèmes de fichiers ne
-soient montés, assurez-vous que tous leurs composants sont installés
-dans le fichier racine du système. Voir les options de compilation
+<P>Si vous voulez dÃ©marrer BRLTTY avant que les systÃ¨mes de fichiers ne
+soient montÃ©s, assurez-vous que tous leurs composants sont installÃ©s
+dans le fichier racine du systÃ¨me. Voir les options de compilation
 <A HREF="#build-execute-root">--with-execute-root</A>,
 <A HREF="#build-program-directory">--bindir</A>,
 <A HREF="#build-data-directory">--with-data-directory</A>,
 et 
 <A HREF="#build-library-directory">--libdir</A> ref id="build-execute-root" name="--with-writable-directory"> et ref id="build-execute-root" name="--with-data-directory'' build">.</P>
 
-<H2><A NAME="ss3.5">3.5</A> <A HREF="BRLTTY.html#toc3.5">Considérations sur la sécurité</A>
+<H2><A NAME="ss3.5">3.5</A> <A HREF="BRLTTY.html#toc3.5">ConsidÃ©rations sur la sÃ©curitÃ©</A>
 </H2>
 
-<P>L'exécution de BRLTTY nécessite les privilèges root parce que le
-programme a besoin, lorsqu'il s'exécute, des droits d'accès de lecture
-et d'écriture pour le port auquel l'afficheur braille est connecté,
-les droits d'accès en lecture à /dev/vcsa ou équivalent (pour avoir
-les dimensions de l'écran et la position du curseur, et pour revoir le
-contenu et les choses mises en valeur sur l'écran courant), ainsi que
-les accès en lecture et écriture à la console système (pour l'entrée
-des flèches de direction pendant le déplacement du curseur) pour
-l'insertion de caractères lors du Coller, pour la simulation de
-touches spéciales en utilisant celles de l'afficheur braille, pour la
-recherche de traduction des caractères en sortie et les tables faisant
-la correspondance des polices de l'écran, et pour l'activation
+<P>L'exÃ©cution de BRLTTY nÃ©cessite les privilÃ¨ges root parce que le
+programme a besoin, lorsqu'il s'exÃ©cute, des droits d'accÃ¨s de lecture
+et d'Ã©criture pour le port auquel l'afficheur braille est connectÃ©,
+les droits d'accÃ¨s en lecture Ã  /dev/vcsa ou Ã©quivalent (pour avoir
+les dimensions de l'Ã©cran et la position du curseur, et pour revoir le
+contenu et les choses mises en valeur sur l'Ã©cran courant), ainsi que
+les accÃ¨s en lecture et Ã©criture Ã  la console systÃ¨me (pour l'entrÃ©e
+des flÃ¨ches de direction pendant le dÃ©placement du curseur) pour
+l'insertion de caractÃ¨res lors du Coller, pour la simulation de
+touches spÃ©ciales en utilisant celles de l'afficheur braille, pour la
+recherche de traduction des caractÃ¨res en sortie et les tables faisant
+la correspondance des polices de l'Ã©cran, et pour l'activation
 du beeper interne). Vous pouvez, bien entendu, autoriser les
-utilisateurs ordinaires à accéder aux périphériques nécessaires, en
-changeant les permissions du fichier associé au
-périphérique. Toutefois, le simple accès à la console ne suffit pas
+utilisateurs ordinaires Ã  accÃ©der aux pÃ©riphÃ©riques nÃ©cessaires, en
+changeant les permissions du fichier associÃ© au
+pÃ©riphÃ©rique. Toutefois, le simple accÃ¨s Ã  la console ne suffit pas
 car l'activation du beeper interne et des fonctions de
-simulation du clavier requiert les privilèges root. Ainsi, si vous
-voulez arrêter le déplacement du curseur, utiliser Copier/Coller les
-beep et tout cela, vous pouvez exécuter BRLTTY sans les privilèges
+simulation du clavier requiert les privilÃ¨ges root. Ainsi, si vous
+voulez arrÃªter le dÃ©placement du curseur, utiliser Copier/Coller les
+beep et tout cela, vous pouvez exÃ©cuter BRLTTY sans les privilÃ¨ges
 root.</P>
 
-<H2><A NAME="ss3.6">3.6</A> <A HREF="BRLTTY.html#toc3.6">Restrictions applicables à la compilation et à l'exécution</A>
+<H2><A NAME="ss3.6">3.6</A> <A HREF="BRLTTY.html#toc3.6">Restrictions applicables Ã  la compilation et Ã  l'exÃ©cution</A>
 </H2>
 
 <P>
@@ -1362,77 +1362,77 @@ root.</P>
 <DT><B>les beeps d'Alerte</B><DD>
 <P>
 <A NAME="restriction-tunes"></A> 
-Certaines plateformes ne supportent pas tous les périphériques
+Certaines plateformes ne supportent pas tous les pÃ©riphÃ©riques
 sonores. Voir 
-<A HREF="BRLTTY-5.html#preference-tune-device">Périphérique pour le son</A> pour plus de détails.</P>
-<DT><B>Pilote pour la synthèse FestivalLite</B><DD>
+<A HREF="BRLTTY-5.html#preference-tune-device">PÃ©riphÃ©rique pour le son</A> pour plus de dÃ©tails.</P>
+<DT><B>Pilote pour la synthÃ¨se FestivalLite</B><DD>
 <P>
 <A NAME="restrictions-flite"></A> 
-Le pilote pour le moteur FestivalLite n'est compilé
-que si ce paquet a été installé.</P>
+Le pilote pour le moteur FestivalLite n'est compilÃ©
+que si ce paquet a Ã©tÃ© installÃ©.</P>
 <P>Ce pilote et celui pour le moteur Theta (voir
-l'option de compilation ``--with-theta'') ne peuvent être liés
-tous les deux à l'exécutable BRLTTY (voir l'option de compilation
-<A HREF="#build-theta">--with-speech-driver</A>) car les bibliothèques nécessaires à leur
-exécution contiennent des éléments conflictuels.</P>
+l'option de compilation ``--with-theta'') ne peuvent Ãªtre liÃ©s
+tous les deux Ã  l'exÃ©cutable BRLTTY (voir l'option de compilation
+<A HREF="#build-theta">--with-speech-driver</A>) car les bibliothÃ¨ques nÃ©cessaires Ã  leur
+exÃ©cution contiennent des Ã©lÃ©ments conflictuels.</P>
 <DT><B>Pilote pour l'afficheur braille Libbraille</B><DD>
 <P>
 <A NAME="restrictions-mikropuhe"></A> 
-Le pilote pour le paquet libbraille n'est compilé que si le paquet a
-été installé.   </P>
+Le pilote pour le paquet libbraille n'est compilÃ© que si le paquet a
+Ã©tÃ© installÃ©.   </P>
 
-<DT><B>Pilote pour la synthèse Mikropuhe</B><DD>
+<DT><B>Pilote pour la synthÃ¨se Mikropuhe</B><DD>
 <P>
 <A NAME="restrictions-mikropuhe"></A> 
-Le pilote pour le moteur Mikropuhe n'est compilé
-que si ce paquet a été installé.</P>
-<P>Vous ne pouvez inclure ce pilote si l'exécutable BRLTTY est lié
+Le pilote pour le moteur Mikropuhe n'est compilÃ©
+que si ce paquet a Ã©tÃ© installÃ©.</P>
+<P>Vous ne pouvez inclure ce pilote si l'exÃ©cutable BRLTTY est liÃ©
 statiquement (voir l'option de compilation
 <A HREF="#build-standalone-programs">--enable-standalone-programs</A>) car le paquet n'inclut pas
-de bibliothèque statique.</P>
-<DT><B>Le pilote pour la synthèse Theta</B><DD>
+de bibliothÃ¨que statique.</P>
+<DT><B>Le pilote pour la synthÃ¨se Theta</B><DD>
 <P>
 <A NAME="restrictions-theta"></A> 
-Le pilote pour le moteur Theta n'est compilé que si
-ce paquet a été installé.</P>
+Le pilote pour le moteur Theta n'est compilÃ© que si
+ce paquet a Ã©tÃ© installÃ©.</P>
 <P>Ce pilote et celui pour le moteur FestivalLite
 (voir l'option de compilation 
-<A HREF="#build-flite">--with-flite</A>) ne peuvent être
-liés tous les deux à l'exécutable BRLTTY (voir l'option de
+<A HREF="#build-flite">--with-flite</A>) ne peuvent Ãªtre
+liÃ©s tous les deux Ã  l'exÃ©cutable BRLTTY (voir l'option de
 compilation 
-<A HREF="#build-speech-driver">--with-speech-driver</A>) car les bibliothèques
-nécessaires à leur exécution contiennent des éléments conflictuels.</P>
-<P>Si ce pilote est compilé comme objet dynamique, vous devez
-rajouter <CODE>$THETA_HOME/lib</CODE> à la variable d'environnement
-<CODE>LD_LIBRARY_PATH</CODE> avant que BRLTTY ne soit appelé, car les objets à
-l'intérieur du paquet ne contiennent pas les chemins de recherche
-pour l'exécution et leurs dépendances.</P>
+<A HREF="#build-speech-driver">--with-speech-driver</A>) car les bibliothÃ¨ques
+nÃ©cessaires Ã  leur exÃ©cution contiennent des Ã©lÃ©ments conflictuels.</P>
+<P>Si ce pilote est compilÃ© comme objet dynamique, vous devez
+rajouter <CODE>$THETA_HOME/lib</CODE> Ã  la variable d'environnement
+<CODE>LD_LIBRARY_PATH</CODE> avant que BRLTTY ne soit appelÃ©, car les objets Ã 
+l'intÃ©rieur du paquet ne contiennent pas les chemins de recherche
+pour l'exÃ©cution et leurs dÃ©pendances.</P>
 <DT><B>ViaVoice Speech Synthesizer Driver</B><DD>
 <P>
 <A NAME="restrictions-viavoice"></A> 
-Le pilote pour le moteur ViaVoice n'est compilé que
-si ce paquet a été installé.</P>
-<P>Vous ne pouvez inclure ce pilote si l'exécutable BRLTTY est lié
+Le pilote pour le moteur ViaVoice n'est compilÃ© que
+si ce paquet a Ã©tÃ© installÃ©.</P>
+<P>Vous ne pouvez inclure ce pilote si l'exÃ©cutable BRLTTY est liÃ©
 statiquement (voir l'option de compilation
 the 
 <A HREF="#build-standalone-programs">--enable-standalone-programs</A>) car le paquet n'inclut pas
-de bibliothèque statique.</P>
+de bibliothÃ¨que statique.</P>
 <DT><B>Pilote pour l'afficheur braille VideoBraille</B><DD>
 <P>
 <A NAME="restrictions-videobraille"></A> 
-Le pilote pour l'afficheur braille VideoBraille est compilé sur
-tous les systèmes, mais ne fonctionne que sur Linux.</P>
+Le pilote pour l'afficheur braille VideoBraille est compilÃ© sur
+tous les systÃ¨mes, mais ne fonctionne que sur Linux.</P>
 </DL>
 </P>
 
-<H2><A NAME="rpm"></A> <A NAME="ss3.7">3.7</A> <A HREF="BRLTTY.html#toc3.7">Installation à partir d'un fichier RPM</A>
+<H2><A NAME="rpm"></A> <A NAME="ss3.7">3.7</A> <A HREF="BRLTTY.html#toc3.7">Installation Ã  partir d'un fichier RPM</A>
 </H2>
 
-<P>Pour installer BRLTTY à partir d'un fichier RPM (RedHat paquet
-Manager), procéder comme suit:
+<P>Pour installer BRLTTY Ã  partir d'un fichier RPM (RedHat paquet
+Manager), procÃ©der comme suit:
 <OL>
-<LI>Téléchargez le paquet exécutable correspondant à votre
-matériel. Ce sera un fichier nommé
+<LI>TÃ©lÃ©chargez le paquet exÃ©cutable correspondant Ã  votre
+matÃ©riel. Ce sera un fichier nommÃ©
 <CODE>brltty-</CODE><EM>version</EM><CODE>-</CODE><EM>version</EM><CODE>.</CODE><EM>architecture</EM><CODE>.rpm</CODE>,
 par exemple, <CODE>brltty-3.0-1.i386.rpm</CODE>.</LI>
 <LI>Installez le paquet.
@@ -1443,14 +1443,14 @@ rpm -Uvh brltty-<EM>version</EM>-<EM>version</EM>.<EM>architecture</EM>.rpm
 Vous devez faire cela en tant que <B>root</B>.
 
 A proprement parler, l'option <CODE>-U</CODE> (Update) est la seule
-nécessaire. L'option <CODE>-v</CODE> (verbose) affiche le nom du paquet
-lorsqu'il va être installé. L'option <CODE>-h</CODE> (hashes) affiche une barre
+nÃ©cessaire. L'option <CODE>-v</CODE> (verbose) affiche le nom du paquet
+lorsqu'il va Ãªtre installÃ©. L'option <CODE>-h</CODE> (hashes) affiche une barre
 de progression (utilisant des hachures).</LI>
 </OL>
 
 Pour les gens courageux, nous fournissons le fichier RPM source
-(<CODE>.src.rpm</CODE>) mais cela dépasse l'objectif de ce document.</P>
-<P>Pour désinstaller BRLTTY, faites:
+(<CODE>.src.rpm</CODE>) mais cela dÃ©passe l'objectif de ce document.</P>
+<P>Pour dÃ©sinstaller BRLTTY, faites:
 <BLOCKQUOTE><CODE>
 rpm -e brltty
 </CODE></BLOCKQUOTE>
@@ -1465,214 +1465,214 @@ outils d'aide et de diagnostic.</P>
 <H3><A NAME="utility-brltty-config"></A> brltty-config</H3>
 
 <P>Cet outil affecte un certain nombre de variables d'environnement
-à des valeurs reflétant l'installation courante de BRLTTY (voir les
-<A HREF="#build">options de compilation</A>). Vous devriez l'exécuter dans un
-environnement shell existant, donc ce n'est pas une véritable commande,
+Ã  des valeurs reflÃ©tant l'installation courante de BRLTTY (voir les
+<A HREF="#build">options de compilation</A>). Vous devriez l'exÃ©cuter dans un
+environnement shell existant, donc ce n'est pas une vÃ©ritable commande,
 et seuls les scripts supportant la syntaxe <CODE>Bourne Shell</CODE>
 peuvent l'utiliser.
 <BLOCKQUOTE><CODE>
 . brltty-config
 </CODE></BLOCKQUOTE>
 </P>
-<P>Les variables d'environnement suivantes sont affectées:
+<P>Les variables d'environnement suivantes sont affectÃ©es:
 <DL>
 <DT><B>BRLTTY_VERSION</B><DD>
-<P>Le numéro de version du paquet BRLTTY.</P>
+<P>Le numÃ©ro de version du paquet BRLTTY.</P>
 <DT><B>BRLTTY_EXECUTE_ROOT</B><DD>
-<P>La racine de l'exécution du paquet installé. Configurée par
+<P>La racine de l'exÃ©cution du paquet installÃ©. ConfigurÃ©e par
 l'option de compilation 
 <A HREF="#build-execute-root">--with-execute-root</A>.</P>
 <DT><B>BRLTTY_PROGRAM_DIRECTORY</B><DD>
-<P>Répertoire des programmes exécutables (binaires
-exécutables). Configuré par l'option de compilation 
+<P>RÃ©pertoire des programmes exÃ©cutables (binaires
+exÃ©cutables). ConfigurÃ© par l'option de compilation 
 <A HREF="#build-program-directory">--with-program-directory</A>.</P>
 <DT><B>BRLTTY_LIBRARY_DIRECTORY</B><DD>
-<P>Répertoire des pilotes. Configuré par l'option de compilation 
+<P>RÃ©pertoire des pilotes. ConfigurÃ© par l'option de compilation 
 <A HREF="#build-library-directory">--with-library-directory</A>.</P>
 <DT><B>BRLTTY_WRITABLE_DIRECTORY</B><DD>
-<P>Répertoire dans lequel il est possible d'écrire. Configuré par l'option
+<P>RÃ©pertoire dans lequel il est possible d'Ã©crire. ConfigurÃ© par l'option
 de compilation 
 <A HREF="#build-program-directory">--with-writable-directory</A>.</P>
 <DT><B>BRLTTY_DATA_DIRECTORY</B><DD>
-<P>Répertoire des tables et des pages de manuel. Configuré par
+<P>RÃ©pertoire des tables et des pages de manuel. ConfigurÃ© par
 l'option de compilation 
 <A HREF="#build-data-directory">--with-data-directory</A>.</P>
 <DT><B>BRLTTY_MANPAGE_DIRECTORY</B><DD>
-<P>Répertoire des pages de manuel. Configuré par l'option de
+<P>RÃ©pertoire des pages de manuel. ConfigurÃ© par l'option de
 compilation 
 <A HREF="#build-manpage-directory">--with-manpage-directory</A>.</P>
 <DT><B>BRLTTY_INCLUDE_DIRECTORY</B><DD>
-<P>Répertoire pour les fichiers d'en-tête C de BrlAPI. Configuré
+<P>RÃ©pertoire pour les fichiers d'en-tÃªte C de BrlAPI. ConfigurÃ©
 par l'option de compilation 
 <A HREF="#build-include-directory">--with-include-directory</A>.</P>
 <DT><B>BRLAPI_VERSION</B><DD>
-<P>Le numéro de version de BrlAPI (BRLTTY's Application
+<P>Le numÃ©ro de version de BrlAPI (BRLTTY's Application
 Programming Interface).</P>
 <DT><B>BRLAPI_RELEASE</B><DD>
-<P>Le numéro de version complet de BrlAPI.</P>
+<P>Le numÃ©ro de version complet de BrlAPI.</P>
 <DT><B>BRLAPI_AUTH</B><DD>
-<P>Le nom du fichier de clés de BrlAPI.</P>
+<P>Le nom du fichier de clÃ©s de BrlAPI.</P>
 </DL>
 </P>
 <P>En plus, les variables d'environnement standard <CODE>autoconf</CODE>
-suivantes sont aussi assignées:
+suivantes sont aussi assignÃ©es:
 <DL>
 <DT><B>prefix</B><DD>
-<P>Sous-répertoire pour les fichiers indépendants de l'architecture.
-Configuré par l'option de compilation 
+<P>Sous-rÃ©pertoire pour les fichiers indÃ©pendants de l'architecture.
+ConfigurÃ© par l'option de compilation 
 <A HREF="#build-portable-root">--prefix</A>.</P>
 <DT><B>exec_prefix</B><DD>
-<P>Sous-répertoire pour les fichiers dépendants de l'architecture.
-Configuré par l'option de compilation 
+<P>Sous-rÃ©pertoire pour les fichiers dÃ©pendants de l'architecture.
+ConfigurÃ© par l'option de compilation 
 <A HREF="#build-architecture-root">--exec-prefix</A>.</P>
 <DT><B>bindir</B><DD>
-<P>Emplacement par défaut du 
-<A HREF="#build-program-directory">répertoire du programme</A>.
-Configuré par l'option de compilation <CODE>--bindir</CODE>.</P>
+<P>Emplacement par dÃ©faut du 
+<A HREF="#build-program-directory">rÃ©pertoire du programme</A>.
+ConfigurÃ© par l'option de compilation <CODE>--bindir</CODE>.</P>
 <DT><B>libdir</B><DD>
-<P>Répertoire pour les objets dynamiques et statiques de
-BrlAPI, la localisation par défaut pour le 
-<A HREF="#build-library-directory">répertoire des     bibliothèques</A>. Configuré par l'option de compilation 
+<P>RÃ©pertoire pour les objets dynamiques et statiques de
+BrlAPI, la localisation par dÃ©faut pour le 
+<A HREF="#build-library-directory">rÃ©pertoire des     bibliothÃ¨ques</A>. ConfigurÃ© par l'option de compilation 
 <A HREF="#build-api-directory">--libdir</A>.</P>
 <DT><B>sysconfdir</B><DD>
-<P>Répertoire des fichiers de configuration, emplacement par défaut du 
-<A HREF="#build-data-directory">répertoire de données</A>. Configuré par
+<P>RÃ©pertoire des fichiers de configuration, emplacement par dÃ©faut du 
+<A HREF="#build-data-directory">rÃ©pertoire de donnÃ©es</A>. ConfigurÃ© par
 l'option de compilation 
 <A HREF="#build-configuration-directory">--sysconfdir</A>.</P>
 <DT><B>mandir</B><DD>
-<P>Emplacement par défaut pour le 
-<A HREF="#build-manpage-directory">répertoire des pages de manuel</A>.
-Configuré par l'option de compilation <CODE>--mandir</CODE>.</P>
+<P>Emplacement par dÃ©faut pour le 
+<A HREF="#build-manpage-directory">rÃ©pertoire des pages de manuel</A>.
+ConfigurÃ© par l'option de compilation <CODE>--mandir</CODE>.</P>
 <DT><B>includedir</B><DD>
-<P>Emplacement par défaut du 
-<A HREF="#build-include-directory">répertoire des fichiers d'en-tête</A>.
-Configuré par l'option de compilation <CODE>--includedir</CODE>.</P>
+<P>Emplacement par dÃ©faut du 
+<A HREF="#build-include-directory">rÃ©pertoire des fichiers d'en-tÃªte</A>.
+ConfigurÃ© par l'option de compilation <CODE>--includedir</CODE>.</P>
 </DL>
 </P>
 
 <H3><A NAME="utility-brltty-install"></A> brltty-install</H3>
 
 <P>Cet outil copie la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A> de
-BRLTTY d'un emplacement à un autre.
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A> de
+BRLTTY d'un emplacement Ã  un autre.
 <BLOCKQUOTE><CODE>
 brltty-install <EM>destination</EM> [<EM>origine</EM>]
 </CODE></BLOCKQUOTE>
 
 <DL>
 <DT><B><EM>destination</EM></B><DD>
-<P>L'emplacement où la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A>
-sera copiée. Cela doit être un répertoire existant.</P>
+<P>L'emplacement oÃ¹ la 
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A>
+sera copiÃ©e. Cela doit Ãªtre un rÃ©pertoire existant.</P>
 <DT><B><EM>from</EM></B><DD>
-<P>L'emplacement à partir duquel la 
-<A HREF="#hierarchy">hiérarchie des fichiers installés</A>
-sera copiée. S'il est spécifié, le répertoire doit
-exister. S'il n'est pas spécifié, l'emplacement utilisé pour la
-compilation est utilisé.</P>
+<P>L'emplacement Ã  partir duquel la 
+<A HREF="#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A>
+sera copiÃ©e. S'il est spÃ©cifiÃ©, le rÃ©pertoire doit
+exister. S'il n'est pas spÃ©cifiÃ©, l'emplacement utilisÃ© pour la
+compilation est utilisÃ©.</P>
 </DL>
 
 Par exemple, vous pouvez utiliser cette outil pour copier BRLTTY
-à partir d'un disque racine. Si une disquette racine est montée dans
-<CODE>/mnt</CODE>, et que BRLTTY est installé sur le système principal, taper 
+Ã  partir d'un disque racine. Si une disquette racine est montÃ©e dans
+<CODE>/mnt</CODE>, et que BRLTTY est installÃ© sur le systÃ¨me principal, taper 
 <BLOCKQUOTE><CODE>
 brltty-install /mnt
 </CODE></BLOCKQUOTE>
 
-copie BRLTTY, en entier avec ses fichiers de données et ses bibliothèques, sur
+copie BRLTTY, en entier avec ses fichiers de donnÃ©es et ses bibliothÃ¨ques, sur
 la disquette racine.</P>
-<P>Quelques problèmes ont été rencontrés en copiant BRLTTY entre des
-systèmes avec différentes versions de la bibliothèque C. Si vous avez
-des difficultés, cela vaut la peine d'enquêter.</P>
+<P>Quelques problÃ¨mes ont Ã©tÃ© rencontrÃ©s en copiant BRLTTY entre des
+systÃ¨mes avec diffÃ©rentes versions de la bibliothÃ¨que C. Si vous avez
+des difficultÃ©s, cela vaut la peine d'enquÃªter.</P>
 
 <H3><A NAME="utility-brltest"></A> brltest</H3>
 
 <P>Cet outil teste un pilote d'afficheur braille, et fournit presque
-une façon interactive d'apprendre ce que font les touches de
-l'afficheur braille. Vous devriez l'exécuter en tant que root.
+une faÃ§on interactive d'apprendre ce que font les touches de
+l'afficheur braille. Vous devriez l'exÃ©cuter en tant que root.
 <BLOCKQUOTE><CODE>
 brltest -<EM>option</EM> ... [<EM>pilote</EM> [<EM>nom</EM>=<EM>valeur</EM> ...]]
 </CODE></BLOCKQUOTE>
 
 <DL>
 <DT><B><EM>pilote</EM></B><DD>
-<P>Le pilote de l'afficheur braille. Doit être les deux lettres du
-<A HREF="BRLTTY-10.html#drivers">code d'identification du pilote</A>. S'il n'est pas spécifié, le
-premier pilote configuré par l'option de compilation
-<A HREF="#build-braille-driver">--with-braille-driver</A> est utilisé.</P>
+<P>Le pilote de l'afficheur braille. Doit Ãªtre les deux lettres du
+<A HREF="BRLTTY-10.html#drivers">code d'identification du pilote</A>. S'il n'est pas spÃ©cifiÃ©, le
+premier pilote configurÃ© par l'option de compilation
+<A HREF="#build-braille-driver">--with-braille-driver</A> est utilisÃ©.</P>
 <DT><B><EM>nom</EM><CODE>=</CODE><EM>valeur</EM></B><DD>
-<P>Affecte un paramètre d'afficheur braille. Pour une description des
-paramètres acceptés par un pilote spécifique, voir la
+<P>Affecte un paramÃ¨tre d'afficheur braille. Pour une description des
+paramÃ¨tres acceptÃ©s par un pilote spÃ©cifique, voir la
 documentation de ce pilote.</P>
-<DT><B><CODE>-d</CODE><EM>device</EM> <CODE>--device=</CODE><EM>périphérique</EM></B><DD>
-<P>Le chemin absolu pour le périphérique auquel l'afficheur braille
-est connecté. S'il n'est pas spécifié, c'est le périphérique
-configuré par l'option de compilation 
+<DT><B><CODE>-d</CODE><EM>device</EM> <CODE>--device=</CODE><EM>pÃ©riphÃ©rique</EM></B><DD>
+<P>Le chemin absolu pour le pÃ©riphÃ©rique auquel l'afficheur braille
+est connectÃ©. S'il n'est pas spÃ©cifiÃ©, c'est le pÃ©riphÃ©rique
+configurÃ© par l'option de compilation 
 <A HREF="#build-braille-device">--with-braille-device</A> qui est
-utilisé.</P>
-<DT><B><CODE>-D</CODE><EM>directory</EM> <CODE>--data-directory=</CODE><EM>répertoire</EM></B><DD>
-<P>Vous devriez fournir un chemin absolu pour le répertoire où les
-fichiers de données des pilotes sont placés. S'il n'est pas spécifié,
-c'est le répertoire configuré par l'option de compilation
-<A HREF="#build-data-directory">--with-data-directory</A> qui est utilisé.</P>
+utilisÃ©.</P>
+<DT><B><CODE>-D</CODE><EM>directory</EM> <CODE>--data-directory=</CODE><EM>rÃ©pertoire</EM></B><DD>
+<P>Vous devriez fournir un chemin absolu pour le rÃ©pertoire oÃ¹ les
+fichiers de donnÃ©es des pilotes sont placÃ©s. S'il n'est pas spÃ©cifiÃ©,
+c'est le rÃ©pertoire configurÃ© par l'option de compilation
+<A HREF="#build-data-directory">--with-data-directory</A> qui est utilisÃ©.</P>
 <DT><B><CODE>-L</CODE><EM>directory</EM> <CODE>--library-directory=</CODE><EM>repertoire</EM></B><DD>
-<P>Le chemin absolu pour le répertoire dans lequel sont situés les
-pilotes. S'il n'est pas spécifié, c'est le répertoire configuré par
+<P>Le chemin absolu pour le rÃ©pertoire dans lequel sont situÃ©s les
+pilotes. S'il n'est pas spÃ©cifiÃ©, c'est le rÃ©pertoire configurÃ© par
 l'option de compilation 
-<A HREF="#build-library-directory">--libdir</A> qui est utilisé.</P>
-<DT><B><CODE>-W</CODE><EM>répertoire</EM> <CODE>--writable-directory=</CODE><EM>repertoire</EM></B><DD>
-<P>Le chemin absolu vers un répertoire où il est possible d'écrire. S'il
-n'est pas spécifié, le répertoire configuré avec l'option >e compilation --with-writable-directory
-est utilisé.</P>
+<A HREF="#build-library-directory">--libdir</A> qui est utilisÃ©.</P>
+<DT><B><CODE>-W</CODE><EM>rÃ©pertoire</EM> <CODE>--writable-directory=</CODE><EM>repertoire</EM></B><DD>
+<P>Le chemin absolu vers un rÃ©pertoire oÃ¹ il est possible d'Ã©crire. S'il
+n'est pas spÃ©cifiÃ©, le rÃ©pertoire configurÃ© avec l'option >e compilation --with-writable-directory
+est utilisÃ©.</P>
 <DT><B><CODE>-h</CODE> <CODE>--help</CODE></B><DD>
-<P>Affiche un résumé des options de la ligne de commande, puis quitte.</P>
+<P>Affiche un rÃ©sumÃ© des options de la ligne de commande, puis quitte.</P>
 </DL>
 </P>
 <P>Cet outil utilise le ``mode apprentissage des commandes'' de
-BRLTTY. Le délai d'appui sur une touche (après lequel cet outil
-quitte) est de 10 secondes. Le temps d'affichage du message (utilisé
+BRLTTY. Le dÃ©lai d'appui sur une touche (aprÃ¨s lequel cet outil
+quitte) est de 10 secondes. Le temps d'affichage du message (utilisÃ©
 pour les segments non-finaux de longs messages) est de <CODE>4</CODE> secondes.</P>
 
 <H3><A NAME="utility-spktest"></A> spktest</H3>
 
-<P>Cet outil teste un pilote de synthèse vocale. Il se peut qu'il
-doive être exécuté en tant que root.
+<P>Cet outil teste un pilote de synthÃ¨se vocale. Il se peut qu'il
+doive Ãªtre exÃ©cutÃ© en tant que root.
 <BLOCKQUOTE><CODE>
 spktest -<EM>option</EM> ... [<EM>pilote</EM> [<EM>nom</EM>=<EM>value</EM> ...]]
 </CODE></BLOCKQUOTE>
 
 <DL>
 <DT><B><EM>pilote</EM></B><DD>
-<P>Le pilote pour la synthèse vocale. Doit être les deux lettres
+<P>Le pilote pour la synthÃ¨se vocale. Doit Ãªtre les deux lettres
 du 
-<A HREF="BRLTTY-10.html#drivers">code d'identification de pilote</A>. S'il n'est pas spécifié,
-c'est le premier pilote spécifié par l'option de compilation
-<A HREF="#build-speech-driver">--with-speech-driver</A> qui est utilisé.</P>
+<A HREF="BRLTTY-10.html#drivers">code d'identification de pilote</A>. S'il n'est pas spÃ©cifiÃ©,
+c'est le premier pilote spÃ©cifiÃ© par l'option de compilation
+<A HREF="#build-speech-driver">--with-speech-driver</A> qui est utilisÃ©.</P>
 <DT><B><EM>nom</EM><CODE>=</CODE><EM>valeur</EM></B><DD>
-<P>Règle le paramètre du pilote de la synthèse vocale. Pour une
-description des paramètres acceptés par un pilote spécifique,
+<P>RÃ¨gle le paramÃ¨tre du pilote de la synthÃ¨se vocale. Pour une
+description des paramÃ¨tres acceptÃ©s par un pilote spÃ©cifique,
 voir la documentation de ce pilote.</P>
 <DT><B><CODE>-t</CODE><EM>string</EM> <CODE>--text-string=</CODE><EM>string</EM></B><DD>
-<P>Le texte qui sera dit. S'il n'est pas spécifié, c'est l'entrée
+<P>Le texte qui sera dit. S'il n'est pas spÃ©cifiÃ©, c'est l'entrÃ©e
 standard (stdin) qui est lue.</P>
 <DT><B><CODE>-D</CODE><EM>repertoire</EM> <CODE>--data-directory=</CODE><EM>repertoire</EM></B><DD>
-<P>Le chemin absolu pour le répertoire dans lequel se situent les
-fichiers de données du pilote. S'il n'est pas spécifié, c'est le
-répertoire configuré par l'option de compilation
-<A HREF="#build-data-directory">--with-data-directory</A> qui est utilisé.</P>
+<P>Le chemin absolu pour le rÃ©pertoire dans lequel se situent les
+fichiers de donnÃ©es du pilote. S'il n'est pas spÃ©cifiÃ©, c'est le
+rÃ©pertoire configurÃ© par l'option de compilation
+<A HREF="#build-data-directory">--with-data-directory</A> qui est utilisÃ©.</P>
 <DT><B><CODE>-L</CODE><EM>repertoire</EM> <CODE>--library-directory=</CODE><EM>repertoire</EM></B><DD>
-<P>Le chemin absolu du répertoire où se situe les pilotes. S'il n'est
-pas spécifié, c'est le répertoire configuré par l'option de
+<P>Le chemin absolu du rÃ©pertoire oÃ¹ se situe les pilotes. S'il n'est
+pas spÃ©cifiÃ©, c'est le rÃ©pertoire configurÃ© par l'option de
 compilation 
-<A HREF="#build-library-directory">--libdir</A> qui est utilisé.</P>
+<A HREF="#build-library-directory">--libdir</A> qui est utilisÃ©.</P>
 <DT><B><CODE>-h</CODE> <CODE>--help</CODE></B><DD>
-<P>Affiche un résumé des options de la ligne de commande, puis quitte.</P>
+<P>Affiche un rÃ©sumÃ© des options de la ligne de commande, puis quitte.</P>
 </DL>
 </P>
 
 <H3><A NAME="utility-scrtest"></A> scrtest</H3>
 
-<P>Cet outil teste le pilote d'écran. Il doit être exécuté en tant
+<P>Cet outil teste le pilote d'Ã©cran. Il doit Ãªtre exÃ©cutÃ© en tant
 que root.
 <BLOCKQUOTE><CODE>
 scrtest -<EM>option</EM> ... [<EM>nom</EM>=<EM>valeur</EM> ...]
@@ -1680,65 +1680,65 @@ scrtest -<EM>option</EM> ... [<EM>nom</EM>=<EM>valeur</EM> ...]
 
 <DL>
 <DT><B><EM>nom</EM><CODE>=</CODE><EM>valeur</EM></B><DD>
-<P>Règle le paramètre du pilote de l'écran. Pour une
-description des paramètres acceptés par un pilote spécifique
+<P>RÃ¨gle le paramÃ¨tre du pilote de l'Ã©cran. Pour une
+description des paramÃ¨tres acceptÃ©s par un pilote spÃ©cifique
 voir la documentation de ce pilote.</P>
 <DT><B><CODE>-l</CODE><EM>colonne</EM> <CODE>--left=</CODE><EM>colonne</EM></B><DD>
-<P>Spécifie la colonne du début (à gauche) de l'écran (origine à
-zéro). Si vous ne fournissez pas cette valeur, une valeur par
-défaut, basée sur la largeur spécifiée, est sélectionnée, de telle
-sorte que la fenêtre soit centrée à l'horizontal, est utilisée.</P>
+<P>SpÃ©cifie la colonne du dÃ©but (Ã  gauche) de l'Ã©cran (origine Ã 
+zÃ©ro). Si vous ne fournissez pas cette valeur, une valeur par
+dÃ©faut, basÃ©e sur la largeur spÃ©cifiÃ©e, est sÃ©lectionnÃ©e, de telle
+sorte que la fenÃªtre soit centrÃ©e Ã  l'horizontal, est utilisÃ©e.</P>
 <DT><B><CODE>-c</CODE><EM>coompte</EM> <CODE>--columns=</CODE><EM>compte</EM></B><DD>
-<P>Spécifie la largeur de la fenêtre (en colonnes). Si vous ne
-fournissez pas cette valeur, une valeur par défaut, basée sur la
-colonne de début, est sélectionnée, de telle sorte que la fenêtre
-soit centrée à l'horrizontal.</P>
+<P>SpÃ©cifie la largeur de la fenÃªtre (en colonnes). Si vous ne
+fournissez pas cette valeur, une valeur par dÃ©faut, basÃ©e sur la
+colonne de dÃ©but, est sÃ©lectionnÃ©e, de telle sorte que la fenÃªtre
+soit centrÃ©e Ã  l'horrizontal.</P>
 <DT><B><CODE>-t</CODE><EM>ligne</EM> <CODE>--top=</CODE><EM>ligne</EM></B><DD>
-<P>Spécifie la ligne de début (en haut) de l'écran (origine à
-zéro). Si vous ne fournissez pas cette valeur, une valeur par
-défaut, basée sur la hauteur spécifiée, est sélectionnée, de telle
-sorte que la fenêtre soit centrée à la verticale.</P>
+<P>SpÃ©cifie la ligne de dÃ©but (en haut) de l'Ã©cran (origine Ã 
+zÃ©ro). Si vous ne fournissez pas cette valeur, une valeur par
+dÃ©faut, basÃ©e sur la hauteur spÃ©cifiÃ©e, est sÃ©lectionnÃ©e, de telle
+sorte que la fenÃªtre soit centrÃ©e Ã  la verticale.</P>
 <DT><B><CODE>-r</CODE><EM>compte</EM> <CODE>--rows=</CODE><EM>compte</EM></B><DD>
-<P>Spécifie la hauteur de la fenêtre (en lignes). Si vous ne
-fournissez pas cette valeur, une valeur par défaut, basée sur la
-rangée de début spécifiée, est sélectionnée, de telle sorte que la
-fenêtre soit centrée à la verticale.</P>
+<P>SpÃ©cifie la hauteur de la fenÃªtre (en lignes). Si vous ne
+fournissez pas cette valeur, une valeur par dÃ©faut, basÃ©e sur la
+rangÃ©e de dÃ©but spÃ©cifiÃ©e, est sÃ©lectionnÃ©e, de telle sorte que la
+fenÃªtre soit centrÃ©e Ã  la verticale.</P>
 <DT><B><CODE>-h</CODE> <CODE>--help</CODE></B><DD>
-<P>Affiche un résumé des options de la ligne de commande, puis
+<P>Affiche un rÃ©sumÃ© des options de la ligne de commande, puis
 quitte.</P>
 </DL>
 </P>
 <P>Remarques:
 <UL>
-<LI>Si vous ne spécifiez ni la colonne de début, ni la largeur de la
-fenêtre, la région est centrée horizontalement et commence à la
+<LI>Si vous ne spÃ©cifiez ni la colonne de dÃ©but, ni la largeur de la
+fenÃªtre, la rÃ©gion est centrÃ©e horizontalement et commence Ã  la
 colonne 5.</LI>
-<LI>Si vous ne spécifiez ni la rangée de début, ni la hauteur de la
-fenêtre, la région est centrée verticalement et commence à la ligne
+<LI>Si vous ne spÃ©cifiez ni la rangÃ©e de dÃ©but, ni la hauteur de la
+fenÃªtre, la rÃ©gion est centrÃ©e verticalement et commence Ã  la ligne
 5.</LI>
 </UL>
 </P>
-<P>Les éléments suivants sont écrits sur la sortie standard (stdout):
+<P>Les Ã©lÃ©ments suivants sont Ã©crits sur la sortie standard (stdout):
 <OL>
-<LI>Une ligne détaillant les dimensions de l'écran.
+<LI>Une ligne dÃ©taillant les dimensions de l'Ã©cran.
 <BLOCKQUOTE><CODE>
 Screen: <EM>largeur</EM>x<EM>hauteur</EM>
 </CODE></BLOCKQUOTE>
 </LI>
-<LI>Une ligne détaillant la position (à l'origine zéro) du curseur.
+<LI>Une ligne dÃ©taillant la position (Ã  l'origine zÃ©ro) du curseur.
 <BLOCKQUOTE><CODE>
 Cursor: [<EM>colonne</EM>,<EM>ligne</EM>]
 </CODE></BLOCKQUOTE>
 </LI>
-<LI>Une ligne détaillant les dimensions de la zone d'écran
-sélectionnée, et la position (à l'origine zéro) de son coin en
-haut à gauche.
+<LI>Une ligne dÃ©taillant les dimensions de la zone d'Ã©cran
+sÃ©lectionnÃ©e, et la position (Ã  l'origine zÃ©ro) de son coin en
+haut Ã  gauche.
 <BLOCKQUOTE><CODE>
 Region: <EM>largeur</EM>x<EM>hauteur</EM>@[<EM>colonne</EM>,<EM>ligne</EM>]
 </CODE></BLOCKQUOTE>
 </LI>
-<LI>Le contenu de la région d'écran sélectionnée. Les caractères
-non-imprimables sont représentés par des espaces.</LI>
+<LI>Le contenu de la rÃ©gion d'Ã©cran sÃ©lectionnÃ©e. Les caractÃ¨res
+non-imprimables sont reprÃ©sentÃ©s par des espaces.</LI>
 </OL>
 </P>
 
@@ -1751,38 +1751,38 @@ ttbtest -<EM>option</EM> ... <EM>input-table</EM> <EM>output-table</EM>
 </CODE></BLOCKQUOTE>
 
 <DL>
-<DT><B><EM>table-en-entrée</EM></B><DD>
-<P>Le chemin du fichier vers la table de texte en entrée du test. S'il
-est relatif, il est ancré au répertoire configuré avec l'option de
+<DT><B><EM>table-en-entrÃ©e</EM></B><DD>
+<P>Le chemin du fichier vers la table de texte en entrÃ©e du test. S'il
+est relatif, il est ancrÃ© au rÃ©pertoire configurÃ© avec l'option de
 compilation --with-data-directory.</P>
 
 <DT><B><EM>table-en-sortie</EM></B><DD>
 <P>Le chemin du fichier vers la table de texte en sortie du test. S'il
-est relatif, il est ancré au répertoire de travail  courant. Si vous ne
-fournissez pas ce paramètre, aucune table en sortie ne  sera écrite.</P>
+est relatif, il est ancrÃ© au rÃ©pertoire de travail  courant. Si vous ne
+fournissez pas ce paramÃ¨tre, aucune table en sortie ne  sera Ã©crite.</P>
 <DT><B><CODE>-i</CODE> <CODE>--input-format=</CODE><EM>format</EM></B><DD>
-<P>Spécifie le format  de la table d'entrée. S'il vous ne fournissez pas cette
-option, le  format de la table en entrée est déduit de l'extension de son
+<P>SpÃ©cifie le format  de la table d'entrÃ©e. S'il vous ne fournissez pas cette
+option, le  format de la table en entrÃ©e est dÃ©duit de l'extension de son
 fichier.</P>
 <DT><B><CODE>-o</CODE> <CODE>--output-format=</CODE><EM>format</EM></B><DD>
-<P>Spécifie le format  de la table en sortie. S'il vous ne fournissez pas cette
-option, le  format de la table en entrée est déduit de l'extension de son
+<P>SpÃ©cifie le format  de la table en sortie. S'il vous ne fournissez pas cette
+option, le  format de la table en entrÃ©e est dÃ©duit de l'extension de son
 fichier.</P>
 <DT><B><CODE>-c</CODE><EM>charset</EM> <CODE>--charset=</CODE><EM>charset</EM></B><DD>
-<P>Spécifie le nom de l'encodage 8-bit à utiliser lors de l'interprétation des 
-tables. Si vous ne fournissez pas cette option, le codage de l'hôte est
-utilisé.</P>
+<P>SpÃ©cifie le nom de l'encodage 8-bit Ã  utiliser lors de l'interprÃ©tation des 
+tables. Si vous ne fournissez pas cette option, le codage de l'hÃ´te est
+utilisÃ©.</P>
 <DT><B><CODE>-e</CODE> <CODE>--edit</CODE></B><DD>
-<P>Appelle l'éditeur de tables de texte. Si vous spécifiez table de sortie,
-les changements seront écrits dessus. Sinon, la table d'entrée et réécrite.</P>
+<P>Appelle l'Ã©diteur de tables de texte. Si vous spÃ©cifiez table de sortie,
+les changements seront Ã©crits dessus. Sinon, la table d'entrÃ©e et rÃ©Ã©crite.</P>
 <DT><B><CODE>-h</CODE> <CODE>--help</CODE></B><DD>
-<P>Affiche un résumé des options en ligne de commande, et quitte.</P>
+<P>Affiche un rÃ©sumÃ© des options en ligne de commande, et quitte.</P>
 </DL>
 </P>
 <P>Si vous ne demandez aucune action en particulier, la table de sortie est 
-facultative. Si vous ne la spécifiez pas, la table d'entrée est vérifiée.
-Si vous la spécifiez, la table d'entrée est convertie.
-Les formats de table suivants sont supportés:
+facultative. Si vous ne la spÃ©cifiez pas, la table d'entrÃ©e est vÃ©rifiÃ©e.
+Si vous la spÃ©cifiez, la table d'entrÃ©e est convertie.
+Les formats de table suivants sont supportÃ©s:
 <DL>
 <DT><B>ttb</B><DD>
 <P>BRLTTY</P>
@@ -1798,142 +1798,142 @@ Les formats de table suivants sont supportés:
 
 <H3><A NAME="utility-ctbtest"></A> ctbtest</H3>
 
-<P>Cet outil teste une table de braille abrégé (section 
-<A HREF="BRLTTY-6.html#table-contraction">Tables de braille abrégé</A>). Le texte lu à partir de l'entrée standard (stdin) est réécrit sur
-la sortie standard (stdout) en braille abrégé.
+<P>Cet outil teste une table de braille abrÃ©gÃ© (section 
+<A HREF="BRLTTY-6.html#table-contraction">Tables de braille abrÃ©gÃ©</A>). Le texte lu Ã  partir de l'entrÃ©e standard (stdin) est rÃ©Ã©crit sur
+la sortie standard (stdout) en braille abrÃ©gÃ©.
 <BLOCKQUOTE><CODE>
-ctbtest -<EM>fichier-en-entrée</EM>
+ctbtest -<EM>fichier-en-entrÃ©e</EM>
 </CODE></BLOCKQUOTE>
 
 <DL>
-<DT><B><EM>fichier-en-entrée</EM></B><DD>
-<P>La liste des fichiers à traiter. Vous pouvez spécifier n'importe quel
-nombre de fichiers. Ils sont traités de la gauche vers la droite. Le  nom
-de fichier spécial - est interprété comme l'entrée standard (stdin). Si
-vous ne spécifiez aucun fichier, l'entrée standard est traitée.</P>
+<DT><B><EM>fichier-en-entrÃ©e</EM></B><DD>
+<P>La liste des fichiers Ã  traiter. Vous pouvez spÃ©cifier n'importe quel
+nombre de fichiers. Ils sont traitÃ©s de la gauche vers la droite. Le  nom
+de fichier spÃ©cial - est interprÃ©tÃ© comme l'entrÃ©e standard (stdin). Si
+vous ne spÃ©cifiez aucun fichier, l'entrÃ©e standard est traitÃ©e.</P>
 <DT><B><CODE>-c</CODE><EM>fichier</EM> <CODE>--contraction-table=</CODE><EM>fichier</EM></B><DD>
-<P>Le chemin vers le fichier de la table de braille abrégé. S'il est relatif, il
-est ancré au répertoire configuré par l'option de compilation
+<P>Le chemin vers le fichier de la table de braille abrÃ©gÃ©. S'il est relatif, il
+est ancrÃ© au rÃ©pertoire configurÃ© par l'option de compilation
 <A HREF="#build-data-directory">--with-data-directory</A>.
 L'extension .ctb est facultative. Si vous ne fournissez pas cette option,
-en-us-g2 est supposé.</P>
+en-us-g2 est supposÃ©.</P>
 <DT><B><CODE>-t</CODE><EM>file</EM>|<CODE>auto</CODE> <CODE>--text-table=</CODE><EM>file</EM>|<CODE>auto</CODE></B><DD>
-<P>Spécifie la table de texte (voir
+<P>SpÃ©cifie la table de texte (voir
 la section 
-<A HREF="BRLTTY-6.html#table-text">Tables de texte</A> pour les détails).
-Si vous fournissez un chemin relatif, il est ancré à
+<A HREF="BRLTTY-6.html#table-text">Tables de texte</A> pour les dÃ©tails).
+Si vous fournissez un chemin relatif, il est ancrÃ© Ã 
 <CODE>/etc/brltty</CODE> (voir les options de compilation 
 <A HREF="#build-data-directory">--with-data-directory</A> et
-<A HREF="#build-execute-root">--with-execute-root</A> pour plus de détails).
+<A HREF="#build-execute-root">--with-execute-root</A> pour plus de dÃ©tails).
 L'extension <CODE>.ttb</CODE> est facultative.
 Voir la ligne 
 <A HREF="BRLTTY-4.html#configure-text-table">text-table</A>
-du fichier de configuration pour le paramétrage par défaut au moment de l'exécution. Vous pouvez modifier
-ce paramètre avec la préférence 
+du fichier de configuration pour le paramÃ©trage par dÃ©faut au moment de l'exÃ©cution. Vous pouvez modifier
+ce paramÃ¨tre avec la prÃ©fÃ©rence 
 <A HREF="BRLTTY-5.html#preference-text-table">Text Table</A>.</P>
 <DT><B><CODE>-w</CODE><EM>colonnes</EM> <CODE>--output-width==</CODE><EM>colonnes</EM></B><DD>
-<P>La longueur  maximale d'une ligne en sortie. Chaque ligne d'entrée en
-braille abrégé est développée sur  autant de lignes que nécessaire. Si
-vous ne spécifiez  pas cette option,  il n'y a  pas de limites et s'opère
-une correspondance  ligne par  ligne entre les  lignes en entrée et celles  en
+<P>La longueur  maximale d'une ligne en sortie. Chaque ligne d'entrÃ©e en
+braille abrÃ©gÃ© est dÃ©veloppÃ©e sur  autant de lignes que nÃ©cessaire. Si
+vous ne spÃ©cifiez  pas cette option,  il n'y a  pas de limites et s'opÃ¨re
+une correspondance  ligne par  ligne entre les  lignes en entrÃ©e et celles  en
 sortie.</P>
 <DT><B><CODE>-h</CODE> <CODE>--help</CODE></B><DD>
-<P>Affiche un résumé des options en ligne de commande, et quitte.</P>
+<P>Affiche un rÃ©sumÃ© des options en ligne de commande, et quitte.</P>
 </DL>
 </P>
-<P>La table de texte est utilisée:
+<P>La table de texte est utilisÃ©e:
 <UL>
-<LI>Pour définir l'encodage de sortie de manière à ce que le
-braille abrégé soit correctement affiché. Vous devriez spécifier
-la même table devant être utilisée par BRLTTY lorsque la sortie sera lue.</LI>
-<LI>Pour définir les représentations braille de ces caractères
-définies dans le braille abrégé (voir la section
-<A HREF="BRLTTY-6.html#contraction-opcodes-translation">Traduction de caractère</A>).</LI>
+<LI>Pour dÃ©finir l'encodage de sortie de maniÃ¨re Ã  ce que le
+braille abrÃ©gÃ© soit correctement affichÃ©. Vous devriez spÃ©cifier
+la mÃªme table devant Ãªtre utilisÃ©e par BRLTTY lorsque la sortie sera lue.</LI>
+<LI>Pour dÃ©finir les reprÃ©sentations braille de ces caractÃ¨res
+dÃ©finies dans le braille abrÃ©gÃ© (voir la section
+<A HREF="BRLTTY-6.html#contraction-opcodes-translation">Traduction de caractÃ¨re</A>).</LI>
 </UL>
 </P>
 <P>C'est la table de traduction de texte <CODE>text.brf.ttb</CODE> qui est
-fournie pour l'utilisation de cet outil. Il définit le format
-utilisé dans les fichiers .brf. C'est aussi le format que préfèrent
+fournie pour l'utilisation de cet outil. Il dÃ©finit le format
+utilisÃ© dans les fichiers .brf. C'est aussi le format que prÃ©fÃ¨rent
 utiliser les imprimantes braille et les documents braille
-électroniques. Cette table permet à cet outil d'être réellement
-utilisé en tant que traducteur de braille en texte.</P>
+Ã©lectroniques. Cette table permet Ã  cet outil d'Ãªtre rÃ©ellement
+utilisÃ© en tant que traducteur de braille en texte.</P>
 
 <H3><A NAME="utility-tunetest"></A> tunetest</H3>
 
-<P>Cet outil teste la facilité des sons d'avertissement, et fournit aussi
-un moyen facile de créer de nouveaux sons. Il se peut que vous
-soyez obligés de l'exécuter en tant que root.
+<P>Cet outil teste la facilitÃ© des sons d'avertissement, et fournit aussi
+un moyen facile de crÃ©er de nouveaux sons. Il se peut que vous
+soyez obligÃ©s de l'exÃ©cuter en tant que root.
 <BLOCKQUOTE><CODE>
-tunetest -<EM>option</EM> ... {<EM>note</EM> <EM>durée</EM>} ...
+tunetest -<EM>option</EM> ... {<EM>note</EM> <EM>durÃ©e</EM>} ...
 </CODE></BLOCKQUOTE>
 
 <DL>
 <DT><B><EM>note</EM></B><DD>
-<P>Un numéro de note MIDI standard. Il doit être un entier de <CODE>1</CODE> à <CODE>127</CODE>,
-avec 60 représentant la valeur moyenne. Chaque valeur représente un
+<P>Un numÃ©ro de note MIDI standard. Il doit Ãªtre un entier de <CODE>1</CODE> Ã  <CODE>127</CODE>,
+avec 60 reprÃ©sentant la valeur moyenne. Chaque valeur reprÃ©sente un
 demi-ton chromatique standard, donc des notes les
 plus basses aux notes les plus hautes. La valeur la plus faible (<CODE>1</CODE>)
-représente le cinquième sous Middle C, et la valeur la plus haute
-(<CODE>127</CODE>) représente le sixième G au-dessus de Middle C (notation anglosaxonne).</P>
-<DT><B><EM>durée</EM></B><DD>
-<P>La durée de la note est en millisecondes. Elle doit être un
-entier de <CODE>1</CODE> à <CODE>255</CODE>..</P>
-<DT><B><CODE>-d</CODE><EM>périphérique</EM> <CODE>--device=</CODE><EM>périphérique</EM></B><DD>
-<P>Le périphérique sur lequel jouer le son.
+reprÃ©sente le cinquiÃ¨me sous Middle C, et la valeur la plus haute
+(<CODE>127</CODE>) reprÃ©sente le sixiÃ¨me G au-dessus de Middle C (notation anglosaxonne).</P>
+<DT><B><EM>durÃ©e</EM></B><DD>
+<P>La durÃ©e de la note est en millisecondes. Elle doit Ãªtre un
+entier de <CODE>1</CODE> Ã  <CODE>255</CODE>..</P>
+<DT><B><CODE>-d</CODE><EM>pÃ©riphÃ©rique</EM> <CODE>--device=</CODE><EM>pÃ©riphÃ©rique</EM></B><DD>
+<P>Le pÃ©riphÃ©rique sur lequel jouer le son.
 <DL>
 <DT><B>beeper</B><DD>
-<P>Le beeper interne (générateur de sons en console).</P>
+<P>Le beeper interne (gÃ©nÃ©rateur de sons en console).</P>
 <DT><B>pcm</B><DD>
 <P>L'interface digital audio sur la carte son.</P>
 <DT><B>midi</B><DD>
-<P>L'interface numérique d'instrument de musique sur la carte
+<P>L'interface numÃ©rique d'instrument de musique sur la carte
 son.</P>
 <DT><B>fm</B><DD>
-<P>Le synthétiseur FM sur une carte son AdLib, OPL3, Sound
-Blaster, ou équivalente.</P>
+<P>Le synthÃ©tiseur FM sur une carte son AdLib, OPL3, Sound
+Blaster, ou Ã©quivalente.</P>
 </DL>
 
-Vous pouvez abréger le nom du périphérique. Voir la préférence
-<A HREF="BRLTTY-5.html#preference-tune-device">Tune Device</A> pour plus de détails concernant le périphérique
-par défaut et les restrictions de la plateforme.</P>
+Vous pouvez abrÃ©ger le nom du pÃ©riphÃ©rique. Voir la prÃ©fÃ©rence
+<A HREF="BRLTTY-5.html#preference-tune-device">Tune Device</A> pour plus de dÃ©tails concernant le pÃ©riphÃ©rique
+par dÃ©faut et les restrictions de la plateforme.</P>
 <DT><B><CODE>-v</CODE><EM>volume</EM> <CODE>--volume=</CODE><EM>volume</EM></B><DD>
-<P>Spécifie le volume à la sortie (intensité) sous la forme d'un
-pourcentage du maximum. Le volume de sortie par défaut est de <CODE>50</CODE>.</P>
+<P>SpÃ©cifie le volume Ã  la sortie (intensitÃ©) sous la forme d'un
+pourcentage du maximum. Le volume de sortie par dÃ©faut est de <CODE>50</CODE>.</P>
 <DT><B><CODE>-p</CODE><EM>device</EM> <CODE>--pcm-device=</CODE><EM>device</EM></B><DD>
-<P>Spécifie le périphérique à utiliser pour le son (voir la
+<P>SpÃ©cifie le pÃ©riphÃ©rique Ã  utiliser pour le son (voir la
 section 
-<A HREF="BRLTTY-12.html#operand-pcm-device">spécification du périphérique PCM</A>). Cette option ne
-fonctionne pas si vous avez spécifié l'option de compilation 
+<A HREF="BRLTTY-12.html#operand-pcm-device">spÃ©cification du pÃ©riphÃ©rique PCM</A>). Cette option ne
+fonctionne pas si vous avez spÃ©cifiÃ© l'option de compilation 
 <A HREF="#build-pcm-support">--disable-pcm-support</A>.</P>
 <DT><B><CODE>preferences-file</CODE> <EM>file</EM>
 <A NAME="configure-preferences-file"></A> </B><DD>
-<P>Spécifie l'emplacement du fichier qui doit être utilisé pour sauvegarder
-et charger les préférences de l'utilisateur. Si vous fournissez un chemin
-relatif, il est ancré sur <CODE>/var/lib/brltty</CODE>. Le réglage par défaut
-consiste à utiliser <CODE>brltty.prefs</CODE>. Vous pouvez outre-passer cette
+<P>SpÃ©cifie l'emplacement du fichier qui doit Ãªtre utilisÃ© pour sauvegarder
+et charger les prÃ©fÃ©rences de l'utilisateur. Si vous fournissez un chemin
+relatif, il est ancrÃ© sur <CODE>/var/lib/brltty</CODE>. Le rÃ©glage par dÃ©faut
+consiste Ã  utiliser <CODE>brltty.prefs</CODE>. Vous pouvez outre-passer cette
 ligne avec l'option 
 <A HREF="BRLTTY-4.html#options-preferences-file">-F</A> en
 ligne de commande.</P>
 <DT><B><CODE>-m</CODE><EM>peripherique</EM> <CODE>--midi-device=</CODE><EM>peripherique</EM></B><DD>
-<P>Spécifie le périphérique à utiliser pour l'interface numérique d'instrument
+<P>SpÃ©cifie le pÃ©riphÃ©rique Ã  utiliser pour l'interface numÃ©rique d'instrument
 de musique (voir la section 
-<A HREF="BRLTTY-12.html#operand-midi-device">spécification du     périphérique MIDI</A>). Cette option ne fonctionne pas si vous avez
-spécifié l'option de compilation 
+<A HREF="BRLTTY-12.html#operand-midi-device">spÃ©cification du     pÃ©riphÃ©rique MIDI</A>). Cette option ne fonctionne pas si vous avez
+spÃ©cifiÃ© l'option de compilation 
 <A HREF="#build-midi-support">--disable-midi-support</A>.</P>
 <DT><B><CODE>-i</CODE><EM>instrument</EM> <CODE>--instrument=</CODE><EM>instrument</EM></B><DD>
-<P>L'instrument à utiliser si le périphérique sélectionné est
-midi. Pour la liste complète des instruments, voir la 
-<A HREF="BRLTTY-12.html#operand-midi-device">Table des     instrument MIDI</A>. L'instrument par défaut est un <CODE>piano grand
+<P>L'instrument Ã  utiliser si le pÃ©riphÃ©rique sÃ©lectionnÃ© est
+midi. Pour la liste complÃ¨te des instruments, voir la 
+<A HREF="BRLTTY-12.html#operand-midi-device">Table des     instrument MIDI</A>. L'instrument par dÃ©faut est un <CODE>piano grand
 accoustique</CODE>. Les mots comportant le nom de l'instrument doivent
-être séparés les uns des autres par un simple signe moins plutôt
-que par des espaces, et chacun des mots peut être abrégé.</P>
+Ãªtre sÃ©parÃ©s les uns des autres par un simple signe moins plutÃ´t
+que par des espaces, et chacun des mots peut Ãªtre abrÃ©gÃ©.</P>
 <DT><B><CODE>-h</CODE> <CODE>--help</CODE></B><DD>
-<P>Affiche un résumé des options de la ligne de commande.</P>
+<P>Affiche un rÃ©sumÃ© des options de la ligne de commande.</P>
 </DL>
 </P>
 <HR>
 <A HREF="BRLTTY-4.html">Page suivante</A>
-<A HREF="BRLTTY-2.html">Page précédente</A>
-<A HREF="BRLTTY.html#toc3">Table des matières</A>
+<A HREF="BRLTTY-2.html">Page prÃ©cÃ©dente</A>
+<A HREF="BRLTTY.html#toc3">Table des matiÃ¨res</A>
 </BODY>
 </HTML>

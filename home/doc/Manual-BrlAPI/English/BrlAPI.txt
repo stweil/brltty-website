@@ -1,6 +1,6 @@
   BrlAPI Reference manual
-  S�bastien Hinderer <Sebastien.Hinderer@ens-lyon.org>
-  Samuel Thibault <Samuel.Thibault@ens-lyon.org>
+  Sébastien Hinderer <Sebastien.Hinderer@ens‐lyon.org>
+  Samuel Thibault <Samuel.Thibault@ens‐lyon.org>
   V1.5, November 2019
 
   This document describes BrlAPI.
@@ -31,7 +31,7 @@
      3.1 VT switching
      3.2 A pile of "paper sheets"
      3.3 Hierarchy
-     3.4 The X-window case
+     3.4 The X‐window case
      3.5 Detaching
 
   4. Installation and configuration of BrlAPI
@@ -48,8 +48,8 @@
      5.10 Disconnecting from BrlAPI
      5.11 Putting everything together...
 
-  6. Writing ( BrlAPI -compliant) drivers for brltty
-     6.1 Overview of the driver's structure
+  6. Writing ( BrlAPI ‐compliant) drivers for brltty
+     6.1 Overview of the driver’s structure
      6.2 Basic driver structure
      6.3 Enhancements for BrlAPI
         6.3.1 Exchanging raw data packets
@@ -66,7 +66,7 @@
               letting the client know its protocol version. Data is an
               integer indicating the protocol version. Then client must
               then respond the same way for giving its version. If the
-              protocol version can't be handled by the server, a
+              protocol version can’t be handled by the server, a
               BRLAPI_ERROR_PROTOCOL_VERSION error packet is returned and
               the connection is closed.
         7.4.2 BRLAPI_PACKET_AUTH
@@ -98,7 +98,7 @@
                BRLAPI_PACKET_PARAM_VALUE packet.
         7.4.19 BRLAPI_PACKET_SYNCHRONIZE This packet is sent by the
                client and just acknowledged by the server. This allows
-               the client to perform a round-try with the server, thus
+               the client to perform a round‐try with the server, thus
                collecting any pending exception notification.
 
   ______________________________________________________________________
@@ -112,7 +112,7 @@
   suitable information for his/her specific needs.
 
   While an application communicates with the braille terminal,
-  everything brltty sends to the braille terminal in the application's
+  everything brltty sends to the braille terminal in the application’s
   console is ignored, whereas each piece of data coming from the braille
   terminal is sent to the application, rather than to brltty.
 
@@ -165,13 +165,13 @@
      Key
         A code that is returned by the driver when a key is pressed.
         This is different from a command, because the command concept is
-        driver-independent (all drivers use the same command codes -
+        driver‐independent (all drivers use the same command codes ‐
         those defined by brltty), whereas codes used for returning
         keypresses may vary between drivers.
 
-     BrlAPI's Library
-        This library helps clients to connect and use BrlAPI's server
-        thanks to a series of brlapi_-prefixed functions.
+     BrlAPI’s Library
+        This library helps clients to connect and use BrlAPI’s server
+        thanks to a series of brlapi_‐prefixed functions.
 
      Packet
         A sequence of bytes making up the atomic unit in communications,
@@ -183,7 +183,7 @@
         driver.  Normal operations like sending text for display or
         reading keypresses are not available in this mode. It lets
         applications take advantage of advanced functionalities of the
-        driver's communication protocol.
+        driver’s communication protocol.
 
      Server
         The part of brltty that controls incoming connections and
@@ -194,9 +194,9 @@
         the client can connect directly to the device.
 
      Tty
-        Synonym for console, terminal, ... Linux' console consist of
-        several Virtual Ttys (VTs). The screen program's windows also
-        are Ttys. X-window system's xterms emulate Ttys as well.
+        Synonym for console, terminal, ... Linux’ console consist of
+        several Virtual Ttys (VTs). The screen program’s windows also
+        are Ttys. X‐window system’s xterms emulate Ttys as well.
 
 
   1.2.  How to read this manual
@@ -204,36 +204,36 @@
   This manual is split in five parts.
 
 
-     ``General description''
+     ‘‘General description’’
         Describes more precisely what BrlAPI is and how it works in
-        collaboration with brltty's core, the braille driver and
-        clients. In this part, a "connection-use-disconnection" scenario
+        collaboration with brltty’s core, the braille driver and
+        clients. In this part, a "connection‐use‐disconnection" scenario
         will be described step by step, explaining for each step what
         BrlAPI does in reaction to client instructions. These
         explanations will take place at a user level.
 
-     ``Concurrency management''
+     ‘‘Concurrency management’’
         This part explains how concurrency between BrlAPI clients is
         handled thanks to focus tellers.
 
-     ``Installation and configuration''
+     ‘‘Installation and configuration’’
         This part explains in detail how to install and configure the
         API. For instructions on how to install and configure brltty,
         please report to the brltty documentation.
 
-     ``Library description''
+     ‘‘Library description’’
         This part describes how client applications can communicate with
         the server using the BrlAPI library that comes with brltty. Each
         function will be briefly described, classified by categories.
         More exhaustive descriptions of every function are available in
         the corresponding online manual pages.
 
-     ``Writing braille drivers''
+     ‘‘Writing braille drivers’’
         This part describes how the braille drivers included in brltty
-        should be written in order to take advantage of BrlAPI's
+        should be written in order to take advantage of BrlAPI’s
         services.
 
-     ``Protocol reference''
+     ‘‘Protocol reference’’
         This part describes in detail the communication protocol that is
         used to communicate between server and clients.
 
@@ -241,22 +241,22 @@
   What should be read probably depends on what should be done by
   applications with BrlAPI.
 
-  Reading chapters ``General description'', ``Concurrency management''
-  and ``Installation and configuration'' is recommended, since they
+  Reading chapters ‘‘General description’’, ‘‘Concurrency management’’
+  and ‘‘Installation and configuration’’ is recommended, since they
   provide useful information and (hopefully) lead to a good
   understanding of BrlAPI, for an efficient use.
 
-  Chapter ``Library description'' concerns writing applications that
+  Chapter ‘‘Library description’’ concerns writing applications that
   take advantage of braille terminals so as to bring specific (and more
   useful) information to blind people.
 
-  Chapter ``Drivers'' is for braille driver implementation: either
+  Chapter ‘‘Drivers’’ is for braille driver implementation: either
   adding a braille driver to brltty or modifying an existing one so that
-  it can benefit from BrlAPI's features, this chapter will be of
+  it can benefit from BrlAPI’s features, this chapter will be of
   interest, since it describes exactly what is needed to write a driver
   for brltty: the core of drivers interface for instance.
 
-  Finally, chapter ``Protocol reference'' is for not using the library,
+  Finally, chapter ‘‘Protocol reference’’ is for not using the library,
   but using the BrlAPI server directly, when the library might not be
   sufficient: it describes the underlying protocol that will have to be
   used to do so.
@@ -265,8 +265,8 @@
 
   Here is explained what BrlAPI is, and what it precisely does.  These
   explanations should be simple enough to be accessible to every user.
-  For a more technical review of BrlAPI's functionalities, please see
-  chapter ``Libary description''.
+  For a more technical review of BrlAPI’s functionalities, please see
+  chapter ‘‘Libary description’’.
 
   2.1.  Historical notes.
 
@@ -274,11 +274,11 @@
   visually impaired people, through a braille terminal or a speech
   synthetizer. At that time, applications running in the console were
   not taking care of the presence of a braille terminal (most
-  applications didn't even know what a braille terminal was).
+  applications didn’t even know what a braille terminal was).
 
   This situation where applications are not aware of the presence of a
   special device is elegant of course, since it lets use an unlimited
-  number of applications which don't need to be specially designed for
+  number of applications which don’t need to be specially designed for
   visually impaired people.
 
   However, it appeared that applications specially designed to take
@@ -302,17 +302,17 @@
 
   On the other hand, if an application chooses to send its own
   information to the braille display, and to process braille keys,
-  brltty has to be warned, so that it won't try to communicate with the
+  brltty has to be warned, so that it won’t try to communicate with the
   braille terminal while the application already does.  To make this
   synchronzation between brltty and client applications possible, it
-  seemed easier to add the communication mechanisms to brltty's core,
+  seemed easier to add the communication mechanisms to brltty’s core,
   instead of writing an external program providing them.
 
   2.3.  How it works.
 
   We are now going to describe the steps an application should go
   through to get control of the braille terminal, and what happens on
-  brltty's side at each step. This step-by-step description will let us
+  brltty’s side at each step. This step‐by‐step description will let us
   introduce more precisely some concepts that are useful for every
   BrlAPI user.
 
@@ -322,18 +322,18 @@
   Unix sense of the word) to BrlAPI which is an mere application server.
   If this is not clear, the only thing to be remembered is that this
   step allows the client application to let the server know about its
-  presence. At this stage, nothing special is done on brltty's side.
+  presence. At this stage, nothing special is done on brltty’s side.
 
   2.3.2.  Authorization.
 
   Since Unix is designed to allow many users to work on the same
-  machine, it's quite possible that there are more than one user
-  accounts on the system. Most probably, one doesn't want any user with
+  machine, it’s quite possible that there are more than one user
+  accounts on the system. Most probably, one doesn’t want any user with
   an account on the machine to be able to communicate with the braille
   terminal (just imagine what would happen if, while somebody was
   working with the braille terminal, another user connected to the
   system began to communicate with it, preventing the first one from
-  doing his job...). That's why BrlAPI has to provide a way to determine
+  doing his job...). That’s why BrlAPI has to provide a way to determine
   whether a user who established a connection is really allowed to
   communicate with the braille terminal. To achieve this, BrlAPI
   requires that each application that wants to control a braille
@@ -341,16 +341,16 @@
   control of the braille terminal will only be possible for the client
   once it has sent the proper authorization key. What is called
   authorization key is in fact a Unix file containing data (it must be
-  non-empty) on your system. All the things you have to do is to give
+  non‐empty) on your system. All the things you have to do is to give
   read permissions on this file to users that are allowed to communicate
   with the braille terminal, and only to them. This way, only authorized
   users will have access to the authorization key and then be able to
   send it to BrlAPI.  To see how to do that, please see chapter
-  ``Installation and configuration''.
+  ‘‘Installation and configuration’’.
 
   At the end of this step, the user is authorized to take control of the
-  braille terminal. On brltty's side, some data structures are allocated
-  to store information on the client, but this has no user-level side-
+  braille terminal. On brltty’s side, some data structures are allocated
+  to store information on the client, but this has no user‐level side‐
   effect.
 
   2.3.3.  Real use of the braille terminal.
@@ -371,7 +371,7 @@
   it has to take control of the Linux terminal it is running on.
 
   Once a client has obtained the control of his tty, BrlAPI will
-  completely discard brltty's display on this tty (and only this one),
+  completely discard brltty’s display on this tty (and only this one),
   leaving the braille display free for the client.
 
   At the same time, if a key is pressed on the braille keyboard, BrlAPI
@@ -389,13 +389,13 @@
   The server exposes some parameters to the client. Some parameters are
   global to all clients (e.g. the braille display size), while others
   are local per client (e.g. retaindots, i.e. whether to send Perkins
-  presses as dot patterns or as letters). Some parameters are read-only
-  (e.g. the braille display size), while others are read-write (e.g.
+  presses as dot patterns or as letters). Some parameters are read‐only
+  (e.g. the braille display size), while others are read‐write (e.g.
   retaindots). Some parameters may change during execution, while others
   change only when a client set it.
 
   Clients can either request the current value of a parameter, or set
-  its value (if it is read-write), or request the server to notify on
+  its value (if it is read‐write), or request the server to notify on
   value change.
 
   2.3.3.3.  Raw mode.
@@ -403,7 +403,7 @@
   Only one client can be in raw mode at the same time. In this mode,
   data coming from the braille terminal are checked by the driver (to
   ensure they are valid), but instead of being processed, they are
-  delivered "as-is" to the client that is in raw mode.
+  delivered "as‐is" to the client that is in raw mode.
 
   In the other direction, packets sent to BrlAPI by the client that is
   in raw mode are passed to the driver which is expected to deliver them
@@ -418,25 +418,25 @@
 
   This mode is not recommended, since the client will then have to
   reimplement device access. Raw mode should really be preferred, since
-  it lets the client take advantage of server's ability to talk with the
+  it lets the client take advantage of server’s ability to talk with the
   device (USB/bluetooth support for instance).
 
   2.3.3.5.  Remarks.
 
 
-  �  The operations described in the three previous subsections are not
+  •  The operations described in the three previous subsections are not
      completely mutually exclusive. An application that controls its
      current tty can enter raw or suspend mode, provided that no other
      application already is in this mode.
 
-  �  Not every braille driver supports raw mode. It has to be specially
+  •  Not every braille driver supports raw mode. It has to be specially
      (re)written to support it, since it has to provide special
      functions to process incoming and outgoing packets. The same
      restriction is true (but less strong) concerning the ability to
      deliver/convert keycodes into commands: not every driver has this
      ability, it has to be modified to get it.
 
-  �  Operations previously described can be repeated.  You can, for
+  •  Operations previously described can be repeated.  You can, for
      instance, use raw mode to transfer data onto your braille terminal,
      display text in braille, return to raw mode..., all that without
      having to reconnect to BrlAPI before each operation.
@@ -458,70 +458,70 @@
 
   3.1.  VT switching
 
-  Let's first describe how things work with the simple case of a single
+  Let’s first describe how things work with the simple case of a single
   series of Virtual Ttys (VTs), the linux console for instance.
 
-  As described in ``General Description'', before being able to write
+  As described in ‘‘General Description’’, before being able to write
   output, a BrlAPI client has to "get" a tty, i.e. it sends to the
-  BrlAPI server the number of the linux' Virtual Tty on which it is
+  BrlAPI server the number of the linux’ Virtual Tty on which it is
   running.  The BrlAPI server uses this information so as to know which
-  client's output should be shown on the braille display, according to
-  the focus teller's information.
+  client’s output should be shown on the braille display, according to
+  the focus teller’s information.
 
-  Let's say some client A is running on VT 2. It "got" VT 2 and wrote
+  Let’s say some client A is running on VT 2. It "got" VT 2 and wrote
   some output on its BrlAPI connection. The focus teller is brltty here:
   it always tells to the BrlAPI server which VT is currently shown on
   the screen and gets usual keyboard presses (it is "active").
 
-  Let's say VT 1 is active, then the BrlAPI server shows brltty's output
+  Let’s say VT 1 is active, then the BrlAPI server shows brltty’s output
   on the braille display. I.e. the usual brltty screen reading appears.
   Moreover, when braille keys are pressed, they are passed to brltty, so
   that usual screen reading can be performed. When the user switches to
   VT 2, brltty (as focus teller) tells it to the BrlAPI server, which
   then remembers that client A has got it and has produced some output.
   The server then displays this output on the braille display. Note that
-  A doesn't need to re-submit its output: the server had recorded it so
+  A doesn’t need to re‐submit its output: the server had recorded it so
   as to be able to show it as soon as the focus switches to VT 2.
   Whenever some key of the braille device is pressed, BrlAPI looks
   whether it is in the list of keys that client A said to be of his
   interest. If it is, it is passed to A (and not to brltty). If it
-  isn't, it is passed to brltty (and not to A).
+  isn’t, it is passed to brltty (and not to A).
 
   As a consequence, whenever clients get and release Ttys and the user
   switches between Ttys, either the brltty screen reading or the
-  client's output is automatically shown according to rather natural
+  client’s output is automatically shown according to rather natural
   rules.
 
   3.2.  A pile of "paper sheets"
 
-  Let's look at VT 2 by itself. What is shown on the braille display can
+  Let’s look at VT 2 by itself. What is shown on the braille display can
   be seen as the result of a pile of two paper sheets. brltty is
   represented by the bottom sheet on which its screen reading is
   written, and client A by the top sheet on which its output is written.
-  A's sheet hence "covers" brltty's sheet: A's output "mask" brltty's
+  A’s sheet hence "covers" brltty’s sheet: A’s output "mask" brltty’s
   screen reading.
 
-  A may yet want to temporarily let brltty's screen reading appear on VT
+  A may yet want to temporarily let brltty’s screen reading appear on VT
   2, while still receiving some key presses, for instance. For this, it
   sends a "void" write. The server then clears the recorded output for
   this connection (in the sheet representation, the sheet becomes
-  "transparent"). As a consequence, brltty's output is automatically
+  "transparent"). As a consequence, brltty’s output is automatically
   shown (by transparency in the sheet representation), just like if A
   had released the Tty.
 
-  Keypresses are handled in a similar way: A's desire to get key presses
+  Keypresses are handled in a similar way: A’s desire to get key presses
   is satisfied first before brltty.
 
-  Let's say some other client B (probably launched by A) also gets VT 2
+  Let’s say some other client B (probably launched by A) also gets VT 2
   and outputs some text on its BrlAPI connection. This adds a third
   sheet, on top of the two previous ones. It means that the BrlAPI
-  server will show B's output on the braille device. If A then outputs
-  some text, the server will record it (on A's sheet which hence becomes
-  opaque again), but it won't be displayed on the braille device, since
-  B's sheet is still at the top and opaque (i.e. with some text on it).
+  server will show B’s output on the braille device. If A then outputs
+  some text, the server will record it (on A’s sheet which hence becomes
+  opaque again), but it won’t be displayed on the braille device, since
+  B’s sheet is still at the top and opaque (i.e. with some text on it).
   But if B issues a void write, the server clears its ouput buffer (i.e.
-  B's sheet becomes transparent), and as a result A's output appear on
-  the braille display (by transparency through B's sheet).
+  B’s sheet becomes transparent), and as a result A’s output appear on
+  the braille display (by transparency through B’s sheet).
 
   The sheet order is by default determined by the Tty "get"ting order.
   Clients can however change their priority (which by default is 50) to
@@ -532,54 +532,54 @@
 
   Now, what happens when running some screen program on, say, VT 3? It
   emulates a series of Ttys, whose output actually appear on the same VT
-  3.  That's where a hierarchy level appears: the focus information is
+  3.  That’s where a hierarchy level appears: the focus information is
   not only the VT number but also, in the case of VT 3, which screen
   window is active. This hence forms a tree of Ttys: the "root" being
-  the vga driver's output, whose sons are VTs, and VT 3 has the screen
+  the vga driver’s output, whose sons are VTs, and VT 3 has the screen
   windows as sons. Brltty is a focus teller for the root, screen will
   have to be a focus teller for VT 3.  Screen should then get VT 3, not
   display anything (so that the usual brltty screen reading will be
   shown by transparency), and tell the BrlAPI server which screen window
   is active (at startup and at each window switch). This is not
   implemented directly in screen yet, but this may be achieved via a
-  second brltty daemon running the Screen driver (but it isn't yet able
+  second brltty daemon running the Screen driver (but it isn’t yet able
   to get the current window number though) and the BrlAPI driver.
 
   A BrlAPI client C running in some screen window number 1 would then
   have to get the Tty path "VT 3 then window 1", which is merely
   expressed as "3 1". The window number is available in the WINDOW
   environment variable, set by screen. The VT number, which actually
-  represents the "path to screen's output" should be available in the
+  represents the "path to screen’s output" should be available in the
   WINDOWPATH environment variable, also set by screen. The client can
   thus merely concatenate the content of WINDOWPATH (which could hold
   many levels of window numbers) and of WINDOW and give the result as
   tty path to the BrlAPI server, which then knows precisely where the
-  client's usual output resides. In practice, applications just need to
+  client’s usual output resides. In practice, applications just need to
   call brlapi_enterTtyMode(BRLAPI_TTY_DEFAULT), and the the BrlAPI
   client library will automatically perform all that.
 
   Whenever the user switches to VT 3, the BrlAPI server remembers the
   window that screen told to be active. If it was window 1, it then
-  displays C's output (if any). Else brltty's usual screen reading is
+  displays C’s output (if any). Else brltty’s usual screen reading is
   shown.  Of course, several clients may be run in window 1 as well, and
-  the "sheet pile" mecanism applies: brltty's sheet first (at the root
-  of the Ttys tree), then screen's sheet (which is transparent, on VT
-  3), then C's sheet (on window 1 of VT 3), then other clients' sheets
+  the "sheet pile" mecanism applies: brltty’s sheet first (at the root
+  of the Ttys tree), then screen’s sheet (which is transparent, on VT
+  3), then C’s sheet (on window 1 of VT 3), then other clients’ sheets
   (on the same window).
 
   Ttys are hence organized in a tree, each client adding its sheet at
   some tty in the tree.
 
-  3.4.  The X-window case
+  3.4.  The X‐window case
 
-  Let's say some X server is running on VT 7 of a Linux system. Xorg's
-  xinit and xdm commands automatically set the X session's WINDOWPATH
+  Let’s say some X server is running on VT 7 of a Linux system. Xorg’s
+  xinit and xdm commands automatically set the X session’s WINDOWPATH
   environment variable to "7", so that X11 BrlAPI clients started from
   the session just need to call brlapi_enterTtyMode(xid) where xid is
-  the X-window ID of the window of the client. The BrlAPI library will
+  the X‐window ID of the window of the client. The BrlAPI library will
   automatically prepend the content of WINDOWPATH to it.
 
-  For text-based BrlAPI clients running in an xterm (which should just
+  For text‐based BrlAPI clients running in an xterm (which should just
   call brlapi_enterTtyMode(BRLAPI_TTY_DEFAULT) as explained in the
   previous section), BrlAPI detects the window id thanks to the WINDOWID
   variable set by xterm.
@@ -588,21 +588,21 @@
   call brlapi_enterTtyModeWithPath(NULL, 0) to let the BrlAPI library
   only send the content of WINDOWPATH, expressing that screen readers
   take the whole tty. The user should notably launch xbrlapi, which is a
-  focus teller for X-window as well as a keyboard simulator (brltty
-  can't reliably simulate them at the kernel level in such situation).
-  For accessing AT-SPI contents (like gnome or kde applications), Orca
-  should also be launched. For accessing AT-SPI terminals (like gnome-
+  focus teller for X‐window as well as a keyboard simulator (brltty
+  can’t reliably simulate them at the kernel level in such situation).
+  For accessing AT‐SPI contents (like gnome or kde applications), Orca
+  should also be launched. For accessing AT‐SPI terminals (like gnome‐
   terminal) in the same way as in the console, a second brltty daemon
-  running the at-spi screen driver and the BrlAPI driver can also be
+  running the at‐spi screen driver and the BrlAPI driver can also be
   launched. All three would get the VT of the X session, in that order
   (for now): xbrlapi first, then orca and brltty at last. When the X
-  focus is on an AT-SPI terminal, brltty will hence be able to grab the
+  focus is on an AT‐SPI terminal, brltty will hence be able to grab the
   braille display and key presses. Else orca would get them. And xbrlapi
   would finally get remaining key presses and simulate them.
 
   Note: old versions of xinit, xdm, kdm or gdm do not automatically set
   the WINDOWPATH variable. The user can set it by hand in his
-  ~/.xsession, ~/.xinitrc, ~/.gdmrc... to "7"
+  ˜/.xsession, ˜/.xinitrc, ˜/.gdmrc... to "7"
 
   Note: some Operating Systems like Solaris do not have VTs. In that
   case WINDOWPATH is empty or not even set. Everything explained above
@@ -622,7 +622,7 @@
   make install will install libbrlapi.so in /lib, and include files in
   /usr/include/brltty. An authorization key will also typically be set
   in /etc/brlapi.key (if it is not, just create it and put arbitrary
-  data in it), but it won't be readable by anybody else than root. It is
+  data in it), but it won’t be readable by anybody else than root. It is
   up to you to define a group of users who will have the right to read
   it and hence be able to connect to the server. For instance, you may
   want to do:
@@ -640,31 +640,31 @@
 
   5.  Library description
 
-  Let's now see how one can write dedicated applications. Basic notions
+  Let’s now see how one can write dedicated applications. Basic notions
   will be seen, along with a very simple client. Greater details are
   given as online manual pages.
 
   The historical test program for BrlAPI was something like:
 
-  �  connect to BrlAPI
+  •  connect to BrlAPI
 
-  �  get driver id
+  •  get driver id
 
-  �  get driver name
+  •  get driver name
 
-  �  get display size
+  •  get display size
 
-  �  try entering raw mode, immediately leave raw mode.
+  •  try entering raw mode, immediately leave raw mode.
 
-  �  get tty control
+  •  get tty control
 
-  �  write something on the display
+  •  write something on the display
 
-  �  wait for a key press
+  •  wait for a key press
 
-  �  leave tty control
+  •  leave tty control
 
-  �  disconnect from BrlAPI
+  •  disconnect from BrlAPI
 
   It is here rewritten, its working briefly explained.
 
@@ -746,7 +746,7 @@
 
   5.5.  Getting tty control
 
-  Let's now display something on the device. control of the tty must be
+  Let’s now display something on the device. control of the tty must be
   get first:
 
 
@@ -762,7 +762,7 @@
   control of. Setting BRLAPI_TTY_DEFAULT lets the library determine it
   for us.
 
-  The server is asked to send brltty commands, which are device-
+  The server is asked to send brltty commands, which are device‐
   independent.
 
   Getting control might fail if, for instance, another application
@@ -792,7 +792,7 @@
   5.7.  Waiting for a key press
 
   To have a break for the user to be able to read these messages, a key
-  press (a command here, which is driver-independent) may be waited for:
+  press (a command here, which is driver‐independent) may be waited for:
 
 
 
@@ -865,7 +865,7 @@
 
   5.9.  Leaving tty control
 
-  Let's now leave the tty:
+  Let’s now leave the tty:
 
 
 
@@ -880,7 +880,7 @@
 
   5.10.  Disconnecting from BrlAPI
 
-  Let's disconnect from BrlAPI:
+  Let’s disconnect from BrlAPI:
 
 
 
@@ -985,17 +985,17 @@
        }
        ______________________________________________________________________
 
-  This should compile well thanks to gcc apiclient.c -o apiclient
-  -lbrlapi
+  This should compile well thanks to gcc apiclient.c ‐o apiclient
+  ‐lbrlapi
 
-  6.  Writing ( BrlAPI -compliant) drivers for brltty
+  6.  Writing ( BrlAPI ‐compliant) drivers for brltty
 
   In this chapter, we will describe in details how to write a driver for
   brltty. We begin with a general description of the structure the
   driver should have, before explaining more precisely what each
   function is supposed to do.
 
-  6.1.  Overview of the driver's structure
+  6.1.  Overview of the driver’s structure
 
   A braille driver is in fact a library that is either dynamically
   loaded by brltty at startup, or statically linked to it during the
@@ -1067,7 +1067,7 @@
 
       } BrailleDisplay;
 
-  We now describe each function's semantics and calling convention.
+  We now describe each function’s semantics and calling convention.
 
   The brl_identify() function takes no argument and returns nothing. It
   is called as soon as the driver is loaded, and its purpose is to print
@@ -1080,20 +1080,20 @@
   Generally, this function has to open the file referred to by the tty
   argument, and to configure the associated communication port. The
   parameters argument contains parameters passed to the driver with the
-  -B command-line option. It's up to the driver's author to decide
+  ‐B command‐line option. It’s up to the driver’s author to decide
   wether or not he/she wants to use this argument, and what for. The
   function can perform some additional tasks such as trying to identify
   precisely which braille terminal model is connected to the computer,
   by sending it a request and analyzing its answer. The value that is
   finally returned depends on the success of the initialization process.
-  If it fails, th function has to return -1. The function returns 0 on
+  If it fails, th function has to return ‐1. The function returns 0 on
   success.
 
   The brl_close() function takes just one argument, and returns nothing.
-  The name of this function should be self-explanatory; it's goal is to
+  The name of this function should be self‐explanatory; it’s goal is to
   close (finish) the communication between the computer and the braille
   terminal. In general, the only thing this function has to do is to
-  close the file descriptor associated to the braille terminal's
+  close the file descriptor associated to the braille terminal’s
   communication port.
 
   The brl_writeWindow() function takes just one argument of type
@@ -1115,7 +1115,7 @@
 
   The brl_readCommand() function takes two arguments, and returns an
   integer. Its purpose is to read commands from the braille keyboard and
-  to pass them to brltty's core, which in turn will process them.  The
+  to pass them to brltty’s core, which in turn will process them.  The
   first argument, of type BrailleDisplay, is for future use, and can
   safely be ignored for the moment. The second argument indicates in
   which context (state) brltty is. For instance, it specifies if brltty
@@ -1156,15 +1156,15 @@
   by BrlAPI:
 
 
-  �  reading braille terminal specific key codes,
+  •  reading braille terminal specific key codes,
 
-  �  exchanging raw data packets between the braille terminal and a
+  •  exchanging raw data packets between the braille terminal and a
      client application running on the PC.
 
   For each feature presented below, only a short description of each
   concerned macro and function will be given. For a more complete
   description of concepts used here, please refer to chapters
-  ``Introduction'' and ``General description''.
+  ‘‘Introduction’’ and ‘‘General description’’.
 
   6.3.1.  Exchanging raw data packets
 
@@ -1203,28 +1203,28 @@
 
   brl_rescue() is called by BrlAPI when a client application terminates
   without properly leaving the raw mode. This function should restore
-  the terminal's state, so that it is able to display text in braille
+  the terminal’s state, so that it is able to display text in braille
   again.
 
   6.3.1.1.  Remarks.
 
 
-  �  If the driver provides such functions, every other functions should
+  •  If the driver provides such functions, every other functions should
      use them, instead of trying to communicate directly with the
      braille terminal. For instance, readCommand() should call
      readPacket(), and then extract a key from the packet, rather than
-     reading directly from the communication port's file descriptor. The
+     reading directly from the communication port’s file descriptor. The
      same applies for brl_writeWindow(), which should use
-     brl_writePacket(), rather than writing on the communication port's
+     brl_writePacket(), rather than writing on the communication port’s
      file descriptor.
 
-  �  For the moment, the argument of type BrailleDisplay can safely be
+  •  For the moment, the argument of type BrailleDisplay can safely be
      ignored by the functions described here.
 
   7.  Protocol reference
 
   Under some circumstances, it may be preferable to communicate directly
-  with BrlAPI's server rather than using BrlAPI's library. Here are the
+  with BrlAPI’s server rather than using BrlAPI’s library. Here are the
   needed details to be able to do this. This chapter is also of interest
   if a precise understanding of how the communication stuff works is
   desired, to be sure to understand how to write multithreaded clients,
@@ -1235,27 +1235,27 @@
 
   7.1.  Reliable packet transmission channel
 
-  The protocol between BrlAPI's server and clients is based on exchanges
+  The protocol between BrlAPI’s server and clients is based on exchanges
   of packets. So as to avoid locks due to packet loss, these exchanges
   are supposed reliable, and ordering must be preserved, thus BrlAPI
   needs a reliable packet transmission channel.
 
-  To achieve this, BrlAPI uses a TCP-based connection, on which packets
+  To achieve this, BrlAPI uses a TCP‐based connection, on which packets
   are transmitted this way:
 
 
-  �  the size in bytes of the packet is transmitted first as an integer,
+  •  the size in bytes of the packet is transmitted first as an integer,
 
-  �  then the type of the packet, as an integer,
+  •  then the type of the packet, as an integer,
 
-  �  and finally the packet data.
+  •  and finally the packet data.
 
   The size does not include the { size, type } header, so that packets
-  which don't need any data have a size of 0 byte. The type of the
+  which don’t need any data have a size of 0 byte. The type of the
   packet can be either of BRLAPI_PACKET_* constants defined in
   api_protocol.h. Each type of packet will be further discussed below.
 
-  BrlAPI's library ships two functions to achieve packets sending and
+  BrlAPI’s library ships two functions to achieve packets sending and
   receiving using this protocol: brlapi_writePacket and
   brlapi_readPacket. It is a good idea to use these functions rather
   than rewriting them, since this protocol might change one day in favor
@@ -1264,14 +1264,14 @@
 
   7.2.  Responses from the server
 
-  As described below, many packets are `acknowledged'. It means that
+  As described below, many packets are ‘acknowledged’. It means that
   upon reception, the server sends either:
 
 
-  �  a BRLAPI_PACKET_ACK packet, with no data, which means the operation
+  •  a BRLAPI_PACKET_ACK packet, with no data, which means the operation
      corresponding to the received packet was successful,
 
-  �  or a BRLAPI_PACKET_ERROR packet, the data being an integer which
+  •  or a BRLAPI_PACKET_ERROR packet, the data being an integer which
      should be one of BRLAPI_ERROR_* constants. This means the operation
      corresponding to the received packet failed.
 
@@ -1279,11 +1279,11 @@
   reception, the server will send either:
 
 
-  �  a packet of the same type, its data being the response,
+  •  a packet of the same type, its data being the response,
 
-  �  or a BRLAPI_PACKET_ERROR packet.
+  •  or a BRLAPI_PACKET_ERROR packet.
 
-  If at some point an ill-formed or non-sense packet is received by the
+  If at some point an ill‐formed or non‐sense packet is received by the
   server, and BRLAPI_PACKET_EXCEPTION is returned, holding the guilty
   packet for further analysis.
 
@@ -1293,8 +1293,8 @@
   the four following modes:
 
 
-  �  authorization mode: this is the initial mode, when the client
-     hasn't got the authorization to use the server yet. The server
+  •  authorization mode: this is the initial mode, when the client
+     hasn’t got the authorization to use the server yet. The server
      first sends a BRLAPI_PACKET_VERSION packet that announces the
      server version. The client must send back a BRLAPI_PACKET_VERSION
      for announcing its own version too.  The server then sends a
@@ -1302,57 +1302,57 @@
      methods are allowed. The client can then send BRLAPI_PACKET_AUTH
      packets, which makes the connection enter normal mode.  If no
      authorization is needed, the server can announce the NONE method,
-     the client then doesn't need to send a BRLAPI_PACKET_AUTH packet.
+     the client then doesn’t need to send a BRLAPI_PACKET_AUTH packet.
 
 
 
-  �  normal mode: the client is authorized to use the server, but didn't
+  •  normal mode: the client is authorized to use the server, but didn’t
      ask for a tty or raw mode. The client can send either of these
      types of packet:
 
-     �  BRLAPI_PACKET_GETDRIVERNAME or BRLAPI_PACKET_GETDISPLAYSIZE to
+     •  BRLAPI_PACKET_GETDRIVERNAME or BRLAPI_PACKET_GETDISPLAYSIZE to
         get pieces of information from the server,
 
-     �  BRLAPI_PACKET_ENTERTTYMODE to enter tty handling mode,
+     •  BRLAPI_PACKET_ENTERTTYMODE to enter tty handling mode,
 
-     �  BRLAPI_PACKET_ENTERRAWMODE to enter raw mode,
+     •  BRLAPI_PACKET_ENTERRAWMODE to enter raw mode,
 
 
 
-  �  tty handling mode: the client holds the control of a tty: brltty
-     has no power on it any more, masked keys excepted. It's up to the
+  •  tty handling mode: the client holds the control of a tty: brltty
+     has no power on it any more, masked keys excepted. It’s up to the
      client to manage display and keypresses. For this, it can send
      either of these types of packet:
 
-     �  BRLAPI_PACKET_LEAVETTYMODE to leave tty handling mode and go
+     •  BRLAPI_PACKET_LEAVETTYMODE to leave tty handling mode and go
         back to normal mode,
 
-     �  BRLAPI_PACKET_IGNOREKEYRANGE and BRLAPI_PACKET_ACCEPTKEYRANGE to
+     •  BRLAPI_PACKET_IGNOREKEYRANGE and BRLAPI_PACKET_ACCEPTKEYRANGE to
         mask and unmask keys,
 
-     �  BRLAPI_PACKET_WRITE to display text on this tty,
+     •  BRLAPI_PACKET_WRITE to display text on this tty,
 
-     �  BRLAPI_PACKET_ENTERRAWMODE to enter raw mode,
+     •  BRLAPI_PACKET_ENTERRAWMODE to enter raw mode,
 
-     �  BRLAPI_PACKET_GETDRIVERNAME or BRLAPI_PACKET_GETDISPLAYSIZE to
+     •  BRLAPI_PACKET_GETDRIVERNAME or BRLAPI_PACKET_GETDISPLAYSIZE to
         get pieces of information from the server,
 
      And the server might send BRLAPI_PACKET_KEY packets to signal key
      presses.
 
 
-  �  raw mode: the client wants to exchange packets directly with the
+  •  raw mode: the client wants to exchange packets directly with the
      braille terminal. Only these types of packet will be accepted.
 
-     �  BRLAPI_PACKET_LEAVERAWMODE to get back to previous mode, either
+     •  BRLAPI_PACKET_LEAVERAWMODE to get back to previous mode, either
         normal or tty handling mode.
 
-     �  BRLAPI_PACKET_PACKET to send a packet to the braille terminal.
+     •  BRLAPI_PACKET_PACKET to send a packet to the braille terminal.
 
-     And the server might send BRLAPI_PACKET_PACKET packets to give re-
+     And the server might send BRLAPI_PACKET_PACKET packets to give re‐
      ceived packets from the terminal to the client.
 
-  �  suspend mode: the client wants to completely drive the braille
+  •  suspend mode: the client wants to completely drive the braille
      terminal.  The device driver is hence kept closed. No type of
      packet is allowed except BRLAPI_PACKET_RESUME
 
@@ -1363,7 +1363,7 @@
   7.4.  Details for each type of packet
 
   Here is described the semantics of each type of packet. Most of them
-  are directly linked to some of BrlAPI's library's functions. Reading
+  are directly linked to some of BrlAPI’s library’s functions. Reading
   their online manual page as well will hence be of good help for
   understanding.
 
@@ -1372,7 +1372,7 @@
   server. The server sends one first for letting the client know its
   protocol version. Data is an integer indicating the protocol version.
   Then client must then respond the same way for giving its version. If
-  the protocol version can't be handled by the server, a  BRLAPI_ER-
+  the protocol version can’t be handled by the server, a  BRLAPI_ER‐
   ROR_PROTOCOL_VERSION error packet is returned and the connection is
   closed.
 
@@ -1390,7 +1390,7 @@
 
   If the authorization is successful, the server acknowledges the
   packet, and other types of packets might be used, other
-  BRLAPI_PACKET_AUTH shouldn't be sent by the client.
+  BRLAPI_PACKET_AUTH shouldn’t be sent by the client.
 
   If the authorization is not successful, the server sends a
   BRLAPI_ERROR_AUTHENTICATION error, and the client can try another
@@ -1399,12 +1399,12 @@
   Authorization methods are as follow:
 
 
-  �  NONE: the client doesn't need to send an authorization packet.
+  •  NONE: the client doesn’t need to send an authorization packet.
 
-  �  KEY: data holds a secret key, the authorization is successful only
+  •  KEY: data holds a secret key, the authorization is successful only
      if the key matches the server secret key.
 
-  �  CREDENTIALS: Operating-System-specific credentials are explicitely
+  •  CREDENTIALS: Operating‐System‐specific credentials are explicitely
      sent over the socket, the authorization is successful if the server
      considers the credentials sufficient.
 
@@ -1428,14 +1428,14 @@
   display size. The returned data are two integers: width and then
   height.
 
-  7.4.6.  BRLAPI_PACKET_ENTERTTYMODE (see brlapi_enterTtyMode() and  br-
+  7.4.6.  BRLAPI_PACKET_ENTERTTYMODE (see brlapi_enterTtyMode() and  br‐
   lapi_enterTtyModeWithPath() )
 
   This should be sent by the client to get control of a tty. Sent data
   are first a series of integers: the first one gives the number of
   following integers, which are the numbers of ttys that leads to the
   tty that the application wants to take control of (it can be empty if
-  the tty is one of the machine's VT). The last integer of this series
+  the tty is one of the machine’s VT). The last integer of this series
   tells the number of the tty to get control of. Finaly, how key presses
   should be reported is sent: either a driver name or "", preceded by
   the number of caracters in the driver name (0 in the case of ""), as
@@ -1468,10 +1468,10 @@
   7.4.10.  BRLAPI_PACKET_IGNOREKEYRANGE and BRLAPI_PACKET_ACCEPTKEYRANGE
   (see brlapi_ignoreKeyRange() and brlapi_acceptKeyRange() )
 
-  If the client doesn't want every key press to be signaled to it, but
+  If the client doesn’t want every key press to be signaled to it, but
   some of them to be given to brltty for normal processing, it can send
   BRLAPI_PACKET_IGNOREKEYRANGE packets to tell ranges of key codes which
-  shouldn't be sent to it, but given to brltty, and
+  shouldn’t be sent to it, but given to brltty, and
   BRLAPI_PACKET_ACCEPTKEYRANGE packets to tell ranges of key codes which
   should be sent to it, and not given to brltty. The server keeps a
   dynamic list of ranges, so that arbitrary sequences of such packets
@@ -1502,10 +1502,10 @@
   (corresponding to flag weight):
 
 
-  �  A display number can be given as a integer, in case the braille
+  •  A display number can be given as a integer, in case the braille
      display has several. If not given, usual display is used.
 
-  �  A region must be given as two integers indicating the beginning and
+  •  A region must be given as two integers indicating the beginning and
      the number of characters of the part of the braille display which
      is to be updated, the first cell of the display being numbered 1.
      For braille displays that have several lines, the first cell of the
@@ -1515,38 +1515,38 @@
      negative, its absolute value is taken into account, and the update
      is padded or truncated to fill the rest of the display.
 
-  �  The text to display can then be given, preceded by its size in
+  •  The text to display can then be given, preceded by its size in
      bytes expressed as an integer. It will erase the corresponding
      region in the AND and OR fields. If the region size is positive,
-     the text's length in characters must exactly match the region size.
+     the text’s length in characters must exactly match the region size.
      For multibyte text, this is the number of wide characters. Notably,
-     combining and double-width characters count for 1.
+     combining and double‐width characters count for 1.
 
-  �  Then an AND field can be given, one byte per character: the 8-dot
-     representation of the above text will be AND-ed with this field,
+  •  Then an AND field can be given, one byte per character: the 8‐dot
+     representation of the above text will be AND‐ed with this field,
      hence allowing to erase some unwanted parts of characters. Dots are
-     coded as described in ISO/TR 11548-1: dot 1 is set iff bit 0 is
+     coded as described in ISO/TR 11548‐1: dot 1 is set iff bit 0 is
      set, dot 2 is set iff bit 1 is set, ... dot i+1 is set if bit i is
-     set. This also corresponds to the low-order byte of the coding of
-     unicode's braille row U+2800.
+     set. This also corresponds to the low‐order byte of the coding of
+     unicode’s braille row U+2800.
 
-  �  As well, an OR field may be given, one byte per character: the
-     8-dot result of the AND operation above (or the 8-dot
+  •  As well, an OR field may be given, one byte per character: the
+     8‐dot result of the AND operation above (or the 8‐dot
      representation of the text if no AND operation was performed) is
-     OR-ed with this field, hence allowing to set some dots, to
+     OR‐ed with this field, hence allowing to set some dots, to
      underline characters for instance.
 
-  �  A cursor position can be specified. 1 representing the first
+  •  A cursor position can be specified. 1 representing the first
      character of the display, 0 turning the cursor off. If not given,
      the cursor (if any) is left unmodified.
 
-  �  Last but not least, the charset of the text can be specified: the
+  •  Last but not least, the charset of the text can be specified: the
      length of the name first in one byte, then the name itself in ASCII
-     characters. If the charset is not specified, an 8-bit charset is
-     assumed, and it is assumed to be the same as the server's.
-     Multibyte charsets may be used, AND and OR fields' bytes will
-     correspond to each text's wide character, be it a combining or a
-     double-width character.
+     characters. If the charset is not specified, an 8‐bit charset is
+     assumed, and it is assumed to be the same as the server’s.
+     Multibyte charsets may be used, AND and OR fields’ bytes will
+     correspond to each text’s wide character, be it a combining or a
+     double‐width character.
 
   A BRLAPI_PACKET_WRITE packet without any flag (and hence no data)
   means a "void" WRITE: the server clears the output buffer for this
@@ -1566,7 +1566,7 @@
   To leave raw mode, the client must send a BRLAPI_PACKET_LEAVERAWMODE
   packet, which is acknowledged.
 
-  7.4.14.  BRLAPI_PACKET_PACKET (see brlapi_sendRaw() and  br-
+  7.4.14.  BRLAPI_PACKET_PACKET (see brlapi_sendRaw() and  br‐
   lapi_recvRaw() )
 
   While in raw mode, only BRLAPI_PACKET_PACKET packets can be exchanged
@@ -1593,26 +1593,26 @@
   which describe which, how, and when the value should be returned by
   the server:
 
-  �  When the BRLAPI_PARAMF_GLOBAL flag is set, the server will
+  •  When the BRLAPI_PARAMF_GLOBAL flag is set, the server will
      return/subscribe the global value instead of the local value.
 
-  �  When the BRLAPI_PARAMF_GET flag is set, the server acknowledges the
+  •  When the BRLAPI_PARAMF_GET flag is set, the server acknowledges the
      request by returning the latest value with a
      BRLAPI_PACKET_PARAM_VALUE packet. Otherwise the server acknowledges
      the request with a BRLAPI_PACKET_ACK packet, without providing the
      value.
 
-  �  When the BRLAPI_PARAMF_SUBSCRIBE flag is set, the server will keep
+  •  When the BRLAPI_PARAMF_SUBSCRIBE flag is set, the server will keep
      sending asynchronously the value of the parameter whenever it
      changes, with BRLAPI_PACKET_PARAM_UPDATE packets, until another
      request packet has the BRLAPI_PARAMF_UNSUBSCRIBE flag set for this
      parameter.
 
-  �  When the BRLAPI_PARAMF_SELF flag is set along
+  •  When the BRLAPI_PARAMF_SELF flag is set along
      BRLAPI_PARAMF_SUBSCRIBE, the server will send the value of the
      parameter when it is changed even by the client itself.
 
-  �  When the BRLAPI_PARAMF_UNSUBSCRIBE flag is set, the server will
+  •  When the BRLAPI_PARAMF_UNSUBSCRIBE flag is set, the server will
      stop sending asynchronously the value of the parameter with
      BRLAPI_PACKET_PARAM_UPDATE packets.
 
@@ -1620,7 +1620,7 @@
   BRLAPI_PARAMF_UNSUBSCRIBE flags.
 
   Then an integer representing the parameter to be requested.  Then two
-  integers that form (in big-endian order) a 64bit value used to
+  integers that form (in big‐endian order) a 64bit value used to
   subspecify the precise parameter to be requested (e.g. a keycode
   number).
 
@@ -1635,11 +1635,11 @@
   (see BRLAPI_PVF_*) which describe which value is being transmitted:
 
 
-  �  When the BRLAPI_PVF_GLOBAL flag is set, the value is the global
+  •  When the BRLAPI_PVF_GLOBAL flag is set, the value is the global
      value instead of the local value.
 
   Then an integer representing the parameter being transmitted. Then two
-  integers that form (in big-endian order) a 64bit value used to
+  integers that form (in big‐endian order) a 64bit value used to
   subspecify the precise parameter being transmitted (e.g. a keycode
   number). Eventually, the packet contains the value.
 
@@ -1652,14 +1652,14 @@
 
   7.4.18.  BRLAPI_PACKET_PARAM_VALUE  This packet is sent asynchronously
   by the server to provide an update of a value of a parameter. This is
-  sent only if the client has previously sent a  BRLAPI_PACKET_PARAM_RE-
+  sent only if the client has previously sent a  BRLAPI_PACKET_PARAM_RE‐
   QUEST packet with the BRLAPI_PARAMF_SUBSCRIBE  for the corresponding
   parameter. It is structured exactly like a BRLAPI_PACKET_PARAM_VALUE
   packet.
 
   7.4.19.  BRLAPI_PACKET_SYNCHRONIZE  This packet is sent by the client
   and just acknowledged by the server. This allows the client to perform
-  a round-try with the server, thus collecting any pending exception no-
+  a round‐try with the server, thus collecting any pending exception no‐
   tification.
 
 

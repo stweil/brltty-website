@@ -2,34 +2,34 @@
 <HTML>
 <HEAD>
  <META NAME="GENERATOR" CONTENT="LinuxDoc-Tools 0.9.82">
- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
- <TITLE>Manuel de référence de BRLTTY: Sujets avancés</TITLE>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <TITLE>Manuel de rÃ©fÃ©rence de BRLTTY: Sujets avancÃ©s</TITLE>
  <LINK HREF="BRLTTY-8.html" REL=next>
  <LINK HREF="BRLTTY-6.html" REL=previous>
  <LINK HREF="BRLTTY.html#toc7" REL=contents>
 </HEAD>
 <BODY>
 <A HREF="BRLTTY-8.html">Page suivante</A>
-<A HREF="BRLTTY-6.html">Page précédente</A>
-<A HREF="BRLTTY.html#toc7">Table des matières</A>
+<A HREF="BRLTTY-6.html">Page prÃ©cÃ©dente</A>
+<A HREF="BRLTTY.html#toc7">Table des matiÃ¨res</A>
 <HR>
-<H2><A NAME="s7">7.</A> <A HREF="BRLTTY.html#toc7">Sujets avancés</A></H2>
+<H2><A NAME="s7">7.</A> <A HREF="BRLTTY.html#toc7">Sujets avancÃ©s</A></H2>
 
 
 
 <H2><A NAME="multiple"></A> <A NAME="ss7.1">7.1</A> <A HREF="BRLTTY.html#toc7.1">Installation de plusieurs versions</A>
 </H2>
 
-<P>Il est facile d'avoir plus d'une version de BRLTTY installée sur  le même
-système en même temps. Cette possibilité vous permet de tester une nouvelle
+<P>Il est facile d'avoir plus d'une version de BRLTTY installÃ©e sur  le mÃªme
+systÃ¨me en mÃªme temps. Cette possibilitÃ© vous permet de tester une nouvelle
 version avant de supprimer l'ancienne.</P>
 <P>L'option de compilation 
 <A HREF="BRLTTY-3.html#build-execute-root">--with-execute-root</A>
 vous permet d'installer la 
-<A HREF="BRLTTY-3.html#hierarchy">hiérarchie des fichiers installés</A> complète là où
+<A HREF="BRLTTY-3.html#hierarchy">hiÃ©rarchie des fichiers installÃ©s</A> complÃ¨te lÃ  oÃ¹
 vous le voulez de sorte qu'elle soit totalement autonome dans son contenu.
 Tout en vous rappelant qu'il vaut mieux prendre tous les composants de
-BRLTTY dans le système de fichier racine, vous pouvez le compiler ainsi:
+BRLTTY dans le systÃ¨me de fichier racine, vous pouvez le compiler ainsi:
 <BLOCKQUOTE><CODE>
 <PRE>
 ./configure --with-execute-root=/brltty-3.1
@@ -37,13 +37,13 @@ make install
 </PRE>
 </CODE></BLOCKQUOTE>
 
-Vous pouvez alors l'exécuter ainsi:
+Vous pouvez alors l'exÃ©cuter ainsi:
 <BLOCKQUOTE><CODE>
 /brltty-3.1/bin/brltty
 </CODE></BLOCKQUOTE>
 
 Quand vous avez fait la version 3.2, installez-la simplement dans un
-emplacement différent et exécutez le nouvel exécutable à partir de là.
+emplacement diffÃ©rent et exÃ©cutez le nouvel exÃ©cutable Ã  partir de lÃ .
 <BLOCKQUOTE><CODE>
 <PRE>
 ./configure --with-execute-root=/brltty-3.2
@@ -52,28 +52,28 @@ make install
 </PRE>
 </CODE></BLOCKQUOTE>
 </P>
-<P>Jusque-là, tout cela est quelque peu maladroit pour au moins deux raisons.
-La première est que ces longs chemins sont trop difficiles à taper, et l'autre
+<P>Jusque-lÃ , tout cela est quelque peu maladroit pour au moins deux raisons.
+La premiÃ¨re est que ces longs chemins sont trop difficiles Ã  taper, et l'autre
 est que vous ne voulez pas bricoler avec
-la séquence de démarrage de votre système chaque fois que vous souhaitez aller
-à une version différente de BRLTTY.
-Ces problèmes se résolvent facilement en ajoutant un lien symbolique pour
-l'exécutable.
+la sÃ©quence de dÃ©marrage de votre systÃ¨me chaque fois que vous souhaitez aller
+Ã  une version diffÃ©rente de BRLTTY.
+Ces problÃ¨mes se rÃ©solvent facilement en ajoutant un lien symbolique pour
+l'exÃ©cutable.
 <BLOCKQUOTE><CODE>
 ln -s /brltty-3.1/bin/brltty /bin/brltty
 </CODE></BLOCKQUOTE>
 
-Quand il est temps d'utiliser la version la plus récente, pointez de nouveau
+Quand il est temps d'utiliser la version la plus rÃ©cente, pointez de nouveau
 simplement le lien symbolique.
 <BLOCKQUOTE><CODE>
 ln -s /brltty-3.2/bin/brltty /bin/brltty
 </CODE></BLOCKQUOTE>
 </P>
 <P>Si vous aimez vraiment faire de la fantaisie, introduisez un autre niveau
-de redirection de façon à rendre tous les fichiers de chaque version de BRLTTY
+de redirection de faÃ§on Ã  rendre tous les fichiers de chaque version de BRLTTY
 tels qu'ils sont dans tous les emplacements standards.
-D'abord, créez un lien symbolique à travers un emplacement où on peut
-repointer aisément à partir de chacun des emplacements standards de BRLTTY.
+D'abord, crÃ©ez un lien symbolique Ã  travers un emplacement oÃ¹ on peut
+repointer aisÃ©ment Ã  partir de chacun des emplacements standards de BRLTTY.
 <BLOCKQUOTE><CODE>
 <PRE>
 ln -s /brltty/bin/brltty /bin/brltty
@@ -83,7 +83,7 @@ ln -s /brltty/lib/brltty /lib/brltty
 </CODE></BLOCKQUOTE>
 
 Ensuite, tout ce que vous devez faire est de pointer <CODE>/brltty</CODE> vers la
-version désirée.
+version dÃ©sirÃ©e.
 <BLOCKQUOTE><CODE>
 ln -s /brltty-3.1 /brltty
 </CODE></BLOCKQUOTE>
@@ -92,25 +92,25 @@ ln -s /brltty-3.1 /brltty
 <H2><A NAME="ss7.2">7.2</A> <A HREF="BRLTTY.html#toc7.2">Disques racines d'Installation/Secours pour Linux</A>
 </H2>
 
-<P>BRLTTY peut s'exécuter comme un seul exécutable. Tout ce qu'il a besoin de
-savoir peut être configuré explicitement lors de la compilation (voir
+<P>BRLTTY peut s'exÃ©cuter comme un seul exÃ©cutable. Tout ce qu'il a besoin de
+savoir peut Ãªtre configurÃ© explicitement lors de la compilation (voir
 <A HREF="BRLTTY-3.html#build">Options de compilation</A>).
-Si le répertoire de données (voir les options de compilation
+Si le rÃ©pertoire de donnÃ©es (voir les options de compilation
 <A HREF="BRLTTY-3.html#build-data-directory">--with-data-directory</A> et
 <A HREF="BRLTTY-3.html#build-execute-root">--with-execute-root</A>) n'existe pas, BRLTTY
 cherche dans <CODE>/etc</CODE> les fichiers dont il a besoin.
-Même si un de ces fichiers n'existe pas, BRLTTY fonctionne encore!</P>
-<P>Si, pour une raison quelconque, vous avez déjà créé le répertoire de données
-(habituellement, <CODE>/etc/brltty</CODE>) à la main, il est important de régler
-ses permissions de telle sorte que seul le super-utilisateur puisse y créer des
+MÃªme si un de ces fichiers n'existe pas, BRLTTY fonctionne encore!</P>
+<P>Si, pour une raison quelconque, vous avez dÃ©jÃ  crÃ©Ã© le rÃ©pertoire de donnÃ©es
+(habituellement, <CODE>/etc/brltty</CODE>) Ã  la main, il est important de rÃ©gler
+ses permissions de telle sorte que seul le super-utilisateur puisse y crÃ©er des
 fichiers.
 <BLOCKQUOTE><CODE>
 chmod 755 /etc/brltty
 </CODE></BLOCKQUOTE>
 </P>
-<P>Le périphérique d'inspection du contenu de l'écran (habituellement
-<CODE>/dev/vcsa</CODE>) est nécessaire. Il devrait déjà exister, à moins que votre
-distribution de Linux ne soit trop vieille. Si nécessaire, vous pouvez le créer
+<P>Le pÃ©riphÃ©rique d'inspection du contenu de l'Ã©cran (habituellement
+<CODE>/dev/vcsa</CODE>) est nÃ©cessaire. Il devrait dÃ©jÃ  exister, Ã  moins que votre
+distribution de Linux ne soit trop vieille. Si nÃ©cessaire, vous pouvez le crÃ©er
 avec:
 <BLOCKQUOTE><CODE>
 <PRE>
@@ -120,36 +120,36 @@ chown root.tty /dev/vcsa
 </PRE>
 </CODE></BLOCKQUOTE>
 </P>
-<P>Un problème souvent rencontré lorsqu'on essaie d'utiliser BRLTTY dans un
-environnement instable, comme un disque racine ou un système incomplet, est
-qu'il pourrait ne pas trouver les bibliothèques partagées (ou des parties
+<P>Un problÃ¨me souvent rencontrÃ© lorsqu'on essaie d'utiliser BRLTTY dans un
+environnement instable, comme un disque racine ou un systÃ¨me incomplet, est
+qu'il pourrait ne pas trouver les bibliothÃ¨ques partagÃ©es (ou des parties
 de celles-ci) dont il a besoin.
-Les disques racines utilisent souvent des versions des bibliothèques
-sous-paramétrées et/ou non à jour qui peuvent être inadéquates. La solution est de configurer BRLTTY avec l'optfon de
+Les disques racines utilisent souvent des versions des bibliothÃ¨ques
+sous-paramÃ©trÃ©es et/ou non Ã  jour qui peuvent Ãªtre inadÃ©quates. La solution est de configurer BRLTTY avec l'optfon de
 compilation 
 <A HREF="BRLTTY-3.html#build-standalone-programs">--enable-standalone-programs</A>.
-Cela supprime toutes les dépendances des bibliothèques partagées, mais
-malheureusement, crée aussi un exécutable plus gros.
+Cela supprime toutes les dÃ©pendances des bibliothÃ¨ques partagÃ©es, mais
+malheureusement, crÃ©e aussi un exÃ©cutable plus gros.
 Il y a un certain nombre d'options de compilation que vous pouvez utiliser
-pour supprimer de façon sélective les possibilités de BRLTTY dont vous n'avez pas
-besoin de façon à atténuer ce problème (voir la section
-<A HREF="BRLTTY-3.html#build-features">possibilitéés de la compilation</A>).</P>
-<P>L'exécutable est nettoyé pendant le
-<A HREF="BRLTTY-3.html#make-install">make install</A>. Cela réduit de façon
+pour supprimer de faÃ§on sÃ©lective les possibilitÃ©s de BRLTTY dont vous n'avez pas
+besoin de faÃ§on Ã  attÃ©nuer ce problÃ¨me (voir la section
+<A HREF="BRLTTY-3.html#build-features">possibilitÃ©Ã©s de la compilation</A>).</P>
+<P>L'exÃ©cutable est nettoyÃ© pendant le
+<A HREF="BRLTTY-3.html#make-install">make install</A>. Cela rÃ©duit de faÃ§on
 significative sa taille en supprimant sa table de symboles.
-Vous obtiendrez un exécutable beaucoup plus petit, puis copiez-le de son emplacement
+Vous obtiendrez un exÃ©cutable beaucoup plus petit, puis copiez-le de son emplacement
 d'installation.
-Cependant, si vous le copiez depuis le répertoire de compilation, n'oubliez pas de le nettoyer.
+Cependant, si vous le copiez depuis le rÃ©pertoire de compilation, n'oubliez pas de le nettoyer.
 <BLOCKQUOTE><CODE>
 strip brltty
 </CODE></BLOCKQUOTE>
 </P>
 
-<H2><A NAME="ss7.3">7.3</A> <A HREF="BRLTTY.html#toc7.3">Avancées futures</A>
+<H2><A NAME="ss7.3">7.3</A> <A HREF="BRLTTY.html#toc7.3">AvancÃ©es futures</A>
 </H2>
 
-<P>Outre la réparation de bugs et le support de plus de types d'afficheurs
-brailles, nous espérons, si le temps nous le permet, travailler sur:
+<P>Outre la rÃ©paration de bugs et le support de plus de types d'afficheurs
+brailles, nous espÃ©rons, si le temps nous le permet, travailler sur:
 <DL>
 <DT><B>Meilleure prise en charge des attributs</B><DD>
 <P>
@@ -158,40 +158,40 @@ brailles, nous espérons, si le temps nous le permet, travailler sur:
 <LI>Mode mixte texte et attributs.</LI>
 </UL>
 </P>
-<DT><B>Poursuite du défilement</B><DD>
-<P>Alignement de la plage braille sur une ligne alors qu'elle défile à
-l'écran.</P>
+<DT><B>Poursuite du dÃ©filement</B><DD>
+<P>Alignement de la plage braille sur une ligne alors qu'elle dÃ©file Ã 
+l'Ã©cran.</P>
 <DT><B>Meilleur support de voix</B><DD>
 <P>
 <UL>
-<LI>Braille et voix mélangés pour une lecture plus rapide du texte.</LI>
+<LI>Braille et voix mÃ©langÃ©s pour une lecture plus rapide du texte.</LI>
 <LI>Meilleur navigation vocale.</LI>
-<LI>Plus de synthèses vocales.</LI>
+<LI>Plus de synthÃ¨ses vocales.</LI>
 </UL>
 </P>
-<DT><B>Sous-régions sur l'écran</B><DD>
-<P>Ignorer le déplacement du curseur hors de la région, et rendre fluide les
-limites de navigation aux bords de la région.</P>
+<DT><B>Sous-rÃ©gions sur l'Ã©cran</B><DD>
+<P>Ignorer le dÃ©placement du curseur hors de la rÃ©gion, et rendre fluide les
+limites de navigation aux bords de la rÃ©gion.</P>
 </DL>
 
-Voir le fichier <CODE>TODO</CODE> pour une liste plus complète.</P>
+Voir le fichier <CODE>TODO</CODE> pour une liste plus complÃ¨te.</P>
 
 <H2><A NAME="ss7.4">7.4</A> <A HREF="BRLTTY.html#toc7.4">Bogues connus</A>
 </H2>
 
-<P>A l'heure où nous écrivons (décembre 2001), les problèmes suivants sont
+<P>A l'heure oÃ¹ nous Ã©crivons (dÃ©cembre 2001), les problÃ¨mes suivants sont
 connus.</P>
-<P>La routine-curseur est considérée comme un sous-processus en boucle qui s'exécute
-avec une priorité réduite pour éviter de trop utiliser le temps du processeur.
-Les chargements de systèmes différents nécessitent des réglages différents de
-ses paramètres. Ceux par défaut fonctionnent très bien dans un éditeur Unix
-classique sur un système chargé normalement, mais très mal dans d'autres
-situations, par exemple sur une liaison série lente vers un nom de machine
-supprimé.</P>
+<P>La routine-curseur est considÃ©rÃ©e comme un sous-processus en boucle qui s'exÃ©cute
+avec une prioritÃ© rÃ©duite pour Ã©viter de trop utiliser le temps du processeur.
+Les chargements de systÃ¨mes diffÃ©rents nÃ©cessitent des rÃ©glages diffÃ©rents de
+ses paramÃ¨tres. Ceux par dÃ©faut fonctionnent trÃ¨s bien dans un Ã©diteur Unix
+classique sur un systÃ¨me chargÃ© normalement, mais trÃ¨s mal dans d'autres
+situations, par exemple sur une liaison sÃ©rie lente vers un nom de machine
+supprimÃ©.</P>
 
 <HR>
 <A HREF="BRLTTY-8.html">Page suivante</A>
-<A HREF="BRLTTY-6.html">Page précédente</A>
-<A HREF="BRLTTY.html#toc7">Table des matières</A>
+<A HREF="BRLTTY-6.html">Page prÃ©cÃ©dente</A>
+<A HREF="BRLTTY.html#toc7">Table des matiÃ¨res</A>
 </BODY>
 </HTML>
