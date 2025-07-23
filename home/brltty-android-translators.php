@@ -8,11 +8,11 @@ So far, we have translations for the following languages:
 </p>
 
 <?php
-   function listTranslations ($code, $language) {
-      $url = "android-translations.html?language=$code";
+   function listLanguage ($code, $name) {
+      $url = "android-language.html?code=$code";
 
       echo("<li>");
-         write_link($url, $language);
+         write_link($url, $name);
       echo("</li>\n");
    }
 ?>
@@ -22,8 +22,8 @@ So far, we have translations for the following languages:
       require "android-languages.php";
       global $android_languages;
 
-      foreach ($android_languages as $code => $language) {
-         listTranslations($code, $language);
+      foreach ($android_languages as $code => $name) {
+         listLanguage($code, $name);
       }
    ?>
 </ul>

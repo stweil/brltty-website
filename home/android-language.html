@@ -2,17 +2,17 @@
    require "brltty.php";
    require "brltty-files.php";
 
+   $query = get_query();
+   if (!isset($query["code"])) {
+      document_not_found("Language code not specified.");
+   }
+   $languageCode = $query["code"];
+
    require "android-languages.php";
    global $android_languages;
 
-   $query = get_query();
-   if (!isset($query["language"])) {
-      document_not_found("language not specified");
-   }
-   $languageCode = $query["language"];
-
    if (!isset($android_languages[$languageCode])) {
-      document_not_found("unsupported language code `$languageCode'");
+      document_not_found("Unsupported language code `$languageCode'.");
    }
    $languageName = $android_languages[$languageCode];
 
@@ -21,13 +21,13 @@
 
    function load_strings ($language=null) {
       global $android_directory;
-      $name = "$android_directory/android-strings";
-      if ($language != null) $name .= "-$language";
-      $name .= ".txt";
+      $path = "$android_directory/android-strings";
+      if ($language != null) $path .= "-$language";
+      $path .= ".txt";
 
       $labels = array();
       $text = array();
-      $file = fopen($name, "r");
+      $file = fopen($path, "r");
 
       if ($file != null) {
          while (!feof($file)) {
